@@ -1,21 +1,26 @@
 {
 	"name": "@heliosgraphics/components",
-	"version": "1.0.4",
+	"version": "2.0.0-alpha",
 	"private": false,
 	"type": "module",
-	"author": "Chris Puska <03b8@helios.graphics>",
+	"description": "Helios Components",
+	"author": "03b8 <03b8@helios.graphics>",
 	"scripts": {
 		"pub:components": "pnpm publish --access public",
 		"test": "NODE_ENV=test vitest run",
-		"test:u": "NODE_ENV=test vitest run --update",
+		"test:update": "NODE_ENV=test vitest run --update",
 		"test:watch": "NODE_ENV=test vitest",
 		"test:coverage": "NODE_ENV=test vitest run --coverage",
-    "ts:watch": "tsc --noEmit --incremental --watch"
+		"ts:watch": "tsc --noEmit --incremental --watch",
+		"dev:components": "next dev -p 1024",
+		"build:components": "next build",
+		"start:components": "next start",
+		"prettier:write": "prettier --no-semi --use-tabs --write ./src/**"
 	},
 	"dependencies": {
 		"@heliosgraphics/icons": "latest",
-		"@heliosgraphics/library": "4.0.0-alpha-5",
-		"@heliosgraphics/utils": "4.0.0-alpha-5",
+		"@heliosgraphics/library": "latest",
+		"@heliosgraphics/utils": "latest",
 		"@react-spring/web": "^9.7.3",
 		"@sindresorhus/class-names": "^2.0.0",
 		"@use-gesture/react": "^10.3.0",
@@ -28,15 +33,20 @@
 		"react-plock": "^3.0.2"
 	},
 	"devDependencies": {
-		"@types/node": "^20.10.6",
-		"@types/react": "^18.2.46",
-		"@types/react-dom": "^18.2.18",
-		"@testing-library/react": "^14.1.2",
-		"@vitejs/plugin-react": "^4.2.1",
-		"@vitest/coverage-v8": "^1.1.1",
-		"jsdom": "^23.0.1",
-    "typescript": "^5.3.3",
-		"vite": "^5.0.10",
-		"vitest": "^1.1.1"
+		"@typescript-eslint/eslint-plugin": "latest",
+		"@types/node": "latest",
+		"@types/react": "latest",
+		"@vitest/coverage-v8": "latest",
+		"eslint": "latest",
+		"eslint-config-prettier": "latest",
+		"eslint-plugin-prettier": "latest",
+		"jsdom": "latest",
+		"next": "14.0.4",
+		"prettier": "latest",
+		"react": "^18",
+		"react-dom": "^18",
+		"typescript": "latest",
+		"vite": "latest",
+		"vitest": "latest"
 	}
 }
