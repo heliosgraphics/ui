@@ -1,4 +1,4 @@
-export type FUIScale =
+export type HeliosScale =
 	| "px"
 	| 0
 	| 1

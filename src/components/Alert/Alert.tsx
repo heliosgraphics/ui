@@ -6,19 +6,9 @@ import Icon from "../Icon/Icon"
 import Text from "../Text/Text"
 import styles from "./Alert.module.css"
 import type { AlertProps } from "./Alert.types"
-import type {
-	FUIColorScale,
-	FUIColors,
-} from "@heliosgraphics/library/types/colors"
-import type { HeliosIntentType } from "@heliosgraphics/library/types/intent"
-
-const ALERT_BUTTON_COLORS: Record<HeliosIntentType, FUIColorScale> = {
-	error: "red",
-	note: "gray",
-	success: "green",
-	info: "blue",
-	warning: "orange",
-}
+import type { FUIColorScale, FUIColors } from "../../types/colors"
+import type { HeliosIntentionType } from "../../types/intentions"
+import { INTENTION_COLOR_MAP } from "../../constants/intentions"
 
 const Alert: React.FC<AlertProps> = ({
 	children,
@@ -27,8 +17,8 @@ const Alert: React.FC<AlertProps> = ({
 	icon,
 	type,
 }) => {
-	const alertColor: FUIColorScale = ALERT_BUTTON_COLORS[type]
-	const alertIconColor: FUIColors = ALERT_BUTTON_COLORS[type]
+	const alertColor: FUIColorScale = INTENTION_COLOR_MAP[type]
+	const alertIconColor: FUIColors = INTENTION_COLOR_MAP[type]
 
 	const alertClasses: string = classNames(styles.alert, "radius-2 p-4", {
 		[styles.alertError]: type === "error",

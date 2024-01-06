@@ -1,61 +1,18 @@
-export type TypeRGB = [number, number, number]
-
-export type FUIColorScale =
-	| "aqua"
-	| "blue"
+export type HeliosColors =
+	// core
 	| "gray"
-	| "green"
-	| "orange"
-	| "pink"
-	| "purple"
 	| "red"
+	| "green"
+	| "blue"
 	| "yellow"
+	| "aqua"
+	| "pink"
 
-export type FUIColors =
-	| FUIColorScale
-	| "dark-aqua"
-	| "dark-blue"
-	| "dark-gray"
-	| "dark-green"
-	| "dark-orange"
-	| "dark-pink"
-	| "dark-purple"
-	| "dark-red"
-	| "dark-yellow"
-	| "light-aqua"
-	| "light-blue"
-	| "light-gray"
-	| "light-green"
-	| "light-orange"
-	| "light-pink"
-	| "light-purple"
-	| "light-red"
-	| "light-yellow"
-	| "darkest-aqua"
-	| "darkest-blue"
-	| "darkest-gray"
-	| "darkest-green"
-	| "darkest-orange"
-	| "darkest-pink"
-	| "darkest-purple"
-	| "darkest-red"
-	| "darkest-yellow"
-	| "lightest-aqua"
-	| "lightest-blue"
-	| "lightest-gray"
-	| "lightest-green"
-	| "lightest-orange"
-	| "lightest-pink"
-	| "lightest-purple"
-	| "lightest-red"
-	| "lightest-yellow"
-	| "currentcolor"
-	| "white"
-	| "gray-25"
-	| "gray-50"
-	| "sora"
+	// official mixes
+	| "orange"
+	| "purple"
 
-export interface FUIColorScaleOptions {
+export interface HeliosColorScaleOptions {
 	0?: string
 	25?: string
 	50?: string

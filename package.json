@@ -19,7 +19,7 @@
 	},
 	"dependencies": {
 		"@heliosgraphics/icons": "latest",
-		"@heliosgraphics/library": "latest",
+		"@heliosgraphics/fractures": "latest",
 		"@heliosgraphics/utils": "latest",
 		"@react-spring/web": "^9.7.3",
 		"@sindresorhus/class-names": "^2.0.0",
@@ -33,9 +33,10 @@
 		"react-plock": "^3.0.2"
 	},
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "latest",
 		"@types/node": "latest",
 		"@types/react": "latest",
+		"@typescript-eslint/eslint-plugin": "latest",
+		"@vitejs/plugin-react": "latest",
 		"@vitest/coverage-v8": "latest",
 		"eslint": "latest",
 		"eslint-config-prettier": "latest",

@@ -1,9 +1,9 @@
-import type { FUIScale } from "./scale"
+import type { HeliosScale } from "./scale"
 
-export interface FUIFlexProps {
+export interface HeliosFlexProps {
 	align?: "center" | "left" | "right"
 	draggable?: boolean
-	gap?: FUIScale
+	gap?: HeliosScale
 	isAround?: boolean
 	isBetween?: boolean
 	isCentered?: boolean
@@ -12,9 +12,9 @@ export interface FUIFlexProps {
 	isWrapping?: boolean
 	isXCentered?: boolean
 	isYCentered?: boolean
-	padding?: FUIScale
-	paddingX?: FUIScale
-	paddingY?: FUIScale
+	padding?: HeliosScale
+	paddingX?: HeliosScale
+	paddingY?: HeliosScale
 	radius?: 1 | 2 | 3
 	yAlign?: "top" | "bottom" | "baseline"
 }
