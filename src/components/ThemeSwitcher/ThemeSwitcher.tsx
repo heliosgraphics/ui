@@ -1,58 +1,24 @@
-import React, { useEffect, useState } from "react"
-import Toggle from "../Toggle"
-import type { FUIThemes } from "@heliosgraphics/library/types/themes"
+"use client"
 
-const ThemeSwitcher: React.FC<{}> = () => {
-	const [theme, setTheme] = useState<FUIThemes | null>(null)
-	const isDark: boolean = theme === "dark"
-	const [dark, setDark] = useState<boolean>(isDark)
+import { useState, useEffect } from "react"
+import type { ThemeSwitcherProps } from "./ThemeSwitcher.types"
 
-	const setThemeClass = (localTheme: FUIThemes) => {
-		const isLocalDark: boolean = localTheme === "dark"
+const ThemeSwitcher: React.FC<ThemeSwitcherProps> = () => {
+	const [theme, setTheme] = useState(global.window?.__theme || "light")
+	const isDark = theme === "dark"
 
-		if (isLocalDark) {
-			document?.body?.classList.remove("light")
-			document?.body?.classList.add("dark")
-		} else {
-			document?.body?.classList.remove("dark")
-			document?.body?.classList.add("light")
-		}
-
-		setDark(localTheme === "dark")
-		return setTheme(localTheme)
+	const toggleTheme = () => {
+		global.window?.__setPreferredTheme(isDark ? "light" : "dark")
 	}
 
 	useEffect(() => {
-		const currentTheme: FUIThemes | null = localStorage?.getItem(
-			"theme",
-		) as FUIThemes
-		const prefersDarkScheme = globalThis?.matchMedia(
-			"(prefers-color-scheme: dark)",
-		).matches
-
-		const newTheme: FUIThemes = !!currentTheme
-			? currentTheme
-			: prefersDarkScheme
-				? "dark"
-				: "light"
-
-		setThemeClass(newTheme)
+		global.window.__onThemeChange = setTheme
 	}, [])
 
-	const toggleTheme = () => {
-		const newTheme: FUIThemes = isDark ? "light" : "dark"
-
-		setThemeClass(newTheme)
-		localStorage?.setItem("theme", newTheme)
-	}
-
 	return (
-		<Toggle
-			onChange={toggleTheme}
-			label=""
-			isChecked={dark}
-			id="theme-switcher"
-		/>
+		<button style={{ width: "10ch", height: "auto" }} onClick={toggleTheme}>
+			{isDark ? "dark" : "light"}
+		</button>
 	)
 }
 

@@ -1,5 +1,5 @@
 details.details {
-  padding: 0;
+	padding: 0;
 	overflow: hidden;
 
 	background-color: var(--gray-25);
@@ -10,37 +10,37 @@ details.details {
 }
 
 details.details[open] summary svg {
-  transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 
 details.details summary::-webkit-details-marker {
-  display: none;
+	display: none;
 }
 
 details.details summary {
-  align-items: center;
-  display: flex;
-  padding: 8px 12px;
+	align-items: center;
+	display: flex;
+	padding: 8px 12px;
 
-  color: var(--gray-700);
+	color: var(--gray-700);
 
-  font-family: inherit;
-  font-size: var(--font-size-small);
+	font-family: inherit;
+	font-size: var(--font-size-small);
 }
 
 details.details summary + * {
-  border-top: 1px solid var(--gray-50);
+	border-top: 1px solid var(--gray-50);
 }
 
 details.details summary::-webkit-details-marker,
 details.details summary::marker {
-  color: var(--gray-500);
+	color: var(--gray-500);
 }
 
 details.details summary {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 details.details summary > * {
-  display: inline;
+	display: inline;
 }

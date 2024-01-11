@@ -13,110 +13,97 @@ const BUTTON_ICON_SIZE: Record<string, number> = {
 	normal: 24,
 }
 
-const Button: React.FC<ButtonProps> = (props) => {
-	const isIconOnlyLoading: boolean = !!props.isIconOnly && !!props.isLoading
+const Button: React.FC<ButtonProps> = ({
+	flair,
+	icon,
+	value,
+	intent,
+	isActive,
+	isDisabled,
+	isIconOnly,
+	isLoading,
+	isRounded,
+	onClick,
+	size,
+	tabIndex,
+	type,
+}) => {
+	const isIconOnlyLoading: boolean = !!isIconOnly && !!isLoading
 
 	const buttonClasses = classNames(
 		styles.button,
 		"relative sans cursor-pointer",
 		{
-			// Types
-			[styles.buttonPrimary]: props.type === "primary",
-			[styles.buttonSecondary]: props.type === "secondary",
-			[styles.buttonSilent]: props.type === "silent",
-			[`${styles.buttonOpaque} dark-glass-1`]: props.type === "opaque",
+			[styles.buttonAdvise]: intent === "advise",
+			[styles.buttonConfirmation]: intent === "confirmation",
+			[styles.buttonError]: intent === "error",
+			[styles.buttonHighlight]: intent === "highlight",
+			[styles.buttonQuestion]: intent === "question",
+			[styles.buttonSuccess]: intent === "success",
+			[styles.buttonWarning]: intent === "warning",
 
-			// Variants
-			[styles.buttonActive]: props.isActive,
-			[styles.buttonDisabled]: props.isDisabled,
-			[styles.buttonLoading]: props.isLoading,
+			[styles.buttonActive]: isActive,
+			[styles.buttonDisabled]: isDisabled,
+			[styles.buttonLoading]: isLoading,
 
-			// Radius
-			"radius-3": !props.isRounded && props.size !== "tiny",
-			"radius-2": !props.isRounded && props.size === "tiny",
-			"radius-max": props.isRounded,
+			"radius-3": !isRounded && size !== "tiny",
+			"radius-2": !isRounded && size === "tiny",
+			"radius-max": isRounded,
 
-			// Sizes
-			[styles.buttonSizeNormal]: !props.size || props.size === "normal",
-			[styles.buttonSizeSmall]: props.size === "small",
-			[styles.buttonSizeTiny]: props.size === "tiny",
+			[styles.buttonSizeNormal]: !size || size === "normal",
+			[styles.buttonSizeSmall]: size === "small",
+			[styles.buttonSizeTiny]: size === "tiny",
 
-			// Colors
-			[styles.buttonColorAqua]: props.color === "aqua",
-			[styles.buttonColorBlue]: props.color === "blue",
-			[styles.buttonColorGray]: props.color === "gray",
-			[styles.buttonColorGreen]: props.color === "green",
-			[styles.buttonColorOrange]: props.color === "orange",
-			[styles.buttonColorPink]: props.color === "pink",
-			[styles.buttonColorPurple]: props.color === "purple",
-			[styles.buttonColorRed]: props.color === "red",
-			[styles.buttonColorYellow]: props.color === "yellow",
-
-			// Icon only
-			[styles.buttonWithIcon]: !!props.icon,
-			[styles.buttonIconOnly]: props.isIconOnly,
+			[styles.buttonWithIcon]: !!icon,
+			[styles.buttonIconOnly]: isIconOnly,
 			[styles.buttonIconOnlyLoading]: isIconOnlyLoading,
 		},
 	)
 
 	const buttonInputClasses = classNames("sans w-100 h-100", {
-		// Fonts
-		"tiny fw-medium": props.size === "tiny" || props.size === "small",
-		"small fw-semi-bold": !props.size || props.size === "normal",
+		"tiny fw-medium": size === "tiny" || size === "small",
+		"small fw-semi-bold": !size || size === "normal",
 
-		"radius-3": !props.isRounded && props.size !== "tiny",
-		"radius-2": !props.isRounded && props.size === "tiny",
-		"radius-max": props.isRounded,
+		"radius-3": !isRounded && size !== "tiny",
+		"radius-2": !isRounded && size === "tiny",
+		"radius-max": isRounded,
 
-		// Sizes
-		"px-6": (!props.size || props.size === "normal") && !props.isIconOnly,
-		"px-4": props.size === "small" && !props.isIconOnly,
-		"px-3": props.size === "tiny" && !props.isIconOnly,
+		"px-6": (!size || size === "normal") && !isIconOnly,
+		"px-4": size === "small" && !isIconOnly,
+		"px-3": size === "tiny" && !isIconOnly,
 	})
 
-	const buttonLoadingSize: 10 | 20 =
-		props.size && props.size !== "normal" ? 10 : 20
-	const buttonInputType: "submit" | "button" =
-		props.type === "primary" && !props.color ? "submit" : "button"
-
-	// const onButtonClick = (event: React.MouseEvent): void => props.onClick?.(event);
+	const buttonLoadingSize: 10 | 20 = size && size !== "normal" ? 10 : 20
 
 	return (
 		<Flex
 			className={buttonClasses}
 			isInline={true}
 			isCentered={true}
-			onClick={props.onClick}
+			onClick={onClick}
 			data-component="Button"
 		>
-			{!!props.icon && !isIconOnlyLoading && (
+			{!!icon && !isIconOnlyLoading && (
 				<Flex className={styles.button__icon}>
-					<Icon
-						name={props.icon}
-						size={BUTTON_ICON_SIZE[props.size || "normal"]}
-					/>
+					<Icon name={icon} size={BUTTON_ICON_SIZE[size || "normal"]} />
 				</Flex>
 			)}
-			{!!props.flair && (
+			{!!flair && (
 				<Flex className={styles.button__flair}>
-					<Dot size={6} color={props.flair} />
+					<Dot size={6} color={flair} />
 				</Flex>
 			)}
 			<input
-				type={buttonInputType}
+				type={type}
 				className={buttonInputClasses}
-				aria-pressed={!!props.isActive}
-				aria-disabled={!!props.isDisabled}
-				tabIndex={props.tabIndex ?? 0}
+				aria-pressed={!!isActive}
+				aria-disabled={!!isDisabled}
+				tabIndex={tabIndex ?? 0}
 				role="button"
-				value={props.isIconOnly ? "" : props.value}
+				value={isIconOnly ? "" : value}
 			/>
-			{props.isLoading && (
-				<Loading
-					size={buttonLoadingSize}
-					color="currentcolor"
-					className={styles.button__loading}
-				/>
+			{isLoading && (
+				<Loading size={buttonLoadingSize} className={styles.button__loading} />
 			)}
 		</Flex>
 	)

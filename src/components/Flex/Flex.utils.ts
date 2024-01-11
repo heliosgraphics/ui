@@ -1,9 +1,6 @@
-import type { FUIFlexProps } from "../types/flex"
+import type { FlexProps } from "./Flex.types"
 
-export const getFlexUtility = (
-	props: FUIFlexProps,
-	className?: string,
-): string => {
+export const getFlexUtility = (props?: FlexProps): string => {
 	if (!props) return "flex"
 
 	const flexClasses = new Set<string>()
@@ -11,6 +8,7 @@ export const getFlexUtility = (
 
 	flexClasses.add(flexBase)
 
+	if (props.isStretch) flexClasses.add("flex-stretch")
 	if (props.isCentered) flexClasses.add("flex-center")
 	if (props.isColumn) flexClasses.add("flex-column")
 	if (props.isWrapping) flexClasses.add("flex-wrap")
@@ -24,7 +22,7 @@ export const getFlexUtility = (
 	if (props.isBetween) flexClasses.add("space-between")
 	if (props.isAround) flexClasses.add("space-around")
 
-	if (props.gap || props.gap === 0) flexClasses.add(`flex-gap-${props.gap}`)
+	if (props.gap || props.gap === 0) flexClasses.add(`gap-${props.gap}`)
 	if (props.padding || props.padding === 0)
 		flexClasses.add(`p-${props.padding}`)
 	if (props.paddingY || props.paddingY === 0)
@@ -33,7 +31,7 @@ export const getFlexUtility = (
 		flexClasses.add(`px-${props.paddingX}`)
 	if (props.radius) flexClasses.add(`radius-${props.radius}`)
 
-	if (className) flexClasses.add(className)
+	if (props.className) flexClasses.add(props.className)
 
 	return Array.from(flexClasses).join(" ")
 }

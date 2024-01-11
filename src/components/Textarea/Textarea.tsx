@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState, useMemo, useRef, useEffect } from "react"
 import Text from "../Text"
 import styles from "./Textarea.module.css"

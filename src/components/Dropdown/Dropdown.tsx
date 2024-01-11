@@ -1,3 +1,5 @@
+"use client"
+
 import React, {
 	useEffect,
 	useState,
@@ -5,7 +7,7 @@ import React, {
 	Children,
 	cloneElement,
 } from "react"
-import { LOADING_FAST_DELAY } from "../constants/animations"
+import { ANIMATION_FAST } from "../../constants/animations"
 import classNames from "@sindresorhus/class-names"
 import ResultList from "../ResultList"
 import styles from "./Dropdown.module.css"
@@ -31,7 +33,6 @@ const Dropdown: React.FC<DropdownProps> = ({
 		return children
 	}
 
-	// NOTE @chris We need to keep state in a React.ref to be able to access the non-stale state in setTimeout/setInterval.
 	stateRef.current = isHovering
 
 	const dropdownClasses: string = classNames(styles.dropdown, {
@@ -46,7 +47,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 
 		return setTimeout(
 			() => !stateRef.current && setVisible(false),
-			LOADING_FAST_DELAY,
+			ANIMATION_FAST,
 		)
 	}
 

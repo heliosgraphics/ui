@@ -1,0 +1,234 @@
+/* todo: move these to layout and pre-connect */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
+@import url("https://rsms.me/inter/inter.css");
+
+:root {
+	/* setup fractures */
+	--box-px: 1px;
+	--box-1: 2px;
+	--box-2: 4px;
+	--box-3: 6px;
+	--box-4: 8px;
+	--box-5: 10px;
+	--box-6: 12px;
+	--box-7: 14px;
+	--box-8: 16px;
+	--box-9: 18px;
+	--box-10: 20px;
+	--box-11: 22px;
+	--box-12: 24px;
+	--box-13: 26px;
+	--box-14: 28px;
+	--box-15: 30px;
+	--box-16: 32px;
+	--box-24: 48px;
+	--box-32: 64px;
+	--box-40: 80px;
+	--box-48: 96px;
+
+	--radius-small: 4px;
+	--radius-normal: 8px;
+	--radius-large: 12px;
+
+	--font-size-h0: 48px;
+	--font-size-h1: 36px;
+	--font-size-h2: 32px;
+	--font-size-h3: 28px;
+	--font-size-h4: 24px;
+	--font-size-h5: 20px;
+	--font-size-h6: 18px;
+	--font-size-p: 16px;
+	--font-size-small: 14px;
+	--font-size-tiny: 12px;
+
+	--line-height-h1: 44px;
+	--line-height-h2: 40px;
+	--line-height-h3: 36px;
+	--line-height-h4: 32px;
+	--line-height-h5: 26px;
+	--line-height-h6: 24px;
+	--line-height-p: 24px;
+	--line-height-small: 22px;
+	--line-height-tiny: 18px;
+
+	--font-family-sans: "Inter", -apple-system, "Helvetica Neue", Arial,
+		sans-serif;
+	--font-family-mono: "JetBrains Mono", courier, monospace;
+	--font-family-serif: "Frank Ruhl Libre", Georgia;
+
+	--font-weight-thin: 100;
+	--font-weight-extra-light: 200;
+	--font-weight-light: 300;
+	--font-weight-normal: 400;
+	--font-weight-medium: 500;
+	--font-weight-semi-bold: 600;
+	--font-weight-bold: 700;
+	--font-weight-extra-bold: 800;
+	--font-weight-black: 900;
+
+	--z-index-0: 0;
+	--z-index-10: 100;
+	--z-index-20: 200;
+	--z-index-30: 300;
+	--z-index-40: 400;
+	--z-index-50: 500;
+	--z-index-60: 600;
+	--z-index-70: 700;
+	--z-index-80: 800;
+	--z-index-90: 900;
+	--z-index-100: 1000;
+
+	/* color functions */
+	--color-aqua: 187, 87%;
+	--color-blue: 230, 87%;
+	--color-gray: 225, 10%;
+	--color-green: 120, 75%;
+	--color-orange: 23, 94%;
+	--color-pink: 324, 76%;
+	--color-purple: 266, 80%;
+	--color-red: 356, 84%;
+	--color-yellow: 39, 93%;
+
+	/* text emphasis */
+	--hsl-background: hsl(0, 0%, 100%);
+	--hsl-text: hsl(3, 11%, 5%);
+
+	/* setup constants: animations */
+	--animation-fastest: 64ms;
+	--animation-fast: 96ms;
+	--animation-normal: 128ms;
+	--animation-slow: 160ms;
+	--animation-slowest: 192ms;
+
+	font-family: var(--font-family-sans);
+  font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+@supports (font-variation-settings: normal) {
+	:root {
+		font-family: "InterVariable", sans-serif;
+	}
+}
+
+/* don't do this without addressing downstream. */
+* {
+	outline: none;
+}
+
+/* selections */
+body *::selection {
+	background-color: hsl(var(--color-orange), 95%);
+	color: hsl(var(--color-orange), 20%)
+}
+
+body[data-theme="PREFERS_DARK"] *::selection {
+	background-color: hsl(var(--color-orange), 20%);
+	color: hsl(var(--color-orange), 90%)
+}
+
+body {
+	width: 100%;
+
+	transition:
+		background-color var(--animation-fast) var(--easeInOutSine),
+		color var(--animation-fast) var(--easeInOutSine);
+}
+
+:root {
+  color-scheme: light;
+
+  --intent-color-confirmation: var(--color-purple), 45%;
+	--intent-color-highlight: var(--color-orange), 45%;
+	--intent-color-success: var(--color-green), 60%;
+	--intent-color-question: var(--color-aqua), 60%;
+	--intent-color-error: var(--color-red), 60%;
+	--intent-color-warning: var(--color-yellow), 60%;
+	--intent-color-advise: var(--color-blue), 60%;
+
+	background-color: var(--hsl-background);
+	color: var(--hsl-text);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --intent-color-confirmation: var(--color-purple), 45%;
+	--intent-color-highlight: var(--color-orange), 45%;
+	--intent-color-success: var(--color-green), 60%;
+	--intent-color-question: var(--color-aqua), 60%;
+	--intent-color-error: var(--color-red), 60%;
+	--intent-color-warning: var(--color-yellow), 60%;
+	--intent-color-advise: var(--color-blue), 60%;
+
+	background-color: var(--hsl-text);
+	color: var(--hsl-background);
+}
+
+.debug * {
+	box-shadow: inset 0 0 0 1px hsla(var(--color-orange), 80%, 0.5);
+}
+
+.debug *[data-component] {
+	box-shadow: inset 0 0 0 1px hsla(var(--color-orange), 80%, 0.75);
+}
+
+.debug *[data-component]:after {
+	position: absolute;
+
+	padding: 4px;
+
+	background-color: hsla(var(--color-orange), 50%, 5);
+	color: var(--gray-0);
+
+	font-family: var(--font-family-mono);
+	font-size: 8px;
+	content: attr(data-component);
+}
+
+/* Helpers: Glass */
+.glass-1 {
+	background-color: rgba(255, 255, 255, 0.88);
+	backdrop-filter: blur(3px);
+}
+
+/* Helpers: Shadow */
+.shadow-1 {
+	box-shadow:
+		0 0 0 1px rgba(0, 0, 0, 0.024),
+		0 1px 1px 0 rgba(0, 0, 0, 0.06),
+		0 2px 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+.shadow-2 {
+	box-shadow:
+		0 0 0 1px rgba(0, 0, 0, 0.024),
+		0 1px 1px 0 rgba(0, 0, 0, 0.06),
+		0 0 4px 0 rgba(0, 0, 0, 0.08),
+		0 0 0 1px rgba(0, 0, 0, 0.04),
+		0 0 10px 0 rgba(0, 0, 0, 0.08);
+}
+
+.helios-scrollbar::-webkit-scrollbar {
+	height: 8px;
+	width: 8px;
+}
+
+.helios-scrollbar::-webkit-scrollbar-thumb {
+	height: 4px;
+	width: 4px;
+
+	background-color: var(--gray-100);
+	transition: all 80ms ease-in-out;
+}
+
+.helios-scrollbar::-webkit-scrollbar-track {
+	background-color: var(--gray-25);
+}
+
+.helios-scrollbar::-webkit-scrollbar-thumb:hover {
+	background-color: var(--gray-200);
+}
+
+.helios-scrollbar::-webkit-scrollbar-thumb:active {
+	background-color: var(--gray-300);
+}

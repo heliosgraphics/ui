@@ -1,10 +1,10 @@
 import { it, describe, expect } from "vitest"
-import { getFlexUtility } from "./flex"
-import type { FUIFlexProps } from "../types/flex"
+import { getFlexUtility } from "./Flex.utils"
+import type { FlexProps } from "./Flex.types"
 
 describe("getFlexUtility", () => {
 	const MOCK_FLEX_COLUMN_CLASSES = `flex flex-center flex-column flex-wrap`
-	const MOCK_FLEX_COLUMN: FUIFlexProps = {
+	const MOCK_FLEX_COLUMN: FlexProps = {
 		isColumn: true,
 		isWrapping: true,
 		isCentered: true,
@@ -14,7 +14,7 @@ describe("getFlexUtility", () => {
 		expect(getFlexUtility(MOCK_FLEX_COLUMN)).toEqual(MOCK_FLEX_COLUMN_CLASSES))
 
 	const MOCK_FLEX_INLINE_CLASSES = `inline-flex flex-gap-16`
-	const MOCK_FLEX_INLINE: FUIFlexProps = {
+	const MOCK_FLEX_INLINE: FlexProps = {
 		isInline: true,
 		gap: 16,
 	}
@@ -23,7 +23,7 @@ describe("getFlexUtility", () => {
 		expect(getFlexUtility(MOCK_FLEX_INLINE)).toEqual(MOCK_FLEX_INLINE_CLASSES))
 
 	const MOCK_FLEX_CLASSES = `flex`
-	const MOCK_FLEX: FUIFlexProps = {}
+	const MOCK_FLEX: FlexProps = {}
 
 	it("Generates empty flex without attrs", () =>
 		expect(getFlexUtility(MOCK_FLEX)).toEqual(MOCK_FLEX_CLASSES))
@@ -31,7 +31,7 @@ describe("getFlexUtility", () => {
 		expect(getFlexUtility(undefined as any)).toEqual(MOCK_FLEX_CLASSES))
 
 	const MOCK_FLEX_DUPLICATE_CLASSES = `flex flex-center`
-	const MOCK_FLEX_DUPLICATE: FUIFlexProps = {
+	const MOCK_FLEX_DUPLICATE: FlexProps = {
 		isCentered: true,
 	}
 

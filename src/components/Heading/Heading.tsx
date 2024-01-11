@@ -1,5 +1,5 @@
 import React from "react"
-import { getTypographyUtility } from "../utils/typography"
+import { getTypographyUtility } from "../Text/Text.utils"
 import H0 from "./components/H0/H0"
 import H1 from "./components/H1/H1"
 import H2 from "./components/H2/H2"
@@ -11,11 +11,8 @@ import styles from "./Heading.module.css"
 import type { HeadingProps } from "./Heading.types"
 
 const Heading: React.FC<HeadingProps> = (props) => {
-	const utility: string = getTypographyUtility(
-		{ ...props, className: styles.heading },
-		true,
-	)
-	// TODO remvoe more
+	const utility: string = getTypographyUtility(props)
+
 	const {
 		level,
 		textAlign,

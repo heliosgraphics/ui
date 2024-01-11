@@ -6,7 +6,6 @@ import LayoutTop from "./components/LayoutTop"
 import LayoutLeftItemGroup from "./components/LayoutLeftItemGroup"
 import LayoutSeparator from "./components/LayoutSeparator"
 import type { FCwithContent, LayoutProps } from "./Layout.types"
-
 ;(Layout as FCwithContent<LayoutProps>).Top = LayoutTop
 ;(Layout as FCwithContent<LayoutProps>).Left = LayoutLeft
 ;(Layout as FCwithContent<LayoutProps>).LeftItem = LayoutLeftItem

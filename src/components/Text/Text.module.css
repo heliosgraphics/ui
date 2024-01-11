@@ -1,23 +1,23 @@
 .text {
-  transition: all 120ms ease-in-out;
+	transition: all 120ms ease-in-out;
 }
 
 .text a {
-  color: inherit;
-  cursor: pointer;
+	color: inherit;
+	cursor: pointer;
 
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
-.text a[rel=author] {
-  text-decoration-style: dashed;
+.text a[rel="author"] {
+	text-decoration-style: dashed;
 }
 
 .text u {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 .text.textWithLinks a {
-  font-weight: var(--font-weight-medium);
-  text-decoration: underline;
+	font-weight: var(--font-weight-medium);
+	text-decoration: underline;
 }

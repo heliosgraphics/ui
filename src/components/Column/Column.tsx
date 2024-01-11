@@ -8,9 +8,7 @@ const Column: React.FC<ColumnProps> = (props) => {
 		["mx-auto"]: props.isColumnCentered,
 	})
 
-	// TODO @chrispuska Should not duplicate the centered prop
 	const { isColumnCentered, ...safeProps } = props
-
 	const columnStyle = {
 		maxWidth: "100%",
 		width: `${props.width ?? 960}px`,

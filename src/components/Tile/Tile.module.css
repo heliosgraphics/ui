@@ -1,15 +1,15 @@
 .tile {
-  position: relative;
+	position: relative;
 
 	overflow: hidden;
 	transition: all 120ms var(--easeInCirc);
 }
 
 .tile__hex {
-  position: absolute;
+	position: absolute;
 
-  opacity: 0.5;
+	opacity: 0.5;
 
-  background-blend-mode: screen;
-  content: " ";
+	background-blend-mode: screen;
+	content: " ";
 }

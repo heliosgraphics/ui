@@ -32,9 +32,7 @@ const LayoutLeft: React.FC<LayoutLeftProps> = ({ children }) => {
 					/>
 				</ButtonGroup>
 			</nav>
-			<nav className={`${styles.navigationLeft__nav} sora-scrollbar`}>
-				{children}
-			</nav>
+			<nav className={styles.navigationLeft__nav}>{children}</nav>
 		</aside>
 	)
 }

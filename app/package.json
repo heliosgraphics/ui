@@ -1,0 +1,26 @@
+{
+	"name": "@heliosgraphics/components",
+	"version": "0.0.0",
+	"private": false,
+	"description": "Helios Components Workshop",
+	"author": "03b8 <03b8@helios.graphics>",
+	"scripts": {
+		"dev:components": "next dev -p 1024",
+		"build:components": "next build",
+		"start:components": "next start"
+	},
+	"dependencies": {
+		"@heliosgraphics/fractures": "latest",
+		"@heliosgraphics/icons": "latest",
+		"@heliosgraphics/utils": "5.2.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"@svgr/webpack": "latest"
+	},
+	"devDependencies": {
+		"next": "latest",
+		"react": "latest",
+		"react-dom": "latest",
+		"typescript": "latest"
+	}
+}

@@ -1,5 +1,5 @@
 import React from "react"
-import { getIsValid, formatDate, getFromNow } from "../utils/dayjs"
+import { getIsValid, formatDate, getFromNow } from "../../utils/dayjs"
 import type { TimestampProps } from "./Timestamp.types"
 
 const Timestamp: React.FC<TimestampProps> = ({

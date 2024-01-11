@@ -4,7 +4,6 @@ import React, { useEffect, useState, createContext } from "react"
 import { usePathname } from "next/navigation"
 import type { LayoutProviderProps } from "./LayoutProvider.types"
 
-// FIXME @chris Remove this state
 const LayoutContext = createContext<LayoutProviderProps>({
 	isActive: false,
 	setActive: (_state: boolean) => null,

@@ -1,11 +1,12 @@
 import React from "react"
 import classNames from "@sindresorhus/class-names"
 import styles from "./Loading.module.css"
-import { getColor } from "../utils/color"
-import type { FUIColors } from "@heliosgraphics/library/types/colors"
+import type { HeliosColors } from "src/types/colors"
+// import { getColor } from "../utils/color"
+// import type { FUIColors } from "@heliosgraphics/library/types/colors"
 
 interface LoadingProps {
-	color?: FUIColors
+	color?: HeliosColors
 	className?: string
 	size: 10 | 20 | 40
 }
@@ -18,9 +19,9 @@ const Loading: React.FC<LoadingProps> = ({
 	const rSize = size / 2
 	const cSize = rSize + 2
 	const dashSize = size + cSize
-	const circleColor = getColor(color as any)
-	const circleColorVariable: string =
-		color === "currentcolor" ? "currentcolor" : `var(--${circleColor})`
+	const circleColor = "red" // getColor(color as any)
+	const circleColorVariable: string = "red"
+	// color === "currentcolor" ? "currentcolor" : `var(--${circleColor})`
 
 	const loadingClasses: string = classNames(className, styles.loading, {
 		[styles.loading32]: size === 10,

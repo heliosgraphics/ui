@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./Donut.module.css"
-import { getColor } from "../utils/color"
+// import { getColor } from "../utils/color"
 import { getDonutBorderSize } from "./Donut.utils"
 import Flex from "../Flex"
 import type { DonutProps } from "./Donut.types"
@@ -16,7 +16,7 @@ const Donut: React.FC<DonutProps> = ({
 	const cSize = size / 2
 	const rSize = actualSize / 2
 	const dashSize = 100 - percentage
-	const donutColor: string = `var(--${getColor(color)})`!
+	const donutColor: string = "red" //  `var(--${getColor(color)})`!
 
 	const donutContainerStyle: object = {
 		height: size + "px",

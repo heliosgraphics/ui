@@ -8,7 +8,6 @@ import Button from "../Button"
 import ButtonGroup from "../ButtonGroup"
 import classNames from "@sindresorhus/class-names"
 import Heading from "../Heading"
-// TODO @chrispuska Should use framer instead.
 import { animated } from "@react-spring/web"
 import type { DialogProps } from "./Dialog.types"
 

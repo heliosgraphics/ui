@@ -1,53 +1,53 @@
 .loading {
-  z-index: 1;
+	z-index: 1;
 
 	animation: showIconLoading 100ms ease-in-out;
 }
 
 .loading128 circle {
-  animation: rotateIconLoading128 600ms linear forwards infinite;
+	animation: rotateIconLoading128 600ms linear forwards infinite;
 }
 
 .loading64 circle {
-  animation: rotateIconLoading64 600ms linear forwards infinite;
+	animation: rotateIconLoading64 600ms linear forwards infinite;
 }
 
 .loading32 circle {
-  animation: rotateIconLoading32 600ms linear forwards infinite;
+	animation: rotateIconLoading32 600ms linear forwards infinite;
 }
 
 @keyframes showIconLoading {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes rotateIconLoading32 {
-  from {
-    stroke-dashoffset: 0;
-  }
-  to {
-    stroke-dashoffset: 32;
-  }
+	from {
+		stroke-dashoffset: 0;
+	}
+	to {
+		stroke-dashoffset: 32;
+	}
 }
 
 @keyframes rotateIconLoading64 {
-  from {
-    stroke-dashoffset: 0;
-  }
-  to {
-    stroke-dashoffset: 64;
-  }
+	from {
+		stroke-dashoffset: 0;
+	}
+	to {
+		stroke-dashoffset: 64;
+	}
 }
 
 @keyframes rotateIconLoading128 {
-  from {
-    stroke-dashoffset: 0;
-  }
-  to {
-    stroke-dashoffset: 128;
-  }
+	from {
+		stroke-dashoffset: 0;
+	}
+	to {
+		stroke-dashoffset: 128;
+	}
 }

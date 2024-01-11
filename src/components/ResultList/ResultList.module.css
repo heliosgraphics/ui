@@ -1,5 +1,5 @@
 .resultList {
-  position: absolute;
+	position: absolute;
 	z-index: 1;
 
 	max-height: 360px;
@@ -18,25 +18,25 @@
 }
 
 .resultList li:not(.resultList__separator) {
-  padding: 10px 12px;
+	padding: 10px 12px;
 
-  transition: all 60ms ease-in-out;
-  cursor: pointer;
+	transition: all 60ms ease-in-out;
+	cursor: pointer;
 
-  -webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .resultList li.resultList__separator {
-  position: relative;
+	position: relative;
 
-  padding: 4px;
-  background-color: var(--gray-25);
+	padding: 4px;
+	background-color: var(--gray-25);
 
-  pointer-events: none;
+	pointer-events: none;
 }
 
 .itemActive {
-  background: linear-gradient(var(--gray-50), var(--gray-25));
+	background: linear-gradient(var(--gray-50), var(--gray-25));
 }
 
 /*
@@ -67,33 +67,33 @@
 } */
 
 .resultList li:hover {
-  background-color: var(--gray-25);
+	background-color: var(--gray-25);
 }
 
 .resultList li:not(:first-child) {
-  border-top: 1px solid var(--gray-50);
+	border-top: 1px solid var(--gray-50);
 }
 
 .resultList .resultList__icon {
-  /* padding: 8px;
+	/* padding: 8px;
   margin-left: -10px;
 
   background-color: var(--gray-100);
   border-radius: 2px; */
 
-  /* padding-right: 8px;
+	/* padding-right: 8px;
   margin-left: -2px;
 
   border-right: 1px solid var(--gray-50); */
 }
 
 @keyframes resultsFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	0% {
+		opacity: 0;
+		transform: translateY(-8px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }

@@ -1,40 +1,40 @@
 .textarea {
-  width: 100%;
+	width: 100%;
 }
 
 .textarea textarea {
-  padding: 8px 10px;
-  height: auto;
-  min-height: 96px;
-  overflow: hidden;
-  width: 100%;
+	padding: 8px 10px;
+	height: auto;
+	min-height: 96px;
+	overflow: hidden;
+	width: 100%;
 
-  background-clip: padding-box;
-  background-color: var(--gray-0);
-  border: 1px solid var(--fui-color-100);
-  color: var(--fui-color-700);
-  border-radius: 4px;
-  resize: none;
-  outline: none;
-  transition: all 120ms ease-in-out;
+	background-clip: padding-box;
+	background-color: var(--gray-0);
+	border: 1px solid var(--fui-color-100);
+	color: var(--fui-color-700);
+	border-radius: 4px;
+	resize: none;
+	outline: none;
+	transition: all 120ms ease-in-out;
 
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-small);
-  line-height: var(--line-height-small);
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
 }
 
 .textarea textarea:active:not(:disabled),
 .textarea textarea:focus:not(:disabled) {
-  box-shadow: 0 0 0 3px hsla(var(--hsl-blue-300), 0.2);
-  border-color: var(--blue-200);
+	box-shadow: 0 0 0 3px hsla(var(--hsl-blue-300), 0.2);
+	border-color: var(--blue-200);
 }
 
 .textarea textarea::placeholder {
-  color: var(--fui-color-300);
-  opacity: 1;
+	color: var(--fui-color-300);
+	opacity: 1;
 }
 
 .textarea textarea:disabled {
-  background-color: var(--gray-25);
-  pointer-events: none;
+	background-color: var(--gray-25);
+	pointer-events: none;
 }

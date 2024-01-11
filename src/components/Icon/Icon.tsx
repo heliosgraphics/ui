@@ -1,6 +1,5 @@
 import React from "react"
 import classNames from "@sindresorhus/class-names"
-import { getColor } from "../utils/color"
 import Icon_ArrowDown from "@heliosgraphics/icons/out/arrow-down.svg"
 import Icon_ArrowLeft from "@heliosgraphics/icons/out/arrow-left.svg"
 import Icon_ArrowRight from "@heliosgraphics/icons/out/arrow-right.svg"
@@ -216,16 +215,8 @@ const ICONS: Record<HeliosIconType, React.ReactElement> = {
 	x: <Icon_X />,
 }
 
-const Icon: React.FC<IconProps> = ({
-	name,
-	className,
-	size,
-	color,
-	isFullSize,
-}) => {
+const Icon: React.FC<IconProps> = ({ name, className, size, isFullSize }) => {
 	const IconShape = (): React.ReactElement => ICONS[name] || null
-
-	const iconColor = getColor(color, undefined, "currentcolor")
 	const iconSizeStyle = isFullSize
 		? {}
 		: {
@@ -238,7 +229,6 @@ const Icon: React.FC<IconProps> = ({
 	const iconClasses: string = classNames(
 		styles.icon,
 		className,
-		iconColor,
 		"flex flex-center",
 	)
 

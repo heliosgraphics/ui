@@ -1,7 +1,11 @@
 export type HeliosIntentionType =
-	| "highlight"
-	| "success"
+	| "advise"
+	| "confirmation"
 	| "error"
+	| "highlight"
+	| "question"
+	| "silent"
+	| "success"
 	| "warning"
-	| "info"
-	| "note"
+
+export type HeliosEmphasisType = "primary" | "secondary" | "tertiary" | "silent"

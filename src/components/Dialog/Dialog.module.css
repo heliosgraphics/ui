@@ -1,5 +1,5 @@
 .dialog {
-  top: calc(12px + env(safe-area-inset-top, 12px));
+	top: calc(12px + env(safe-area-inset-top, 12px));
 
 	margin: 0 auto;
 	max-height: calc(100% - 32px);
@@ -15,82 +15,82 @@
 }
 
 .dialog::-webkit-scrollbar {
-  height: 8px;
-  width: 8px;
+	height: 8px;
+	width: 8px;
 }
 
 .dialog::-webkit-scrollbar-thumb {
-  height: 4px;
-  width: 4px;
+	height: 4px;
+	width: 4px;
 
-  background-color: var(--gray-0);
-  border-radius: 0 8px 8px 0;
-  border-left: 1px solid var(--gray-100);
-  transition: all 120ms ease-in-out;
+	background-color: var(--gray-0);
+	border-radius: 0 8px 8px 0;
+	border-left: 1px solid var(--gray-100);
+	transition: all 120ms ease-in-out;
 }
 
 .dialog::-webkit-scrollbar-track {
-  background-color: var(--gray-100);
-  border-radius: 0 8px 8px 0;
+	background-color: var(--gray-100);
+	border-radius: 0 8px 8px 0;
 }
 
 .dialog::-webkit-scrollbar-thumb:hover {
-  background-color: var(--gray-50);
+	background-color: var(--gray-50);
 }
 
 .dialog::-webkit-scrollbar-thumb:active {
-  background-color: var(--gray-50);
+	background-color: var(--gray-50);
 }
 
 .dialog__content {
-  position: relative;
-  z-index: 1;
+	position: relative;
+	z-index: 1;
 
-  padding: 24px;
+	padding: 24px;
 }
 
 .dialog__header {
-  border-radius: 8px 8px 0 0;
-  box-shadow: 0 1px 0 rgba(160, 160, 160, 0.2);
+	border-radius: 8px 8px 0 0;
+	box-shadow: 0 1px 0 rgba(160, 160, 160, 0.2);
 }
 
 /* ----------------------------------------------------------------- */
 /* Backdrop */
 
 .dialog::backdrop {
-  animation: backdropFadeIn 80ms ease-in-out;
-  background-color: rgba(100, 100, 120, 0.75);
-  backdrop-filter: blur(2px);
+	animation: backdropFadeIn 80ms ease-in-out;
+	background-color: rgba(100, 100, 120, 0.75);
+	backdrop-filter: blur(2px);
 }
 
 @media (max-width: 576px) {
-  .dialog {
-    margin-left: 8px;
-    margin-right: 8px;
-    width: calc(100% - 16px);
-  }
+	.dialog {
+		margin-left: 8px;
+		margin-right: 8px;
+		width: calc(100% - 16px);
+	}
 
-  .dialog__content {
-    padding: 12px;
-  }
+	.dialog__content {
+		padding: 12px;
+	}
 }
 
 @keyframes dialogFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	0% {
+		opacity: 0;
+		transform: translateY(6px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @keyframes backdropFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

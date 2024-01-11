@@ -1,50 +1,50 @@
 .select {
-  position: relative;
+	position: relative;
 
-  width: 100%;
+	width: 100%;
 
 	background-color: var(--gray-0);
 }
 
 .selectDisabled select {
-  background-color: var(--gray-50);
-  color: var(--gray-500);
+	background-color: var(--gray-50);
+	color: var(--gray-500);
 
-  pointer-events: none;
+	pointer-events: none;
 }
 
 .select select:active:not(:disabled),
 .select select:focus:not(:disabled) {
-  box-shadow: 0 0 0 3px hsla(var(--hsl-gray-300), 0.25);
-  border-color: var(--gray-200);
+	box-shadow: 0 0 0 3px hsla(var(--hsl-gray-300), 0.25);
+	border-color: var(--gray-200);
 }
 
 .select__select {
-  height: 38px;
-  margin: 0;
-  padding: 8px 10px;
-  width: 100%;
+	height: 38px;
+	margin: 0;
+	padding: 8px 10px;
+	width: 100%;
 
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  border: 1px solid var(--fui-color-100);
-  border-radius: 4px;
-  color: var(--gray-700);
-  transition: background-color 120ms ease-in-out;
+	appearance: none;
+	background-color: transparent;
+	border: none;
+	border: 1px solid var(--fui-color-100);
+	border-radius: 4px;
+	color: var(--gray-700);
+	transition: background-color 120ms ease-in-out;
 
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-small);
-  cursor: inherit;
-  line-height: inherit;
+	font-family: var(--font-family-mono);
+	font-size: var(--font-size-small);
+	cursor: inherit;
+	line-height: inherit;
 }
 
 .select__icon {
-  position: absolute;
-  right: 0;
+	position: absolute;
+	right: 0;
 
-  height: 38px;
-  width: 38px;
+	height: 38px;
+	width: 38px;
 
-  pointer-events: none;
+	pointer-events: none;
 }

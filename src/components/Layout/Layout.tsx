@@ -5,7 +5,7 @@ import React from "react"
 import { LayoutProvider } from "./contexts/LayoutProvider"
 import type { LayoutProps } from "./Layout.types"
 
-// TODO @chrispuska Next and context will be dropped - this was an experimental version.
+// deprecated
 const Layout: React.FC<LayoutProps> = ({ children }) => {
 	return (
 		<LayoutProvider>

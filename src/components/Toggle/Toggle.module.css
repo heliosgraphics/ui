@@ -1,88 +1,88 @@
 .toggle {
-  -webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .toggle__toggle {
-  box-sizing: border-box;
-  position: relative;
+	box-sizing: border-box;
+	position: relative;
 
-  user-select: none;
-  cursor: pointer;
+	user-select: none;
+	cursor: pointer;
 }
 
 .toggle__toggleDisabled {
-  opacity: 0.5;
-  pointer-events: none;
+	opacity: 0.5;
+	pointer-events: none;
 }
 
 .toggle__toggle input {
-  display: none;
-  height: 0;
-  width: 0;
+	display: none;
+	height: 0;
+	width: 0;
 
-  visibility: none;
+	visibility: none;
 }
 
 .toggle__toggle__mark {
-  box-sizing: border-box;
-  height: 24px;
-  margin-right: 8px;
-  overflow: hidden;
-  width: 52px;
+	box-sizing: border-box;
+	height: 24px;
+	margin-right: 8px;
+	overflow: hidden;
+	width: 52px;
 
-  background-color: var(--gray-500);
-  border-radius: 52px;
+	background-color: var(--gray-500);
+	border-radius: 52px;
 }
 
 .toggle__toggle__mark:after {
-  left: 4px;
-  top: 4px;
-  position: absolute;
+	left: 4px;
+	top: 4px;
+	position: absolute;
 
-  box-sizing: inherit;
-  height: 16px;
-  width: 16px;
+	box-sizing: inherit;
+	height: 16px;
+	width: 16px;
 
-  background-color: var(--gray-0);
-  border-radius: 100%;
-  transition: all 100ms ease-in-out;
-  content: " ";
+	background-color: var(--gray-0);
+	border-radius: 100%;
+	transition: all 100ms ease-in-out;
+	content: " ";
 }
 
 .toggle__toggle__mark:before {
-  left: 0;
-  top: 0;
-  position: absolute;
+	left: 0;
+	top: 0;
+	position: absolute;
 
-  box-sizing: inherit;
-  padding-left: 24px;
-  padding-right: 8px;
-  width: 52px;
+	box-sizing: inherit;
+	padding-left: 24px;
+	padding-right: 8px;
+	width: 52px;
 
-  /* box-shadow: inset 0 0 0 1px red; */
-  color: var(--gray-200);
+	/* box-shadow: inset 0 0 0 1px red; */
+	color: var(--gray-200);
 
-  content: "OFF";
-  font-size: 12px;
-  font-family: var(--font-family-mono);
-  font-weight: 500;
-  line-height: 23px;
-  text-align: center;
+	content: "OFF";
+	font-size: 12px;
+	font-family: var(--font-family-mono);
+	font-weight: 500;
+	line-height: 23px;
+	text-align: center;
 }
 
 .toggle__toggle input:checked ~ .toggle__toggle__mark:after {
-  left: 32px;
+	left: 32px;
 }
 
 .toggle__toggle input:checked ~ .toggle__toggle__mark:before {
-  padding-left: 8px;
-  padding-right: 24px;
+	padding-left: 8px;
+	padding-right: 24px;
 
-  color: var(--blue-100);
+	color: var(--blue-100);
 
-  content: "ON";
+	content: "ON";
 }
 
 .toggle__toggle input:checked ~ .toggle__toggle__mark {
-  background-color: var(--blue-500);
+	background-color: var(--blue-500);
 }

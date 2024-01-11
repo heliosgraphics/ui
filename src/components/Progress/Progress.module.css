@@ -1,5 +1,5 @@
 .progress {
-  height: 8px;
+	height: 8px;
 	width: 100%;
 
 	background-color: var(--blue-100);
@@ -8,11 +8,11 @@
 }
 
 .progress::-webkit-progress-bar {
-  background-color: transparent;
+	background-color: transparent;
 }
 
 .progress::-webkit-progress-value {
-  background-color: var(--blue-500);
-  border-radius: 16px;
-  transition: all 120ms ease-in-out;
+	background-color: var(--blue-500);
+	border-radius: 16px;
+	transition: all 120ms ease-in-out;
 }

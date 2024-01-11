@@ -1,33 +1,105 @@
+.alertBox {
+	position: relative;
+
+	background-color: var(--color-background);
+	container-type: inline-size;
+
+	user-select: none;
+}
+
+.alert {
+	--alert-intent-confirmation--bg: hsla(var(--intent-color-confirmation), 0.25);
+	--alert-intent-confirmation--text: hsla(var(--intent-color-confirmation), 1);
+
+	--alert-intent-error--bg: hsla(var(--intent-color-error), 0.25);
+	--alert-intent-error--text: hsla(var(--intent-color-error), 1);
+
+	--alert-intent-highlight--bg: hsla(var(--intent-color-highlight), 0.25);
+	--alert-intent-highlight--text: hsla(var(--intent-color-highlight), 1);
+
+	--alert-intent-advise--bg: hsla(var(--intent-color-advise), 0.25);
+	--alert-intent-advise--text: hsla(var(--intent-color-advise), 1);
+
+	--alert-intent-question--bg: hsla(var(--intent-color-question), 0.25);
+	--alert-intent-question--text: hsla(var(--intent-color-question), 1);
+
+	--alert-intent-success--bg: hsla(var(--intent-color-success), 0.25);
+	--alert-intent-success--text: hsla(var(--intent-color-success), 1);
+
+	--alert-intent-warning--bg: hsla(var(--intent-color-warning), 0.25);
+	--alert-intent-warning--text: hsla(var(--intent-color-warning), 1);
+
+	display: flex;
+	flex-direction: row;
+}
+
+.alertSmall {
+	border-radius: var(--radius-small);
+}
+
+.alertNormal {
+	border-radius: var(--radius-normal);
+}
+
+.alertWithButton {
+	padding-right: 48px;
+}
+
+.alertButtonGroup {
+	position: absolute;
+	right: 8px;
+	top: 8px;
+}
+
 .alert a {
-  color: inherit;
-
-  font-weight: var(--font-weight-medium);
-  text-decoration: underline;
+	font-weight: var(--font-weight-medium);
+	text-decoration: underline;
 }
 
+/* intent: advise */
+.alertAdvise {
+	background-color: var(--alert-intent-advise--bg);
+	color: var(--alert-intent-advise--text);
+}
+
+/* intent: confirmation */
+.alertConfirmation {
+	background-color: var(--alert-intent-confirmation--bg);
+	color: var(--alert-intent-confirmation--text);
+}
+
+/* intent: error */
 .alertError {
-  background-color: hsla(var(--hsl-red-300), 0.1);
-  color: var(--red-600);
+	background-color: var(--alert-intent-error--bg);
+	color: var(--alert-intent-error--text);
 }
 
-.alertInfo {
-  background-color: hsla(var(--hsl-blue-300), 0.1);
-  color: var(--blue-600);
+/* intent: highlight */
+.alertHighlight {
+	background-color: var(--alert-intent-highlight--bg);
+	color: var(--alert-intent-highlight--text);
 }
 
-.alertNote {
-  background-color: var(--gray-50);
-  color: var(--gray-600);
+/* intent: question */
+.alertQuestion {
+	background-color: var(--alert-intent-question--bg);
+	color: var(--alert-intent-question--text);
 }
 
-/* TODO Green is too light, should create own palette */
+/* intent: success */
 .alertSuccess {
-  background-color: hsla(var(--hsl-green-300), 0.25);
-  color: var(--green-700);
+	background-color: var(--alert-intent-success--bg);
+	color: var(--alert-intent-success--text);
 }
 
+/* intent: warning */
 .alertWarning {
-  background-color: hsla(var(--hsl-orange-300), 0.1);
-  box-shadow: inset 0 0 0 1px hsla(var(--hsl-orange-300), 0.2);
-  color: var(--orange-600);
+	background-color: var(--alert-intent-warning--bg);
+	color: var(--alert-intent-warning--text);
+}
+
+@container (max-width: 640px) {
+	.alert {
+		flex-direction: column;
+	}
 }

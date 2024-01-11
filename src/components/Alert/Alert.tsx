@@ -3,55 +3,56 @@ import Button from "../Button/Button"
 import classNames from "@sindresorhus/class-names"
 import Flex from "../Flex/Flex"
 import Icon from "../Icon/Icon"
-import Text from "../Text/Text"
 import styles from "./Alert.module.css"
+import Text from "../Text/Text"
 import type { AlertProps } from "./Alert.types"
-import type { FUIColorScale, FUIColors } from "../../types/colors"
-import type { HeliosIntentionType } from "../../types/intentions"
-import { INTENTION_COLOR_MAP } from "../../constants/intentions"
+import ButtonGroup from "../ButtonGroup"
 
 const Alert: React.FC<AlertProps> = ({
 	children,
 	onClose,
 	title,
 	icon,
-	type,
+	intent,
 }) => {
-	const alertColor: FUIColorScale = INTENTION_COLOR_MAP[type]
-	const alertIconColor: FUIColors = INTENTION_COLOR_MAP[type]
-
-	const alertClasses: string = classNames(styles.alert, "radius-2 p-4", {
-		[styles.alertError]: type === "error",
-		[styles.alertInfo]: type === "info",
-		[styles.alertSuccess]: type === "success",
-		[styles.alertNote]: type === "note",
-		[styles.alertWarning]: type === "warning",
+	const alertClasses: string = classNames(styles.alert, {
+		[styles.alertAdvise]: intent === "advise",
+		[styles.alertConfirmation]: intent === "confirmation",
+		[styles.alertError]: intent === "error",
+		[styles.alertHighlight]: intent === "highlight",
+		[styles.alertQuestion]: intent === "question",
+		[styles.alertSuccess]: intent === "success",
+		[styles.alertWarning]: intent === "warning",
+		[styles.alertSmall]: !title,
+		[styles.alertNormal]: title,
+		[styles.alertWithButton]: !!onClose,
 	})
 
 	return (
-		<Flex className={alertClasses} padding={6} gap={6}>
-			{!!icon && <Icon name={icon} size={20} color={alertIconColor} />}
-			<Flex isColumn={true} gap={0} className="grow-1" isXCentered={true}>
-				{!!title && (
-					<Text type="small" color="currentcolor" fontWeight="semibold">
-						{title}
-					</Text>
-				)}
-				<Text type="tiny" color="currentcolor">
-					{children}
-				</Text>
-			</Flex>
+		<div className={styles.alertBox}>
 			{!!onClose && (
-				<Button
-					isIconOnly={true}
-					color={alertColor}
-					value="Close"
-					type="primary"
-					size="tiny"
-					icon="x"
-				/>
+				<ButtonGroup className={styles.alertButtonGroup}>
+					<Button
+						isIconOnly={true}
+						value="Close"
+						intent={intent}
+						size="small"
+						icon="x"
+					/>
+				</ButtonGroup>
 			)}
-		</Flex>
+			<Flex className={alertClasses} padding={6} gap={6}>
+				{!!icon && <Icon name={icon} size={20} />}
+				<Flex isColumn={true} className="grow-1" isXCentered={true}>
+					{!!title && (
+						<Text type="div" fontWeight="semibold">
+							{title}
+						</Text>
+					)}
+					<Text type="small">{children}</Text>
+				</Flex>
+			</Flex>
+		</div>
 	)
 }
 

@@ -1,38 +1,38 @@
 .layoutLeftItem {
-  height: 32px;
-  display: flex;
-  /* padding: 0 8px; */
-  width: 100%;
+	height: 32px;
+	display: flex;
+	/* padding: 0 8px; */
+	width: 100%;
 
-  border-radius: 4px;
-  color: var(--hui-fg-1);
-  transition: background-color 60ms ease-in-out;
+	border-radius: 4px;
+	color: var(--hui-fg-1);
+	transition: background-color 60ms ease-in-out;
 
-  line-height: 32px;
+	line-height: 32px;
 }
 
 .layoutLeftItemNoIcon span {
-  padding: 0 8px;
+	padding: 0 8px;
 }
 
 .layoutLeftItem div[data-component="Icon"] {
-  display: flex;
-  height: 32px;
-  padding: 8px;
-  width: 32px;
+	display: flex;
+	height: 32px;
+	padding: 8px;
+	width: 32px;
 
-  /* background-color: var(--hui-line-softest); */
-  /* border-radius: 6px 0 0 6px; */
-  color: var(--hui-fg-1);
+	/* background-color: var(--hui-line-softest); */
+	/* border-radius: 6px 0 0 6px; */
+	color: var(--hui-fg-1);
 }
 
 .layoutLeftItemActive {
-  background-color: var(--hui-line-2);
-  color: var(--hui-fg-0);
+	background-color: var(--hui-line-2);
+	color: var(--hui-fg-0);
 }
 
 .layoutLeftItemActive div[data-component="Icon"] {
-  box-shadow: 1px 0 0 0 var(--hui-line-2);
-  /* background-color: var(--hui-line-soft); */
-  color: var(--hui-fg-0);
+	box-shadow: 1px 0 0 0 var(--hui-line-2);
+	/* background-color: var(--hui-line-soft); */
+	color: var(--hui-fg-0);
 }

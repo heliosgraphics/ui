@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./Markdown.module.css"
-import { md } from "../utils/markdown"
+import { md } from "./Markdown.utils"
 import classNames from "@sindresorhus/class-names"
 import type { MarkdownProps } from "./Markdown.types"
 

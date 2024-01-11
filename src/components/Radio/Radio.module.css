@@ -1,5 +1,5 @@
 .radio {
-  position: relative;
+	position: relative;
 
 	box-sizing: border-box;
 	display: flex;
@@ -11,52 +11,52 @@
 }
 
 .radioDisabled {
-  opacity: 0.5;
-  pointer-events: none;
+	opacity: 0.5;
+	pointer-events: none;
 }
 
 .radio input {
-  display: none;
-  height: 0;
-  width: 0;
+	display: none;
+	height: 0;
+	width: 0;
 
-  visibility: hidden;
+	visibility: hidden;
 }
 
 .radio input:checked ~ .radio__checkmark {
-  background-color: var(--gray-0);
+	background-color: var(--gray-0);
 }
 
 .radio__checkmark {
-  box-sizing: inherit;
-  height: 1.5rem;
-  margin-right: 8px;
-  width: 1.5rem;
+	box-sizing: inherit;
+	height: 1.5rem;
+	margin-right: 8px;
+	width: 1.5rem;
 
-  background-color: var(--gray-0);
-  border: 2px solid var(--gray-500);
-  border-radius: 100%;
+	background-color: var(--gray-0);
+	border: 2px solid var(--gray-500);
+	border-radius: 100%;
 }
 
 .radio__checkmark:after {
-  position: absolute;
-  top: 0.3125rem;
-  left: 0.3125rem;
+	position: absolute;
+	top: 0.3125rem;
+	left: 0.3125rem;
 
-  opacity: 0;
-  height: 0.875rem;
-  width: 0.875rem;
+	opacity: 0;
+	height: 0.875rem;
+	width: 0.875rem;
 
-  background: var(--gray-500);
-  border-radius: 100%;
-  transform: scale(0);
-  transition: all 100ms ease-in-out;
+	background: var(--gray-500);
+	border-radius: 100%;
+	transform: scale(0);
+	transition: all 100ms ease-in-out;
 
-  content: "";
+	content: "";
 }
 
 .radio input:checked ~ .radio__checkmark:after {
-  opacity: 1;
+	opacity: 1;
 
-  transform: scale(1);
+	transform: scale(1);
 }

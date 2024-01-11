@@ -1,51 +1,53 @@
 .dropdown {
-  position: relative;
+	position: relative;
 
 	display: inline-block;
 	user-select: none;
 }
 
 .dropdownDisabled {
-  cursor: not-allowed;
-  pointer-events: none;
+	cursor: not-allowed;
+	pointer-events: none;
 }
 
 .dropdownLeft .dropdown__nav {
-  left: 0;
+	left: 0;
 }
 
 .dropdownRight .dropdown__nav {
-  right: 0;
+	right: 0;
 }
 
 .dropdown__nav {
-  position: absolute;
-  z-index: 20;
+	position: absolute;
+	z-index: 20;
 
-  min-width: 240px;
-  opacity: 0;
-  padding-top: 8px;
+	min-width: 240px;
+	opacity: 0;
+	padding-top: 8px;
 
-  transform: translateY(-6px) scale(0.96);
-  transition: transform 120ms ease-in-out, opacity 120ms ease-in-out;
-  pointer-events: none;
+	transform: translateY(-6px) scale(0.96);
+	transition:
+		transform 120ms ease-in-out,
+		opacity 120ms ease-in-out;
+	pointer-events: none;
 }
 
 .dropdown__navActive {
-  opacity: 1;
+	opacity: 1;
 
-  transform: translateY(0) scale(1);
+	transform: translateY(0) scale(1);
 
-  pointer-events: all;
+	pointer-events: all;
 }
 
 @keyframes dropdownFade {
-  0% {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	0% {
+		opacity: 0;
+		transform: translateY(-8px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }

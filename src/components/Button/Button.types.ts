@@ -1,23 +1,19 @@
 import React from "react"
-import type {
-	FUIColors,
-	FUIColorScale,
-} from "@heliosgraphics/library/types/colors"
+import type { HeliosIntentionType } from "../../types/intentions"
 import type { HeliosIconType } from "@heliosgraphics/icons/meta"
 
 export interface ButtonProps {
-	color?: FUIColorScale
+	flair?: string
 	icon?: HeliosIconType
-	flair?: FUIColors
-	// iconPosition?: 'left' | 'right';
+	intent: HeliosIntentionType
 	isActive?: boolean
 	isDisabled?: boolean
 	isIconOnly?: boolean
 	isLoading?: boolean
 	isRounded?: boolean
-	tabIndex?: number
 	onClick?: (event?: React.MouseEvent | React.SyntheticEvent) => void
 	size?: "normal" | "small" | "tiny"
-	type: "primary" | "secondary" | "silent" | "opaque"
+	tabIndex?: number
+	type?: 'submit'
 	value: string
 }

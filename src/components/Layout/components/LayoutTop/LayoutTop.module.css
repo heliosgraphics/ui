@@ -1,13 +1,13 @@
 .layoutTop {
-  position: fixed;
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 3;
 
-  align-items: center;
-  justify-content: space-between;
+	align-items: center;
+	justify-content: space-between;
 	height: 56px;
-  display: flex;
+	display: flex;
 	padding: 0 12px;
 	width: 100%;
 

@@ -1,8 +1,8 @@
 .heading {
-  white-space: break-spaces;
+	white-space: break-spaces;
 }
 
 .heading mark {
-  background-color: transparent;
-  color: var(--blue-500);
+	background-color: transparent;
+	color: var(--blue-500);
 }

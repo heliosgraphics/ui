@@ -1,5 +1,5 @@
 import React from "react"
-import { getTypographyUtility } from "../utils/typography"
+import { getTypographyUtility } from "./Text.utils"
 import Div from "./components/Div/Div"
 import P from "./components/P/P"
 import Small from "./components/Small/Small"
@@ -13,10 +13,7 @@ const Text: React.FC<TextProps> = (props) => {
 		[styles.textWithLinks]: props.withLinks,
 	})
 
-	const utility: string = getTypographyUtility(
-		{ ...props, className: textClasses },
-		false,
-	)
+	const utility: string = getTypographyUtility(props)
 	const {
 		lineClamp,
 		isEllipsis,

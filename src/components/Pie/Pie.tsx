@@ -1,5 +1,5 @@
 import React from "react"
-import { getColor } from "../utils/color"
+// import { getColor } from "../utils/color"
 import type { PieProps, PieItem } from "./Pie.types"
 
 const Pie: React.FC<PieProps> = ({ size, data }) => {
@@ -12,7 +12,7 @@ const Pie: React.FC<PieProps> = ({ size, data }) => {
 			{data.map((item, key) => {
 				const thisData: Array<PieItem> = data.slice(0, key)
 				const thisSize = thisData?.reduce((a, b) => a + b.value, 0)
-				const thisColor = `var(--${getColor(item.color)})`
+				const thisColor = "red" // `var(--${getColor(item.color)})`
 
 				return (
 					<circle

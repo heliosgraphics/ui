@@ -1,339 +1,253 @@
 .button {
-  transition: all 60ms ease-in-out;
+	transition: all 60ms ease-in-out;
 
-  -webkit-tap-highlight-color: transparent;
+	--button-intent-confirmation--bg: red;
+	/* hsla(var(--intent-color-confirmation), 0.5); */
+	--button-intent-confirmation--text: hsla(var(--intent-color-confirmation), 1);
 
-  /* Base */
-  --fui-btn-bg: var(--hui-bg-0);
+	--button-intent-error--bg: hsla(var(--intent-color-error), 0.25);
+	--button-intent-error--text: hsla(var(--intent-color-error), 1);
 
-  /* Dynamic colors */
-  --fui-btn-100: var(--blue-100);
-  --fui-btn-200: var(--blue-200);
-  --fui-btn-300: var(--blue-300);
-  --fui-btn-500: var(--blue-500);
-  --fui-btn-600: var(--blue-600);
-  --fui-btn-700: var(--blue-700);
+	--button-intent-highlight--bg: hsla(var(--intent-color-highlight), 0.25);
+	--button-intent-highlight--text: hsla(var(--intent-color-highlight), 1);
+
+	--button-intent-advise--bg: hsla(var(--intent-color-advise), 0.25);
+	--button-intent-advise--text: hsla(var(--intent-color-advise), 1);
+
+	--button-intent-question--bg: hsla(var(--intent-color-question), 0.25);
+	--button-intent-question--text: hsla(var(--intent-color-question), 1);
+
+	--button-intent-success--bg: hsla(var(--intent-color-success), 0.25);
+	--button-intent-success--text: hsla(var(--intent-color-success), 1);
+
+	--button-intent-warning--bg: hsla(var(--intent-color-warning), 0.25);
+	--button-intent-warning--text: hsla(var(--intent-color-warning), 1);
+
+	-webkit-tap-highlight-color: transparent;
 }
 
 .buttonActive,
 .button:hover,
 .button:active,
 .button:focus {
-  z-index: 1;
+	z-index: 1;
 }
 
-.buttonColorAqua {
-  --fui-btn-100: var(--aqua-100);
-  --fui-btn-200: var(--aqua-200);
-  --fui-btn-300: var(--aqua-300);
-  --fui-btn-500: var(--aqua-500);
-  --fui-btn-600: var(--aqua-600);
-  --fui-btn-700: var(--aqua-700);
+/* intent: advise */
+.buttonAdvise {
+	background-color: var(--button-intent-advise--bg);
+	color: var(--button-intent-advise--text);
 }
 
-.buttonColorBlue {
-  --fui-btn-100: var(--blue-100);
-  --fui-btn-200: var(--blue-200);
-  --fui-btn-300: var(--blue-300);
-  --fui-btn-500: var(--blue-500);
-  --fui-btn-600: var(--blue-600);
-  --fui-btn-700: var(--blue-700);
+/* intent: confirmation */
+.buttonConfirmation {
+	background-color: var(--button-intent-confirmation--bg);
+	color: var(--button-intent-confirmation--text);
 }
 
-.buttonColorGray {
-  --fui-btn-100: var(--gray-100);
-  --fui-btn-200: var(--gray-200);
-  --fui-btn-300: var(--gray-300);
-  --fui-btn-500: var(--gray-500);
-  --fui-btn-600: var(--gray-600);
-  --fui-btn-700: var(--gray-700);
+/* intent: error */
+.buttonError {
+	background-color: var(--button-intent-error--bg);
+	color: var(--button-intent-error--text);
 }
 
-.buttonColorGreen {
-  --fui-btn-100: var(--green-100);
-  --fui-btn-200: var(--green-200);
-  --fui-btn-300: var(--green-300);
-  --fui-btn-500: var(--green-500);
-  --fui-btn-600: var(--green-600);
-  --fui-btn-700: var(--green-700);
+/* intent: highlight */
+.buttonHighlight {
+	background-color: var(--button-intent-highlight--bg);
+	color: var(--button-intent-highlight--text);
 }
 
-.buttonColorOrange {
-  --fui-btn-100: var(--orange-100);
-  --fui-btn-200: var(--orange-200);
-  --fui-btn-300: var(--orange-300);
-  --fui-btn-500: var(--orange-500);
-  --fui-btn-600: var(--orange-600);
-  --fui-btn-700: var(--orange-700);
+/* intent: question */
+.buttonQuestion {
+	background-color: var(--button-intent-question--bg);
+	color: var(--button-intent-question--text);
 }
 
-.buttonColorPink {
-  --fui-btn-100: var(--pink-100);
-  --fui-btn-200: var(--pink-200);
-  --fui-btn-300: var(--pink-300);
-  --fui-btn-500: var(--pink-500);
-  --fui-btn-600: var(--pink-600);
-  --fui-btn-700: var(--pink-700);
+/* intent: success */
+.buttonSuccess {
+	background-color: var(--button-intent-success--bg);
+	color: var(--button-intent-success--text);
 }
 
-.buttonColorPurple {
-  --fui-btn-100: var(--purple-100);
-  --fui-btn-200: var(--purple-200);
-  --fui-btn-300: var(--purple-300);
-  --fui-btn-500: var(--purple-500);
-  --fui-btn-600: var(--purple-600);
-  --fui-btn-700: var(--purple-700);
-}
-
-.buttonColorRed {
-  --fui-btn-100: var(--red-100);
-  --fui-btn-200: var(--red-200);
-  --fui-btn-300: var(--red-300);
-  --fui-btn-500: var(--red-500);
-  --fui-btn-600: var(--red-600);
-  --fui-btn-700: var(--red-700);
-}
-
-.buttonColorYellow {
-  --fui-btn-100: var(--yellow-100);
-  --fui-btn-200: var(--yellow-200);
-  --fui-btn-300: var(--yellow-300);
-  --fui-btn-500: var(--yellow-500);
-  --fui-btn-600: var(--yellow-600);
-  --fui-btn-700: var(--yellow-700);
+/* intent: warning */
+.buttonWarning {
+	background-color: var(--button-intent-warning--bg);
+	color: var(--button-intent-warning--text);
 }
 
 /* Reset */
 .button input {
-  border: 0;
-  background-color: transparent;
-  color: inherit;
-  outline: none;
+	border: 0;
+	background-color: transparent;
+	color: inherit;
+	outline: none;
 
-  cursor: inherit;
+	cursor: inherit;
 }
 
 /* Sizes */
 .buttonSizeNormal,
 .buttonSizeNormal input {
-  height: 40px;
-  min-width: 40px;
+	height: 40px;
+	min-width: 40px;
 }
 
 .buttonSizeSmall,
 .buttonSizeSmall input {
-  height: 30px;
-  min-width: 30px;
+	height: 30px;
+	min-width: 30px;
 }
 
 .buttonSizeTiny,
 .buttonSizeTiny input {
-  height: 24px;
-  min-width: 24px;
+	height: 24px;
+	min-width: 24px;
 }
 
-/* Type: Primary */
-.buttonPrimary {
-  background: var(--fui-btn-500) linear-gradient(var(--fui-btn-500) -50%, var(--fui-btn-600) 250%);
+.button {
+	/* background: var(--fui-btn-500)
+		linear-gradient(var(--fui-btn-500) -50%, var(--fui-btn-600) 250%);
 
-  box-shadow: inset 0 0 0 1px var(--fui-btn-600);
-  color: var(--fui-btn-bg);
+	box-shadow: inset 0 0 0 1px var(--fui-btn-600);
+	color: var(--fui-btn-bg); */
 }
 
-.buttonPrimary:hover {
-  background: var(--fui-btn-600) linear-gradient(var(--fui-btn-600) -50%, var(--fui-btn-700) 250%);
-  box-shadow: inset 0 0 0 1px var(--fui-btn-700);
-  color: var(--fui-btn-bg);
+.button:hover {
+	background: var(--fui-btn-600)
+		linear-gradient(var(--fui-btn-600) -50%, var(--fui-btn-700) 250%);
+	box-shadow: inset 0 0 0 1px var(--fui-btn-700);
+	color: var(--fui-btn-bg);
 }
 
-.buttonPrimary.buttonActive,
-.buttonPrimary:active {
-  background: var(--fui-btn-700) linear-gradient(var(--fui-btn-700) -50%, var(--fui-btn-700) 250%);
-  box-shadow: inset 0 0 0 1px var(--fui-btn-700);
+.button.buttonActive,
+.button:active {
+	background: var(--fui-btn-700)
+		linear-gradient(var(--fui-btn-700) -50%, var(--fui-btn-700) 250%);
+	box-shadow: inset 0 0 0 1px var(--fui-btn-700);
 }
 
-.buttonPrimary input {
-  text-shadow: 0 1px 0 var(--fui-btn-600);
+.button input {
+	text-shadow: 0 1px 0 var(--fui-btn-600);
 }
-.buttonPrimary.buttonActive input,
-.buttonPrimary:active input,
-.buttonPrimary:hover input {
-  text-shadow: 0 1px 0 var(--fui-btn-700);
-}
-
-.buttonPrimary input:focus-visible {
-  outline: 3px solid var(--fui-btn-100);
+.button.buttonActive input,
+.button:active input,
+.button:hover input {
+	text-shadow: 0 1px 0 var(--fui-btn-700);
 }
 
-/* Type: Secondary */
-.buttonSecondary {
-  background-color: var(--fui-btn-bg);
-  box-shadow: inset 0 0 0 1px var(--fui-btn-100);
-  color: var(--fui-btn-600);
-}
-
-.buttonSecondary:hover {
-  box-shadow: inset 0 0 0 1px var(--fui-btn-200);
-  /* inset 0 0 0 3px var(--fui-btn-100); */
-}
-
-.buttonSecondary.buttonActive,
-.buttonSecondary:active {
-  background-color: var(--fui-btn-100);
-  box-shadow: inset 0 0 0 1px var(--fui-btn-300);
-}
-
-.buttonSecondary .button__loading {
-  color: var(--fui-btn-300);
-}
-
-.buttonSecondary input:focus-visible {
-  outline: 3px solid var(--fui-btn-100);
-}
-
-/* @media (prefers-color-scheme: dark) {
-  .buttonSecondary {
-    background-color: var(--hui-bg-0);
-    box-shadow: inset 0 0 0 1px var(--hui-line-2);
-    color: var(--hui-fg-0);
-  }
-} */
-
-/* Type: Silent, incomplete */
-.buttonSilent {
-  background: var(--fui-btn-bg);
-  color: var(--fui-btn-500);
-}
-
-.buttonSilent:hover {
-  color: var(--fui-btn-700);
-}
-
-/* Type: Opaque */
-.buttonOpaque {
-  background-color: rgba(0, 0, 0, 0.33);
-  backdrop-filter: blur(3px);
-
-  color: rgba(255, 255, 255, 0.88);
-}
-
-.buttonOpaque:hover {
-  background-color: rgba(0, 0, 0, 0.66);
-}
-
-.buttonOpaque input {
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+.button input:focus-visible {
+	outline: 3px solid var(--fui-btn-100);
 }
 
 /* Disabled */
 .buttonDisabled {
-  pointer-events: none;
+	pointer-events: none;
 
-  background: var(--fui-btn-100);
-  box-shadow: inset 0 0 0 1px var(--fui-btn-100);
-  color: var(--fui-btn-300);
+	background: var(--fui-btn-100);
+	box-shadow: inset 0 0 0 1px var(--fui-btn-100);
+	color: var(--fui-btn-300);
 }
 
 .buttonDisabled input {
-  text-shadow: 0 0 0 transparent;
+	text-shadow: 0 0 0 transparent;
 }
 
 /* Loading */
 .buttonLoading {
-  pointer-events: none;
+	pointer-events: none;
 }
 
 .buttonSizeNormal.buttonLoading input {
-  padding-right: 40px;
+	padding-right: 40px;
 }
 
 .buttonSizeSmall.buttonLoading input {
-  padding-right: 26px;
+	padding-right: 26px;
 }
 
 .buttonSizeTiny.buttonLoading input {
-  padding-right: 24px;
+	padding-right: 24px;
 }
 
 .button__loading {
-  position: absolute;
+	position: absolute;
 }
 
 .buttonSizeNormal:not(.buttonIconOnlyLoading) .button__loading {
-  right: 10px;
+	right: 10px;
 }
 
 .buttonSizeSmall:not(.buttonIconOnlyLoading) .button__loading {
-  right: 6px;
+	right: 6px;
 }
 
 .buttonSizeTiny:not(.buttonIconOnlyLoading) .button__loading {
-  right: 6px;
+	right: 6px;
 }
 
 /* Flair */
 .button__flair {
-  position: absolute;
-  top: -2px;
-  right: -2px;
+	position: absolute;
+	top: -2px;
+	right: -2px;
 }
 
 /* Icon */
 .buttonSizeNormal:not(.buttonIconOnly) .button__icon {
-  margin-right: -12px;
+	margin-right: -12px;
 }
 
 .buttonSizeNormal .button__icon {
-  padding-left: 9px;
-  padding-right: 9px;
+	padding-left: 9px;
+	padding-right: 9px;
 }
 
 .buttonSizeSmall:not(.buttonIconOnly) .button__icon {
-  margin-right: -11px;
-  margin-top: -1px;
+	margin-right: -11px;
+	margin-top: -1px;
 }
 
 .buttonSizeSmall .button__icon {
-  padding-left: 6px;
-  padding-right: 6px;
+	padding-left: 6px;
+	padding-right: 6px;
 }
 
 .buttonSizeTiny:not(.buttonIconOnly) .button__icon {
-  margin-right: -6px;
+	margin-right: -6px;
 }
 
 .buttonSizeTiny .button__icon {
-  padding-left: 5px;
-  padding-right: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 /* Icon:focus */
 .buttonSizeNormal.buttonIconOnly input {
-  margin-left: -42px;
-  width: 42px;
+	margin-left: -42px;
+	width: 42px;
 }
 
 .buttonSizeSmall.buttonIconOnly input {
-  margin-left: -30px;
-  width: 30px;
+	margin-left: -30px;
+	width: 30px;
 }
 
 .buttonSizeTiny.buttonIconOnly input {
-  margin-left: -24px;
-  width: 24px;
+	margin-left: -24px;
+	width: 24px;
 }
 
 .buttonSizeNormal.buttonWithIcon:not(.buttonIconOnly) input {
-  margin-left: -30px;
-  padding-left: 40px;
+	margin-left: -30px;
+	padding-left: 40px;
 }
 
 .buttonSizeSmall.buttonWithIcon:not(.buttonIconOnly) input {
-  margin-left: -19px;
-  padding-left: 28px;
+	margin-left: -19px;
+	padding-left: 28px;
 }
 
 .buttonSizeTiny.buttonWithIcon:not(.buttonIconOnly) input {
-  margin-left: -18px;
-  padding-left: 24px;
+	margin-left: -18px;
+	padding-left: 24px;
 }

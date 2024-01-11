@@ -1,6 +1,6 @@
-import type { FUIFlexProps } from "@heliosgraphics/library/types/flex"
+import type { FlexProps } from "../Flex/Flex.types"
 
-export interface ColumnProps extends FUIFlexProps {
+export interface ColumnProps extends FlexProps {
 	className?: string
 	children: React.ReactNode
 	isColumnCentered?: boolean

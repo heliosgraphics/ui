@@ -1,8 +1,8 @@
 .donut svg {
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
+	transform: rotate(-90deg);
+	transform-origin: 50% 50%;
 }
 
 .donut circle {
-  transition: all 100ms ease-in-out;
+	transition: all 100ms ease-in-out;
 }
