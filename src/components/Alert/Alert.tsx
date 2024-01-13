@@ -1,12 +1,12 @@
 import React from "react"
 import Button from "../Button/Button"
+import ButtonGroup from "../ButtonGroup"
 import classNames from "@sindresorhus/class-names"
 import Flex from "../Flex/Flex"
 import Icon from "../Icon/Icon"
 import styles from "./Alert.module.css"
 import Text from "../Text/Text"
 import type { AlertProps } from "./Alert.types"
-import ButtonGroup from "../ButtonGroup"
 
 const Alert: React.FC<AlertProps> = ({
 	children,
@@ -35,15 +35,15 @@ const Alert: React.FC<AlertProps> = ({
 					<Button
 						isIconOnly={true}
 						value="Close"
-						intent={intent}
-						size="small"
+						intent="silent"
+						size="tiny"
 						icon="x"
 					/>
 				</ButtonGroup>
 			)}
 			<Flex className={alertClasses} padding={6} gap={6}>
 				{!!icon && <Icon name={icon} size={20} />}
-				<Flex isColumn={true} className="grow-1" isXCentered={true}>
+				<Flex isColumn={true} isXCentered={true}>
 					{!!title && (
 						<Text type="div" fontWeight="semibold">
 							{title}

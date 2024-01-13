@@ -79,19 +79,25 @@
 	--z-index-100: 1000;
 
 	/* color functions */
-	--color-aqua: 187, 87%;
-	--color-blue: 230, 87%;
-	--color-gray: 225, 10%;
-	--color-green: 120, 75%;
-	--color-orange: 23, 94%;
-	--color-pink: 324, 76%;
-	--color-purple: 266, 80%;
-	--color-red: 356, 84%;
-	--color-yellow: 39, 93%;
+	--aqua-hue: 192;
+	--blue-hue: 230;
+	--gray-hue: 225;
+	--green-hue: 120;
+	--orange-hue: 30;
+	--pink-hue: 324;
+	--purple-hue: 266;
+	--red-hue: 356;
+	--yellow-hue: 45;
 
-	/* text emphasis */
-	--hsl-background: hsl(0, 0%, 100%);
-	--hsl-text: hsl(3, 11%, 5%);
+	--aqua-saturation: 65%;
+	--blue-saturation: 87%;
+	--gray-saturation: 10%;
+	--green-saturation: 75%;
+	--orange-saturation: 94%;
+	--pink-saturation: 76%;
+	--purple-saturation: 80%;
+	--red-saturation: 84%;
+	--yellow-saturation: 90%;
 
 	/* setup constants: animations */
 	--animation-fastest: 64ms;
@@ -110,25 +116,20 @@
 	}
 }
 
-/* don't do this without addressing downstream. */
 * {
 	outline: none;
 }
 
-/* selections */
-body *::selection {
-	background-color: hsl(var(--color-orange), 95%);
-	color: hsl(var(--color-orange), 20%)
-}
-
-body[data-theme="PREFERS_DARK"] *::selection {
-	background-color: hsl(var(--color-orange), 20%);
-	color: hsl(var(--color-orange), 90%)
+a {
+	cursor: pointer;
+	text-decoration: underline;
 }
 
 body {
 	width: 100%;
 
+	background-color: var(--hsl-background);
+	color: var(--hsl-text);
 	transition:
 		background-color var(--animation-fast) var(--easeInOutSine),
 		color var(--animation-fast) var(--easeInOutSine);
@@ -137,31 +138,59 @@ body {
 :root {
   color-scheme: light;
 
-  --intent-color-confirmation: var(--color-purple), 45%;
-	--intent-color-highlight: var(--color-orange), 45%;
-	--intent-color-success: var(--color-green), 60%;
-	--intent-color-question: var(--color-aqua), 60%;
-	--intent-color-error: var(--color-red), 60%;
-	--intent-color-warning: var(--color-yellow), 60%;
-	--intent-color-advise: var(--color-blue), 60%;
+  --hsl-intent-advise-alert-bg: hsla(var(--color-blue), 50%, 0.25);
+  --hsl-intent-advise-alert-text: hsla(var(--color-blue), 50%, 1);
+	--hsl-intent-confirmation-alert-bg: hsla(var(--color-purple), 50%, 0.25);
+  --hsl-intent-confirmation-alert-text: hsla(var(--color-purple), 50%, 1);
+	--hsl-intent-error-alert-bg: hsla(var(--color-red), 50%, 0.25);
+  --hsl-intent-error-alert-text: hsla(var(--color-red), 50%, 1);
+	--hsl-intent-highlight-alert-bg: hsla(var(--color-orange), 50%, 0.25);
+  --hsl-intent-highlight-alert-text: hsla(var(--color-orange), 40%, 1);
+	--hsl-intent-question-alert-bg: hsla(var(--color-aqua), 50%, 0.25);
+  --hsl-intent-question-alert-text: hsla(var(--color-aqua), 40%, 1);
+	--hsl-intent-silent-alert-bg: hsla(var(--color-gray), 50%, 0.25);
+  --hsl-intent-silent-alert-text: hsla(var(--color-gray), 30%, 1);
+	--hsl-intent-success-alert-bg: hsla(var(--color-green), 50%, 0.25);
+  --hsl-intent-success-alert-text: hsla(var(--color-green), 30%, 1);
+	--hsl-intent-warning-alert-bg: hsla(var(--color-yellow), 50%, 0.25);
+  --hsl-intent-warning-alert-text: hsla(var(--color-yellow), 35%, 1);
 
-	background-color: var(--hsl-background);
-	color: var(--hsl-text);
+  --hsl-intent-advise-button-bg: hsla(var(--color-blue), 80%, 1);
+  --hsl-intent-confirmation-button-bg: hsla(var(--color-purple), 50%, 1);
+  --hsl-intent-error-button-bg: hsla(var(--color-red), 50%, 1);
+  --hsl-intent-highlight-button-bg: hsla(var(--color-orange), 40%, 1);
+  --hsl-intent-question-button-bg: hsla(var(--color-aqua), 40%, 1);
+  --hsl-intent-silent-button-bg: hsla(var(--color-gray), 40%, 1);
+  --hsl-intent-silent-button-text: hsla(var(--color-gray), 40%, 0.5);
+  --hsl-intent-success-button-bg: hsla(var(--color-green), 30%, 1);
+  --hsl-intent-warning-button-bg: hsla(var(--color-yellow), 35%, 1);
+
+	--hsl-background: hsl(0, 0%, 100%);
+	--hsl-text: hsl(3, 11%, 5%);
+	--hsla-glass-1: hsla(0, 0%, 100%, 0.25);
 }
 
 :root[data-theme='dark'] {
   color-scheme: dark;
 
-  --intent-color-confirmation: var(--color-purple), 45%;
-	--intent-color-highlight: var(--color-orange), 45%;
-	--intent-color-success: var(--color-green), 60%;
-	--intent-color-question: var(--color-aqua), 60%;
-	--intent-color-error: var(--color-red), 60%;
-	--intent-color-warning: var(--color-yellow), 60%;
-	--intent-color-advise: var(--color-blue), 60%;
+	--hsl-intent-advise-alert-bg: hsla(var(--color-blue), 50%, 0.25);
+  --hsl-intent-advise-alert-text: hsla(var(--color-blue), 50%, 1);
+	--hsl-intent-confirmation-alert-bg: hsla(var(--color-purple), 50%, 0.25);
+  --hsl-intent-confirmation-alert-text: hsla(var(--color-purple), 50%, 1);
+	--hsl-intent-error-alert-bg: hsla(var(--color-red), 50%, 0.25);
+  --hsl-intent-error-alert-text: hsla(var(--color-red), 50%, 1);
+	--hsl-intent-highlight-alert-bg: hsla(var(--color-orange), 50%, 0.25);
+  --hsl-intent-highlight-alert-text: hsla(var(--color-orange), 40%, 1);
+	--hsl-intent-question-alert-bg: hsla(var(--color-aqua), 50%, 0.25);
+  --hsl-intent-question-alert-text: hsla(var(--color-aqua), 40%, 1);
+	--hsl-intent-success-alert-bg: hsla(var(--color-green), 50%, 0.25);
+  --hsl-intent-success-alert-text: hsla(var(--color-green), 30%, 1);
+	--hsl-intent-warning-alert-bg: hsla(var(--color-yellow), 50%, 0.25);
+  --hsl-intent-warning-alert-text: hsla(var(--color-yellow), 35%, 1);
 
-	background-color: var(--hsl-text);
-	color: var(--hsl-background);
+	--hsl-background: hsl(0, 7%, 13%);
+	--hsl-text: hsl(0, 0%, 100%);
+	--hsla-glass-1: hsla(0, 0%, 0%, 0.5);
 }
 
 .debug * {
@@ -187,7 +216,7 @@ body {
 
 /* Helpers: Glass */
 .glass-1 {
-	background-color: rgba(255, 255, 255, 0.88);
+	background-color: var(--rgba-glass-1);
 	backdrop-filter: blur(3px);
 }
 

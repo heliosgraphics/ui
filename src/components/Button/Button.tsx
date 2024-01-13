@@ -39,6 +39,7 @@ const Button: React.FC<ButtonProps> = ({
 			[styles.buttonError]: intent === "error",
 			[styles.buttonHighlight]: intent === "highlight",
 			[styles.buttonQuestion]: intent === "question",
+			[styles.buttonSilent]: intent === "silent",
 			[styles.buttonSuccess]: intent === "success",
 			[styles.buttonWarning]: intent === "warning",
 
@@ -46,9 +47,9 @@ const Button: React.FC<ButtonProps> = ({
 			[styles.buttonDisabled]: isDisabled,
 			[styles.buttonLoading]: isLoading,
 
-			"radius-3": !isRounded && size !== "tiny",
-			"radius-2": !isRounded && size === "tiny",
-			"radius-max": isRounded,
+			[styles.buttonRounded]: isRounded,
+			[styles.buttonRound]: !isRounded && size !== "tiny",
+			[styles.buttonRoundTiny]: !isRounded && size === "tiny",
 
 			[styles.buttonSizeNormal]: !size || size === "normal",
 			[styles.buttonSizeSmall]: size === "small",

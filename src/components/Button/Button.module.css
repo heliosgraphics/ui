@@ -1,28 +1,6 @@
 .button {
 	transition: all 60ms ease-in-out;
 
-	--button-intent-confirmation--bg: red;
-	/* hsla(var(--intent-color-confirmation), 0.5); */
-	--button-intent-confirmation--text: hsla(var(--intent-color-confirmation), 1);
-
-	--button-intent-error--bg: hsla(var(--intent-color-error), 0.25);
-	--button-intent-error--text: hsla(var(--intent-color-error), 1);
-
-	--button-intent-highlight--bg: hsla(var(--intent-color-highlight), 0.25);
-	--button-intent-highlight--text: hsla(var(--intent-color-highlight), 1);
-
-	--button-intent-advise--bg: hsla(var(--intent-color-advise), 0.25);
-	--button-intent-advise--text: hsla(var(--intent-color-advise), 1);
-
-	--button-intent-question--bg: hsla(var(--intent-color-question), 0.25);
-	--button-intent-question--text: hsla(var(--intent-color-question), 1);
-
-	--button-intent-success--bg: hsla(var(--intent-color-success), 0.25);
-	--button-intent-success--text: hsla(var(--intent-color-success), 1);
-
-	--button-intent-warning--bg: hsla(var(--intent-color-warning), 0.25);
-	--button-intent-warning--text: hsla(var(--intent-color-warning), 1);
-
 	-webkit-tap-highlight-color: transparent;
 }
 
@@ -61,6 +39,13 @@
 .buttonQuestion {
 	background-color: var(--button-intent-question--bg);
 	color: var(--button-intent-question--text);
+}
+
+/* intent: question */
+.buttonSilent {
+	background-color: var(--hsla-glass-1);
+	backdrop-filter: blur(3px);
+	color: var(--hsl-intent-silent-button-text);
 }
 
 /* intent: success */
@@ -102,14 +87,6 @@
 .buttonSizeTiny input {
 	height: 24px;
 	min-width: 24px;
-}
-
-.button {
-	/* background: var(--fui-btn-500)
-		linear-gradient(var(--fui-btn-500) -50%, var(--fui-btn-600) 250%);
-
-	box-shadow: inset 0 0 0 1px var(--fui-btn-600);
-	color: var(--fui-btn-bg); */
 }
 
 .button:hover {
@@ -250,4 +227,16 @@
 .buttonSizeTiny.buttonWithIcon:not(.buttonIconOnly) input {
 	margin-left: -18px;
 	padding-left: 24px;
+}
+
+.buttonRounded {
+	border-radius: 100px;
+}
+
+.buttonRound {
+	border-radius: var(--radius-normal);
+}
+
+.buttonRoundTiny {
+	border-radius: var(--radius-small);
 }

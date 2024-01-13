@@ -1,11 +1,13 @@
 import dynamic from "next/dynamic"
 import ThemeSwitcherLoading from "../../src/components/ThemeSwitcherLoading"
+import ColorGrid from "./components/ColorGrid"
 import {
 	Alert,
 	Column,
 	Flex,
 	Text,
 	Markdown,
+	Heading,
 	Separator,
 	Button,
 	ButtonGroup,
@@ -27,10 +29,54 @@ export default function Home() {
 	return (
 		<main className="debugx">
 			<Flex isColumn={true} gap={16} padding={16}>
-				<ThemeSwitcher />
-				<Separator />
-				<Markdown text={INTRO_MD} />
-				<Separator />
+				<Flex isColumn={true}>
+					<Heading level={1}>Gamen Components</Heading>
+					<Text type="tiny" fontFamily="mono">
+						from <a href="https://helios.graphics">Helios Graphics</a>
+					</Text>
+				</Flex>
+				<Flex isColumn={true} gap={8}>
+					<Flex isColumn={true} gap={2}>
+						<Text type="paragraph">
+							This is both the workshop and the official NextJS example. For
+							documentation access, please visit{" "}
+							<a href="https://gamen.earth">Gamen</a>.
+						</Text>
+						<Text type="tiny" fontFamily="mono">
+							01. add @heliosgraphics/fractures
+							<br />
+							02. add @heliosgraphics/components
+						</Text>
+					</Flex>
+					<ThemeSwitcher />
+				</Flex>
+
+				{/* Section: Colors */}
+				<details open={true}>
+					<summary>
+						<Text type="small">Colors</Text>
+					</summary>
+					<Flex isColumn={true} gap={8}>
+						<ColorGrid color="aqua" />
+						<ColorGrid color="blue" />
+						<ColorGrid color="gray" />
+						<ColorGrid color="green" />
+						<ColorGrid color="orange" />
+						<ColorGrid color="pink" />
+						<ColorGrid color="purple" />
+						<ColorGrid color="red" />
+						<ColorGrid color="yellow" />
+					</Flex>
+				</details>
+
+				{/* Section: Markdown */}
+				<details>
+					<summary>
+						<Text type="small">Markdown</Text>
+					</summary>
+					<Markdown text={INTRO_MD} />
+				</details>
+
 				<Text type="paragraph">Button</Text>
 				<Column isColumn={true} gap={12} width={960}>
 					<ButtonGroup>
@@ -109,36 +155,48 @@ export default function Home() {
 				</Column>
 				<Text type="paragraph">Compact</Text>
 				<Column isColumn={true} gap={2} width={960}>
+					<Alert intent="advise" icon="info" onClose={onClose}>
+						Advise, perferendis unde cupiditate tempore magnam corrupti quidem.
+					</Alert>
 					<Alert intent="confirmation" icon="info" onClose={onClose}>
 						Confirmation? Perferendis unde cupiditate tempore magnam corrupti
 						quidem.
 					</Alert>
 					<Alert intent="error" icon="info" onClose={onClose}>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-						unde cupiditate <a>aspernatur autem</a> tempore magnam vitae,
-						quidem. Incidunt facilis aspernatur corrupti doloremque?
+						Error, lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Perferendis unde cupiditate <a>aspernatur autem</a> tempore magnam
+						vitae, quidem. Incidunt facilis aspernatur corrupti doloremque?
 					</Alert>
 					<Alert intent="highlight" icon="info" onClose={onClose}>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-						unde cupiditate <a>aspernatur autem</a> tempore magnam.
+						Highlight, lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Perferendis unde cupiditate <a>aspernatur autem</a> tempore magnam.
 					</Alert>
 					<Alert intent="question" icon="info" onClose={onClose}>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-						unde cupiditate <a>aspernatur autem</a> tempore magnam vitae.
+						Question, lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Perferendis unde cupiditate <a>aspernatur autem</a> tempore magnam
+						vitae.
 					</Alert>
-
 					<Alert intent="success" icon="info" onClose={onClose}>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-						unde cupiditate <a>aspernatur autem</a> tempore magnam vitae.
+						Success, lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Perferendis unde cupiditate <a>aspernatur autem</a> tempore magnam
+						vitae.
 					</Alert>
 					<Alert intent="warning" icon="info" onClose={onClose}>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-						unde cupiditate <a>aspernatur autem</a> tempore magnam vitae quidem.
-						Incidunt facilis aspernatur corrupti doloremque?
+						Warning, lorem ipsum dolor sit amet cons?
 					</Alert>
 				</Column>
 				<Text type="paragraph">Title</Text>
 				<Column isColumn={true} gap={2} width={960}>
+					<Alert
+						title="Vitae, assumenda aliquid"
+						intent="advise"
+						icon="info"
+						onClose={onClose}
+					>
+						Cupiditate <a>aspernatur autem</a> tempore magnam vitae, assumenda
+						aliquid ab illo necessitatibus velit temporibus corrupti quidem.
+						Incidunt facilis aspernatur corrupti doloremque?
+					</Alert>
 					<Alert
 						title="Vitae, assumenda aliquid"
 						intent="confirmation"

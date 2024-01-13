@@ -7,15 +7,15 @@ export interface TextProps {
 	fontFamily?: "sans" | "serif" | "mono"
 	fontStyle?: "italic" | "normal" | "oblique"
 	fontWeight?:
-		| "thin"
-		| "extra-light"
-		| "light"
-		| "normal"
-		| "medium"
-		| "semibold"
-		| "bold"
-		| "extra-bold"
-		| "black"
+	| "thin"
+	| "extra-light"
+	| "light"
+	| "normal"
+	| "medium"
+	| "semibold"
+	| "bold"
+	| "extra-bold"
+	| "black"
 	isEllipsis?: boolean
 	isUnselectable?: boolean
 	lineClamp?: number
@@ -23,12 +23,12 @@ export interface TextProps {
 	onClick?: () => void
 	textAlign?: "left" | "right" | "center" | "justify"
 	textDecoration?:
-		| "delete"
-		| "overline"
-		| "underline"
-		| "capitalize"
-		| "lowercase"
-		| "uppercase"
+	| "delete"
+	| "overline"
+	| "underline"
+	| "capitalize"
+	| "lowercase"
+	| "uppercase"
 	whiteSpace?: "pre" | "pre-line" | "pre-wrap" | "nowrap"
 	withLinks?: boolean
 	wordWrap?: "break-word"

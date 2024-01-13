@@ -1,0 +1,10 @@
+.square {
+	height: 56px;
+	width: 240px;
+
+	background-color: currentcolor;
+}
+
+.square small {
+	color: var(--text-color);
+}

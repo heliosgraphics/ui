@@ -4,33 +4,54 @@
 	background-color: var(--color-background);
 	container-type: inline-size;
 
-	user-select: none;
+	/* user-select: none; */
 }
 
 .alert {
-	--alert-intent-confirmation--bg: hsla(var(--intent-color-confirmation), 0.25);
-	--alert-intent-confirmation--text: hsla(var(--intent-color-confirmation), 1);
-
-	--alert-intent-error--bg: hsla(var(--intent-color-error), 0.25);
-	--alert-intent-error--text: hsla(var(--intent-color-error), 1);
-
-	--alert-intent-highlight--bg: hsla(var(--intent-color-highlight), 0.25);
-	--alert-intent-highlight--text: hsla(var(--intent-color-highlight), 1);
-
-	--alert-intent-advise--bg: hsla(var(--intent-color-advise), 0.25);
-	--alert-intent-advise--text: hsla(var(--intent-color-advise), 1);
-
-	--alert-intent-question--bg: hsla(var(--intent-color-question), 0.25);
-	--alert-intent-question--text: hsla(var(--intent-color-question), 1);
-
-	--alert-intent-success--bg: hsla(var(--intent-color-success), 0.25);
-	--alert-intent-success--text: hsla(var(--intent-color-success), 1);
-
-	--alert-intent-warning--bg: hsla(var(--intent-color-warning), 0.25);
-	--alert-intent-warning--text: hsla(var(--intent-color-warning), 1);
-
 	display: flex;
 	flex-direction: row;
+}
+
+/* intent: advise */
+.alertAdvise {
+	background-color: var(--hsl-intent-advise-alert-bg);
+	color: var(--hsl-intent-advise-alert-text);
+}
+
+/* intent: confirmation */
+.alertConfirmation {
+	background-color: var(--hsl-intent-confirmation-alert-bg);
+	color: var(--hsl-intent-confirmation-alert-text);
+}
+
+/* intent: error */
+.alertError {
+	background-color: var(--hsl-intent-error-alert-bg);
+	color: var(--hsl-intent-error-alert-text);
+}
+
+/* intent: highlight */
+.alertHighlight {
+	background-color: var(--hsl-intent-highlight-alert-bg);
+	color: var(--hsl-intent-highlight-alert-text);
+}
+
+/* intent: question */
+.alertQuestion {
+	background-color: var(--hsl-intent-question-alert-bg);
+	color: var(--hsl-intent-question-alert-text);
+}
+
+/* intent: success */
+.alertSuccess {
+	background-color: var(--hsl-intent-success-alert-bg);
+	color: var(--hsl-intent-success-alert-text);
+}
+
+/* intent: warning */
+.alertWarning {
+	background-color: var(--hsl-intent-warning-alert-bg);
+	color: var(--hsl-intent-warning-alert-text);
 }
 
 .alertSmall {
@@ -54,48 +75,6 @@
 .alert a {
 	font-weight: var(--font-weight-medium);
 	text-decoration: underline;
-}
-
-/* intent: advise */
-.alertAdvise {
-	background-color: var(--alert-intent-advise--bg);
-	color: var(--alert-intent-advise--text);
-}
-
-/* intent: confirmation */
-.alertConfirmation {
-	background-color: var(--alert-intent-confirmation--bg);
-	color: var(--alert-intent-confirmation--text);
-}
-
-/* intent: error */
-.alertError {
-	background-color: var(--alert-intent-error--bg);
-	color: var(--alert-intent-error--text);
-}
-
-/* intent: highlight */
-.alertHighlight {
-	background-color: var(--alert-intent-highlight--bg);
-	color: var(--alert-intent-highlight--text);
-}
-
-/* intent: question */
-.alertQuestion {
-	background-color: var(--alert-intent-question--bg);
-	color: var(--alert-intent-question--text);
-}
-
-/* intent: success */
-.alertSuccess {
-	background-color: var(--alert-intent-success--bg);
-	color: var(--alert-intent-success--text);
-}
-
-/* intent: warning */
-.alertWarning {
-	background-color: var(--alert-intent-warning--bg);
-	color: var(--alert-intent-warning--text);
 }
 
 @container (max-width: 640px) {

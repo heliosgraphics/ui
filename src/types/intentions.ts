@@ -1,5 +1,6 @@
 export type HeliosIntentionType =
 	| "advise"
+	| "automation"
 	| "confirmation"
 	| "error"
 	| "highlight"
