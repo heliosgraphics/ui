@@ -89,25 +89,16 @@
 	--red-hue: 356;
 	--yellow-hue: 45;
 
-	--aqua-saturation: 65%;
-	--blue-saturation: 87%;
-	--gray-saturation: 10%;
-	--green-saturation: 75%;
-	--orange-saturation: 94%;
-	--pink-saturation: 76%;
-	--purple-saturation: 80%;
-	--red-saturation: 84%;
-	--yellow-saturation: 90%;
-
-	--aqua-saturation-dark: 55%;
-	--blue-saturation-dark: 67%;
-	--gray-saturation-dark: 0%;
-	--green-saturation-dark: 65%;
-	--orange-saturation-dark: 84%;
-	--pink-saturation-dark: 66%;
-	--purple-saturation-dark: 70%;
-	--red-saturation-dark: 74%;
-	--yellow-saturation-dark: 80%;
+	/* intention mappings */
+	--color-intent-advise: var(--blue-hue), var(--blue-saturation);
+  --color-intent-automation: var(--pink-hue), var(--pink-saturation);
+  --color-intent-confirmation: var(--purple-hue), var(--purple-saturation);
+  --color-intent-error: var(--red-hue), var(--red-saturation);
+  --color-intent-highlight: var(--orange-hue), var(--orange-saturation);
+  --color-intent-question: var(--aqua-hue), var(--aqua-saturation);
+  --color-intent-silent: var(--gray-hue), var(--gray-saturation);
+  --color-intent-success: var(--green-hue), var(--green-saturation);
+  --color-intent-warning: var(--yellow-hue), var(--yellow-saturation);
 
 	/* setup constants: animations */
 	--animation-fastest: 64ms;
@@ -141,23 +132,20 @@ body {
 
 	background-color: var(--hsl-background);
 	color: var(--hsl-text);
-	/* transition:
-		background-color var(--animation-fast) var(--easeInOutSine),
-		color var(--animation-fast) var(--easeInOutSine); */
 }
 
 :root {
   color-scheme: light;
 
-  --color-intent-advise: var(--blue-hue), var(--blue-saturation);
-  --color-intent-automation: var(--pink-hue), var(--pink-saturation);
-  --color-intent-confirmation: var(--purple-hue), var(--purple-saturation);
-  --color-intent-error: var(--red-hue), var(--red-saturation);
-  --color-intent-highlight: var(--orange-hue), var(--orange-saturation);
-  --color-intent-question: var(--aqua-hue), var(--aqua-saturation);
-  --color-intent-silent: var(--gray-hue), var(--gray-saturation);
-  --color-intent-success: var(--green-hue), var(--green-saturation);
-  --color-intent-warning: var(--yellow-hue), var(--yellow-saturation);
+	--aqua-saturation: 65%;
+	--blue-saturation: 87%;
+	--gray-saturation: 10%;
+	--green-saturation: 75%;
+	--orange-saturation: 94%;
+	--pink-saturation: 76%;
+	--purple-saturation: 80%;
+	--red-saturation: 84%;
+	--yellow-saturation: 90%;
 
 	--hsl-background: hsl(0, 0%, 100%);
 	--hsl-text: hsl(0, 0%, 0%);
@@ -167,15 +155,15 @@ body {
 :root[data-theme='dark'] {
   color-scheme: dark;
 
-	--color-intent-advise: var(--blue-hue), var(--blue-saturation-dark);
-  --color-intent-automation: var(--pink-hue), var(--pink-saturation-dark);
-  --color-intent-confirmation: var(--purple-hue), var(--purple-saturation-dark);
-  --color-intent-error: var(--red-hue), var(--red-saturation-dark);
-  --color-intent-highlight: var(--orange-hue), var(--orange-saturation-dark);
-  --color-intent-question: var(--aqua-hue), var(--aqua-saturation-dark);
-  --color-intent-silent: var(--gray-hue), var(--gray-saturation-dark);
-  --color-intent-success: var(--green-hue), var(--green-saturation-dark);
-  --color-intent-warning: var(--yellow-hue), var(--yellow-saturation-dark);
+	--aqua-saturation: 55%;
+	--blue-saturation: 67%;
+	--gray-saturation: 0%;
+	--green-saturation: 65%;
+	--orange-saturation: 84%;
+	--pink-saturation: 66%;
+	--purple-saturation: 70%;
+	--red-saturation: 74%;
+	--yellow-saturation: 80%;
 
 	--hsl-background: hsl(0, 0%, 0%);
 	--hsl-text: hsl(0, 0%, 100%);
