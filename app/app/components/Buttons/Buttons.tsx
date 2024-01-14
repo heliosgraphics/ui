@@ -26,7 +26,7 @@ const Buttons: React.FC<ButtonsProps> = () => {
 
 	return (
 		<Flex isColumn={true} gap={16}>
-			<div>
+			<ButtonGroup>
 				<Button intent="advise" value="Advise" onClick={onIntentAdvise} />
 				<Button
 					intent="automation"
@@ -48,7 +48,7 @@ const Buttons: React.FC<ButtonsProps> = () => {
 				<Button intent="silent" value="Silent" onClick={onIntentSilent} />
 				<Button intent="success" value="Success" onClick={onIntentSuccess} />
 				<Button intent="warning" value="Warning" onClick={onIntentWarning} />
-			</div>
+			</ButtonGroup>
 			<Separator />
 			<ButtonGroup>
 				<Button intent={intent} value="Normal" />
@@ -62,7 +62,6 @@ const Buttons: React.FC<ButtonsProps> = () => {
 					isLoading={true}
 					isDisabled={true}
 				/>
-				<Button intent={intent} value="Active" isActive={true} />
 				<Button intent={intent} value="Icon" icon="pin" />
 				<Button
 					intent={intent}
@@ -74,7 +73,40 @@ const Buttons: React.FC<ButtonsProps> = () => {
 					intent={intent}
 					value="Icon Only Loading"
 					icon="pin"
+					isIconOnly={true}
 					isLoading={true}
+				/>
+				<Button
+					intent={intent}
+					value="Icon Only Small"
+					icon="pin"
+					size="small"
+					isIconOnly={true}
+				/>
+				<Button intent={intent} value="Icon Small" icon="pin" size="small" />
+				<Button
+					intent={intent}
+					value="Icon Only Loading Small"
+					icon="pin"
+					size="small"
+					isIconOnly={true}
+					isLoading={true}
+				/>
+				<Button
+					intent={intent}
+					value="Icon Only Tiny"
+					icon="pin"
+					size="tiny"
+					isIconOnly={true}
+				/>
+				<Button intent={intent} value="Icon Tiny" icon="pin" size="tiny" />
+				<Button
+					intent={intent}
+					value="Icon Only Loading Tiny"
+					icon="pin"
+					size="tiny"
+					isLoading={true}
+					isIconOnly={true}
 				/>
 				<Button intent={intent} value="Rounded" isRounded={true} />
 				<Button

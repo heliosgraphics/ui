@@ -63,7 +63,7 @@ export default function Home() {
 		<main className="debugx">
 			<Flex isColumn={true} gap={16} padding={16}>
 				<Flex isColumn={true}>
-					<Heading level={1}>Gamen Components</Heading>
+					<Heading level={1}>Thebe Components</Heading>
 					<Text type="tiny" fontFamily="mono">
 						from <a href="https://helios.graphics">Helios Graphics</a>
 					</Text>
@@ -73,7 +73,7 @@ export default function Home() {
 						<Text type="paragraph">
 							This is both the workshop and the official NextJS example. For
 							documentation access, please visit{" "}
-							<a href="https://gamen.earth">Gamen</a>.
+							<a href="https://thebe.dev">Thebe</a>.
 						</Text>
 						<Text type="tiny" fontFamily="mono">
 							01. add @heliosgraphics/fractures

@@ -6,7 +6,6 @@ export interface ButtonProps {
 	flair?: string
 	icon?: HeliosIconType
 	intent: HeliosIntentionType
-	isActive?: boolean
 	isDisabled?: boolean
 	isIconOnly?: boolean
 	isLoading?: boolean

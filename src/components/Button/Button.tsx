@@ -18,13 +18,12 @@ const Button: React.FC<ButtonProps> = ({
 	icon,
 	value,
 	intent,
-	isActive,
 	isDisabled,
 	isIconOnly,
 	isLoading,
 	isRounded,
 	onClick,
-	size,
+	size = "normal",
 	tabIndex,
 	type = "button",
 }) => {
@@ -41,7 +40,6 @@ const Button: React.FC<ButtonProps> = ({
 		[styles.buttonSuccess]: intent === "success",
 		[styles.buttonWarning]: intent === "warning",
 
-		[styles.buttonActive]: isActive,
 		[styles.buttonDisabled]: isDisabled,
 		[styles.buttonLoading]: isLoading,
 
@@ -58,18 +56,19 @@ const Button: React.FC<ButtonProps> = ({
 		[styles.buttonIconOnlyLoading]: isIconOnlyLoading,
 	})
 
-	const buttonInputClasses = classNames({
-		"tiny fw-medium": size === "tiny" || size === "small",
-		"small fw-semi-bold": !size || size === "normal",
+	const buttonInputClasses = classNames("sans fw-semi-bold", {
+		tiny: size === "tiny" || size === "small",
+		"small ": !size || size === "normal",
 
 		"radius-3": !isRounded && size !== "tiny",
 		"radius-2": !isRounded && size === "tiny",
 		"radius-max": isRounded,
 
-		"px-6": (!size || size === "normal") && !isIconOnly,
-		"px-4": size === "small" && !isIconOnly,
-		"px-3": size === "tiny" && !isIconOnly,
+		"px-6": size === "normal" && !isIconOnly,
+		"px-4": size !== "normal" && !isIconOnly,
 	})
+
+	const buttonIconClasses = classNames(styles.button__icon, "relative")
 
 	const buttonLoadingSize: 10 | 20 = size && size !== "normal" ? 10 : 20
 
@@ -82,7 +81,7 @@ const Button: React.FC<ButtonProps> = ({
 			data-component="Button"
 		>
 			{!!icon && !isIconOnlyLoading && (
-				<Flex className={styles.button__icon}>
+				<Flex className={buttonIconClasses}>
 					<Icon name={icon} size={BUTTON_ICON_SIZE[size || "normal"]} />
 				</Flex>
 			)}
@@ -94,7 +93,6 @@ const Button: React.FC<ButtonProps> = ({
 			<input
 				type={type}
 				className={buttonInputClasses}
-				aria-pressed={!!isActive}
 				aria-disabled={!!isDisabled}
 				tabIndex={tabIndex ?? 0}
 				role="button"

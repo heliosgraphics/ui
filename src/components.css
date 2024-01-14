@@ -99,6 +99,16 @@
 	--red-saturation: 84%;
 	--yellow-saturation: 90%;
 
+	--aqua-saturation-dark: 55%;
+	--blue-saturation-dark: 67%;
+	--gray-saturation-dark: 0%;
+	--green-saturation-dark: 65%;
+	--orange-saturation-dark: 84%;
+	--pink-saturation-dark: 66%;
+	--purple-saturation-dark: 70%;
+	--red-saturation-dark: 74%;
+	--yellow-saturation-dark: 80%;
+
 	/* setup constants: animations */
 	--animation-fastest: 64ms;
 	--animation-fast: 96ms;
@@ -116,8 +126,9 @@
 	}
 }
 
-* {
-	outline: none;
+*:focus-visible {
+  outline: 2px solid orange;
+	outline-offset: 2px;
 }
 
 a {
@@ -130,30 +141,13 @@ body {
 
 	background-color: var(--hsl-background);
 	color: var(--hsl-text);
-	transition:
+	/* transition:
 		background-color var(--animation-fast) var(--easeInOutSine),
-		color var(--animation-fast) var(--easeInOutSine);
+		color var(--animation-fast) var(--easeInOutSine); */
 }
 
 :root {
   color-scheme: light;
-/*
-  --hsl-intent-advise-alert-bg: hsla(var(--color-blue), 50%, 0.25);
-  --hsl-intent-advise-alert-text: hsla(var(--color-blue), 50%, 1);
-	--hsl-intent-confirmation-alert-bg: hsla(var(--color-purple), 50%, 0.25);
-  --hsl-intent-confirmation-alert-text: hsla(var(--color-purple), 50%, 1);
-	--hsl-intent-error-alert-bg: hsla(var(--color-red), 50%, 0.25);
-  --hsl-intent-error-alert-text: hsla(var(--color-red), 50%, 1);
-	--hsl-intent-highlight-alert-bg: hsla(var(--color-orange), 50%, 0.25);
-  --hsl-intent-highlight-alert-text: hsla(var(--color-orange), 40%, 1);
-	--hsl-intent-question-alert-bg: hsla(var(--color-aqua), 50%, 0.25);
-  --hsl-intent-question-alert-text: hsla(var(--color-aqua), 40%, 1);
-	--hsl-intent-silent-alert-bg: hsla(var(--color-gray), 50%, 0.25);
-  --hsl-intent-silent-alert-text: hsla(var(--color-gray), 30%, 1);
-	--hsl-intent-success-alert-bg: hsla(var(--color-green), 50%, 0.25);
-  --hsl-intent-success-alert-text: hsla(var(--color-green), 30%, 1);
-	--hsl-intent-warning-alert-bg: hsla(var(--color-yellow), 50%, 0.25);
-  --hsl-intent-warning-alert-text: hsla(var(--color-yellow), 35%, 1); */
 
   --color-intent-advise: var(--blue-hue), var(--blue-saturation);
   --color-intent-automation: var(--pink-hue), var(--pink-saturation);
@@ -173,20 +167,15 @@ body {
 :root[data-theme='dark'] {
   color-scheme: dark;
 
-	--hsl-intent-advise-alert-bg: hsla(var(--color-blue), 50%, 0.25);
-  --hsl-intent-advise-alert-text: hsla(var(--color-blue), 50%, 1);
-	--hsl-intent-confirmation-alert-bg: hsla(var(--color-purple), 50%, 0.25);
-  --hsl-intent-confirmation-alert-text: hsla(var(--color-purple), 50%, 1);
-	--hsl-intent-error-alert-bg: hsla(var(--color-red), 50%, 0.25);
-  --hsl-intent-error-alert-text: hsla(var(--color-red), 50%, 1);
-	--hsl-intent-highlight-alert-bg: hsla(var(--color-orange), 50%, 0.25);
-  --hsl-intent-highlight-alert-text: hsla(var(--color-orange), 40%, 1);
-	--hsl-intent-question-alert-bg: hsla(var(--color-aqua), 50%, 0.25);
-  --hsl-intent-question-alert-text: hsla(var(--color-aqua), 40%, 1);
-	--hsl-intent-success-alert-bg: hsla(var(--color-green), 50%, 0.25);
-  --hsl-intent-success-alert-text: hsla(var(--color-green), 30%, 1);
-	--hsl-intent-warning-alert-bg: hsla(var(--color-yellow), 50%, 0.25);
-  --hsl-intent-warning-alert-text: hsla(var(--color-yellow), 35%, 1);
+	--color-intent-advise: var(--blue-hue), var(--blue-saturation-dark);
+  --color-intent-automation: var(--pink-hue), var(--pink-saturation-dark);
+  --color-intent-confirmation: var(--purple-hue), var(--purple-saturation-dark);
+  --color-intent-error: var(--red-hue), var(--red-saturation-dark);
+  --color-intent-highlight: var(--orange-hue), var(--orange-saturation-dark);
+  --color-intent-question: var(--aqua-hue), var(--aqua-saturation-dark);
+  --color-intent-silent: var(--gray-hue), var(--gray-saturation-dark);
+  --color-intent-success: var(--green-hue), var(--green-saturation-dark);
+  --color-intent-warning: var(--yellow-hue), var(--yellow-saturation-dark);
 
 	--hsl-background: hsl(0, 0%, 0%);
 	--hsl-text: hsl(0, 0%, 100%);

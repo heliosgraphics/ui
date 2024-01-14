@@ -1,27 +1,12 @@
 import React from "react"
 import classNames from "@sindresorhus/class-names"
 import styles from "./Loading.module.css"
-import type { HeliosColors } from "src/types/colors"
-// import { getColor } from "../utils/color"
-// import type { FUIColors } from "@heliosgraphics/library/types/colors"
+import type { LoadingProps } from "./Loading.types"
 
-interface LoadingProps {
-	color?: HeliosColors
-	className?: string
-	size: 10 | 20 | 40
-}
-
-const Loading: React.FC<LoadingProps> = ({
-	className,
-	size,
-	color = "gray",
-}) => {
+const Loading: React.FC<LoadingProps> = ({ className, size }) => {
 	const rSize = size / 2
 	const cSize = rSize + 2
 	const dashSize = size + cSize
-	const circleColor = "red" // getColor(color as any)
-	const circleColorVariable: string = "red"
-	// color === "currentcolor" ? "currentcolor" : `var(--${circleColor})`
 
 	const loadingClasses: string = classNames(className, styles.loading, {
 		[styles.loading32]: size === 10,
@@ -39,7 +24,7 @@ const Loading: React.FC<LoadingProps> = ({
 			<circle
 				fill="none"
 				strokeWidth={4}
-				stroke={circleColorVariable}
+				stroke="currentcolor"
 				cx={cSize}
 				cy={cSize}
 				r={rSize}
@@ -48,7 +33,7 @@ const Loading: React.FC<LoadingProps> = ({
 			<circle
 				fill="none"
 				strokeWidth={4}
-				stroke={circleColorVariable}
+				stroke="currentcolor"
 				strokeDasharray={dashSize}
 				strokeLinecap="round"
 				cx={cSize}

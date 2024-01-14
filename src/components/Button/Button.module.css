@@ -1,5 +1,11 @@
 .button {
 	--button-intent-advise--bg: hsl(var(--color-intent-advise), 50%);
+	--button-intent-advise--text: hsl(var(--color-intent-advise), 97.5%);
+	--button-intent-advise--hover: hsl(var(--color-intent-advise), 40%);
+	--button-intent-advise--active: hsl(var(--color-intent-advise), 30%);
+	--button-intent-advise--disabled: hsl(var(--color-intent-advise), 70%);
+	--button-intent-advise--focus: hsl(var(--color-intent-advise), 90%);
+
 	--button-intent-automation--bg: hsl(var(--color-intent-automation), 50%);
 	--button-intent-confirmation--bg: hsl(var(--color-intent-confirmation), 50%);
 	--button-intent-error--bg: hsl(var(--color-intent-error), 50%);
@@ -25,6 +31,20 @@
 .buttonAdvise {
 	background-color: var(--button-intent-advise--bg);
 	color: var(--button-intent-advise--text);
+}
+
+.buttonAdvise:hover {
+	background-color: var(--button-intent-advise--hover);
+}
+
+.buttonAdvise.buttonDisabled input:focus,
+.buttonAdvise.buttonDisabled input:active {
+	background-color: var(--button-intent-advise--focus);
+}
+
+.buttonAdvise.buttonDisabled {
+	background: var(--button-intent-advise--focus);
+	color: var(--button-intent-advise--disabled);
 }
 
 /* intent: automation */
@@ -82,7 +102,6 @@
 	display: inline-flex;
 	background-color: transparent;
 	color: inherit;
-	outline: none;
 
 	cursor: inherit;
 }
@@ -106,60 +125,25 @@
 	min-width: 24px;
 }
 
-.button:hover {
-	background: var(--fui-btn-600)
-		linear-gradient(var(--fui-btn-600) -50%, var(--fui-btn-700) 250%);
-	box-shadow: inset 0 0 0 1px var(--fui-btn-700);
-	color: var(--fui-btn-bg);
-}
-
-.button.buttonActive,
-.button:active {
-	background: var(--fui-btn-700)
-		linear-gradient(var(--fui-btn-700) -50%, var(--fui-btn-700) 250%);
-	box-shadow: inset 0 0 0 1px var(--fui-btn-700);
-}
-
-.button input {
-	text-shadow: 0 1px 0 var(--fui-btn-600);
-}
-.button.buttonActive input,
-.button:active input,
-.button:hover input {
-	text-shadow: 0 1px 0 var(--fui-btn-700);
-}
-
-.button input:focus-visible {
-	outline: 3px solid var(--fui-btn-100);
-}
-
-/* Disabled */
+/* Loading */
+.buttonLoading,
 .buttonDisabled {
 	pointer-events: none;
-
-	background: var(--fui-btn-100);
-	box-shadow: inset 0 0 0 1px var(--fui-btn-100);
-	color: var(--fui-btn-300);
 }
 
 .buttonDisabled input {
 	text-shadow: 0 0 0 transparent;
 }
 
-/* Loading */
-.buttonLoading {
-	pointer-events: none;
-}
-
-.buttonSizeNormal.buttonLoading input {
+.buttonSizeNormal.buttonLoading:not(.buttonIconOnly) input {
 	padding-right: 40px;
 }
 
-.buttonSizeSmall.buttonLoading input {
+.buttonSizeSmall.buttonLoading:not(.buttonIconOnly) input {
 	padding-right: 26px;
 }
 
-.buttonSizeTiny.buttonLoading input {
+.buttonSizeTiny.buttonLoading:not(.buttonIconOnly) input {
 	padding-right: 24px;
 }
 
@@ -167,15 +151,15 @@
 	position: absolute;
 }
 
-.buttonSizeNormal:not(.buttonIconOnlyLoading) .button__loading {
+.buttonSizeNormal:not(.buttonIconOnly) .button__loading {
 	right: 10px;
 }
 
-.buttonSizeSmall:not(.buttonIconOnlyLoading) .button__loading {
+.buttonSizeSmall:not(.buttonIconOnly) .button__loading {
 	right: 6px;
 }
 
-.buttonSizeTiny:not(.buttonIconOnlyLoading) .button__loading {
+.buttonSizeTiny:not(.buttonIconOnly) .button__loading {
 	right: 6px;
 }
 
@@ -216,17 +200,17 @@
 }
 
 /* Icon:focus */
-.buttonSizeNormal.buttonIconOnly input {
+.buttonSizeNormal.buttonIconOnly:not(.buttonIconOnlyLoading) input {
 	margin-left: -42px;
 	width: 42px;
 }
 
-.buttonSizeSmall.buttonIconOnly input {
+.buttonSizeSmall.buttonIconOnly:not(.buttonIconOnlyLoading) input {
 	margin-left: -30px;
 	width: 30px;
 }
 
-.buttonSizeTiny.buttonIconOnly input {
+.buttonSizeTiny.buttonIconOnly:not(.buttonIconOnlyLoading) input {
 	margin-left: -24px;
 	width: 24px;
 }
@@ -250,10 +234,12 @@
 	border-radius: 100px;
 }
 
-.buttonRound {
+.buttonRound,
+.buttonRound input {
 	border-radius: var(--radius-normal);
 }
 
-.buttonRoundTiny {
+.buttonRoundTiny,
+.buttonRoundTiny input {
 	border-radius: var(--radius-small);
 }
