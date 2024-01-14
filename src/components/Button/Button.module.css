@@ -96,11 +96,11 @@
 	--button-disabled: hsl(var(--color-intent-silent), 70%);
 	--button-focus: hsl(var(--color-intent-silent), 90%);
 
-	box-shadow: inset 0 0 0 1px var(--ui-border-normal);
+	box-shadow: inset 0 0 0 1px var(--ui-border-default);
 }
 
 .button.buttonSilent input:active {
-	box-shadow: inset 0 0 0 1px var(--ui-border-dark);
+	box-shadow: inset 0 0 0 1px var(--ui-border-active);
 }
 
 /* intent: success */

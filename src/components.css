@@ -125,6 +125,7 @@
 	--purple-saturation: 80%;
 	--red-saturation: 84%;
 	--yellow-saturation: 80%;
+	--ui-saturation: 8%;
 
 	--ui-text-primary: hsl(var(--ui-hue), 8%, 0%);
 	--ui-text-secondary: hsl(var(--ui-hue), 4%, 35%);
@@ -132,15 +133,15 @@
 	--ui-text-selected: hsla(var(--color-intent-highlight), 50%, 0.25);
 	--ui-text-highlighted: hsla(var(--color-intent-highlight), 50%, 0.25);
 
-	--ui-border-primary: hsl(var(--ui-hue), 8%, 0%);
-	--ui-border-secondary: hsl(var(--ui-hue), 8%, 0%);
-	--ui-border-tertiary: hsl(var(--ui-hue), 8%, 0%);
+	--ui-border-active: hsl(var(--ui-hue), var(--ui-saturation), 80%);
+	--ui-border-default: hsl(var(--ui-hue), var(--ui-saturation), 90%);
+	--ui-border-deemphasized: hsl(var(--ui-hue), var(--ui-saturation), 95%);
 
-	--ui-element-bg: hsl(var(--ui-hue), 8%, 0%);
-	--ui-element-deemphasized: hsl(var(--ui-hue), 8%, 0%);
+	--ui-element-default: hsl(var(--ui-hue), var(--ui-saturation), 95%);
+	--ui-element-deemphasized: hsl(var(--ui-hue), var(--ui-saturation), 0%);
 
-	--ui-bg: hsl(var(--ui-hue), 8%, 100%);
-	--ui-bg-glass: hsla(var(--ui-hue), 8%, 100%, 0.5);
+	--ui-bg: hsl(var(--ui-hue), var(--ui-saturation), 100%);
+	--ui-bg-glass: hsla(var(--ui-hue), var(--ui-saturation), 100%, 0.5);
 }
 
 /* setup theme dark */
