@@ -3,16 +3,16 @@ import { Flex, Text } from "../../../../src"
 import styles from "./Square.module.css"
 import type { SquareProps } from "./Square.types"
 
-const Square: React.FC<SquareProps> = ({ color, lightness, isRounded }) => {
+const Square: React.FC<SquareProps> = ({ lightness, color }) => {
 	const style = {
 		color: `hsl(var(--color) ${lightness}%)`,
-		"--text-color": `hsl(var(--color) ${lightness - 50}%)`,
+		"--text-color": `hsl(var(--color) ${lightness - 40}%)`,
 	} as React.CSSProperties
 
 	return (
-		<Flex style={style} className={styles.square} padding={2}>
-			<Text type="tiny" fontWeight="medium">
-				{lightness}
+		<Flex style={style} className={styles.square}>
+			<Text type="tiny" fontWeight="medium" className={styles.squareNote}>
+				L{lightness}
 			</Text>
 		</Flex>
 	)

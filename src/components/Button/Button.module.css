@@ -1,4 +1,14 @@
 .button {
+	--button-intent-advise--bg: hsl(var(--color-intent-advise), 50%);
+	--button-intent-automation--bg: hsl(var(--color-intent-automation), 50%);
+	--button-intent-confirmation--bg: hsl(var(--color-intent-confirmation), 50%);
+	--button-intent-error--bg: hsl(var(--color-intent-error), 50%);
+	--button-intent-highlight--bg: hsl(var(--color-intent-highlight), 50%);
+	--button-intent-silent--bg: hsl(var(--color-intent-silent), 50%);
+	--button-intent-question--bg: hsl(var(--color-intent-question), 50%);
+	--button-intent-success--bg: hsl(var(--color-intent-success), 50%);
+	--button-intent-warning--bg: hsl(var(--color-intent-warning), 50%);
+
 	transition: all 60ms ease-in-out;
 
 	-webkit-tap-highlight-color: transparent;
@@ -15,6 +25,12 @@
 .buttonAdvise {
 	background-color: var(--button-intent-advise--bg);
 	color: var(--button-intent-advise--text);
+}
+
+/* intent: automation */
+.buttonAutomation {
+	background-color: var(--button-intent-automation--bg);
+	color: var(--button-intent-automation--text);
 }
 
 /* intent: confirmation */
@@ -63,6 +79,7 @@
 /* Reset */
 .button input {
 	border: 0;
+	display: inline-flex;
 	background-color: transparent;
 	color: inherit;
 	outline: none;

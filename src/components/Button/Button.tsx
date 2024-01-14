@@ -26,42 +26,39 @@ const Button: React.FC<ButtonProps> = ({
 	onClick,
 	size,
 	tabIndex,
-	type,
+	type = "button",
 }) => {
 	const isIconOnlyLoading: boolean = !!isIconOnly && !!isLoading
 
-	const buttonClasses = classNames(
-		styles.button,
-		"relative sans cursor-pointer",
-		{
-			[styles.buttonAdvise]: intent === "advise",
-			[styles.buttonConfirmation]: intent === "confirmation",
-			[styles.buttonError]: intent === "error",
-			[styles.buttonHighlight]: intent === "highlight",
-			[styles.buttonQuestion]: intent === "question",
-			[styles.buttonSilent]: intent === "silent",
-			[styles.buttonSuccess]: intent === "success",
-			[styles.buttonWarning]: intent === "warning",
+	const buttonClasses = classNames(styles.button, "relative cursor-pointer", {
+		[styles.buttonAdvise]: intent === "advise",
+		[styles.buttonAutomation]: intent === "automation",
+		[styles.buttonConfirmation]: intent === "confirmation",
+		[styles.buttonError]: intent === "error",
+		[styles.buttonHighlight]: intent === "highlight",
+		[styles.buttonQuestion]: intent === "question",
+		[styles.buttonSilent]: intent === "silent",
+		[styles.buttonSuccess]: intent === "success",
+		[styles.buttonWarning]: intent === "warning",
 
-			[styles.buttonActive]: isActive,
-			[styles.buttonDisabled]: isDisabled,
-			[styles.buttonLoading]: isLoading,
+		[styles.buttonActive]: isActive,
+		[styles.buttonDisabled]: isDisabled,
+		[styles.buttonLoading]: isLoading,
 
-			[styles.buttonRounded]: isRounded,
-			[styles.buttonRound]: !isRounded && size !== "tiny",
-			[styles.buttonRoundTiny]: !isRounded && size === "tiny",
+		[styles.buttonRounded]: isRounded,
+		[styles.buttonRound]: !isRounded && size !== "tiny",
+		[styles.buttonRoundTiny]: !isRounded && size === "tiny",
 
-			[styles.buttonSizeNormal]: !size || size === "normal",
-			[styles.buttonSizeSmall]: size === "small",
-			[styles.buttonSizeTiny]: size === "tiny",
+		[styles.buttonSizeNormal]: !size || size === "normal",
+		[styles.buttonSizeSmall]: size === "small",
+		[styles.buttonSizeTiny]: size === "tiny",
 
-			[styles.buttonWithIcon]: !!icon,
-			[styles.buttonIconOnly]: isIconOnly,
-			[styles.buttonIconOnlyLoading]: isIconOnlyLoading,
-		},
-	)
+		[styles.buttonWithIcon]: !!icon,
+		[styles.buttonIconOnly]: isIconOnly,
+		[styles.buttonIconOnlyLoading]: isIconOnlyLoading,
+	})
 
-	const buttonInputClasses = classNames("sans w-100 h-100", {
+	const buttonInputClasses = classNames({
 		"tiny fw-medium": size === "tiny" || size === "small",
 		"small fw-semi-bold": !size || size === "normal",
 

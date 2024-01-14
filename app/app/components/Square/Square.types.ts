@@ -4,5 +4,4 @@ export interface SquareProps {
 	className?: string
 	color: HeliosColors
 	lightness: number
-	isRounded?: boolean
 }

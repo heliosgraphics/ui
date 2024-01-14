@@ -2,6 +2,7 @@
 export { default as Alert } from "./components/Alert"
 export { default as Breadcrumb } from "./components/Breadcrumb"
 export { default as Button } from "./components/Button"
+export type { ButtonProps } from './components/Button/Button.types'
 export { default as ButtonGroup } from "./components/ButtonGroup"
 export { default as Category } from "./components/Category"
 export { default as Checkbox } from "./components/Checkbox"
@@ -47,6 +48,9 @@ export { default as Upload } from "./components/Upload"
 
 // hooks
 export { useIntersector } from "./hooks/useIntersector"
+
+// types
+export type { HeliosIntentionType } from "./types/intentions"
 
 // meta
 export const COMPONENTS = [

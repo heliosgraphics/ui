@@ -27,8 +27,7 @@ export const _getFontWeight = (fw: TextProps["fontWeight"]): string => {
 }
 
 export const getTypographyUtility = (
-	props: TextProps,
-	className?: string,
+	props: TextProps
 ): string => {
 	const typoClasses: Array<string> = []
 
@@ -38,7 +37,7 @@ export const getTypographyUtility = (
 	typoClasses.push(fontFamily)
 	typoClasses.push(fontWeight)
 
-	if (className) typoClasses.push(className)
+	if (props.className) typoClasses.push(props.className)
 	if (props.fontStyle) typoClasses.push(props.fontStyle)
 	if (props.isEllipsis) typoClasses.push("ellipsis")
 	if (props.isUnselectable) typoClasses.push("unselectable")

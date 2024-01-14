@@ -14,6 +14,6 @@ export interface ButtonProps {
 	onClick?: (event?: React.MouseEvent | React.SyntheticEvent) => void
 	size?: "normal" | "small" | "tiny"
 	tabIndex?: number
-	type?: 'submit'
+	type?: 'button' | 'submit'
 	value: string
 }

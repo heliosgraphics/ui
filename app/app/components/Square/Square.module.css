@@ -6,5 +6,7 @@
 }
 
 .square small {
+	padding: 4px;
+
 	color: var(--text-color);
 }
