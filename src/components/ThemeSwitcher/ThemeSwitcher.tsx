@@ -1,5 +1,6 @@
 "use client"
 
+import { Button, ButtonGroup } from "../.."
 import { useState, useEffect } from "react"
 import type { ThemeSwitcherProps } from "./ThemeSwitcher.types"
 
@@ -16,9 +17,14 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = () => {
 	}, [])
 
 	return (
-		<button style={{ width: "10ch", height: "auto" }} onClick={toggleTheme}>
-			{isDark ? "dark" : "light"}
-		</button>
+		<ButtonGroup>
+			<Button
+				size="tiny"
+				value={isDark ? "dark" : "light"}
+				onClick={toggleTheme}
+				intent="silent"
+			></Button>
+		</ButtonGroup>
 	)
 }
 

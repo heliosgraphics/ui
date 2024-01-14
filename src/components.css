@@ -140,16 +140,23 @@ body {
 	--aqua-saturation: 65%;
 	--blue-saturation: 87%;
 	--gray-saturation: 10%;
-	--green-saturation: 75%;
+	--green-saturation: 40%;
 	--orange-saturation: 94%;
 	--pink-saturation: 76%;
 	--purple-saturation: 80%;
 	--red-saturation: 84%;
-	--yellow-saturation: 90%;
+	--yellow-saturation: 80%;
 
-	--hsl-background: hsl(0, 0%, 100%);
-	--hsl-text: hsl(0, 0%, 0%);
-	--hsla-glass-1: hsla(0, 0%, 100%, 0.25);
+	--ui-border-light: hsla(var(--gray-hue), 90%, 50%, 0.1);
+	--ui-border-normal: hsla(var(--gray-hue), 90%, 50%, 0.2);
+	--ui-border-dark: hsla(var(--gray-hue), 90%, 50%, 0.3);
+
+	--ui-text-dark: hsl(var(--gray-hue), 10%, 50%);
+	--ui-text-normal: hsl(var(--gray-hue), 10%, 50%);
+	--ui-text-light: hsl(var(--gray-hue), 10%, 50%);
+
+	--ui-bg: hsl(0, 0%, 100%);
+	--ui-bg-glass: hsla(0, 0%, 100%, 0.5);
 }
 
 :root[data-theme='dark'] {
@@ -165,9 +172,16 @@ body {
 	--red-saturation: 74%;
 	--yellow-saturation: 80%;
 
-	--hsl-background: hsl(0, 0%, 0%);
-	--hsl-text: hsl(0, 0%, 100%);
-	--hsla-glass-1: hsla(0, 0%, 0%, 0.5);
+	--ui-border-light: hsla(var(--gray-hue), 90%, 50%, 0.1);
+	--ui-border-normal: hsla(var(--gray-hue), 90%, 50%, 0.2);
+	--ui-border-dark: hsla(var(--gray-hue), 90%, 50%, 0.3);
+
+	--ui-text-dark: hsl(var(--gray-hue), 10%, 50%);
+	--ui-text-normal: hsl(var(--gray-hue), 10%, 50%);
+	--ui-text-light: hsl(var(--gray-hue), 10%, 50%);
+
+	--ui-bg: hsl(0, 0%, 0%);
+	--ui-bg-glass: hsla(0, 0%, 0%, 0.5);
 }
 
 .debug * {
