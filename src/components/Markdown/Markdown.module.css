@@ -1,8 +1,6 @@
 .markdown {
 	overflow-wrap: break-word;
 
-	color: var(--gray-700);
-
 	font-family: var(--font-family-sans);
 	font-size: var(--font-size-p);
 	line-height: var(--line-height-p);
@@ -14,7 +12,7 @@
 
 .markdown del,
 .markdown s {
-	color: var(--gray-400);
+	color: var(--ui-text-deemphasized);
 }
 
 .markdown h1:not(:first-child),
@@ -55,7 +53,7 @@
 	padding: 20px 16px;
 	/* padding: 20px 16px 24px 48px; */
 
-	background-color: var(--gray-25);
+	background-color: silver;
 	border-radius: 4px;
 }
 
@@ -76,7 +74,7 @@
 }
 
 .markdown a {
-	color: var(--blue-500);
+	/* color: var(--blue-500); */
 
 	font-weight: var(--font-weight-medium);
 	text-decoration: underline;
@@ -173,12 +171,6 @@
 .markdown p {
 	font-size: var(--font-size-p);
 	line-height: var(--line-height-p);
-}
-
-/* Modifier: highlight */
-.markdown mark {
-	background-color: transparent;
-	color: var(--blue-500);
 }
 
 /* Modifier: strong, bold: 700 */

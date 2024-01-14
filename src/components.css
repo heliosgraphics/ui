@@ -1,9 +1,9 @@
-/* todo: move these to layout and pre-connect */
+/* TODO: move these to layout and pre-connect */
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
 @import url("https://rsms.me/inter/inter.css");
 
+/* setup globals */
 :root {
-	/* setup fractures */
 	--box-px: 1px;
 	--box-1: 2px;
 	--box-2: 4px;
@@ -78,7 +78,7 @@
 	--z-index-90: 900;
 	--z-index-100: 1000;
 
-	/* color functions */
+	/* color hues */
 	--aqua-hue: 192;
 	--blue-hue: 230;
 	--gray-hue: 225;
@@ -88,8 +88,9 @@
 	--purple-hue: 266;
 	--red-hue: 356;
 	--yellow-hue: 45;
+	--ui-hue: 8;
 
-	/* intention mappings */
+	/* setup intention mappings */
 	--color-intent-advise: var(--blue-hue), var(--blue-saturation);
   --color-intent-automation: var(--pink-hue), var(--pink-saturation);
   --color-intent-confirmation: var(--purple-hue), var(--purple-saturation);
@@ -100,7 +101,7 @@
   --color-intent-success: var(--green-hue), var(--green-saturation);
   --color-intent-warning: var(--yellow-hue), var(--yellow-saturation);
 
-	/* setup constants: animations */
+	/* setup animations constants */
 	--animation-fastest: 64ms;
 	--animation-fast: 96ms;
 	--animation-normal: 128ms;
@@ -109,6 +110,65 @@
 
 	font-family: var(--font-family-sans);
   font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+/* setup theme light */
+:root {
+  color-scheme: light;
+
+	--aqua-saturation: 65%;
+	--blue-saturation: 87%;
+	--gray-saturation: 10%;
+	--green-saturation: 40%;
+	--orange-saturation: 94%;
+	--pink-saturation: 76%;
+	--purple-saturation: 80%;
+	--red-saturation: 84%;
+	--yellow-saturation: 80%;
+
+	--ui-text-primary: hsl(var(--ui-hue), 8%, 0%);
+	--ui-text-secondary: hsl(var(--ui-hue), 4%, 35%);
+	--ui-text-deemphasized: hsl(var(--ui-hue), 4%, 50%);
+	--ui-text-selected: hsla(var(--color-intent-highlight), 50%, 0.25);
+	--ui-text-highlighted: hsla(var(--color-intent-highlight), 50%, 0.25);
+
+	--ui-border-primary: hsl(var(--ui-hue), 8%, 0%);
+	--ui-border-secondary: hsl(var(--ui-hue), 8%, 0%);
+	--ui-border-tertiary: hsl(var(--ui-hue), 8%, 0%);
+
+	--ui-element-bg: hsl(var(--ui-hue), 8%, 0%);
+	--ui-element-deemphasized: hsl(var(--ui-hue), 8%, 0%);
+
+	--ui-bg: hsl(var(--ui-hue), 8%, 100%);
+	--ui-bg-glass: hsla(var(--ui-hue), 8%, 100%, 0.5);
+}
+
+/* setup theme dark */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+	--aqua-saturation: 55%;
+	--blue-saturation: 67%;
+	--gray-saturation: 0%;
+	--green-saturation: 65%;
+	--orange-saturation: 84%;
+	--pink-saturation: 66%;
+	--purple-saturation: 70%;
+	--red-saturation: 74%;
+	--yellow-saturation: 80%;
+
+	--ui-text-primary: hsl(var(--ui-hue), 8%, 0%);
+	--ui-text-secondary: hsl(var(--ui-hue), 8%, 50%);
+	--ui-text-deemphasized: hsl(var(--ui-hue), 8%, 90%);
+	--ui-text-selected: hsla(var(--color-intent-advise), 50%, 0.25);
+	--ui-text-highlighted: hsla(var(--color-intent-highlight), 50%, 0.25);
+
+	--ui-border-light: hsla(var(--ui-hue), 90%, 50%, 0.1);
+	--ui-border-normal: hsla(var(--ui-hue), 90%, 50%, 0.2);
+	--ui-border-dark: hsla(var(--ui-hue), 90%, 50%, 0.3);
+
+	--ui-bg: hsl(var(--ui-hue), 8%, 0%);
+	--ui-bg-glass: hsla(var(--ui-hue), 8%, 100%, 0.5);
 }
 
 @supports (font-variation-settings: normal) {
@@ -123,95 +183,42 @@
 }
 
 a {
+	color: currentcolor;
 	cursor: pointer;
 	text-decoration: underline;
+}
+
+*::selection {
+	background-color: var(--ui-text-selected);
 }
 
 body {
 	width: 100%;
 
-	background-color: var(--hsl-background);
-	color: var(--hsl-text);
+	background-color: var(--ui-bg);
 }
 
-:root {
-  color-scheme: light;
-
-	--aqua-saturation: 65%;
-	--blue-saturation: 87%;
-	--gray-saturation: 10%;
-	--green-saturation: 40%;
-	--orange-saturation: 94%;
-	--pink-saturation: 76%;
-	--purple-saturation: 80%;
-	--red-saturation: 84%;
-	--yellow-saturation: 80%;
-
-	--ui-border-light: hsla(var(--gray-hue), 90%, 50%, 0.1);
-	--ui-border-normal: hsla(var(--gray-hue), 90%, 50%, 0.2);
-	--ui-border-dark: hsla(var(--gray-hue), 90%, 50%, 0.3);
-
-	--ui-text-dark: hsl(var(--gray-hue), 10%, 50%);
-	--ui-text-normal: hsl(var(--gray-hue), 10%, 50%);
-	--ui-text-light: hsl(var(--gray-hue), 10%, 50%);
-
-	--ui-bg: hsl(0, 0%, 100%);
-	--ui-bg-glass: hsla(0, 0%, 100%, 0.5);
+/* helpers: text color */
+.text-secondary {
+	color: var(--ui-text-secondary);
 }
 
-:root[data-theme='dark'] {
-  color-scheme: dark;
-
-	--aqua-saturation: 55%;
-	--blue-saturation: 67%;
-	--gray-saturation: 0%;
-	--green-saturation: 65%;
-	--orange-saturation: 84%;
-	--pink-saturation: 66%;
-	--purple-saturation: 70%;
-	--red-saturation: 74%;
-	--yellow-saturation: 80%;
-
-	--ui-border-light: hsla(var(--gray-hue), 90%, 50%, 0.1);
-	--ui-border-normal: hsla(var(--gray-hue), 90%, 50%, 0.2);
-	--ui-border-dark: hsla(var(--gray-hue), 90%, 50%, 0.3);
-
-	--ui-text-dark: hsl(var(--gray-hue), 10%, 50%);
-	--ui-text-normal: hsl(var(--gray-hue), 10%, 50%);
-	--ui-text-light: hsl(var(--gray-hue), 10%, 50%);
-
-	--ui-bg: hsl(0, 0%, 0%);
-	--ui-bg-glass: hsla(0, 0%, 0%, 0.5);
+.text-deemphasized {
+	color: var(--ui-text-deemphasized);
 }
 
-.debug * {
-	box-shadow: inset 0 0 0 1px hsla(var(--color-orange), 80%, 0.5);
+mark,
+.text-highlighted {
+	background-color: var(--ui-text-highlighted);
 }
 
-.debug *[data-component] {
-	box-shadow: inset 0 0 0 1px hsla(var(--color-orange), 80%, 0.75);
-}
-
-.debug *[data-component]:after {
-	position: absolute;
-
-	padding: 4px;
-
-	background-color: hsla(var(--color-orange), 50%, 5);
-	color: var(--gray-0);
-
-	font-family: var(--font-family-mono);
-	font-size: 8px;
-	content: attr(data-component);
-}
-
-/* Helpers: Glass */
+/* helpers: glass */
 .glass-1 {
 	background-color: var(--rgba-glass-1);
 	backdrop-filter: blur(3px);
 }
 
-/* Helpers: Shadow */
+/* helpers: shadow */
 .shadow-1 {
 	box-shadow:
 		0 0 0 1px rgba(0, 0, 0, 0.024),
@@ -228,6 +235,7 @@ body {
 		0 0 10px 0 rgba(0, 0, 0, 0.08);
 }
 
+/* helpers: scrollbar */
 .helios-scrollbar::-webkit-scrollbar {
 	height: 8px;
 	width: 8px;
@@ -251,4 +259,26 @@ body {
 
 .helios-scrollbar::-webkit-scrollbar-thumb:active {
 	background-color: var(--gray-300);
+}
+
+/* helpers: debug */
+.debug * {
+	box-shadow: inset 0 0 0 1px hsla(var(--color-orange), 80%, 0.5);
+}
+
+.debug *[data-component] {
+	box-shadow: inset 0 0 0 1px hsla(var(--color-orange), 80%, 0.75);
+}
+
+.debug *[data-component]:after {
+	position: absolute;
+
+	padding: 4px;
+
+	background-color: hsla(var(--color-orange), 50%, 5);
+	color: var(--gray-0);
+
+	font-family: var(--font-family-mono);
+	font-size: 8px;
+	content: attr(data-component);
 }
