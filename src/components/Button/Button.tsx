@@ -56,7 +56,7 @@ const Button: React.FC<ButtonProps> = ({
 		[styles.buttonIconOnlyLoading]: isIconOnlyLoading,
 	})
 
-	const buttonInputClasses = classNames("sans fw-semi-bold", {
+	const buttonInputClasses = classNames("sans fw-medium", {
 		tiny: size === "tiny" || size === "small",
 		"small ": !size || size === "normal",
 

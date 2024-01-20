@@ -88,7 +88,7 @@
 	--purple-hue: 266;
 	--red-hue: 356;
 	--yellow-hue: 45;
-	--ui-hue: 8;
+	--ui-hue: 4;
 
 	/* setup intention mappings */
 	--color-intent-advise: var(--blue-hue), var(--blue-saturation);
@@ -125,23 +125,21 @@
 	--purple-saturation: 80%;
 	--red-saturation: 84%;
 	--yellow-saturation: 80%;
-	--ui-saturation: 8%;
+	--ui-saturation: 4%;
 
-	--ui-text-primary: hsl(var(--ui-hue), 8%, 0%);
-	--ui-text-secondary: hsl(var(--ui-hue), 4%, 35%);
-	--ui-text-deemphasized: hsl(var(--ui-hue), 4%, 50%);
-	--ui-text-selected: hsla(var(--color-intent-highlight), 50%, 0.25);
-	--ui-text-highlighted: hsla(var(--color-intent-highlight), 50%, 0.25);
+  --ui-text: hsl(var(--ui-hue), 8%, 8%);
+  --ui-text-action: hsl(var(--ui-hue), 8%, 24%);
+  --ui-text-disabled: hsl(var(--ui-hue), 8%, 66%);
+	--ui-text-selected: hsla(var(--color-intent-advise), 20%, 0.25);
 
+	--ui-border: hsl(var(--ui-hue), var(--ui-saturation), 85%);
 	--ui-border-active: hsl(var(--ui-hue), var(--ui-saturation), 80%);
-	--ui-border-default: hsl(var(--ui-hue), var(--ui-saturation), 90%);
-	--ui-border-deemphasized: hsl(var(--ui-hue), var(--ui-saturation), 95%);
-
-	--ui-element-default: hsl(var(--ui-hue), var(--ui-saturation), 95%);
-	--ui-element-deemphasized: hsl(var(--ui-hue), var(--ui-saturation), 0%);
 
 	--ui-bg: hsl(var(--ui-hue), var(--ui-saturation), 100%);
-	--ui-bg-glass: hsla(var(--ui-hue), var(--ui-saturation), 100%, 0.5);
+	--ui-bg-action: hsl(var(--ui-hue), var(--ui-saturation), 99%);
+	--ui-bg-action-hover: hsl(var(--ui-hue), var(--ui-saturation), 96%);
+	--ui-bg-action-active: hsl(var(--ui-hue), var(--ui-saturation), 90%);
+  --ui-bg-disabled: hsl(var(--ui-hue), var(--ui-saturation), 90%);
 }
 
 /* setup theme dark */
@@ -158,18 +156,19 @@
 	--red-saturation: 74%;
 	--yellow-saturation: 80%;
 
-	--ui-text-primary: hsl(var(--ui-hue), 8%, 0%);
-	--ui-text-secondary: hsl(var(--ui-hue), 8%, 50%);
-	--ui-text-deemphasized: hsl(var(--ui-hue), 8%, 90%);
-	--ui-text-selected: hsla(var(--color-intent-advise), 50%, 0.25);
-	--ui-text-highlighted: hsla(var(--color-intent-highlight), 50%, 0.25);
+	--ui-text: hsl(var(--ui-hue), var(--ui-saturation), 92%);
+  --ui-text-action: hsl(var(--ui-hue), var(--ui-saturation), 76%);
+  --ui-text-disabled: hsl(var(--ui-hue), var(--ui-saturation), 32%);
+	--ui-text-selected: hsla(var(--color-intent-advise), 80%, 0.25);
 
-	--ui-border-light: hsla(var(--ui-hue), 90%, 50%, 0.1);
-	--ui-border-normal: hsla(var(--ui-hue), 90%, 50%, 0.2);
-	--ui-border-dark: hsla(var(--ui-hue), 90%, 50%, 0.3);
+	--ui-border: hsl(var(--ui-hue), var(--ui-saturation), 20%);
+  --ui-border-active: hsl(var(--ui-hue), var(--ui-saturation), 35%);
 
-	--ui-bg: hsl(var(--ui-hue), 8%, 0%);
-	--ui-bg-glass: hsla(var(--ui-hue), 8%, 100%, 0.5);
+	--ui-bg: hsl(var(--ui-hue), var(--ui-saturation), 4%);
+	--ui-bg-action: hsl(var(--ui-hue), var(--ui-saturation), 8%);
+  --ui-bg-action-hover: hsl(var(--ui-hue), var(--ui-saturation), 16%);
+	--ui-bg-action-active: hsl(var(--ui-hue), var(--ui-saturation), 24%);
+  --ui-bg-disabled: hsl(var(--ui-hue), var(--ui-saturation), 16%);
 }
 
 @supports (font-variation-settings: normal) {
@@ -179,7 +178,7 @@
 }
 
 *:focus-visible {
-  outline: 2px solid orange;
+  outline: 2px solid hsl(var(--color-intent-highlight), 50%);
 	outline-offset: 2px;
 }
 
@@ -197,6 +196,7 @@ body {
 	width: 100%;
 
 	background-color: var(--ui-bg);
+  color: var(--ui-text);
 }
 
 /* helpers: text color */
