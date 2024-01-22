@@ -29,13 +29,13 @@ const Alert: React.FC<AlertProps> = ({
 	})
 
 	return (
-		<div className={styles.alertBox}>
+		<div className="relative">
 			{!!onClose && (
 				<ButtonGroup className={styles.alertButtonGroup}>
 					<Button
 						isIconOnly={true}
 						value="Close"
-						intent="silent"
+						intent={intent}
 						size="tiny"
 						icon="x"
 					/>
@@ -49,6 +49,7 @@ const Alert: React.FC<AlertProps> = ({
 							{title}
 						</Text>
 					)}
+					{intent === "advise" ? "xxx" : "[["}
 					<Text type="small">{children}</Text>
 				</Flex>
 			</Flex>

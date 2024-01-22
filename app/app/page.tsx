@@ -67,70 +67,26 @@ export default function Home() {
 	return (
 		<main className="debugx">
 			<Flex isColumn={true} gap={16} padding={16}>
-				<Flex isColumn={true}>
+				<Flex isColumn={true} gap={8}>
 					<Heading level={1}>Thebe Components</Heading>
 					<Text type="tiny" fontFamily="mono">
 						from <a href="https://helios.graphics">Helios Graphics</a>
 					</Text>
-				</Flex>
-				<Flex isColumn={true} gap={8}>
-					<Flex isColumn={true} gap={2}>
-						<Text type="paragraph">
-							This is both the workshop and the official NextJS example. For
-							documentation access, please visit{" "}
-							<a href="https://thebe.dev">Thebe</a>.
-						</Text>
-						<Text type="tiny" fontFamily="mono">
-							01. add @heliosgraphics/fractures
-							<br />
-							02. add @heliosgraphics/components
-						</Text>
-					</Flex>
+
+					<Text type="paragraph">
+						This is both the workshop and the official NextJS example. For
+						documentation access, please visit{" "}
+						<a href="https://thebe.dev">Thebe</a>.
+					</Text>
+					<Text type="tiny" fontFamily="mono">
+						01. add @heliosgraphics/fractures
+						<br />
+						02. add @heliosgraphics/components
+					</Text>
 					<ThemeSwitcher />
 				</Flex>
 
 				<Flex isColumn={true} gap={4}>
-					<Details title="Button" open={true}>
-						<Buttons />
-					</Details>
-
-					<Details title="Colors">
-						<Flex isColumn={true} gap={8}>
-							<ColorGrid color="aqua" />
-							<ColorGrid color="blue" />
-							<ColorGrid color="gray" />
-							<ColorGrid color="green" />
-							<ColorGrid color="orange" />
-							<ColorGrid color="pink" />
-							<ColorGrid color="purple" />
-							<ColorGrid color="red" />
-							<ColorGrid color="yellow" />
-						</Flex>
-					</Details>
-
-					<Details title="Markdown">
-						<Markdown text={INTRO_MD} />
-						<Separator />
-						<Text type="small" className="text-secondary">
-							Mauris fermentum eros sit amet efficitur malesuada. Nam tempus
-							placerat tellus, eu sit amet. Nunc viverra risus nibh, eu aliquet
-							nulla tristique at. Duis auctor lectus est, id pellentesque felis
-							malesuada ac. Ut sollicitudin vestibulum nibh, vitae suscipit
-							justo condimentum et.
-						</Text>
-						<Text type="tiny" className="text-deemphasized">
-							Vivamus euismod non arcu vel euismod. Nullam pharetra egestas
-							metus suscipit tincidunt. Ut porttitor tempus velit, vitae
-							condimentum. Morbi ultrices vel ante sed fringilla. Vivamus non
-							odio ornare ex finibus mattis. Mauris dictum gravida orci, maximus
-							hendrerit risus luctus at. Nam ultricies vel orci sed posuere. Nam
-							sit amet accumsan turpis, sed lacinia nibh. Nullam imperdiet
-							mauris ac mauris bibendum ornare. Pellentesque vel ipsum ante. Nam
-							facilisis enim tellus, sit amet tristique massa fermentum vel.
-							Vivamus vitae tincidunt ex, id porta lorem.
-						</Text>
-					</Details>
-
 					<Details title="Alert">
 						<Text type="paragraph">Compact</Text>
 						<Column isColumn={true} gap={2} width={960}>
@@ -253,6 +209,47 @@ export default function Home() {
 								doloremque?
 							</Alert>
 						</Column>
+					</Details>
+
+					<Details title="Button" open={true}>
+						<Buttons />
+					</Details>
+
+					<Details title="Colors">
+						<Flex isColumn={true} gap={8}>
+							<ColorGrid color="aqua" />
+							<ColorGrid color="blue" />
+							<ColorGrid color="gray" />
+							<ColorGrid color="green" />
+							<ColorGrid color="orange" />
+							<ColorGrid color="pink" />
+							<ColorGrid color="purple" />
+							<ColorGrid color="red" />
+							<ColorGrid color="yellow" />
+						</Flex>
+					</Details>
+
+					<Details title="Markdown">
+						<Markdown text={INTRO_MD} />
+						<Separator />
+						<Text type="small" className="text-secondary">
+							Mauris fermentum eros sit amet efficitur malesuada. Nam tempus
+							placerat tellus, eu sit amet. Nunc viverra risus nibh, eu aliquet
+							nulla tristique at. Duis auctor lectus est, id pellentesque felis
+							malesuada ac. Ut sollicitudin vestibulum nibh, vitae suscipit
+							justo condimentum et.
+						</Text>
+						<Text type="tiny" className="text-deemphasized">
+							Vivamus euismod non arcu vel euismod. Nullam pharetra egestas
+							metus suscipit tincidunt. Ut porttitor tempus velit, vitae
+							condimentum. Morbi ultrices vel ante sed fringilla. Vivamus non
+							odio ornare ex finibus mattis. Mauris dictum gravida orci, maximus
+							hendrerit risus luctus at. Nam ultricies vel orci sed posuere. Nam
+							sit amet accumsan turpis, sed lacinia nibh. Nullam imperdiet
+							mauris ac mauris bibendum ornare. Pellentesque vel ipsum ante. Nam
+							facilisis enim tellus, sit amet tristique massa fermentum vel.
+							Vivamus vitae tincidunt ex, id porta lorem.
+						</Text>
 					</Details>
 				</Flex>
 			</Flex>
