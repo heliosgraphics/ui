@@ -1,5 +1,8 @@
 .alert {
-	display: flex;
+  --alert-bg-l: 92%;
+  --alert-text-l: 48%;
+
+  display: flex;
 	flex-direction: row;
 
   background-color: var(--alert-bg);
@@ -8,44 +11,56 @@
 
 /* intent: advise */
 .alertAdvise {
-	--alert-bg: hsl(var(--color-intent-advise), 90%);
-	--alert-text: hsl(var(--color-intent-advise), 40%);
+	--alert-bg: var(--ui-bg-intent-advise);
+	--alert-text: var(--ui-text-intent-advise);
+}
+
+/* intent: automation */
+.alertAutomation {
+	--alert-bg: var(--ui-bg-intent-automation);
+	--alert-text: var(--ui-text-intent-automation);
 }
 
 /* intent: confirmation */
 .alertConfirmation {
-	--alert-bg: hsl(var(--color-intent-confirmation), 50%);
-	--alert-text: hsl(var(--color-intent-confirmation), 97.5%);
+	--alert-bg: var(--ui-bg-intent-confirmation);
+	--alert-text: var(--ui-text-intent-confirmation);
 }
 
 /* intent: error */
 .alertError {
-	--alert-bg: hsl(var(--color-intent-error), 50%);
-	--alert-text: hsl(var(--color-intent-error), 97.5%);
+	--alert-bg: var(--ui-bg-intent-error);
+	--alert-text: var(--ui-text-intent-error);
 }
 
 /* intent: highlight */
 .alertHighlight {
-	--alert-bg: hsl(var(--color-intent-highlight), 50%);
-	--alert-text: hsl(var(--color-intent-highlight), 97.5%);
+	--alert-bg: var(--ui-bg-intent-highlight);
+	--alert-text: var(--ui-text-intent-highlight);
 }
 
 /* intent: question */
 .alertQuestion {
-	--alert-bg: hsl(var(--color-intent-question), 50%);
-	--alert-text: hsl(var(--color-intent-question), 97.5%);
+	--alert-bg: var(--ui-bg-intent-question);
+	--alert-text: var(--ui-text-intent-question);
+}
+
+/* intent: silent */
+.alertSilent {
+	--alert-bg: var(--ui-bg-intent-silent);
+	--alert-text: var(--ui-text-intent-silent);
 }
 
 /* intent: success */
 .alertSuccess {
-	--alert-bg: hsl(var(--color-intent-success), 50%);
-	--alert-text: hsl(var(--color-intent-success), 97.5%);
+	--alert-bg: var(--ui-bg-intent-success);
+	--alert-text: var(--ui-text-intent-success);
 }
 
 /* intent: warning */
 .alertWarning {
-	--alert-bg: hsl(var(--color-intent-warning), 50%);
-	--alert-text: hsl(var(--color-intent-warning), 97.5%);
+	--alert-bg: var(--ui-bg-intent-warning);
+	--alert-text: var(--ui-text-intent-warning);
 }
 
 .alertSmall {

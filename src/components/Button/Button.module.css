@@ -34,71 +34,71 @@
 /* intent: advise */
 .buttonAdvise {
 	--button-bg: hsl(var(--color-intent-advise), 50%);
-	--button-text: hsl(var(--color-intent-advise), 97.5%);
+	--button-text: var(--ui-button-text-advise);
 	--button-hover: hsl(var(--color-intent-advise), 40%);
 	--button-active: hsl(var(--color-intent-advise), 30%);
 	--button-disabled: hsl(var(--color-intent-advise), 70%);
-	--button-disabled-bg: hsl(var(--color-intent-advise), 90%);
+	--button-disabled-bg: var(--ui-bg-intent-advise);
 }
 
 /* intent: automation */
 .buttonAutomation {
 	--button-bg: hsl(var(--color-intent-automation), 50%);
-	--button-text: hsl(var(--color-intent-automation), 97.5%);
+	--button-text: var(--ui-button-text-automation);
 	--button-hover: hsl(var(--color-intent-automation), 40%);
 	--button-active: hsl(var(--color-intent-automation), 30%);
 	--button-disabled: hsl(var(--color-intent-automation), 70%);
-	--button-disabled-bg: hsl(var(--color-intent-automation), 90%);
+	--button-disabled-bg: var(--ui-bg-intent-automation);
 }
 
 /* intent: confirmation */
 .buttonConfirmation {
 	--button-bg: hsl(var(--color-intent-confirmation), 50%);
-	--button-text: hsl(var(--color-intent-confirmation), 97.5%);
+	--button-text: var(--ui-button-text-confirmation);
 	--button-hover: hsl(var(--color-intent-confirmation), 40%);
 	--button-active: hsl(var(--color-intent-confirmation), 30%);
 	--button-disabled: hsl(var(--color-intent-confirmation), 70%);
-	--button-disabled-bg: hsl(var(--color-intent-confirmation), 90%);
+	--button-disabled-bg: var(--ui-bg-intent-confirmation);
 }
 
 /* intent: error */
 .buttonError {
 	--button-bg: hsl(var(--color-intent-error), 50%);
-	--button-text: hsl(var(--color-intent-error), 97.5%);
+	--button-text: var(--ui-button-text-error);
 	--button-hover: hsl(var(--color-intent-error), 40%);
 	--button-active: hsl(var(--color-intent-error), 30%);
 	--button-disabled: hsl(var(--color-intent-error), 70%);
-	--button-disabled-bg: hsl(var(--color-intent-error), 90%);
+	--button-disabled-bg: var(--ui-bg-intent-error);
 }
 
 /* intent: highlight */
 .buttonHighlight {
 	--button-bg: hsl(var(--color-intent-highlight), 50%);
-	--button-text: hsl(var(--color-intent-highlight), 97.5%);
+	--button-text: var(--ui-button-text-highlight);
 	--button-hover: hsl(var(--color-intent-highlight), 40%);
 	--button-active: hsl(var(--color-intent-highlight), 30%);
 	--button-disabled: hsl(var(--color-intent-highlight), 70%);
-	--button-disabled-bg: hsl(var(--color-intent-highlight), 90%);
+	--button-disabled-bg: var(--ui-bg-intent-highlight);
 }
 
 /* intent: question */
 .buttonQuestion {
 	--button-bg: hsl(var(--color-intent-question), 50%);
-	--button-text: hsl(var(--color-intent-question), 97.5%);
+	--button-text: var(--ui-button-text-question);
 	--button-hover: hsl(var(--color-intent-question), 40%);
 	--button-active: hsl(var(--color-intent-question), 30%);
 	--button-disabled: hsl(var(--color-intent-question), 70%);
-	--button-disabled-bg: hsl(var(--color-intent-question), 90%);
+	--button-disabled-bg: var(--ui-bg-intent-question);
 }
 
-/* intent: question */
+/* intent: silent */
 .button.buttonSilent {
 	--button-bg: var(--ui-bg-action);
-	--button-text: var(--ui-text-action);
+	--button-text: var(--ui-button-text-silent);
 	--button-hover: var(--ui-bg-action-hover);
 	--button-active: var(--ui-bg-action-active);
 	--button-disabled: var(--ui-text-disabled);
-	--button-disabled-bg: var(--ui-bg-disabled);
+	--button-disabled-bg: var(--ui-bg-intent-silent);
 
 	box-shadow: inset 0 0 0 1px var(--ui-border);
 }
@@ -114,21 +114,21 @@
 /* intent: success */
 .buttonSuccess {
 	--button-bg: hsl(var(--color-intent-success), 50%);
-	--button-text: hsl(var(--color-intent-success), 97.5%);
+	--button-text: var(--ui-button-text-success);
 	--button-hover: hsl(var(--color-intent-success), 40%);
 	--button-active: hsl(var(--color-intent-success), 30%);
 	--button-disabled: hsl(var(--color-intent-success), 70%);
-	--button-disabled-bg: hsl(var(--color-intent-success), 90%);
+	--button-disabled-bg: var(--ui-bg-intent-success);
 }
 
 /* intent: warning */
 .buttonWarning {
 	--button-bg: hsl(var(--color-intent-warning), 50%);
-	--button-text: hsl(var(--color-intent-warning), 97.5%);
+	--button-text: var(--ui-button-text-warning);
 	--button-hover: hsl(var(--color-intent-warning), 40%);
 	--button-active: hsl(var(--color-intent-warning), 30%);
 	--button-disabled: hsl(var(--color-intent-warning), 70%);
-	--button-disabled-bg: hsl(var(--color-intent-warning), 90%);
+	--button-disabled-bg: var(--ui-bg-intent-warning);
 }
 
 /* Reset */

@@ -17,10 +17,12 @@ const Alert: React.FC<AlertProps> = ({
 }) => {
 	const alertClasses: string = classNames(styles.alert, {
 		[styles.alertAdvise]: intent === "advise",
+		[styles.alertAutomation]: intent === "automation",
 		[styles.alertConfirmation]: intent === "confirmation",
 		[styles.alertError]: intent === "error",
 		[styles.alertHighlight]: intent === "highlight",
 		[styles.alertQuestion]: intent === "question",
+		[styles.alertSilent]: intent === "silent",
 		[styles.alertSuccess]: intent === "success",
 		[styles.alertWarning]: intent === "warning",
 		[styles.alertSmall]: !title,

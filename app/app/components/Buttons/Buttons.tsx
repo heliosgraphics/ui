@@ -12,7 +12,7 @@ import {
 import type { ButtonsProps } from "./Buttons.types"
 
 const Buttons: React.FC<ButtonsProps> = () => {
-	const [intent, setIntent] = useState<HeliosIntentionType>("advise")
+	const [intent, setIntent] = useState<HeliosIntentionType>("silent")
 
 	const onIntentAdvise = () => setIntent("advise")
 	const onIntentAutomation = () => setIntent("automation")
@@ -109,6 +109,12 @@ const Buttons: React.FC<ButtonsProps> = () => {
 					isIconOnly={true}
 				/>
 				<Button intent={intent} value="Rounded" isRounded={true} />
+				<Button
+					intent={intent}
+					value="Rounded Icon"
+					icon="bullseye"
+					isRounded={true}
+				/>
 				<Button
 					intent={intent}
 					value="Round Tiny"

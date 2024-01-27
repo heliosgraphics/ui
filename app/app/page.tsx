@@ -88,9 +88,14 @@ export default function Home() {
 
 				<Flex isColumn={true} gap={4}>
 					<Details title="Alert">
-						<Text type="paragraph">Compact</Text>
-						<Column isColumn={true} gap={2} width={960}>
+						<Flex isColumn={true} gap={12}>
+							<Text type="paragraph">Compact</Text>
+
 							<Alert intent="advise" icon="info" onClose={onClose}>
+								Advise, perferendis unde cupiditate tempore magnam corrupti
+								quidem.
+							</Alert>
+							<Alert intent="automation" icon="info" onClose={onClose}>
 								Advise, perferendis unde cupiditate tempore magnam corrupti
 								quidem.
 							</Alert>
@@ -119,12 +124,17 @@ export default function Home() {
 								elit. Perferendis unde cupiditate <a>aspernatur autem</a>{" "}
 								tempore magnam vitae.
 							</Alert>
+							<Alert intent="silent" icon="info" onClose={onClose}>
+								Success, lorem ipsum dolor sit amet consectetur adipisicing
+								elit. Perferendis unde cupiditate <a>aspernatur autem</a>{" "}
+								tempore magnam vitae.
+							</Alert>
 							<Alert intent="warning" icon="info" onClose={onClose}>
 								Warning, lorem ipsum dolor sit amet cons?
 							</Alert>
-						</Column>
-						<Text type="paragraph">Title</Text>
-						<Column isColumn={true} gap={2} width={960}>
+
+							<Text type="paragraph">Title</Text>
+
 							<Alert
 								title="Vitae, assumenda aliquid"
 								intent="advise"
@@ -208,7 +218,7 @@ export default function Home() {
 								temporibus corrupti quidem. Incidunt facilis aspernatur corrupti
 								doloremque?
 							</Alert>
-						</Column>
+						</Flex>
 					</Details>
 
 					<Details title="Button" open={true}>
