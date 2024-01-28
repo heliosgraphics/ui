@@ -317,22 +317,29 @@ mark,
 
 /* helpers: debug */
 .debug * {
-	box-shadow: inset 0 0 0 1px hsla(var(--color-orange), 80%, 0.5);
+	box-shadow: inset 0 0 0 1px hsl(var(--color-intent-highlight), 75%);
 }
 
 .debug *[data-component] {
-	box-shadow: inset 0 0 0 1px hsla(var(--color-orange), 80%, 0.75);
+	position: relative;
+
+	box-shadow: inset 0 0 0 1px hsl(var(--color-intent-highlight), 75%);
 }
 
 .debug *[data-component]:after {
 	position: absolute;
+	right: 0;
+	top: 0;
 
-	padding: 4px;
+	padding: 0 4px;
+	height: 20px;
 
-	background-color: hsla(var(--color-orange), 50%, 5);
-	color: var(--gray-0);
+	background-color: hsl(var(--color-intent-highlight), 75%);
+	border-radius: var(--radius-small);
+	color: var(--ui-text-action);
 
 	font-family: var(--font-family-mono);
-	font-size: 8px;
+	font-size: 10px;
+	line-height: 20px;
 	content: attr(data-component);
 }

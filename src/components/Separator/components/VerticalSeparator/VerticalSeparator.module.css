@@ -4,10 +4,10 @@
 
 .verticalSeparatorLight {
 	border: 0;
-	border-left: 1px solid var(--hui-line-1);
+	border-left: 1px solid var(--ui-border-light);
 }
 
 .verticalSeparatorRegular {
 	border: 0;
-	border-left: 1px solid var(--hui-line-1);
+	border-left: 1px solid var(--ui-border);
 }

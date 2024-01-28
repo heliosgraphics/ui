@@ -46,7 +46,7 @@ const ExamplesAlert: React.FC<ExamplesAlertProps> = () => {
 	return (
 		<Flex isColumn={true} gap={12}>
 			<IntentSelector />
-			<Separator />
+			<Separator isLight={true} />
 			<Alert intent={intent} icon="info" onClose={onClose}>
 				{INTENT_DESCRIPTIONS[intent]}
 			</Alert>

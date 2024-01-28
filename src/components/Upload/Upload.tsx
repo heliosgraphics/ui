@@ -23,7 +23,7 @@ const Upload = React.forwardRef<HTMLDivElement, UploadProps>(
 		const htmlFor: string = getUUID(id)
 		const inputClasses: string = classNames(
 			styles.upload,
-			"flex flex-column flex-gap-2",
+			"flex flex-column gap-2",
 			{
 				[styles.uploadDisabled]: isDisabled,
 				[styles.uploadSmall]: props.isSmall,
@@ -34,8 +34,8 @@ const Upload = React.forwardRef<HTMLDivElement, UploadProps>(
 			styles.upload__label,
 			"flex flex-y-center",
 			{
-				["flex-gap-4"]: !props.isSmall,
-				["flex-gap-2"]: props.isSmall,
+				["gap-4"]: !props.isSmall,
+				["gap-2"]: props.isSmall,
 			},
 		)
 

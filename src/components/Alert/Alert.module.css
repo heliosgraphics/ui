@@ -9,55 +9,46 @@
   color: var(--alert-text);
 }
 
-/* intent: advise */
 .alertAdvise {
 	--alert-bg: var(--ui-bg-intent-advise);
 	--alert-text: var(--ui-text-intent-advise);
 }
 
-/* intent: automation */
 .alertAutomation {
 	--alert-bg: var(--ui-bg-intent-automation);
 	--alert-text: var(--ui-text-intent-automation);
 }
 
-/* intent: confirmation */
 .alertConfirmation {
 	--alert-bg: var(--ui-bg-intent-confirmation);
 	--alert-text: var(--ui-text-intent-confirmation);
 }
 
-/* intent: error */
 .alertError {
 	--alert-bg: var(--ui-bg-intent-error);
 	--alert-text: var(--ui-text-intent-error);
 }
 
-/* intent: highlight */
 .alertHighlight {
 	--alert-bg: var(--ui-bg-intent-highlight);
 	--alert-text: var(--ui-text-intent-highlight);
 }
 
-/* intent: question */
 .alertQuestion {
 	--alert-bg: var(--ui-bg-intent-question);
 	--alert-text: var(--ui-text-intent-question);
 }
 
-/* intent: silent */
 .alertSilent {
 	--alert-bg: var(--ui-bg-intent-silent);
 	--alert-text: var(--ui-text-intent-silent);
 }
 
-/* intent: success */
 .alertSuccess {
 	--alert-bg: var(--ui-bg-intent-success);
 	--alert-text: var(--ui-text-intent-success);
 }
 
-/* intent: warning */
 .alertWarning {
 	--alert-bg: var(--ui-bg-intent-warning);
 	--alert-text: var(--ui-text-intent-warning);

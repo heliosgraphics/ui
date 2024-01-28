@@ -17,7 +17,7 @@ const Textarea: React.FC<TextareaProps> = (props) => {
 
 	const inputClasses: string = classNames(
 		styles.textarea,
-		"flex flex-column flex-gap-2",
+		"flex flex-column gap-2",
 	)
 
 	const onInput = () => {

@@ -13,7 +13,7 @@ describe("getFlexUtility", () => {
 	it("Generates simple wrapping column classes", () =>
 		expect(getFlexUtility(MOCK_FLEX_COLUMN)).toEqual(MOCK_FLEX_COLUMN_CLASSES))
 
-	const MOCK_FLEX_INLINE_CLASSES = `inline-flex flex-gap-16`
+	const MOCK_FLEX_INLINE_CLASSES = `inline-flex gap-16`
 	const MOCK_FLEX_INLINE: FlexProps = {
 		isInline: true,
 		gap: 16,

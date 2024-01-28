@@ -16,7 +16,7 @@ const Tabs: React.FC<TabsProps> = ({
 
 	return (
 		<div>
-			<ol className={`${styles.tabs__ol} flex flex-gap-2`}>
+			<ol className={`${styles.tabs__ol} flex gap-2`}>
 				{items.map((tab, key) => (
 					<li
 						key={key}

@@ -10,11 +10,25 @@ const Toggle: React.FC<ToggleProps> = ({
 	isChecked,
 	isSmall,
 	isDisabled,
+	intent,
 	onChange,
 	label,
 }) => {
-	const toggleId = getUUID(id) as string
-	const toggleClasses = classNames(
+	const toggleId: string = getUUID(id)
+
+	const toggleClasses = classNames(styles.toggle, {
+		[styles.toggleAdvise]: intent === "advise",
+		[styles.toggleAutomation]: intent === "automation",
+		[styles.toggleConfirmation]: intent === "confirmation",
+		[styles.toggleError]: intent === "error",
+		[styles.toggleHighlight]: intent === "highlight",
+		[styles.toggleQuestion]: intent === "question",
+		[styles.toggleSilent]: intent === "silent",
+		[styles.toggleSuccess]: intent === "success",
+		[styles.toggleWarning]: intent === "warning",
+	})
+
+	const toggleLabelClasses = classNames(
 		styles.toggle__toggle,
 		"flex flex-y-center",
 		{
@@ -26,15 +40,15 @@ const Toggle: React.FC<ToggleProps> = ({
 	)
 
 	return (
-		<div className={styles.toggle}>
-			<label className={toggleClasses} htmlFor={toggleId}>
+		<div className={toggleClasses}>
+			<label className={toggleLabelClasses} htmlFor={toggleId}>
 				<input
 					type="checkbox"
 					checked={isChecked}
 					onChange={onChange}
 					id={toggleId}
 				/>
-				<span className={styles.toggle__toggle__mark} />
+				<span className={styles.toggle__toggleMark} />
 				<Text type="small" fontWeight="medium">
 					{label}
 				</Text>

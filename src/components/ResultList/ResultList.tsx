@@ -15,12 +15,9 @@ const ResultList: React.FC<ResultListProps> = ({ items }) => {
 				if (item.type === "separator")
 					return <li key={key} className={styles.resultList__separator} />
 
-				const itemClasses: string = classNames(
-					"flex flex-y-center flex-gap-5",
-					{
-						[styles.itemActive]: item.isActive,
-					},
-				)
+				const itemClasses: string = classNames("flex flex-y-center gap-5", {
+					[styles.itemActive]: item.isActive,
+				})
 
 				return (
 					<li key={key} onClick={item.onClick} className={itemClasses}>

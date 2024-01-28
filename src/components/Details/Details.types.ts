@@ -1,5 +1,5 @@
 export interface DetailsProps {
 	children: React.ReactNode
-	open?: boolean
+	isOpen?: boolean
 	title: string
 }

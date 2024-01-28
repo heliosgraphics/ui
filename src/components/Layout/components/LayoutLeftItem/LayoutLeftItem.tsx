@@ -27,7 +27,7 @@ const LayoutLeftItem: React.FC<LayoutLeftItemProps> = ({
 
 	const layoutLeftItemClasses: string = classNames(
 		styles.layoutLeftItem,
-		"flex flex-gap-2 flex-y-center fw-medium small",
+		"flex gap-2 flex-y-center fw-medium small",
 		{
 			[styles.layoutLeftItemActive]: isActive,
 			[styles.layoutLeftItemNoIcon]: !icon,

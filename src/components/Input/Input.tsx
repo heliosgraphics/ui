@@ -28,7 +28,7 @@ const Input: React.FC<InputProps> = (props) => {
 
 	const inputClasses: string = classNames(
 		styles.input,
-		"flex flex-column flex-gap-3",
+		"flex flex-column gap-3",
 	)
 
 	const onInput = () => {

@@ -16,7 +16,7 @@ const Form: React.FC<FormProps> = ({
 }) => {
 	const formClasses: string = classNames(
 		styles.form,
-		"flex flex-gap-8 flex-column",
+		"flex gap-8 flex-column",
 		className,
 	)
 
