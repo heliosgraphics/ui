@@ -1,24 +1,13 @@
 "use client"
 
-import React, { useContext, useState } from "react"
-import {
-	Button,
-	ButtonGroup,
-	Separator,
-	Flex,
-	Text,
-	Alert,
-	HeliosIntentionType,
-} from "../../../../src"
+import React, { useContext } from "react"
+import { Flex, Alert, HeliosIntentionType } from "../../../../src"
 import type { ExamplesAlertProps } from "./ExamplesAlert.types"
-import IntentSelector from "../IntentSelector"
 import { IntentContext } from "../../contexts/IntentContext"
 
-const INTENT_DESCRIPTIONS = {
+const INTENT_DESCRIPTIONS: Record<HeliosIntentionType, string> = {
 	advise:
 		"Offering guidance or recommendations based on expertise or experience, allowing for personal choice.",
-	assert:
-		"Confidently stating something as a fact, often without room for debate or disagreement.",
 	automation:
 		"Indicating a process or action that is performed automatically without human intervention.",
 	confirmation:
@@ -33,10 +22,6 @@ const INTENT_DESCRIPTIONS = {
 	success:
 		"Announcing the successful completion or positive outcome of an action or process.",
 	warning: "Alerting to potential danger, risk, or an unfavorable outcome.",
-	small: "Referring to a minor or less significant alert or message.",
-	normal: "Indicating a standard or usual alert or message.",
-	withButton:
-		"Featuring an interactive button, typically for user response or action.",
 }
 
 const ExamplesAlert: React.FC<ExamplesAlertProps> = () => {
@@ -45,8 +30,6 @@ const ExamplesAlert: React.FC<ExamplesAlertProps> = () => {
 
 	return (
 		<Flex isColumn={true} gap={12}>
-			<IntentSelector />
-			<Separator isLight={true} />
 			<Alert intent={intent} icon="info" onClose={onClose}>
 				{INTENT_DESCRIPTIONS[intent]}
 			</Alert>

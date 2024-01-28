@@ -8,5 +8,5 @@ export interface ToggleProps {
 	intent: HeliosIntentionType
 	isDisabled?: boolean
 	label: string
-	onChange: (event?: React.ChangeEvent) => void
+	onChange?: (event?: React.ChangeEvent) => void
 }

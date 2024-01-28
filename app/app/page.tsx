@@ -1,6 +1,8 @@
 "use client"
 
+import { useContext } from "react"
 import dynamic from "next/dynamic"
+import { IntentContext } from "./contexts/IntentContext"
 import ColorGrid from "./components/ColorGrid"
 import Buttons from "./components/Buttons"
 import {
@@ -55,7 +57,6 @@ import {
 } from "../../src"
 import Icons from "./components/Icons"
 import Textarea from "./components/Textarea"
-import Toggle from "./components/Toggle"
 import Form from "./components/Form"
 import Checkbox from "./components/Checkbox"
 import Dialog from "./components/Dialog"
@@ -68,6 +69,7 @@ import DebugSelector from "./components/DebugSelector"
 import Markdowns from "./components/Markdowns"
 import { IntentProvider } from "./contexts/IntentContext"
 import ExamplesToggle from "./components/ExamplesToggle"
+import IntentSelector from "./components/IntentSelector"
 
 const breadCrumbItems: Array<BreadCrumbItem> = [
 	{ name: "Index", href: "/" },
@@ -113,6 +115,8 @@ export default function Home() {
 							<ThemeSwitcher />
 							<DebugSelector />
 						</Flex>
+						<IntentSelector />
+						<Separator isLight={true} />
 					</Flex>
 
 					<Flex isColumn={true} gap={4}>

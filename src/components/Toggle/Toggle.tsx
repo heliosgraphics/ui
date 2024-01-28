@@ -26,17 +26,13 @@ const Toggle: React.FC<ToggleProps> = ({
 		[styles.toggleSilent]: intent === "silent",
 		[styles.toggleSuccess]: intent === "success",
 		[styles.toggleWarning]: intent === "warning",
+		[styles.toggleDisabled]: isDisabled,
+		[styles.toggleSmall]: isSmall,
 	})
 
 	const toggleLabelClasses = classNames(
-		styles.toggle__toggle,
-		"flex flex-y-center",
-		{
-			"--checked": !!isChecked,
-			"--unchecked": !isChecked,
-			[styles.toggle__toggleDisabled]: isDisabled,
-			"--small": isSmall,
-		},
+		styles.toggle__toggleLabel,
+		"flex flex-y-center gap-2 flex-wrap",
 	)
 
 	return (
@@ -46,10 +42,11 @@ const Toggle: React.FC<ToggleProps> = ({
 					type="checkbox"
 					checked={isChecked}
 					onChange={onChange}
+					disabled={isDisabled}
 					id={toggleId}
 				/>
 				<span className={styles.toggle__toggleMark} />
-				<Text type="small" fontWeight="medium">
+				<Text type={isSmall ? "tiny" : "small"} fontWeight="medium">
 					{label}
 				</Text>
 			</label>

@@ -1,82 +1,107 @@
 .toggle {
+	--toggle-height: 24px;
+	--toggle-width: 42px;
+
+	position: relative;
+
   -webkit-tap-highlight-color: transparent;
 }
 
-.toggleAdvise {
-	--toggle-bg: var(--ui-bg-intent-advise);
-	--toggle-text: var(--ui-text-intent-advise);
+.toggleSmall {
+	--toggle-height: 18px;
+	--toggle-width: 36px;
 }
 
-.toggleAutomation {
-	--toggle-bg: var(--ui-bg-intent-automation);
-	--toggle-text: var(--ui-text-intent-automation);
-}
-
-.toggleConfirmation {
-	--toggle-bg: var(--ui-bg-intent-confirmation);
-	--toggle-text: var(--ui-text-intent-confirmation);
-}
-
-.toggleError {
-	--toggle-bg: var(--ui-bg-intent-error);
-	--toggle-text: var(--ui-text-intent-error);
-}
-
-.toggleHighlight {
-	--toggle-bg: var(--ui-bg-intent-highlight);
-	--toggle-text: var(--ui-text-intent-highlight);
-}
-
-.toggleQuestion {
-	--toggle-bg: var(--ui-bg-intent-question);
-	--toggle-text: var(--ui-text-intent-question);
-}
-
-.toggleSilent {
-	--toggle-bg: var(--ui-bg-intent-silent);
-	--toggle-text: var(--ui-text-intent-silent);
-}
-
-.toggleSuccess {
-	--toggle-bg: var(--ui-bg-intent-success);
-	--toggle-text: var(--ui-text-intent-success);
-}
-
-.toggleWarning {
-	--toggle-bg: var(--ui-bg-intent-warning);
-	--toggle-text: var(--ui-text-intent-warning);
-}
-
-.toggle__toggle {
-  box-sizing: border-box;
-  position: relative;
-
-  user-select: none;
-  cursor: pointer;
-}
-
-.toggle__toggleDisabled {
+.toggleDisabled {
   opacity: 0.5;
   pointer-events: none;
 }
 
-.toggle__toggle input {
-  display: none;
-  height: 0;
-  width: 0;
+.toggle input {
+	position: absolute;
+	top: 0;
+	left: 0;
 
-  visibility: none;
+	appearance: none;
+	display: flex;
+	overflow: hidden;
+  height: var(--toggle-height);
+  width: var(--toggle-width);
+
+	border-radius: var(--toggle-height);
+	outline-color: var(--toggle-bg-checked);
+
+	cursor: pointer;
+}
+
+.toggle input:active ~ .toggle__toggleMark:after {
+	transform: scale(1.1);
+}
+
+.toggle input:checked ~ .toggle__toggleMark:after {
+  left: 22px;
+}
+
+.toggle input:checked ~ .toggle__toggleMark {
+  background-color: var(--toggle-bg-checked);
+}
+
+.toggleAdvise {
+	--toggle-bg-checked: var(--ui-text-intent-advise);
+}
+
+.toggleAutomation {
+	--toggle-bg-checked: var(--ui-text-intent-automation);
+}
+
+.toggleConfirmation {
+	--toggle-bg-checked: var(--ui-text-intent-confirmation);
+}
+
+.toggleError {
+	--toggle-bg-checked: var(--ui-text-intent-error);
+}
+
+.toggleHighlight {
+	--toggle-bg-checked: var(--ui-text-intent-highlight);
+}
+
+.toggleQuestion {
+	--toggle-bg-checked: var(--ui-text-intent-question);
+}
+
+.toggleSilent {
+	--toggle-bg-checked: var(--ui-text-intent-silent);
+}
+
+.toggleSuccess {
+	--toggle-bg-checked: var(--ui-text-intent-success);
+}
+
+.toggleWarning {
+	--toggle-bg-checked: var(--ui-text-intent-warning);
+}
+
+.toggle__toggleLabel {
+  position: relative;
+
+	max-width: max-content;
+
+  cursor: pointer;
+  user-select: none;
 }
 
 .toggle__toggleMark {
   box-sizing: border-box;
-  height: 24px;
+  height: var(--toggle-height);;
   margin-right: 8px;
   overflow: hidden;
-  width: 52px;
+  width: var(--toggle-width);
 
-	background-color: red;
-  border-radius: 52px;
+	background-color: hsl(var(--color-intent-silent), 66%);
+  border-radius: 24px;
+
+	pointer-events: none;
 }
 
 .toggle__toggleMark:after {
@@ -88,45 +113,18 @@
   height: 16px;
   width: 16px;
 
-  background-color: var(--toggle-bg);
+  background-color: var(--ui-bg);
   border-radius: 100%;
   transition: all 100ms ease-in-out;
   content: " ";
+
+	pointer-events: none;
 }
 
-.toggle__toggleMark:before {
-  left: 0;
-  top: 0;
-  position: absolute;
+.toggleSmall .toggle__toggleMark:after {
+	left: 4px;
+  top: 4px;
 
-  box-sizing: inherit;
-  padding-left: 24px;
-  padding-right: 8px;
-  width: 52px;
-
-  /* color: var(--gray-200); */
-
-  content: "OFF";
-  font-size: 12px;
-  font-family: var(--font-family-mono);
-  font-weight: 500;
-  line-height: 23px;
-  text-align: center;
-}
-
-.toggle__toggle input:checked ~ .toggle__toggleMark:after {
-  left: 32px;
-}
-
-.toggle__toggle input:checked ~ .toggle__toggleMark:before {
-  padding-left: 8px;
-  padding-right: 24px;
-
-  color: var(--blue-100);
-
-  content: "ON";
-}
-
-.toggle__toggle input:checked ~ .toggle__toggleMark {
-  background-color: var(--toggle-bg);
+	height: 10px;
+  width: 10px;
 }
