@@ -2,7 +2,6 @@
 export { default as Alert } from "./components/Alert"
 export { default as Breadcrumb } from "./components/Breadcrumb"
 export { default as Button } from "./components/Button"
-export type { ButtonProps } from './components/Button/Button.types'
 export { default as ButtonGroup } from "./components/ButtonGroup"
 export { default as Category } from "./components/Category"
 export { default as Checkbox } from "./components/Checkbox"
@@ -30,9 +29,9 @@ export { default as Pill } from "./components/Pill"
 export { default as Progress } from "./components/Progress"
 export { default as Radio } from "./components/Radio"
 export { default as ResultList } from "./components/ResultList"
-export { default as Setup } from "./components/Setup"
 export { default as Select } from "./components/Select"
 export { default as Separator } from "./components/Separator"
+export { default as Setup } from "./components/Setup"
 export { default as Shimmer } from "./components/Shimmer"
 export { default as Slider } from "./components/Slider"
 export { default as Spacer } from "./components/Spacer"
@@ -41,10 +40,16 @@ export { default as Tabs } from "./components/Tabs"
 export { default as Text } from "./components/Text"
 export { default as Textarea } from "./components/Textarea"
 export { default as ThemeSwitcher } from "./components/ThemeSwitcher"
+export { default as ThemeSwitcherLoading } from "./components/ThemeSwitcherLoading"
 export { default as Tile } from "./components/Tile"
 export { default as Timestamp } from "./components/Timestamp"
 export { default as Toggle } from "./components/Toggle"
 export { default as Upload } from "./components/Upload"
+export type { BreadCrumbItem } from "./components/Breadcrumb"
+export type { ButtonProps } from './components/Button/Button.types'
+export type { ResultItem } from './components/ResultList/ResultList.types'
+export type { PieItem } from './components/Pie/Pie.types'
+export type { SelectItem } from './components/Select/Select.types'
 
 // hooks
 export { useIntersector } from "./hooks/useIntersector"

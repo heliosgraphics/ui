@@ -1,10 +1,10 @@
 {
 	"name": "@heliosgraphics/components",
 	"version": "2.0.0-alpha-1",
+	"author": "03b8 <03b8@helios.graphics>",
 	"private": false,
 	"type": "module",
 	"description": "Helios Components",
-	"author": "03b8 <03b8@helios.graphics>",
 	"scripts": {
 		"pub:components": "pnpm publish --access public",
 		"test": "NODE_ENV=test vitest run",

@@ -27,11 +27,7 @@ const Radio: React.FC<RadioProps> = ({
 				defaultChecked={state === value}
 			/>
 			<span className={styles.radio__checkmark} />
-			{label && (
-				<Text color="currentcolor" type="small">
-					{label}
-				</Text>
-			)}
+			{label && <Text type="small">{label}</Text>}
 		</label>
 	)
 }

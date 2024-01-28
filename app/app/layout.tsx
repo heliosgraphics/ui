@@ -6,7 +6,7 @@ import { Setup } from "../../src"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-	title: "Helios Workshop",
+	title: "Thebe Component Workshop",
 }
 
 export default function RootLayout({

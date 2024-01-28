@@ -1,9 +1,9 @@
-export interface BreadCrumb {
+export interface BreadCrumbItem {
 	isActive?: boolean
 	name: string
 	href: string
 }
 
 export interface BreadcrumbProps {
-	items: Array<BreadCrumb>
+	items: Array<BreadCrumbItem>
 }
