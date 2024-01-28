@@ -53,7 +53,6 @@ const Tile: React.FC<TileProps> = ({
 	return (
 		<Flex
 			className={tileClasses}
-			backgroundColor={tileColor}
 			isCentered={true}
 			style={{
 				height: size + "px",
@@ -62,7 +61,7 @@ const Tile: React.FC<TileProps> = ({
 			}}
 		>
 			{hex && <div className={styles.tile__hex} style={inlineTileHexStyle} />}
-			<Icon name={icon} size={size / 1.6} color={iconColor} />
+			<Icon name={icon} size={size / 1.6} />
 		</Flex>
 	)
 }
