@@ -8,3 +8,15 @@
 
 	fill: currentColor;
 }
+
+.iconPrimary svg {
+	fill: var(--ui-text);
+}
+
+.iconSecondary svg {
+	fill: var(--ui-text-action);
+}
+
+.iconTertiary svg {
+	fill: var(--ui-text-disabled);
+}

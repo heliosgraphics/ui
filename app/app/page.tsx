@@ -1,58 +1,41 @@
 "use client"
 
-import { useContext } from "react"
 import dynamic from "next/dynamic"
-import { IntentContext } from "./contexts/IntentContext"
 import ColorGrid from "./components/ColorGrid"
 import Buttons from "./components/Buttons"
 import {
-	type BreadCrumbItem,
 	type ResultItem,
 	type PieItem,
-	// Alert,
-	Breadcrumb,
 	Button,
 	ButtonGroup,
 	Category,
-	// Checkbox,
 	Column,
-	// Confirm,
 	Details,
-	// Dialog,
 	Donut,
 	Dot,
 	Dropdown,
 	Error,
 	Flex,
-	// Form,
 	Grid,
 	Heading,
 	Icon,
-	// Input,
 	Layout,
 	Loading,
-	Markdown,
 	Masonry,
 	Pie,
 	Pill,
 	Progress,
-	// Radio,
 	ResultList,
-	// Select,
 	Separator,
-	// Setup,
 	Shimmer,
 	Slider,
 	Spacer,
 	Table,
 	Tabs,
 	Text,
-	// Textarea,
-	// ThemeSwitcher,
 	ThemeSwitcherLoading,
 	Tile,
 	Timestamp,
-	// Toggle,
 	Upload,
 } from "../../src"
 import Icons from "./components/Icons"
@@ -69,17 +52,9 @@ import DebugSelector from "./components/DebugSelector"
 import Markdowns from "./components/Markdowns"
 import { IntentProvider } from "./contexts/IntentContext"
 import ExamplesToggle from "./components/ExamplesToggle"
+import ExamplesButtonGroup from "./components/ExamplesButtonGroup"
 import IntentSelector from "./components/IntentSelector"
-
-const breadCrumbItems: Array<BreadCrumbItem> = [
-	{ name: "Index", href: "/" },
-	{ name: "Books", href: "/consequat" },
-	{
-		name: "Maecenas pellentesque",
-		href: "/consequat/maecenas-pellentesque",
-		isActive: true,
-	},
-]
+import ExamplesBreadcrumb from "./components/ExamplesBreadcrumb"
 
 const resultListItems: Array<ResultItem> = [
 	{ name: "First item", icon: "arrow-left" },
@@ -108,10 +83,7 @@ export default function Home() {
 							</a>
 							<span>Helios Interface</span>
 						</Heading>
-						<Text type="tiny" fontFamily="mono">
-							from{" "}
-						</Text>
-						<Flex gap={4}>
+						<Flex gap={4} isColumn={true}>
 							<ThemeSwitcher />
 							<DebugSelector />
 						</Flex>
@@ -125,7 +97,7 @@ export default function Home() {
 						</Details>
 
 						<Details title="Breadcrumb">
-							<Breadcrumb items={breadCrumbItems} />
+							<ExamplesBreadcrumb />
 						</Details>
 
 						<Details title="Button">
@@ -133,10 +105,7 @@ export default function Home() {
 						</Details>
 
 						<Details title="ButtonGroup">
-							<ButtonGroup>
-								<Button intent="silent" value="Cancel" />
-								<Button intent="advise" value="Start" />
-							</ButtonGroup>
+							<ExamplesButtonGroup />
 						</Details>
 
 						<Details title="Colors">

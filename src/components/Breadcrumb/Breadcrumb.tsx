@@ -20,7 +20,9 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
 								{item.name}
 							</Text>
 						</Link>
-						{!isLast && <Icon name="arrow-right" size={12} />}
+						{!isLast && (
+							<Icon name="arrow-right" size={12} emphasis="tertiary" />
+						)}
 					</Fragment>
 				)
 			})}

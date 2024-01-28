@@ -18,7 +18,8 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = () => {
 
 	return (
 		<Toggle
-			label={isDark ? "dark" : "light"}
+			label="Dark Theme"
+			isSmall={true}
 			onChange={toggleTheme}
 			isChecked={theme === "dark"}
 			intent="silent"

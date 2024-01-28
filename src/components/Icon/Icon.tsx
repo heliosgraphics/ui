@@ -215,7 +215,7 @@ const ICONS: Record<HeliosIconType, React.ReactElement> = {
 	x: <Icon_X />,
 }
 
-const Icon: React.FC<IconProps> = ({ name, className, size }) => {
+const Icon: React.FC<IconProps> = ({ name, className, emphasis, size }) => {
 	const IconShape = (): React.ReactElement => ICONS[name] || null
 	const iconSizeStyle = {
 		height: size + "px",
@@ -228,6 +228,12 @@ const Icon: React.FC<IconProps> = ({ name, className, size }) => {
 		styles.icon,
 		className,
 		"flex flex-center",
+		{
+			[styles.iconInherit]: !emphasis,
+			[styles.iconPrimary]: emphasis === "primary",
+			[styles.iconSecondary]: emphasis === "secondary",
+			[styles.iconTertiary]: emphasis === "tertiary",
+		},
 	)
 
 	return (
