@@ -51,7 +51,6 @@ const Alert: React.FC<AlertProps> = ({
 							{title}
 						</Text>
 					)}
-					{intent === "advise" ? "xxx" : "[["}
 					<Text type="small">{children}</Text>
 				</Flex>
 			</Flex>

@@ -46,11 +46,7 @@ const Select: React.FC<SelectProps> = ({
 					})}
 				</select>
 				<Flex className={styles.select__icon} isCentered={true}>
-					<Icon
-						name="chevron-down"
-						size={20}
-						color={isDisabled ? "lightest-gray" : "light-gray"}
-					/>
+					<Icon name="chevron-down" size={20} />
 				</Flex>
 			</Flex>
 		</Flex>

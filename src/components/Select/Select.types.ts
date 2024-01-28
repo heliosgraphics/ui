@@ -9,5 +9,5 @@ export interface SelectProps {
 	isLabelHidden?: boolean
 	selectedValue?: string
 	items: ReadonlyArray<SelectItem>
-	onChange: (event) => void
+	onChange: React.ChangeEventHandler<HTMLSelectElement>
 }

@@ -143,6 +143,7 @@
   --ui-text-disabled: hsl(var(--ui-hue), 8%, 66%);
 	--ui-text-selected: hsla(var(--color-intent-advise), 20%, 0.25);
 
+	--ui-border-light: hsl(var(--ui-hue), var(--ui-saturation), 95%);
 	--ui-border: hsl(var(--ui-hue), var(--ui-saturation), 85%);
 	--ui-border-active: hsl(var(--ui-hue), var(--ui-saturation), 80%);
 
@@ -192,6 +193,7 @@
   --ui-text-disabled: hsl(var(--ui-hue), var(--ui-saturation), 32%);
 	--ui-text-selected: hsla(var(--color-intent-advise), 80%, 0.25);
 
+	--ui-border-light: hsl(var(--ui-hue), var(--ui-saturation), 10%);
 	--ui-border: hsl(var(--ui-hue), var(--ui-saturation), 20%);
   --ui-border-active: hsl(var(--ui-hue), var(--ui-saturation), 35%);
 

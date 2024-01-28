@@ -55,9 +55,22 @@ export type { SelectItem } from './components/Select/Select.types'
 export { useIntersector } from "./hooks/useIntersector"
 
 // types
-export type { HeliosIntentionType } from "./types/intentions"
+export type { HeliosIntentionType, HeliosEmphasisType } from "./types/intentions"
 
 // meta
+import type { HeliosIntentionType } from './types/intentions'
+
+export const INTENTIONS: Array<HeliosIntentionType> = [
+	"advise",
+	"automation",
+	"confirmation",
+	"error",
+	"highlight",
+	"question",
+	"silent",
+	"success",
+	"warning"
+]
 export const COMPONENTS = [
 	"Alert",
 	"Breadcrumb",
