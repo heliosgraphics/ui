@@ -215,16 +215,14 @@ const ICONS: Record<HeliosIconType, React.ReactElement> = {
 	x: <Icon_X />,
 }
 
-const Icon: React.FC<IconProps> = ({ name, className, size, isFullSize }) => {
+const Icon: React.FC<IconProps> = ({ name, className, size }) => {
 	const IconShape = (): React.ReactElement => ICONS[name] || null
-	const iconSizeStyle = isFullSize
-		? {}
-		: {
-				height: size + "px",
-				minHeight: size + "px",
-				minWidth: size + "px",
-				width: size + "px",
-			}
+	const iconSizeStyle = {
+		height: size + "px",
+		minHeight: size + "px",
+		minWidth: size + "px",
+		width: size + "px",
+	}
 
 	const iconClasses: string = classNames(
 		styles.icon,

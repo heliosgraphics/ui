@@ -120,10 +120,6 @@ export default function Home() {
 					</Flex>
 
 					<Flex isColumn={true} gap={4}>
-						<Details title="Toggle" isOpen={true}>
-							<ExamplesToggle />
-						</Details>
-
 						<Details title="Alert">
 							<ExamplesAlert />
 						</Details>
@@ -314,6 +310,10 @@ export default function Home() {
 
 						<Details title="Timestamp">
 							<Timestamp />
+						</Details>
+
+						<Details title="Toggle" isOpen={true}>
+							<ExamplesToggle />
 						</Details>
 
 						<Details title="Upload">

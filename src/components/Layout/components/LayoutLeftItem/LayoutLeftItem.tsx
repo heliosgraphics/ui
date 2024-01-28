@@ -36,7 +36,7 @@ const LayoutLeftItem: React.FC<LayoutLeftItemProps> = ({
 
 	return (
 		<Link href={href} className={layoutLeftItemClasses} style={leftItemStyle}>
-			{icon && <Icon size={18} name={icon} isFullSize={true} />}
+			{icon && <Icon size={18} name={icon} />}
 			<span>{text}</span>
 		</Link>
 	)
