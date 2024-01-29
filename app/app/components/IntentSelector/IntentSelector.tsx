@@ -27,11 +27,16 @@ const IntentSelector: React.FC<IntentSelectorProps> = () => {
 		return setIntent(randomIntention)
 	}
 
+	const onSilent = () => setIntent("silent")
+	const onAdvise = () => setIntent("advise")
+
 	return (
 		<Flex gap={4}>
 			<Select items={items} onChange={onIntentChange} selectedValue={intent} />
 			<ButtonGroup>
 				<Button intent="silent" value="Random" onClick={onRandom} />
+				<Button intent="silent" value="Silent" onClick={onSilent} />
+				<Button intent="silent" value="Advise" onClick={onAdvise} />
 			</ButtonGroup>
 		</Flex>
 	)

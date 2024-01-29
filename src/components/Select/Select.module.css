@@ -1,9 +1,14 @@
 .select {
 	position: relative;
 
+	max-width: max-content;
 	width: 100%;
 
 	background-color: var(--ui-bg-action);
+}
+
+.select select {
+	padding-right: 64px;
 }
 
 .selectDisabled select {

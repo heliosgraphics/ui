@@ -5,12 +5,12 @@ import type { HeliosIntentionType } from "../../../../src"
 import type { IntentProviderProps } from "./IntentContext.types"
 
 const IntentContext = createContext<IntentProviderProps>({
-	intent: "silent",
+	intent: "advise",
 	setIntent: () => null,
 })
 
 const IntentProvider = (props) => {
-	const [intent, setIntent] = useState<HeliosIntentionType>("silent")
+	const [intent, setIntent] = useState<HeliosIntentionType>("advise")
 
 	return (
 		<IntentContext.Provider

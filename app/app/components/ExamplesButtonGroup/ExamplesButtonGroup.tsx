@@ -1,32 +1,62 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import {
 	Button,
 	ButtonGroup,
 	Separator,
 	Flex,
 	Text,
+	type ButtonGroupProps,
 	type HeliosIntentionType,
 } from "../../../../src"
+import { IntentContext } from "../../contexts/IntentContext"
 import type { ExamplesButtonGroupProps } from "./ExamplesButtonGroup.types"
 
+const BUTTON_ALIGNS = ["left", "center", "right", "join"]
+
 const ExamplesButtonGroup: React.FC<ExamplesButtonGroupProps> = () => {
-	const [intent, setIntent] = useState<HeliosIntentionType>("silent")
+	const { intent } = useContext(IntentContext)
+	const [alignIndex, setAlignIndex] = useState<number>(0)
+
+	const onJoinedToggle = () => {
+		const newAlignIndex =
+			alignIndex >= BUTTON_ALIGNS.length - 1 ? 0 : alignIndex + 1
+
+		setAlignIndex(newAlignIndex)
+	}
 
 	return (
-		<Flex isColumn={true} gap={16}>
+		<Flex isColumn={true} gap={8}>
 			<ButtonGroup>
+				<Button
+					size="small"
+					value="Align"
+					intent="silent"
+					onClick={onJoinedToggle}
+				/>
+				<Text type="tiny" fontFamily="mono">
+					{BUTTON_ALIGNS[alignIndex]}
+				</Text>
+			</ButtonGroup>
+			<Separator />
+			<ButtonGroup
+				align={BUTTON_ALIGNS[alignIndex] as ButtonGroupProps["align"]}
+			>
 				<Button intent="silent" value="Cancel" />
-				<Button intent="advise" value="Start" />
+				<Button intent={intent} value="Start" />
 			</ButtonGroup>
-			<ButtonGroup>
+			<ButtonGroup
+				align={BUTTON_ALIGNS[alignIndex] as ButtonGroupProps["align"]}
+			>
 				<Button intent="silent" value="Cancel" size="small" />
-				<Button intent="advise" value="Start" size="small" />
+				<Button intent={intent} value="Start" size="small" />
 			</ButtonGroup>
-			<ButtonGroup>
+			<ButtonGroup
+				align={BUTTON_ALIGNS[alignIndex] as ButtonGroupProps["align"]}
+			>
 				<Button intent="silent" value="Cancel" size="tiny" />
-				<Button intent="advise" value="Start" size="tiny" />
+				<Button intent={intent} value="Start" size="tiny" />
 			</ButtonGroup>
 		</Flex>
 	)

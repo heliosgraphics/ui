@@ -138,9 +138,9 @@
 	--yellow-saturation: 80%;
 	--ui-saturation: 4%;
 
-  --ui-text: hsl(var(--ui-hue), 8%, 8%);
-  --ui-text-action: hsl(var(--ui-hue), 8%, 24%);
-  --ui-text-disabled: hsl(var(--ui-hue), 8%, 66%);
+  --ui-text: hsl(var(--ui-hue), var(--ui-saturation), 8%);
+  --ui-text-action: hsl(var(--ui-hue), var(--ui-saturation), 24%);
+  --ui-text-disabled: hsl(var(--ui-hue), var(--ui-saturation), 66%);
 	--ui-text-selected: hsla(var(--color-intent-advise), 20%, 0.25);
 
 	--ui-border-light: hsl(var(--ui-hue), var(--ui-saturation), 95%);

@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import {
 	Button,
 	ButtonGroup,
@@ -10,46 +10,13 @@ import {
 	type HeliosIntentionType,
 } from "../../../../src"
 import type { ButtonsProps } from "./Buttons.types"
+import { IntentContext } from "../../contexts/IntentContext"
 
 const Buttons: React.FC<ButtonsProps> = () => {
-	const [intent, setIntent] = useState<HeliosIntentionType>("silent")
-
-	const onIntentAdvise = () => setIntent("advise")
-	const onIntentAutomation = () => setIntent("automation")
-	const onIntentConfirmation = () => setIntent("confirmation")
-	const onIntentError = () => setIntent("error")
-	const onIntentHighlight = () => setIntent("highlight")
-	const onIntentQuestion = () => setIntent("question")
-	const onIntentSilent = () => setIntent("silent")
-	const onIntentSuccess = () => setIntent("success")
-	const onIntentWarning = () => setIntent("warning")
+	const { intent } = useContext(IntentContext)
 
 	return (
 		<Flex isColumn={true} gap={16}>
-			<ButtonGroup>
-				<Button intent="advise" value="Advise" onClick={onIntentAdvise} />
-				<Button
-					intent="automation"
-					value="Automation"
-					onClick={onIntentAutomation}
-				/>
-				<Button
-					intent="confirmation"
-					value="Confirmation"
-					onClick={onIntentConfirmation}
-				/>
-				<Button intent="error" value="Error" onClick={onIntentError} />
-				<Button
-					intent="highlight"
-					value="Highlight"
-					onClick={onIntentHighlight}
-				/>
-				<Button intent="question" value="Question" onClick={onIntentQuestion} />
-				<Button intent="silent" value="Silent" onClick={onIntentSilent} />
-				<Button intent="success" value="Success" onClick={onIntentSuccess} />
-				<Button intent="warning" value="Warning" onClick={onIntentWarning} />
-			</ButtonGroup>
-			<Separator />
 			<ButtonGroup>
 				<Button intent={intent} value="Normal" />
 				<Button intent={intent} value="Tiny" size="tiny" />
