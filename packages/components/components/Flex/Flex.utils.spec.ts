@@ -33,12 +33,11 @@ describe("getFlexUtility", () => {
 	const MOCK_FLEX_DUPLICATE_CLASSES = `flex flex-center`
 	const MOCK_FLEX_DUPLICATE: FlexProps = {
 		isCentered: true,
+		className: "flex"
 	}
 
 	it("Generates without duplicated classes", () =>
-		expect(getFlexUtility(MOCK_FLEX_DUPLICATE, "flex")).toEqual(
+		expect(getFlexUtility(MOCK_FLEX_DUPLICATE)).toEqual(
 			MOCK_FLEX_DUPLICATE_CLASSES,
 		))
-	it("Generates with external className", () =>
-		expect(getFlexUtility({}, "style-01")).toEqual("flex style-01"))
 })

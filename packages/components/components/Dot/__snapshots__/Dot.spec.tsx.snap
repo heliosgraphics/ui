@@ -6,7 +6,7 @@ exports[`Dot > Should match snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="_dot_3cace9"
+        class="_dot_d452e9"
         style="height: 8px; max-height: 8px; max-width: 8px; width: 8px;"
       >
         <svg
@@ -16,7 +16,7 @@ exports[`Dot > Should match snapshot 1`] = `
           width="100%"
         >
           <lineargradient
-            id="00000000-0000-0000-0000-000000000000"
+            id=":r0:"
           >
             <stop
               offset="0%"
@@ -30,7 +30,7 @@ exports[`Dot > Should match snapshot 1`] = `
           <circle
             cx="10"
             cy="10"
-            fill="url(#00000000-0000-0000-0000-000000000000)"
+            fill="url(#:r0:)"
             r="10"
           />
         </svg>
@@ -39,7 +39,7 @@ exports[`Dot > Should match snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="_dot_3cace9"
+      class="_dot_d452e9"
       style="height: 8px; max-height: 8px; max-width: 8px; width: 8px;"
     >
       <svg
@@ -49,7 +49,7 @@ exports[`Dot > Should match snapshot 1`] = `
         width="100%"
       >
         <lineargradient
-          id="00000000-0000-0000-0000-000000000000"
+          id=":r0:"
         >
           <stop
             offset="0%"
@@ -63,7 +63,7 @@ exports[`Dot > Should match snapshot 1`] = `
         <circle
           cx="10"
           cy="10"
-          fill="url(#00000000-0000-0000-0000-000000000000)"
+          fill="url(#:r0:)"
           r="10"
         />
       </svg>

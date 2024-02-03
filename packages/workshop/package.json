@@ -1,13 +1,13 @@
 {
-	"name": "@heliosgraphics/components",
+	"name": "workshop",
 	"version": "0.0.0",
 	"private": false,
-	"description": "Helios Components Workshop",
+	"description": "Thebe Components Workshop",
 	"author": "03b8 <03b8@helios.graphics>",
 	"scripts": {
-		"dev:components": "next dev -p 1024",
-		"build:components": "next build",
-		"start:components": "next start"
+		"dev": "next dev -p 1024",
+		"build": "next build",
+		"start": "next start"
 	},
 	"dependencies": {
 		"@heliosgraphics/fractures": "latest",
