@@ -13,7 +13,6 @@ import {
 	Donut,
 	Dot,
 	Dropdown,
-	Error,
 	Flex,
 	Grid,
 	Heading,
@@ -155,10 +154,6 @@ export default function Home() {
 									<Button value="Dropdown" intent="silent" />
 								</ButtonGroup>
 							</Dropdown>
-						</Details>
-
-						<Details title="Error">
-							<Error />
 						</Details>
 
 						<Details title="Flex">
