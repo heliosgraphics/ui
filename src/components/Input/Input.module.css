@@ -7,22 +7,22 @@
 }
 
 .input input.input__input {
-	padding: 8px 10px;
+	padding: 0 10px;
 	height: 42px;
 	width: 100%;
 
 	background-clip: padding-box;
 	background-color: transparent;
 	background-color: var(--fui-color-0);
-	border: 1px solid var(--fui-color-100);
-	color: var(--fui-color-700);
+	border: 1px solid var(--ui-border);
+	/* color: var(--fui-color-700); */
 	border-radius: 4px;
 	outline: none;
 	transition: all 120ms ease-in-out;
 
 	font-family: var(--font-family-mono);
 	font-size: var(--font-size-small);
-	line-height: var(--line-height-small);
+	line-height: 42px;
 }
 
 .input input.input__input:active:not(:disabled),
@@ -38,7 +38,6 @@
 }
 
 .input input.input__input:disabled {
-	background-color: var(--gray-25);
 	pointer-events: none;
 }
 

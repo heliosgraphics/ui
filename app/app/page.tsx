@@ -8,7 +8,6 @@ import {
 	type PieItem,
 	Button,
 	ButtonGroup,
-	Category,
 	Column,
 	Details,
 	Donut,
@@ -120,10 +119,6 @@ export default function Home() {
 								<ColorGrid color="red" />
 								<ColorGrid color="yellow" />
 							</Flex>
-						</Details>
-
-						<Details title="Category">
-							<Category name="Category" color="purple" />
 						</Details>
 
 						<Details title="Checkbox">

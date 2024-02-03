@@ -77,7 +77,7 @@ const Input: React.FC<InputProps> = (props) => {
 				/>
 				{props.isLoading && (
 					<div className={styles.input__input__loading}>
-						<Loading size={10} color="gray" />
+						<Loading size={10} />
 					</div>
 				)}
 			</Flex>
@@ -88,7 +88,7 @@ const Input: React.FC<InputProps> = (props) => {
 				</div>
 			)}
 			{!!props.helperText && (
-				<Text type="tiny" color="light-gray" className="mt-2">
+				<Text type="tiny" emphasis="tertiary" className="mt-2">
 					{props.helperText}
 				</Text>
 			)}

@@ -16,10 +16,6 @@ const ComponentPage: React.FC<{}> = () => {
 
 	return (
 		<>
-			<Text type="paragraph">
-				Our handcrafted icon library designed for a human-centric, future-ready
-				experience. A work in progress.
-			</Text>
 			<Input
 				label="Find an icon"
 				onChange={onFilter}

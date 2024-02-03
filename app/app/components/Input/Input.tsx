@@ -12,9 +12,39 @@ import type { InputProps } from "./Input.types"
 
 const Input: React.FC<InputProps> = () => {
 	const [input, setInput] = useState<string>("")
-	const inInputChange = (event) => setInput(event.target.value)
+	const [input2, setInput2] = useState<string>("")
 
-	return <InputComponent value={input} label="Input" onChange={inInputChange} />
+	const onInputChange = (event) => setInput(event.target.value)
+	const onInputChange2 = (event) => setInput2(event.target.value)
+
+	return (
+		<Flex isColumn={true} gap={8}>
+			<InputComponent
+				value={input}
+				label="Your Name"
+				onChange={onInputChange}
+				placeholder="Jane 'Sicario' Doe"
+			/>
+			<InputComponent
+				value={input2}
+				label="Password Type"
+				type="password"
+				placeholder="Secure Password"
+				onChange={onInputChange2}
+			/>
+			<InputComponent
+				value="Disabled Content"
+				isDisabled={true}
+				label="Disabled Input"
+			/>
+			<InputComponent
+				value="Loading Input"
+				isLoading={true}
+				label="Loading Input"
+				helperText="Lorem ipsum dolor sit amet."
+			/>
+		</Flex>
+	)
 }
 
 export default Input
