@@ -233,6 +233,7 @@ const Icon: React.FC<IconProps> = ({ name, className, emphasis, size }) => {
 			[styles.iconPrimary]: emphasis === "primary",
 			[styles.iconSecondary]: emphasis === "secondary",
 			[styles.iconTertiary]: emphasis === "tertiary",
+			[styles.iconSilent]: emphasis === "silent",
 		},
 	)
 

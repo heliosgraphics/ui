@@ -13,7 +13,7 @@
 
 .selectDisabled select {
 	background-color: var(--ui-bg-action);
-	color: var(--ui-text-action);
+	color: var(--ui-text-secondary);
 
 	pointer-events: none;
 }
@@ -51,7 +51,7 @@
 	height: 38px;
 	width: 40px;
 
-	color: var(--ui-text-action);
+	color: var(--ui-text-secondary);
 
 	border-left: 1px solid var(--ui-border-light);
 	pointer-events: none;

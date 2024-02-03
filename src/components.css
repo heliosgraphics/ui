@@ -139,9 +139,9 @@
 	--ui-saturation: 4%;
 
   --ui-text-primary: hsl(var(--ui-hue), var(--ui-saturation), 8%);
-  --ui-text-action: hsl(var(--ui-hue), var(--ui-saturation), 24%);
-  --ui-text-secondary: hsl(var(--ui-hue), var(--ui-saturation), 66%);
+  --ui-text-secondary: hsl(var(--ui-hue), var(--ui-saturation), 24%);
   --ui-text-tertiary: hsl(var(--ui-hue), var(--ui-saturation), 66%);
+  --ui-text-silent: hsl(var(--ui-hue), var(--ui-saturation), 66%);
 
 	--ui-border-light: hsl(var(--ui-hue), var(--ui-saturation), 95%);
 	--ui-border: hsl(var(--ui-hue), var(--ui-saturation), 85%);
@@ -189,9 +189,9 @@
 	--yellow-saturation: 80%;
 
 	--ui-text-primary: hsl(var(--ui-hue), var(--ui-saturation), 92%);
-  --ui-text-action: hsl(var(--ui-hue), var(--ui-saturation), 76%);
   --ui-text-secondary: hsl(var(--ui-hue), var(--ui-saturation), 76%);
-  --ui-text-tertiary: hsl(var(--ui-hue), var(--ui-saturation), 32%);
+  --ui-text-tertiary: hsl(var(--ui-hue), var(--ui-saturation), 76%);
+  --ui-text-silent: hsl(var(--ui-hue), var(--ui-saturation), 32%);
 
 	--ui-border-light: hsl(var(--ui-hue), var(--ui-saturation), 10%);
 	--ui-border: hsl(var(--ui-hue), var(--ui-saturation), 20%);
@@ -339,7 +339,7 @@ mark,
 
 	background-color: hsl(var(--color-intent-highlight), 75%);
 	border-radius: var(--radius-small);
-	color: var(--ui-text-action);
+	color: var(--ui-text-secondary);
 
 	font-family: var(--font-family-mono);
 	font-size: 10px;

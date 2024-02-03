@@ -28,7 +28,7 @@ details.details summary {
 
   background-color: var(--ui-bg-action);
   border-radius: var(--radius-normal);
-  color: var(--ui-text-action);
+  color: var(--ui-text-secondary);
 	cursor: pointer;
   user-select: none;;
 }

@@ -45,11 +45,12 @@ export { default as Timestamp } from "./components/Timestamp"
 export { default as Toggle } from "./components/Toggle"
 export { default as Upload } from "./components/Upload"
 export type { BreadCrumbItem } from "./components/Breadcrumb"
-export type { ButtonProps } from './components/Button'
 export type { ButtonGroupProps } from './components/ButtonGroup'
-export type { ResultItem } from './components/ResultList'
+export type { ButtonProps } from './components/Button'
 export type { PieItem } from './components/Pie'
+export type { ResultItem } from './components/ResultList'
 export type { SelectItem } from './components/Select'
+export type { TextProps } from './components/Text'
 
 // hooks
 export { useIntersector } from "./hooks/useIntersector"

@@ -6,7 +6,7 @@
 	height: 100%;
 	width: 100%;
 
-	fill: currentColor;
+	fill: currentcolor;
 }
 
 .iconPrimary svg {
@@ -14,9 +14,13 @@
 }
 
 .iconSecondary svg {
-	fill: var(--ui-text-action);
+	fill: var(--ui-text-secondary);
 }
 
 .iconTertiary svg {
-	fill: var(--ui-text-disabled);
+	fill: var(--ui-text-tertiary);
+}
+
+.iconSilent svg {
+	fill: var(--ui-text-silent);
 }

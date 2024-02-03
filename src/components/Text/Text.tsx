@@ -10,32 +10,31 @@ import type { TextProps } from "./Text.types"
 
 const Text: React.FC<TextProps> = (props) => {
 	const textClasses: string = classNames(styles.text, props.className, {
-		[styles.textWithLinks]: props.withLinks,
+		[styles.textPrimary]: props.emphasis === "primary",
+		[styles.textSecondary]: props.emphasis === "secondary",
+		[styles.textTertiary]: props.emphasis === "tertiary",
+		[styles.textSilent]: props.emphasis === "silent",
 	})
 
-	const utility: string = getTypographyUtility(props)
-	const {
-		lineClamp,
-		isEllipsis,
-		whiteSpace,
-		type,
-		withLinks,
-		textAlign,
-		...validProps
-	} = props
+	const utility: string = getTypographyUtility({
+		...props,
+		className: textClasses,
+	})
+	const { lineClamp, isEllipsis, whiteSpace, type, textAlign, ...validProps } =
+		props
 
-	const lineclampStyle = props.lineClamp
+	const lineClampStyle = props.lineClamp
 		? {
 				display: "-webkit-box",
 				WebkitLineClamp: props.lineClamp,
 				WebkitBoxOrient: "vertical",
 				overflow: "hidden",
 			}
-		: {}
+		: undefined
 
 	const allProps = {
 		...validProps,
-		style: lineclampStyle,
+		style: lineClampStyle,
 		className: utility,
 	}
 

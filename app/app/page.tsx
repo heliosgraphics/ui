@@ -54,6 +54,7 @@ import ExamplesToggle from "./components/ExamplesToggle"
 import ExamplesButtonGroup from "./components/ExamplesButtonGroup"
 import IntentSelector from "./components/IntentSelector"
 import ExamplesBreadcrumb from "./components/ExamplesBreadcrumb"
+import ExamplesText from "./components/ExamplesText"
 
 const resultListItems: Array<ResultItem> = [
 	{ name: "First item", icon: "arrow-left" },
@@ -261,7 +262,7 @@ export default function Home() {
 						</Details>
 
 						<Details title="Text">
-							<Text type="paragraph">Hello World</Text>
+							<ExamplesText />
 						</Details>
 
 						<Details title="Textarea">

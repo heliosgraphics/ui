@@ -30,6 +30,5 @@ export interface TextProps {
 	| "lowercase"
 	| "uppercase"
 	whiteSpace?: "pre" | "pre-line" | "pre-wrap" | "nowrap"
-	withLinks?: boolean
 	wordWrap?: "break-word"
 }

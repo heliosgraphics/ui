@@ -1,5 +1,23 @@
 .text {
-	transition: all 120ms ease-in-out;
+	color: currentcolor;
+
+	transition: all 80ms ease-in-out;
+}
+
+.textPrimary {
+	color: var(--ui-text-primary);
+}
+
+.textSecondary {
+	color: var(--ui-text-secondary);
+}
+
+.textTertiary {
+	color: var(--ui-text-tertiary);
+}
+
+.textSilent {
+	color: var(--ui-text-silent);
 }
 
 .text a {
@@ -17,7 +35,7 @@
 	text-decoration: underline;
 }
 
-.text.textWithLinks a {
+.textWithLinks a {
 	font-weight: var(--font-weight-medium);
 	text-decoration: underline;
 }

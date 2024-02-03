@@ -16,7 +16,6 @@ const Select: React.FC<SelectProps> = ({
 	label,
 }) => {
 	const htmlFor: string = useMemo(() => getUUID(id), [id])
-
 	const selectClasses: string = classNames(styles.select, {
 		[styles.selectDisabled]: isDisabled,
 	})
@@ -36,10 +35,8 @@ const Select: React.FC<SelectProps> = ({
 					value={selectedValue}
 				>
 					{items?.map((item, key) => {
-						const isSelected: boolean = item.value === selectedValue
-
 						return (
-							<option key={key} value={item.value} selected={isSelected}>
+							<option key={key} value={item.value}>
 								{item.name}
 							</option>
 						)
