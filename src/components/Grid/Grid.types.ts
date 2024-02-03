@@ -1,7 +1,7 @@
-import React from "react"
+import type { ReactNode } from "react"
 
 export interface GridProps {
 	columns: number
-	children: React.ReactNode
+	children: ReactNode
 	isResponsive?: boolean
 }

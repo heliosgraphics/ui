@@ -1,5 +1,7 @@
+import type { ReactNode } from 'react'
+
 export interface DetailsProps {
-	children: React.ReactNode
+	children: ReactNode
 	isOpen?: boolean
 	title: string
 }

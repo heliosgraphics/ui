@@ -1,14 +1,14 @@
 "use client"
 
-import React, { useState } from "react"
+import { useState, type FC, type ChangeEvent } from "react"
 import { Details, Flex, Input, Icon, Text } from "../../../../src"
 import { meta } from "@heliosgraphics/icons/meta"
 import type { HeliosIconType } from "@heliosgraphics/icons/meta"
 
-const ComponentPage: React.FC<{}> = () => {
+const ComponentPage: FC<{}> = () => {
 	const [icon, setIcon] = useState<HeliosIconType>("calendar")
 	const [filter, setFilter] = useState<string>("")
-	const onFilter = (event: React.ChangeEvent<HTMLInputElement>) =>
+	const onFilter = (event: ChangeEvent<HTMLInputElement>) =>
 		setFilter(event.target.value)
 	const filteredIcons: Array<HeliosIconType> = meta?.filter((icon) =>
 		icon.includes(filter),

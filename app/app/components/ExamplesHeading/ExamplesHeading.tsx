@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import { useState, type FC } from "react"
 import {
 	Flex,
 	Select,
@@ -44,7 +44,7 @@ const FONT_WEIGHTS: Array<{
 	{ name: "Black", value: "black" },
 ]
 
-const ExamplesHeading: React.FC<ExamplesHeadingProps> = () => {
+const ExamplesHeading: FC<ExamplesHeadingProps> = () => {
 	const [emphasis, setEmphasis] = useState<TextProps["emphasis"]>("primary")
 	const [fontFamily, setFontFamily] = useState<TextProps["fontFamily"]>("sans")
 	const [fontWeight, setFontWeight] = useState<

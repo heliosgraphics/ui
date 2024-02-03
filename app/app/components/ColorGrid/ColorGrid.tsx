@@ -1,15 +1,16 @@
 import { Flex, Text } from "../../../../src"
 import Square from "../Square"
+import type { FC, CSSProperties } from "react"
 import type { ColorGridProps } from "./ColorGrid.types"
 
 const OPACITY_SCALE: Array<number> = [
 	97.5, 95, 90, 80, 70, 60, 50, 40, 30, 20, 10, 5,
 ]
 
-const ColorGrid: React.FC<ColorGridProps> = ({ color }) => {
+const ColorGrid: FC<ColorGridProps> = ({ color }) => {
 	const style = {
 		"--color": `var(--${color}-hue) var(--${color}-saturation)`,
-	} as React.CSSProperties
+	} as CSSProperties
 
 	return (
 		<Flex style={style} isColumn={true} gap={4}>

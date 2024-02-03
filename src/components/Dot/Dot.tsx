@@ -1,8 +1,9 @@
 import { useId, useMemo } from "react"
 import styles from "./Dot.module.css"
 import type { DotProps } from "./Dot.types"
+import type { FC } from "react"
 
-const Dot: React.FC<DotProps> = ({ colorAccent, size = 8, color = "blue" }) => {
+const Dot: FC<DotProps> = ({ colorAccent, size = 8, color = "blue" }) => {
 	const dotId: string = useId()
 	const dotColor: string = "red"
 	const dotColorAccent: string = useMemo(

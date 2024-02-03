@@ -1,7 +1,7 @@
-import React from "react"
+import type { ReactNode } from "react"
 
 export interface DialogProps {
-	children: React.ReactNode
+	children: ReactNode
 	isOpen?: boolean
 	isCentered?: boolean
 	onClose: (_event?: any) => Promise<void> | void

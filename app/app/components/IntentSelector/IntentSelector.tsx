@@ -1,11 +1,11 @@
-import { useContext } from "react"
+import { useContext, type FC } from "react"
 import { Flex, Select, INTENTIONS, ButtonGroup, Button } from "../../../../src"
 import { IntentContext } from "../../contexts/IntentContext"
 import type { IntentSelectorProps } from "./IntentSelector.types"
 
 let lastIntention
 
-const IntentSelector: React.FC<IntentSelectorProps> = () => {
+const IntentSelector: FC<IntentSelectorProps> = () => {
 	const { intent, setIntent } = useContext(IntentContext)
 
 	const items = INTENTIONS.map((intention) => {

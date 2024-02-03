@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useContext, useState } from "react"
+import { useContext, useState } from "react"
 import {
 	Button,
 	ButtonGroup,
@@ -9,10 +9,11 @@ import {
 	Text,
 	type HeliosIntentionType,
 } from "../../../../src"
-import type { ButtonsProps } from "./Buttons.types"
 import { IntentContext } from "../../contexts/IntentContext"
+import type { ButtonsProps } from "./Buttons.types"
+import type { FC } from "react"
 
-const Buttons: React.FC<ButtonsProps> = () => {
+const Buttons: FC<ButtonsProps> = () => {
 	const { intent } = useContext(IntentContext)
 
 	return (

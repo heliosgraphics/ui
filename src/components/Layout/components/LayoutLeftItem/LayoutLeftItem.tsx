@@ -1,16 +1,16 @@
 "use client"
 
-import React from "react"
-import styles from "./LayoutLeftItem.module.css"
-import classNames from "@sindresorhus/class-names"
-import Link from "next/link"
-import Icon from "../../../Icon"
 import { usePathname } from "next/navigation"
+import classNames from "@sindresorhus/class-names"
+import Icon from "../../../Icon"
+import Link from "next/link"
+import styles from "./LayoutLeftItem.module.css"
+import type { FC } from "react"
 import type { LayoutLeftItemProps } from "./LayoutLeftItem.types"
 
 const STEP_SIZE = 16 as const
 
-const LayoutLeftItem: React.FC<LayoutLeftItemProps> = ({
+const LayoutLeftItem: FC<LayoutLeftItemProps> = ({
 	icon,
 	step,
 	href,

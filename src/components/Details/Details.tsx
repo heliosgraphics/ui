@@ -1,14 +1,10 @@
-import React from "react"
 import Icon from "../Icon"
-import Text from "../Text"
 import styles from "./Details.module.css"
+import Text from "../Text"
 import type { DetailsProps } from "./Details.types"
+import type { FC } from "react"
 
-const Details: React.FC<DetailsProps> = ({
-	children,
-	title,
-	isOpen = false,
-}) => {
+const Details: FC<DetailsProps> = ({ children, title, isOpen = false }) => {
 	return (
 		<details className={styles.details} open={isOpen}>
 			<summary className="flex space-between flex-y-center">

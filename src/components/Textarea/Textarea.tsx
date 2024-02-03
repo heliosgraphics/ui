@@ -4,9 +4,10 @@ import { useId, useState, useRef, useEffect } from "react"
 import Text from "../Text"
 import styles from "./Textarea.module.css"
 import classNames from "@sindresorhus/class-names"
+import type { FC } from "react"
 import type { TextareaProps } from "./Textarea.types"
 
-const Textarea: React.FC<TextareaProps> = (props) => {
+const Textarea: FC<TextareaProps> = (props) => {
 	const [isActive, setActive] = useState(false)
 	const textareaRef = useRef<HTMLTextAreaElement | null>(null)
 	const { autoComplete, helperText, isDisabled, isLabelHidden, ...goodProps } =

@@ -1,9 +1,9 @@
-import React from "react"
 import classNames from "@sindresorhus/class-names"
 import styles from "./Loading.module.css"
+import type { FC } from "react"
 import type { LoadingProps } from "./Loading.types"
 
-const Loading: React.FC<LoadingProps> = ({ className, size }) => {
+const Loading: FC<LoadingProps> = ({ className, size }) => {
 	const rSize = size / 2
 	const cSize = rSize + 2
 	const dashSize = size + cSize

@@ -1,6 +1,6 @@
-import React from "react"
+import type { Dispatch, SetStateAction } from "react"
 
 export interface LayoutProviderProps {
 	isActive: boolean
-	setActive: React.Dispatch<React.SetStateAction<boolean>>
+	setActive: Dispatch<SetStateAction<boolean>>
 }

@@ -1,11 +1,11 @@
-import React from "react"
+import type { ReactNode } from "react"
 import type { HeliosIntentType } from "@heliosgraphics/library/types/intent"
 
 export interface FormProps {
-	alert?: React.ReactNode | string
+	alert?: ReactNode | string
 	alertType?: HeliosIntentType
-	children: React.ReactNode
+	children: ReactNode
 	className?: string
-	buttonGroup?: React.ReactNode
+	buttonGroup?: ReactNode
 	onSubmit: (_: unknown) => Promise<void | unknown> | void | unknown
 }

@@ -1,9 +1,9 @@
-import React from "react"
+import { forwardRef, type Ref } from "react"
 import { getFlexUtility } from "./Flex.utils"
 import type { FlexProps } from "./Flex.types"
 
-const Flex = React.forwardRef<HTMLDivElement, FlexProps>(
-	(props: FlexProps, ref: React.Ref<HTMLDivElement>) => {
+const Flex = forwardRef<HTMLDivElement, FlexProps>(
+	(props: FlexProps, ref: Ref<HTMLDivElement>) => {
 		const flexClasses: string = getFlexUtility(props)
 
 		const {

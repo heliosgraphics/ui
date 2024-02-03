@@ -1,7 +1,8 @@
 import type { ResultItem } from "../ResultList"
+import type { ReactNode } from 'react'
 
 export interface DropdownProps {
-	children: any // React.ReactNode<> isn't generic
+	children: ReactNode // React.ReactNode<> isn't generic
 	items: ReadonlyArray<ResultItem>
 	isHidden?: boolean
 	isDisabled?: boolean

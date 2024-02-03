@@ -1,5 +1,5 @@
-import React from "react"
+import type { ReactNode } from "react"
 
 export interface LayoutLeftProps {
-	children: React.ReactNode
+	children: ReactNode
 }

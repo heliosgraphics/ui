@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useContext } from "react"
+import { useState, useContext, type FC } from "react"
 import {
 	Button,
 	ButtonGroup,
@@ -16,7 +16,6 @@ import type { ExamplesButtonGroupProps } from "./ExamplesButtonGroup.types"
 
 const BUTTON_ALIGNS = ["left", "center", "right", "join"]
 
-const ExamplesButtonGroup: React.FC<ExamplesButtonGroupProps> = () => {
 	const { intent } = useContext(IntentContext)
 	const [alignIndex, setAlignIndex] = useState<number>(0)
 	const [isVertical, setVertical] = useState<boolean>(false)

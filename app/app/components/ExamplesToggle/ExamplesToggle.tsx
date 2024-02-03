@@ -1,11 +1,11 @@
 "use client"
 
-import React, { useContext, useState } from "react"
+import { useContext, useState, type FC } from "react"
 import { Flex, Separator, Toggle } from "../../../../src"
 import { IntentContext } from "../../contexts/IntentContext"
 import type { ExamplesToggleProps } from "./ExamplesToggle.types"
 
-const ExamplesToggle: React.FC<ExamplesToggleProps> = () => {
+const ExamplesToggle: FC<ExamplesToggleProps> = () => {
 	const { intent } = useContext(IntentContext)
 	const [isChecked, setChecked] = useState<boolean>(false)
 	const [isChecked2, setChecked2] = useState<boolean>(false)

@@ -1,5 +1,5 @@
-import React from "react"
+import type { ReactNode } from "react"
 
 export interface SliderProps {
-	items?: Array<React.ReactNode>
+	items?: Array<ReactNode>
 }

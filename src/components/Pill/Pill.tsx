@@ -1,10 +1,10 @@
-import React from "react"
+import type { FC } from "react"
 import Text from "../Text/Text"
 import Flex from "../Flex/Flex"
 import classNames from "@sindresorhus/class-names"
 import type { PillProps } from "./Pill.types"
 
-const Pill: React.FC<PillProps> = ({
+const Pill: FC<PillProps> = ({
 	color = "gray",
 	isMono,
 	label,

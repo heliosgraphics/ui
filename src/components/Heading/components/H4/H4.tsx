@@ -1,7 +1,7 @@
-import React from "react"
+import type { FC } from "react"
 import type { H4Props } from "./H4.types"
 
-const H4: React.FC<H4Props> = (props) => {
+const H4: FC<H4Props> = (props) => {
 	return (
 		<h4
 			{...props}

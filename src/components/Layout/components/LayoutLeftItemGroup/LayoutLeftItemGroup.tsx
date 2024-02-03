@@ -1,9 +1,9 @@
-import React from "react"
-import Text from "../../../Text"
 import Flex from "../../../Flex"
+import Text from "../../../Text"
+import type { FC } from "react"
 import type { LayoutLeftItemGroupProps } from "./LayoutLeftItemGroup.types"
 
-const LayoutLeftItemGroup: React.FC<LayoutLeftItemGroupProps> = ({
+const LayoutLeftItemGroup: FC<LayoutLeftItemGroupProps> = ({
 	children,
 	title,
 }) => {

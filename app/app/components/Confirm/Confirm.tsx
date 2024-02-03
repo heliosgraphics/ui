@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, type FC } from "react"
 import {
 	Flex,
 	Button,
@@ -10,7 +10,7 @@ import {
 } from "../../../../src"
 import type { ConfirmProps } from "./Confirm.types"
 
-const Confirm: React.FC<ConfirmProps> = () => {
+const Confirm: FC<ConfirmProps> = () => {
 	const [isConfirming, setConfirming] = useState<boolean>(false)
 	const onConfirmToggle = () => setConfirming(!isConfirming)
 

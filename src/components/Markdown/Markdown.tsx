@@ -1,10 +1,10 @@
-import React from "react"
-import styles from "./Markdown.module.css"
 import { md } from "./Markdown.utils"
 import classNames from "@sindresorhus/class-names"
+import styles from "./Markdown.module.css"
+import type { FC } from "react"
 import type { MarkdownProps } from "./Markdown.types"
 
-const Markdown: React.FC<MarkdownProps> = ({ text, isUnselectable }) => {
+const Markdown: FC<MarkdownProps> = ({ text, isUnselectable }) => {
 	if (!text) return null
 
 	const innerHTML = { __html: md.render(text) }

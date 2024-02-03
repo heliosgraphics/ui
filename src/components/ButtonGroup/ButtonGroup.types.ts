@@ -1,6 +1,8 @@
+import type { ReactNode } from 'react'
+
 export interface ButtonGroupProps {
 	align?: "left" | "center" | "right" | "join"
 	className?: string
-	children: React.ReactNode
+	children: ReactNode
 	isVertical?: boolean
 }

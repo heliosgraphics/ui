@@ -1,4 +1,4 @@
-import React from "react"
+import type { FC } from "react"
 import type { HeliosThemes } from "../../types/themes"
 import type { SetupProps } from "./Setup.types"
 
@@ -42,7 +42,7 @@ function code() {
 	setTheme(preferredTheme || (darkQuery.matches ? "dark" : "light"))
 }
 
-const Setup: React.FC<SetupProps> = () => {
+const Setup: FC<SetupProps> = () => {
 	return (
 		<>
 			<script dangerouslySetInnerHTML={{ __html: `(${code})();` }} />

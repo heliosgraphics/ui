@@ -1,10 +1,10 @@
 "use client"
 
-import { useState } from "react"
+import { useState, type FC } from "react"
 import { Flex, Radio as RadioComponent } from "../../../../src"
 import type { RadioProps } from "./Radio.types"
 
-const Radio: React.FC<RadioProps> = () => {
+const Radio: FC<RadioProps> = () => {
 	const [radio, setRadio] = useState<string>("")
 	const onRadioFirst = () => setRadio("radio-01")
 	const onRadioSecond = () => setRadio("radio-02")

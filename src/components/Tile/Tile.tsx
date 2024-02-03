@@ -1,10 +1,10 @@
-import React from "react"
 import classNames from "@sindresorhus/class-names"
-import styles from "./Tile.module.css"
-import Icon from "../Icon"
 import Flex from "../Flex"
-import type { TileProps } from "./Tile.types"
+import Icon from "../Icon"
+import styles from "./Tile.module.css"
+import type { FC } from "react"
 import type { FUIColors } from "@heliosgraphics/library/types/colors"
+import type { TileProps } from "./Tile.types"
 
 const getTileColor = (
 	color,
@@ -28,7 +28,7 @@ const getTileColor = (
 	return { iconColor, tileColor }
 }
 
-const Tile: React.FC<TileProps> = ({
+const Tile: FC<TileProps> = ({
 	size,
 	hex,
 	icon,

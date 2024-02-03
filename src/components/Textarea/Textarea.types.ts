@@ -1,4 +1,4 @@
-import React from "react"
+import type { ChangeEvent } from "react"
 
 export interface TextareaProps {
 	autoComplete?: boolean
@@ -10,7 +10,7 @@ export interface TextareaProps {
 	autoFocus?: boolean
 	name?: string
 	maxLength?: number
-	onChange: (_event?: React.ChangeEvent<HTMLTextAreaElement>) => void
+	onChange: (_event?: ChangeEvent<HTMLTextAreaElement>) => void
 	placeholder?: string
 	rows?: number
 	value?: string

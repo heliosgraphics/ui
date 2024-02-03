@@ -9,8 +9,9 @@ import {
 	Dialog as DialogComponent,
 } from "../../../../src"
 import type { DialogProps } from "./Dialog.types"
+import type { FC } from "react"
 
-const Dialog: React.FC<DialogProps> = () => {
+const Dialog: FC<DialogProps> = () => {
 	const [hasDialog, setDialog] = useState<boolean>(false)
 	const onDialogToggle = () => setDialog(!hasDialog)
 

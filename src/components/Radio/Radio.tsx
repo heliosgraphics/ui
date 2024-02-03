@@ -1,10 +1,10 @@
-import React from "react"
 import classNames from "@sindresorhus/class-names"
 import styles from "./Radio.module.css"
 import Text from "../Text"
+import type { FC } from "react"
 import type { RadioProps } from "./Radio.types"
 
-const Radio: React.FC<RadioProps> = ({
+const Radio: FC<RadioProps> = ({
 	isDisabled,
 	onChange,
 	label,

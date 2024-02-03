@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, type FC } from "react"
 import {
 	Flex,
 	Button,
@@ -10,7 +10,7 @@ import {
 } from "../../../../src"
 import type { InputProps } from "./Input.types"
 
-const Input: React.FC<InputProps> = () => {
+const Input: FC<InputProps> = () => {
 	const [input, setInput] = useState<string>("")
 	const [input2, setInput2] = useState<string>("")
 

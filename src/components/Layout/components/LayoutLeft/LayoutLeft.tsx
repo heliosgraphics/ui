@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useContext } from "react"
+import { useContext, type FC } from "react"
 import styles from "./LayoutLeft.module.css"
 import Button from "../../../Button"
 import ButtonGroup from "../../../ButtonGroup"
@@ -8,7 +8,7 @@ import classNames from "@sindresorhus/class-names"
 import { LayoutContext } from "../../contexts/LayoutProvider"
 import type { LayoutLeftProps } from "./LayoutLeft.types"
 
-const LayoutLeft: React.FC<LayoutLeftProps> = ({ children }) => {
+const LayoutLeft: FC<LayoutLeftProps> = ({ children }) => {
 	const { isActive, setActive } = useContext(LayoutContext)
 	const onToggleActive = () => setActive(!isActive)
 
@@ -22,8 +22,7 @@ const LayoutLeft: React.FC<LayoutLeftProps> = ({ children }) => {
 			<nav className={`${styles.navigationLeft__button} flex flex-center`}>
 				<ButtonGroup>
 					<Button
-						type="secondary"
-						color="gray"
+						intent="silent"
 						value="Menu"
 						size="small"
 						icon="bars"

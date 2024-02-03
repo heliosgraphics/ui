@@ -1,9 +1,9 @@
-import React from "react"
-import styles from "./Slider.module.css"
 import classNames from "@sindresorhus/class-names"
+import styles from "./Slider.module.css"
+import type { FC } from "react"
 import type { SliderProps } from "./Slider.types"
 
-const Slider: React.FC<SliderProps> = ({ items }) => {
+const Slider: FC<SliderProps> = ({ items }) => {
 	const sliderClasses: string = classNames(styles.slider, "flex")
 
 	return (

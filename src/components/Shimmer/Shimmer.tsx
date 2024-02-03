@@ -1,9 +1,9 @@
-import React from "react"
-import styles from "./Shimmer.module.css"
-import classNames from "@sindresorhus/class-names"
 import { ShimmerProps } from "./Shimmer.types"
+import classNames from "@sindresorhus/class-names"
+import styles from "./Shimmer.module.css"
+import type { FC } from "react"
 
-const Shimmer: React.FC<ShimmerProps> = ({
+const Shimmer: FC<ShimmerProps> = ({
 	isRounded,
 	paddingTop,
 	paddingBottom,

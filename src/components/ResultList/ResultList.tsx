@@ -1,12 +1,12 @@
-import React from "react"
-import Icon from "../Icon"
-import Flex from "../Flex"
-import Text from "../Text"
-import styles from "./ResultList.module.css"
 import classNames from "@sindresorhus/class-names"
+import Flex from "../Flex"
+import Icon from "../Icon"
+import styles from "./ResultList.module.css"
+import Text from "../Text"
+import type { FC } from "react"
 import type { ResultListProps } from "./ResultList.types"
 
-const ResultList: React.FC<ResultListProps> = ({ items }) => {
+const ResultList: FC<ResultListProps> = ({ items }) => {
 	if (!items?.length) return null
 
 	return (

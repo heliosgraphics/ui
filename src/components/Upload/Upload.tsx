@@ -1,4 +1,4 @@
-import { useId, forwardRef } from "react"
+import { useId, forwardRef, type Ref } from "react"
 import styles from "./Upload.module.css"
 import Text from "../Text"
 import Loading from "../Loading"
@@ -7,7 +7,7 @@ import classNames from "@sindresorhus/class-names"
 import type { UploadProps } from "./Upload.types"
 
 const Upload = forwardRef<HTMLDivElement, UploadProps>(
-	(props: UploadProps, ref: React.Ref<HTMLInputElement>) => {
+	(props: UploadProps, ref: Ref<HTMLInputElement>) => {
 		const {
 			isDisabled,
 			isRequired: _,

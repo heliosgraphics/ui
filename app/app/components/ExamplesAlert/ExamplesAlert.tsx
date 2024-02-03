@@ -1,9 +1,10 @@
 "use client"
 
-import React, { useContext } from "react"
+import { useContext } from "react"
 import { Flex, Alert, HeliosIntentionType } from "../../../../src"
-import type { ExamplesAlertProps } from "./ExamplesAlert.types"
 import { IntentContext } from "../../contexts/IntentContext"
+import type { FC } from "react"
+import type { ExamplesAlertProps } from "./ExamplesAlert.types"
 
 const INTENT_DESCRIPTIONS: Record<HeliosIntentionType, string> = {
 	advise:
@@ -24,7 +25,7 @@ const INTENT_DESCRIPTIONS: Record<HeliosIntentionType, string> = {
 	warning: "Alerting to potential danger, risk, or an unfavorable outcome.",
 }
 
-const ExamplesAlert: React.FC<ExamplesAlertProps> = () => {
+const ExamplesAlert: FC<ExamplesAlertProps> = () => {
 	const { intent } = useContext(IntentContext)
 	const onClose = () => console.log(0)
 

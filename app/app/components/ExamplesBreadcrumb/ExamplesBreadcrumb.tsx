@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import { useState, type FC } from "react"
 import {
 	Button,
 	ButtonGroup,
@@ -23,7 +23,7 @@ const breadCrumbItems: Array<BreadCrumbItem> = [
 	},
 ]
 
-const ExamplesBreadcrumb: React.FC<ExamplesBreadcrumbProps> = () => {
+const ExamplesBreadcrumb: FC<ExamplesBreadcrumbProps> = () => {
 	return (
 		<Flex isColumn={true} gap={16}>
 			<Breadcrumb items={breadCrumbItems} />

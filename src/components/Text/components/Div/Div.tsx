@@ -1,6 +1,7 @@
 import type { DivProps } from "./Div.types"
+import type { FC } from "react"
 
-const Div: React.FC<DivProps> = (props) => {
+const Div: FC<DivProps> = (props) => {
 	return (
 		<div
 			{...props}

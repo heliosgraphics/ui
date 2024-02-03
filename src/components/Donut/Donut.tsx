@@ -1,11 +1,10 @@
-import React from "react"
-import styles from "./Donut.module.css"
-// import { getColor } from "../utils/color"
 import { getDonutBorderSize } from "./Donut.utils"
 import Flex from "../Flex"
+import styles from "./Donut.module.css"
 import type { DonutProps } from "./Donut.types"
+import type { FC } from "react"
 
-const Donut: React.FC<DonutProps> = ({
+const Donut: FC<DonutProps> = ({
 	children,
 	size = 32,
 	percentage = 0,

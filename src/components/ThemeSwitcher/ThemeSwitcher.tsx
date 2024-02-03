@@ -2,9 +2,10 @@
 
 import { Toggle } from "../.."
 import { useState, useEffect } from "react"
+import type { FC } from "react"
 import type { ThemeSwitcherProps } from "./ThemeSwitcher.types"
 
-const ThemeSwitcher: React.FC<ThemeSwitcherProps> = () => {
+const ThemeSwitcher: FC<ThemeSwitcherProps> = () => {
 	const [theme, setTheme] = useState(global.window?.__theme || "light")
 	const isDark = theme === "dark"
 

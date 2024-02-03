@@ -1,12 +1,12 @@
-import React from "react"
-import styles from "./Form.module.css"
 import Alert from "../Alert"
+import classNames from "@sindresorhus/class-names"
 import Flex from "../Flex"
 import Separator from "../Separator"
-import classNames from "@sindresorhus/class-names"
+import styles from "./Form.module.css"
+import type { FC } from "react"
 import type { FormProps } from "./Form.types"
 
-const Form: React.FC<FormProps> = ({
+const Form: FC<FormProps> = ({
 	alert,
 	buttonGroup,
 	children,
@@ -27,7 +27,7 @@ const Form: React.FC<FormProps> = ({
 			</Flex>
 			{(!!alert || !!buttonGroup) && <Separator isLight={true} />}
 			{!!alert && (
-				<Alert type={alertType || "error"} icon="bolt">
+				<Alert intent={alertType || "error"} icon="bolt">
 					{alert}
 				</Alert>
 			)}

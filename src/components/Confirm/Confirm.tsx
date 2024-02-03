@@ -1,12 +1,12 @@
-import React from "react"
 import Button from "../Button"
 import ButtonGroup from "../ButtonGroup"
+import Dialog from "../Dialog"
 import Flex from "../Flex"
 import Text from "../Text"
-import Dialog from "../Dialog"
 import type { ConfirmProps } from "./Confirm.types"
+import type { FC } from "react"
 
-const Confirm: React.FC<ConfirmProps> = ({
+const Confirm: FC<ConfirmProps> = ({
 	onCancel,
 	onConfirm,
 	isOpen,
@@ -30,14 +30,13 @@ const Confirm: React.FC<ConfirmProps> = ({
 			<Flex gap={8} isColumn={true}>
 				<ButtonGroup>
 					<Button
-						type="secondary"
+						intent="silent"
 						value={cancelText}
 						onClick={onCancelClick}
 						icon={cancelIcon}
 					/>
 					<Button
-						type="primary"
-						color="red"
+						intent="error"
 						value={confirmText}
 						onClick={onConfirmClick}
 						icon={confirmIcon}

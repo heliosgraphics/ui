@@ -1,19 +1,21 @@
 "use client"
 
-import React, {
+import {
 	useEffect,
 	useState,
 	useRef,
 	Children,
 	cloneElement,
+	type FC,
 } from "react"
 import { ANIMATION_FAST } from "../../constants/animations"
 import classNames from "@sindresorhus/class-names"
 import ResultList from "../ResultList"
 import styles from "./Dropdown.module.css"
+import type { MouseEvent } from "react"
 import type { DropdownProps } from "./Dropdown.types"
 
-const Dropdown: React.FC<DropdownProps> = ({
+const Dropdown: FC<DropdownProps> = ({
 	isHidden,
 	children,
 	items,
@@ -40,9 +42,9 @@ const Dropdown: React.FC<DropdownProps> = ({
 		[styles.dropdownRight]: position === "right" || !position,
 	})
 
-	const mouseEnter = (_event: React.MouseEvent<HTMLDivElement>): void =>
+	const mouseEnter = (_event: MouseEvent<HTMLDivElement>): void =>
 		setHovering(true)
-	const mouseLeave = (_event: React.MouseEvent<HTMLDivElement>) => {
+	const mouseLeave = (_event: MouseEvent<HTMLDivElement>) => {
 		setHovering(false)
 
 		return setTimeout(

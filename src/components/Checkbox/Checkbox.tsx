@@ -5,8 +5,9 @@ import Flex from "../Flex"
 import Icon from "../Icon"
 import styles from "./Checkbox.module.css"
 import Text from "../Text"
+import type { FC, ChangeEvent } from "react"
 
-const Checkbox: React.FC<CheckboxProps> = ({
+const Checkbox: FC<CheckboxProps> = ({
 	isLabelHidden,
 	onChange,
 	name,
@@ -26,8 +27,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
 		[styles.checkbox__checkboxDisabled]: isDisabled,
 	})
 
-	const onToggle = (event: React.ChangeEvent<HTMLInputElement>) =>
-		onChange?.(event)
+	const onToggle = (event: ChangeEvent<HTMLInputElement>) => onChange?.(event)
 
 	return (
 		<div

@@ -1,8 +1,8 @@
-import React from "react"
+import type { FC } from "react"
 // import { getColor } from "../utils/color"
 import type { PieProps, PieItem } from "./Pie.types"
 
-const Pie: React.FC<PieProps> = ({ size, data }) => {
+const Pie: FC<PieProps> = ({ size, data }) => {
 	const r: number = size / 4
 	const whole = data?.reduce((a, b) => a + b.value, 0)
 	const circumferencePercentage: number = (2 * Math.PI * r) / whole

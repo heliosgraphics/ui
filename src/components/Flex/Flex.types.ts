@@ -1,7 +1,8 @@
-import React from "react"
+import type { HTMLAttributes } from "react"
 import type { HeliosScale } from "../../types/scale"
+import type { RefObject } from 'react'
 
-export interface FlexProps extends React.HTMLAttributes<{}> {
+export interface FlexProps extends HTMLAttributes<{}> {
 	align?: "center" | "left" | "right"
 	className?: string // todo: deprecate passing classNames around
 	draggable?: boolean
@@ -20,6 +21,6 @@ export interface FlexProps extends React.HTMLAttributes<{}> {
 	paddingX?: HeliosScale
 	paddingY?: HeliosScale
 	radius?: 1 | 2 | 3
-	ref?: React.RefObject<HTMLDivElement>
+	ref?: RefObject<HTMLDivElement>
 	yAlign?: "top" | "bottom" | "baseline"
 }

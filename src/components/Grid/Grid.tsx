@@ -1,8 +1,8 @@
-import React from "react"
-import classNames from "@sindresorhus/class-names"
 import { GridProps } from "./Grid.types"
+import classNames from "@sindresorhus/class-names"
+import type { FC } from "react"
 
-const Grid: React.FC<GridProps> = ({ columns, children }) => {
+const Grid: FC<GridProps> = ({ columns, children }) => {
 	const gridClasses = classNames("grid", {
 		[`grid-cols-${columns}`]: columns,
 	})

@@ -1,7 +1,7 @@
-import React from "react"
+import type { FC } from "react"
 import type { TinyProps } from "./Tiny.types"
 
-const Tiny: React.FC<TinyProps> = (props) => {
+const Tiny: FC<TinyProps> = (props) => {
 	return (
 		<small
 			{...props}

@@ -1,4 +1,5 @@
 import type { ResultItem } from "../ResultList"
+import type { ChangeEventHandler } from 'react'
 
 export type SelectItem = Pick<ResultItem, 'name' | 'value' | 'isDisabled'>
 
@@ -9,5 +10,5 @@ export interface SelectProps {
 	isLabelHidden?: boolean
 	selectedValue?: string
 	items: ReadonlyArray<SelectItem>
-	onChange: React.ChangeEventHandler<HTMLSelectElement>
+	onChange: ChangeEventHandler<HTMLSelectElement>
 }

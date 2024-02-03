@@ -1,4 +1,3 @@
-import React from "react"
 import classNames from "@sindresorhus/class-names"
 import Dot from "../Dot"
 import Flex from "../Flex"
@@ -6,6 +5,7 @@ import Icon from "../Icon"
 import Loading from "../Loading"
 import styles from "./Button.module.css"
 import type { ButtonProps } from "./Button.types"
+import type { FC } from "react"
 
 const BUTTON_ICON_SIZE: Record<string, number> = {
 	tiny: 14,
@@ -13,7 +13,7 @@ const BUTTON_ICON_SIZE: Record<string, number> = {
 	normal: 24,
 }
 
-const Button: React.FC<ButtonProps> = ({
+const Button: FC<ButtonProps> = ({
 	flair,
 	icon,
 	value,

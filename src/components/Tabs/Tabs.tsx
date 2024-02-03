@@ -1,15 +1,11 @@
 "use client"
 
-import React, { useState } from "react"
+import { useState, type FC } from "react"
 import { TabsProps } from "./Tabs.types"
 import styles from "./Tabs.module.css"
 import Text from "../Text"
 
-const Tabs: React.FC<TabsProps> = ({
-	active: activeNumber,
-	items,
-	sections,
-}) => {
+const Tabs: FC<TabsProps> = ({ active: activeNumber, items, sections }) => {
 	const [active, setActive] = useState(activeNumber || 0)
 
 	if (!items || !sections) return null

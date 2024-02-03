@@ -1,11 +1,11 @@
-import { useId, useMemo } from "react"
+import { useId, type FC } from "react"
 import Flex from "../Flex"
 import Icon from "../Icon"
 import styles from "./Select.module.css"
 import classNames from "@sindresorhus/class-names"
 import type { SelectProps } from "./Select.types"
 
-const Select: React.FC<SelectProps> = ({
+const Select: FC<SelectProps> = ({
 	selectedValue,
 	onChange,
 	isLabelHidden,

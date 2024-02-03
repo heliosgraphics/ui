@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useRef } from "react"
+import { useEffect, useRef, type FC } from "react"
 import styles from "./Dialog.module.css"
 import Flex from "../Flex"
 import Link from "next/link"
@@ -14,7 +14,7 @@ import type { DialogProps } from "./Dialog.types"
 const ATTRIBUTE_SCROLL = "data-scroll" as const
 const POSITION_FIXED_CLASS = "fixed" as const
 
-const Dialog: React.FC<DialogProps> = ({
+const Dialog: FC<DialogProps> = ({
 	title,
 	children,
 	permalink,

@@ -1,9 +1,9 @@
-import React from "react"
 import classNames from "@sindresorhus/class-names"
 import Flex from "../Flex"
 import type { ColumnProps } from "./Column.types"
+import type { FC } from "react"
 
-const Column: React.FC<ColumnProps> = (props) => {
+const Column: FC<ColumnProps> = (props) => {
 	const columnClasses: string = classNames(props.className, {
 		["mx-auto"]: props.isColumnCentered,
 	})

@@ -1,8 +1,8 @@
-import React from "react"
 import styles from "./LayoutTop.module.css"
+import type { FC } from "react"
 import type { LayoutTopProps } from "./LayoutTop.types"
 
-const LayoutTop: React.FC<LayoutTopProps> = ({ children }) => {
+const LayoutTop: FC<LayoutTopProps> = ({ children }) => {
 	return <nav className={styles.layoutTop}>{children}</nav>
 }
 

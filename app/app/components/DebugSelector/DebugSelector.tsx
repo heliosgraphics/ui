@@ -1,7 +1,8 @@
 import { Toggle } from "../../../../src"
 import type { DebugSelectorProps } from "./DebugSelector.types"
+import type { FC } from "react"
 
-const DebugSelector: React.FC<DebugSelectorProps> = () => {
+const DebugSelector: FC<DebugSelectorProps> = () => {
 	const onDebugToggle = () => {
 		const hasDebug: boolean = document.body.classList.contains("debug")
 

@@ -1,5 +1,5 @@
-import React from "react"
 import { getTypographyUtility } from "../Text/Text.utils"
+import classNames from "@sindresorhus/class-names"
 import H0 from "./components/H0/H0"
 import H1 from "./components/H1/H1"
 import H2 from "./components/H2/H2"
@@ -7,11 +7,11 @@ import H3 from "./components/H3/H3"
 import H4 from "./components/H4/H4"
 import H5 from "./components/H5/H5"
 import H6 from "./components/H6/H6"
-import classNames from "@sindresorhus/class-names"
 import styles from "./Heading.module.css"
 import type { BaseHeadingProps, HeadingProps } from "./Heading.types"
+import type { FC } from "react"
 
-const Heading: React.FC<HeadingProps> = (props) => {
+const Heading: FC<HeadingProps> = (props) => {
 	const headingClasses: string = classNames(props.className, styles.heading, {
 		[styles.headingPrimary]: props.emphasis === "primary",
 		[styles.headingSecondary]: props.emphasis === "secondary",

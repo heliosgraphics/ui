@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, createContext } from "react"
+import { useState, createContext } from "react"
 import type { HeliosIntentionType } from "../../../../src"
 import type { IntentProviderProps } from "./IntentContext.types"
 

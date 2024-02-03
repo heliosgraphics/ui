@@ -1,11 +1,11 @@
-import React, { Fragment } from "react"
-import Link from "next/link"
+import { Fragment, type FC } from "react"
 import Flex from "../Flex"
-import Text from "../Text"
 import Icon from "../Icon"
+import Link from "next/link"
+import Text from "../Text"
 import type { BreadcrumbProps } from "./Breadcrumb.types"
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
+const Breadcrumb: FC<BreadcrumbProps> = ({ items }) => {
 	if (!items?.length) return null
 
 	return (

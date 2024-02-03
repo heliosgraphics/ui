@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef, useEffect, useId } from "react"
+import { useState, useRef, useEffect, useId, type FC } from "react"
 import Flex from "../Flex"
 import Text from "../Text"
 import Spacer from "../Spacer"
@@ -10,7 +10,7 @@ import styles from "./Input.module.css"
 import classNames from "@sindresorhus/class-names"
 import type { InputProps } from "./Input.types"
 
-const Input: React.FC<InputProps> = ({
+const Input: FC<InputProps> = ({
 	onChange,
 	onBlur,
 	helperText,

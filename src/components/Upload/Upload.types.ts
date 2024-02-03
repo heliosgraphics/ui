@@ -1,5 +1,5 @@
 import type { HeliosIconType } from "@heliosgraphics/icons/meta"
-import React from "react"
+import type { ChangeEvent, RefObject } from "react"
 
 export interface UploadProps {
 	accept?: string
@@ -9,12 +9,12 @@ export interface UploadProps {
 	isSmall?: boolean
 	isDisabled?: boolean
 	isRequired?: boolean
-	ref?: React.RefObject<HTMLInputElement>
+	ref?: RefObject<HTMLInputElement>
 	isLoading?: boolean
 	label?: string
 	multiple?: boolean
 	name?: string
-	onChange?: (event?: React.ChangeEvent<HTMLInputElement>) => void
+	onChange?: (event?: ChangeEvent<HTMLInputElement>) => void
 	placeholder?: string
 	value?: string
 }

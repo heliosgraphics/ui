@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, type FC } from "react"
 import {
 	Input,
 	Button,
@@ -9,7 +9,7 @@ import {
 } from "../../../../src"
 import type { FormProps } from "./Form.types"
 
-const Form: React.FC<FormProps> = () => {
+const Form: FC<FormProps> = () => {
 	const onFormSubmit = (e) => console.log(e)
 	const [formInput, setFormInput] = useState<string>("")
 	const [formPassword, setFormPassword] = useState<string>("")

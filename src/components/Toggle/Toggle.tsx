@@ -2,9 +2,10 @@ import { useId } from "react"
 import classNames from "@sindresorhus/class-names"
 import Text from "../Text"
 import styles from "./Toggle.module.css"
+import type { FC } from "react"
 import type { ToggleProps } from "./Toggle.types"
 
-const Toggle: React.FC<ToggleProps> = ({
+const Toggle: FC<ToggleProps> = ({
 	id,
 	isChecked,
 	isSmall,

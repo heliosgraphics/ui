@@ -1,10 +1,10 @@
-import React from "react"
 import { ButtonGroupProps } from "./ButtonGroup.types"
 import classNames from "@sindresorhus/class-names"
 import Flex from "../Flex"
 import styles from "./ButtonGroup.module.css"
+import type { FC } from "react"
 
-const ButtonGroup: React.FC<ButtonGroupProps> = ({
+const ButtonGroup: FC<ButtonGroupProps> = ({
 	className,
 	children,
 	isVertical,

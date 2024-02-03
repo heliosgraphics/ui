@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import { useState, type FC } from "react"
 import {
 	Button,
 	ButtonGroup,
@@ -51,7 +51,7 @@ Phasellus tristique tortor sed malesuada aliquam. Quisque cursus sodales velit, 
 </small>
 `
 
-const Markdowns: React.FC<MarkdownsProps> = () => {
+const Markdowns: FC<MarkdownsProps> = () => {
 	const onClose = () => console.log(0)
 
 	return (

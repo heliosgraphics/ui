@@ -1,4 +1,3 @@
-import React from "react"
 import classNames from "@sindresorhus/class-names"
 import Icon_ArrowDown from "@heliosgraphics/icons/out/arrow-down.svg"
 import Icon_ArrowLeft from "@heliosgraphics/icons/out/arrow-left.svg"
@@ -107,8 +106,9 @@ import Icon_XYoutube from "@heliosgraphics/icons/out/x-youtube.svg"
 import styles from "./Icon.module.css"
 import type { HeliosIconType } from "@heliosgraphics/icons/meta"
 import type { IconProps } from "./Icon.types"
+import type { ReactElement, FC } from "react"
 
-const ICONS: Record<HeliosIconType, React.ReactElement> = {
+const ICONS: Record<HeliosIconType, ReactElement> = {
 	"arrow-down": <Icon_ArrowDown />,
 	"arrow-left": <Icon_ArrowLeft />,
 	"arrow-right": <Icon_ArrowRight />,
@@ -215,8 +215,8 @@ const ICONS: Record<HeliosIconType, React.ReactElement> = {
 	x: <Icon_X />,
 }
 
-const Icon: React.FC<IconProps> = ({ name, className, emphasis, size }) => {
-	const IconShape = (): React.ReactElement => ICONS[name] || null
+const Icon: FC<IconProps> = ({ name, className, emphasis, size }) => {
+	const IconShape = (): ReactElement => ICONS[name] || null
 	const iconSizeStyle = {
 		height: size + "px",
 		minHeight: size + "px",

@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState, createContext } from "react"
+import { useEffect, useState, createContext } from "react"
 import { usePathname } from "next/navigation"
 import type { LayoutProviderProps } from "./LayoutProvider.types"
 

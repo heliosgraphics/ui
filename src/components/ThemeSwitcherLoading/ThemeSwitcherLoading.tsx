@@ -1,7 +1,8 @@
 import { Toggle } from "../.."
+import type { FC } from "react"
 import type { ThemeSwitcherLoadingProps } from "./ThemeSwitcherLoading.types"
 
-const ThemeSwitcherLoading: React.FC<ThemeSwitcherLoadingProps> = () => {
+const ThemeSwitcherLoading: FC<ThemeSwitcherLoadingProps> = () => {
 	return (
 		<Toggle
 			label="Dark Theme"
