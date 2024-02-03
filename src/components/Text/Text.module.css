@@ -16,10 +16,6 @@
 	color: var(--ui-text-tertiary);
 }
 
-.textSilent {
-	color: var(--ui-text-silent);
-}
-
 .text a {
 	color: inherit;
 	cursor: pointer;

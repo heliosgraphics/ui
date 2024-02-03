@@ -51,10 +51,9 @@
 	--line-height-small: 22px;
 	--line-height-tiny: 18px;
 
-	--font-family-sans: "Inter", -apple-system, "Helvetica Neue", Arial,
-		sans-serif;
+	--font-family-sans: "Inter", -apple-system, "Helvetica Neue", Arial, sans-serif;
 	--font-family-mono: "JetBrains Mono", courier, monospace;
-	--font-family-serif: "Frank Ruhl Libre", Georgia;
+	--font-family-serif: "Times New Roman", Times, Georgia;
 
 	--font-weight-thin: 100;
 	--font-weight-extra-light: 200;
@@ -139,9 +138,8 @@
 	--ui-saturation: 4%;
 
   --ui-text-primary: hsl(var(--ui-hue), var(--ui-saturation), 8%);
-  --ui-text-secondary: hsl(var(--ui-hue), var(--ui-saturation), 24%);
-  --ui-text-tertiary: hsl(var(--ui-hue), var(--ui-saturation), 66%);
-  --ui-text-silent: hsl(var(--ui-hue), var(--ui-saturation), 66%);
+  --ui-text-secondary: hsl(var(--ui-hue), var(--ui-saturation), 44%);
+  --ui-text-tertiary: hsl(var(--ui-hue), var(--ui-saturation), 69%);
 
 	--ui-border-light: hsl(var(--ui-hue), var(--ui-saturation), 95%);
 	--ui-border: hsl(var(--ui-hue), var(--ui-saturation), 85%);
@@ -189,9 +187,8 @@
 	--yellow-saturation: 80%;
 
 	--ui-text-primary: hsl(var(--ui-hue), var(--ui-saturation), 92%);
-  --ui-text-secondary: hsl(var(--ui-hue), var(--ui-saturation), 76%);
-  --ui-text-tertiary: hsl(var(--ui-hue), var(--ui-saturation), 76%);
-  --ui-text-silent: hsl(var(--ui-hue), var(--ui-saturation), 32%);
+  --ui-text-secondary: hsl(var(--ui-hue), var(--ui-saturation), 62%);
+  --ui-text-tertiary: hsl(var(--ui-hue), var(--ui-saturation), 33%);
 
 	--ui-border-light: hsl(var(--ui-hue), var(--ui-saturation), 10%);
 	--ui-border: hsl(var(--ui-hue), var(--ui-saturation), 20%);
@@ -256,7 +253,7 @@ body {
 }
 
 /* helpers: text color */
-.text-secondary {
+ext-secondary {
 	color: var(--ui-text-secondary);
 }
 

@@ -13,4 +13,3 @@ export type HeliosEmphasisType =
 	| "primary"
 	| "secondary"
 	| "tertiary"
-	| "silent"

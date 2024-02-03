@@ -66,10 +66,6 @@ const ExamplesToggle: React.FC<ExamplesTextProps> = () => {
 				of the <a>delicate balance</a> between light and darkness, a testament
 				to the transient beauty that flickers briefly in the fabric of time.
 			</Text>
-			<Text type={type} emphasis="silent" fontFamily={fontFamily}>
-				Beneath the boughs of a behemoth beech, butterflies basked in the balmy
-				breeze.
-			</Text>
 		</Flex>
 	)
 }

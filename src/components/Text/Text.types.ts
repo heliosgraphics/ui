@@ -1,7 +1,11 @@
+import type { HTMLAttributes } from 'react'
 import type { HeliosEmphasisType } from "../../types/intentions"
 
-export interface TextProps {
-	children: React.ReactNode
+export interface BaseTextProps extends HTMLAttributes<HTMLDivElement> {
+	style?: object
+}
+
+export interface TextProps extends BaseTextProps {
 	className?: string
 	emphasis?: HeliosEmphasisType
 	fontFamily?: "sans" | "serif" | "mono"
@@ -20,7 +24,6 @@ export interface TextProps {
 	isUnselectable?: boolean
 	lineClamp?: number
 	type: "tiny" | "small" | "paragraph" | "div"
-	onClick?: () => void
 	textAlign?: "left" | "right" | "center" | "justify"
 	textDecoration?:
 	| "delete"

@@ -20,7 +20,3 @@
 .iconTertiary svg {
 	fill: var(--ui-text-tertiary);
 }
-
-.iconSilent svg {
-	fill: var(--ui-text-silent);
-}

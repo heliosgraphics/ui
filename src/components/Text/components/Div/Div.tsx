@@ -1,8 +1,13 @@
-import React from "react"
-import type { FUITypographyUtility } from "@heliosgraphics/library/types/typography"
+import type { DivProps } from "./Div.types"
 
-const Div: React.FC<FUITypographyUtility> = (props) => {
-	return <div {...props} className={`p ${props.className}`} />
+const Div: React.FC<DivProps> = (props) => {
+	return (
+		<div
+			{...props}
+			className={`p ${props.className}`}
+			data-component="Text.Div"
+		/>
+	)
 }
 
 export default Div

@@ -1,8 +1,14 @@
 import React from "react"
-import type { FUITypographyUtility } from "@heliosgraphics/library/types/typography"
+import type { TinyProps } from "./Tiny.types"
 
-const Tiny: React.FC<FUITypographyUtility> = (props) => {
-	return <small {...props} className={`tiny ${props.className}`} />
+const Tiny: React.FC<TinyProps> = (props) => {
+	return (
+		<small
+			{...props}
+			className={`tiny ${props.className}`}
+			data-component="Text.Tiny"
+		/>
+	)
 }
 
 export default Tiny
