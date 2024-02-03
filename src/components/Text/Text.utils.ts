@@ -1,4 +1,5 @@
 import type { TextProps } from "./Text.types"
+import type { HeadingProps } from "../Heading/Heading.types"
 
 export const _getFontWeight = (fw: TextProps["fontWeight"]): string => {
 	switch (fw) {
@@ -27,7 +28,7 @@ export const _getFontWeight = (fw: TextProps["fontWeight"]): string => {
 }
 
 export const getTypographyUtility = (
-	props: TextProps
+	props: TextProps | HeadingProps
 ): string => {
 	const typoClasses: Array<string> = []
 

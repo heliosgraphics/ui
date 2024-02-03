@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import { useState } from "react"
 import {
 	Flex,
 	Select,
@@ -24,7 +24,7 @@ const FONT_FAMILIES: Array<{ name: string; value: TextProps["fontFamily"] }> = [
 	{ name: "Serif", value: "serif" },
 ]
 
-const ExamplesToggle: React.FC<ExamplesTextProps> = () => {
+const ExamplesText: React.FC<ExamplesTextProps> = () => {
 	const [type, setType] = useState<TextProps["type"]>("div")
 	const [fontFamily, setFontFamily] = useState<TextProps["fontFamily"]>("sans")
 
@@ -70,4 +70,4 @@ const ExamplesToggle: React.FC<ExamplesTextProps> = () => {
 	)
 }
 
-export default ExamplesToggle
+export default ExamplesText

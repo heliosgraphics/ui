@@ -51,6 +51,7 @@ export type { PieItem } from './components/Pie'
 export type { ResultItem } from './components/ResultList'
 export type { SelectItem } from './components/Select'
 export type { TextProps } from './components/Text'
+export type { HeadingProps } from './components/Heading'
 
 // hooks
 export { useIntersector } from "./hooks/useIntersector"

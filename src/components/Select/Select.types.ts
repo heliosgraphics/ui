@@ -1,6 +1,6 @@
 import type { ResultItem } from "../ResultList"
 
-export type SelectItem = Pick<ResultItem, 'name' | 'value'>
+export type SelectItem = Pick<ResultItem, 'name' | 'value' | 'isDisabled'>
 
 export interface SelectProps {
 	label?: string

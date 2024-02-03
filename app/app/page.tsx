@@ -54,6 +54,7 @@ import ExamplesToggle from "./components/ExamplesToggle"
 import ExamplesButtonGroup from "./components/ExamplesButtonGroup"
 import IntentSelector from "./components/IntentSelector"
 import ExamplesBreadcrumb from "./components/ExamplesBreadcrumb"
+import ExamplesHeading from "./components/ExamplesHeading"
 import ExamplesText from "./components/ExamplesText"
 
 const resultListItems: Array<ResultItem> = [
@@ -178,6 +179,10 @@ export default function Home() {
 								<Text type="small">03</Text>
 								<Text type="small">04</Text>
 							</Grid>
+						</Details>
+
+						<Details title="Heading">
+							<ExamplesHeading />
 						</Details>
 
 						<Details title="Icon">

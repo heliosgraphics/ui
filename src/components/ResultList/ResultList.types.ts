@@ -6,6 +6,7 @@ export interface ResultItem {
 	icon?: HeliosIconType
 	type?: "separator"
 	isActive?: boolean
+	isDisabled?: boolean
 	iconColor?: FUIColors
 	name: string
 	onClick?: (value) => void

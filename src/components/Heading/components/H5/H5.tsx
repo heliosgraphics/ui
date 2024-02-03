@@ -1,8 +1,14 @@
 import React from "react"
-import type { FUITypographyUtility } from "@heliosgraphics/library/types/typography"
+import type { H5Props } from "./H5.types"
 
-const H5: React.FC<FUITypographyUtility> = (props) => {
-	return <h5 {...props} className={`h5 ${props.className}`} />
+const H5: React.FC<H5Props> = (props) => {
+	return (
+		<h5
+			{...props}
+			className={`h5 ${props.className}`}
+			data-component="Heading.H5"
+		/>
+	)
 }
 
 export default H5

@@ -35,7 +35,7 @@ const Select: React.FC<SelectProps> = ({
 				>
 					{items?.map((item, key) => {
 						return (
-							<option key={key} value={item.value}>
+							<option key={key} value={item.value} disabled={item.isDisabled}>
 								{item.name}
 							</option>
 						)

@@ -2,7 +2,14 @@
 	white-space: break-spaces;
 }
 
-.heading mark {
-	background-color: transparent;
-	color: var(--blue-500);
+.headingPrimary {
+	color: var(--ui-text-primary);
+}
+
+.headingSecondary {
+	color: var(--ui-text-secondary);
+}
+
+.headingTertiary {
+	color: var(--ui-text-tertiary);
 }

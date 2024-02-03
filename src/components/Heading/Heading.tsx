@@ -7,35 +7,33 @@ import H3 from "./components/H3/H3"
 import H4 from "./components/H4/H4"
 import H5 from "./components/H5/H5"
 import H6 from "./components/H6/H6"
+import classNames from "@sindresorhus/class-names"
 import styles from "./Heading.module.css"
-import type { HeadingProps } from "./Heading.types"
+import type { BaseHeadingProps, HeadingProps } from "./Heading.types"
 
 const Heading: React.FC<HeadingProps> = (props) => {
-	const utility: string = getTypographyUtility(props)
-
-	const {
-		level,
-		textAlign,
-		lineClamp,
-		fontFamily,
-		fontStyle,
-		fontWeight,
-		textDecoration,
-		...validProps
-	} = props
-
-	const lineclampStyle = props.lineClamp
+	const headingClasses: string = classNames(props.className, styles.heading, {
+		[styles.headingPrimary]: props.emphasis === "primary",
+		[styles.headingSecondary]: props.emphasis === "secondary",
+		[styles.headingTertiary]: props.emphasis === "tertiary",
+	})
+	const utility: string = getTypographyUtility({
+		...props,
+		className: headingClasses,
+	})
+	const lineClampStyle: object | undefined = props.lineClamp
 		? {
 				display: "-webkit-box",
 				WebkitLineClamp: props.lineClamp,
 				WebkitBoxOrient: "vertical",
 				overflow: "hidden",
 			}
-		: {}
+		: undefined
 
-	const allProps = {
-		...validProps,
-		style: lineclampStyle,
+	const allProps: BaseHeadingProps = {
+		onClick: props.onClick,
+		children: props.children,
+		style: lineClampStyle,
 		className: utility,
 	}
 
@@ -54,12 +52,9 @@ const Heading: React.FC<HeadingProps> = (props) => {
 			return <H5 {...allProps} />
 		case 6:
 			return <H6 {...allProps} />
-
 		default:
 			null
 	}
-
-	return null
 }
 
 export default Heading

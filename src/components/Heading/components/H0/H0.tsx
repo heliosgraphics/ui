@@ -1,9 +1,12 @@
 import React from "react"
 import styles from "./H0.module.css"
-import type { FUITypographyUtility } from "@heliosgraphics/library/types/typography"
+import classNames from "@sindresorhus/class-names"
+import type { H0Props } from "./H0.types"
 
-const H0: React.FC<FUITypographyUtility> = (props) => {
-	return <h1 {...props} className={`h1 ${styles.h0}`} />
+const H0: React.FC<H0Props> = (props) => {
+	const h0Classes: string = classNames(props.className, "h1", styles.h0)
+
+	return <h1 {...props} className={h0Classes} data-component="Heading.H0" />
 }
 
 export default H0

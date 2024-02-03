@@ -1,8 +1,14 @@
 import React from "react"
-import type { FUITypographyUtility } from "@heliosgraphics/library/types/typography"
+import type { H2Props } from "./H2.types"
 
-const H2: React.FC<FUITypographyUtility> = (props) => {
-	return <h2 {...props} className={`h2 ${props.className}`} />
+const H2: React.FC<H2Props> = (props) => {
+	return (
+		<h2
+			{...props}
+			className={`h2 ${props.className}`}
+			data-component="Heading.H2"
+		/>
+	)
 }
 
 export default H2
