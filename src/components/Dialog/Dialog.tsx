@@ -3,7 +3,6 @@
 import { useEffect, useRef, type FC } from "react"
 import styles from "./Dialog.module.css"
 import Flex from "../Flex"
-import Link from "next/link"
 import Button from "../Button"
 import ButtonGroup from "../ButtonGroup"
 import classNames from "@sindresorhus/class-names"
@@ -17,7 +16,7 @@ const POSITION_FIXED_CLASS = "fixed" as const
 const Dialog: FC<DialogProps> = ({
 	title,
 	children,
-	permalink,
+	onClick,
 	isOpen,
 	onClose,
 }) => {
@@ -109,16 +108,16 @@ const Dialog: FC<DialogProps> = ({
 					<Heading level={4} fontWeight="normal">
 						{title}
 					</Heading>
-				) : permalink ? (
+				) : onClick ? (
 					<ButtonGroup>
-						<Link href={permalink}>
+						<a onClick={onClick}>
 							<Button
 								icon="link"
-								type="secondary"
+								intent="silent"
 								value="Permalink"
 								size="small"
 							/>
-						</Link>
+						</a>
 					</ButtonGroup>
 				) : (
 					<div />
@@ -126,12 +125,11 @@ const Dialog: FC<DialogProps> = ({
 				<ButtonGroup>
 					<Button
 						icon="x"
-						type="secondary"
+						intent="silent"
 						value=""
 						onClick={onClose}
 						size="small"
 						isIconOnly={true}
-						color="gray"
 					/>
 				</ButtonGroup>
 			</Flex>

@@ -5,6 +5,6 @@ export interface DialogProps {
 	isOpen?: boolean
 	isCentered?: boolean
 	onClose: (_event?: any) => Promise<void> | void
-	permalink?: string
+	onClick?: () => void
 	title?: string
 }

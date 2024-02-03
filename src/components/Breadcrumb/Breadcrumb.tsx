@@ -1,7 +1,6 @@
 import { Fragment, type FC } from "react"
 import Flex from "../Flex"
 import Icon from "../Icon"
-import Link from "next/link"
 import Text from "../Text"
 import type { BreadcrumbProps } from "./Breadcrumb.types"
 
@@ -15,11 +14,11 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ items }) => {
 
 				return (
 					<Fragment key={key}>
-						<Link href={item.href}>
+						<a href={item.href} onClick={item.onClick}>
 							<Text type="div" fontStyle={item?.isActive ? "italic" : "normal"}>
 								{item.name}
 							</Text>
-						</Link>
+						</a>
 						{!isLast && (
 							<Icon name="arrow-right" size={12} emphasis="tertiary" />
 						)}

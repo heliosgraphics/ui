@@ -16,6 +16,7 @@ import type { ExamplesButtonGroupProps } from "./ExamplesButtonGroup.types"
 
 const BUTTON_ALIGNS = ["left", "center", "right", "join"]
 
+const ExamplesButtonGroup: FC<{}> = () => {
 	const { intent } = useContext(IntentContext)
 	const [alignIndex, setAlignIndex] = useState<number>(0)
 	const [isVertical, setVertical] = useState<boolean>(false)

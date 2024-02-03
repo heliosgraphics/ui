@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState, createContext } from "react"
-import { usePathname } from "next/navigation"
 import type { LayoutProviderProps } from "./LayoutProvider.types"
 
 const LayoutContext = createContext<LayoutProviderProps>({
@@ -11,7 +10,7 @@ const LayoutContext = createContext<LayoutProviderProps>({
 
 const LayoutProvider = (props) => {
 	const [isActive, setActive] = useState<boolean>(false)
-	const pathname = usePathname()
+	const pathname = "TODO"
 
 	useEffect(() => {
 		setActive(false)
