@@ -16,41 +16,33 @@
 	gap: 0;
 }
 
-/* left */
-.buttonGroupHorizontal.buttonGroupJoin > a:first-child > div
-.buttonGroupHorizontal.buttonGroupJoin > a:first-child > div input:focus-visible,
-.buttonGroupHorizontal.buttonGroupJoin > a:first-child > div input:active,
-.buttonGroupHorizontal.buttonGroupJoin > div:first-child,
-.buttonGroupHorizontal.buttonGroupJoin > div:first-child input:focus-visible,
-.buttonGroupHorizontal.buttonGroupJoin > div:first-child input:active {
+/* Horizontal Left */
+.buttonGroupHorizontal.buttonGroupJoin > *:first-child,
+.buttonGroupHorizontal.buttonGroupJoin > *:first-child input:focus-visible,
+.buttonGroupHorizontal.buttonGroupJoin > *:first-child input:active {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 }
 
-/* middle */
-.buttonGroupHorizontal.buttonGroupJoin
-	> a:not(:first-child):not(:last-child)
-	> div,
-.buttonGroupHorizontal.buttonGroupJoin
-	> div:not(:first-child):not(:last-child) {
+/* Horizontal Middle */
+.buttonGroupHorizontal.buttonGroupJoin > *:not(:first-child):not(:last-child) {
 	margin-left: -1px;
+}
 
+.buttonGroupHorizontal.buttonGroupJoin > *:not(:first-child):not(:last-child),
+.buttonGroupHorizontal.buttonGroupJoin > *:not(:first-child):not(:last-child) input:focus-visible,
+.buttonGroupHorizontal.buttonGroupJoin > *:not(:first-child):not(:last-child) input:active {
 	border-radius: 0;
 }
 
-/* right */
-.buttonGroupHorizontal.buttonGroupJoin > a:last-child > div,
-.buttonGroupHorizontal.buttonGroupJoin > div:last-child {
+/* Horizontal Right */
+.buttonGroupHorizontal.buttonGroupJoin > *:last-child {
 	margin-left: -1px;
-
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
 }
 
-.buttonGroupHorizontal.buttonGroupJoin > a:last-child > div input:focus-visible,
-.buttonGroupHorizontal.buttonGroupJoin > a:last-child > div input:active,
-.buttonGroupHorizontal.buttonGroupJoin > div:last-child input:focus-visible,
-.buttonGroupHorizontal.buttonGroupJoin > div:last-child input:active {
+.buttonGroupHorizontal.buttonGroupJoin > *:last-child,
+.buttonGroupHorizontal.buttonGroupJoin > *:last-child input:focus-visible,
+.buttonGroupHorizontal.buttonGroupJoin > *:last-child input:active {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 }
@@ -62,38 +54,33 @@
 	gap: 0;
 }
 
-/* left */
-.buttonGroupVertical.buttonGroupJoin > a:first-child > div,
-.buttonGroupVertical.buttonGroupJoin > a:first-child > div input:focus-visible,
-.buttonGroupVertical.buttonGroupJoin > div:first-child,
-.buttonGroupVertical.buttonGroupJoin > div:first-child input:focus-visible {
+/* Vertical Left */
+.buttonGroupVertical.buttonGroupJoin > *:first-child,
+.buttonGroupVertical.buttonGroupJoin > *:first-child input:focus-visible,
+.buttonGroupVertical.buttonGroupJoin > *:first-child input:active {
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 }
 
-/* middle */
-.buttonGroupVertical.buttonGroupJoin
-	> a:not(:first-child):not(:last-child)
-	> div,
-.buttonGroupVertical.buttonGroupJoin > div:not(:first-child):not(:last-child) {
+/* Vertical Middle */
+.buttonGroupVertical.buttonGroupJoin > *:not(:first-child):not(:last-child) {
 	margin-top: -1px;
+}
 
+.buttonGroupVertical.buttonGroupJoin > *:not(:first-child):not(:last-child),
+.buttonGroupVertical.buttonGroupJoin > *:not(:first-child):not(:last-child) input:focus-visible,
+.buttonGroupVertical.buttonGroupJoin > *:not(:first-child):not(:last-child) input:active {
 	border-radius: 0;
 }
 
-/* right */
-.buttonGroupVertical.buttonGroupJoin > a:last-child > div,
-.buttonGroupVertical.buttonGroupJoin > div:last-child {
+/* Vertical Right */
+.buttonGroupVertical.buttonGroupJoin > *:last-child {
 	margin-top: -1px;
-
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
 }
 
-.buttonGroupVertical.buttonGroupJoin > a:last-child > div input:focus-visible,
-.buttonGroupVertical.buttonGroupJoin > a:last-child > div input:active,
-.buttonGroupVertical.buttonGroupJoin > div:last-child input:focus-visible,
-.buttonGroupVertical.buttonGroupJoin > div:last-child input:active {
+.buttonGroupVertical.buttonGroupJoin > *:last-child,
+.buttonGroupVertical.buttonGroupJoin > *:last-child input:focus-visible,
+.buttonGroupVertical.buttonGroupJoin > *:last-child input:active {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 }

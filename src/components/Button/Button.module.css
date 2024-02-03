@@ -1,11 +1,3 @@
-/* generis */
-.buttonActive,
-.button:hover,
-.button:active,
-.button:focus {
-	z-index: 1;
-}
-
 .button {
 	background-color: var(--button-bg);
 	color: var(--button-text);

@@ -54,8 +54,18 @@ const ExamplesButtonGroup: React.FC<ExamplesButtonGroupProps> = () => {
 				isVertical={isVertical}
 				align={BUTTON_ALIGNS[alignIndex] as ButtonGroupProps["align"]}
 			>
-				<Button intent="silent" value="Cancel" />
-				<Button intent={intent} value="Start" />
+				<Button
+					intent="silent"
+					value="Cancel"
+					isIconOnly={isVertical}
+					icon="bullseye"
+				/>
+				<Button
+					intent={intent}
+					value="Start"
+					isIconOnly={isVertical}
+					icon="x"
+				/>
 			</ButtonGroup>
 			<ButtonGroup
 				isVertical={isVertical}
@@ -87,8 +97,20 @@ const ExamplesButtonGroup: React.FC<ExamplesButtonGroupProps> = () => {
 				isVertical={isVertical}
 				align={BUTTON_ALIGNS[alignIndex] as ButtonGroupProps["align"]}
 			>
-				<Button intent="silent" value="Cancel" size="tiny" />
-				<Button intent={intent} value="Start" size="tiny" />
+				<Button
+					intent="silent"
+					value="Cancel"
+					size="tiny"
+					isIconOnly={isVertical}
+					icon="bullseye"
+				/>
+				<Button
+					intent={intent}
+					value="Start"
+					size="tiny"
+					isIconOnly={isVertical}
+					icon="x"
+				/>
 			</ButtonGroup>
 		</Flex>
 	)
