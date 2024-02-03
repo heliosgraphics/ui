@@ -10,7 +10,7 @@
 }
 
 .iconPrimary svg {
-	fill: var(--ui-text);
+	fill: var(--ui-text-primary);
 }
 
 .iconSecondary svg {

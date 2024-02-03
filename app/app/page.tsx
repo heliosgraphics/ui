@@ -281,7 +281,7 @@ export default function Home() {
 							<Timestamp />
 						</Details>
 
-						<Details title="Toggle" isOpen={true}>
+						<Details title="Toggle">
 							<ExamplesToggle />
 						</Details>
 

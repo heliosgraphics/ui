@@ -17,8 +17,12 @@
 }
 
 /* left */
-.buttonGroupHorizontal.buttonGroupJoin > a:first-child > div,
-.buttonGroupHorizontal.buttonGroupJoin > div:first-child {
+.buttonGroupHorizontal.buttonGroupJoin > a:first-child > div
+.buttonGroupHorizontal.buttonGroupJoin > a:first-child > div input:focus-visible,
+.buttonGroupHorizontal.buttonGroupJoin > a:first-child > div input:active,
+.buttonGroupHorizontal.buttonGroupJoin > div:first-child,
+.buttonGroupHorizontal.buttonGroupJoin > div:first-child input:focus-visible,
+.buttonGroupHorizontal.buttonGroupJoin > div:first-child input:active {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 }
@@ -43,6 +47,14 @@
 	border-bottom-left-radius: 0;
 }
 
+.buttonGroupHorizontal.buttonGroupJoin > a:last-child > div input:focus-visible,
+.buttonGroupHorizontal.buttonGroupJoin > a:last-child > div input:active,
+.buttonGroupHorizontal.buttonGroupJoin > div:last-child input:focus-visible,
+.buttonGroupHorizontal.buttonGroupJoin > div:last-child input:active {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
 /* Vertical */
 .buttonGroupVertical.buttonGroupJoin {
 	flex-direction: column;
@@ -52,7 +64,9 @@
 
 /* left */
 .buttonGroupVertical.buttonGroupJoin > a:first-child > div,
-.buttonGroupVertical.buttonGroupJoin > div:first-child {
+.buttonGroupVertical.buttonGroupJoin > a:first-child > div input:focus-visible,
+.buttonGroupVertical.buttonGroupJoin > div:first-child,
+.buttonGroupVertical.buttonGroupJoin > div:first-child input:focus-visible {
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 }
@@ -72,6 +86,14 @@
 .buttonGroupVertical.buttonGroupJoin > div:last-child {
 	margin-top: -1px;
 
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.buttonGroupVertical.buttonGroupJoin > a:last-child > div input:focus-visible,
+.buttonGroupVertical.buttonGroupJoin > a:last-child > div input:active,
+.buttonGroupVertical.buttonGroupJoin > div:last-child input:focus-visible,
+.buttonGroupVertical.buttonGroupJoin > div:last-child input:active {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 }
