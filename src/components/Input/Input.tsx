@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useMemo, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, useId } from "react"
 import Flex from "../Flex"
 import Text from "../Text"
 import Spacer from "../Spacer"
@@ -8,24 +8,26 @@ import ResultList from "../ResultList"
 import Loading from "../Loading"
 import styles from "./Input.module.css"
 import classNames from "@sindresorhus/class-names"
-import { getUUID } from "@heliosgraphics/utils/uuid"
 import type { InputProps } from "./Input.types"
 
-const Input: React.FC<InputProps> = (props) => {
+const Input: React.FC<InputProps> = ({
+	onChange,
+	onBlur,
+	helperText,
+	results,
+	label,
+	placeholder,
+	value,
+	isLoading,
+	isLabelHidden,
+	isDisabled,
+	isRequired,
+	onFocus,
+}) => {
 	const [isActive, setActive] = useState(false)
 	const textareaRef = useRef<HTMLTextAreaElement | null>(null)
-	const {
-		helperText,
-		isDisabled,
-		isLabelHidden,
-		isLoading,
-		isRequired,
-		results,
-		...goodProps
-	} = props
 
-	const htmlFor: string = useMemo(() => getUUID(props.id), [props.id])
-
+	const htmlFor: string = useId()
 	const inputClasses: string = classNames(
 		styles.input,
 		"flex flex-column gap-3",
@@ -44,38 +46,40 @@ const Input: React.FC<InputProps> = (props) => {
 		}
 	}, [])
 
-	const onBlur = (event) => {
+	const onInputBlur = (event) => {
 		setActive(false)
 
-		props?.onBlur?.(event)
+		onBlur?.(event)
 	}
 
-	const onFocus = (event) => {
+	const onInputFocus = (event) => {
 		setActive(true)
 
-		props?.onFocus?.(event)
+		onFocus?.(event)
 	}
 
 	const hasResults: boolean = typeof results !== "undefined"
 
 	return (
 		<div className={inputClasses}>
-			{props.label && !isLabelHidden && (
+			{label && !isLabelHidden && (
 				<label className="small gray-500 unselectable" htmlFor={htmlFor}>
-					{props.label}
+					{label}
 				</label>
 			)}
 			<Flex className="grow-1">
 				<input
-					{...goodProps}
-					id={htmlFor}
 					className={styles.input__input}
 					disabled={isDisabled}
-					onFocus={onFocus}
+					id={htmlFor}
 					onBlur={onBlur}
-					required={props.isRequired}
+					onChange={onChange}
+					onFocus={onFocus}
+					placeholder={placeholder}
+					required={isRequired}
+					defaultValue={value}
 				/>
-				{props.isLoading && (
+				{isLoading && (
 					<div className={styles.input__input__loading}>
 						<Loading size={10} />
 					</div>
@@ -87,9 +91,9 @@ const Input: React.FC<InputProps> = (props) => {
 					<ResultList items={results!} />
 				</div>
 			)}
-			{!!props.helperText && (
+			{!!helperText && (
 				<Text type="tiny" emphasis="tertiary" className="mt-2">
-					{props.helperText}
+					{helperText}
 				</Text>
 			)}
 		</div>

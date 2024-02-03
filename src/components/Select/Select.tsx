@@ -1,5 +1,4 @@
-import React, { useMemo } from "react"
-import { getUUID } from "@heliosgraphics/utils/uuid"
+import { useId, useMemo } from "react"
 import Flex from "../Flex"
 import Icon from "../Icon"
 import styles from "./Select.module.css"
@@ -15,7 +14,7 @@ const Select: React.FC<SelectProps> = ({
 	id,
 	label,
 }) => {
-	const htmlFor: string = useMemo(() => getUUID(id), [id])
+	const htmlFor: string = id || useId()
 	const selectClasses: string = classNames(styles.select, {
 		[styles.selectDisabled]: isDisabled,
 	})

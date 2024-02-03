@@ -19,6 +19,8 @@ const Input: React.FC<InputProps> = () => {
 
 	return (
 		<Flex isColumn={true} gap={8}>
+			{input}
+			{input2}
 			<InputComponent
 				value={input}
 				label="Your Name"

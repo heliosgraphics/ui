@@ -1,5 +1,4 @@
-import React from "react"
-import { getUUID } from "@heliosgraphics/utils/uuid"
+import { useId } from "react"
 import classNames from "@sindresorhus/class-names"
 import Text from "../Text"
 import styles from "./Toggle.module.css"
@@ -14,8 +13,7 @@ const Toggle: React.FC<ToggleProps> = ({
 	onChange,
 	label,
 }) => {
-	const toggleId: string = getUUID(id)
-
+	const toggleId: string = id || useId()
 	const toggleClasses = classNames(styles.toggle, {
 		[styles.toggleAdvise]: intent === "advise",
 		[styles.toggleAutomation]: intent === "automation",

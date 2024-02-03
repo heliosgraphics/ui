@@ -1,10 +1,9 @@
-import React, { useMemo } from "react"
+import { useId, useMemo } from "react"
 import styles from "./Dot.module.css"
-import { getUUID } from "@heliosgraphics/utils/uuid"
 import type { DotProps } from "./Dot.types"
 
 const Dot: React.FC<DotProps> = ({ colorAccent, size = 8, color = "blue" }) => {
-	const dotId: string = useMemo(() => getUUID(), [])
+	const dotId: string = useId()
 	const dotColor: string = "red"
 	const dotColorAccent: string = useMemo(
 		() => "blue",

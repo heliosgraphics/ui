@@ -1,11 +1,10 @@
-import * as React from "react"
 import { CheckboxProps } from "./Checkbox.types"
+import { useId } from "react"
 import classNames from "@sindresorhus/class-names"
-import Text from "../Text"
-import Icon from "../Icon"
 import Flex from "../Flex"
-import { getUUID } from "@heliosgraphics/utils/uuid"
+import Icon from "../Icon"
 import styles from "./Checkbox.module.css"
+import Text from "../Text"
 
 const Checkbox: React.FC<CheckboxProps> = ({
 	isLabelHidden,
@@ -18,8 +17,8 @@ const Checkbox: React.FC<CheckboxProps> = ({
 	description,
 	id,
 }) => {
-	const localName: string = getUUID(name)
-	const localId: string = getUUID(!!id ? `${id}-label` : undefined)
+	const localName: string = name || useId()
+	const localId: string = id || useId()
 
 	const checkboxClasses: string = classNames(styles.checkbox__checkbox, {
 		[styles.checkbox__checkboxChecked]: isChecked,

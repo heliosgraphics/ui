@@ -1,10 +1,9 @@
 "use client"
 
-import React, { useState, useMemo, useRef, useEffect } from "react"
+import { useId, useState, useRef, useEffect } from "react"
 import Text from "../Text"
 import styles from "./Textarea.module.css"
 import classNames from "@sindresorhus/class-names"
-import { getUUID } from "@heliosgraphics/utils/uuid"
 import type { TextareaProps } from "./Textarea.types"
 
 const Textarea: React.FC<TextareaProps> = (props) => {
@@ -13,8 +12,7 @@ const Textarea: React.FC<TextareaProps> = (props) => {
 	const { autoComplete, helperText, isDisabled, isLabelHidden, ...goodProps } =
 		props
 
-	const htmlFor: string = useMemo(() => getUUID(props.id), [props.id])
-
+	const htmlFor: string = props.id || useId()
 	const inputClasses: string = classNames(
 		styles.textarea,
 		"flex flex-column gap-2",
