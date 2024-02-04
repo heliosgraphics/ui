@@ -1,83 +1,119 @@
 .checkbox {
-	display: flex;
+	--checkbox-size: 24px;
+	--checkbox-margin: 3px;
+	--checkbox-radius: var(--radius-normal);
+
+	position: relative;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.checkboxSmall {
+	--checkbox-size: 18px;
+	--checkbox-margin: 2px;
+	--checkbox-radius: var(--radius-small);
+}
+
+.checkboxDisabled {
+	pointer-events: none;
+}
+
+.checkboxDisabled .checkbox__checkboxMark {
+	opacity: 0.5;
 }
 
 .checkbox input {
-	display: none;
-	height: 0;
-	width: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
 
-	visibility: none;
-}
-
-.checkbox__checkbox {
-	position: relative;
-
-	align-items: center;
-	display: inline-flex;
-	min-width: calc(100% - 24px);
-
-	user-select: none;
-}
-
-.checkbox__checkbox__checkIcon {
-	align-self: baseline;
+	appearance: none;
 	display: flex;
-	margin-right: 12px;
 	overflow: hidden;
+  height: var(--checkbox-size);
+  width: var(--checkbox-size);
 
-	box-shadow: inset 0 0 0 2px var(--blue-500);
-	border-radius: 4px;
-	color: var(--gray-0);
-	transition: all 120ms ease-in-out;
+	border-radius: var(--checkbox-radius);
+	outline-color: var(--checkbox-bg-checked);
+
+	cursor: pointer;
 }
 
-/* Hover */
-.checkbox__checkbox:hover input ~ .checkbox__checkbox__checkIcon {
-	box-shadow: inset 0 0 0 2px var(--blue-500);
+.checkbox input:active ~ .checkbox__checkboxIcon {
+	transform: scale(1.1);
 }
 
-/* Checked */
-.checkbox__checkboxChecked input ~ .checkbox__checkbox__checkIcon {
-	background-color: var(--blue-500);
-	box-shadow: inset 0 0 0 2px var(--blue-500);
+.checkbox input:checked ~ .checkbox__checkboxMark {
+  background-color: var(--checkbox-bg-checked);
 }
 
-/* Checked hover */
-.checkbox__checkboxChecked:hover input ~ .checkbox__checkbox__checkIcon {
-	background-color: var(--blue-500);
-	box-shadow: inset 0 0 0 2px var(--blue-500);
+.checkbox input:checked ~ .checkbox__checkboxIcon {
+  opacity: 1;
 }
 
-/* Disabled */
-.checkbox__checkboxDisabled {
+.checkboxAdvise {
+	--checkbox-bg-checked: hsl(var(--color-intent-advise), 50%);
+}
+
+.checkboxAutomation {
+	--checkbox-bg-checked: hsl(var(--color-intent-automation), 50%);
+}
+
+.checkboxConfirmation {
+	--checkbox-bg-checked: hsl(var(--color-intent-confirmation), 50%);
+}
+
+.checkboxError {
+	--checkbox-bg-checked: hsl(var(--color-intent-error), 50%);
+}
+
+.checkboxHighlight {
+	--checkbox-bg-checked: hsl(var(--color-intent-highlight), 50%);
+}
+
+.checkboxQuestion {
+	--checkbox-bg-checked: hsl(var(--color-intent-question), 50%);
+}
+
+.checkboxSilent {
+	--checkbox-bg-checked: hsl(var(--color-intent-silent), 50%);
+}
+
+.checkboxSuccess {
+	--checkbox-bg-checked: hsl(var(--color-intent-success), 50%);
+}
+
+.checkboxWarning {
+	--checkbox-bg-checked: hsl(var(--color-intent-warning), 50%);
+}
+
+.checkbox__checkboxLabel {
+  position: relative;
+
+	max-width: max-content;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox__checkboxMark {
+  height: var(--checkbox-size);
+  overflow: hidden;
+  width: var(--checkbox-size);
+
+	background-color: var(--ui-bg-inactive);
+  border-radius: var(--checkbox-radius);
+
 	pointer-events: none;
-	color: var(--gray-500);
 }
 
-.checkbox__checkboxDisabled .checkbox__checkbox__checkIcon {
-	box-shadow: inset 0 0 0 2px var(--gray-300);
-}
+.checkbox__checkboxIcon {
+  position: absolute;
+	left: var(--checkbox-margin);
+  top: var(--checkbox-margin);
 
-.checkbox__checkboxDisabled.checkbox__checkboxChecked
-	.checkbox__checkbox__checkIcon {
-	background-color: var(--gray-500);
-	box-shadow: inset 0 0 0 2px var(--gray-500);
-}
+	opacity: 0;
 
-.checkbox__checkboxChecked input:focus-visible ~ .checkbox__checkbox__checkIcon,
-.checkbox__checkboxChecked input:active ~ .checkbox__checkbox__checkIcon {
-	box-shadow: 0 0 0 2px var(--blue-100);
-	color: var(--gray-0);
-}
-
-.checkbox__checkboxUnchecked
-	input:focus-visible
-	~ .checkbox__checkbox__checkIcon,
-.checkbox__checkboxUnchecked input:active ~ .checkbox__checkbox__checkIcon {
-	background-color: var(--gray-0);
-	box-shadow:
-		inset 0 0 0 2px var(--blue-500),
-		0 0 0 2px var(--blue-100);
-	color: transparent;
+	color: var(--ui-bg);
+	pointer-events: none;
 }

@@ -1,62 +1,62 @@
-import { CheckboxProps } from "./Checkbox.types"
 import { useId } from "react"
 import classNames from "@sindresorhus/class-names"
-import Flex from "../Flex"
-import Icon from "../Icon"
+import { Icon, Text } from "../.."
 import styles from "./Checkbox.module.css"
-import Text from "../Text"
-import type { FC, ChangeEvent } from "react"
+import type { FC } from "react"
+import type { CheckboxProps } from "./Checkbox.types"
 
 const Checkbox: FC<CheckboxProps> = ({
-	isLabelHidden,
-	onChange,
-	name,
-	label,
-	isChecked,
-	isDisabled,
-	isRequired,
-	description,
 	id,
+	isChecked,
+	isSmall,
+	isDisabled,
+	intent,
+	onChange,
+	label,
 }) => {
-	const localName: string = name || useId()
-	const localId: string = id || useId()
-
-	const checkboxClasses: string = classNames(styles.checkbox__checkbox, {
-		[styles.checkbox__checkboxChecked]: isChecked,
-		[styles.checkbox__checkboxUnchecked]: !isChecked,
-		[styles.checkbox__checkboxDisabled]: isDisabled,
+	const checkboxId: string = id || useId()
+	const checkboxClasses = classNames(styles.checkbox, {
+		[styles.checkboxAdvise]: intent === "advise",
+		[styles.checkboxAutomation]: intent === "automation",
+		[styles.checkboxConfirmation]: intent === "confirmation",
+		[styles.checkboxError]: intent === "error",
+		[styles.checkboxHighlight]: intent === "highlight",
+		[styles.checkboxQuestion]: intent === "question",
+		[styles.checkboxSilent]: intent === "silent",
+		[styles.checkboxSuccess]: intent === "success",
+		[styles.checkboxWarning]: intent === "warning",
+		[styles.checkboxDisabled]: isDisabled,
+		[styles.checkboxSmall]: isSmall,
 	})
 
-	const onToggle = (event: ChangeEvent<HTMLInputElement>) => onChange?.(event)
+	const checkboxLabelClasses = classNames(
+		styles.checkbox__checkboxLabel,
+		"flex flex-y-center flex-wrap gap-4",
+	)
 
 	return (
-		<div
-			className={styles.checkbox}
-			role="checkbox"
-			aria-checked={isChecked}
-			aria-labelledby={id}
-		>
-			<label aria-label={label} htmlFor={id} className={checkboxClasses}>
+		<div className={checkboxClasses}>
+			<label className={checkboxLabelClasses} htmlFor={checkboxId}>
 				<input
-					name={localName}
-					id={localId}
 					type="checkbox"
-					required={!!isRequired}
-					defaultChecked={isChecked ? true : false}
-					tabIndex={0}
-					onChange={onToggle}
+					checked={isChecked}
+					onChange={onChange}
+					disabled={isDisabled}
+					id={checkboxId}
 				/>
-				<Flex className={styles.checkbox__checkbox__checkIcon} padding={1}>
-					<Icon name="check" size={16} />
-				</Flex>
-				{!isLabelHidden && (
-					<Flex isColumn={true} className="unselectable">
-						<Text type="small" fontWeight="semibold">
-							{label}
-						</Text>
-						{!!description && <Text type="small">{description}</Text>}
-					</Flex>
-				)}
+				<span className={styles.checkbox__checkboxMark} />
+				<Icon
+					name="check"
+					size={isSmall ? 14 : 18}
+					className={styles.checkbox__checkboxIcon}
+				/>
+				<Text
+					type={isSmall ? "tiny" : "small"}
+					fontWeight="medium"
+					emphasis={isDisabled ? "tertiary" : "primary"}
+				>
+					{label}
+				</Text>
 			</label>
 		</div>
 	)

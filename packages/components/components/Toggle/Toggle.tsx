@@ -9,6 +9,7 @@ const Toggle: FC<ToggleProps> = ({
 	id,
 	isChecked,
 	isSmall,
+	isRequired,
 	isDisabled,
 	intent,
 	onChange,
@@ -41,6 +42,7 @@ const Toggle: FC<ToggleProps> = ({
 					type="checkbox"
 					checked={isChecked}
 					onChange={onChange}
+					required={isRequired}
 					disabled={isDisabled}
 					id={toggleId}
 				/>

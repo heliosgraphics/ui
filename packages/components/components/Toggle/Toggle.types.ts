@@ -1,12 +1,3 @@
-import type { ChangeEvent } from "react"
-import { HeliosIntentionType } from '../../types/intentions'
+import type { BaseCheckboxProps } from '../Checkbox/Checkbox.types'
 
-export interface ToggleProps {
-	id?: string
-	isChecked?: boolean
-	isSmall?: boolean
-	intent: HeliosIntentionType
-	isDisabled?: boolean
-	label: string
-	onChange?: (event?: ChangeEvent) => void
-}
+export interface ToggleProps extends BaseCheckboxProps { }

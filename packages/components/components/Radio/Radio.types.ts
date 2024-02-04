@@ -1,8 +1,13 @@
+import type { ChangeEvent } from 'react'
+import type { HeliosIntentionType } from '../../types/intentions'
+
 export interface RadioProps {
+	id?: string
+	intent: HeliosIntentionType
 	isDisabled?: boolean
+	isSmall?: boolean
 	label: string
-	onBlur?: Function
-	onChange: (event) => void
+	onChange?: (event?: ChangeEvent) => void
 	state: string
 	value: string
 }

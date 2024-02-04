@@ -1,34 +1,62 @@
 import classNames from "@sindresorhus/class-names"
 import styles from "./Radio.module.css"
 import Text from "../Text"
-import type { FC } from "react"
+import { type FC, useId } from "react"
 import type { RadioProps } from "./Radio.types"
 
 const Radio: FC<RadioProps> = ({
+	id,
+	isSmall,
 	isDisabled,
+	intent,
 	onChange,
-	label,
-	onBlur,
-	state,
 	value,
+	state,
+	label,
 }) => {
-	const radioClasses = classNames(styles.radio, "flex flex-y-center", {
-		"fui-radio--disabled": isDisabled,
+	const radioId: string = id || useId()
+	const radioClasses = classNames(styles.radio, {
+		[styles.radioAdvise]: intent === "advise",
+		[styles.radioAutomation]: intent === "automation",
+		[styles.radioConfirmation]: intent === "confirmation",
+		[styles.radioError]: intent === "error",
+		[styles.radioHighlight]: intent === "highlight",
+		[styles.radioQuestion]: intent === "question",
+		[styles.radioSilent]: intent === "silent",
+		[styles.radioSuccess]: intent === "success",
+		[styles.radioWarning]: intent === "warning",
+		[styles.radioDisabled]: isDisabled,
+		[styles.radioSmall]: isSmall,
 	})
 
+	const radioLabelClasses = classNames(
+		styles.radio__radioLabel,
+		"flex flex-y-center flex-wrap gap-4",
+	)
+
 	return (
-		<label className={radioClasses}>
-			<input
-				aria-checked={state === value}
-				type="radio"
-				name="radio"
-				onBlur={(e) => onBlur?.(e)}
-				onChange={(e) => onChange(e)}
-				defaultChecked={state === value}
-			/>
-			<span className={styles.radio__checkmark} />
-			{label && <Text type="small">{label}</Text>}
-		</label>
+		<div className={radioClasses}>
+			<label className={radioLabelClasses} htmlFor={radioId}>
+				<input
+					id={radioId}
+					aria-checked={state === value}
+					type="radio"
+					name="radio"
+					onChange={onChange}
+					defaultChecked={state === value}
+				/>
+				<div className={styles.radio__radioMark} />
+				{label && (
+					<Text
+						type={isSmall ? "tiny" : "small"}
+						fontWeight="medium"
+						emphasis={isDisabled ? "tertiary" : "primary"}
+					>
+						{label}
+					</Text>
+				)}
+			</label>
+		</div>
 	)
 }
 

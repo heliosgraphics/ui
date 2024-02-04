@@ -1,62 +1,131 @@
 .radio {
+	--radio-size: 24px;
+
 	position: relative;
 
-	box-sizing: border-box;
-	display: flex;
+  -webkit-tap-highlight-color: transparent;
+}
 
-	color: var(--gray-700);
-
-	cursor: pointer;
-	user-select: none;
+.radioSmall {
+	--radio-size: 18px;
 }
 
 .radioDisabled {
-	opacity: 0.5;
 	pointer-events: none;
 }
 
+.radioDisabled .radio__radioMark {
+	opacity: 0.5;
+}
+
 .radio input {
-	display: none;
-	height: 0;
-	width: 0;
-
-	visibility: hidden;
-}
-
-.radio input:checked ~ .radio__checkmark {
-	background-color: var(--gray-0);
-}
-
-.radio__checkmark {
-	box-sizing: inherit;
-	height: 1.5rem;
-	margin-right: 8px;
-	width: 1.5rem;
-
-	background-color: var(--gray-0);
-	border: 2px solid var(--gray-500);
-	border-radius: 100%;
-}
-
-.radio__checkmark:after {
 	position: absolute;
-	top: 0.3125rem;
-	left: 0.3125rem;
+	top: 0;
+	left: 0;
 
-	opacity: 0;
-	height: 0.875rem;
-	width: 0.875rem;
+	appearance: none;
+	display: flex;
+	overflow: hidden;
+  height: var(--radio-size);
+  width: var(--radio-size);
 
-	background: var(--gray-500);
-	border-radius: 100%;
-	transform: scale(0);
-	transition: all 100ms ease-in-out;
+	border-radius: var(--radio-size);
+	outline-color: var(--radio-bg-checked);
 
-	content: "";
+	cursor: pointer;
 }
 
-.radio input:checked ~ .radio__checkmark:after {
-	opacity: 1;
+.radio input:active ~ .radio__radioMark:after {
+	transform: scale(1.1);
+}
 
-	transform: scale(1);
+.radio input:checked ~ .radio__radioMark:after {
+  opacity: 1;
+}
+
+.radio input:checked ~ .radio__radioMark {
+  background-color: var(--radio-bg-checked);
+}
+
+.radioAdvise {
+	--radio-bg-checked: hsl(var(--color-intent-advise), 50%);
+}
+
+.radioAutomation {
+	--radio-bg-checked: hsl(var(--color-intent-automation), 50%);
+}
+
+.radioConfirmation {
+	--radio-bg-checked: hsl(var(--color-intent-confirmation), 50%);
+}
+
+.radioError {
+	--radio-bg-checked: hsl(var(--color-intent-error), 50%);
+}
+
+.radioHighlight {
+	--radio-bg-checked: hsl(var(--color-intent-highlight), 50%);
+}
+
+.radioQuestion {
+	--radio-bg-checked: hsl(var(--color-intent-question), 50%);
+}
+
+.radioSilent {
+	--radio-bg-checked: hsl(var(--color-intent-silent), 50%);
+}
+
+.radioSuccess {
+	--radio-bg-checked: hsl(var(--color-intent-success), 50%);
+}
+
+.radioWarning {
+	--radio-bg-checked: hsl(var(--color-intent-warning), 50%);
+}
+
+.radio__radioLabel {
+  position: relative;
+
+	max-width: max-content;
+
+	background-color: var();
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio__radioMark {
+  height: var(--radio-size);
+  overflow: hidden;
+  width: var(--radio-size);
+
+	background-color: var(--ui-bg-inactive);
+  border-radius: 24px;
+
+	pointer-events: none;
+}
+
+.radio__radioMark:after {
+  left: 6px;
+  top: 6px;
+  position: absolute;
+
+  box-sizing: inherit;
+  height: 12px;
+  width: 12px;
+
+  background-color: var(--ui-bg);
+  border-radius: 100%;
+	opacity: 0;
+  transition: all 100ms ease-in-out;
+  content: " ";
+
+	pointer-events: none;
+}
+
+.radioSmall .radio__radioMark:after {
+	left: 5px;
+  top: 5px;
+
+	height: 8px;
+  width: 8px;
 }

@@ -1,12 +1,15 @@
-export interface CheckboxProps {
-	alignLabel?: "left" | "right" | "hidden"
+import type { ChangeEvent } from "react"
+import { HeliosIntentionType } from '../../types/intentions'
+
+export interface BaseCheckboxProps {
 	id?: string
-	description?: string
+	intent: HeliosIntentionType
 	isChecked?: boolean
-	isLabelHidden?: boolean
-	isRequired?: boolean
 	isDisabled?: boolean
+	isRequired?: boolean
+	isSmall?: boolean
 	label: string
-	name?: string
-	onChange?: Function
+	onChange?: (event?: ChangeEvent) => void
 }
+
+export interface CheckboxProps extends BaseCheckboxProps { }
