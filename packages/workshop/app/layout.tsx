@@ -1,8 +1,8 @@
 import "@heliosgraphics/fractures"
 import "@heliosgraphics/fractures/dist/fractures.easings.css"
-import "../../src/components.css"
-import "../../src/components.markdown.css"
-import { Setup } from "../../src"
+import "@heliosgraphics/components/components.css"
+import "@heliosgraphics/components/components.markdown.css"
+import { Setup } from "@heliosgraphics/components"
 import type { ReactNode } from "react"
 import type { Metadata } from "next"
 

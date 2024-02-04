@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, createContext } from "react"
-import type { HeliosIntentionType } from "../../../../src"
+import type { HeliosIntentionType } from "@heliosgraphics/components"
 import type { IntentProviderProps } from "./IntentContext.types"
 
 const IntentContext = createContext<IntentProviderProps>({

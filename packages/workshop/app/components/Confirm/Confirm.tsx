@@ -7,7 +7,7 @@ import {
 	ButtonGroup,
 	Text,
 	Confirm as ConfirmComponent,
-} from "../../../../src"
+} from "@heliosgraphics/components"
 import type { ConfirmProps } from "./Confirm.types"
 
 const Confirm: FC<ConfirmProps> = () => {

@@ -8,7 +8,7 @@ import {
 	Flex,
 	Text,
 	type HeliosIntentionType,
-} from "../../../../src"
+} from "@heliosgraphics/components"
 import { IntentContext } from "../../contexts/IntentContext"
 import type { ButtonsProps } from "./Buttons.types"
 import type { FC } from "react"

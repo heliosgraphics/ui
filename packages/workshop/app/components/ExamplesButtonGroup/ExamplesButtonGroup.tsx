@@ -10,7 +10,7 @@ import {
 	Text,
 	type ButtonGroupProps,
 	type HeliosIntentionType,
-} from "../../../../src"
+} from "@heliosgraphics/components"
 import { IntentContext } from "../../contexts/IntentContext"
 import type { ExamplesButtonGroupProps } from "./ExamplesButtonGroup.types"
 

@@ -9,7 +9,7 @@ import {
 	Separator,
 	Text,
 	type TextProps,
-} from "../../../../src"
+} from "@heliosgraphics/components"
 import type { ExamplesHeadingProps } from "./ExamplesHeading.types"
 
 const EMPHASIS_LIST: Array<{

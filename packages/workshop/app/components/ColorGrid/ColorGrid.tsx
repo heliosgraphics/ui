@@ -1,4 +1,4 @@
-import { Flex, Text } from "../../../../src"
+import { Flex, Text } from "@heliosgraphics/components"
 import Square from "../Square"
 import type { FC, CSSProperties } from "react"
 import type { ColorGridProps } from "./ColorGrid.types"

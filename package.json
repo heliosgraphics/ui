@@ -11,10 +11,9 @@
 		"test:watch": "NODE_ENV=test vitest",
 		"test:coverage": "NODE_ENV=test vitest run --coverage",
 		"ts:watch": "tsc --noEmit --incremental --watch",
-		"build:components": "pnpm run --filter components build",
+		"dev:workshop": "pnpm run --filter workshop dev",
 		"build:workshop": "pnpm run --filter workshop build",
-		"start:components": "pnpm run --filter components dev",
-		"start:workshop": "pnpm run --filter workshop dev",
+		"start:workshop": "concurrently --names \"⬜workshop,🔴types\" \"pnpm run dev:workshop\" \"pnpm run ts:watch\"",
 		"prettier:write": "prettier --no-semi --use-tabs --write ./packages/**"
 	},
 	"dependencies": {
@@ -28,11 +27,10 @@
 	"devDependencies": {
 		"@testing-library/react": "latest",
 		"@types/node": "latest",
-		"@types/react-dom": "latest",
-		"@types/react": "latest",
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@vitejs/plugin-react": "latest",
 		"@vitest/coverage-v8": "latest",
+		"concurrently": "latest",
 		"eslint-config-prettier": "latest",
 		"eslint-plugin-prettier": "latest",
 		"eslint": "latest",

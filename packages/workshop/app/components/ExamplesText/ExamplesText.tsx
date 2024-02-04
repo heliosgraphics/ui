@@ -8,7 +8,7 @@ import {
 	Separator,
 	Text,
 	type TextProps,
-} from "../../../../src"
+} from "@heliosgraphics/components"
 import type { ExamplesTextProps } from "./ExamplesText.types"
 
 const TEXT_TYPES: Array<{ name: string; value: TextProps["type"] }> = [

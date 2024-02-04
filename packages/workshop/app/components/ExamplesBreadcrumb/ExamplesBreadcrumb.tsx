@@ -10,16 +10,17 @@ import {
 	Breadcrumb,
 	type BreadCrumbItem,
 	type HeliosIntentionType,
-} from "../../../../src"
+} from "@heliosgraphics/components"
 import type { ExamplesBreadcrumbProps } from "./ExamplesBreadcrumb.types"
 
 const breadCrumbItems: Array<BreadCrumbItem> = [
-	{ name: "Index", href: "/" },
-	{ name: "Books", href: "/consequat" },
+	{ name: "Index", href: "/", onClick: () => null },
+	{ name: "Books", href: "/consequat", onClick: () => null },
 	{
 		name: "Maecenas pellentesque",
 		href: "/consequat/maecenas-pellentesque",
 		isActive: true,
+		onClick: () => null,
 	},
 ]
 

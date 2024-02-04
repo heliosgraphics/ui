@@ -1,7 +1,7 @@
 "use client"
 
 import { useContext, useState, type FC } from "react"
-import { Flex, Separator, Toggle } from "../../../../src"
+import { Flex, Separator, Toggle } from "@heliosgraphics/components"
 import { IntentContext } from "../../contexts/IntentContext"
 import type { ExamplesToggleProps } from "./ExamplesToggle.types"
 

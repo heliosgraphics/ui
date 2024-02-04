@@ -1,7 +1,7 @@
 "use client"
 
 import { useContext } from "react"
-import { Flex, Alert, HeliosIntentionType } from "../../../../src"
+import { Flex, Alert, HeliosIntentionType } from "@heliosgraphics/components"
 import { IntentContext } from "../../contexts/IntentContext"
 import type { FC } from "react"
 import type { ExamplesAlertProps } from "./ExamplesAlert.types"

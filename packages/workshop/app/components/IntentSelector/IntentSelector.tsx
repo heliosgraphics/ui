@@ -1,5 +1,11 @@
 import { useContext, type FC } from "react"
-import { Flex, Select, INTENTIONS, ButtonGroup, Button } from "../../../../src"
+import {
+	Flex,
+	Select,
+	INTENTIONS,
+	ButtonGroup,
+	Button,
+} from "@heliosgraphics/components"
 import { IntentContext } from "../../contexts/IntentContext"
 import type { IntentSelectorProps } from "./IntentSelector.types"
 

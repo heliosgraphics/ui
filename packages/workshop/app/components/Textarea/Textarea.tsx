@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, type FC } from "react"
-import { Textarea as TextareaComponent } from "../../../../src"
+import { Textarea as TextareaComponent } from "@heliosgraphics/components"
 import type { FormProps } from "./Textarea.types"
 
 const Textarea: FC<FormProps> = () => {

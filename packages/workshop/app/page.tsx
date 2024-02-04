@@ -35,7 +35,7 @@ import {
 	Tile,
 	Timestamp,
 	Upload,
-} from "../../src"
+} from "@heliosgraphics/components"
 import Icons from "./components/Icons"
 import Textarea from "./components/Textarea"
 import Form from "./components/Form"
@@ -64,7 +64,7 @@ const resultListItems: Array<ResultItem> = [
 const pieItems: Array<PieItem> = []
 
 const ThemeSwitcher = dynamic(
-	() => import("../../src/components/ThemeSwitcher"),
+	() => import("@heliosgraphics/components/components/ThemeSwitcher"),
 	{
 		ssr: false,
 		loading: () => <ThemeSwitcherLoading />,

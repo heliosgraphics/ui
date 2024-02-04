@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, type FC } from "react"
-import { Flex, Radio as RadioComponent } from "../../../../src"
+import { Flex, Radio as RadioComponent } from "@heliosgraphics/components"
 import type { RadioProps } from "./Radio.types"
 
 const Radio: FC<RadioProps> = () => {

@@ -6,7 +6,7 @@ import {
 	Button,
 	ButtonGroup,
 	Form as FormComponent,
-} from "../../../../src"
+} from "@heliosgraphics/components"
 import type { FormProps } from "./Form.types"
 
 const Form: FC<FormProps> = () => {

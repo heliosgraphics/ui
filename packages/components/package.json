@@ -1,6 +1,6 @@
 {
 	"name": "@heliosgraphics/components",
-	"version": "2.0.0-alpha-1",
+	"version": "3.0.0-alpha-0",
 	"author": "03b8 <03b8@helios.graphics>",
 	"private": false,
 	"type": "module",
@@ -33,8 +33,6 @@
 	},
 	"devDependencies": {
 		"@types/node": "latest",
-		"@types/react": "latest",
-		"@types/react-dom": "latest",
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@vitejs/plugin-react": "latest",
 		"@vitest/coverage-v8": "latest",

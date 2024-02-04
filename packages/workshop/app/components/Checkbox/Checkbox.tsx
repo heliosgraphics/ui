@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Checkbox as CheckboxComponent } from "../../../../src"
+import { Checkbox as CheckboxComponent } from "@heliosgraphics/components"
 import type { FC } from "react"
 import type { CheckboxProps } from "./Checkbox.types"
 
