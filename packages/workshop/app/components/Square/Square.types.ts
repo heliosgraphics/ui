@@ -1,4 +1,4 @@
-import type { HeliosColors } from "@heliosgraphics/components"
+import type { HeliosColors } from "@heliosgraphics/ui"
 
 export interface SquareProps {
 	className?: string

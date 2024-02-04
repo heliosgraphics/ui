@@ -7,7 +7,7 @@ import {
 	ButtonGroup,
 	Text,
 	Input as InputComponent,
-} from "@heliosgraphics/components"
+} from "@heliosgraphics/ui"
 import type { InputProps } from "./Input.types"
 
 const Input: FC<InputProps> = () => {

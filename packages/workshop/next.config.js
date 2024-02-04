@@ -5,7 +5,7 @@ const nextConfig = {
   productionBrowserSourceMaps: false,
   reactStrictMode: false,
   transpilePackages: [
-    '@heliosgraphics/components',
+    '@heliosgraphics/ui',
     '@heliosgraphics/icons',
     '@heliosgraphics/utils'
   ],

@@ -1,7 +1,7 @@
 "use client"
 
 import { useContext, useState, type FC } from "react"
-import { Select as SelectComponent } from "@heliosgraphics/components"
+import { Select as SelectComponent } from "@heliosgraphics/ui"
 import type { SelectProps } from "./Select.types"
 
 const Select: FC<SelectProps> = () => {

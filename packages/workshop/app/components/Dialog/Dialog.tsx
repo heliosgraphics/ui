@@ -7,7 +7,7 @@ import {
 	ButtonGroup,
 	Text,
 	Dialog as DialogComponent,
-} from "@heliosgraphics/components"
+} from "@heliosgraphics/ui"
 import type { DialogProps } from "./Dialog.types"
 import type { FC } from "react"
 

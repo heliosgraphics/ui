@@ -10,7 +10,7 @@ import {
 	Alert,
 	Markdown,
 	type HeliosIntentionType,
-} from "@heliosgraphics/components"
+} from "@heliosgraphics/ui"
 import type { MarkdownsProps } from "./Markdowns.types"
 
 const INTRO_MD: string = `# Donec vestibulum

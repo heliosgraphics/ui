@@ -148,15 +148,15 @@ importers:
 
   packages/workshop:
     dependencies:
-      '@heliosgraphics/components':
-        specifier: workspace:*
-        version: link:../components
       '@heliosgraphics/fractures':
         specifier: latest
         version: 5.2.2
       '@heliosgraphics/icons':
         specifier: latest
         version: 0.0.6
+      '@heliosgraphics/ui':
+        specifier: workspace:*
+        version: link:../components
       '@heliosgraphics/utils':
         specifier: 5.2.0
         version: 5.2.0

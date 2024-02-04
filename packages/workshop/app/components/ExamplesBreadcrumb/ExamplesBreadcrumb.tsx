@@ -10,7 +10,7 @@ import {
 	Breadcrumb,
 	type BreadCrumbItem,
 	type HeliosIntentionType,
-} from "@heliosgraphics/components"
+} from "@heliosgraphics/ui"
 import type { ExamplesBreadcrumbProps } from "./ExamplesBreadcrumb.types"
 
 const breadCrumbItems: Array<BreadCrumbItem> = [

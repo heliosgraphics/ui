@@ -1,4 +1,4 @@
-import { Toggle } from "@heliosgraphics/components"
+import { Toggle } from "@heliosgraphics/ui"
 import type { DebugSelectorProps } from "./DebugSelector.types"
 import type { FC } from "react"
 

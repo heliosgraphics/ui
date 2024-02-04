@@ -1,5 +1,5 @@
 import type { SetStateAction, Dispatch } from 'react'
-import type { HeliosIntentionType } from "@heliosgraphics/components"
+import type { HeliosIntentionType } from "@heliosgraphics/ui"
 
 export interface IntentProviderProps {
 	intent: HeliosIntentionType

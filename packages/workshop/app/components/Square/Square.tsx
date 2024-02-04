@@ -1,4 +1,4 @@
-import { Flex, Text } from "@heliosgraphics/components"
+import { Flex, Text } from "@heliosgraphics/ui"
 import styles from "./Square.module.css"
 import type { SquareProps } from "./Square.types"
 import type { FC, CSSProperties } from "react"

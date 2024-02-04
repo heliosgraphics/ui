@@ -5,7 +5,7 @@ import {
 	INTENTIONS,
 	ButtonGroup,
 	Button,
-} from "@heliosgraphics/components"
+} from "@heliosgraphics/ui"
 import { IntentContext } from "../../contexts/IntentContext"
 import type { IntentSelectorProps } from "./IntentSelector.types"
 

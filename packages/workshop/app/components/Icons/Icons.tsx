@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, type FC, type ChangeEvent } from "react"
-import { Details, Flex, Input, Icon, Text } from "@heliosgraphics/components"
+import { Details, Flex, Input, Icon, Text } from "@heliosgraphics/ui"
 import { meta } from "@heliosgraphics/icons/meta"
 import type { HeliosIconType } from "@heliosgraphics/icons/meta"
 
