@@ -22,7 +22,7 @@
 		"@heliosgraphics/utils": "5.2.0",
 		"@react-spring/web": "^9.7.3",
 		"@sindresorhus/class-names": "^2.0.0",
-		"@testing-library/react": "^14.1.2",
+		"@testing-library/react": "^14.2.1",
 		"@use-gesture/react": "^10.3.0",
 		"dayjs": "^1.11.10",
 		"highlight.js": "^11.9.0",
