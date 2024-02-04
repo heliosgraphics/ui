@@ -1,8 +1,5 @@
 "use client"
 
-import dynamic from "next/dynamic"
-import ColorGrid from "./components/ColorGrid"
-import Buttons from "./components/Buttons"
 import {
 	type ResultItem,
 	type PieItem,
@@ -35,25 +32,28 @@ import {
 	Timestamp,
 	Upload,
 } from "@heliosgraphics/ui"
-import Icons from "./components/Icons"
-import Textarea from "./components/Textarea"
-import Form from "./components/Form"
-import Checkbox from "./components/Checkbox"
-import Dialog from "./components/Dialog"
-import Radio from "./components/Radio"
-import Confirm from "./components/Confirm"
-import Input from "./components/Input"
-import Select from "./components/Select"
-import ExamplesAlert from "./components/ExamplesAlert"
-import DebugSelector from "./components/DebugSelector"
-import Markdowns from "./components/Markdowns"
 import { IntentProvider } from "./contexts/IntentContext"
-import ExamplesToggle from "./components/ExamplesToggle"
-import ExamplesButtonGroup from "./components/ExamplesButtonGroup"
+import ColorGrid from "./components/ColorGrid"
+import DebugSelector from "./components/DebugSelector"
+import dynamic from "next/dynamic"
+import ExampleAlert from "./components/ExampleAlert"
+import ExampleBreadcrumb from "./components/ExampleBreadcrumb"
+import ExampleButton from "./components/ExampleButton"
+import ExampleButtonGroup from "./components/ExampleButtonGroup"
+import ExampleCheckbox from "./components/ExampleCheckbox"
+import ExampleConfirm from "./components/ExampleConfirm"
+import ExampleDialog from "./components/ExampleDialog"
+import ExampleForm from "./components/ExampleForm"
+import ExampleHeading from "./components/ExampleHeading"
+import ExampleIcon from "./components/ExampleIcon"
+import ExampleInput from "./components/ExampleInput"
+import ExampleMarkdown from "./components/ExampleMarkdown"
+import ExampleRadio from "./components/ExampleRadio"
+import ExampleSelect from "./components/ExampleSelect"
+import ExampleText from "./components/ExampleText"
+import ExampleTextarea from "./components/ExampleTextarea"
+import ExampleToggle from "./components/ExampleToggle"
 import IntentSelector from "./components/IntentSelector"
-import ExamplesBreadcrumb from "./components/ExamplesBreadcrumb"
-import ExamplesHeading from "./components/ExamplesHeading"
-import ExamplesText from "./components/ExamplesText"
 
 const resultListItems: Array<ResultItem> = [
 	{ name: "First item", icon: "arrow-left" },
@@ -92,19 +92,19 @@ export default function Home() {
 
 					<Flex isColumn={true} gap={4}>
 						<Details title="Alert">
-							<ExamplesAlert />
+							<ExampleAlert />
 						</Details>
 
 						<Details title="Breadcrumb">
-							<ExamplesBreadcrumb />
+							<ExampleBreadcrumb />
 						</Details>
 
 						<Details title="Button">
-							<Buttons />
+							<ExampleButton />
 						</Details>
 
 						<Details title="ButtonGroup">
-							<ExamplesButtonGroup />
+							<ExampleButtonGroup />
 						</Details>
 
 						<Details title="Colors">
@@ -122,7 +122,7 @@ export default function Home() {
 						</Details>
 
 						<Details title="Checkbox">
-							<Checkbox />
+							<ExampleCheckbox />
 						</Details>
 
 						<Details title="Column">
@@ -132,11 +132,11 @@ export default function Home() {
 						</Details>
 
 						<Details title="Confirm">
-							<Confirm />
+							<ExampleConfirm />
 						</Details>
 
 						<Details title="Dialog">
-							<Dialog />
+							<ExampleDialog />
 						</Details>
 
 						<Details title="Donut">
@@ -163,7 +163,7 @@ export default function Home() {
 						</Details>
 
 						<Details title="Form">
-							<Form />
+							<ExampleForm />
 						</Details>
 
 						<Details title="Grid">
@@ -176,15 +176,15 @@ export default function Home() {
 						</Details>
 
 						<Details title="Heading">
-							<ExamplesHeading />
+							<ExampleHeading />
 						</Details>
 
 						<Details title="Icon">
-							<Icons />
+							<ExampleIcon />
 						</Details>
 
 						<Details title="Input">
-							<Input />
+							<ExampleInput />
 						</Details>
 
 						<Details title="Loading">
@@ -194,7 +194,7 @@ export default function Home() {
 						</Details>
 
 						<Details title="Markdown">
-							<Markdowns />
+							<ExampleMarkdown />
 						</Details>
 
 						<Details title="Masonry">
@@ -221,7 +221,7 @@ export default function Home() {
 						</Details>
 
 						<Details title="Radio">
-							<Radio />
+							<ExampleRadio />
 						</Details>
 
 						<Details title="ResultList">
@@ -229,7 +229,7 @@ export default function Home() {
 						</Details>
 
 						<Details title="Select">
-							<Select />
+							<ExampleSelect />
 						</Details>
 
 						<Details title="Shimmer">
@@ -261,11 +261,11 @@ export default function Home() {
 						</Details>
 
 						<Details title="Text">
-							<ExamplesText />
+							<ExampleText />
 						</Details>
 
 						<Details title="Textarea">
-							<Textarea />
+							<ExampleTextarea />
 						</Details>
 
 						<Details title="Tile">
@@ -277,7 +277,7 @@ export default function Home() {
 						</Details>
 
 						<Details title="Toggle">
-							<ExamplesToggle />
+							<ExampleToggle />
 						</Details>
 
 						<Details title="Upload">

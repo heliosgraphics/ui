@@ -7,7 +7,7 @@ import type { ReactNode } from "react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-	title: "Thebe Component Workshop",
+	title: "Helios UI Workshop",
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
