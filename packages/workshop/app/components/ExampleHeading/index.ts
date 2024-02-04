@@ -1,3 +1,3 @@
-import ExamplesHeading from './ExamplesHeading'
+import ExampleHeading from './ExampleHeading'
 
-export default ExamplesHeading
+export default ExampleHeading
