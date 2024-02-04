@@ -66,16 +66,16 @@
 	--font-weight-black: 900;
 
 	--z-index-0: 0;
-	--z-index-10: 100;
-	--z-index-20: 200;
-	--z-index-30: 300;
-	--z-index-40: 400;
-	--z-index-50: 500;
-	--z-index-60: 600;
-	--z-index-70: 700;
-	--z-index-80: 800;
-	--z-index-90: 900;
-	--z-index-100: 1000;
+	--z-index-1: 100;
+	--z-index-2: 200;
+	--z-index-3: 300;
+	--z-index-4: 400;
+	--z-index-5: 500;
+	--z-index-6: 600;
+	--z-index-7: 700;
+	--z-index-8: 800;
+	--z-index-9: 900;
+	--z-index-10: 1000;
 
 	/* color hues */
 	--aqua-hue: 192;
@@ -150,6 +150,7 @@
 	--ui-bg-action-hover: hsl(var(--ui-hue), var(--ui-saturation), 96%);
 	--ui-bg-action-active: hsl(var(--ui-hue), var(--ui-saturation), 90%);
   --ui-bg-disabled: hsl(var(--ui-hue), var(--ui-saturation), 86%);
+	--ui-bg-glass-1: hsla(var(--ui-hue), var(--ui-saturation), 100%, 0.9);
 
 	--ui-text-intent-advise: hsl(var(--blue-hue), var(--blue-saturation), 50%);
   --ui-text-intent-automation: hsl(var(--pink-hue), var(--pink-saturation), 40%);
@@ -199,6 +200,7 @@
   --ui-bg-action-hover: hsl(var(--ui-hue), var(--ui-saturation), 16%);
 	--ui-bg-action-active: hsl(var(--ui-hue), var(--ui-saturation), 24%);
   --ui-bg-disabled: hsl(var(--ui-hue), var(--ui-saturation), 16%);
+	--ui-bg-glass-1: hsla(var(--ui-hue), var(--ui-saturation), 8%, 0.8);
 
 	--ui-text-intent-advise: hsl(var(--blue-hue), var(--blue-saturation), 75%);
   --ui-text-intent-automation: hsl(var(--pink-hue), var(--pink-saturation), 75%);
@@ -268,25 +270,8 @@ mark,
 
 /* helpers: glass */
 .glass-1 {
-	background-color: var(--rgba-glass-1);
+	background-color: var(--ui-bg-glass-1);
 	backdrop-filter: blur(3px);
-}
-
-/* helpers: shadow */
-.shadow-1 {
-	box-shadow:
-		0 0 0 1px rgba(0, 0, 0, 0.024),
-		0 1px 1px 0 rgba(0, 0, 0, 0.06),
-		0 2px 4px 0 rgba(0, 0, 0, 0.08);
-}
-
-.shadow-2 {
-	box-shadow:
-		0 0 0 1px rgba(0, 0, 0, 0.024),
-		0 1px 1px 0 rgba(0, 0, 0, 0.06),
-		0 0 4px 0 rgba(0, 0, 0, 0.08),
-		0 0 0 1px rgba(0, 0, 0, 0.04),
-		0 0 10px 0 rgba(0, 0, 0, 0.08);
 }
 
 /* helpers: scrollbar */
@@ -357,4 +342,22 @@ mark,
 	-moz-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	-moz-text-fill-color: transparent;
+} */
+
+
+/* helpers: shadow */
+/* .shadow-1 {
+	box-shadow:
+		0 0 0 1px rgba(0, 0, 0, 0.024),
+		0 1px 1px 0 rgba(0, 0, 0, 0.06),
+		0 2px 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+.shadow-2 {
+	box-shadow:
+		0 0 0 1px rgba(0, 0, 0, 0.024),
+		0 1px 1px 0 rgba(0, 0, 0, 0.06),
+		0 0 4px 0 rgba(0, 0, 0, 0.08),
+		0 0 0 1px rgba(0, 0, 0, 0.04),
+		0 0 10px 0 rgba(0, 0, 0, 0.08);
 } */

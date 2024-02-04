@@ -73,23 +73,32 @@ const ThemeSwitcher = dynamic(
 export default function Home() {
 	return (
 		<IntentProvider>
+			<Flex
+				isColumn={true}
+				gap={8}
+				padding={8}
+				className="sticky top-0 glass-1 z-10"
+			>
+				<Flex isColumn={true}>
+					<Heading level={1} className="flex flex-y-center gap-4">
+						<a href="https://ui.helios.graphics">
+							<Icon size={36} name="asterisk" />
+						</a>
+						<span>Interface</span>
+					</Heading>
+					<Text type="tiny" fontFamily="mono">
+						from{` `}
+						<a href="https://helios.graphics">Helios Graphics</a>
+					</Text>
+				</Flex>
+				<Flex gap={8}>
+					<ThemeSwitcher />
+					<DebugSelector />
+				</Flex>
+				<IntentSelector />
+			</Flex>
 			<main>
-				<Flex isColumn={true} gap={16} padding={16}>
-					<Flex isColumn={true} gap={8}>
-						<Heading level={1} className="flex flex-y-center gap-4">
-							<a href="https://helios.graphics">
-								<Icon size={24} name="asterisk" />
-							</a>
-							<span>Helios Interface</span>
-						</Heading>
-						<Flex gap={4} isColumn={true}>
-							<ThemeSwitcher />
-							<DebugSelector />
-						</Flex>
-						<IntentSelector />
-						<Separator isLight={true} />
-					</Flex>
-
+				<Flex isColumn={true} gap={16} padding={8}>
 					<Flex isColumn={true} gap={4}>
 						<Details title="Alert">
 							<ExampleAlert />
