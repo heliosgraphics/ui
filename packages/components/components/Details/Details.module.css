@@ -2,8 +2,6 @@ details.details {
 	padding: 0;
 
 	border: 1px solid var(--ui-border);
-	/* box-shadow: inset 0 0 0 1px var(--ui-border); */
-
 	border-radius: var(--radius-normal);
 }
 
@@ -28,7 +26,7 @@ details.details summary {
 
   background-color: var(--ui-bg-action);
   border-radius: var(--radius-normal);
-  color: var(--ui-text-secondary);
+  color: var(--ui-text-primary);
 	cursor: pointer;
   user-select: none;;
 }

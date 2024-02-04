@@ -33,7 +33,6 @@ import {
 	Upload,
 } from "@heliosgraphics/ui"
 import { IntentProvider } from "./contexts/IntentContext"
-import ColorGrid from "./components/ColorGrid"
 import DebugSelector from "./components/DebugSelector"
 import dynamic from "next/dynamic"
 import ExampleAlert from "./components/ExampleAlert"
@@ -41,6 +40,7 @@ import ExampleBreadcrumb from "./components/ExampleBreadcrumb"
 import ExampleButton from "./components/ExampleButton"
 import ExampleButtonGroup from "./components/ExampleButtonGroup"
 import ExampleCheckbox from "./components/ExampleCheckbox"
+import ExampleColors from "./components/ExampleColors"
 import ExampleConfirm from "./components/ExampleConfirm"
 import ExampleDialog from "./components/ExampleDialog"
 import ExampleForm from "./components/ExampleForm"
@@ -108,17 +108,7 @@ export default function Home() {
 						</Details>
 
 						<Details title="Colors">
-							<Flex isColumn={true} gap={8}>
-								<ColorGrid color="aqua" />
-								<ColorGrid color="blue" />
-								<ColorGrid color="gray" />
-								<ColorGrid color="green" />
-								<ColorGrid color="orange" />
-								<ColorGrid color="pink" />
-								<ColorGrid color="purple" />
-								<ColorGrid color="red" />
-								<ColorGrid color="yellow" />
-							</Flex>
+							<ExampleColors />
 						</Details>
 
 						<Details title="Checkbox">
@@ -126,9 +116,11 @@ export default function Home() {
 						</Details>
 
 						<Details title="Column">
-							<Column width={480}>
-								<Text type="paragraph">Hello</Text>
-							</Column>
+							<div>
+								<Column width={480}>
+									<Text type="paragraph">Hello</Text>
+								</Column>
+							</div>
 						</Details>
 
 						<Details title="Confirm">

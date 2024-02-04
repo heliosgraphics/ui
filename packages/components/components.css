@@ -149,7 +149,7 @@
 	--ui-bg-action: hsl(var(--ui-hue), var(--ui-saturation), 99%);
 	--ui-bg-action-hover: hsl(var(--ui-hue), var(--ui-saturation), 96%);
 	--ui-bg-action-active: hsl(var(--ui-hue), var(--ui-saturation), 90%);
-  --ui-bg-disabled: hsl(var(--ui-hue), var(--ui-saturation), 90%);
+  --ui-bg-disabled: hsl(var(--ui-hue), var(--ui-saturation), 86%);
 
 	--ui-text-intent-advise: hsl(var(--blue-hue), var(--blue-saturation), 50%);
   --ui-text-intent-automation: hsl(var(--pink-hue), var(--pink-saturation), 40%);
@@ -328,7 +328,7 @@ mark,
 
 .debug *[data-component]:after {
 	position: absolute;
-	right: 0;
+	left: 100%;
 	top: 0;
 
 	padding: 0 4px;

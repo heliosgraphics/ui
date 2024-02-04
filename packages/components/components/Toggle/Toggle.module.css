@@ -47,39 +47,39 @@
 }
 
 .toggleAdvise {
-	--toggle-bg-checked: var(--ui-text-intent-advise);
+	--toggle-bg-checked: hsl(var(--color-intent-advise), 50%);
 }
 
 .toggleAutomation {
-	--toggle-bg-checked: var(--ui-text-intent-automation);
+	--toggle-bg-checked: hsl(var(--color-intent-automation), 50%);
 }
 
 .toggleConfirmation {
-	--toggle-bg-checked: var(--ui-text-intent-confirmation);
+	--toggle-bg-checked: hsl(var(--color-intent-confirmation), 50%);
 }
 
 .toggleError {
-	--toggle-bg-checked: var(--ui-text-intent-error);
+	--toggle-bg-checked: hsl(var(--color-intent-error), 50%);
 }
 
 .toggleHighlight {
-	--toggle-bg-checked: var(--ui-text-intent-highlight);
+	--toggle-bg-checked: hsl(var(--color-intent-highlight), 50%);
 }
 
 .toggleQuestion {
-	--toggle-bg-checked: var(--ui-text-intent-question);
+	--toggle-bg-checked: hsl(var(--color-intent-question), 50%);
 }
 
 .toggleSilent {
-	--toggle-bg-checked: var(--ui-text-intent-silent);
+	--toggle-bg-checked: hsl(var(--color-intent-silent), 50%);
 }
 
 .toggleSuccess {
-	--toggle-bg-checked: var(--ui-text-intent-success);
+	--toggle-bg-checked: hsl(var(--color-intent-success), 50%);
 }
 
 .toggleWarning {
-	--toggle-bg-checked: var(--ui-text-intent-warning);
+	--toggle-bg-checked: hsl(var(--color-intent-warning), 50%);
 }
 
 .toggle__toggleLabel {
@@ -98,7 +98,7 @@
   overflow: hidden;
   width: var(--toggle-width);
 
-	background-color: hsl(var(--color-intent-silent), 66%);
+	background-color: var(--ui-bg-disabled);
   border-radius: 24px;
 
 	pointer-events: none;
