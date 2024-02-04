@@ -1,11 +1,13 @@
 name: npm:test
 on: push
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-      - uses: oven-sh/setup-bun@v1
-      - run: npm i
-      - run: npm test
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+      - run: npx pnpm install
+      - run: npx pnpm test
