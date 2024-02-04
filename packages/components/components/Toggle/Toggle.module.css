@@ -13,8 +13,11 @@
 }
 
 .toggleDisabled {
-  opacity: 0.5;
-  pointer-events: none;
+	pointer-events: none;
+}
+
+.toggleDisabled .toggle__toggleMark {
+	opacity: 0.5;
 }
 
 .toggle input {
@@ -98,7 +101,7 @@
   overflow: hidden;
   width: var(--toggle-width);
 
-	background-color: var(--ui-bg-disabled);
+	background-color: var(--ui-bg-inactive);
   border-radius: 24px;
 
 	pointer-events: none;

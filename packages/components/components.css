@@ -145,12 +145,14 @@
 	--ui-border: hsl(var(--ui-hue), var(--ui-saturation), 85%);
 	--ui-border-active: hsl(var(--ui-hue), var(--ui-saturation), 80%);
 
+	/* TODO: Consolidate */
 	--ui-bg: hsl(var(--ui-hue), var(--ui-saturation), 100%);
 	--ui-bg-action: hsl(var(--ui-hue), var(--ui-saturation), 99%);
 	--ui-bg-action-hover: hsl(var(--ui-hue), var(--ui-saturation), 96%);
 	--ui-bg-action-active: hsl(var(--ui-hue), var(--ui-saturation), 90%);
   --ui-bg-disabled: hsl(var(--ui-hue), var(--ui-saturation), 86%);
 	--ui-bg-glass-1: hsla(var(--ui-hue), var(--ui-saturation), 100%, 0.9);
+	--ui-bg-inactive: hsl(var(--ui-hue), var(--ui-saturation), 80%);
 
 	--ui-text-intent-advise: hsl(var(--blue-hue), var(--blue-saturation), 50%);
   --ui-text-intent-automation: hsl(var(--pink-hue), var(--pink-saturation), 40%);
@@ -201,6 +203,7 @@
 	--ui-bg-action-active: hsl(var(--ui-hue), var(--ui-saturation), 24%);
   --ui-bg-disabled: hsl(var(--ui-hue), var(--ui-saturation), 16%);
 	--ui-bg-glass-1: hsla(var(--ui-hue), var(--ui-saturation), 8%, 0.8);
+	--ui-bg-inactive: hsl(var(--ui-hue), var(--ui-saturation), 24%);
 
 	--ui-text-intent-advise: hsl(var(--blue-hue), var(--blue-saturation), 75%);
   --ui-text-intent-automation: hsl(var(--pink-hue), var(--pink-saturation), 75%);

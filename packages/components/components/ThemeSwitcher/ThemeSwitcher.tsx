@@ -23,7 +23,7 @@ const ThemeSwitcher: FC<ThemeSwitcherProps> = () => {
 			isSmall={true}
 			onChange={toggleTheme}
 			isChecked={theme === "dark"}
-			intent="silent"
+			intent="advise"
 		/>
 	)
 }

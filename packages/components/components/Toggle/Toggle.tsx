@@ -45,7 +45,11 @@ const Toggle: FC<ToggleProps> = ({
 					id={toggleId}
 				/>
 				<span className={styles.toggle__toggleMark} />
-				<Text type={isSmall ? "tiny" : "small"} fontWeight="medium">
+				<Text
+					type={isSmall ? "tiny" : "small"}
+					fontWeight="medium"
+					emphasis={isDisabled ? "tertiary" : "primary"}
+				>
 					{label}
 				</Text>
 			</label>
