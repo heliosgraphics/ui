@@ -1,3 +1,3 @@
 # components
 
-`npm add @heliosgraphics/components`
+`npm add @heliosgraphics/ui`
