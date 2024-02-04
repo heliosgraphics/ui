@@ -10,5 +10,11 @@
 				"caughtErrorsIgnorePattern": "^_"
 			}
 		]
+	},
+	"parser": "@babel/eslint-parser",
+	"parserOptions": {
+		"requireConfigFile": false,
+		"sourceType": "module",
+		"ecmaVersion": 2017
 	}
 }

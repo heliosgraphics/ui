@@ -1,9 +1,9 @@
 import type { ReactNode } from "react"
-import type { HeliosIntentType } from "@heliosgraphics/library/types/intent"
+import type { HeliosIntentionType } from "../../types/intentions"
 
 export interface FormProps {
 	alert?: ReactNode | string
-	alertType?: HeliosIntentType
+	alertType?: HeliosIntentionType
 	children: ReactNode
 	className?: string
 	buttonGroup?: ReactNode

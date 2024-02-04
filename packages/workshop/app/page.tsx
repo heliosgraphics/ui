@@ -17,7 +17,6 @@ import {
 	Grid,
 	Heading,
 	Icon,
-	Layout,
 	Loading,
 	Masonry,
 	Pie,
@@ -74,7 +73,7 @@ const ThemeSwitcher = dynamic(
 export default function Home() {
 	return (
 		<IntentProvider>
-			<Layout>
+			<main>
 				<Flex isColumn={true} gap={16} padding={16}>
 					<Flex isColumn={true} gap={8}>
 						<Heading level={1} className="flex flex-y-center gap-4">
@@ -286,7 +285,7 @@ export default function Home() {
 						</Details>
 					</Flex>
 				</Flex>
-			</Layout>
+			</main>
 		</IntentProvider>
 	)
 }

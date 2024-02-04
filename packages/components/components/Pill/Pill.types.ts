@@ -1,7 +1,5 @@
-import type { FUIColorScale } from "@heliosgraphics/library/types/colors"
-
 export interface PillProps {
-	color: FUIColorScale
+	color: string
 	isDark?: boolean
 	isSmall?: boolean
 	isMono?: boolean

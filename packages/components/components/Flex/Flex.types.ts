@@ -1,8 +1,9 @@
-import type { HTMLAttributes } from "react"
+import type { HTMLAttributes, ReactNode } from "react"
 import type { HeliosScale } from "../../types/scale"
 import type { RefObject } from 'react'
 
 export interface FlexProps extends HTMLAttributes<{}> {
+	children: ReactNode
 	align?: "center" | "left" | "right"
 	className?: string // todo: deprecate passing classNames around
 	draggable?: boolean

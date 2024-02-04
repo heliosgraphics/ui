@@ -3,12 +3,9 @@ import Flex from "../Flex"
 import Icon from "../Icon"
 import styles from "./Tile.module.css"
 import type { FC } from "react"
-import type { FUIColors } from "@heliosgraphics/library/types/colors"
 import type { TileProps } from "./Tile.types"
 
-const getTileColor = (
-	color,
-): { iconColor: FUIColors; tileColor: FUIColors } => {
+const getTileColor = (color): { iconColor: string; tileColor: string } => {
 	switch (color) {
 		case "white":
 			return {
@@ -22,8 +19,8 @@ const getTileColor = (
 			}
 	}
 
-	const iconColor: FUIColors = ("dark-" + color) as FUIColors
-	const tileColor: FUIColors = ("light-" + color) as FUIColors
+	const iconColor: string = ("dark-" + color) as string
+	const tileColor: string = ("light-" + color) as string
 
 	return { iconColor, tileColor }
 }

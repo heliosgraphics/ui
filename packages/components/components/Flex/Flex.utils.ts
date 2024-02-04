@@ -22,13 +22,10 @@ export const getFlexUtility = (props?: FlexProps): string => {
 	if (props.isBetween) flexClasses.add("space-between")
 	if (props.isAround) flexClasses.add("space-around")
 
-	if (props.gap || props.gap === 0) flexClasses.add(`gap-${props.gap}`)
-	if (props.padding || props.padding === 0)
-		flexClasses.add(`p-${props.padding}`)
-	if (props.paddingY || props.paddingY === 0)
-		flexClasses.add(`py-${props.paddingY}`)
-	if (props.paddingX || props.paddingX === 0)
-		flexClasses.add(`px-${props.paddingX}`)
+	if (props.gap) flexClasses.add(`gap-${props.gap}`)
+	if (props.padding) flexClasses.add(`p-${props.padding}`)
+	if (props.paddingY) flexClasses.add(`py-${props.paddingY}`)
+	if (props.paddingX) flexClasses.add(`px-${props.paddingX}`)
 	if (props.radius) flexClasses.add(`radius-${props.radius}`)
 
 	if (props.className) flexClasses.add(props.className)

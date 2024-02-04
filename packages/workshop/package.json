@@ -14,14 +14,14 @@
 		"@heliosgraphics/fractures": "latest",
 		"@heliosgraphics/icons": "latest",
 		"@heliosgraphics/utils": "5.2.0",
+		"@svgr/webpack": "latest",
+		"babel-eslint": "latest",
+		"next": "latest",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"@svgr/webpack": "latest"
+		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
-		"next": "latest",
-		"react": "latest",
-		"react-dom": "latest",
+		"@babel/eslint-parser": "latest",
 		"typescript": "latest"
 	}
 }

@@ -1,7 +1,5 @@
-import type { FUIColors } from "@heliosgraphics/library/types/colors"
-
 export interface PieItem {
-	color: FUIColors
+	color: string
 	name?: string
 	value: number
 }

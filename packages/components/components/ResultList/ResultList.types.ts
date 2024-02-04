@@ -1,5 +1,4 @@
 import type { HeliosIconType } from "@heliosgraphics/icons/meta"
-import type { FUIColors } from "@heliosgraphics/library/types/colors"
 
 export interface ResultItem {
 	description?: string
@@ -7,7 +6,7 @@ export interface ResultItem {
 	type?: "separator"
 	isActive?: boolean
 	isDisabled?: boolean
-	iconColor?: FUIColors
+	iconColor?: string
 	name: string
 	onClick?: (value) => void
 	value?: string

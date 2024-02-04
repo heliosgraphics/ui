@@ -17,7 +17,6 @@ export { default as Grid } from "./components/Grid"
 export { default as Heading } from "./components/Heading"
 export { default as Icon } from "./components/Icon"
 export { default as Input } from "./components/Input"
-export { default as Layout } from "./components/Layout"
 export { default as Loading } from "./components/Loading"
 export { default as Markdown } from "./components/Markdown"
 export { default as Masonry } from "./components/Masonry"
@@ -56,6 +55,7 @@ export type { HeadingProps } from './components/Heading'
 export { useIntersector } from "./hooks/useIntersector"
 
 // types
+export type { HeliosColors } from "./types/colors"
 export type { HeliosIntentionType, HeliosEmphasisType } from "./types/intentions"
 
 // meta

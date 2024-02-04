@@ -1,0 +1,10 @@
+{
+	"extends": ["next", "prettier"],
+	"plugins": ["prettier", "@typescript-eslint"],
+
+	"parser": "@babel/eslint-parser",
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 2017
+	}
+}
