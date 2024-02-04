@@ -1,0 +1,14 @@
+.horizontalSeparator {
+	border: 0;
+	width: 100%;
+}
+
+.horizontalSeparatorLight {
+	border: 0;
+	border-bottom: 1px solid var(--ui-border-light);
+}
+
+.horizontalSeparatorRegular {
+	border: 0;
+	border-bottom: 1px solid var(--ui-border);
+}

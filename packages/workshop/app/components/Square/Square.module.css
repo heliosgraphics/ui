@@ -1,0 +1,12 @@
+.square {
+	height: 56px;
+	width: 240px;
+
+	background-color: currentcolor;
+}
+
+.square small {
+	padding: 4px;
+
+	color: var(--text-color);
+}

@@ -1,0 +1,13 @@
+.verticalSeparator {
+	border: 0;
+}
+
+.verticalSeparatorLight {
+	border: 0;
+	border-left: 1px solid var(--ui-border-light);
+}
+
+.verticalSeparatorRegular {
+	border: 0;
+	border-left: 1px solid var(--ui-border);
+}

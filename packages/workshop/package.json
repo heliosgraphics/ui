@@ -1,0 +1,27 @@
+{
+	"name": "workshop",
+	"version": "0.0.0",
+	"private": false,
+	"description": "Thebe Components Workshop",
+	"author": "03b8 <03b8@helios.graphics>",
+	"scripts": {
+		"dev": "next dev -p 1024",
+		"build": "next build",
+		"start": "next start"
+	},
+	"dependencies": {
+		"@heliosgraphics/components": "workspace:*",
+		"@heliosgraphics/fractures": "latest",
+		"@heliosgraphics/icons": "latest",
+		"@heliosgraphics/utils": "5.2.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"@svgr/webpack": "latest"
+	},
+	"devDependencies": {
+		"next": "latest",
+		"react": "latest",
+		"react-dom": "latest",
+		"typescript": "latest"
+	}
+}

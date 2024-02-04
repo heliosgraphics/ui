@@ -1,0 +1,84 @@
+.alert {
+  --alert-bg-l: 92%;
+  --alert-text-l: 48%;
+
+  display: flex;
+	flex-direction: row;
+
+  background-color: var(--alert-bg);
+  color: var(--alert-text);
+}
+
+.alertAdvise {
+	--alert-bg: var(--ui-bg-intent-advise);
+	--alert-text: var(--ui-text-intent-advise);
+}
+
+.alertAutomation {
+	--alert-bg: var(--ui-bg-intent-automation);
+	--alert-text: var(--ui-text-intent-automation);
+}
+
+.alertConfirmation {
+	--alert-bg: var(--ui-bg-intent-confirmation);
+	--alert-text: var(--ui-text-intent-confirmation);
+}
+
+.alertError {
+	--alert-bg: var(--ui-bg-intent-error);
+	--alert-text: var(--ui-text-intent-error);
+}
+
+.alertHighlight {
+	--alert-bg: var(--ui-bg-intent-highlight);
+	--alert-text: var(--ui-text-intent-highlight);
+}
+
+.alertQuestion {
+	--alert-bg: var(--ui-bg-intent-question);
+	--alert-text: var(--ui-text-intent-question);
+}
+
+.alertSilent {
+	--alert-bg: var(--ui-bg-intent-silent);
+	--alert-text: var(--ui-text-intent-silent);
+}
+
+.alertSuccess {
+	--alert-bg: var(--ui-bg-intent-success);
+	--alert-text: var(--ui-text-intent-success);
+}
+
+.alertWarning {
+	--alert-bg: var(--ui-bg-intent-warning);
+	--alert-text: var(--ui-text-intent-warning);
+}
+
+.alertSmall {
+	border-radius: var(--radius-small);
+}
+
+.alertNormal {
+	border-radius: var(--radius-normal);
+}
+
+.alertWithButton {
+	padding-right: 48px;
+}
+
+.alertButtonGroup {
+	position: absolute;
+	right: 8px;
+	top: 8px;
+}
+
+.alert a {
+	font-weight: var(--font-weight-medium);
+	text-decoration: underline;
+}
+
+@container (max-width: 640px) {
+	.alert {
+		flex-direction: column;
+	}
+}

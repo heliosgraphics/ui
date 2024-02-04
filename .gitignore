@@ -12,6 +12,7 @@
 .now
 .npm
 .sentryclirc
+.tmp
 .turbo
 .vercel
 .vscode

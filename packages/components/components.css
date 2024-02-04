@@ -1,0 +1,360 @@
+/* TODO: move these to layout and pre-connect */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
+@import url("https://rsms.me/inter/inter.css");
+
+/* setup globals */
+:root {
+	--box-px: 1px;
+	--box-1: 2px;
+	--box-2: 4px;
+	--box-3: 6px;
+	--box-4: 8px;
+	--box-5: 10px;
+	--box-6: 12px;
+	--box-7: 14px;
+	--box-8: 16px;
+	--box-9: 18px;
+	--box-10: 20px;
+	--box-11: 22px;
+	--box-12: 24px;
+	--box-13: 26px;
+	--box-14: 28px;
+	--box-15: 30px;
+	--box-16: 32px;
+	--box-24: 48px;
+	--box-32: 64px;
+	--box-40: 80px;
+	--box-48: 96px;
+
+	--radius-small: 4px;
+	--radius-normal: 8px;
+	--radius-large: 12px;
+
+	--font-size-h0: 48px;
+	--font-size-h1: 36px;
+	--font-size-h2: 32px;
+	--font-size-h3: 28px;
+	--font-size-h4: 24px;
+	--font-size-h5: 20px;
+	--font-size-h6: 18px;
+	--font-size-p: 16px;
+	--font-size-small: 14px;
+	--font-size-tiny: 12px;
+
+	--line-height-h1: 44px;
+	--line-height-h2: 40px;
+	--line-height-h3: 36px;
+	--line-height-h4: 32px;
+	--line-height-h5: 26px;
+	--line-height-h6: 24px;
+	--line-height-p: 24px;
+	--line-height-small: 22px;
+	--line-height-tiny: 18px;
+
+	--font-family-sans: "Inter", -apple-system, "Helvetica Neue", Arial, sans-serif;
+	--font-family-mono: "JetBrains Mono", courier, monospace;
+	--font-family-serif: "Times New Roman", Times, Georgia;
+
+	--font-weight-thin: 100;
+	--font-weight-extra-light: 200;
+	--font-weight-light: 300;
+	--font-weight-normal: 400;
+	--font-weight-medium: 500;
+	--font-weight-semi-bold: 600;
+	--font-weight-bold: 700;
+	--font-weight-extra-bold: 800;
+	--font-weight-black: 900;
+
+	--z-index-0: 0;
+	--z-index-10: 100;
+	--z-index-20: 200;
+	--z-index-30: 300;
+	--z-index-40: 400;
+	--z-index-50: 500;
+	--z-index-60: 600;
+	--z-index-70: 700;
+	--z-index-80: 800;
+	--z-index-90: 900;
+	--z-index-100: 1000;
+
+	/* color hues */
+	--aqua-hue: 192;
+	--blue-hue: 230;
+	--gray-hue: 225;
+	--green-hue: 120;
+	--orange-hue: 30;
+	--pink-hue: 324;
+	--purple-hue: 266;
+	--red-hue: 356;
+	--yellow-hue: 45;
+	--ui-hue: 4;
+
+	/* setup intention mappings */
+	--color-intent-advise: var(--blue-hue), var(--blue-saturation);
+  --color-intent-automation: var(--pink-hue), var(--pink-saturation);
+  --color-intent-confirmation: var(--purple-hue), var(--purple-saturation);
+  --color-intent-error: var(--red-hue), var(--red-saturation);
+  --color-intent-highlight: var(--orange-hue), var(--orange-saturation);
+  --color-intent-question: var(--aqua-hue), var(--aqua-saturation);
+  --color-intent-silent: var(--gray-hue), var(--gray-saturation);
+  --color-intent-success: var(--green-hue), var(--green-saturation);
+  --color-intent-warning: var(--yellow-hue), var(--yellow-saturation);
+
+	/* shared UI: bg soft intents */
+	--ui-bg-intent-advise: hsla(var(--blue-hue), var(--blue-saturation), 50%, 0.25);
+  --ui-bg-intent-automation: hsla(var(--pink-hue), var(--pink-saturation), 50%, 0.25);
+  --ui-bg-intent-confirmation: hsla(var(--purple-hue), var(--purple-saturation), 50%, 0.25);
+  --ui-bg-intent-error: hsla(var(--red-hue), var(--red-saturation), 50%, 0.25);
+  --ui-bg-intent-highlight: hsla(var(--orange-hue), var(--orange-saturation), 50%, 0.25);
+  --ui-bg-intent-question: hsla(var(--aqua-hue), var(--aqua-saturation), 50%, 0.25);
+  --ui-bg-intent-silent: hsla(var(--gray-hue), var(--gray-saturation), 50%, 0.25);
+  --ui-bg-intent-success: hsla(var(--green-hue), var(--green-saturation), 50%, 0.25);
+  --ui-bg-intent-warning: hsla(var(--yellow-hue), var(--yellow-saturation), 50%, 0.25);
+
+	/* setup animations constants */
+	--animation-fastest: 64ms;
+	--animation-fast: 96ms;
+	--animation-normal: 128ms;
+	--animation-slow: 160ms;
+	--animation-slowest: 192ms;
+
+	font-family: var(--font-family-sans);
+  font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+/* setup theme light */
+:root {
+  color-scheme: light;
+
+	--aqua-saturation: 65%;
+	--blue-saturation: 87%;
+	--gray-saturation: 8%;
+	--green-saturation: 40%;
+	--orange-saturation: 94%;
+	--pink-saturation: 76%;
+	--purple-saturation: 80%;
+	--red-saturation: 84%;
+	--yellow-saturation: 80%;
+	--ui-saturation: 4%;
+
+  --ui-text-primary: hsl(var(--ui-hue), var(--ui-saturation), 8%);
+  --ui-text-secondary: hsl(var(--ui-hue), var(--ui-saturation), 44%);
+  --ui-text-tertiary: hsl(var(--ui-hue), var(--ui-saturation), 69%);
+
+	--ui-border-light: hsl(var(--ui-hue), var(--ui-saturation), 95%);
+	--ui-border: hsl(var(--ui-hue), var(--ui-saturation), 85%);
+	--ui-border-active: hsl(var(--ui-hue), var(--ui-saturation), 80%);
+
+	--ui-bg: hsl(var(--ui-hue), var(--ui-saturation), 100%);
+	--ui-bg-action: hsl(var(--ui-hue), var(--ui-saturation), 99%);
+	--ui-bg-action-hover: hsl(var(--ui-hue), var(--ui-saturation), 96%);
+	--ui-bg-action-active: hsl(var(--ui-hue), var(--ui-saturation), 90%);
+  --ui-bg-disabled: hsl(var(--ui-hue), var(--ui-saturation), 90%);
+
+	--ui-text-intent-advise: hsl(var(--blue-hue), var(--blue-saturation), 50%);
+  --ui-text-intent-automation: hsl(var(--pink-hue), var(--pink-saturation), 40%);
+  --ui-text-intent-confirmation: hsl(var(--purple-hue), var(--purple-saturation), 50%);
+  --ui-text-intent-error: hsl(var(--red-hue), var(--red-saturation), 50%);
+  --ui-text-intent-highlight: hsl(var(--orange-hue), var(--orange-saturation), 45%);
+  --ui-text-intent-question: hsl(var(--aqua-hue), var(--aqua-saturation), 40%);
+  --ui-text-intent-silent: hsl(var(--gray-hue), var(--gray-saturation), 40%);
+  --ui-text-intent-success: hsl(var(--green-hue), var(--green-saturation), 40%);
+  --ui-text-intent-warning: hsl(var(--yellow-hue), var(--yellow-saturation), 40%);
+
+	--ui-button-text-advise: hsl(var(--blue-hue), var(--blue-saturation), 95%);
+  --ui-button-text-automation: hsl(var(--pink-hue), var(--pink-saturation), 95%);
+  --ui-button-text-confirmation: hsl(var(--purple-hue), var(--purple-saturation), 95%);
+  --ui-button-text-error: hsl(var(--red-hue), var(--red-saturation), 95%);
+  --ui-button-text-highlight: hsl(var(--orange-hue), var(--orange-saturation), 95%);
+  --ui-button-text-question: hsl(var(--aqua-hue), var(--aqua-saturation), 95%);
+  --ui-button-text-silent: hsl(var(--gray-hue), var(--gray-saturation), 40%);
+  --ui-button-text-success: hsl(var(--green-hue), var(--green-saturation), 95%);
+  --ui-button-text-warning: hsl(var(--yellow-hue), var(--yellow-saturation), 95%);
+}
+
+/* setup theme dark */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+	--aqua-saturation: 55%;
+	--blue-saturation: 60%;
+	--gray-saturation: 4%;
+	--green-saturation: 65%;
+	--orange-saturation: 84%;
+	--pink-saturation: 66%;
+	--purple-saturation: 70%;
+	--red-saturation: 74%;
+	--yellow-saturation: 80%;
+
+	--ui-text-primary: hsl(var(--ui-hue), var(--ui-saturation), 92%);
+  --ui-text-secondary: hsl(var(--ui-hue), var(--ui-saturation), 62%);
+  --ui-text-tertiary: hsl(var(--ui-hue), var(--ui-saturation), 33%);
+
+	--ui-border-light: hsl(var(--ui-hue), var(--ui-saturation), 10%);
+	--ui-border: hsl(var(--ui-hue), var(--ui-saturation), 20%);
+  --ui-border-active: hsl(var(--ui-hue), var(--ui-saturation), 35%);
+
+	--ui-bg: hsl(var(--ui-hue), var(--ui-saturation), 4%);
+	--ui-bg-action: hsl(var(--ui-hue), var(--ui-saturation), 8%);
+  --ui-bg-action-hover: hsl(var(--ui-hue), var(--ui-saturation), 16%);
+	--ui-bg-action-active: hsl(var(--ui-hue), var(--ui-saturation), 24%);
+  --ui-bg-disabled: hsl(var(--ui-hue), var(--ui-saturation), 16%);
+
+	--ui-text-intent-advise: hsl(var(--blue-hue), var(--blue-saturation), 75%);
+  --ui-text-intent-automation: hsl(var(--pink-hue), var(--pink-saturation), 75%);
+  --ui-text-intent-confirmation: hsl(var(--purple-hue), var(--purple-saturation), 75%);
+  --ui-text-intent-error: hsl(var(--red-hue), var(--red-saturation), 75%);
+  --ui-text-intent-highlight: hsl(var(--orange-hue), var(--orange-saturation), 75%);
+  --ui-text-intent-question: hsl(var(--aqua-hue), var(--aqua-saturation), 75%);
+  --ui-text-intent-silent: hsl(var(--gray-hue), var(--gray-saturation), 75%);
+  --ui-text-intent-success: hsl(var(--green-hue), var(--green-saturation), 75%);
+  --ui-text-intent-warning: hsl(var(--yellow-hue), var(--yellow-saturation), 75%);
+
+	--ui-button-text-advise: hsl(var(--blue-hue), var(--blue-saturation), 90%);
+  --ui-button-text-automation: hsl(var(--pink-hue), var(--pink-saturation), 90%);
+  --ui-button-text-confirmation: hsl(var(--purple-hue), var(--purple-saturation), 90%);
+  --ui-button-text-error: hsl(var(--red-hue), var(--red-saturation), 90%);
+  --ui-button-text-highlight: hsl(var(--orange-hue), var(--orange-saturation), 15%);
+  --ui-button-text-question: hsl(var(--aqua-hue), var(--aqua-saturation), 10%);
+  --ui-button-text-silent: hsl(var(--gray-hue), var(--gray-saturation), 90%);
+  --ui-button-text-success: hsl(var(--green-hue), var(--green-saturation), 10%);
+  --ui-button-text-warning: hsl(var(--yellow-hue), var(--yellow-saturation), 15%);
+}
+
+@supports (font-variation-settings: normal) {
+	:root {
+		font-family: "InterVariable", sans-serif;
+	}
+}
+
+*:focus-visible {
+  outline: 2px solid hsl(var(--color-intent-highlight), 50%);
+	outline-offset: 2px;
+}
+
+a {
+	color: currentcolor;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+*::selection {
+	--ui-text-selected: hsla(var(--color-intent-advise), 80%, 0.25);
+	/* --ui-text-selected: hsla(var(--color-intent-advise), 20%, 0.25); */
+
+	background-color: var(--ui-text-selected);
+}
+
+body {
+	width: 100%;
+
+	background-color: var(--ui-bg);
+  color: var(--ui-text-primary);
+}
+
+/* helpers: text color */
+ext-secondary {
+	color: var(--ui-text-secondary);
+}
+
+.text-deemphasized {
+	color: var(--ui-text-deemphasized);
+}
+
+mark,
+.text-highlighted {
+	background-color: var(--ui-text-highlighted);
+}
+
+/* helpers: glass */
+.glass-1 {
+	background-color: var(--rgba-glass-1);
+	backdrop-filter: blur(3px);
+}
+
+/* helpers: shadow */
+.shadow-1 {
+	box-shadow:
+		0 0 0 1px rgba(0, 0, 0, 0.024),
+		0 1px 1px 0 rgba(0, 0, 0, 0.06),
+		0 2px 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+.shadow-2 {
+	box-shadow:
+		0 0 0 1px rgba(0, 0, 0, 0.024),
+		0 1px 1px 0 rgba(0, 0, 0, 0.06),
+		0 0 4px 0 rgba(0, 0, 0, 0.08),
+		0 0 0 1px rgba(0, 0, 0, 0.04),
+		0 0 10px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* helpers: scrollbar */
+.helios-scrollbar::-webkit-scrollbar {
+	height: 8px;
+	width: 8px;
+}
+
+.helios-scrollbar::-webkit-scrollbar-thumb {
+	height: 4px;
+	width: 4px;
+
+	background-color: var(--gray-100);
+	transition: all 80ms ease-in-out;
+}
+
+.helios-scrollbar::-webkit-scrollbar-track {
+	background-color: var(--gray-25);
+}
+
+.helios-scrollbar::-webkit-scrollbar-thumb:hover {
+	background-color: var(--gray-200);
+}
+
+.helios-scrollbar::-webkit-scrollbar-thumb:active {
+	background-color: var(--gray-300);
+}
+
+/* helpers: debug */
+.debug * {
+	box-shadow: inset 0 0 0 1px hsl(var(--color-intent-highlight), 75%);
+}
+
+.debug *[data-component] {
+	position: relative;
+
+	box-shadow: inset 0 0 0 1px hsl(var(--color-intent-highlight), 75%);
+}
+
+.debug *[data-component]:after {
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	padding: 0 4px;
+	height: 20px;
+
+	background-color: hsl(var(--color-intent-highlight), 75%);
+	border-radius: var(--radius-small);
+	color: var(--ui-text-secondary);
+
+	font-family: var(--font-family-mono);
+	font-size: 10px;
+	line-height: 20px;
+	content: attr(data-component);
+}
+
+/* .text-gradient-1 {
+	background-image: linear-gradient(
+		135deg,
+		hsl(var(--color-intent-highlight), 75%),
+		hsl(var(--color-intent-highlight), 75%),
+		hsl(var(--color-intent-highlight), 25%)
+	);
+	background-clip: text;
+
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+} */
