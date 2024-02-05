@@ -69,6 +69,8 @@ import ExamplePie from "./components/ExamplePie"
 import ExampleProgress from "./components/ExampleProgress"
 import ExampleShimmer from "./components/ExampleShimmer"
 import ExampleSlider from "./components/ExampleSlider"
+import ExamplePill from "./components/ExamplePill"
+import ExampleSpacer from "./components/ExampleSpacer"
 
 const ThemeSwitcher = dynamic(
 	() => import("@heliosgraphics/ui/components/ThemeSwitcher"),
@@ -201,7 +203,7 @@ export default function Home() {
 							</Details>
 
 							<Details title="Pill">
-								<Pill color="red" label="Pill" />
+								<ExamplePill />
 							</Details>
 
 							<Details title="Progress">
@@ -229,7 +231,7 @@ export default function Home() {
 							</Details>
 
 							<Details title="Spacer">
-								<Spacer gap={12} />
+								<ExampleSpacer />
 							</Details>
 
 							<Details title="Table">
