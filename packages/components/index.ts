@@ -58,6 +58,7 @@ export { useIntersector } from "./hooks/useIntersector"
 export type { HeliosColors } from "./types/colors"
 export type { HeliosIntentionType, HeliosEmphasisType } from "./types/intentions"
 
+import { HeliosColors } from "./types/colors"
 // meta
 import type { HeliosIntentionType } from './types/intentions'
 
@@ -72,6 +73,19 @@ export const INTENTIONS: Array<HeliosIntentionType> = [
 	"success",
 	"warning"
 ]
+
+export const COLORS: Array<HeliosColors> = [
+	"aqua",
+	"blue",
+	"gray",
+	"green",
+	"orange",
+	"pink",
+	"purple",
+	"red",
+	"yellow"
+]
+
 export const COMPONENTS = [
 	"Alert",
 	"Breadcrumb",

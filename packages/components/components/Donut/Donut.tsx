@@ -8,14 +8,15 @@ const Donut: FC<DonutProps> = ({
 	children,
 	size = 32,
 	percentage = 0,
-	color = "blue",
+	color,
 }) => {
 	const borderSize: number = getDonutBorderSize()
 	const actualSize: number = size - borderSize
 	const cSize = size / 2
 	const rSize = actualSize / 2
 	const dashSize = 100 - percentage
-	const donutColor: string = "red" //  `var(--${getColor(color)})`!
+	const donutColor: string =
+		`hsla(var(--${color}-hue), var(--${color}-saturation), 50%, 0.25)`!
 
 	const donutContainerStyle: object = {
 		height: size + "px",
