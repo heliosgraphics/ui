@@ -6,9 +6,10 @@
 	-webkit-tap-highlight-color: transparent;
 }
 
-/* .button:has(input[type="file"]) input {
-	line-height: 40px;
-} */
+.button:has(input[type="file"]) input {
+	width: 0;
+	opacity: 0.0001;
+}
 
 .button:hover {
 	background-color: var(--button-hover);

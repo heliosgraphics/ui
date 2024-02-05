@@ -110,6 +110,7 @@ const ExampleButton: FC<ExampleButtonProps> = () => {
 				<Button
 					intent={intent}
 					value="Upload"
+					icon="file"
 					accept="image/*;capture=camera"
 					type="file"
 					onChange={onFileSelect}
