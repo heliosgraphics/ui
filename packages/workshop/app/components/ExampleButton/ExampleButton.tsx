@@ -1,13 +1,15 @@
 "use client"
 
 import { useContext } from "react"
-import { Button, ButtonGroup, Flex } from "@heliosgraphics/ui"
+import { Button, ButtonGroup, Flex, Separator } from "@heliosgraphics/ui"
 import { IntentContext } from "../../contexts/IntentContext"
 import type { ExampleButtonProps } from "./ExampleButton.types"
 import type { FC } from "react"
 
 const ExampleButton: FC<ExampleButtonProps> = () => {
 	const { intent } = useContext(IntentContext)
+
+	const onFileSelect = (event) => console.log({ event })
 
 	return (
 		<Flex isColumn={true} gap={16}>
@@ -101,6 +103,16 @@ const ExampleButton: FC<ExampleButtonProps> = () => {
 					isRounded={true}
 					size="small"
 					icon="bullseye"
+				/>
+			</ButtonGroup>
+			<Separator />
+			<ButtonGroup>
+				<Button
+					intent={intent}
+					value="Upload"
+					accept="image/*;capture=camera"
+					type="file"
+					onChange={onFileSelect}
 				/>
 			</ButtonGroup>
 		</Flex>

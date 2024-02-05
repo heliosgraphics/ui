@@ -41,7 +41,6 @@ export { default as ThemeSwitcherLoading } from "./components/ThemeSwitcherLoadi
 export { default as Tile } from "./components/Tile"
 export { default as Timestamp } from "./components/Timestamp"
 export { default as Toggle } from "./components/Toggle"
-export { default as Upload } from "./components/Upload"
 export type { BreadCrumbItem } from "./components/Breadcrumb"
 export type { ButtonGroupProps } from './components/ButtonGroup'
 export type { ButtonProps } from './components/Button'
@@ -130,8 +129,7 @@ export const COMPONENTS = [
 	"ThemeSwitcher",
 	"Tile",
 	"Timestamp",
-	"Toggle",
-	"Upload",
+	"Toggle"
 ] as const
 
 // meta

@@ -16,12 +16,14 @@ const BUTTON_ICON_SIZE: Record<string, number> = {
 const Button: FC<ButtonProps> = ({
 	flair,
 	icon,
+	accept,
 	value,
 	intent,
 	isDisabled,
 	isIconOnly,
 	isLoading,
 	isRounded,
+	onChange,
 	onClick,
 	size = "normal",
 	tabIndex,
@@ -91,12 +93,14 @@ const Button: FC<ButtonProps> = ({
 				</Flex>
 			)}
 			<input
+				aria-disabled={isDisabled}
 				type={type}
 				className={buttonInputClasses}
-				aria-disabled={!!isDisabled}
+				accept={accept}
 				tabIndex={tabIndex ?? 0}
-				role="button"
-				value={isIconOnly ? "" : value}
+				role={type !== "file" ? "button" : undefined}
+				onChange={onChange}
+				defaultValue={isIconOnly ? "" : value}
 			/>
 			{isLoading && (
 				<Loading size={buttonLoadingSize} className={styles.button__loading} />

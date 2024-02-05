@@ -3,6 +3,7 @@ import type { HeliosIntentionType } from "../../types/intentions"
 import type { HeliosIconType } from "@heliosgraphics/icons/meta"
 
 export interface ButtonProps {
+	accept?: string
 	flair?: string
 	icon?: HeliosIconType
 	intent: HeliosIntentionType
@@ -11,8 +12,9 @@ export interface ButtonProps {
 	isLoading?: boolean
 	isRounded?: boolean
 	onClick?: (event?: MouseEvent | SyntheticEvent) => void
+	onChange?: (event?: MouseEvent | SyntheticEvent) => void
 	size?: "normal" | "small" | "tiny"
 	tabIndex?: number
-	type?: 'button' | 'submit'
+	type?: 'button' | 'submit' | "file"
 	value: string
 }
