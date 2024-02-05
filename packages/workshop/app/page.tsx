@@ -58,11 +58,17 @@ import ExampleDonut from "./components/ExampleDonut"
 import ExampleDot from "./components/ExampleDot"
 import ExampleColumn from "./components/ExampleColumn"
 import ExampleDropdown from "./components/ExampleDropdown"
+import ExampleFlex from "./components/ExampleFlex"
 import ExampleResultList from "./components/ExampleResultList"
 import IntentSelector from "./components/IntentSelector"
 import ColorSelector from "./components/ColorSelector"
-
-const pieItems: Array<PieItem> = []
+import ExampleGrid from "./components/ExampleGrid"
+import ExampleLoading from "./components/ExampleLoading"
+import ExampleMasonry from "./components/ExampleMasonry"
+import ExamplePie from "./components/ExamplePie"
+import ExampleProgress from "./components/ExampleProgress"
+import ExampleShimmer from "./components/ExampleShimmer"
+import ExampleSlider from "./components/ExampleSlider"
 
 const ThemeSwitcher = dynamic(
 	() => import("@heliosgraphics/ui/components/ThemeSwitcher"),
@@ -155,10 +161,7 @@ export default function Home() {
 							</Details>
 
 							<Details title="Flex">
-								<Flex isColumn={true} gap={8}>
-									<Text type="small">Hello</Text>
-									<Text type="small">Word</Text>
-								</Flex>
+								<ExampleFlex />
 							</Details>
 
 							<Details title="Form">
@@ -166,12 +169,7 @@ export default function Home() {
 							</Details>
 
 							<Details title="Grid">
-								<Grid columns={2}>
-									<Text type="small">01</Text>
-									<Text type="small">02</Text>
-									<Text type="small">03</Text>
-									<Text type="small">04</Text>
-								</Grid>
+								<ExampleGrid />
 							</Details>
 
 							<Details title="Heading">
@@ -187,9 +185,7 @@ export default function Home() {
 							</Details>
 
 							<Details title="Loading">
-								<Loading size={10} />
-								<Loading size={20} />
-								<Loading size={40} />
+								<ExampleLoading />
 							</Details>
 
 							<Details title="Markdown">
@@ -197,18 +193,11 @@ export default function Home() {
 							</Details>
 
 							<Details title="Masonry">
-								<Masonry>
-									<Text type="small">01</Text>
-									<Text type="small">02</Text>
-									<Text type="small">03</Text>
-									<Text type="small">04</Text>
-									<Text type="small">05</Text>
-									<Text type="small">06</Text>
-								</Masonry>
+								<ExampleMasonry />
 							</Details>
 
 							<Details title="Pie">
-								<Pie size={20} data={pieItems} />
+								<ExamplePie />
 							</Details>
 
 							<Details title="Pill">
@@ -216,7 +205,7 @@ export default function Home() {
 							</Details>
 
 							<Details title="Progress">
-								<Progress max={100} value={24} />
+								<ExampleProgress />
 							</Details>
 
 							<Details title="Radio">
@@ -232,11 +221,11 @@ export default function Home() {
 							</Details>
 
 							<Details title="Shimmer">
-								<Shimmer height={20} width={120} />
+								<ExampleShimmer />
 							</Details>
 
 							<Details title="Slider">
-								<Slider />
+								<ExampleSlider />
 							</Details>
 
 							<Details title="Spacer">
