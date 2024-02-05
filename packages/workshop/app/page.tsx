@@ -1,36 +1,12 @@
 "use client"
 
 import {
-	type ResultItem,
-	type PieItem,
-	Button,
-	ButtonGroup,
-	Column,
 	Details,
-	Donut,
-	Dot,
-	Dropdown,
 	Flex,
-	Grid,
 	Heading,
 	Icon,
-	Loading,
-	Masonry,
-	Pie,
-	Pill,
-	Progress,
-	ResultList,
-	Separator,
-	Shimmer,
-	Slider,
-	Spacer,
-	Table,
-	Tabs,
 	Text,
 	ThemeSwitcherLoading,
-	Tile,
-	Timestamp,
-	Upload,
 } from "@heliosgraphics/ui"
 import { IntentProvider } from "./contexts/IntentContext"
 import { ColorProvider } from "./contexts/ColorContext"
@@ -71,6 +47,10 @@ import ExampleShimmer from "./components/ExampleShimmer"
 import ExampleSlider from "./components/ExampleSlider"
 import ExamplePill from "./components/ExamplePill"
 import ExampleSpacer from "./components/ExampleSpacer"
+import ExampleTable from "./components/ExampleTable"
+import ExampleTabs from "./components/ExampleTabs"
+import ExampleTile from "./components/ExampleTile"
+import ExampleTimestamp from "./components/ExampleTimestamp"
 
 const ThemeSwitcher = dynamic(
 	() => import("@heliosgraphics/ui/components/ThemeSwitcher"),
@@ -235,19 +215,11 @@ export default function Home() {
 							</Details>
 
 							<Details title="Table">
-								Hydara
-								{/* <Table>
-								<tr>
-									<td>
-										<Text type="div">Hello 01</Text>
-										<Text type="div">Hello 02</Text>
-									</td>
-								</tr>
-							</Table> */}
+								<ExampleTable />
 							</Details>
 
 							<Details title="Tabs">
-								<Tabs items={[]} sections={[]} />
+								<ExampleTabs />
 							</Details>
 
 							<Details title="Text">
@@ -259,19 +231,15 @@ export default function Home() {
 							</Details>
 
 							<Details title="Tile">
-								<Tile color="red" icon="arrow-left" size={32} />
+								<ExampleTile />
 							</Details>
 
 							<Details title="Timestamp">
-								<Timestamp />
+								<ExampleTimestamp />
 							</Details>
 
 							<Details title="Toggle">
 								<ExampleToggle />
-							</Details>
-
-							<Details title="Upload">
-								<Upload />
 							</Details>
 						</Flex>
 					</Flex>
