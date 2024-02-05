@@ -55,13 +55,12 @@ import ExampleText from "./components/ExampleText"
 import ExampleTextarea from "./components/ExampleTextarea"
 import ExampleToggle from "./components/ExampleToggle"
 import ExampleDonut from "./components/ExampleDonut"
+import ExampleDot from "./components/ExampleDot"
+import ExampleColumn from "./components/ExampleColumn"
+import ExampleDropdown from "./components/ExampleDropdown"
+import ExampleResultList from "./components/ExampleResultList"
 import IntentSelector from "./components/IntentSelector"
 import ColorSelector from "./components/ColorSelector"
-
-const resultListItems: Array<ResultItem> = [
-	{ name: "First item", icon: "arrow-left" },
-	{ name: "Second item", icon: "arrow-left" },
-]
 
 const pieItems: Array<PieItem> = []
 
@@ -132,11 +131,7 @@ export default function Home() {
 							</Details>
 
 							<Details title="Column">
-								<div>
-									<Column width={480}>
-										<Text type="paragraph">Hello</Text>
-									</Column>
-								</div>
+								<ExampleColumn />
 							</Details>
 
 							<Details title="Confirm">
@@ -152,15 +147,11 @@ export default function Home() {
 							</Details>
 
 							<Details title="Dot">
-								<Dot size={8} color="red" />
+								<ExampleDot />
 							</Details>
 
 							<Details title="Dropdown">
-								<Dropdown items={resultListItems}>
-									<ButtonGroup>
-										<Button value="Dropdown" intent="silent" />
-									</ButtonGroup>
-								</Dropdown>
+								<ExampleDropdown />
 							</Details>
 
 							<Details title="Flex">
@@ -233,7 +224,7 @@ export default function Home() {
 							</Details>
 
 							<Details title="ResultList">
-								<ResultList items={resultListItems} />
+								<ExampleResultList />
 							</Details>
 
 							<Details title="Select">
