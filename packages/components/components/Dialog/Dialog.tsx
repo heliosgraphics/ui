@@ -18,6 +18,7 @@ const Dialog: FC<DialogProps> = ({
 	children,
 	onClick,
 	isOpen,
+	isCentered,
 	onClose,
 }) => {
 	const dialogRef = useRef<HTMLDialogElement | null>(null)
@@ -89,7 +90,9 @@ const Dialog: FC<DialogProps> = ({
 		return isDialog && onClose()
 	}
 
-	const dialogClasses: string = classNames(styles.dialog, "shadow-1")
+	const dialogClasses: string = classNames(styles.dialog, "helios-scrollbar", {
+		[styles.dialogCentered]: isCentered,
+	})
 
 	return (
 		<animated.dialog

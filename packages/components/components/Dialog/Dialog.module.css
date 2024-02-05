@@ -14,11 +14,18 @@
 	touch-action: pan-y;
 }
 
+.dialogCentered {
+  top: 50%;
+  left: 50%;
+
+  transform: translateX(-50%) translateY(-50%);
+}
+
 .dialog::-webkit-scrollbar {
 	height: 8px;
 	width: 8px;
 }
-
+/*
 .dialog::-webkit-scrollbar-thumb {
 	height: 4px;
 	width: 4px;
@@ -40,7 +47,7 @@
 
 .dialog::-webkit-scrollbar-thumb:active {
 	background-color: var(--gray-50);
-}
+} */
 
 .dialog__content {
 	position: relative;

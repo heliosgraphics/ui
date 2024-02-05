@@ -257,15 +257,6 @@ body {
   color: var(--ui-text-primary);
 }
 
-/* helpers: text color */
-ext-secondary {
-	color: var(--ui-text-secondary);
-}
-
-.text-deemphasized {
-	color: var(--ui-text-deemphasized);
-}
-
 mark,
 .text-highlighted {
 	background-color: var(--ui-text-highlighted);
@@ -287,20 +278,20 @@ mark,
 	height: 4px;
 	width: 4px;
 
-	background-color: var(--gray-100);
+	background-color: var(--ui-bg);
 	transition: all 80ms ease-in-out;
 }
 
 .helios-scrollbar::-webkit-scrollbar-track {
-	background-color: var(--gray-25);
+	background-color: var(--ui-bg-action-active);
 }
 
 .helios-scrollbar::-webkit-scrollbar-thumb:hover {
-	background-color: var(--gray-200);
+	background-color: var(--ui-bg-action-hover);
 }
 
 .helios-scrollbar::-webkit-scrollbar-thumb:active {
-	background-color: var(--gray-300);
+	background-color: var(--ui-bg-disabled);
 }
 
 /* helpers: debug */

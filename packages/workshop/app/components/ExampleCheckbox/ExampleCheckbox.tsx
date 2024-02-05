@@ -8,7 +8,7 @@ import type { ExampleCheckboxProps } from "./ExampleCheckbox.types"
 const ExampleCheckbox: FC<ExampleCheckboxProps> = () => {
 	const { intent } = useContext(IntentContext)
 	const [isChecked, setChecked] = useState<boolean>(false)
-	const [isChecked2, setChecked2] = useState<boolean>(false)
+	const [isChecked2, setChecked2] = useState<boolean>(true)
 	const [isChecked3, setChecked3] = useState<boolean>(false)
 
 	const onToggle = () => setChecked(!isChecked)

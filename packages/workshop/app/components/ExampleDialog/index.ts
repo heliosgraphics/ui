@@ -1,3 +1,3 @@
-import Dialog from './Dialog'
+import ExampleDialog from './ExampleDialog'
 
-export default Dialog
+export default ExampleDialog
