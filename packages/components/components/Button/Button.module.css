@@ -6,6 +6,10 @@
 	-webkit-tap-highlight-color: transparent;
 }
 
+/* .button:has(input[type="file"]) input {
+	line-height: 40px;
+} */
+
 .button:hover {
 	background-color: var(--button-hover);
 }
@@ -142,18 +146,24 @@
 .buttonSizeNormal input {
 	height: 40px;
 	min-width: 40px;
+
+	line-height: 40px;
 }
 
 .buttonSizeSmall,
 .buttonSizeSmall input {
 	height: 30px;
 	min-width: 30px;
+
+	line-height: 30px;
 }
 
 .buttonSizeTiny,
 .buttonSizeTiny input {
 	height: 24px;
 	min-width: 24px;
+
+	line-height: 24px;
 }
 
 /* Loading */
