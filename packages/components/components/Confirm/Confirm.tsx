@@ -11,7 +11,8 @@ const Confirm: FC<ConfirmProps> = ({
 	onConfirm,
 	isOpen,
 	title,
-	details,
+	intent,
+	description,
 	cancelIcon,
 	cancelText,
 	confirmIcon,
@@ -27,7 +28,8 @@ const Confirm: FC<ConfirmProps> = ({
 
 	return (
 		<Dialog title={title} onClose={onCancel} isOpen={isOpen} isCentered={true}>
-			<Flex gap={8} isColumn={true}>
+			<Flex gap={12} isColumn={true}>
+				{!!description && <Text type="paragraph">{description}</Text>}
 				<ButtonGroup>
 					<Button
 						intent="silent"
@@ -36,17 +38,12 @@ const Confirm: FC<ConfirmProps> = ({
 						icon={cancelIcon}
 					/>
 					<Button
-						intent="error"
+						intent={intent}
 						value={confirmText}
 						onClick={onConfirmClick}
 						icon={confirmIcon}
 					/>
 				</ButtonGroup>
-				{!!details && (
-					<Text type="tiny" color="gray">
-						{details}
-					</Text>
-				)}
 			</Flex>
 		</Dialog>
 	)

@@ -108,8 +108,8 @@ const ExampleDialog: FC<ExampleDialogProps> = () => {
 					)}
 					{hasActions && (
 						<ButtonGroup>
-							<Button intent="advise" value="Advise" />
-							<Button intent="silent" value="Cancel" />
+							<Button intent="advise" value="Advise" onClick={onDialogToggle} />
+							<Button intent="silent" value="Cancel" onClick={onDialogToggle} />
 						</ButtonGroup>
 					)}
 				</Flex>

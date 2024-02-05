@@ -16,7 +16,9 @@ const ExampleConfirm: FC<ExampleConfirmProps> = () => {
 			<Confirm
 				isOpen={isConfirming}
 				onCancel={onConfirmToggle}
-				title="Confirm"
+				intent="error"
+				title="Confirm Delete"
+				description="Are you sure you want to do this?"
 				confirmText="Confirm"
 				cancelText="Cancel"
 				onConfirm={onConfirmToggle}

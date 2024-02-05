@@ -2,7 +2,7 @@
 	top: calc(12px + env(safe-area-inset-top, 12px));
 
 	margin: 0 auto;
-	max-height: calc(100% - 32px);
+	max-height: calc(100% - 24px);
 	max-width: 100%;
 	overflow: auto;
 	overscroll-behavior: none;
@@ -51,7 +51,7 @@
 }
 
 @media (max-width: 576px) {
-	.dialog {
+	.dialog:not(.dialogCentered) {
 		margin-left: 8px;
 		margin-right: 8px;
 		width: calc(100% - 16px);
@@ -59,6 +59,12 @@
 
 	.dialog__content {
 		padding: 12px;
+	}
+}
+
+@media (max-width: 576px) {
+	.dialogCentered {
+		width: calc(100% - 16px);
 	}
 }
 
