@@ -1,4 +1,4 @@
-import { DonutSizeType } from "./Donut.types"
+import type { DonutSizeType } from "./Donut.types"
 
 export const getDonutBorderSize = (size: DonutSizeType = 32): number => {
 	if (size === 32) return 4

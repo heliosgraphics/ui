@@ -11,7 +11,7 @@ const Details: FC<DetailsProps> = ({ children, title, isOpen = false }) => {
 				<Text type="small" fontWeight="medium">
 					{title}
 				</Text>
-				<Icon name="caret-down" size={20} />
+				<Icon name="caret-down" size={20} emphasis="tertiary" />
 			</summary>
 			{children}
 		</details>

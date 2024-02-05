@@ -4,13 +4,8 @@ import styles from "./Donut.module.css"
 import type { DonutProps } from "./Donut.types"
 import type { FC } from "react"
 
-const Donut: FC<DonutProps> = ({
-	children,
-	size = 32,
-	percentage = 0,
-	color,
-}) => {
-	const borderSize: number = getDonutBorderSize()
+const Donut: FC<DonutProps> = ({ children, size, percentage = 0, color }) => {
+	const borderSize: number = getDonutBorderSize(size)
 	const actualSize: number = size - borderSize
 	const cSize = size / 2
 	const rSize = actualSize / 2
