@@ -6,13 +6,15 @@ import type { ExampleDialogProps } from "./ExampleDialog.types"
 import type { FC } from "react"
 
 const ExampleDialog: FC<ExampleDialogProps> = () => {
-	const [hasDialog, setDialog] = useState<boolean>(false)
+	const [isDialogOpen, setDialogOpen] = useState<boolean>(false)
 	const [isLong, setLong] = useState<boolean>(false)
 	const [isCentered, setCentered] = useState<boolean>(false)
+	const [hasActions, setActions] = useState<boolean>(false)
 
-	const onDialogToggle = () => setDialog(!hasDialog)
+	const onDialogToggle = () => setDialogOpen(!isDialogOpen)
 	const onLongToggle = () => setLong(!isLong)
 	const onCenterToggle = () => setCentered(!isCentered)
+	const onActionsToggle = () => setActions(!hasActions)
 
 	return (
 		<Flex>
@@ -22,7 +24,7 @@ const ExampleDialog: FC<ExampleDialogProps> = () => {
 			<Dialog
 				onClose={onDialogToggle}
 				title="Dialog"
-				isOpen={hasDialog}
+				isOpen={isDialogOpen}
 				isCentered={isCentered}
 			>
 				<Flex isColumn={true} gap={8}>
@@ -40,6 +42,13 @@ const ExampleDialog: FC<ExampleDialogProps> = () => {
 							value="Center"
 							icon="bullseye"
 							onClick={onCenterToggle}
+						/>
+						<Button
+							intent="silent"
+							size="small"
+							value="Actions"
+							icon="arrow-up"
+							onClick={onActionsToggle}
 						/>
 					</ButtonGroup>
 					<Text type="paragraph">
@@ -96,6 +105,12 @@ const ExampleDialog: FC<ExampleDialogProps> = () => {
 								journey of discovery.
 							</Text>
 						</>
+					)}
+					{hasActions && (
+						<ButtonGroup>
+							<Button intent="advise" value="Advise" />
+							<Button intent="silent" value="Cancel" />
+						</ButtonGroup>
 					)}
 				</Flex>
 			</Dialog>
