@@ -5,7 +5,7 @@
 
 	position: relative;
 
-  -webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .checkboxSmall {
@@ -30,8 +30,8 @@
 	appearance: none;
 	display: flex;
 	overflow: hidden;
-  height: var(--checkbox-size);
-  width: var(--checkbox-size);
+	height: var(--checkbox-size);
+	width: var(--checkbox-size);
 
 	border-radius: var(--checkbox-radius);
 	outline-color: var(--checkbox-bg-checked);
@@ -44,11 +44,11 @@
 }
 
 .checkbox input:checked ~ .checkbox__checkboxMark {
-  background-color: var(--checkbox-bg-checked);
+	background-color: var(--checkbox-bg-checked);
 }
 
 .checkbox input:checked ~ .checkbox__checkboxIcon {
-  opacity: 1;
+	opacity: 1;
 }
 
 .checkboxAdvise {
@@ -88,29 +88,29 @@
 }
 
 .checkbox__checkboxLabel {
-  position: relative;
+	position: relative;
 
 	max-width: max-content;
 
-  cursor: pointer;
-  user-select: none;
+	cursor: pointer;
+	user-select: none;
 }
 
 .checkbox__checkboxMark {
-  height: var(--checkbox-size);
-  overflow: hidden;
-  width: var(--checkbox-size);
+	height: var(--checkbox-size);
+	overflow: hidden;
+	width: var(--checkbox-size);
 
 	background-color: var(--ui-bg-inactive);
-  border-radius: var(--checkbox-radius);
+	border-radius: var(--checkbox-radius);
 
 	pointer-events: none;
 }
 
 .checkbox__checkboxIcon {
-  position: absolute;
+	position: absolute;
 	left: var(--checkbox-margin);
-  top: var(--checkbox-margin);
+	top: var(--checkbox-margin);
 
 	opacity: 0;
 

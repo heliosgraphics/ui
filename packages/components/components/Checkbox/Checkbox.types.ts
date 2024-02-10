@@ -1,5 +1,5 @@
 import type { ChangeEvent } from "react"
-import { HeliosIntentionType } from '../../types/intentions'
+import { HeliosIntentionType } from "../../types/intentions"
 
 export interface BaseCheckboxProps {
 	id?: string
@@ -12,4 +12,4 @@ export interface BaseCheckboxProps {
 	onChange?: (event?: ChangeEvent) => void
 }
 
-export interface CheckboxProps extends BaseCheckboxProps { }
+export interface CheckboxProps extends BaseCheckboxProps {}

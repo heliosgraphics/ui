@@ -1,3 +1,3 @@
-import ExampleShimmer from './ExampleShimmer'
+import ExampleShimmer from "./ExampleShimmer"
 
 export default ExampleShimmer

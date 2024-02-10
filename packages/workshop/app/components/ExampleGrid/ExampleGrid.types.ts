@@ -1,1 +1,1 @@
-export interface ExampleGridProps { }
+export interface ExampleGridProps {}

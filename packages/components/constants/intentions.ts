@@ -1,7 +1,9 @@
 import type { HeliosColors } from "../types/colors"
 import type { HeliosIntentionType } from "../types/intentions"
 
-export const INTENTION_COLOR_MAP: Readonly<Record<HeliosIntentionType, HeliosColors>> = {
+export const INTENTION_COLOR_MAP: Readonly<
+	Record<HeliosIntentionType, HeliosColors>
+> = {
 	advise: "blue",
 	automation: "pink",
 	confirmation: "purple",

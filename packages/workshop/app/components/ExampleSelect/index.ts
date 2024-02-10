@@ -1,3 +1,3 @@
-import ExampleSelect from './ExampleSelect'
+import ExampleSelect from "./ExampleSelect"
 
 export default ExampleSelect

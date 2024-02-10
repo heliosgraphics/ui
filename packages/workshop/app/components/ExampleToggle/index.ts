@@ -1,3 +1,3 @@
-import ExampleToggle from './ExampleToggle'
+import ExampleToggle from "./ExampleToggle"
 
 export default ExampleToggle

@@ -1,1 +1,1 @@
-export interface ExampleDropdownProps { }
+export interface ExampleDropdownProps {}

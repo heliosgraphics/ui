@@ -1,3 +1,3 @@
-import ExampleMarkdown from './ExampleMarkdown'
+import ExampleMarkdown from "./ExampleMarkdown"
 
 export default ExampleMarkdown

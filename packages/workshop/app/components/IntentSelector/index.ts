@@ -1,3 +1,3 @@
-import IntentSelector from './IntentSelector'
+import IntentSelector from "./IntentSelector"
 
 export default IntentSelector

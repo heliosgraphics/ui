@@ -1,1 +1,1 @@
-export interface ExampleLoadingProps { }
+export interface ExampleLoadingProps {}

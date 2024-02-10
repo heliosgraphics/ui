@@ -1,1 +1,1 @@
-export interface ExampleColorsProps { }
+export interface ExampleColorsProps {}

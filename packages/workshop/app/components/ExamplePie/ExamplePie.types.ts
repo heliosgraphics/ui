@@ -1,1 +1,1 @@
-export interface ExamplePieProps { }
+export interface ExamplePieProps {}

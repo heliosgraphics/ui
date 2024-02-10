@@ -1,3 +1,3 @@
-import ExampleIcon from './ExampleIcon'
+import ExampleIcon from "./ExampleIcon"
 
 export default ExampleIcon

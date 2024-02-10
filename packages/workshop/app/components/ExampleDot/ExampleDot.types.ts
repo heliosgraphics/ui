@@ -1,1 +1,1 @@
-export interface ExampleDotProps { }
+export interface ExampleDotProps {}

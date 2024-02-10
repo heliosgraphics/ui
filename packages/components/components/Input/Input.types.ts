@@ -1,5 +1,5 @@
 import type { ResultItem } from "../ResultList"
-import type { FocusEvent, KeyboardEvent, ChangeEvent } from 'react'
+import type { FocusEvent, KeyboardEvent, ChangeEvent } from "react"
 
 export interface InputProps {
 	autoFocus?: boolean

@@ -20,4 +20,3 @@ export type HeliosScale =
 	| 64
 	| 80
 	| 96
-

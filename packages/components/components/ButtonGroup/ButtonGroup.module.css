@@ -30,8 +30,12 @@
 }
 
 .buttonGroupHorizontal.buttonGroupJoin > *:not(:first-child):not(:last-child),
-.buttonGroupHorizontal.buttonGroupJoin > *:not(:first-child):not(:last-child) input:focus-visible,
-.buttonGroupHorizontal.buttonGroupJoin > *:not(:first-child):not(:last-child) input:active {
+.buttonGroupHorizontal.buttonGroupJoin
+	> *:not(:first-child):not(:last-child)
+	input:focus-visible,
+.buttonGroupHorizontal.buttonGroupJoin
+	> *:not(:first-child):not(:last-child)
+	input:active {
 	border-radius: 0;
 }
 
@@ -68,8 +72,12 @@
 }
 
 .buttonGroupVertical.buttonGroupJoin > *:not(:first-child):not(:last-child),
-.buttonGroupVertical.buttonGroupJoin > *:not(:first-child):not(:last-child) input:focus-visible,
-.buttonGroupVertical.buttonGroupJoin > *:not(:first-child):not(:last-child) input:active {
+.buttonGroupVertical.buttonGroupJoin
+	> *:not(:first-child):not(:last-child)
+	input:focus-visible,
+.buttonGroupVertical.buttonGroupJoin
+	> *:not(:first-child):not(:last-child)
+	input:active {
 	border-radius: 0;
 }
 

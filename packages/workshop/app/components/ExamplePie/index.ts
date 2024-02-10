@@ -1,3 +1,3 @@
-import ExamplePie from './ExamplePie'
+import ExamplePie from "./ExamplePie"
 
 export default ExamplePie

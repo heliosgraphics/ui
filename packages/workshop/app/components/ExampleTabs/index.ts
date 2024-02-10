@@ -1,3 +1,3 @@
-import ExampleTabs from './ExampleTabs'
+import ExampleTabs from "./ExampleTabs"
 
 export default ExampleTabs

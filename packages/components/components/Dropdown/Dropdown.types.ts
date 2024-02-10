@@ -1,5 +1,5 @@
 import type { ResultItem } from "../ResultList"
-import type { ReactNode } from 'react'
+import type { ReactNode } from "react"
 
 export interface DropdownProps {
 	children: ReactNode // React.ReactNode<> isn't generic

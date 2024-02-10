@@ -1,1 +1,1 @@
-export interface ExampleSliderProps { }
+export interface ExampleSliderProps {}

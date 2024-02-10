@@ -1,1 +1,1 @@
-export interface ExampleTextProps { }
+export interface ExampleTextProps {}

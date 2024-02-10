@@ -1,1 +1,1 @@
-export interface ExampleAlertProps { }
+export interface ExampleAlertProps {}

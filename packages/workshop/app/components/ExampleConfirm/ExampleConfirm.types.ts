@@ -1,1 +1,1 @@
-export interface ExampleConfirmProps { }
+export interface ExampleConfirmProps {}

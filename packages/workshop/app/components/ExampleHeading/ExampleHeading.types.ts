@@ -1,1 +1,1 @@
-export interface ExampleHeadingProps { }
+export interface ExampleHeadingProps {}

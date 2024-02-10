@@ -1,1 +1,1 @@
-export interface ExampleProgressProps { }
+export interface ExampleProgressProps {}

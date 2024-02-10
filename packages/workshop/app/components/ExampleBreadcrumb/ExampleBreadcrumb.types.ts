@@ -1,1 +1,1 @@
-export interface ExampleBreadcrumbProps { }
+export interface ExampleBreadcrumbProps {}

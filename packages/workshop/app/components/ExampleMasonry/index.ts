@@ -1,3 +1,3 @@
-import ExampleMasonry from './ExampleMasonry'
+import ExampleMasonry from "./ExampleMasonry"
 
 export default ExampleMasonry

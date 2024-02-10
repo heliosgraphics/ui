@@ -1,3 +1,3 @@
-import ExampleColumn from './ExampleColumn'
+import ExampleColumn from "./ExampleColumn"
 
 export default ExampleColumn

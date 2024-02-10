@@ -1,3 +1,3 @@
-import ExampleInput from './ExampleInput'
+import ExampleInput from "./ExampleInput"
 
 export default ExampleInput

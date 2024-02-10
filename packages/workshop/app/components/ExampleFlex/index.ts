@@ -1,3 +1,3 @@
-import ExampleFlex from './ExampleFlex'
+import ExampleFlex from "./ExampleFlex"
 
 export default ExampleFlex

@@ -1,3 +1,3 @@
-import ExampleTable from './ExampleTable'
+import ExampleTable from "./ExampleTable"
 
 export default ExampleTable

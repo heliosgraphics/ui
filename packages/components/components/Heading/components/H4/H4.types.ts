@@ -1,3 +1,3 @@
-import type { BaseHeadingProps } from '../../Heading.types'
+import type { BaseHeadingProps } from "../../Heading.types"
 
-export interface H4Props extends BaseHeadingProps { }
+export interface H4Props extends BaseHeadingProps {}

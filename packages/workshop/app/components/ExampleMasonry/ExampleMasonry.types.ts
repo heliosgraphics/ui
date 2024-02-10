@@ -1,1 +1,1 @@
-export interface ExampleMasonryProps { }
+export interface ExampleMasonryProps {}

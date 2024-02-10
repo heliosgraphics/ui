@@ -1,3 +1,3 @@
-import ExampleSlider from './ExampleSlider'
+import ExampleSlider from "./ExampleSlider"
 
 export default ExampleSlider

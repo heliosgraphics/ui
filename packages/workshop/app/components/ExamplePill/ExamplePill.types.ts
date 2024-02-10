@@ -1,1 +1,1 @@
-export interface ExamplePillProps { }
+export interface ExamplePillProps {}

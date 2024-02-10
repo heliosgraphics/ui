@@ -1,1 +1,1 @@
-export interface ColorSelectorProps { }
+export interface ColorSelectorProps {}

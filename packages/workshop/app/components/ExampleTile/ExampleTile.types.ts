@@ -1,1 +1,1 @@
-export interface ExampleTileProps { }
+export interface ExampleTileProps {}

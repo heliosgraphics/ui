@@ -9,7 +9,4 @@ export type HeliosIntentionType =
 	| "success"
 	| "warning"
 
-export type HeliosEmphasisType =
-	| "primary"
-	| "secondary"
-	| "tertiary"
+export type HeliosEmphasisType = "primary" | "secondary" | "tertiary"

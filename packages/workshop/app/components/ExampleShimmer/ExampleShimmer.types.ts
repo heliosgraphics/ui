@@ -1,1 +1,1 @@
-export interface ExampleShimmerProps { }
+export interface ExampleShimmerProps {}

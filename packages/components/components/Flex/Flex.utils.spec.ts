@@ -36,7 +36,7 @@ describe("getFlexUtility", () => {
 	const MOCK_FLEX_DUPLICATE: FlexProps = {
 		children: null,
 		isCentered: true,
-		className: "flex"
+		className: "flex",
 	}
 
 	it("Generates without duplicated classes", () =>

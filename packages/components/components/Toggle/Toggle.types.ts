@@ -1,3 +1,3 @@
-import type { BaseCheckboxProps } from '../Checkbox/Checkbox.types'
+import type { BaseCheckboxProps } from "../Checkbox/Checkbox.types"
 
-export interface ToggleProps extends BaseCheckboxProps { }
+export interface ToggleProps extends BaseCheckboxProps {}

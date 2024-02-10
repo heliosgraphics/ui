@@ -1,3 +1,3 @@
-import ExampleProgress from './ExampleProgress'
+import ExampleProgress from "./ExampleProgress"
 
 export default ExampleProgress

@@ -1,1 +1,1 @@
-export interface DebugSelectorProps { }
+export interface DebugSelectorProps {}

@@ -1,3 +1,3 @@
-import ExampleLoading from './ExampleLoading'
+import ExampleLoading from "./ExampleLoading"
 
 export default ExampleLoading

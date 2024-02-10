@@ -1,1 +1,1 @@
-export interface ExampleResultListProps { }
+export interface ExampleResultListProps {}

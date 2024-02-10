@@ -18,7 +18,7 @@
 }
 
 .button input:focus-visible {
-  outline: 2px solid var(--button-bg);
+	outline: 2px solid var(--button-bg);
 }
 
 .button:not(.buttonDisabled) input:active {
@@ -107,7 +107,7 @@
 }
 
 .button.buttonSilent input:focus-visible {
-  outline: 2px solid var(--ui-border-active);
+	outline: 2px solid var(--ui-border-active);
 }
 
 /* intent: success */
@@ -141,7 +141,7 @@
 }
 
 .button .button__icon {
-  pointer-events: none;
+	pointer-events: none;
 }
 
 /* Sizes */

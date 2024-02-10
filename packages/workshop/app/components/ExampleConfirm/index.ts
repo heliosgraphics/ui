@@ -1,3 +1,3 @@
-import ExampleConfirm from './ExampleConfirm'
+import ExampleConfirm from "./ExampleConfirm"
 
 export default ExampleConfirm

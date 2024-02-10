@@ -1,1 +1,1 @@
-export interface ExampleMarkdownProps { }
+export interface ExampleMarkdownProps {}

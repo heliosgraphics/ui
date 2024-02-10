@@ -1,1 +1,1 @@
-export interface ExampleTextareaProps { }
+export interface ExampleTextareaProps {}

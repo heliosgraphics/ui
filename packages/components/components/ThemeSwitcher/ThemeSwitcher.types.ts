@@ -1,1 +1,1 @@
-export interface ThemeSwitcherProps { }
+export interface ThemeSwitcherProps {}

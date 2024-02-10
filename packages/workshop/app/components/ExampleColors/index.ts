@@ -1,3 +1,3 @@
-import ExampleColors from './ExampleColors'
+import ExampleColors from "./ExampleColors"
 
 export default ExampleColors

@@ -1,3 +1,3 @@
-import Tiny from './Tiny'
+import Tiny from "./Tiny"
 
 export default Tiny

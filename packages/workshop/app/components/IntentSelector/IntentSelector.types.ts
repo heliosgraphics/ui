@@ -1,1 +1,1 @@
-export interface IntentSelectorProps { }
+export interface IntentSelectorProps {}

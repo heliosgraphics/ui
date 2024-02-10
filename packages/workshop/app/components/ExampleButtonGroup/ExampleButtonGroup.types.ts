@@ -1,1 +1,1 @@
-export interface ExampleButtonGroupProps { }
+export interface ExampleButtonGroupProps {}

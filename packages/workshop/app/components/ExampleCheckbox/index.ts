@@ -1,3 +1,3 @@
-import ExampleCheckbox from './ExampleCheckbox'
+import ExampleCheckbox from "./ExampleCheckbox"
 
 export default ExampleCheckbox

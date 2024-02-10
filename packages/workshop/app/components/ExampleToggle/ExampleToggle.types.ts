@@ -1,1 +1,1 @@
-export interface ExampleToggleProps { }
+export interface ExampleToggleProps {}

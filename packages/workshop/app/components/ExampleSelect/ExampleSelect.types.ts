@@ -1,1 +1,1 @@
-export interface ExampleSelectProps { }
+export interface ExampleSelectProps {}

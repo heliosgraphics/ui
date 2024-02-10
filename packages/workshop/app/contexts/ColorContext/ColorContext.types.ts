@@ -1,4 +1,4 @@
-import type { SetStateAction, Dispatch } from 'react'
+import type { SetStateAction, Dispatch } from "react"
 import type { HeliosColors } from "@heliosgraphics/ui"
 
 export interface ColorProviderProps {

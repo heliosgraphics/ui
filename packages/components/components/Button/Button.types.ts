@@ -15,6 +15,6 @@ export interface ButtonProps {
 	onChange?: (event?: MouseEvent | SyntheticEvent) => void
 	size?: "normal" | "small" | "tiny"
 	tabIndex?: number
-	type?: 'button' | 'submit' | "file"
+	type?: "button" | "submit" | "file"
 	value: string
 }

@@ -1,12 +1,12 @@
 .alert {
-  --alert-bg-l: 92%;
-  --alert-text-l: 48%;
+	--alert-bg-l: 92%;
+	--alert-text-l: 48%;
 
-  display: flex;
+	display: flex;
 	flex-direction: row;
 
-  background-color: var(--alert-bg);
-  color: var(--alert-text);
+	background-color: var(--alert-bg);
+	color: var(--alert-text);
 }
 
 .alertAdvise {

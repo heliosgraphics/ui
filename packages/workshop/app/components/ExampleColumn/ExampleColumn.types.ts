@@ -1,1 +1,1 @@
-export interface ExampleColumnProps { }
+export interface ExampleColumnProps {}

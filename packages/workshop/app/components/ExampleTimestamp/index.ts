@@ -1,3 +1,3 @@
-import ExampleTimestamp from './ExampleTimestamp'
+import ExampleTimestamp from "./ExampleTimestamp"
 
 export default ExampleTimestamp

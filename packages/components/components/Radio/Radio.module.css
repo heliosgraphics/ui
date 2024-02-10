@@ -3,7 +3,7 @@
 
 	position: relative;
 
-  -webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .radioSmall {
@@ -26,8 +26,8 @@
 	appearance: none;
 	display: flex;
 	overflow: hidden;
-  height: var(--radio-size);
-  width: var(--radio-size);
+	height: var(--radio-size);
+	width: var(--radio-size);
 
 	border-radius: var(--radio-size);
 	outline-color: var(--radio-bg-checked);
@@ -40,11 +40,11 @@
 }
 
 .radio input:checked ~ .radio__radioMark:after {
-  opacity: 1;
+	opacity: 1;
 }
 
 .radio input:checked ~ .radio__radioMark {
-  background-color: var(--radio-bg-checked);
+	background-color: var(--radio-bg-checked);
 }
 
 .radioAdvise {
@@ -84,48 +84,48 @@
 }
 
 .radio__radioLabel {
-  position: relative;
+	position: relative;
 
 	max-width: max-content;
 
 	background-color: var();
-  cursor: pointer;
-  user-select: none;
+	cursor: pointer;
+	user-select: none;
 }
 
 .radio__radioMark {
-  height: var(--radio-size);
-  overflow: hidden;
-  width: var(--radio-size);
+	height: var(--radio-size);
+	overflow: hidden;
+	width: var(--radio-size);
 
 	background-color: var(--ui-bg-inactive);
-  border-radius: 24px;
+	border-radius: 24px;
 
 	pointer-events: none;
 }
 
 .radio__radioMark:after {
-  left: 6px;
-  top: 6px;
-  position: absolute;
+	left: 6px;
+	top: 6px;
+	position: absolute;
 
-  box-sizing: inherit;
-  height: 12px;
-  width: 12px;
+	box-sizing: inherit;
+	height: 12px;
+	width: 12px;
 
-  background-color: var(--ui-bg);
-  border-radius: 100%;
+	background-color: var(--ui-bg);
+	border-radius: 100%;
 	opacity: 0;
-  transition: all 100ms ease-in-out;
-  content: " ";
+	transition: all 100ms ease-in-out;
+	content: " ";
 
 	pointer-events: none;
 }
 
 .radioSmall .radio__radioMark:after {
 	left: 5px;
-  top: 5px;
+	top: 5px;
 
 	height: 8px;
-  width: 8px;
+	width: 8px;
 }

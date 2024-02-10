@@ -1,1 +1,1 @@
-export interface ExampleFormProps { }
+export interface ExampleFormProps {}

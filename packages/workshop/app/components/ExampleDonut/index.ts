@@ -1,3 +1,3 @@
-import ExampleDonut from './ExampleDonut'
+import ExampleDonut from "./ExampleDonut"
 
 export default ExampleDonut

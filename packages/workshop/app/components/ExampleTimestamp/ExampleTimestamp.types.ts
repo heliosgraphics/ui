@@ -1,1 +1,1 @@
-export interface ExampleTimestampProps { }
+export interface ExampleTimestampProps {}

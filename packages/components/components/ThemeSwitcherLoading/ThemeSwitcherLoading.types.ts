@@ -1,1 +1,1 @@
-export interface ThemeSwitcherLoadingProps { }
+export interface ThemeSwitcherLoadingProps {}

@@ -1,1 +1,1 @@
-export interface ExampleTabsProps { }
+export interface ExampleTabsProps {}

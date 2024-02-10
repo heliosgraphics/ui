@@ -1,1 +1,1 @@
-export interface ExampleIconProps { }
+export interface ExampleIconProps {}

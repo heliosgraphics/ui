@@ -1,3 +1,3 @@
-import ExampleResultList from './ExampleResultList'
+import ExampleResultList from "./ExampleResultList"
 
 export default ExampleResultList

@@ -1,3 +1,3 @@
-import ExampleBreadcrumb from './ExampleBreadcrumb'
+import ExampleBreadcrumb from "./ExampleBreadcrumb"
 
 export default ExampleBreadcrumb

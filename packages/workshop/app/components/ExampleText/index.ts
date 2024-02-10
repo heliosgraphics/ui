@@ -1,3 +1,3 @@
-import ExampleText from './ExampleText'
+import ExampleText from "./ExampleText"
 
 export default ExampleText

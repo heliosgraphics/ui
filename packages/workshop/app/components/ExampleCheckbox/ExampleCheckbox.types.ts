@@ -1,1 +1,1 @@
-export interface ExampleCheckboxProps { }
+export interface ExampleCheckboxProps {}

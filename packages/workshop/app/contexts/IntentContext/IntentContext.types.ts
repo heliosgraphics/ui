@@ -1,4 +1,4 @@
-import type { SetStateAction, Dispatch } from 'react'
+import type { SetStateAction, Dispatch } from "react"
 import type { HeliosIntentionType } from "@heliosgraphics/ui"
 
 export interface IntentProviderProps {

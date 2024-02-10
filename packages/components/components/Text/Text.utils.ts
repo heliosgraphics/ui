@@ -28,7 +28,7 @@ export const _getFontWeight = (fw: TextProps["fontWeight"]): string => {
 }
 
 export const getTypographyUtility = (
-	props: TextProps | HeadingProps
+	props: TextProps | HeadingProps,
 ): string => {
 	const typoClasses: Array<string> = []
 

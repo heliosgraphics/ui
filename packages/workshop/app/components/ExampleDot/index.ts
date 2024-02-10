@@ -1,3 +1,3 @@
-import ExampleDot from './ExampleDot'
+import ExampleDot from "./ExampleDot"
 
 export default ExampleDot

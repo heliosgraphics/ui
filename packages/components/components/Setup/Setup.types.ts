@@ -1,1 +1,1 @@
-export interface SetupProps { }
+export interface SetupProps {}

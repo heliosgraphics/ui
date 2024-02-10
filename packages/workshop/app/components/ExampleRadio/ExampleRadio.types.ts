@@ -1,1 +1,1 @@
-export interface ExampleRadioProps { }
+export interface ExampleRadioProps {}

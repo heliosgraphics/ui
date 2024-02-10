@@ -1,3 +1,3 @@
-import ColorGrid from './ColorGrid'
+import ColorGrid from "./ColorGrid"
 
 export default ColorGrid

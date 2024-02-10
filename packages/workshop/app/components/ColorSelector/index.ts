@@ -1,3 +1,3 @@
-import ColorSelector from './ColorSelector'
+import ColorSelector from "./ColorSelector"
 
 export default ColorSelector

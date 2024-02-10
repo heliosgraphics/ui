@@ -1,1 +1,1 @@
-export interface ExampleDialogProps { }
+export interface ExampleDialogProps {}

@@ -1,3 +1,3 @@
-import ExamplePill from './ExamplePill'
+import ExamplePill from "./ExamplePill"
 
 export default ExamplePill

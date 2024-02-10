@@ -1,3 +1,3 @@
-import ExampleTile from './ExampleTile'
+import ExampleTile from "./ExampleTile"
 
 export default ExampleTile

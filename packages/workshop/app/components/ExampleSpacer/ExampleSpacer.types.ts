@@ -1,1 +1,1 @@
-export interface ExampleSpacerProps { }
+export interface ExampleSpacerProps {}

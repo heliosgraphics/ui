@@ -1,1 +1,1 @@
-export interface ExampleFlexProps { }
+export interface ExampleFlexProps {}
