@@ -7,6 +7,8 @@
 
 .select select {
 	padding-right: 64px;
+
+	background-color: var(--ui-bg);
 }
 
 .selectDisabled select {
