@@ -3,21 +3,20 @@ import Flex from "../Flex"
 import Icon from "../Icon"
 import styles from "./Select.module.css"
 import classNames from "@sindresorhus/class-names"
+import InputLabel from "../InputLabel"
 import type { SelectProps } from "./Select.types"
 
 const Select: FC<SelectProps> = ({ selectedValue, onChange, isLabelHidden, isDisabled, items, id, label }) => {
 	const htmlFor: string = id || useId()
+
 	const selectClasses: string = classNames(styles.select, {
 		[styles.selectDisabled]: isDisabled,
+		[styles.selectHiddenLabel]: !label || isLabelHidden,
 	})
 
 	return (
-		<Flex isColumn={true} gap={2} className={selectClasses}>
-			{label && !isLabelHidden && (
-				<label className="small gray-500" htmlFor={htmlFor}>
-					{label}
-				</label>
-			)}
+		<Flex isColumn={true} className={selectClasses}>
+			<InputLabel label={label} id={htmlFor} isHidden={isLabelHidden} isDisabled={isDisabled} />
 			<Flex>
 				<select className={styles.select__select} onChange={onChange} id={htmlFor} value={selectedValue}>
 					{items?.map((item, key) => {

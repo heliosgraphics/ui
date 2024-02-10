@@ -8,6 +8,7 @@ import Loading from "../Loading"
 import styles from "./Input.module.css"
 import classNames from "@sindresorhus/class-names"
 import type { InputProps } from "./Input.types"
+import InputLabel from "../InputLabel"
 
 const Input: FC<InputProps> = ({
 	helperText,
@@ -19,6 +20,7 @@ const Input: FC<InputProps> = ({
 	onChange,
 	onFocus,
 	placeholder,
+	type = "text",
 	results,
 	showResults,
 	value,
@@ -32,13 +34,14 @@ const Input: FC<InputProps> = ({
 
 	return (
 		<div className={inputClasses}>
-			{label && <label htmlFor={htmlFor}>{label}</label>}
+			<InputLabel id={htmlFor} label={label} isDisabled={isDisabled} />
 			<Flex className="grow-1">
 				<input
 					className={styles.input__input}
 					disabled={isDisabled}
 					id={htmlFor}
 					onBlur={onBlur}
+					type={type}
 					onChange={onChange}
 					onFocus={onFocus}
 					placeholder={placeholder}

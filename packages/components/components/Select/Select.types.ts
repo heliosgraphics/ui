@@ -7,7 +7,7 @@ export type SelectItem = {
 }
 
 export interface SelectProps {
-	label?: string
+	label: string
 	id?: string
 	isDisabled?: boolean
 	isLabelHidden?: boolean

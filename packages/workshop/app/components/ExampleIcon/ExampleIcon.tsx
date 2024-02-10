@@ -1,6 +1,6 @@
 "use client"
 
-import { Flex, Input, Icon, Text } from "@heliosgraphics/ui"
+import { Flex, Input, Select, Icon, Text, HeliosEmphasisType, EMPHASES } from "@heliosgraphics/ui"
 import { meta } from "@heliosgraphics/icons/meta"
 import { useState, type FC, type ChangeEvent } from "react"
 import type { ExampleIconProps } from "./ExampleIcon.types"
@@ -8,13 +8,23 @@ import type { HeliosIconType } from "@heliosgraphics/icons/meta"
 
 const ExampleIcon: FC<ExampleIconProps> = () => {
 	const [icon, setIcon] = useState<HeliosIconType>("calendar")
+	const [emphasis, setEmphasis] = useState<HeliosEmphasisType>("primary")
 	const [filter, setFilter] = useState<string>("")
 	const onFilter = (event: ChangeEvent<HTMLInputElement>) => setFilter(event.target.value)
 	const filteredIcons: Array<HeliosIconType> = meta?.filter((icon) => icon.includes(filter))
 
+	const items = EMPHASES.map((emphasis) => {
+		return { name: emphasis, value: emphasis }
+	})
+
+	const onEmphasisChange = (event) => setEmphasis(event.target.value)
+
 	return (
-		<>
-			<Input label="Find an icon" onChange={onFilter} value={filter} placeholder="Eg.: arrow" type="text" />
+		<Flex isColumn={true} gap={16}>
+			<Flex gap={4}>
+				<Select label="Select Emphasis" items={items} onChange={onEmphasisChange} selectedValue={emphasis} />
+				<Input label="Find an Icon" onChange={onFilter} value={filter} placeholder="Eg.: arrow" />
+			</Flex>
 			<Flex isWrapping={true} gap={2}>
 				{filteredIcons.map((ic, key) => {
 					const onIconSet = () => setIcon(ic)
@@ -29,17 +39,19 @@ const ExampleIcon: FC<ExampleIconProps> = () => {
 							isCentered={true}
 							isColumn={true}
 							onClick={onIconSet}
-							className={`${bg} radius-3 h-48 w-48 cursor-pointer`}
+							className={`${bg} radius-3 h-48 w-48`}
 						>
 							<div className="h-24 w-24">
-								<Icon size={48} name={ic} />
+								<Icon size={48} name={ic} emphasis={emphasis} />
 							</div>
-							<Text type="tiny">{ic}</Text>
+							<Text type="tiny" emphasis={emphasis}>
+								{ic}
+							</Text>
 						</Flex>
 					)
 				})}
 			</Flex>
-		</>
+		</Flex>
 	)
 }
 

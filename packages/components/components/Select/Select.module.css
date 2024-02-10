@@ -3,8 +3,6 @@
 
 	max-width: max-content;
 	width: 100%;
-
-	background-color: var(--ui-bg-action);
 }
 
 .select select {
@@ -20,11 +18,12 @@
 
 .select select:active:not(:disabled),
 .select select:focus-visible:not(:disabled) {
+	box-shadow: 0 0 0 4px var(--ui-border-light);
 	border-color: var(--ui-border-active);
 }
 
 .select__select {
-	height: 40px;
+	height: 42px;
 	margin: 0;
 	padding: 0 10px;
 	width: 100%;
@@ -32,27 +31,32 @@
 	appearance: none;
 	background-color: transparent;
 	border: none;
+	outline: none;
 	border: 1px solid var(--ui-border);
 	border-radius: var(--radius-normal);
-	transition: background-color 120ms ease-in-out;
+	transition: all 96ms ease-in-out;
 
 	font-family: var(--font-family-mono);
 	font-size: var(--font-size-small);
 	cursor: inherit;
-	line-height: 40px;
+	line-height: 42px;
 }
 
 .select__icon {
 	position: absolute;
-	top: 1px;
+	top: 29px;
 	right: 0;
 
 	padding-top: 2px;
-	height: 38px;
-	width: 40px;
+	height: 40px;
+	width: 42px;
 
 	color: var(--ui-text-secondary);
 
 	border-left: 1px solid var(--ui-border-light);
 	pointer-events: none;
+}
+
+.selectHiddenLabel .select__icon {
+	top: 1px;
 }

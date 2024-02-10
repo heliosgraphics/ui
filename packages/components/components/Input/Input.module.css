@@ -2,17 +2,6 @@
 	width: 100%;
 }
 
-.input label {
-	margin-bottom: var(--box-3);
-
-	color: var(--ui-text-secondary);
-
-	font-size: var(--font-size-small);
-	font-weight: var(--font-weight-normal);
-	font-family: var(--font-family-sans);
-	line-height: var(--line-height-small);
-}
-
 .input__helper {
 	margin-top: var(--box-3);
 }
@@ -30,7 +19,7 @@
 	background-color: transparent;
 	background-color: var(--ui-bg);
 	border: 1px solid var(--ui-border);
-	border-radius: 4px;
+	border-radius: var(--radius-normal);
 	outline: none;
 	transition: all 96ms ease-in-out;
 
@@ -73,7 +62,6 @@
 	background-color: var(--ui-bg-disabled);
 }
 
-.inputDisabled label,
 .inputDisabled input.input__input::placeholder {
 	color: var(--ui-text-tertiary);
 }

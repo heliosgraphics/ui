@@ -57,7 +57,7 @@ export default function Home() {
 					<Flex isColumn={true}>
 						<Heading level={1} className="flex flex-y-center gap-4">
 							<a href="https://ui.helios.graphics">
-								<Icon size={36} name="asterisk" />
+								<Icon size={36} name="eye" />
 							</a>
 							<span>Interface</span>
 						</Heading>

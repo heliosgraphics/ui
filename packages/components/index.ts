@@ -60,7 +60,9 @@ export type { HeliosIntentionType, HeliosEmphasisType } from "./types/intentions
 // meta
 import type { HeliosScale } from "./types/scale"
 import type { HeliosColors } from "./types/colors"
-import type { HeliosIntentionType } from "./types/intentions"
+import type { HeliosIntentionType, HeliosEmphasisType } from "./types/intentions"
+
+export const EMPHASES: Array<HeliosEmphasisType> = ["primary", "secondary", "tertiary"]
 
 export const INTENTIONS: Array<HeliosIntentionType> = [
 	"advise",
