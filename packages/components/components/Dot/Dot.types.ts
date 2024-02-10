@@ -1,5 +1,7 @@
+import type { HeliosColors } from "../../types/colors"
+
 export interface DotProps {
-	color: string
-	colorAccent?: string
+	color: HeliosColors
+	colorAccent?: HeliosColors
 	size: number
 }

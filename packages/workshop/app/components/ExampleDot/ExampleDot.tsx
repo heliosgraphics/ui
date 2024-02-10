@@ -1,16 +1,48 @@
 "use client"
 
-import { Flex, Dot } from "@heliosgraphics/ui"
-import { useContext, type FC } from "react"
+import {
+	Flex,
+	Dot,
+	Select,
+	Text,
+	SCALE,
+	COLORS,
+	HeliosColors,
+} from "@heliosgraphics/ui"
+import { useState, useContext, type FC } from "react"
 import { ColorContext } from "../../contexts/ColorContext"
 import type { ExampleDotProps } from "./ExampleDot.types"
 
 const ExampleDot: FC<ExampleDotProps> = () => {
 	const { color } = useContext(ColorContext)
+	const [colorAccent, setColorAccent] = useState<HeliosColors>("orange")
+
+	const items = COLORS.map((color) => {
+		return { name: color, value: color }
+	})
+
+	const onColorChange = (event) => setColorAccent(event.target.value)
 
 	return (
 		<Flex gap={16} isWrapping={true}>
-			<Dot size={128} color={color} />
+			<Select
+				items={items}
+				onChange={onColorChange}
+				selectedValue={colorAccent}
+			/>
+			<Flex gap={4} isWrapping={true}>
+				{SCALE.map((scale, key) => {
+					return (
+						<Flex key={key} gap={4}>
+							<Text type="tiny" fontFamily="mono">
+								{scale}
+							</Text>
+							<Dot size={scale} color={color} />
+							<Dot size={scale} color={color} colorAccent={colorAccent} />
+						</Flex>
+					)
+				})}
+			</Flex>
 		</Flex>
 	)
 }

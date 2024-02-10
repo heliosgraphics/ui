@@ -55,10 +55,12 @@ export { useIntersector } from "./hooks/useIntersector"
 
 // types
 export type { HeliosColors } from "./types/colors"
+export type { HeliosScale } from "./types/scale"
 export type { HeliosIntentionType, HeliosEmphasisType } from "./types/intentions"
 
-import { HeliosColors } from "./types/colors"
 // meta
+import type { HeliosScale } from "./types/scale"
+import type { HeliosColors } from "./types/colors"
 import type { HeliosIntentionType } from './types/intentions'
 
 export const INTENTIONS: Array<HeliosIntentionType> = [
@@ -72,6 +74,8 @@ export const INTENTIONS: Array<HeliosIntentionType> = [
 	"success",
 	"warning"
 ]
+
+export const SCALE: Array<HeliosScale> = [1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 48, 64, 80, 96] as const
 
 export const COLORS: Array<HeliosColors> = [
 	"aqua",
@@ -132,5 +136,4 @@ export const COMPONENTS = [
 	"Toggle"
 ] as const
 
-// meta
 export const HOOKS = ["useIntersector"] as const
