@@ -1,4 +1,4 @@
-import type { HeliosColors } from "packages/components/types/colors"
+import type { HeliosColors } from "../../types/colors"
 
 export interface PillProps {
 	color: HeliosColors

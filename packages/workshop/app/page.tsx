@@ -48,7 +48,7 @@ const ThemeSwitcher = dynamic(() => import("@heliosgraphics/ui/components/ThemeS
 	loading: () => <ThemeSwitcherLoading />,
 })
 
-export default function Home({ children }) {
+export default function Home() {
 	return (
 		<IntentProvider>
 			<ColorProvider>
