@@ -27,7 +27,6 @@ import ExampleDot from "./components/ExampleDot"
 import ExampleColumn from "./components/ExampleColumn"
 import ExampleDropdown from "./components/ExampleDropdown"
 import ExampleFlex from "./components/ExampleFlex"
-import ExampleResultList from "./components/ExampleResultList"
 import IntentSelector from "./components/IntentSelector"
 import ColorSelector from "./components/ColorSelector"
 import ExampleGrid from "./components/ExampleGrid"
@@ -49,7 +48,7 @@ const ThemeSwitcher = dynamic(() => import("@heliosgraphics/ui/components/ThemeS
 	loading: () => <ThemeSwitcherLoading />,
 })
 
-export default function Home() {
+export default function Home({ children }) {
 	return (
 		<IntentProvider>
 			<ColorProvider>
@@ -76,152 +75,146 @@ export default function Home() {
 					</Flex>
 				</Flex>
 				<main>
-					<Flex isColumn={true} gap={16} padding={8}>
-						<Flex isColumn={true} gap={4}>
-							<Details title="Alert">
-								<ExampleAlert />
-							</Details>
+					<Flex isColumn={true} gap={8} padding={8}>
+						<Details title="Alert">
+							<ExampleAlert />
+						</Details>
 
-							<Details title="Breadcrumb">
-								<ExampleBreadcrumb />
-							</Details>
+						<Details title="Breadcrumb">
+							<ExampleBreadcrumb />
+						</Details>
 
-							<Details title="Button">
-								<ExampleButton />
-							</Details>
+						<Details title="Button">
+							<ExampleButton />
+						</Details>
 
-							<Details title="ButtonGroup">
-								<ExampleButtonGroup />
-							</Details>
+						<Details title="ButtonGroup">
+							<ExampleButtonGroup />
+						</Details>
 
-							<Details title="Colors">
-								<ExampleColors />
-							</Details>
+						<Details title="Colors">
+							<ExampleColors />
+						</Details>
 
-							<Details title="Checkbox">
-								<ExampleCheckbox />
-							</Details>
+						<Details title="Checkbox">
+							<ExampleCheckbox />
+						</Details>
 
-							<Details title="Column">
-								<ExampleColumn />
-							</Details>
+						<Details title="Column">
+							<ExampleColumn />
+						</Details>
 
-							<Details title="Confirm">
-								<ExampleConfirm />
-							</Details>
+						<Details title="Confirm">
+							<ExampleConfirm />
+						</Details>
 
-							<Details title="Dialog">
-								<ExampleDialog />
-							</Details>
+						<Details title="Dialog">
+							<ExampleDialog />
+						</Details>
 
-							<Details title="Donut">
-								<ExampleDonut />
-							</Details>
+						<Details title="Donut">
+							<ExampleDonut />
+						</Details>
 
-							<Details title="Dot">
-								<ExampleDot />
-							</Details>
+						<Details title="Dot">
+							<ExampleDot />
+						</Details>
 
-							<Details title="Dropdown">
-								<ExampleDropdown />
-							</Details>
+						<Details title="Dropdown">
+							<ExampleDropdown />
+						</Details>
 
-							<Details title="Flex">
-								<ExampleFlex />
-							</Details>
+						<Details title="Flex">
+							<ExampleFlex />
+						</Details>
 
-							<Details title="Grid">
-								<ExampleGrid />
-							</Details>
+						<Details title="Grid">
+							<ExampleGrid />
+						</Details>
 
-							<Details title="Heading">
-								<ExampleHeading />
-							</Details>
+						<Details title="Heading">
+							<ExampleHeading />
+						</Details>
 
-							<Details title="Icon">
-								<ExampleIcon />
-							</Details>
+						<Details title="Icon">
+							<ExampleIcon />
+						</Details>
 
-							<Details title="Input">
-								<ExampleInput />
-							</Details>
+						<Details title="Input">
+							<ExampleInput />
+						</Details>
 
-							<Details title="Loading">
-								<ExampleLoading />
-							</Details>
+						<Details title="Loading">
+							<ExampleLoading />
+						</Details>
 
-							<Details title="Markdown">
-								<ExampleMarkdown />
-							</Details>
+						<Details title="Markdown">
+							<ExampleMarkdown />
+						</Details>
 
-							<Details title="Masonry">
-								<ExampleMasonry />
-							</Details>
+						<Details title="Masonry">
+							<ExampleMasonry />
+						</Details>
 
-							<Details title="Pie">
-								<ExamplePie />
-							</Details>
+						<Details title="Pie">
+							<ExamplePie />
+						</Details>
 
-							<Details title="Pill">
-								<ExamplePill />
-							</Details>
+						<Details title="Pill">
+							<ExamplePill />
+						</Details>
 
-							<Details title="Progress">
-								<ExampleProgress />
-							</Details>
+						<Details title="Progress">
+							<ExampleProgress />
+						</Details>
 
-							<Details title="Radio">
-								<ExampleRadio />
-							</Details>
+						<Details title="Radio">
+							<ExampleRadio />
+						</Details>
 
-							<Details title="ResultList">
-								<ExampleResultList />
-							</Details>
+						<Details title="Select">
+							<ExampleSelect />
+						</Details>
 
-							<Details title="Select">
-								<ExampleSelect />
-							</Details>
+						<Details title="Shimmer">
+							<ExampleShimmer />
+						</Details>
 
-							<Details title="Shimmer">
-								<ExampleShimmer />
-							</Details>
+						<Details title="Slider">
+							<ExampleSlider />
+						</Details>
 
-							<Details title="Slider">
-								<ExampleSlider />
-							</Details>
+						<Details title="Spacer">
+							<ExampleSpacer />
+						</Details>
 
-							<Details title="Spacer">
-								<ExampleSpacer />
-							</Details>
+						<Details title="Table">
+							<ExampleTable />
+						</Details>
 
-							<Details title="Table">
-								<ExampleTable />
-							</Details>
+						<Details title="Tabs">
+							<ExampleTabs />
+						</Details>
 
-							<Details title="Tabs">
-								<ExampleTabs />
-							</Details>
+						<Details title="Text">
+							<ExampleText />
+						</Details>
 
-							<Details title="Text">
-								<ExampleText />
-							</Details>
+						<Details title="Textarea">
+							<ExampleTextarea />
+						</Details>
 
-							<Details title="Textarea">
-								<ExampleTextarea />
-							</Details>
+						<Details title="Tile">
+							<ExampleTile />
+						</Details>
 
-							<Details title="Tile">
-								<ExampleTile />
-							</Details>
+						<Details title="Timestamp">
+							<ExampleTimestamp />
+						</Details>
 
-							<Details title="Timestamp">
-								<ExampleTimestamp />
-							</Details>
-
-							<Details title="Toggle">
-								<ExampleToggle />
-							</Details>
-						</Flex>
+						<Details title="Toggle">
+							<ExampleToggle />
+						</Details>
 					</Flex>
 				</main>
 			</ColorProvider>
