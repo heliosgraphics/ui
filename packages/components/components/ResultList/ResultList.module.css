@@ -9,15 +9,34 @@
 	opacity: 0;
 	width: 360px;
 
-	background-color: var(--gray-0);
-	border-radius: 4px;
+	background-color: var(--ui-bg);
+	border-radius: var(--radius-normal);
 	transform: translateY(-8px);
-	transition: all 120ms ease-in-out;
+	transition: all 96ms ease-in-out;
 
-	animation: resultsFadeIn 120ms ease-in-out forwards;
+	animation: resultsFadeIn 96ms ease-in-out forwards;
 }
 
-.resultList li:not(.resultList__separator) {
+.itemActive {
+	background: var(--ui-border-light);
+}
+
+.itemDisabled {
+	background: var(--ui-bg-disabled);
+	color: var(--ui-text-tertiary);
+
+	pointer-events: none;
+}
+
+.resultList .item:hover {
+	background: var(--ui-bg-action-hover);
+}
+
+.resultList .item:not(:first-child) {
+	border-top: 1px solid var(--ui-border-light);
+}
+
+.resultList .item {
 	padding: 10px 12px;
 
 	transition: all 60ms ease-in-out;
@@ -30,67 +49,21 @@
 	position: relative;
 
 	padding: 4px;
-	background-color: var(--gray-25);
+	background-color: var(--ui-border-light);
+	border-top: 1px solid var(--ui-border);
+	border-bottom: 1px solid var(--ui-border);
 
 	pointer-events: none;
 }
 
-.itemActive {
-	background: linear-gradient(var(--gray-50), var(--gray-25));
-}
-
-/*
-.resultList li.__separator:after {
-  position: absolute;
-  top: 0;
-  left: -4px;
-
-  height: 8px;
-  width: 8px;
-
-  background-color: var(--gray-0);
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  content: " ";
-}
-
-.resultList li.__separator:before {
-  position: absolute;
-  top: 0;
-  right: -4px;
-
-  height: 8px;
-  width: 8px;
-
-  background-color: var(--gray-0);
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  content: " ";
-} */
-
-.resultList li:hover {
-	background-color: var(--gray-25);
-}
-
-.resultList li:not(:first-child) {
-	border-top: 1px solid var(--gray-50);
-}
-
-.resultList .resultList__icon {
-	/* padding: 8px;
-  margin-left: -10px;
-
-  background-color: var(--gray-100);
-  border-radius: 2px; */
-
-	/* padding-right: 8px;
-  margin-left: -2px;
-
-  border-right: 1px solid var(--gray-50); */
+.resultList li.resultList__separator + .item {
+	border-top: 0;
 }
 
 @keyframes resultsFadeIn {
 	0% {
 		opacity: 0;
-		transform: translateY(-8px);
+		transform: translateY(-6px);
 	}
 	100% {
 		opacity: 1;

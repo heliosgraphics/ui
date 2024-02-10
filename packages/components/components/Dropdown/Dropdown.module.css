@@ -26,17 +26,17 @@
 	opacity: 0;
 	padding-top: 8px;
 
-	transform: translateY(-6px) scale(0.96);
+	transform: translateY(-6px);
 	transition:
-		transform 120ms ease-in-out,
-		opacity 120ms ease-in-out;
+		transform 96ms ease-in-out,
+		opacity 96ms ease-in-out;
 	pointer-events: none;
 }
 
 .dropdown__navActive {
 	opacity: 1;
 
-	transform: translateY(0) scale(1);
+	transform: translateY(0);
 
 	pointer-events: all;
 }

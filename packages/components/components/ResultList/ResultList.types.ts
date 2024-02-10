@@ -6,10 +6,8 @@ export interface ResultItem {
 	type?: "separator"
 	isActive?: boolean
 	isDisabled?: boolean
-	iconColor?: string
 	name: string
 	onClick?: (value) => void
-	value?: string
 }
 
 export interface ResultListProps {

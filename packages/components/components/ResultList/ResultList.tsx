@@ -15,23 +15,29 @@ const ResultList: FC<ResultListProps> = ({ items }) => {
 				if (item.type === "separator")
 					return <li key={key} className={styles.resultList__separator} />
 
-				const itemClasses: string = classNames("flex flex-y-center gap-5", {
-					[styles.itemActive]: item.isActive,
-				})
+				const itemClasses: string = classNames(
+					"flex flex-y-center gap-5",
+					styles.item,
+					{
+						[styles.itemActive]: item.isActive,
+						[styles.itemDisabled]: item.isDisabled,
+					},
+				)
 
 				return (
 					<li key={key} onClick={item.onClick} className={itemClasses}>
 						{item.icon && (
 							<Flex isCentered={true} className={styles.resultList__icon}>
-								<Icon
-									size={18}
-									name={item.icon}
-									color={item.iconColor || "dark-gray"}
-								/>
+								<Icon size={18} name={item.icon} />
 							</Flex>
 						)}
 						<Flex isColumn={true} gap={1}>
-							<Text type="small" fontWeight="medium" color="dark-gray">
+							<Text
+								type="small"
+								fontWeight="medium"
+								color="dark-gray"
+								lineClamp={1}
+							>
 								{item.name}
 							</Text>
 							{!!item.description && (
