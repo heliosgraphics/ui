@@ -13,3 +13,8 @@
 .headingTertiary {
 	color: var(--ui-text-tertiary);
 }
+
+.heading a {
+	color: var(--ui-text-intent-advise);
+	text-decoration: none;
+}
