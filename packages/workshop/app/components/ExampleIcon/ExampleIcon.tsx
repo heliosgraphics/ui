@@ -1,6 +1,6 @@
 "use client"
 
-import { Flex, Input, Select, Icon, Text, HeliosEmphasisType, EMPHASES } from "@heliosgraphics/ui"
+import { Alert, Flex, Input, Select, Icon, Text, HeliosEmphasisType, EMPHASES } from "@heliosgraphics/ui"
 import { meta } from "@heliosgraphics/icons/meta"
 import { useState, type FC, type ChangeEvent } from "react"
 import type { ExampleIconProps } from "./ExampleIcon.types"
@@ -21,6 +21,9 @@ const ExampleIcon: FC<ExampleIconProps> = () => {
 
 	return (
 		<Flex isColumn={true} gap={16}>
+			<Alert intent="silent" icon="info">
+				In progress.
+			</Alert>
 			<Flex gap={8}>
 				<Input label="Find an Icon" onChange={onFilter} value={filter} placeholder="Eg.: arrow" />
 				<Select label="Select Emphasis" items={items} onChange={onEmphasisChange} selectedValue={emphasis} />
@@ -39,12 +42,10 @@ const ExampleIcon: FC<ExampleIconProps> = () => {
 							isCentered={true}
 							isColumn={true}
 							onClick={onIconSet}
-							className={`${bg} radius-3 h-48 w-48`}
+							className={`${bg} radius-3 h-40 w-40`}
 						>
-							<div className="h-24 w-24">
-								<Icon size={48} name={ic} emphasis={emphasis} />
-							</div>
-							<Text type="tiny" emphasis={emphasis}>
+							<Icon size={32} name={ic} emphasis={emphasis} />
+							<Text type="tiny" fontFamily="mono" emphasis={emphasis}>
 								{ic}
 							</Text>
 						</Flex>

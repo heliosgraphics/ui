@@ -27,11 +27,12 @@ const Input: FC<InputProps> = ({
 	value,
 }) => {
 	const htmlFor: string = useId()
+	const showingResults: boolean = !!results?.length && showResults
+
 	const inputClasses: string = classNames(styles.input, "relative flex flex-column", {
 		[styles.inputDisabled]: isDisabled,
+		[styles.inputShowingResults]: showingResults,
 	})
-
-	const hasResults: boolean = !!results?.length && showResults
 
 	return (
 		<div className={inputClasses}>
@@ -55,7 +56,7 @@ const Input: FC<InputProps> = ({
 					</div>
 				)}
 			</Flex>
-			{hasResults && (
+			{showingResults && (
 				<div className={styles.input__results}>
 					<ResultList items={results} />
 				</div>

@@ -11,7 +11,7 @@
 
 	background-color: var(--ui-bg);
 	border-radius: var(--radius-normal);
-	transform: translateY(-8px);
+	transform: translateX(-8px);
 	transition: all 96ms ease-in-out;
 
 	animation: resultsFadeIn 96ms ease-in-out forwards;
@@ -63,10 +63,10 @@
 @keyframes resultsFadeIn {
 	0% {
 		opacity: 0;
-		transform: translateY(-6px);
+		transform: translateX(-8px);
 	}
 	100% {
 		opacity: 1;
-		transform: translateY(0);
+		transform: translateX(0);
 	}
 }

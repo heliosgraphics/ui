@@ -10,6 +10,11 @@
 	position: relative;
 }
 
+.input__results ol[data-component="ResultList"] {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
 .input input.input__input {
 	padding: 0 10px;
 	height: 42px;
@@ -26,6 +31,10 @@
 	font-family: var(--font-family-mono);
 	font-size: var(--font-size-small);
 	line-height: var(--line-height-small);
+}
+
+.inputShowingResults input.input__input {
+	border-bottom-left-radius: 0;
 }
 
 .input input.input__input:active,

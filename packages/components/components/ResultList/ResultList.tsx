@@ -10,7 +10,7 @@ const ResultList: FC<ResultListProps> = ({ items }) => {
 	if (!items?.length) return null
 
 	return (
-		<ol className={styles.resultList + " shadow-2"}>
+		<ol className={styles.resultList + " shadow-2"} data-component="ResultList">
 			{items?.map((item, key) => {
 				if (item.type === "separator") return <li key={key} className={styles.resultList__separator} />
 
