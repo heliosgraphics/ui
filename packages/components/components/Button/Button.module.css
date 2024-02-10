@@ -7,7 +7,9 @@
 }
 
 .button:has(input[type="file"]) input {
+	padding: 0;
 	width: 0;
+
 	opacity: 0.0001;
 }
 
@@ -208,8 +210,31 @@
 /* Flair */
 .button__flair {
 	position: absolute;
-	top: -2px;
-	right: -2px;
+	top: var(--ui-button-flair-offset);
+	right: var(--ui-button-flair-offset);
+
+	height: var(--ui-button-flair-size);
+	min-width: var(--ui-button-flair-size);
+	width: var(--ui-button-flair-size);
+
+	background-color: hsl(var(--color-intent-error), 50%);
+	border-radius: 100%;
+	color: var(--ui-button-text-error);
+}
+
+.buttonSizeNormal .button__flair {
+	--ui-button-flair-size: 24px;
+	--ui-button-flair-offset: -10px;
+}
+
+.buttonSizeSmall .button__flair {
+	--ui-button-flair-size: 20px;
+	--ui-button-flair-offset: -8px;
+}
+
+.buttonSizeTiny .button__flair {
+	--ui-button-flair-size: 16px;
+	--ui-button-flair-offset: -6px;
 }
 
 /* Icon */

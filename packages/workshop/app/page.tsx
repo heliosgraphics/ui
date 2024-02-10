@@ -79,7 +79,7 @@ export default function Home() {
 						</Heading>
 						<Text type="tiny" fontFamily="mono">
 							from{` `}
-							<a href="https://helios.graphics">Helios Graphics</a>
+							<a href="https://helios.graphics">Helios</a>
 						</Text>
 					</Flex>
 					<Flex gap={8}>

@@ -1,9 +1,16 @@
 import { useContext, type FC } from "react"
-import { Flex, Select, COLORS, ButtonGroup, Button } from "@heliosgraphics/ui"
+import {
+	Flex,
+	Select,
+	COLORS,
+	ButtonGroup,
+	Button,
+	HeliosColors,
+} from "@heliosgraphics/ui"
 import { ColorContext } from "../../contexts/ColorContext"
 import type { ColorSelectorProps } from "./ColorSelector.types"
 
-let lastColor
+let lastColor: HeliosColors = "gray"
 
 const ColorSelector: FC<ColorSelectorProps> = () => {
 	const { color, setColor } = useContext(ColorContext)
@@ -13,7 +20,7 @@ const ColorSelector: FC<ColorSelectorProps> = () => {
 	})
 
 	const onColorChange = (event) => setColor(event.target.value)
-	const onPurple = () => setColor("purple")
+	const onGray = () => setColor("gray")
 
 	const onRandom = () => {
 		let randomIntention
@@ -31,7 +38,7 @@ const ColorSelector: FC<ColorSelectorProps> = () => {
 		<Flex gap={4}>
 			<Select items={items} onChange={onColorChange} selectedValue={color} />
 			<ButtonGroup>
-				<Button intent="silent" value="Purple" onClick={onPurple} />
+				<Button intent="silent" value="Gray" onClick={onGray} />
 				<Button intent="silent" value="Random" onClick={onRandom} />
 			</ButtonGroup>
 		</Flex>

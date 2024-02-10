@@ -1,8 +1,5 @@
 import classNames from "@sindresorhus/class-names"
-import Dot from "../Dot"
-import Flex from "../Flex"
-import Icon from "../Icon"
-import Loading from "../Loading"
+import { Dot, Flex, Icon, Loading, Text } from "../.."
 import styles from "./Button.module.css"
 import type { ButtonProps } from "./Button.types"
 import type { FC } from "react"
@@ -71,8 +68,9 @@ const Button: FC<ButtonProps> = ({
 	})
 
 	const buttonIconClasses = classNames(styles.button__icon, "relative")
-
 	const buttonLoadingSize: 10 | 20 = size && size !== "normal" ? 10 : 20
+
+	const isButton: boolean = type !== "file"
 
 	return (
 		<Flex
@@ -88,8 +86,10 @@ const Button: FC<ButtonProps> = ({
 				</Flex>
 			)}
 			{!!flair && (
-				<Flex className={styles.button__flair}>
-					<Dot size={6} color={flair} />
+				<Flex className={styles.button__flair} isCentered={true}>
+					<Text type="tiny" fontFamily="mono">
+						{flair}
+					</Text>
 				</Flex>
 			)}
 			<input
@@ -98,7 +98,7 @@ const Button: FC<ButtonProps> = ({
 				className={buttonInputClasses}
 				accept={accept}
 				tabIndex={tabIndex ?? 0}
-				role={type !== "file" ? "button" : undefined}
+				role={isButton ? "button" : undefined}
 				onChange={onChange}
 				defaultValue={isIconOnly ? "" : value}
 			/>

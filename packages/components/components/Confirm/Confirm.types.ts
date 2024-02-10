@@ -2,14 +2,13 @@ import type { HeliosIconType } from "@heliosgraphics/icons/meta"
 import type { HeliosIntentionType } from "../.."
 
 export interface ConfirmProps {
-	title: string
+	cancelText: string
+	confirmText: string
+	description?: string
+	icon?: HeliosIconType
+	intent: HeliosIntentionType
+	isOpen: boolean
 	onCancel: (_event: any) => Promise<void> | void
 	onConfirm: (_event: any) => Promise<void> | void
-	isOpen: boolean
-	intent: HeliosIntentionType
-	description?: string
-	confirmText: string
-	cancelText: string
-	cancelIcon?: HeliosIconType
-	confirmIcon?: HeliosIconType
+	title: string
 }

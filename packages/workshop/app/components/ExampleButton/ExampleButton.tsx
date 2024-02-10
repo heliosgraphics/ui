@@ -1,6 +1,6 @@
 "use client"
 
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { Button, ButtonGroup, Flex, Separator } from "@heliosgraphics/ui"
 import { IntentContext } from "../../contexts/IntentContext"
 import type { ExampleButtonProps } from "./ExampleButton.types"
@@ -8,15 +8,21 @@ import type { FC } from "react"
 
 const ExampleButton: FC<ExampleButtonProps> = () => {
 	const { intent } = useContext(IntentContext)
+	const [flair, setFlair] = useState<number>(0)
 
+	const onFlairToggle = () => setFlair(flair === 0 ? 4 : 0)
 	const onFileSelect = (event) => console.log({ event })
 
 	return (
 		<Flex isColumn={true} gap={16}>
 			<ButtonGroup>
-				<Button intent={intent} value="Normal" />
-				<Button intent={intent} value="Tiny" size="tiny" />
-				<Button intent={intent} value="Small" size="small" />
+				<Button intent="silent" value="Flair" onClick={onFlairToggle} />
+			</ButtonGroup>
+			<Separator isLight={true} />
+			<ButtonGroup>
+				<Button intent={intent} value="Normal" flair={flair} />
+				<Button intent={intent} value="Tiny" size="tiny" flair={flair} />
+				<Button intent={intent} value="Small" size="small" flair={flair} />
 				<Button intent={intent} value="Loading" isLoading={true} />
 				<Button intent={intent} value="Disabled" isDisabled={true} />
 				<Button
@@ -110,8 +116,28 @@ const ExampleButton: FC<ExampleButtonProps> = () => {
 				<Button
 					intent={intent}
 					value="Upload"
-					icon="file"
+					icon="cloud"
 					accept="image/*;capture=camera"
+					type="file"
+					onChange={onFileSelect}
+				/>
+				<Button
+					intent={intent}
+					value="Upload"
+					icon="cloud"
+					accept="image/*;capture=camera"
+					isLoading={true}
+					type="file"
+					onChange={onFileSelect}
+				/>
+				<Button
+					intent={intent}
+					value="Upload"
+					icon="cloud"
+					accept="image/*;capture=camera"
+					isLoading={true}
+					flair={flair}
+					isDisabled={true}
 					type="file"
 					onChange={onFileSelect}
 				/>

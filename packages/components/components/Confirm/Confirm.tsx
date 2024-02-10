@@ -13,9 +13,8 @@ const Confirm: FC<ConfirmProps> = ({
 	title,
 	intent,
 	description,
-	cancelIcon,
+	icon,
 	cancelText,
-	confirmIcon,
 	confirmText,
 }) => {
 	const onCancelClick = (event) => onCancel(event)
@@ -32,17 +31,12 @@ const Confirm: FC<ConfirmProps> = ({
 				{!!description && <Text type="paragraph">{description}</Text>}
 				<ButtonGroup>
 					<Button
-						intent="silent"
-						value={cancelText}
-						onClick={onCancelClick}
-						icon={cancelIcon}
-					/>
-					<Button
 						intent={intent}
 						value={confirmText}
 						onClick={onConfirmClick}
-						icon={confirmIcon}
+						icon={icon}
 					/>
+					<Button intent="silent" value={cancelText} onClick={onCancelClick} />
 				</ButtonGroup>
 			</Flex>
 		</Dialog>

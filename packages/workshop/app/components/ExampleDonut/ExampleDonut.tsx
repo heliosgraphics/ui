@@ -23,7 +23,7 @@ const ExampleDonut: FC<ExampleDonutProps> = () => {
 	}
 
 	return (
-		<Flex gap={16} isWrapping={true}>
+		<Flex gap={8} isWrapping={true}>
 			<ButtonGroup>
 				<Button
 					intent="silent"
@@ -31,7 +31,7 @@ const ExampleDonut: FC<ExampleDonutProps> = () => {
 					onClick={onRandomPercentage}
 				/>
 			</ButtonGroup>
-			<Separator />
+			<Separator isLight={true} />
 			<Donut size={32} percentage={percentage} color={color}></Donut>
 			<Donut size={48} percentage={percentage} color={color}>
 				<Text type="tiny" fontFamily="mono" emphasis="secondary">

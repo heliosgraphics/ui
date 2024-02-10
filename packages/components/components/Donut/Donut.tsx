@@ -10,7 +10,7 @@ const Donut: FC<DonutProps> = ({ children, size, percentage = 0, color }) => {
 	const cSize = size / 2
 	const rSize = actualSize / 2
 	const dashSize = 100 - percentage
-	const donutColor: string = `hsla(var(--${color}-hue), var(--${color}-saturation), 50%, 0.25)`
+	const donutColor: string = `hsl(var(--${color}-hue), var(--${color}-saturation), 50%)`
 
 	const donutContainerStyle: object = {
 		height: size + "px",

@@ -4,7 +4,7 @@ import type { HeliosIconType } from "@heliosgraphics/icons/meta"
 
 export interface ButtonProps {
 	accept?: string
-	flair?: string
+	flair?: number
 	icon?: HeliosIconType
 	intent: HeliosIntentionType
 	isDisabled?: boolean

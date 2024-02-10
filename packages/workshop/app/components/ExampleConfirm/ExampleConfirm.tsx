@@ -14,14 +14,15 @@ const ExampleConfirm: FC<ExampleConfirmProps> = () => {
 				<Button value="Toggle" intent="silent" onClick={onConfirmToggle} />
 			</ButtonGroup>
 			<Confirm
+				cancelText="Cancel"
+				confirmText="Delete"
+				description="Are you sure you want to delete this?"
+				icon="trash"
+				intent="error"
 				isOpen={isConfirming}
 				onCancel={onConfirmToggle}
-				intent="error"
-				title="Confirm Delete"
-				description="Are you sure you want to do this?"
-				confirmText="Confirm"
-				cancelText="Cancel"
 				onConfirm={onConfirmToggle}
+				title="Confirm Delete"
 			/>
 		</Flex>
 	)
