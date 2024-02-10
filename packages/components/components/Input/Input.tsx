@@ -13,6 +13,7 @@ import InputLabel from "../InputLabel"
 const Input: FC<InputProps> = ({
 	helperText,
 	isDisabled,
+	isLabelHidden,
 	isLoading,
 	isRequired,
 	label,
@@ -20,9 +21,9 @@ const Input: FC<InputProps> = ({
 	onChange,
 	onFocus,
 	placeholder,
-	type = "text",
 	results,
 	showResults,
+	type = "text",
 	value,
 }) => {
 	const htmlFor: string = useId()
@@ -34,7 +35,7 @@ const Input: FC<InputProps> = ({
 
 	return (
 		<div className={inputClasses}>
-			<InputLabel id={htmlFor} label={label} isDisabled={isDisabled} />
+			<InputLabel id={htmlFor} label={label} isDisabled={isDisabled} isHidden={isLabelHidden} />
 			<Flex className="grow-1">
 				<input
 					className={styles.input__input}

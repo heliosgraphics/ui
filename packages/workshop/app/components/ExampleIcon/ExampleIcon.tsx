@@ -21,9 +21,9 @@ const ExampleIcon: FC<ExampleIconProps> = () => {
 
 	return (
 		<Flex isColumn={true} gap={16}>
-			<Flex gap={4}>
-				<Select label="Select Emphasis" items={items} onChange={onEmphasisChange} selectedValue={emphasis} />
+			<Flex gap={8}>
 				<Input label="Find an Icon" onChange={onFilter} value={filter} placeholder="Eg.: arrow" />
+				<Select label="Select Emphasis" items={items} onChange={onEmphasisChange} selectedValue={emphasis} />
 			</Flex>
 			<Flex isWrapping={true} gap={2}>
 				{filteredIcons.map((ic, key) => {
