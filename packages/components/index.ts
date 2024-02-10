@@ -12,7 +12,6 @@ export { default as Donut } from "./components/Donut"
 export { default as Dot } from "./components/Dot"
 export { default as Dropdown } from "./components/Dropdown"
 export { default as Flex } from "./components/Flex"
-export { default as Form } from "./components/Form"
 export { default as Grid } from "./components/Grid"
 export { default as Heading } from "./components/Heading"
 export { default as Icon } from "./components/Icon"
@@ -110,7 +109,6 @@ export const COMPONENTS = [
 	"Dropdown",
 	"Error",
 	"Flex",
-	"Form",
 	"Grid",
 	"Heading",
 	"Icon",

@@ -9,8 +9,8 @@ export interface InputProps {
 	id?: string
 	isDisabled?: boolean
 	isRequired?: boolean
-	isLabelHidden?: boolean
 	isLoading?: boolean
+	showResults?: boolean
 	results?: Array<ResultItem>
 	label: string
 	maxLength?: number
@@ -23,5 +23,4 @@ export interface InputProps {
 	placeholder?: string
 	type?: "text" | "email" | "date" | "time" | "password"
 	value?: string
-	defaultValue?: string
 }

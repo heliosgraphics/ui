@@ -1,9 +1,8 @@
 "use client"
 
-import { useState, useRef, useEffect, useId, type FC } from "react"
+import { useId, type FC } from "react"
 import Flex from "../Flex"
 import Text from "../Text"
-import Spacer from "../Spacer"
 import ResultList from "../ResultList"
 import Loading from "../Loading"
 import styles from "./Input.module.css"
@@ -11,62 +10,33 @@ import classNames from "@sindresorhus/class-names"
 import type { InputProps } from "./Input.types"
 
 const Input: FC<InputProps> = ({
-	onChange,
-	onBlur,
 	helperText,
-	results,
-	label,
-	placeholder,
-	value,
-	isLoading,
-	isLabelHidden,
 	isDisabled,
+	isLoading,
 	isRequired,
+	label,
+	onBlur,
+	onChange,
 	onFocus,
+	placeholder,
+	results,
+	showResults,
+	value,
 }) => {
-	const [isActive, setActive] = useState(false)
-	const textareaRef = useRef<HTMLTextAreaElement | null>(null)
-
 	const htmlFor: string = useId()
 	const inputClasses: string = classNames(
 		styles.input,
-		"flex flex-column gap-3",
+		"relative flex flex-column",
+		{
+			[styles.inputDisabled]: isDisabled,
+		},
 	)
 
-	const onInput = () => {
-		if (textareaRef?.current) {
-			textareaRef.current.style.height = "auto"
-			textareaRef.current.style.height = textareaRef.current.scrollHeight + "px"
-		}
-	}
-
-	useEffect(() => {
-		if (textareaRef?.current) {
-			onInput()
-		}
-	}, [])
-
-	const onInputBlur = (event) => {
-		setActive(false)
-
-		onBlur?.(event)
-	}
-
-	const onInputFocus = (event) => {
-		setActive(true)
-
-		onFocus?.(event)
-	}
-
-	const hasResults: boolean = typeof results !== "undefined"
+	const hasResults: boolean = !!results?.length && showResults
 
 	return (
 		<div className={inputClasses}>
-			{label && !isLabelHidden && (
-				<label className="small gray-500 unselectable" htmlFor={htmlFor}>
-					{label}
-				</label>
-			)}
+			{label && <label htmlFor={htmlFor}>{label}</label>}
 			<Flex className="grow-1">
 				<input
 					className={styles.input__input}
@@ -80,19 +50,18 @@ const Input: FC<InputProps> = ({
 					defaultValue={value}
 				/>
 				{isLoading && (
-					<div className={styles.input__input__loading}>
-						<Loading size={10} />
+					<div className={styles.input__loading}>
+						<Loading size={20} />
 					</div>
 				)}
 			</Flex>
 			{hasResults && (
-				<div className="relative">
-					<Spacer gap={8} />
-					<ResultList items={results!} />
+				<div className={styles.input__results}>
+					<ResultList items={results} />
 				</div>
 			)}
 			{!!helperText && (
-				<Text type="tiny" emphasis="tertiary" className="mt-2">
+				<Text type="tiny" emphasis="tertiary" className={styles.input__helper}>
 					{helperText}
 				</Text>
 			)}

@@ -20,7 +20,6 @@ import ExampleCheckbox from "./components/ExampleCheckbox"
 import ExampleColors from "./components/ExampleColors"
 import ExampleConfirm from "./components/ExampleConfirm"
 import ExampleDialog from "./components/ExampleDialog"
-import ExampleForm from "./components/ExampleForm"
 import ExampleHeading from "./components/ExampleHeading"
 import ExampleIcon from "./components/ExampleIcon"
 import ExampleInput from "./components/ExampleInput"
@@ -144,10 +143,6 @@ export default function Home() {
 
 							<Details title="Flex">
 								<ExampleFlex />
-							</Details>
-
-							<Details title="Form">
-								<ExampleForm />
 							</Details>
 
 							<Details title="Grid">
