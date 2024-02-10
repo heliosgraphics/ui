@@ -22,23 +22,13 @@ export const md = markdownIt({
 // https://github.com/stiang/remove-markdown/blob/main/index.js
 export const cleanMarkdown = (md: string, options?) => {
 	options = options || {}
-	options.listUnicodeChar = options.hasOwnProperty("listUnicodeChar")
-		? options.listUnicodeChar
-		: false
-	options.stripListLeaders = options.hasOwnProperty("stripListLeaders")
-		? options.stripListLeaders
-		: true
+	options.listUnicodeChar = options.hasOwnProperty("listUnicodeChar") ? options.listUnicodeChar : false
+	options.stripListLeaders = options.hasOwnProperty("stripListLeaders") ? options.stripListLeaders : true
 	options.gfm = options.hasOwnProperty("gfm") ? options.gfm : true
-	options.useImgAltText = options.hasOwnProperty("useImgAltText")
-		? options.useImgAltText
-		: true
+	options.useImgAltText = options.hasOwnProperty("useImgAltText") ? options.useImgAltText : true
 	options.abbr = options.hasOwnProperty("abbr") ? options.abbr : false
-	options.replaceLinksWithURL = options.hasOwnProperty("replaceLinksWithURL")
-		? options.replaceLinksWithURL
-		: false
-	options.htmlTagsToSkip = options.hasOwnProperty("htmlTagsToSkip")
-		? options.htmlTagsToSkip
-		: []
+	options.replaceLinksWithURL = options.hasOwnProperty("replaceLinksWithURL") ? options.replaceLinksWithURL : false
+	options.htmlTagsToSkip = options.hasOwnProperty("htmlTagsToSkip") ? options.htmlTagsToSkip : []
 
 	var output = md || ""
 
@@ -47,11 +37,7 @@ export const cleanMarkdown = (md: string, options?) => {
 
 	try {
 		if (options.stripListLeaders) {
-			if (options.listUnicodeChar)
-				output = output.replace(
-					/^([\s\t]*)([\*\-\+]|\d+\.)\s+/gm,
-					options.listUnicodeChar + " $1",
-				)
+			if (options.listUnicodeChar) output = output.replace(/^([\s\t]*)([\*\-\+]|\d+\.)\s+/gm, options.listUnicodeChar + " $1")
 			else output = output.replace(/^([\s\t]*)([\*\-\+]|\d+\.)\s+/gm, "$1")
 		}
 		if (options.gfm) {
@@ -93,20 +79,14 @@ export const cleanMarkdown = (md: string, options?) => {
 			// Remove images
 			.replace(/\!\[(.*?)\][\[\(].*?[\]\)]/g, options.useImgAltText ? "$1" : "")
 			// Remove inline links
-			.replace(
-				/\[([^\]]*?)\][\[\(].*?[\]\)]/g,
-				options.replaceLinksWithURL ? "$2" : "$1",
-			)
+			.replace(/\[([^\]]*?)\][\[\(].*?[\]\)]/g, options.replaceLinksWithURL ? "$2" : "$1")
 			// Remove blockquotes
 			.replace(/^\s{0,3}>\s?/gm, "")
 			// .replace(/(^|\n)\s{0,3}>\s?/g, '\n\n')
 			// Remove reference-style links?
 			.replace(/^\s{1,2}\[(.*?)\]: (\S+)( ".*?")?\s*$/g, "")
 			// Remove atx-style headers
-			.replace(
-				/^(\n)?\s{0,}#{1,6}\s+| {0,}(\n)?\s{0,}#{0,} #{0,}(\n)?\s{0,}$/gm,
-				"$1$2$3",
-			)
+			.replace(/^(\n)?\s{0,}#{1,6}\s+| {0,}(\n)?\s{0,}#{0,} #{0,}(\n)?\s{0,}$/gm, "$1$2$3")
 			// Remove * emphasis
 			.replace(/([\*]+)(\S)(.*?\S)??\1/g, "$2$3")
 			// Remove _ emphasis. Unlike *, _ emphasis gets rendered only if

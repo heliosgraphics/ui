@@ -1,13 +1,7 @@
 "use client"
 
 import { useState, type FC } from "react"
-import {
-	Flex,
-	Select,
-	Heading,
-	Separator,
-	type TextProps,
-} from "@heliosgraphics/ui"
+import { Flex, Select, Heading, Separator, type TextProps } from "@heliosgraphics/ui"
 import type { ExampleHeadingProps } from "./ExampleHeading.types"
 
 const EMPHASIS_LIST: Array<{
@@ -45,9 +39,7 @@ const FONT_WEIGHTS: Array<{
 const ExampleHeading: FC<ExampleHeadingProps> = () => {
 	const [emphasis, setEmphasis] = useState<TextProps["emphasis"]>("primary")
 	const [fontFamily, setFontFamily] = useState<TextProps["fontFamily"]>("sans")
-	const [fontWeight, setFontWeight] = useState<
-		TextProps["fontWeight"] | undefined
-	>(undefined)
+	const [fontWeight, setFontWeight] = useState<TextProps["fontWeight"] | undefined>(undefined)
 
 	const onEmphasisChange = (event) => setEmphasis(event.target.value)
 	const onFontFamilyChange = (event) => setFontFamily(event.target.value)
@@ -56,13 +48,7 @@ const ExampleHeading: FC<ExampleHeadingProps> = () => {
 	return (
 		<Flex isColumn={true} gap={8}>
 			<Flex gap={4}>
-				<Select
-					label="Type"
-					items={EMPHASIS_LIST}
-					selectedValue={emphasis}
-					onChange={onEmphasisChange}
-					isLabelHidden={true}
-				/>
+				<Select label="Type" items={EMPHASIS_LIST} selectedValue={emphasis} onChange={onEmphasisChange} isLabelHidden={true} />
 				<Select
 					label="Type"
 					items={FONT_FAMILIES}
@@ -79,60 +65,25 @@ const ExampleHeading: FC<ExampleHeadingProps> = () => {
 				/>
 			</Flex>
 			<Separator />
-			<Heading
-				emphasis={emphasis}
-				fontFamily={fontFamily}
-				level={0}
-				fontWeight={fontWeight}
-			>
+			<Heading emphasis={emphasis} fontFamily={fontFamily} level={0} fontWeight={fontWeight}>
 				Qi 1234567890
 			</Heading>
-			<Heading
-				emphasis={emphasis}
-				fontFamily={fontFamily}
-				level={1}
-				fontWeight={fontWeight}
-			>
+			<Heading emphasis={emphasis} fontFamily={fontFamily} level={1} fontWeight={fontWeight}>
 				In the "quaint" village of <a rel="author">Quixley</a>.
 			</Heading>
-			<Heading
-				emphasis={emphasis}
-				fontFamily={fontFamily}
-				level={2}
-				fontWeight={fontWeight}
-			>
+			<Heading emphasis={emphasis} fontFamily={fontFamily} level={2} fontWeight={fontWeight}>
 				In the "quaint" village of <a rel="author">Quixley</a>.
 			</Heading>
-			<Heading
-				emphasis={emphasis}
-				fontFamily={fontFamily}
-				level={3}
-				fontWeight={fontWeight}
-			>
+			<Heading emphasis={emphasis} fontFamily={fontFamily} level={3} fontWeight={fontWeight}>
 				In the "quaint" village of <a rel="author">Quixley</a>.
 			</Heading>
-			<Heading
-				emphasis={emphasis}
-				fontFamily={fontFamily}
-				level={4}
-				fontWeight={fontWeight}
-			>
+			<Heading emphasis={emphasis} fontFamily={fontFamily} level={4} fontWeight={fontWeight}>
 				In the "quaint" village of <a rel="author">Quixley</a>.
 			</Heading>
-			<Heading
-				emphasis={emphasis}
-				fontFamily={fontFamily}
-				level={5}
-				fontWeight={fontWeight}
-			>
+			<Heading emphasis={emphasis} fontFamily={fontFamily} level={5} fontWeight={fontWeight}>
 				In the "quaint" village of <a rel="author">Quixley</a>.
 			</Heading>
-			<Heading
-				emphasis={emphasis}
-				fontFamily={fontFamily}
-				level={6}
-				fontWeight={fontWeight}
-			>
+			<Heading emphasis={emphasis} fontFamily={fontFamily} level={6} fontWeight={fontWeight}>
 				In the "quaint" village of <a rel="author">Quixley</a>.
 			</Heading>
 		</Flex>

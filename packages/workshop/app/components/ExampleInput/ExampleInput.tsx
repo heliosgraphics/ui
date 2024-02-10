@@ -45,12 +45,7 @@ const ExampleInput: FC<ExampleInputProps> = () => {
 
 	return (
 		<Flex isColumn={true} gap={8}>
-			<Input
-				value={input}
-				label="Your Name"
-				onChange={onInputChange}
-				placeholder="Jane Doe"
-			/>
+			<Input value={input} label="Your Name" onChange={onInputChange} placeholder="Jane Doe" />
 			<Input
 				value={!!input ? "Disabled Content" : ""}
 				isDisabled={true}

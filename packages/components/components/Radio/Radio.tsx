@@ -4,16 +4,7 @@ import Text from "../Text"
 import { type FC, useId } from "react"
 import type { RadioProps } from "./Radio.types"
 
-const Radio: FC<RadioProps> = ({
-	id,
-	isSmall,
-	isDisabled,
-	intent,
-	onChange,
-	value,
-	state,
-	label,
-}) => {
+const Radio: FC<RadioProps> = ({ id, isSmall, isDisabled, intent, onChange, value, state, label }) => {
 	const radioId: string = id || useId()
 	const radioClasses = classNames(styles.radio, {
 		[styles.radioAdvise]: intent === "advise",
@@ -29,10 +20,7 @@ const Radio: FC<RadioProps> = ({
 		[styles.radioSmall]: isSmall,
 	})
 
-	const radioLabelClasses = classNames(
-		styles.radio__radioLabel,
-		"flex flex-y-center flex-wrap gap-4",
-	)
+	const radioLabelClasses = classNames(styles.radio__radioLabel, "flex flex-y-center flex-wrap gap-4")
 
 	return (
 		<div className={radioClasses}>
@@ -47,11 +35,7 @@ const Radio: FC<RadioProps> = ({
 				/>
 				<div className={styles.radio__radioMark} />
 				{label && (
-					<Text
-						type={isSmall ? "tiny" : "small"}
-						fontWeight="medium"
-						emphasis={isDisabled ? "tertiary" : "primary"}
-					>
+					<Text type={isSmall ? "tiny" : "small"} fontWeight="medium" emphasis={isDisabled ? "tertiary" : "primary"}>
 						{label}
 					</Text>
 				)}

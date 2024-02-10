@@ -4,12 +4,7 @@
 	animation: shimmer 1200ms linear infinite forwards;
 
 	background-color: var(--gray-50);
-	background-image: linear-gradient(
-		to left,
-		rgba(255, 255, 255, 0),
-		rgba(255, 255, 255, 0.5),
-		rgba(255, 255, 255, 0)
-	);
+	background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
 	background-position: -200px 0;
 	background-repeat: no-repeat;
 	background-size: 200px 100%;

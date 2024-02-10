@@ -50,21 +50,16 @@ const ExampleMarkdown: FC<ExampleMarkdownProps> = () => {
 			<Markdown text={INTRO_MD} />
 			<Separator />
 			<Text type="small" className="text-secondary">
-				Mauris fermentum eros sit amet efficitur malesuada. Nam tempus placerat
-				tellus, eu sit amet. Nunc viverra risus nibh, eu aliquet nulla tristique
-				at. Duis auctor lectus est, id pellentesque felis malesuada ac. Ut
-				sollicitudin vestibulum nibh, vitae suscipit justo condimentum et.
+				Mauris fermentum eros sit amet efficitur malesuada. Nam tempus placerat tellus, eu sit amet. Nunc viverra risus nibh, eu
+				aliquet nulla tristique at. Duis auctor lectus est, id pellentesque felis malesuada ac. Ut sollicitudin vestibulum nibh,
+				vitae suscipit justo condimentum et.
 			</Text>
 			<Text type="tiny" className="text-deemphasized">
-				Vivamus euismod non arcu vel euismod. Nullam pharetra egestas metus
-				suscipit tincidunt. Ut porttitor tempus velit, vitae condimentum. Morbi
-				ultrices vel ante sed fringilla. Vivamus non odio ornare ex finibus
-				mattis. Mauris dictum gravida orci, maximus hendrerit risus luctus at.
-				Nam ultricies vel orci sed posuere. Nam sit amet accumsan turpis, sed
-				lacinia nibh. Nullam imperdiet mauris ac mauris bibendum ornare.
-				Pellentesque vel ipsum ante. Nam facilisis enim tellus, sit amet
-				tristique massa fermentum vel. Vivamus vitae tincidunt ex, id porta
-				lorem.
+				Vivamus euismod non arcu vel euismod. Nullam pharetra egestas metus suscipit tincidunt. Ut porttitor tempus velit, vitae
+				condimentum. Morbi ultrices vel ante sed fringilla. Vivamus non odio ornare ex finibus mattis. Mauris dictum gravida
+				orci, maximus hendrerit risus luctus at. Nam ultricies vel orci sed posuere. Nam sit amet accumsan turpis, sed lacinia
+				nibh. Nullam imperdiet mauris ac mauris bibendum ornare. Pellentesque vel ipsum ante. Nam facilisis enim tellus, sit
+				amet tristique massa fermentum vel. Vivamus vitae tincidunt ex, id porta lorem.
 			</Text>
 		</Flex>
 	)

@@ -1,7 +1,10 @@
-import type { ResultItem } from "../ResultList"
 import type { ChangeEventHandler } from "react"
 
-export type SelectItem = Pick<ResultItem, "name" | "value" | "isDisabled">
+export type SelectItem = {
+	name: string
+	value: string
+	isDisabled?: boolean
+}
 
 export interface SelectProps {
 	label?: string

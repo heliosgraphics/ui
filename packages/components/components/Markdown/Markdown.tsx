@@ -12,9 +12,7 @@ const Markdown: FC<MarkdownProps> = ({ text, isUnselectable }) => {
 		[styles.markdownUnselectable]: isUnselectable,
 	})
 
-	return (
-		<div className={markdownClasses} dangerouslySetInnerHTML={innerHTML}></div>
-	)
+	return <div className={markdownClasses} dangerouslySetInnerHTML={innerHTML}></div>
 }
 
 export default Markdown

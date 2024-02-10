@@ -1,12 +1,5 @@
 import { useContext, type FC } from "react"
-import {
-	Flex,
-	Select,
-	COLORS,
-	ButtonGroup,
-	Button,
-	HeliosColors,
-} from "@heliosgraphics/ui"
+import { Flex, Select, COLORS, ButtonGroup, Button, HeliosColors } from "@heliosgraphics/ui"
 import { ColorContext } from "../../contexts/ColorContext"
 import type { ColorSelectorProps } from "./ColorSelector.types"
 

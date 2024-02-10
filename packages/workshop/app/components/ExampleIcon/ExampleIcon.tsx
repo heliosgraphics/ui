@@ -9,21 +9,12 @@ import type { HeliosIconType } from "@heliosgraphics/icons/meta"
 const ExampleIcon: FC<ExampleIconProps> = () => {
 	const [icon, setIcon] = useState<HeliosIconType>("calendar")
 	const [filter, setFilter] = useState<string>("")
-	const onFilter = (event: ChangeEvent<HTMLInputElement>) =>
-		setFilter(event.target.value)
-	const filteredIcons: Array<HeliosIconType> = meta?.filter((icon) =>
-		icon.includes(filter),
-	)
+	const onFilter = (event: ChangeEvent<HTMLInputElement>) => setFilter(event.target.value)
+	const filteredIcons: Array<HeliosIconType> = meta?.filter((icon) => icon.includes(filter))
 
 	return (
 		<>
-			<Input
-				label="Find an icon"
-				onChange={onFilter}
-				value={filter}
-				placeholder="Eg.: arrow"
-				type="text"
-			/>
+			<Input label="Find an icon" onChange={onFilter} value={filter} placeholder="Eg.: arrow" type="text" />
 			<Flex isWrapping={true} gap={2}>
 				{filteredIcons.map((ic, key) => {
 					const onIconSet = () => setIcon(ic)

@@ -1,11 +1,5 @@
 import { useContext, type FC } from "react"
-import {
-	Flex,
-	Select,
-	INTENTIONS,
-	ButtonGroup,
-	Button,
-} from "@heliosgraphics/ui"
+import { Flex, Select, INTENTIONS, ButtonGroup, Button } from "@heliosgraphics/ui"
 import { IntentContext } from "../../contexts/IntentContext"
 import type { IntentSelectorProps } from "./IntentSelector.types"
 
@@ -24,8 +18,7 @@ const IntentSelector: FC<IntentSelectorProps> = () => {
 		let randomIntention
 
 		do {
-			randomIntention =
-				INTENTIONS[Math.floor(Math.random() * INTENTIONS.length)]
+			randomIntention = INTENTIONS[Math.floor(Math.random() * INTENTIONS.length)]
 		} while (lastIntention === randomIntention)
 
 		lastIntention = randomIntention

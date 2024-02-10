@@ -1,13 +1,6 @@
 "use client"
 
-import {
-	Flex,
-	Text,
-	Donut,
-	Separator,
-	ButtonGroup,
-	Button,
-} from "@heliosgraphics/ui"
+import { Flex, Text, Donut, Separator, ButtonGroup, Button } from "@heliosgraphics/ui"
 import { useContext, useState, type FC } from "react"
 import { ColorContext } from "../../contexts/ColorContext"
 import type { ExampleDonutProps } from "./ExampleDonut.types"
@@ -25,11 +18,7 @@ const ExampleDonut: FC<ExampleDonutProps> = () => {
 	return (
 		<Flex gap={8} isWrapping={true}>
 			<ButtonGroup>
-				<Button
-					intent="silent"
-					value="Random Percentage"
-					onClick={onRandomPercentage}
-				/>
+				<Button intent="silent" value="Random Percentage" onClick={onRandomPercentage} />
 			</ButtonGroup>
 			<Separator isLight={true} />
 			<Donut size={32} percentage={percentage} color={color}></Donut>

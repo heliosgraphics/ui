@@ -28,13 +28,7 @@ const Alert: FC<AlertProps> = ({ children, onClose, title, icon, intent }) => {
 		<div className="relative">
 			{!!onClose && (
 				<ButtonGroup className={styles.alertButtonGroup}>
-					<Button
-						isIconOnly={true}
-						value="Close"
-						intent={intent}
-						size="tiny"
-						icon="x"
-					/>
+					<Button isIconOnly={true} value="Close" intent={intent} size="tiny" icon="x" />
 				</ButtonGroup>
 			)}
 			<Flex className={alertClasses} padding={6} gap={6}>

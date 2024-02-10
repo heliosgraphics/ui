@@ -30,12 +30,7 @@ const Confirm: FC<ConfirmProps> = ({
 			<Flex gap={12} isColumn={true}>
 				{!!description && <Text type="paragraph">{description}</Text>}
 				<ButtonGroup>
-					<Button
-						intent={intent}
-						value={confirmText}
-						onClick={onConfirmClick}
-						icon={icon}
-					/>
+					<Button intent={intent} value={confirmText} onClick={onConfirmClick} icon={icon} />
 					<Button intent="silent" value={cancelText} onClick={onCancelClick} />
 				</ButtonGroup>
 			</Flex>

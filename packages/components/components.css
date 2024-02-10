@@ -47,8 +47,7 @@
 	--line-height-small: 22px;
 	--line-height-tiny: 18px;
 
-	--font-family-sans: "InterVariable", "Inter", -apple-system, "Helvetica Neue",
-		Arial, sans-serif;
+	--font-family-sans: "InterVariable", "Inter", -apple-system, "Helvetica Neue", Arial, sans-serif;
 	--font-family-mono: "JetBrains Mono", courier, monospace;
 	--font-family-serif: "Times New Roman", Times, Georgia;
 
@@ -98,55 +97,15 @@
 	--color-intent-warning: var(--yellow-hue), var(--yellow-saturation);
 
 	/* shared UI: bg soft intents */
-	--ui-bg-intent-advise: hsla(
-		var(--blue-hue),
-		var(--blue-saturation),
-		50%,
-		0.25
-	);
-	--ui-bg-intent-automation: hsla(
-		var(--pink-hue),
-		var(--pink-saturation),
-		50%,
-		0.25
-	);
-	--ui-bg-intent-confirmation: hsla(
-		var(--purple-hue),
-		var(--purple-saturation),
-		50%,
-		0.25
-	);
+	--ui-bg-intent-advise: hsla(var(--blue-hue), var(--blue-saturation), 50%, 0.25);
+	--ui-bg-intent-automation: hsla(var(--pink-hue), var(--pink-saturation), 50%, 0.25);
+	--ui-bg-intent-confirmation: hsla(var(--purple-hue), var(--purple-saturation), 50%, 0.25);
 	--ui-bg-intent-error: hsla(var(--red-hue), var(--red-saturation), 50%, 0.25);
-	--ui-bg-intent-highlight: hsla(
-		var(--orange-hue),
-		var(--orange-saturation),
-		50%,
-		0.25
-	);
-	--ui-bg-intent-question: hsla(
-		var(--aqua-hue),
-		var(--aqua-saturation),
-		50%,
-		0.25
-	);
-	--ui-bg-intent-silent: hsla(
-		var(--gray-hue),
-		var(--gray-saturation),
-		50%,
-		0.25
-	);
-	--ui-bg-intent-success: hsla(
-		var(--green-hue),
-		var(--green-saturation),
-		50%,
-		0.25
-	);
-	--ui-bg-intent-warning: hsla(
-		var(--yellow-hue),
-		var(--yellow-saturation),
-		50%,
-		0.25
-	);
+	--ui-bg-intent-highlight: hsla(var(--orange-hue), var(--orange-saturation), 50%, 0.25);
+	--ui-bg-intent-question: hsla(var(--aqua-hue), var(--aqua-saturation), 50%, 0.25);
+	--ui-bg-intent-silent: hsla(var(--gray-hue), var(--gray-saturation), 50%, 0.25);
+	--ui-bg-intent-success: hsla(var(--green-hue), var(--green-saturation), 50%, 0.25);
+	--ui-bg-intent-warning: hsla(var(--yellow-hue), var(--yellow-saturation), 50%, 0.25);
 
 	/* setup animations constants */
 	--animation-fastest: 64ms;
@@ -206,56 +165,24 @@
 	--ui-bg-inactive: hsl(var(--ui-hue), var(--ui-saturation), 80%);
 
 	--ui-text-intent-advise: hsl(var(--blue-hue), var(--blue-saturation), 50%);
-	--ui-text-intent-automation: hsl(
-		var(--pink-hue),
-		var(--pink-saturation),
-		40%
-	);
-	--ui-text-intent-confirmation: hsl(
-		var(--purple-hue),
-		var(--purple-saturation),
-		50%
-	);
+	--ui-text-intent-automation: hsl(var(--pink-hue), var(--pink-saturation), 40%);
+	--ui-text-intent-confirmation: hsl(var(--purple-hue), var(--purple-saturation), 50%);
 	--ui-text-intent-error: hsl(var(--red-hue), var(--red-saturation), 50%);
-	--ui-text-intent-highlight: hsl(
-		var(--orange-hue),
-		var(--orange-saturation),
-		45%
-	);
+	--ui-text-intent-highlight: hsl(var(--orange-hue), var(--orange-saturation), 45%);
 	--ui-text-intent-question: hsl(var(--aqua-hue), var(--aqua-saturation), 40%);
 	--ui-text-intent-silent: hsl(var(--gray-hue), var(--gray-saturation), 40%);
 	--ui-text-intent-success: hsl(var(--green-hue), var(--green-saturation), 40%);
-	--ui-text-intent-warning: hsl(
-		var(--yellow-hue),
-		var(--yellow-saturation),
-		40%
-	);
+	--ui-text-intent-warning: hsl(var(--yellow-hue), var(--yellow-saturation), 40%);
 
 	--ui-button-text-advise: hsl(var(--blue-hue), var(--blue-saturation), 95%);
-	--ui-button-text-automation: hsl(
-		var(--pink-hue),
-		var(--pink-saturation),
-		95%
-	);
-	--ui-button-text-confirmation: hsl(
-		var(--purple-hue),
-		var(--purple-saturation),
-		95%
-	);
+	--ui-button-text-automation: hsl(var(--pink-hue), var(--pink-saturation), 95%);
+	--ui-button-text-confirmation: hsl(var(--purple-hue), var(--purple-saturation), 95%);
 	--ui-button-text-error: hsl(var(--red-hue), var(--red-saturation), 95%);
-	--ui-button-text-highlight: hsl(
-		var(--orange-hue),
-		var(--orange-saturation),
-		95%
-	);
+	--ui-button-text-highlight: hsl(var(--orange-hue), var(--orange-saturation), 95%);
 	--ui-button-text-question: hsl(var(--aqua-hue), var(--aqua-saturation), 95%);
 	--ui-button-text-silent: hsl(var(--gray-hue), var(--gray-saturation), 40%);
 	--ui-button-text-success: hsl(var(--green-hue), var(--green-saturation), 95%);
-	--ui-button-text-warning: hsl(
-		var(--yellow-hue),
-		var(--yellow-saturation),
-		95%
-	);
+	--ui-button-text-warning: hsl(var(--yellow-hue), var(--yellow-saturation), 95%);
 }
 
 /* setup theme dark */
@@ -289,56 +216,24 @@
 	--ui-bg-inactive: hsl(var(--ui-hue), var(--ui-saturation), 24%);
 
 	--ui-text-intent-advise: hsl(var(--blue-hue), var(--blue-saturation), 75%);
-	--ui-text-intent-automation: hsl(
-		var(--pink-hue),
-		var(--pink-saturation),
-		75%
-	);
-	--ui-text-intent-confirmation: hsl(
-		var(--purple-hue),
-		var(--purple-saturation),
-		75%
-	);
+	--ui-text-intent-automation: hsl(var(--pink-hue), var(--pink-saturation), 75%);
+	--ui-text-intent-confirmation: hsl(var(--purple-hue), var(--purple-saturation), 75%);
 	--ui-text-intent-error: hsl(var(--red-hue), var(--red-saturation), 75%);
-	--ui-text-intent-highlight: hsl(
-		var(--orange-hue),
-		var(--orange-saturation),
-		75%
-	);
+	--ui-text-intent-highlight: hsl(var(--orange-hue), var(--orange-saturation), 75%);
 	--ui-text-intent-question: hsl(var(--aqua-hue), var(--aqua-saturation), 75%);
 	--ui-text-intent-silent: hsl(var(--gray-hue), var(--gray-saturation), 75%);
 	--ui-text-intent-success: hsl(var(--green-hue), var(--green-saturation), 75%);
-	--ui-text-intent-warning: hsl(
-		var(--yellow-hue),
-		var(--yellow-saturation),
-		75%
-	);
+	--ui-text-intent-warning: hsl(var(--yellow-hue), var(--yellow-saturation), 75%);
 
 	--ui-button-text-advise: hsl(var(--blue-hue), var(--blue-saturation), 90%);
-	--ui-button-text-automation: hsl(
-		var(--pink-hue),
-		var(--pink-saturation),
-		90%
-	);
-	--ui-button-text-confirmation: hsl(
-		var(--purple-hue),
-		var(--purple-saturation),
-		90%
-	);
+	--ui-button-text-automation: hsl(var(--pink-hue), var(--pink-saturation), 90%);
+	--ui-button-text-confirmation: hsl(var(--purple-hue), var(--purple-saturation), 90%);
 	--ui-button-text-error: hsl(var(--red-hue), var(--red-saturation), 90%);
-	--ui-button-text-highlight: hsl(
-		var(--orange-hue),
-		var(--orange-saturation),
-		15%
-	);
+	--ui-button-text-highlight: hsl(var(--orange-hue), var(--orange-saturation), 15%);
 	--ui-button-text-question: hsl(var(--aqua-hue), var(--aqua-saturation), 10%);
 	--ui-button-text-silent: hsl(var(--gray-hue), var(--gray-saturation), 90%);
 	--ui-button-text-success: hsl(var(--green-hue), var(--green-saturation), 10%);
-	--ui-button-text-warning: hsl(
-		var(--yellow-hue),
-		var(--yellow-saturation),
-		15%
-	);
+	--ui-button-text-warning: hsl(var(--yellow-hue), var(--yellow-saturation), 15%);
 }
 
 *:focus-visible {

@@ -13,14 +13,7 @@ const DebugSelector: FC<DebugSelectorProps> = () => {
 		}
 	}
 
-	return (
-		<Toggle
-			isSmall={true}
-			intent="advise"
-			onChange={onDebugToggle}
-			label="Debug Mode"
-		/>
-	)
+	return <Toggle isSmall={true} intent="advise" onChange={onDebugToggle} label="Debug Mode" />
 }
 
 export default DebugSelector

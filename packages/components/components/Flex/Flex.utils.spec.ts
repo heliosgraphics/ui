@@ -21,16 +21,13 @@ describe("getFlexUtility", () => {
 		gap: 16,
 	}
 
-	it("Generates inline classes", () =>
-		expect(getFlexUtility(MOCK_FLEX_INLINE)).toEqual(MOCK_FLEX_INLINE_CLASSES))
+	it("Generates inline classes", () => expect(getFlexUtility(MOCK_FLEX_INLINE)).toEqual(MOCK_FLEX_INLINE_CLASSES))
 
 	const MOCK_FLEX_CLASSES = `flex`
 	const MOCK_FLEX: FlexProps = { children: null }
 
-	it("Generates empty flex without attrs", () =>
-		expect(getFlexUtility(MOCK_FLEX)).toEqual(MOCK_FLEX_CLASSES))
-	it("Generates empty flex with undefined", () =>
-		expect(getFlexUtility(undefined as any)).toEqual(MOCK_FLEX_CLASSES))
+	it("Generates empty flex without attrs", () => expect(getFlexUtility(MOCK_FLEX)).toEqual(MOCK_FLEX_CLASSES))
+	it("Generates empty flex with undefined", () => expect(getFlexUtility(undefined as any)).toEqual(MOCK_FLEX_CLASSES))
 
 	const MOCK_FLEX_DUPLICATE_CLASSES = `flex flex-center`
 	const MOCK_FLEX_DUPLICATE: FlexProps = {
@@ -40,7 +37,5 @@ describe("getFlexUtility", () => {
 	}
 
 	it("Generates without duplicated classes", () =>
-		expect(getFlexUtility(MOCK_FLEX_DUPLICATE)).toEqual(
-			MOCK_FLEX_DUPLICATE_CLASSES,
-		))
+		expect(getFlexUtility(MOCK_FLEX_DUPLICATE)).toEqual(MOCK_FLEX_DUPLICATE_CLASSES))
 })

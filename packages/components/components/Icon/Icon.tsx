@@ -224,17 +224,12 @@ const Icon: FC<IconProps> = ({ name, className, emphasis, size }) => {
 		width: size + "px",
 	}
 
-	const iconClasses: string = classNames(
-		styles.icon,
-		className,
-		"flex flex-center",
-		{
-			[styles.iconInherit]: !emphasis,
-			[styles.iconPrimary]: emphasis === "primary",
-			[styles.iconSecondary]: emphasis === "secondary",
-			[styles.iconTertiary]: emphasis === "tertiary",
-		},
-	)
+	const iconClasses: string = classNames(styles.icon, className, "flex flex-center", {
+		[styles.iconInherit]: !emphasis,
+		[styles.iconPrimary]: emphasis === "primary",
+		[styles.iconSecondary]: emphasis === "secondary",
+		[styles.iconTertiary]: emphasis === "tertiary",
+	})
 
 	return (
 		<div className={iconClasses} style={iconSizeStyle} data-component="Icon">

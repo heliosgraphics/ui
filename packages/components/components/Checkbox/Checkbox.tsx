@@ -5,15 +5,7 @@ import styles from "./Checkbox.module.css"
 import type { FC } from "react"
 import type { CheckboxProps } from "./Checkbox.types"
 
-const Checkbox: FC<CheckboxProps> = ({
-	id,
-	isChecked,
-	isSmall,
-	isDisabled,
-	intent,
-	onChange,
-	label,
-}) => {
+const Checkbox: FC<CheckboxProps> = ({ id, isChecked, isSmall, isDisabled, intent, onChange, label }) => {
 	const checkboxId: string = id || useId()
 	const checkboxClasses = classNames(styles.checkbox, {
 		[styles.checkboxAdvise]: intent === "advise",
@@ -29,32 +21,15 @@ const Checkbox: FC<CheckboxProps> = ({
 		[styles.checkboxSmall]: isSmall,
 	})
 
-	const checkboxLabelClasses = classNames(
-		styles.checkbox__checkboxLabel,
-		"flex flex-y-center flex-wrap gap-4",
-	)
+	const checkboxLabelClasses = classNames(styles.checkbox__checkboxLabel, "flex flex-y-center flex-wrap gap-4")
 
 	return (
 		<div className={checkboxClasses}>
 			<label className={checkboxLabelClasses} htmlFor={checkboxId}>
-				<input
-					type="checkbox"
-					checked={isChecked}
-					onChange={onChange}
-					disabled={isDisabled}
-					id={checkboxId}
-				/>
+				<input type="checkbox" checked={isChecked} onChange={onChange} disabled={isDisabled} id={checkboxId} />
 				<span className={styles.checkbox__checkboxMark} />
-				<Icon
-					name="check"
-					size={isSmall ? 14 : 18}
-					className={styles.checkbox__checkboxIcon}
-				/>
-				<Text
-					type={isSmall ? "tiny" : "small"}
-					fontWeight="medium"
-					emphasis={isDisabled ? "tertiary" : "primary"}
-				>
+				<Icon name="check" size={isSmall ? 14 : 18} className={styles.checkbox__checkboxIcon} />
+				<Text type={isSmall ? "tiny" : "small"} fontWeight="medium" emphasis={isDisabled ? "tertiary" : "primary"}>
 					{label}
 				</Text>
 			</label>

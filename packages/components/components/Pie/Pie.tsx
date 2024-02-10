@@ -24,9 +24,7 @@ const Pie: FC<PieProps> = ({ size, data }) => {
 						stroke={thisColor}
 						strokeDashoffset={-thisSize * circumferencePercentage}
 						strokeWidth={size / 2}
-						strokeDasharray={`${circumferencePercentage * item.value} ${
-							circumferencePercentage * whole
-						}`}
+						strokeDasharray={`${circumferencePercentage * item.value} ${circumferencePercentage * whole}`}
 						transform={`rotate(-90) translate(-${size})`}
 					/>
 				)

@@ -5,16 +5,7 @@ import styles from "./Toggle.module.css"
 import type { FC } from "react"
 import type { ToggleProps } from "./Toggle.types"
 
-const Toggle: FC<ToggleProps> = ({
-	id,
-	isChecked,
-	isSmall,
-	isRequired,
-	isDisabled,
-	intent,
-	onChange,
-	label,
-}) => {
+const Toggle: FC<ToggleProps> = ({ id, isChecked, isSmall, isRequired, isDisabled, intent, onChange, label }) => {
 	const toggleId: string = id || useId()
 	const toggleClasses = classNames(styles.toggle, {
 		[styles.toggleAdvise]: intent === "advise",
@@ -30,10 +21,7 @@ const Toggle: FC<ToggleProps> = ({
 		[styles.toggleSmall]: isSmall,
 	})
 
-	const toggleLabelClasses = classNames(
-		styles.toggle__toggleLabel,
-		"flex flex-y-center gap-2 flex-wrap",
-	)
+	const toggleLabelClasses = classNames(styles.toggle__toggleLabel, "flex flex-y-center gap-2 flex-wrap")
 
 	return (
 		<div className={toggleClasses}>
@@ -47,11 +35,7 @@ const Toggle: FC<ToggleProps> = ({
 					id={toggleId}
 				/>
 				<span className={styles.toggle__toggleMark} />
-				<Text
-					type={isSmall ? "tiny" : "small"}
-					fontWeight="medium"
-					emphasis={isDisabled ? "tertiary" : "primary"}
-				>
+				<Text type={isSmall ? "tiny" : "small"} fontWeight="medium" emphasis={isDisabled ? "tertiary" : "primary"}>
 					{label}
 				</Text>
 			</label>

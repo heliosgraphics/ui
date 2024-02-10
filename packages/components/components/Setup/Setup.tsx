@@ -46,16 +46,8 @@ const Setup: FC<SetupProps> = () => {
 	return (
 		<>
 			<link rel="preconnect" href="https://rsms.me/" crossOrigin="anonymous" />
-			<link
-				rel="preconnect"
-				href="https://fonts.googleapis.com"
-				crossOrigin="anonymous"
-			/>
-			<link
-				rel="preconnect"
-				href="https://fonts.gstatic.com"
-				crossOrigin="anonymous"
-			/>
+			<link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 			<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 			<link
 				href="https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400;1,9..40,700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"

@@ -13,14 +13,7 @@ import type { DialogProps } from "./Dialog.types"
 const ATTRIBUTE_SCROLL = "data-scroll" as const
 const POSITION_FIXED_CLASS = "fixed" as const
 
-const Dialog: FC<DialogProps> = ({
-	title,
-	children,
-	onClick,
-	isOpen,
-	isCentered,
-	onClose,
-}) => {
+const Dialog: FC<DialogProps> = ({ title, children, onClick, isOpen, isCentered, onClose }) => {
 	const dialogRef = useRef<HTMLDialogElement | null>(null)
 
 	const resetScroll = () => {
@@ -68,8 +61,7 @@ const Dialog: FC<DialogProps> = ({
 			// Show modal
 			dialogRef?.current?.showModal?.()
 		} else if (!dialogRef?.current) {
-			const localPos: string =
-				document?.body?.getAttribute(ATTRIBUTE_SCROLL) ?? "0"
+			const localPos: string = document?.body?.getAttribute(ATTRIBUTE_SCROLL) ?? "0"
 			const scrollPosition: number = parseInt(localPos) ?? 0
 
 			document.body.classList.remove(POSITION_FIXED_CLASS)
@@ -95,11 +87,7 @@ const Dialog: FC<DialogProps> = ({
 	})
 
 	return (
-		<animated.dialog
-			ref={dialogRef}
-			className={dialogClasses}
-			onClick={onDialogClose}
-		>
+		<animated.dialog ref={dialogRef} className={dialogClasses} onClick={onDialogClose}>
 			<Flex
 				isBetween={true}
 				isYCentered={true}
@@ -114,26 +102,14 @@ const Dialog: FC<DialogProps> = ({
 				) : onClick ? (
 					<ButtonGroup>
 						<a onClick={onClick}>
-							<Button
-								icon="link"
-								intent="silent"
-								value="Permalink"
-								size="small"
-							/>
+							<Button icon="link" intent="silent" value="Permalink" size="small" />
 						</a>
 					</ButtonGroup>
 				) : (
 					<div />
 				)}
 				<ButtonGroup>
-					<Button
-						icon="x"
-						intent="silent"
-						value=""
-						onClick={onClose}
-						size="small"
-						isIconOnly={true}
-					/>
+					<Button icon="x" intent="silent" value="" onClick={onClose} size="small" isIconOnly={true} />
 				</ButtonGroup>
 			</Flex>
 			{isOpen && <div className={`${styles.dialog__content}`}>{children}</div>}

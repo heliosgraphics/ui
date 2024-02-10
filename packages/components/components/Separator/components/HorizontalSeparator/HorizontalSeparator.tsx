@@ -5,14 +5,10 @@ import type { FC } from "react"
 import type { SeparatorProps } from "../../../Separator/Separator.types"
 
 const HorizontalSeparator: FC<SeparatorProps> = ({ isLight, className }) => {
-	const hrClassNames: string = classNames(
-		styles.horizontalSeparator,
-		className,
-		{
-			[styles.horizontalSeparatorRegular]: !isLight,
-			[styles.horizontalSeparatorLight]: isLight,
-		},
-	)
+	const hrClassNames: string = classNames(styles.horizontalSeparator, className, {
+		[styles.horizontalSeparatorRegular]: !isLight,
+		[styles.horizontalSeparatorLight]: isLight,
+	})
 
 	return <HRMarkup className={hrClassNames} />
 }

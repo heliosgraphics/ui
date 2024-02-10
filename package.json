@@ -1,5 +1,5 @@
 {
-	"name": "thebe",
+	"name": "ui",
 	"version": "0.0.0",
 	"author": "03b8 <03b8@helios.graphics>",
 	"private": false,
@@ -25,13 +25,17 @@
 		"packages/*"
 	],
 	"devDependencies": {
+		"@babel/eslint-parser": "latest",
 		"@testing-library/react": "latest",
 		"@types/node": "latest",
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@vitejs/plugin-react": "latest",
 		"@vitest/coverage-v8": "latest",
+		"babel-eslint": "latest",
 		"concurrently": "latest",
+		"eslint-config-next": "latest",
 		"eslint-config-prettier": "latest",
+		"eslint-plugin-jsx-a11y": "latest",
 		"eslint-plugin-prettier": "latest",
 		"eslint": "latest",
 		"jsdom": "latest",

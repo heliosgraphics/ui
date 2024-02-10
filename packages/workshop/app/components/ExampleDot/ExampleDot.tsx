@@ -1,14 +1,6 @@
 "use client"
 
-import {
-	Flex,
-	Dot,
-	Select,
-	Text,
-	SCALE,
-	COLORS,
-	HeliosColors,
-} from "@heliosgraphics/ui"
+import { Flex, Dot, Select, Text, SCALE, COLORS, HeliosColors } from "@heliosgraphics/ui"
 import { useState, useContext, type FC } from "react"
 import { ColorContext } from "../../contexts/ColorContext"
 import type { ExampleDotProps } from "./ExampleDot.types"
@@ -25,11 +17,7 @@ const ExampleDot: FC<ExampleDotProps> = () => {
 
 	return (
 		<Flex gap={16} isWrapping={true}>
-			<Select
-				items={items}
-				onChange={onColorChange}
-				selectedValue={colorAccent}
-			/>
+			<Select items={items} onChange={onColorChange} selectedValue={colorAccent} />
 			<Flex gap={4} isWrapping={true}>
 				{SCALE.map((scale, key) => {
 					return (

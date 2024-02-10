@@ -4,14 +4,7 @@ import Flex from "../Flex/Flex"
 import classNames from "@sindresorhus/class-names"
 import type { PillProps } from "./Pill.types"
 
-const Pill: FC<PillProps> = ({
-	color = "gray",
-	isMono,
-	label,
-	isSmall,
-	isRounded,
-	isDark = false,
-}) => {
+const Pill: FC<PillProps> = ({ color = "gray", isMono, label, isSmall, isRounded, isDark = false }) => {
 	const pillClass = classNames("unselectable break-word", {
 		// Roundness
 		[`radius-max`]: isRounded,

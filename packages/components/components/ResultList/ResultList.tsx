@@ -12,17 +12,12 @@ const ResultList: FC<ResultListProps> = ({ items }) => {
 	return (
 		<ol className={styles.resultList + " shadow-2"}>
 			{items?.map((item, key) => {
-				if (item.type === "separator")
-					return <li key={key} className={styles.resultList__separator} />
+				if (item.type === "separator") return <li key={key} className={styles.resultList__separator} />
 
-				const itemClasses: string = classNames(
-					"flex flex-y-center gap-5",
-					styles.item,
-					{
-						[styles.itemActive]: item.isActive,
-						[styles.itemDisabled]: item.isDisabled,
-					},
-				)
+				const itemClasses: string = classNames("flex flex-y-center gap-5", styles.item, {
+					[styles.itemActive]: item.isActive,
+					[styles.itemDisabled]: item.isDisabled,
+				})
 
 				return (
 					<li key={key} onClick={item.onClick} className={itemClasses}>
@@ -32,12 +27,7 @@ const ResultList: FC<ResultListProps> = ({ items }) => {
 							</Flex>
 						)}
 						<Flex isColumn={true} gap={1}>
-							<Text
-								type="small"
-								fontWeight="medium"
-								color="dark-gray"
-								lineClamp={1}
-							>
+							<Text type="small" fontWeight="medium" color="dark-gray" lineClamp={1}>
 								{item.name}
 							</Text>
 							{!!item.description && (

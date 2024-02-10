@@ -15,21 +15,8 @@ const Loading: FC<LoadingProps> = ({ className, size }) => {
 	})
 
 	return (
-		<svg
-			className={loadingClasses}
-			xmlns="http://www.w3.org/2000/svg"
-			height={size + 4}
-			width={size + 4}
-		>
-			<circle
-				fill="none"
-				strokeWidth={4}
-				stroke="currentcolor"
-				cx={cSize}
-				cy={cSize}
-				r={rSize}
-				style={{ opacity: 0.25 }}
-			/>
+		<svg className={loadingClasses} xmlns="http://www.w3.org/2000/svg" height={size + 4} width={size + 4}>
+			<circle fill="none" strokeWidth={4} stroke="currentcolor" cx={cSize} cy={cSize} r={rSize} style={{ opacity: 0.25 }} />
 			<circle
 				fill="none"
 				strokeWidth={4}

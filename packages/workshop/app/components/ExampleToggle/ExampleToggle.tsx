@@ -17,32 +17,11 @@ const ExampleToggle: FC<ExampleToggleProps> = () => {
 
 	return (
 		<Flex isColumn={true} gap={6}>
-			<Toggle
-				isChecked={isChecked}
-				intent={intent}
-				label="Fully Autonomous"
-				onChange={onToggle}
-			/>
-			<Toggle
-				isChecked={isChecked2}
-				intent={intent}
-				label="Geospatial View"
-				onChange={onToggle2}
-			/>
-			<Toggle
-				isChecked={false}
-				isDisabled={true}
-				intent={intent}
-				label="Suicide Burn"
-			/>
+			<Toggle isChecked={isChecked} intent={intent} label="Fully Autonomous" onChange={onToggle} />
+			<Toggle isChecked={isChecked2} intent={intent} label="Geospatial View" onChange={onToggle2} />
+			<Toggle isChecked={false} isDisabled={true} intent={intent} label="Suicide Burn" />
 			<Separator />
-			<Toggle
-				isChecked={isChecked3}
-				intent={intent}
-				isSmall={true}
-				label="Life Support"
-				onChange={onToggle3}
-			/>
+			<Toggle isChecked={isChecked3} intent={intent} isSmall={true} label="Life Support" onChange={onToggle3} />
 		</Flex>
 	)
 }

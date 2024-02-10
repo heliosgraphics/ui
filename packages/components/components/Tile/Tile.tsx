@@ -25,14 +25,7 @@ const getTileColor = (color): { iconColor: string; tileColor: string } => {
 	return { iconColor, tileColor }
 }
 
-const Tile: FC<TileProps> = ({
-	size,
-	hex,
-	icon,
-	color,
-	isRounded,
-	isRound,
-}) => {
+const Tile: FC<TileProps> = ({ size, hex, icon, color, isRounded, isRound }) => {
 	const { iconColor, tileColor } = getTileColor(color)
 
 	const tileClasses = classNames(styles.tile, {

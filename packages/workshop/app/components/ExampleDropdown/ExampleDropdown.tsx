@@ -1,12 +1,6 @@
 "use client"
 
-import {
-	Button,
-	ButtonGroup,
-	Dropdown,
-	Flex,
-	type ResultItem,
-} from "@heliosgraphics/ui"
+import { Button, ButtonGroup, Dropdown, Flex, type ResultItem } from "@heliosgraphics/ui"
 import { useState, type FC } from "react"
 import type { ExampleDropdownProps } from "./ExampleDropdown.types"
 
@@ -20,8 +14,7 @@ const ExampleDropdown: FC<ExampleDropdownProps> = () => {
 		{
 			name: "Second Item",
 			icon: "bell",
-			description:
-				"Nulla ultricies ultrices mauris, sed posuere justo ultrices in.",
+			description: "Nulla ultricies ultrices mauris, sed posuere justo ultrices in.",
 		},
 		{ name: "Separator", type: "separator" },
 		{ name: "Disabled", isDisabled: hasSpecials },
@@ -36,12 +29,7 @@ const ExampleDropdown: FC<ExampleDropdownProps> = () => {
 				<Dropdown items={resultListItems} position="left">
 					<Button value="Left" intent="silent" icon="chevron-down" />
 				</Dropdown>
-				<Button
-					value="Specials"
-					intent="silent"
-					icon="bullseye"
-					onClick={onToggleSpecials}
-				/>
+				<Button value="Specials" intent="silent" icon="bullseye" onClick={onToggleSpecials} />
 			</ButtonGroup>
 			<Dropdown items={resultListItems} position="right">
 				<ButtonGroup>

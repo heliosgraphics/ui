@@ -33,5 +33,4 @@ export const getIsValid = (date?: string | null): boolean => {
 	return isValid
 }
 
-export const getFromNow = (date?: string | null): string =>
-	dayjs(date).fromNow()
+export const getFromNow = (date?: string | null): string => dayjs(date).fromNow()

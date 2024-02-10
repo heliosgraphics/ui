@@ -27,9 +27,7 @@ export const _getFontWeight = (fw: TextProps["fontWeight"]): string => {
 	}
 }
 
-export const getTypographyUtility = (
-	props: TextProps | HeadingProps,
-): string => {
+export const getTypographyUtility = (props: TextProps | HeadingProps): string => {
 	const typoClasses: Array<string> = []
 
 	const fontFamily = props.fontFamily ? props.fontFamily : "sans"

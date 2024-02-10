@@ -18,24 +18,11 @@ const Donut: FC<DonutProps> = ({ children, size, percentage = 0, color }) => {
 	}
 
 	return (
-		<Flex
-			style={donutContainerStyle}
-			className={`${styles.donut} relative`}
-			isCentered={true}
-		>
-			<Flex
-				className="absolute top-0 left-0 z-10"
-				style={donutContainerStyle}
-				isCentered={true}
-			>
+		<Flex style={donutContainerStyle} className={`${styles.donut} relative`} isCentered={true}>
+			<Flex className="absolute top-0 left-0 z-10" style={donutContainerStyle} isCentered={true}>
 				{children}
 			</Flex>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				viewBox={`0 0 ${size} ${size}`}
-				height={size}
-				width={size}
-			>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${size} ${size}`} height={size} width={size}>
 				<circle
 					fill="none"
 					strokeWidth={borderSize}

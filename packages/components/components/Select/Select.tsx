@@ -5,15 +5,7 @@ import styles from "./Select.module.css"
 import classNames from "@sindresorhus/class-names"
 import type { SelectProps } from "./Select.types"
 
-const Select: FC<SelectProps> = ({
-	selectedValue,
-	onChange,
-	isLabelHidden,
-	isDisabled,
-	items,
-	id,
-	label,
-}) => {
+const Select: FC<SelectProps> = ({ selectedValue, onChange, isLabelHidden, isDisabled, items, id, label }) => {
 	const htmlFor: string = id || useId()
 	const selectClasses: string = classNames(styles.select, {
 		[styles.selectDisabled]: isDisabled,
@@ -27,12 +19,7 @@ const Select: FC<SelectProps> = ({
 				</label>
 			)}
 			<Flex>
-				<select
-					className={styles.select__select}
-					onChange={onChange}
-					id={htmlFor}
-					value={selectedValue}
-				>
+				<select className={styles.select__select} onChange={onChange} id={htmlFor} value={selectedValue}>
 					{items?.map((item, key) => {
 						return (
 							<option key={key} value={item.value} disabled={item.isDisabled}>

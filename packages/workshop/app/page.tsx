@@ -1,13 +1,6 @@
 "use client"
 
-import {
-	Details,
-	Flex,
-	Heading,
-	Icon,
-	Text,
-	ThemeSwitcherLoading,
-} from "@heliosgraphics/ui"
+import { Details, Flex, Heading, Icon, Text, ThemeSwitcherLoading } from "@heliosgraphics/ui"
 import { IntentProvider } from "./contexts/IntentContext"
 import { ColorProvider } from "./contexts/ColorContext"
 import DebugSelector from "./components/DebugSelector"
@@ -51,24 +44,16 @@ import ExampleTabs from "./components/ExampleTabs"
 import ExampleTile from "./components/ExampleTile"
 import ExampleTimestamp from "./components/ExampleTimestamp"
 
-const ThemeSwitcher = dynamic(
-	() => import("@heliosgraphics/ui/components/ThemeSwitcher"),
-	{
-		ssr: false,
-		loading: () => <ThemeSwitcherLoading />,
-	},
-)
+const ThemeSwitcher = dynamic(() => import("@heliosgraphics/ui/components/ThemeSwitcher"), {
+	ssr: false,
+	loading: () => <ThemeSwitcherLoading />,
+})
 
 export default function Home() {
 	return (
 		<IntentProvider>
 			<ColorProvider>
-				<Flex
-					isColumn={true}
-					gap={8}
-					padding={8}
-					className="sticky top-0 glass-1 z-10"
-				>
+				<Flex isColumn={true} gap={8} padding={8} className="sticky top-0 glass-1 z-10">
 					<Flex isColumn={true}>
 						<Heading level={1} className="flex flex-y-center gap-4">
 							<a href="https://ui.helios.graphics">

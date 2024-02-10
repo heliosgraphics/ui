@@ -3,13 +3,7 @@ import classNames from "@sindresorhus/class-names"
 import styles from "./Shimmer.module.css"
 import type { FC } from "react"
 
-const Shimmer: FC<ShimmerProps> = ({
-	isRounded,
-	paddingTop,
-	paddingBottom,
-	height,
-	width,
-}) => {
+const Shimmer: FC<ShimmerProps> = ({ isRounded, paddingTop, paddingBottom, height, width }) => {
 	const shimmerDivClasses: string = classNames({
 		["radius-max"]: isRounded,
 		["radius-3"]: !isRounded,

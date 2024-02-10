@@ -4,11 +4,7 @@
 const nextConfig = {
 	productionBrowserSourceMaps: false,
 	reactStrictMode: false,
-	transpilePackages: [
-		"@heliosgraphics/ui",
-		"@heliosgraphics/icons",
-		"@heliosgraphics/utils",
-	],
+	transpilePackages: ["@heliosgraphics/ui", "@heliosgraphics/icons", "@heliosgraphics/utils"],
 	webpack: (config, _options) => {
 		config.module.rules.push({
 			test: /\.svg$/,

@@ -10,14 +10,10 @@ import type { TextareaProps } from "./Textarea.types"
 const Textarea: FC<TextareaProps> = (props) => {
 	const [isActive, setActive] = useState(false)
 	const textareaRef = useRef<HTMLTextAreaElement | null>(null)
-	const { autoComplete, helperText, isDisabled, isLabelHidden, ...goodProps } =
-		props
+	const { autoComplete, helperText, isDisabled, isLabelHidden, ...goodProps } = props
 
 	const htmlFor: string = props.id || useId()
-	const inputClasses: string = classNames(
-		styles.textarea,
-		"flex flex-column gap-2",
-	)
+	const inputClasses: string = classNames(styles.textarea, "flex flex-column gap-2")
 
 	const onInput = () => {
 		if (textareaRef?.current) {

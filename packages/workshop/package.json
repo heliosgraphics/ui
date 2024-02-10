@@ -2,7 +2,7 @@
 	"name": "workshop",
 	"version": "0.0.0",
 	"private": false,
-	"description": "Thebe Components Workshop",
+	"description": "Helios Components Workshop",
 	"author": "03b8 <03b8@helios.graphics>",
 	"scripts": {
 		"dev": "next dev -p 1024",
@@ -10,18 +10,14 @@
 		"start": "next start"
 	},
 	"dependencies": {
-		"@heliosgraphics/ui": "workspace:*",
 		"@heliosgraphics/fractures": "latest",
 		"@heliosgraphics/icons": "latest",
+		"@heliosgraphics/ui": "workspace:*",
 		"@heliosgraphics/utils": "5.2.0",
 		"@svgr/webpack": "latest",
-		"babel-eslint": "latest",
 		"next": "latest",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "latest",
+		"react": "latest"
 	},
-	"devDependencies": {
-		"@babel/eslint-parser": "latest",
-		"typescript": "latest"
-	}
+	"devDependencies": {}
 }

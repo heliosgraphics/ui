@@ -16,29 +16,10 @@ const ExampleRadio: FC<ExampleRadioProps> = () => {
 	return (
 		<Flex isColumn={true} gap={6}>
 			<Text type="small">{radio}</Text>
-			<Radio
-				label="Radio 01"
-				intent={intent}
-				onChange={onRadioFirst}
-				value="radio-01"
-				state={radio}
-			/>
-			<Radio
-				label="Radio 02"
-				intent={intent}
-				onChange={onRadioSecond}
-				value="radio-02"
-				state={radio}
-			/>
+			<Radio label="Radio 01" intent={intent} onChange={onRadioFirst} value="radio-01" state={radio} />
+			<Radio label="Radio 02" intent={intent} onChange={onRadioSecond} value="radio-02" state={radio} />
 			<Separator />
-			<Radio
-				label="Radio 03"
-				intent={intent}
-				onChange={onRadioThird}
-				value="radio-03"
-				isSmall={true}
-				state={radio}
-			/>
+			<Radio label="Radio 03" intent={intent} onChange={onRadioThird} value="radio-03" isSmall={true} state={radio} />
 		</Flex>
 	)
 }

@@ -27,22 +27,22 @@
 		"dayjs": "^1.11.10",
 		"highlight.js": "^11.9.0",
 		"markdown-it": "^14.0.0",
-		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"react-plock": "^3.0.2"
+		"react-plock": "^3.0.2",
+		"react": "^18.2.0"
 	},
 	"devDependencies": {
 		"@types/node": "latest",
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@vitejs/plugin-react": "latest",
 		"@vitest/coverage-v8": "latest",
-		"eslint": "latest",
 		"eslint-config-prettier": "latest",
 		"eslint-plugin-prettier": "latest",
+		"eslint": "latest",
 		"jsdom": "latest",
 		"prettier": "latest",
-		"react": "latest",
 		"react-dom": "latest",
+		"react": "latest",
 		"typescript": "latest",
 		"vite": "latest",
 		"vitest": "latest"

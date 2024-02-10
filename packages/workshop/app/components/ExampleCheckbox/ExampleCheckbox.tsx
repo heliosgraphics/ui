@@ -17,32 +17,11 @@ const ExampleCheckbox: FC<ExampleCheckboxProps> = () => {
 
 	return (
 		<Flex isColumn={true} gap={6}>
-			<Checkbox
-				isChecked={isChecked}
-				intent={intent}
-				label="Fully Autonomous"
-				onChange={onToggle}
-			/>
-			<Checkbox
-				isChecked={isChecked2}
-				intent={intent}
-				label="Geospatial View"
-				onChange={onToggle2}
-			/>
-			<Checkbox
-				isChecked={false}
-				isDisabled={true}
-				intent={intent}
-				label="Suicide Burn"
-			/>
+			<Checkbox isChecked={isChecked} intent={intent} label="Fully Autonomous" onChange={onToggle} />
+			<Checkbox isChecked={isChecked2} intent={intent} label="Geospatial View" onChange={onToggle2} />
+			<Checkbox isChecked={false} isDisabled={true} intent={intent} label="Suicide Burn" />
 			<Separator />
-			<Checkbox
-				isChecked={isChecked3}
-				intent={intent}
-				isSmall={true}
-				label="Life Support"
-				onChange={onToggle3}
-			/>
+			<Checkbox isChecked={isChecked3} intent={intent} isSmall={true} label="Life Support" onChange={onToggle3} />
 		</Flex>
 	)
 }

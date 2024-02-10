@@ -4,12 +4,7 @@ import Flex from "../Flex"
 import styles from "./ButtonGroup.module.css"
 import type { FC } from "react"
 
-const ButtonGroup: FC<ButtonGroupProps> = ({
-	className,
-	children,
-	isVertical,
-	align = "left",
-}) => {
+const ButtonGroup: FC<ButtonGroupProps> = ({ className, children, isVertical, align = "left" }) => {
 	const buttonGroupClasses: string = classNames(className, {
 		[styles.buttonGroupLeft]: align === "left",
 		[styles.buttonGroupCenter]: align === "center",
@@ -20,13 +15,7 @@ const ButtonGroup: FC<ButtonGroupProps> = ({
 	})
 
 	return (
-		<Flex
-			className={buttonGroupClasses}
-			gap={4}
-			isYCentered={true}
-			data-component="ButtonGroup"
-			isWrapping={true}
-		>
+		<Flex className={buttonGroupClasses} gap={4} isYCentered={true} data-component="ButtonGroup" isWrapping={true}>
 			{children}
 		</Flex>
 	)

@@ -73,13 +73,7 @@ const Button: FC<ButtonProps> = ({
 	const isButton: boolean = type !== "file"
 
 	return (
-		<Flex
-			className={buttonClasses}
-			isInline={true}
-			isCentered={true}
-			onClick={onClick}
-			data-component="Button"
-		>
+		<Flex className={buttonClasses} isInline={true} isCentered={true} onClick={onClick} data-component="Button">
 			{!!icon && !isIconOnlyLoading && (
 				<Flex className={buttonIconClasses}>
 					<Icon name={icon} size={BUTTON_ICON_SIZE[size || "normal"]} />
@@ -102,9 +96,7 @@ const Button: FC<ButtonProps> = ({
 				onChange={onChange}
 				defaultValue={isIconOnly ? "" : value}
 			/>
-			{isLoading && (
-				<Loading size={buttonLoadingSize} className={styles.button__loading} />
-			)}
+			{isLoading && <Loading size={buttonLoadingSize} className={styles.button__loading} />}
 		</Flex>
 	)
 }

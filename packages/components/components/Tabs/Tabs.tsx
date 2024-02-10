@@ -17,9 +17,7 @@ const Tabs: FC<TabsProps> = ({ active: activeNumber, items, sections }) => {
 					<li
 						key={key}
 						onClick={() => setActive(key)}
-						className={`${styles.tabs__ol__item} ${
-							active === key ? styles.tabs__ol__itemActive : ""
-						}`}
+						className={`${styles.tabs__ol__item} ${active === key ? styles.tabs__ol__itemActive : ""}`}
 					>
 						<Text type="small" fontWeight="medium">
 							{tab}

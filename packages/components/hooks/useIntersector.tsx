@@ -8,9 +8,7 @@ export const useIntersector = (ref: any): boolean => {
 	useEffect(() => {
 		if (!ref?.current) return
 
-		const observer = new IntersectionObserver(([entry]) =>
-			setIntersecting(entry.isIntersecting),
-		)
+		const observer = new IntersectionObserver(([entry]) => setIntersecting(entry.isIntersecting))
 
 		observer.observe(ref.current)
 

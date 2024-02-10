@@ -10,13 +10,7 @@ const ExampleSelect: FC<ExampleSelectProps> = () => {
 
 	const selectItems = []
 
-	return (
-		<Select
-			items={selectItems}
-			onChange={onSelectItem}
-			selectedValue={selectedItem}
-		/>
-	)
+	return <Select items={selectItems} onChange={onSelectItem} selectedValue={selectedItem} />
 }
 
 export default ExampleSelect
