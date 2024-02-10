@@ -1,5 +1,7 @@
+import type { HeliosColors } from "packages/components/types/colors"
+
 export interface PillProps {
-	color: string
+	color: HeliosColors
 	isDark?: boolean
 	isSmall?: boolean
 	isMono?: boolean

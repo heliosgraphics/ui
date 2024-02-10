@@ -4,7 +4,16 @@ import Flex from "../Flex/Flex"
 import classNames from "@sindresorhus/class-names"
 import type { PillProps } from "./Pill.types"
 
+// color: HeliosColors
+// 	isDark?: boolean
+// 	isSmall?: boolean
+// 	isMono?: boolean
+// 	isRounded?: boolean
+// 	label: string
+
 const Pill: FC<PillProps> = ({ color = "gray", isMono, label, isSmall, isRounded, isDark = false }) => {
+	const pillColor: string = `hsla(var(--${color}-hue), var(--${color}-saturation), 50%, 0.5)`
+
 	const pillClass = classNames("unselectable break-word", {
 		// Roundness
 		[`radius-max`]: isRounded,
@@ -22,7 +31,7 @@ const Pill: FC<PillProps> = ({ color = "gray", isMono, label, isSmall, isRounded
 	const pillTextSize = isSmall ? "tiny" : "small"
 
 	return (
-		<Flex className={pillClass} isCentered={true}>
+		<Flex className={pillClass} isCentered={true} style={{ backgroundColor: pillColor }}>
 			<Text
 				color="currentcolor"
 				type={pillTextSize}
