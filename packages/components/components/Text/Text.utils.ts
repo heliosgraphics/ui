@@ -39,7 +39,7 @@ export const getTypographyUtility = (props: TextProps | HeadingProps): string =>
 	if (props.className) typoClasses.push(props.className)
 	if (props.fontStyle) typoClasses.push(props.fontStyle)
 	if (props.isEllipsis) typoClasses.push("ellipsis")
-	if (props.isUnselectable) typoClasses.push("unselectable")
+	if (props.isNonSelectable) typoClasses.push("non-selectable")
 	if (props.textAlign) typoClasses.push(props.textAlign)
 	if (props.textDecoration) typoClasses.push(props.textDecoration)
 	if (props.whiteSpace) typoClasses.push(props.whiteSpace)

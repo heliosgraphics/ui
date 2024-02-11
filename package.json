@@ -16,14 +16,10 @@
 		"start:workshop": "concurrently --names \"⬜workshop,🔴types\" \"pnpm run dev:workshop\" \"pnpm run ts:watch\"",
 		"prettier:write": "prettier --no-semi --use-tabs --write ./packages/**"
 	},
-	"dependencies": {
-		"@heliosgraphics/fractures": "5.2.2",
-		"@heliosgraphics/icons": "0.0.8",
-		"@heliosgraphics/utils": "5.2.0"
-	},
 	"workspaces": [
 		"packages/*"
 	],
+	"dependencies": {},
 	"devDependencies": {
 		"@babel/eslint-parser": "latest",
 		"@testing-library/react": "latest",

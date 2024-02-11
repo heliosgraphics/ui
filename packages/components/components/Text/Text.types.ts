@@ -14,7 +14,7 @@ export interface TextProps extends BaseTextProps {
 	fontStyle?: "italic" | "normal" | "oblique"
 	fontWeight?: "thin" | "extra-light" | "light" | "normal" | "medium" | "semibold" | "bold" | "extra-bold" | "black"
 	isEllipsis?: boolean
-	isUnselectable?: boolean
+	isNonSelectable?: boolean
 	lineClamp?: number
 	type: "tiny" | "small" | "paragraph" | "div"
 	textAlign?: "left" | "right" | "center" | "justify"

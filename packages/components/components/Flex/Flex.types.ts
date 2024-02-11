@@ -5,7 +5,7 @@ import type { RefObject } from "react"
 export interface FlexProps extends HTMLAttributes<{}> {
 	children: ReactNode
 	align?: "center" | "left" | "right"
-	className?: string // todo: deprecate passing classNames around
+	className?: string
 	draggable?: boolean
 	gap?: HeliosScale
 	isAround?: boolean
