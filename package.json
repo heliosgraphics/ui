@@ -5,7 +5,7 @@
 	"private": false,
 	"type": "module",
 	"scripts": {
-		"pub:ui": "pnpm publish --access public --filter ui",
+		"pub:ui": "pnpm publish --access public --filter @heliosgraphics/ui",
 		"test": "NODE_ENV=test vitest run",
 		"test:update": "NODE_ENV=test vitest run --update",
 		"test:watch": "NODE_ENV=test vitest",
