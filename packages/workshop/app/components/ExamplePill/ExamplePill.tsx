@@ -31,7 +31,15 @@ const ExamplePill: FC<ExamplePillProps> = () => {
 				<Pill color={color} label="Pill" isDark={true} isRounded={isRounded} icon={icon} />
 				<Pill color={color} label="Small" isSmall={true} isDark={true} isRounded={isRounded} icon={icon} />
 				<Pill color={color} label="Mono" isMono={true} isDark={true} isRounded={isRounded} icon={icon} />
-				<Pill color={color} label="Mono Small" isSmall={true} isMono={true} isDark={true} isRounded={isRounded} icon={icon} />
+				<Pill
+					color={color}
+					label="Mono Small"
+					isSmall={true}
+					isMono={true}
+					isDark={true}
+					isRounded={isRounded}
+					icon={icon}
+				/>
 			</Flex>
 		</Flex>
 	)

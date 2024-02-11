@@ -37,7 +37,8 @@ export const cleanMarkdown = (md: string, options?) => {
 
 	try {
 		if (options.stripListLeaders) {
-			if (options.listUnicodeChar) output = output.replace(/^([\s\t]*)([\*\-\+]|\d+\.)\s+/gm, options.listUnicodeChar + " $1")
+			if (options.listUnicodeChar)
+				output = output.replace(/^([\s\t]*)([\*\-\+]|\d+\.)\s+/gm, options.listUnicodeChar + " $1")
 			else output = output.replace(/^([\s\t]*)([\*\-\+]|\d+\.)\s+/gm, "$1")
 		}
 

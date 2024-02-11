@@ -48,7 +48,13 @@ const ExampleHeading: FC<ExampleHeadingProps> = () => {
 	return (
 		<Flex isColumn={true} gap={8}>
 			<Flex gap={4}>
-				<Select label="Type" items={EMPHASIS_LIST} selectedValue={emphasis} onChange={onEmphasisChange} isLabelHidden={true} />
+				<Select
+					label="Type"
+					items={EMPHASIS_LIST}
+					selectedValue={emphasis}
+					onChange={onEmphasisChange}
+					isLabelHidden={true}
+				/>
 				<Select
 					label="Type"
 					items={FONT_FAMILIES}

@@ -28,8 +28,8 @@ const ExampleAlert: FC<ExampleAlertProps> = () => {
 				{INTENT_DESCRIPTIONS[intent]}
 			</Alert>
 			<Alert title="Vitae, assumenda aliquid" intent={intent} icon="info" onClose={onClose}>
-				Cupiditate <a>aspernatur autem</a> tempore magnam vitae, assumenda aliquid ab illo necessitatibus velit temporibus
-				corrupti quidem. Incidunt facilis aspernatur corrupti doloremque?
+				Cupiditate <a>aspernatur autem</a> tempore magnam vitae, assumenda aliquid ab illo necessitatibus velit
+				temporibus corrupti quidem. Incidunt facilis aspernatur corrupti doloremque?
 			</Alert>
 		</Flex>
 	)

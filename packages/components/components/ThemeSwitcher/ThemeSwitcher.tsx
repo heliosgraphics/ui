@@ -17,7 +17,9 @@ const ThemeSwitcher: FC<ThemeSwitcherProps> = () => {
 		global.window.__onThemeChange = setTheme
 	}, [])
 
-	return <Toggle label="Dark Theme" isSmall={true} onChange={toggleTheme} isChecked={theme === "dark"} intent="advise" />
+	return (
+		<Toggle label="Dark Theme" isSmall={true} onChange={toggleTheme} isChecked={theme === "dark"} intent="advise" />
+	)
 }
 
 export default ThemeSwitcher
