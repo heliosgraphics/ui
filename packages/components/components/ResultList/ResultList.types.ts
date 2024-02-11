@@ -1,4 +1,4 @@
-import type { HeliosIconType } from "@heliosgraphics/icons/meta"
+import type { HeliosIconType } from "../.."
 
 export interface ResultItem {
 	description?: string

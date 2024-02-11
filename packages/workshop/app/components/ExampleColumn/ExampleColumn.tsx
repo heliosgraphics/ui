@@ -1,7 +1,7 @@
 "use client"
 
-import { Flex, Column, Text } from "@heliosgraphics/ui"
-import { useContext, type FC } from "react"
+import { Column, Text } from "@heliosgraphics/ui"
+import { type FC } from "react"
 import type { ExampleColumnProps } from "./ExampleColumn.types"
 
 const ExampleColumn: FC<ExampleColumnProps> = () => {

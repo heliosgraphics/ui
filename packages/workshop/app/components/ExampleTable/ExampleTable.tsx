@@ -1,7 +1,7 @@
 "use client"
 
 import type { FC } from "react"
-import { Table, Text } from "@heliosgraphics/ui"
+// import { Table, Text } from "@heliosgraphics/ui"
 import type { ExampleTableProps } from "./ExampleTable.types"
 
 const ExampleTable: FC<ExampleTableProps> = () => {

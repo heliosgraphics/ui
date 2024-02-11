@@ -69,22 +69,22 @@ const ExampleHeading: FC<ExampleHeadingProps> = () => {
 				Qi 1234567890
 			</Heading>
 			<Heading emphasis={emphasis} fontFamily={fontFamily} level={1} fontWeight={fontWeight}>
-				In the "quaint" village of <a rel="author">Quixley</a>.
+				In the &ldquot;quaint&rdquot; village of <a rel="author">Quixley</a>.
 			</Heading>
 			<Heading emphasis={emphasis} fontFamily={fontFamily} level={2} fontWeight={fontWeight}>
-				In the "quaint" village of <a rel="author">Quixley</a>.
+				In the &ldquot;quaint&rdquot; village of <a rel="author">Quixley</a>.
 			</Heading>
 			<Heading emphasis={emphasis} fontFamily={fontFamily} level={3} fontWeight={fontWeight}>
-				In the "quaint" village of <a rel="author">Quixley</a>.
+				In the &ldquot;quaint&rdquot; village of <a rel="author">Quixley</a>.
 			</Heading>
 			<Heading emphasis={emphasis} fontFamily={fontFamily} level={4} fontWeight={fontWeight}>
-				In the "quaint" village of <a rel="author">Quixley</a>.
+				In the &ldquot;quaint&rdquot; village of <a rel="author">Quixley</a>.
 			</Heading>
 			<Heading emphasis={emphasis} fontFamily={fontFamily} level={5} fontWeight={fontWeight}>
-				In the "quaint" village of <a rel="author">Quixley</a>.
+				In the &ldquot;quaint&rdquot; village of <a rel="author">Quixley</a>.
 			</Heading>
 			<Heading emphasis={emphasis} fontFamily={fontFamily} level={6} fontWeight={fontWeight}>
-				In the "quaint" village of <a rel="author">Quixley</a>.
+				In the &ldquot;quaint&rdquot; village of <a rel="author">Quixley</a>.
 			</Heading>
 		</Flex>
 	)

@@ -52,10 +52,10 @@ const ExampleDialog: FC<ExampleDialogProps> = () => {
 								peppered with palindromes and paradoxes, designed to dazzle and disorient, leading one down rabbit holes of
 								reflection. In her quest, she uncovered consonant clusters so rare, their utterance conjured images of mythical
 								creatures cavorting in moonlit meadows. This manuscript, a mosaic of metaphors and metonymies, sought not just
-								to tell stories, but to weave worlds, where the boundary between word and wonder was as thin as a dragonfly's
-								wing. Amid the rustle of leaves and the whisper of the wind, Penelope’s narrative unfurled, a tapestry of text
-								that promised to transport its reader beyond the bounds of their imagination, into realms where the impossible
-								and the inevitable danced in eternal embrace.
+								to tell stories, but to weave worlds, where the boundary between word and wonder was as thin as a
+								dragonfly&apos;s wing. Amid the rustle of leaves and the whisper of the wind, Penelope’s narrative unfurled, a
+								tapestry of text that promised to transport its reader beyond the bounds of their imagination, into realms where
+								the impossible and the inevitable danced in eternal embrace.
 							</Text>
 							<Text type="small" emphasis="secondary">
 								Thus, in the quietude of his study, surrounded by mountains of musty tomes and flickering candlelight, he

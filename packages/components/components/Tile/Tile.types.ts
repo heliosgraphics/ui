@@ -1,4 +1,4 @@
-import type { HeliosIconType } from "@heliosgraphics/icons/meta"
+import type { HeliosIconType } from "../.."
 import type { HeliosColors } from "../../types/colors"
 
 export interface TileProps {

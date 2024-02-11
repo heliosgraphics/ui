@@ -1,6 +1,6 @@
 "use client"
 
-import { Flex, Input, Select, type SelectItem } from "@heliosgraphics/ui"
+import { Flex, Select, type SelectItem } from "@heliosgraphics/ui"
 import { useState, type FC } from "react"
 import type { ExampleSelectProps } from "./ExampleSelect.types"
 

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, type FC } from "react"
-import { Flex, Select, Toggle, Separator, Text, type TextProps } from "@heliosgraphics/ui"
+import { Flex, Select, Separator, Text, type TextProps } from "@heliosgraphics/ui"
 import type { ExampleTextProps } from "./ExampleText.types"
 
 const TEXT_TYPES: Array<{ name: string; value: TextProps["type"] }> = [

@@ -43,8 +43,6 @@ Phasellus tristique tortor sed malesuada aliquam. Quisque cursus sodales velit, 
 `
 
 const ExampleMarkdown: FC<ExampleMarkdownProps> = () => {
-	const onClose = () => console.log(0)
-
 	return (
 		<Flex isColumn={true} gap={12}>
 			<Markdown text={INTRO_MD} />

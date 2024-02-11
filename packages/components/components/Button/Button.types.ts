@@ -1,6 +1,6 @@
 import type { MouseEvent, SyntheticEvent } from "react"
 import type { HeliosIntentionType } from "../../types/intentions"
-import type { HeliosIconType } from "@heliosgraphics/icons/meta"
+import type { HeliosIconType } from "../.."
 
 export interface ButtonProps {
 	accept?: string
