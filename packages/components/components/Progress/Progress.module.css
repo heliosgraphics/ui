@@ -2,9 +2,9 @@
 	height: 8px;
 	width: 100%;
 
-	background-color: var(--blue-100);
+	background-color: var(--ui-bg-disabled);
 	border: 0;
-	border-radius: 10rem;
+	border-radius: 8px;
 }
 
 .progress::-webkit-progress-bar {
@@ -12,7 +12,7 @@
 }
 
 .progress::-webkit-progress-value {
-	background-color: var(--blue-500);
+	background-color: var(--ui-text-intent-advise);
 	border-radius: 16px;
-	transition: all 120ms ease-in-out;
+	transition: all 96ms ease-in-out;
 }
