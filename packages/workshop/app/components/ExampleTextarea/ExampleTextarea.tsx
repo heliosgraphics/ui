@@ -8,7 +8,15 @@ const ExampleTextarea: FC<ExampleTextareaProps> = () => {
 	const [textarea, setTextarea] = useState<string>("")
 	const onTextareaChange = (e) => setTextarea(e.target.value)
 
-	return <Textarea onChange={onTextareaChange} value={textarea} />
+	return (
+		<Textarea
+			onChange={onTextareaChange}
+			value={textarea}
+			placeholder="Hello"
+			label="Description"
+			helperText="Fill this with love"
+		/>
+	)
 }
 
 export default ExampleTextarea

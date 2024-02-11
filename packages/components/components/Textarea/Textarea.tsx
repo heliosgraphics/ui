@@ -1,19 +1,21 @@
 "use client"
 
-import { useId, useState, useRef, useEffect } from "react"
+import { useId, useRef, useEffect } from "react"
 import Text from "../Text"
 import styles from "./Textarea.module.css"
 import classNames from "@sindresorhus/class-names"
+import InputLabel from "../InputLabel"
 import type { FC } from "react"
 import type { TextareaProps } from "./Textarea.types"
 
 const Textarea: FC<TextareaProps> = (props) => {
-	const [isActive, setActive] = useState(false)
 	const textareaRef = useRef<HTMLTextAreaElement | null>(null)
 	const { autoComplete, helperText, isDisabled, isLabelHidden, ...goodProps } = props
 
 	const htmlFor: string = props.id || useId()
-	const inputClasses: string = classNames(styles.textarea, "flex flex-column gap-2")
+	const textareaClasses: string = classNames(styles.textarea, "flex flex-column", {
+		[styles.textareaDisabled]: props.isDisabled,
+	})
 
 	const onInput = () => {
 		if (textareaRef?.current) {
@@ -22,6 +24,7 @@ const Textarea: FC<TextareaProps> = (props) => {
 		}
 	}
 
+	// TODO no longer necessary <3
 	useEffect(() => {
 		if (textareaRef?.current) {
 			onInput()
@@ -30,21 +33,9 @@ const Textarea: FC<TextareaProps> = (props) => {
 		setTimeout(() => onInput(), 100)
 	}, [props.value])
 
-	const onBlur = () => {
-		setActive(false)
-	}
-
-	const onFocus = () => {
-		setActive(true)
-	}
-
 	return (
-		<div className={inputClasses}>
-			{props.label && (
-				<label className="small gray-500" htmlFor={htmlFor}>
-					{props.label}
-				</label>
-			)}
+		<div className={textareaClasses}>
+			<InputLabel id={htmlFor} label={props.label} isDisabled={isDisabled} isHidden={isLabelHidden} />
 			<textarea
 				{...goodProps}
 				ref={textareaRef}
@@ -53,11 +44,9 @@ const Textarea: FC<TextareaProps> = (props) => {
 				onInput={onInput}
 				onLoad={onInput}
 				disabled={isDisabled}
-				onFocus={onFocus}
-				onBlur={onBlur}
 			/>
 			{!!props.helperText && (
-				<Text type="tiny" color="light-gray" className="mt-2">
+				<Text type="tiny" emphasis="tertiary" className={styles.input__helper}>
 					{props.helperText}
 				</Text>
 			)}

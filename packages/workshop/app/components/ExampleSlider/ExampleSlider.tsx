@@ -1,11 +1,18 @@
 "use client"
 
-import { Slider } from "@heliosgraphics/ui"
+import { Alert, Flex, Slider } from "@heliosgraphics/ui"
 import type { FC } from "react"
 import type { ExampleSliderProps } from "./ExampleSlider.types"
 
 const ExampleSlider: FC<ExampleSliderProps> = () => {
-	return <Slider />
+	return (
+		<Flex isColumn={true}>
+			<Alert intent="silent" icon="info">
+				WIP
+			</Alert>
+			<Slider />
+		</Flex>
+	)
 }
 
 export default ExampleSlider

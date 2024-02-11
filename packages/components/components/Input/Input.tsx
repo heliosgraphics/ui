@@ -1,14 +1,14 @@
 "use client"
 
 import { useId, type FC } from "react"
-import Flex from "../Flex"
-import Text from "../Text"
-import ResultList from "../ResultList"
-import Loading from "../Loading"
-import styles from "./Input.module.css"
 import classNames from "@sindresorhus/class-names"
-import type { InputProps } from "./Input.types"
+import Flex from "../Flex"
 import InputLabel from "../InputLabel"
+import Loading from "../Loading"
+import ResultList from "../ResultList"
+import styles from "./Input.module.css"
+import Text from "../Text"
+import type { InputProps } from "./Input.types"
 
 const Input: FC<InputProps> = ({
 	helperText,
