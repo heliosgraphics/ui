@@ -40,8 +40,8 @@
 }
 
 .alertSilent {
-	--alert-bg: var(--ui-bg-intent-silent);
-	--alert-text: var(--ui-text-intent-silent);
+	--alert-bg: var(--ui-bg-disabled);
+	--alert-text: var(--ui-text-secondary);
 }
 
 .alertSuccess {
