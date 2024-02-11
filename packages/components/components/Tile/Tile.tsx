@@ -8,8 +8,8 @@ const Tile: FC<TileProps> = ({ size, text, icon, onClick, iconAccent, color, col
 	const tileId: string = useId()
 	const isLarge: boolean = size > 64
 
-	const iconColor: string = `hsl(var(--${color}-hue), var(--${color}-saturation), 50%)`
-	const tileColor: string = `hsla(var(--${color}-hue), var(--${color}-saturation), 50%, 0.25)`
+	const iconColor: string = `var(--ui-text-${color})`
+	const tileColor: string = `var(--ui-bg-soft-${color})`
 	const tileColorAccent: string = `hsla(var(--${colorAccent || color}-hue), var(--${colorAccent || color}-saturation), 50%, 0.15)`
 
 	const tileClasses = classNames(styles.tile, {
@@ -31,7 +31,7 @@ const Tile: FC<TileProps> = ({ size, text, icon, onClick, iconAccent, color, col
 
 	return (
 		<Flex className={tileClasses} isCentered={true} isColumn={true} style={tileSize} onClick={onClick}>
-			<svg width="100%" height="100%" viewBox="0 0 ${size} ${size}" className={styles.tile__background}>
+			<svg width="100%" height="100%" viewBox={`0 0 ${size} ${size}`} className={styles.tile__background}>
 				<linearGradient id={tileId}>
 					<stop stopColor={tileColor} offset="0%" />
 					{colorAccent && <stop stopColor={tileColorAccent} offset="100%" />}

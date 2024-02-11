@@ -37,7 +37,7 @@
 	--button-hover: hsl(var(--color-intent-advise), 40%);
 	--button-active: hsl(var(--color-intent-advise), 30%);
 	--button-disabled: hsl(var(--color-intent-advise), 70%);
-	--button-disabled-bg: var(--ui-bg-intent-advise);
+	--button-disabled-bg: var(--ui-bg-soft-blue);
 }
 
 /* intent: automation */
@@ -47,7 +47,7 @@
 	--button-hover: hsl(var(--color-intent-automation), 40%);
 	--button-active: hsl(var(--color-intent-automation), 30%);
 	--button-disabled: hsl(var(--color-intent-automation), 70%);
-	--button-disabled-bg: var(--ui-bg-intent-automation);
+	--button-disabled-bg: var(--ui-bg-soft-pink);
 }
 
 /* intent: confirmation */
@@ -57,7 +57,7 @@
 	--button-hover: hsl(var(--color-intent-confirmation), 40%);
 	--button-active: hsl(var(--color-intent-confirmation), 30%);
 	--button-disabled: hsl(var(--color-intent-confirmation), 70%);
-	--button-disabled-bg: var(--ui-bg-intent-confirmation);
+	--button-disabled-bg: var(--ui-bg-soft-purple);
 }
 
 /* intent: error */
@@ -67,7 +67,7 @@
 	--button-hover: hsl(var(--color-intent-error), 40%);
 	--button-active: hsl(var(--color-intent-error), 30%);
 	--button-disabled: hsl(var(--color-intent-error), 70%);
-	--button-disabled-bg: var(--ui-bg-intent-error);
+	--button-disabled-bg: var(--ui-bg-soft-red);
 }
 
 /* intent: highlight */
@@ -77,7 +77,7 @@
 	--button-hover: hsl(var(--color-intent-highlight), 40%);
 	--button-active: hsl(var(--color-intent-highlight), 30%);
 	--button-disabled: hsl(var(--color-intent-highlight), 70%);
-	--button-disabled-bg: var(--ui-bg-intent-highlight);
+	--button-disabled-bg: var(--ui-bg-soft-orange);
 }
 
 /* intent: question */
@@ -87,7 +87,7 @@
 	--button-hover: hsl(var(--color-intent-question), 40%);
 	--button-active: hsl(var(--color-intent-question), 30%);
 	--button-disabled: hsl(var(--color-intent-question), 70%);
-	--button-disabled-bg: var(--ui-bg-intent-question);
+	--button-disabled-bg: var(--ui-bg-soft-aqua);
 }
 
 /* intent: silent */
@@ -97,7 +97,7 @@
 	--button-hover: var(--ui-bg-action-hover);
 	--button-active: var(--ui-bg-action-active);
 	--button-disabled: var(--ui-text-tertiary);
-	--button-disabled-bg: var(--ui-bg-disabled);
+	--button-disabled-bg: var(--ui-bg-soft-gray);
 
 	box-shadow: inset 0 0 0 1px var(--ui-border);
 }
@@ -117,7 +117,7 @@
 	--button-hover: hsl(var(--color-intent-success), 40%);
 	--button-active: hsl(var(--color-intent-success), 30%);
 	--button-disabled: hsl(var(--color-intent-success), 70%);
-	--button-disabled-bg: var(--ui-bg-intent-success);
+	--button-disabled-bg: var(--ui-bg-soft-green);
 }
 
 /* intent: warning */
@@ -127,7 +127,7 @@
 	--button-hover: hsl(var(--color-intent-warning), 40%);
 	--button-active: hsl(var(--color-intent-warning), 30%);
 	--button-disabled: hsl(var(--color-intent-warning), 70%);
-	--button-disabled-bg: var(--ui-bg-intent-warning);
+	--button-disabled-bg: var(--ui-bg-soft-yellow);
 }
 
 /* Reset */

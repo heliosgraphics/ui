@@ -10,48 +10,48 @@
 }
 
 .alertAdvise {
-	--alert-bg: var(--ui-bg-intent-advise);
-	--alert-text: var(--ui-text-intent-advise);
+	--alert-bg: var(--ui-bg-soft-blue);
+	--alert-text: var(--ui-text-blue);
 }
 
 .alertAutomation {
-	--alert-bg: var(--ui-bg-intent-automation);
-	--alert-text: var(--ui-text-intent-automation);
+	--alert-bg: var(--ui-bg-soft-pink);
+	--alert-text: var(--ui-text-pink);
 }
 
 .alertConfirmation {
-	--alert-bg: var(--ui-bg-intent-confirmation);
-	--alert-text: var(--ui-text-intent-confirmation);
+	--alert-bg: var(--ui-bg-soft-purple);
+	--alert-text: var(--ui-text-purple);
 }
 
 .alertError {
-	--alert-bg: var(--ui-bg-intent-error);
-	--alert-text: var(--ui-text-intent-error);
+	--alert-bg: var(--ui-bg-soft-red);
+	--alert-text: var(--ui-text-red);
 }
 
 .alertHighlight {
-	--alert-bg: var(--ui-bg-intent-highlight);
-	--alert-text: var(--ui-text-intent-highlight);
+	--alert-bg: var(--ui-bg-soft-orange);
+	--alert-text: var(--ui-text-orange);
 }
 
 .alertQuestion {
-	--alert-bg: var(--ui-bg-intent-question);
-	--alert-text: var(--ui-text-intent-question);
+	--alert-bg: var(--ui-bg-soft-aqua);
+	--alert-text: var(--ui-text-aqua);
 }
 
 .alertSilent {
-	--alert-bg: var(--ui-bg-disabled);
-	--alert-text: var(--ui-text-secondary);
+	--alert-bg: var(--ui-bg-soft-gray);
+	--alert-text: var(--ui-text-gray);
 }
 
 .alertSuccess {
-	--alert-bg: var(--ui-bg-intent-success);
-	--alert-text: var(--ui-text-intent-success);
+	--alert-bg: var(--ui-bg-soft-green);
+	--alert-text: var(--ui-text-green);
 }
 
 .alertWarning {
-	--alert-bg: var(--ui-bg-intent-warning);
-	--alert-text: var(--ui-text-intent-warning);
+	--alert-bg: var(--ui-bg-soft-yellow);
+	--alert-text: var(--ui-text-yellow);
 }
 
 .alertSmall {
