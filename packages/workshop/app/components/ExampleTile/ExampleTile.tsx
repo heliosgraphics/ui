@@ -17,7 +17,7 @@ import type { ExampleTileProps } from "./ExampleTile.types"
 
 const ExampleTile: FC<ExampleTileProps> = () => {
 	const [isRounded, setRounded] = useState<boolean>(false)
-	const [isRound, setRound] = useState<boolean>(false)
+	const [isRound, setRound] = useState<boolean>(true)
 	const [text, setText] = useState<string | undefined>(undefined)
 	const [colorAccent, setColorAccent] = useState<HeliosColors>("orange")
 	const [iconAccent, setIconAccent] = useState<HeliosIconType>("flame")
