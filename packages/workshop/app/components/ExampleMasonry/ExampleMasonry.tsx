@@ -1,19 +1,34 @@
 "use client"
 
+import { Alert, Flex, Masonry, Text } from "@heliosgraphics/ui"
+import Box from "../Box"
 import type { FC } from "react"
-import { Masonry, Text } from "@heliosgraphics/ui"
 import type { ExampleMasonryProps } from "./ExampleMasonry.types"
 
 const ExampleMasonry: FC<ExampleMasonryProps> = () => {
 	return (
-		<Masonry>
-			<Text type="small">01</Text>
-			<Text type="small">02</Text>
-			<Text type="small">03</Text>
-			<Text type="small">04</Text>
-			<Text type="small">05</Text>
-			<Text type="small">06</Text>
-		</Masonry>
+		<Flex isColumn={true} gap={16}>
+			<Alert intent="silent" icon="info">
+				WIP
+			</Alert>
+			<Masonry>
+				<Text type="small">
+					<Box>01</Box>
+				</Text>
+				<Text type="small">
+					<Box height={400}>02</Box>
+				</Text>
+				<Text type="small">
+					<Box height={240}>03</Box>
+				</Text>
+				<Text type="small">
+					<Box>04</Box>
+				</Text>
+				<Text type="small">
+					<Box>05</Box>
+				</Text>
+			</Masonry>
+		</Flex>
 	)
 }
 
