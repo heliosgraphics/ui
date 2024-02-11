@@ -1,18 +1,25 @@
 import type { FC } from "react"
-// import { getColor } from "../utils/color"
+import styles from "./Pie.module.css"
 import type { PieProps, PieItem } from "./Pie.types"
 
-const Pie: FC<PieProps> = ({ size, data }) => {
+const Pie: FC<PieProps> = ({ color, size, data }) => {
 	const r: number = size / 4
 	const whole = data?.reduce((a, b) => a + b.value, 0)
 	const circumferencePercentage: number = (2 * Math.PI * r) / whole
+	const backgroundColor: string = `hsl(var(--${color}-hue), var(--${color}-saturation), 50%)`
 
 	return (
-		<svg height={size} width={size} viewBox={`0 0 ${size} ${size}`}>
+		<svg
+			className={styles.pie}
+			height={size}
+			width={size}
+			viewBox={`0 0 ${size} ${size}`}
+			style={{ backgroundColor: backgroundColor }}
+		>
 			{data.map((item, key) => {
 				const thisData: Array<PieItem> = data.slice(0, key)
 				const thisSize = thisData?.reduce((a, b) => a + b.value, 0)
-				const thisColor = "red" // `var(--${getColor(item.color)})`
+				const thisColor: string = `hsl(var(--${color}-hue), ${(key + 1) * 20}%, 50%)`
 
 				return (
 					<circle

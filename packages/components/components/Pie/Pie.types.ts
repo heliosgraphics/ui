@@ -1,10 +1,12 @@
+import type { HeliosColors } from "../.."
+
 export interface PieItem {
-	color: string
 	name?: string
 	value: number
 }
 
 export interface PieProps {
+	color: HeliosColors
 	size: number
 	data: Array<PieItem>
 }
