@@ -11,7 +11,7 @@ import {
 	type HeliosColors,
 	type HeliosIconType,
 } from "@heliosgraphics/ui"
-import { ColorContext } from "../../contexts/ColorContext"
+import { WorkshopContext } from "../../contexts/WorkshopContext"
 import { useContext, useState, type FC } from "react"
 import type { ExampleTileProps } from "./ExampleTile.types"
 
@@ -21,14 +21,13 @@ const ExampleTile: FC<ExampleTileProps> = () => {
 	const [text, setText] = useState<string | undefined>(undefined)
 	const [colorAccent, setColorAccent] = useState<HeliosColors>("orange")
 	const [iconAccent, setIconAccent] = useState<HeliosIconType>("flame")
-	const [icon, setIcon] = useState<HeliosIconType>("robot")
-	const { color } = useContext(ColorContext)
+
+	const { color, icon } = useContext(WorkshopContext)
 
 	const items = COLORS.map((color) => ({ name: color, value: color }))
 	const icons = ICONS.map((icon) => ({ name: icon, value: icon }))
 
 	const onColorChange = (event) => setColorAccent(event.target.value)
-	const onIconChange = (event) => setIcon(event.target.value)
 	const onIconAccentChange = (event) => setIconAccent(event.target.value)
 
 	const onToggleRound = () => setRound(!isRound)
@@ -41,9 +40,7 @@ const ExampleTile: FC<ExampleTileProps> = () => {
 				<Button value="Round" intent="silent" size="small" onClick={onToggleRound} />
 				<Button value="Rounded" intent="silent" size="small" onClick={onToggleRounded} />
 				<Button value="Text" intent="silent" size="small" onClick={onToggleText} />
-
 				<Select items={items} onChange={onColorChange} selectedValue={colorAccent} />
-				<Select items={icons} onChange={onIconChange} selectedValue={icon} />
 				<Select items={icons} onChange={onIconAccentChange} selectedValue={iconAccent} />
 			</ButtonGroup>
 			<Flex gap={4} isWrapping={true}>

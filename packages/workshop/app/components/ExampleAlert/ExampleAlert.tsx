@@ -2,7 +2,7 @@
 
 import { useContext } from "react"
 import { Flex, Alert, HeliosIntentionType } from "@heliosgraphics/ui"
-import { IntentContext } from "../../contexts/IntentContext"
+import { WorkshopContext } from "../../contexts/WorkshopContext"
 import type { FC } from "react"
 import type { ExampleAlertProps } from "./ExampleAlert.types"
 
@@ -19,7 +19,7 @@ const INTENT_DESCRIPTIONS: Record<HeliosIntentionType, string> = {
 }
 
 const ExampleAlert: FC<ExampleAlertProps> = () => {
-	const { intent } = useContext(IntentContext)
+	const { intent } = useContext(WorkshopContext)
 	const onClose = () => console.log(0)
 
 	return (

@@ -2,11 +2,11 @@
 
 import { useContext, useState, type FC } from "react"
 import { Flex, Separator, Checkbox } from "@heliosgraphics/ui"
-import { IntentContext } from "../../contexts/IntentContext"
+import { WorkshopContext } from "../../contexts/WorkshopContext"
 import type { ExampleCheckboxProps } from "./ExampleCheckbox.types"
 
 const ExampleCheckbox: FC<ExampleCheckboxProps> = () => {
-	const { intent } = useContext(IntentContext)
+	const { intent } = useContext(WorkshopContext)
 	const [isChecked, setChecked] = useState<boolean>(false)
 	const [isChecked2, setChecked2] = useState<boolean>(true)
 	const [isChecked3, setChecked3] = useState<boolean>(false)

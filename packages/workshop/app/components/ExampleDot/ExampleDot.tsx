@@ -2,11 +2,11 @@
 
 import { Flex, Dot, Select, Text, SCALE, COLORS, HeliosColors } from "@heliosgraphics/ui"
 import { useState, useContext, type FC } from "react"
-import { ColorContext } from "../../contexts/ColorContext"
+import { WorkshopContext } from "../../contexts/WorkshopContext"
 import type { ExampleDotProps } from "./ExampleDot.types"
 
 const ExampleDot: FC<ExampleDotProps> = () => {
-	const { color } = useContext(ColorContext)
+	const { color } = useContext(WorkshopContext)
 	const [colorAccent, setColorAccent] = useState<HeliosColors>("orange")
 
 	const items = COLORS.map((color) => {

@@ -2,11 +2,11 @@
 
 import { useState, useContext, type FC } from "react"
 import { Separator, Flex, Text, Radio } from "@heliosgraphics/ui"
-import { IntentContext } from "../../contexts/IntentContext"
+import { WorkshopContext } from "../../contexts/WorkshopContext"
 import type { ExampleRadioProps } from "./ExampleRadio.types"
 
 const ExampleRadio: FC<ExampleRadioProps> = () => {
-	const { intent } = useContext(IntentContext)
+	const { intent } = useContext(WorkshopContext)
 	const [radio, setRadio] = useState<string>("radio-01")
 
 	const onRadioFirst = () => setRadio("radio-01")

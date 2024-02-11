@@ -2,12 +2,12 @@
 
 import { useContext, useState } from "react"
 import { Button, ButtonGroup, Flex, Separator } from "@heliosgraphics/ui"
-import { IntentContext } from "../../contexts/IntentContext"
+import { WorkshopContext } from "../../contexts/WorkshopContext"
 import type { ExampleButtonProps } from "./ExampleButton.types"
 import type { FC } from "react"
 
 const ExampleButton: FC<ExampleButtonProps> = () => {
-	const { intent } = useContext(IntentContext)
+	const { intent } = useContext(WorkshopContext)
 	const [flair, setFlair] = useState<number>(0)
 
 	const onFlairToggle = () => setFlair(flair === 0 ? 4 : 0)

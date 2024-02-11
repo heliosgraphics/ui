@@ -2,11 +2,11 @@
 
 import { Flex, Text, Donut, Separator, ButtonGroup, Button } from "@heliosgraphics/ui"
 import { useContext, useState, type FC } from "react"
-import { ColorContext } from "../../contexts/ColorContext"
+import { WorkshopContext } from "../../contexts/WorkshopContext"
 import type { ExampleDonutProps } from "./ExampleDonut.types"
 
 const ExampleDonut: FC<ExampleDonutProps> = () => {
-	const { color } = useContext(ColorContext)
+	const { color } = useContext(WorkshopContext)
 	const [percentage, setPercentage] = useState<number>(64)
 
 	const onRandomPercentage = () => {

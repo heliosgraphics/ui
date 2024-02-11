@@ -3,7 +3,7 @@
 import { Flex, Pie, type PieItem } from "@heliosgraphics/ui"
 import { type FC } from "react"
 import type { ExamplePieProps } from "./ExamplePie.types"
-// import { ColorContext } from "../../contexts/ColorContext"
+// import { WorkshopContext } from "../../contexts/WorkshopContext"
 
 const pieItems: Array<PieItem> = [
 	{ name: "X", value: 24 },
@@ -13,7 +13,7 @@ const pieItems: Array<PieItem> = [
 ]
 
 const ExamplePie: FC<ExamplePieProps> = () => {
-	// const { color } = useContext(ColorContext)
+	// const { color } = useContext(WorkshopContext)
 
 	return (
 		<Flex gap={8} isWrapping={true}>

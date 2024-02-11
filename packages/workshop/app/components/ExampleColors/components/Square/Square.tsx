@@ -3,7 +3,7 @@ import styles from "./Square.module.css"
 import type { SquareProps } from "./Square.types"
 import type { FC, CSSProperties } from "react"
 
-const Square: FC<SquareProps> = ({ lightness, color }) => {
+const Square: FC<SquareProps> = ({ lightness }) => {
 	const style = {
 		color: `hsl(var(--color) ${lightness}%)`,
 		"--text-color": `hsl(var(--color) ${lightness - 40}%)`,

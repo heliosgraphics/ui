@@ -1,7 +1,7 @@
 "use client"
 
 import { Button, ButtonGroup, Flex, HeliosIconType, Pill, Separator } from "@heliosgraphics/ui"
-import { ColorContext } from "../../contexts/ColorContext"
+import { WorkshopContext } from "../../contexts/WorkshopContext"
 import { useState, useContext, type FC } from "react"
 import type { ExamplePillProps } from "./ExamplePill.types"
 
@@ -9,7 +9,7 @@ const ExamplePill: FC<ExamplePillProps> = () => {
 	const [isRounded, setRounded] = useState<boolean>(false)
 	const [icon, setIcon] = useState<HeliosIconType | undefined>(undefined)
 
-	const { color } = useContext(ColorContext)
+	const { color } = useContext(WorkshopContext)
 
 	const onToggleRounded = () => setRounded(!isRounded)
 	const onToggleIcon = () => setIcon(!icon ? "tag" : undefined)

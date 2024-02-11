@@ -1,12 +1,12 @@
 import { useContext, type FC } from "react"
 import { Flex, Select, COLORS, ButtonGroup, Button, HeliosColors } from "@heliosgraphics/ui"
-import { ColorContext } from "../../contexts/ColorContext"
+import { WorkshopContext } from "../../../../contexts/WorkshopContext"
 import type { ColorSelectorProps } from "./ColorSelector.types"
 
 let lastColor: HeliosColors = "gray"
 
 const ColorSelector: FC<ColorSelectorProps> = () => {
-	const { color, setColor } = useContext(ColorContext)
+	const { color, setColor } = useContext(WorkshopContext)
 
 	const items = COLORS.map((color) => {
 		return { name: color, value: color }

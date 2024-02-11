@@ -2,13 +2,13 @@
 
 import { useState, useContext, type FC } from "react"
 import { Button, ButtonGroup, Separator, Toggle, Flex, Text, type ButtonGroupProps } from "@heliosgraphics/ui"
-import { IntentContext } from "../../contexts/IntentContext"
+import { WorkshopContext } from "../../contexts/WorkshopContext"
 import type { ExampleButtonGroupProps } from "./ExampleButtonGroup.types"
 
 const BUTTON_ALIGNS = ["left", "center", "right", "join"]
 
 const ExampleButtonGroup: FC<ExampleButtonGroupProps> = () => {
-	const { intent } = useContext(IntentContext)
+	const { intent } = useContext(WorkshopContext)
 	const [alignIndex, setAlignIndex] = useState<number>(0)
 	const [isVertical, setVertical] = useState<boolean>(false)
 
