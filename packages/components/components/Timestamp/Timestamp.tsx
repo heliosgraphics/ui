@@ -11,7 +11,7 @@ const Timestamp: FC<TimestampProps> = ({ date, fromNow, text, format = "MMMM D, 
 	const formattedDate: string = fromNow ? fromNowDate : formatDate(date, format)
 
 	return (
-		<time dateTime={timestampDate}>
+		<time dateTime={timestampDate} suppressHydrationWarning={true}>
 			{!!text && text}
 			{formattedDate}
 		</time>

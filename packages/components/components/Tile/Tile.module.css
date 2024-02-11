@@ -3,4 +3,26 @@
 
 	overflow: hidden;
 	transition: all 96ms ease-in-out;
+
+	user-select: none;
+}
+
+.tile .tile__background {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+}
+
+.tileLarge {
+	padding: 8px;
+}
+
+.tile__iconAccent {
+	position: absolute;
+	top: 0;
+	left: 0;
+
 }

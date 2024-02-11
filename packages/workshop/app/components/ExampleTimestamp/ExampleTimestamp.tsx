@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, type FC } from "react"
-import { Button, ButtonGroup, Flex, Separator, Timestamp } from "@heliosgraphics/ui"
+import { Alert, Button, ButtonGroup, Flex, Separator, Timestamp } from "@heliosgraphics/ui"
 import type { ExampleTimestampProps } from "./ExampleTimestamp.types"
 
 const ExampleTimestamp: FC<ExampleTimestampProps> = () => {
@@ -13,6 +13,9 @@ const ExampleTimestamp: FC<ExampleTimestampProps> = () => {
 
 	return (
 		<Flex isColumn={true} gap={8}>
+			<Alert intent="silent" icon="info">
+				WIP
+			</Alert>
 			<ButtonGroup>
 				<Button intent="silent" size="small" value="From Now" onClick={onFromNowClick} />
 			</ButtonGroup>
