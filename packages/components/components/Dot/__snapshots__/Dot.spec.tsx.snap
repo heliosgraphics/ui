@@ -10,7 +10,6 @@ exports[`Dot > Should match snapshot 1`] = `
         style="height: 8px; max-height: 8px; max-width: 8px; width: 8px;"
       >
         <svg
-          class="red"
           height="100%"
           viewBox="0 0 20 20"
           width="100%"
@@ -20,11 +19,7 @@ exports[`Dot > Should match snapshot 1`] = `
           >
             <stop
               offset="0%"
-              stop-color="var(--blue)"
-            />
-            <stop
-              offset="100%"
-              stop-color="var(--red)"
+              stop-color="hsla(var(--red-hue), var(--red-saturation), 50%, 0.5)"
             />
           </lineargradient>
           <circle
@@ -43,7 +38,6 @@ exports[`Dot > Should match snapshot 1`] = `
       style="height: 8px; max-height: 8px; max-width: 8px; width: 8px;"
     >
       <svg
-        class="red"
         height="100%"
         viewBox="0 0 20 20"
         width="100%"
@@ -53,11 +47,7 @@ exports[`Dot > Should match snapshot 1`] = `
         >
           <stop
             offset="0%"
-            stop-color="var(--blue)"
-          />
-          <stop
-            offset="100%"
-            stop-color="var(--red)"
+            stop-color="hsla(var(--red-hue), var(--red-saturation), 50%, 0.5)"
           />
         </lineargradient>
         <circle
