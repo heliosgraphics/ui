@@ -1,0 +1,33 @@
+.pill {
+	transition: all 96ms ease-in-out;
+}
+
+.pillRounded {
+	border-radius: 30px;
+}
+
+.pillNormal {
+	height: 30px;
+	padding: 0 8px;
+}
+
+.pillNormal.pillIcon {
+	padding: 0 8px 0 4px;
+}
+
+.pillSmall {
+	height: 24px;
+	padding: 0 6px;
+}
+
+.pillSmall.pillIcon {
+	padding: 0 8px 0 4px;
+}
+
+.pillSmall.pillRounded:not(.pillIcon) {
+	padding: 0 8px;
+}
+
+.pillDark {
+	color: var(--ui-text-white);
+}

@@ -58,11 +58,7 @@ const Button: FC<ButtonProps> = ({
 	const buttonInputClasses = classNames("sans fw-medium", {
 		tiny: size === "tiny" || size === "small",
 		"small ": !size || size === "normal",
-
-		"radius-3": !isRounded && size !== "tiny",
-		"radius-2": !isRounded && size === "tiny",
 		"radius-max": isRounded,
-
 		"px-6": size === "normal" && !isIconOnly,
 		"px-4": size !== "normal" && !isIconOnly,
 	})

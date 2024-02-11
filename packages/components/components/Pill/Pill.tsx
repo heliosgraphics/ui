@@ -1,37 +1,33 @@
-import type { FC } from "react"
-import Text from "../Text/Text"
-import Flex from "../Flex/Flex"
 import classNames from "@sindresorhus/class-names"
+import { Flex, Icon } from "../.."
+import styles from "./Pill.module.css"
+import Text from "../Text/Text"
+import type { FC } from "react"
 import type { PillProps } from "./Pill.types"
 
-// color: HeliosColors
-// 	isDark?: boolean
-// 	isSmall?: boolean
-// 	isMono?: boolean
-// 	isRounded?: boolean
-// 	label: string
+const Pill: FC<PillProps> = ({ color = "gray", isMono, label, isSmall, icon, isRounded, isDark = false }) => {
+	const textColor: string = `hsl(var(--${color}-hue), var(--${color}-saturation), 20%)`
+	const pillColor: string = `hsla(var(--${color}-hue), var(--${color}-saturation), 50%, 0.25)`
+	const pillColorDark: string = `hsl(var(--${color}-hue), var(--${color}-saturation), 40%)`
 
-const Pill: FC<PillProps> = ({ color = "gray", isMono, label, isSmall, isRounded, isDark = false }) => {
-	const pillColor: string = `hsla(var(--${color}-hue), var(--${color}-saturation), 50%, 0.5)`
-
-	const pillClass = classNames("unselectable break-word", {
-		// Roundness
-		[`radius-max`]: isRounded,
-		[`radius-2`]: !isRounded,
-		// Dark
-		[`bg-${color}-600`]: color && isDark,
-		[`gray-0`]: color && isDark,
-		// Light
-		[`bg-${color}-100`]: color && !isDark,
-		[`${color}-600`]: color && !isDark,
-		// Sizes
-		"hmin-13 px-5": !isSmall,
-		"hmin-10 px-3": isSmall,
+	const pillClass = classNames("unselectable break-word", styles.pill, {
+		[styles.pillRounded]: isRounded,
+		[`radius-small`]: !isRounded,
+		[styles.pillNormal]: !isSmall,
+		[styles.pillSmall]: isSmall,
+		[styles.pillDark]: isDark,
+		[styles.pillIcon]: !!icon,
 	})
 	const pillTextSize = isSmall ? "tiny" : "small"
 
 	return (
-		<Flex className={pillClass} isCentered={true} style={{ backgroundColor: pillColor }}>
+		<Flex
+			className={pillClass}
+			isCentered={true}
+			style={{ backgroundColor: isDark ? pillColorDark : pillColor, color: isDark ? undefined : textColor }}
+			gap={2}
+		>
+			{icon && <Icon size={isSmall ? 16 : 24} name={icon} />}
 			<Text
 				color="currentcolor"
 				type={pillTextSize}

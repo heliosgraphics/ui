@@ -151,6 +151,7 @@
 	--ui-text-primary: hsl(var(--ui-hue), var(--ui-saturation), 8%);
 	--ui-text-secondary: hsl(var(--ui-hue), var(--ui-saturation), 44%);
 	--ui-text-tertiary: hsl(var(--ui-hue), var(--ui-saturation), 69%);
+	--ui-text-white: hsl(var(--ui-hue), var(--ui-saturation), 92%);
 
 	--ui-border-light: hsl(var(--ui-hue), var(--ui-saturation), 95%);
 	--ui-border: hsl(var(--ui-hue), var(--ui-saturation), 85%);
@@ -203,6 +204,7 @@
 	--ui-text-primary: hsl(var(--ui-hue), var(--ui-saturation), 92%);
 	--ui-text-secondary: hsl(var(--ui-hue), var(--ui-saturation), 62%);
 	--ui-text-tertiary: hsl(var(--ui-hue), var(--ui-saturation), 33%);
+	--ui-text-white: hsl(var(--ui-hue), var(--ui-saturation), 92%);
 
 	--ui-border-light: hsl(var(--ui-hue), var(--ui-saturation), 10%);
 	--ui-border: hsl(var(--ui-hue), var(--ui-saturation), 20%);

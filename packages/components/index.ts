@@ -24,14 +24,12 @@ export { default as Pie } from "./components/Pie"
 export { default as Pill } from "./components/Pill"
 export { default as Progress } from "./components/Progress"
 export { default as Radio } from "./components/Radio"
-export { default as ResultList } from "./components/ResultList"
 export { default as Select } from "./components/Select"
 export { default as Separator } from "./components/Separator"
 export { default as Setup } from "./components/Setup"
 export { default as Shimmer } from "./components/Shimmer"
 export { default as Slider } from "./components/Slider"
 export { default as Spacer } from "./components/Spacer"
-export { default as Table } from "./components/Table"
 export { default as Tabs } from "./components/Tabs"
 export { default as Text } from "./components/Text"
 export { default as Textarea } from "./components/Textarea"
@@ -114,14 +112,12 @@ export const COMPONENTS = [
 	"Pill",
 	"Progress",
 	"Radio",
-	"ResultList",
 	"Setup",
 	"Select",
 	"Separator",
 	"Shimmer",
 	"Slider",
 	"Spacer",
-	"Table",
 	"Tabs",
 	"Text",
 	"Textarea",

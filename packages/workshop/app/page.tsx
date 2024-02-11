@@ -38,7 +38,6 @@ import ExampleShimmer from "./components/ExampleShimmer"
 import ExampleSlider from "./components/ExampleSlider"
 import ExamplePill from "./components/ExamplePill"
 import ExampleSpacer from "./components/ExampleSpacer"
-import ExampleTable from "./components/ExampleTable"
 import ExampleTabs from "./components/ExampleTabs"
 import ExampleTile from "./components/ExampleTile"
 import ExampleTimestamp from "./components/ExampleTimestamp"
@@ -186,10 +185,6 @@ export default function Home() {
 
 						<Details title="Spacer">
 							<ExampleSpacer />
-						</Details>
-
-						<Details title="Table">
-							<ExampleTable />
 						</Details>
 
 						<Details title="Tabs">
