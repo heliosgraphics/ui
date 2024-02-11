@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@heliosgraphics/fractures':
-        specifier: latest
-        version: 5.1.0
+        specifier: 5.2.2
+        version: 5.2.2
       '@heliosgraphics/icons':
-        specifier: latest
-        version: 0.0.6
+        specifier: 0.0.7
+        version: 0.0.7
       '@heliosgraphics/utils':
         specifier: 5.2.0
         version: 5.2.0
@@ -1740,16 +1740,16 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@heliosgraphics/fractures@5.1.0:
-    resolution: {integrity: sha512-kI36oVWgB8v4DNbbtRxVsH5sirUMwWo5PtlZ+O8nIAkL5Sux67+gJe4UxrnaASKAhJz4UOfXWMdtFawPpQPbIQ==}
-    dev: false
-
   /@heliosgraphics/fractures@5.2.2:
     resolution: {integrity: sha512-YNKTf0OTaGC02W5bDEmnto4dpTaylkYwbKVMEqAmjqskVah8GRMQbnr0WKi9ELbQboDnOlB1pCLSZP8RvdFN1A==}
     dev: false
 
   /@heliosgraphics/icons@0.0.6:
     resolution: {integrity: sha512-RxcTrqXGliOxzJQM7HO76OzKa+yHB4HP1CtVVkKTTtpp2uhhoprE3c5aMC76jFbeEP+o85w6V3PrVkOzNTCMfg==}
+    dev: false
+
+  /@heliosgraphics/icons@0.0.7:
+    resolution: {integrity: sha512-YRHDPD7IBjRlscLHYDPpuRME4nFLzFJwxV97bltvDo6Ay2pGgXcKcJ6CHt7Czk3VRAfDlyhbkg63pM3DeWIjyg==}
     dev: false
 
   /@heliosgraphics/library@4.0.0-alpha-5:
