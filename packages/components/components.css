@@ -1,5 +1,6 @@
 /* setup globals */
 :root {
+	/* fractures */
 	--box-px: 1px;
 	--box-1: 2px;
 	--box-2: 4px;
@@ -149,7 +150,7 @@
 	--ui-text-primary: hsl(var(--gray-hue), var(--gray-saturation), 8%);
 	--ui-text-secondary: hsl(var(--gray-hue), var(--gray-saturation), 44%);
 	--ui-text-tertiary: hsl(var(--gray-hue), var(--gray-saturation), 69%);
-	--ui-text-white: hsl(var(--gray-hue), var(--gray-saturation), 92%);
+	--ui-text-white: hsl(var(--gray-hue), var(--gray-saturation), 100%);
 
 	--ui-border-light: hsl(var(--gray-hue), var(--gray-saturation), 95%);
 	--ui-border: hsl(var(--gray-hue), var(--gray-saturation), 85%);
@@ -201,7 +202,7 @@
 	--ui-text-primary: hsl(var(--gray-hue), var(--gray-saturation), 92%);
 	--ui-text-secondary: hsl(var(--gray-hue), var(--gray-saturation), 62%);
 	--ui-text-tertiary: hsl(var(--gray-hue), var(--gray-saturation), 33%);
-	--ui-text-white: hsl(var(--gray-hue), var(--gray-saturation), 92%);
+	--ui-text-white: hsl(var(--gray-hue), var(--gray-saturation), 100%);
 
 	--ui-border-light: hsl(var(--gray-hue), var(--gray-saturation), 10%);
 	--ui-border: hsl(var(--gray-hue), var(--gray-saturation), 20%);
@@ -248,8 +249,7 @@ a {
 }
 
 *::selection {
-	--ui-text-selected: hsla(var(--color-intent-advise), 80%, 0.25);
-	/* --ui-text-selected: hsla(var(--color-intent-advise), 20%, 0.25); */
+	--ui-text-selected: hsla(var(--color-intent-highlight), 80%, 0.5);
 
 	background-color: var(--ui-text-selected);
 }
