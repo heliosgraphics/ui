@@ -54,7 +54,6 @@ const ExampleTile: FC<ExampleTileProps> = () => {
 					isRounded={isRounded}
 					colorAccent={colorAccent}
 				/>
-				<Tile color={color} icon={icon} iconAccent={iconAccent} size={64} isRound={isRound} isRounded={isRounded} />
 				<Tile
 					color={color}
 					icon={icon}
@@ -62,6 +61,16 @@ const ExampleTile: FC<ExampleTileProps> = () => {
 					size={64}
 					isRound={isRound}
 					isRounded={isRounded}
+					text={text ? "Morning" : ""}
+				/>
+				<Tile
+					color={color}
+					icon={icon}
+					iconAccent={iconAccent}
+					size={64}
+					isRound={isRound}
+					isRounded={isRounded}
+					text={text ? "Morning" : ""}
 					colorAccent={colorAccent}
 				/>
 				<Tile

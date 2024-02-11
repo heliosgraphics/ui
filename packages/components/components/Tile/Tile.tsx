@@ -4,15 +4,16 @@ import styles from "./Tile.module.css"
 import { useId, type FC } from "react"
 import type { TileProps } from "./Tile.types"
 
-const Tile: FC<TileProps> = ({ size, text, icon, iconAccent, color, colorAccent, isRounded, isRound }) => {
+const Tile: FC<TileProps> = ({ size, text, icon, onClick, iconAccent, color, colorAccent, isRounded, isRound }) => {
 	const tileId: string = useId()
+	const isLarge: boolean = size > 64
 
 	const iconColor: string = `hsl(var(--${color}-hue), var(--${color}-saturation), 50%)`
 	const tileColor: string = `hsla(var(--${color}-hue), var(--${color}-saturation), 50%, 0.25)`
-	const tileColorAccent: string = `hsla(var(--${colorAccent}-hue), var(--${colorAccent}-saturation), 50%, 0.15)`
+	const tileColorAccent: string = `hsla(var(--${colorAccent || color}-hue), var(--${colorAccent || color}-saturation), 50%, 0.15)`
 
 	const tileClasses = classNames(styles.tile, {
-		[styles.tileLarge]: size >= 48,
+		[styles.tileLarge]: isLarge,
 		["radius-normal"]: isRounded,
 		["radius-max"]: isRound,
 	})
@@ -25,11 +26,11 @@ const Tile: FC<TileProps> = ({ size, text, icon, iconAccent, color, colorAccent,
 	}
 
 	const accentIconStyle = {
-		color: tileColor,
+		color: tileColorAccent,
 	}
 
 	return (
-		<Flex className={tileClasses} isCentered={true} isColumn={true} style={tileSize}>
+		<Flex className={tileClasses} isCentered={true} isColumn={true} style={tileSize} onClick={onClick}>
 			<svg width="100%" height="100%" viewBox="0 0 ${size} ${size}" className={styles.tile__background}>
 				<linearGradient id={tileId}>
 					<stop stopColor={tileColor} offset="0%" />
@@ -44,7 +45,7 @@ const Tile: FC<TileProps> = ({ size, text, icon, iconAccent, color, colorAccent,
 				</Flex>
 			)}
 			{text && (
-				<Text type="small" fontFamily="mono" lineClamp={1}>
+				<Text type={isLarge ? "small" : "tiny"} fontFamily="mono" lineClamp={1}>
 					{text}
 				</Text>
 			)}

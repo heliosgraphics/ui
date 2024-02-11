@@ -8,6 +8,7 @@ export interface TileProps {
 	iconAccent?: HeliosIconType
 	isRound?: boolean
 	isRounded?: boolean
+	onClick?: () => void
 	size: number
 	text?: string
 }
