@@ -1,6 +1,6 @@
 {
 	"name": "@heliosgraphics/ui",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"author": "03b8 <03b8@helios.graphics>",
 	"private": false,
 	"type": "module",
@@ -16,6 +16,15 @@
 		"start:components": "next start",
 		"prettier:write": "prettier --no-semi --use-tabs --write ./src/**"
 	},
+	"files": [
+		"./components/*.*",
+		"./constants/*.*",
+		"./hooks/*.*",
+		"./types/*.*",
+		"./utils/*.*",
+		"components.css",
+		"index.ts"
+	],
 	"dependencies": {
 		"@heliosgraphics/fractures": "5.2.2",
 		"@heliosgraphics/icons": "0.0.8",

@@ -4,7 +4,7 @@
 const nextConfig = {
 	productionBrowserSourceMaps: false,
 	reactStrictMode: false,
-	transpilePackages: ["@heliosgraphics/ui"]
+	transpilePackages: ["@heliosgraphics/ui"],
 }
 
 module.exports = nextConfig

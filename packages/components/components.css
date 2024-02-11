@@ -115,6 +115,7 @@
 	--animation-slowest: 192ms;
 
 	font-family: var(--font-family-sans);
+	/* "cv11" 1, single story a */
 	font-feature-settings:
 		"calt" 1,
 		"cv01" 1,
@@ -122,7 +123,7 @@
 		"cv03" 1,
 		"cv04" 1,
 		"cv06" 1,
-		/* "cv11" 1, single story a */ "cv10" 1,
+		"cv10" 1,
 		"cv09" 1,
 		"liga" 1,
 		"ordn" 1,
@@ -358,4 +359,43 @@ mark,
 		0 0 4px 0 rgba(0, 0, 0, 0.08),
 		0 0 0 1px rgba(0, 0, 0, 0.04),
 		0 0 10px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* Code highlights */
+.hljs-title,
+.hljs-property,
+.hljs-name,
+.hljs-keyword {
+	font-weight: var(--font-weight-bold);
+}
+
+.hljs-literal,
+.hljs-keyword {
+	color: var(--ui-text-intent-error);
+}
+
+.hljs-number {
+	color: var(--ui-text-intent-silent);
+}
+
+.hljs-title,
+.hljs-property {
+	color: var(--ui-text-intent-advise);
+}
+
+.hljs-function {
+	color: var(--ui-text-intent-silent);
+}
+
+.hljs-attr,
+.hljs-title.function_ {
+	color: var(--ui-text-intent-confirmation);
+}
+
+.hljs-string {
+	color: var(--ui-text-intent-advise);
+}
+
+.hljs-name {
+	color: var(--ui-text-intent-success);
 }

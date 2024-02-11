@@ -15,7 +15,7 @@ export const md = markdownIt({
 			}
 		}
 
-		return "" // use external default escaping
+		return ""
 	},
 })
 
@@ -40,6 +40,7 @@ export const cleanMarkdown = (md: string, options?) => {
 			if (options.listUnicodeChar) output = output.replace(/^([\s\t]*)([\*\-\+]|\d+\.)\s+/gm, options.listUnicodeChar + " $1")
 			else output = output.replace(/^([\s\t]*)([\*\-\+]|\d+\.)\s+/gm, "$1")
 		}
+
 		if (options.gfm) {
 			output = output
 				// Header
@@ -55,14 +56,16 @@ export const cleanMarkdown = (md: string, options?) => {
 			// Remove abbreviations
 			output = output.replace(/\*\[.*\]:.*\n/, "")
 		}
+
 		output = output
 			// Remove HTML tags
 			.replace(/<[^>]*>/g, "")
 
-		var htmlReplaceRegex = new RegExp("<[^>]*>", "g")
+		let htmlReplaceRegex = new RegExp("<[^>]*>", "g")
+
 		if (options.htmlTagsToSkip.length > 0) {
 			// Using negative lookahead. Eg. (?!sup|sub) will not match 'sup' and 'sub' tags.
-			var joinedHtmlTagsToSkip = "(?!" + options.htmlTagsToSkip.join("|") + ")"
+			const joinedHtmlTagsToSkip = "(?!" + options.htmlTagsToSkip.join("|") + ")"
 
 			// Adding the lookahead literal with the default regex for html. Eg./<(?!sup|sub)[^>]*>/ig
 			htmlReplaceRegex = new RegExp("<" + joinedHtmlTagsToSkip + "[^>]*>", "ig")
@@ -107,5 +110,6 @@ export const cleanMarkdown = (md: string, options?) => {
 		console.error(error)
 		return md
 	}
+
 	return output
 }
