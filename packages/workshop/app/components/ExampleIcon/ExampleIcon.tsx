@@ -1,17 +1,26 @@
 "use client"
 
-import { Alert, Flex, Input, Select, Icon, Text, HeliosEmphasisType, EMPHASES } from "@heliosgraphics/ui"
-import { meta } from "@heliosgraphics/icons/meta"
+import {
+	Alert,
+	Flex,
+	Input,
+	Select,
+	Icon,
+	Text,
+	HeliosEmphasisType,
+	EMPHASES,
+	ICONS,
+	type HeliosIconType,
+} from "@heliosgraphics/ui"
 import { useState, type FC, type ChangeEvent } from "react"
 import type { ExampleIconProps } from "./ExampleIcon.types"
-import type { HeliosIconType } from "@heliosgraphics/icons/meta"
 
 const ExampleIcon: FC<ExampleIconProps> = () => {
 	const [icon, setIcon] = useState<HeliosIconType>("calendar")
 	const [emphasis, setEmphasis] = useState<HeliosEmphasisType>("primary")
 	const [filter, setFilter] = useState<string>("")
 	const onFilter = (event: ChangeEvent<HTMLInputElement>) => setFilter(event.target.value)
-	const filteredIcons: Array<HeliosIconType> = meta?.filter((icon) => icon.includes(filter))
+	const filteredIcons: Array<HeliosIconType> = ICONS?.filter((icon) => icon.includes(filter))
 
 	const items = EMPHASES.map((emphasis) => {
 		return { name: emphasis, value: emphasis }

@@ -1,3 +1,5 @@
+import { meta as ICONS } from "@heliosgraphics/icons/meta"
+
 // components
 export { default as Alert } from "./components/Alert"
 export { default as Breadcrumb } from "./components/Breadcrumb"
@@ -56,6 +58,7 @@ export { useIntersector } from "./hooks/useIntersector"
 export type { HeliosColors } from "./types/colors"
 export type { HeliosScale } from "./types/scale"
 export type { HeliosIntentionType, HeliosEmphasisType } from "./types/intentions"
+export type HeliosIconType = typeof ICONS[number]
 
 // meta
 import type { HeliosScale } from "./types/scale"
@@ -129,3 +132,5 @@ export const COMPONENTS = [
 ] as const
 
 export const HOOKS = ["useIntersector"] as const
+
+export { ICONS }

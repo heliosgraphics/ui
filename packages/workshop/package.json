@@ -11,10 +11,7 @@
 	},
 	"dependencies": {
 		"@heliosgraphics/fractures": "5.2.2",
-		"@heliosgraphics/icons": "0.0.7",
-		"@heliosgraphics/utils": "5.2.0",
 		"@heliosgraphics/ui": "workspace:*",
-		"@svgr/webpack": "latest",
 		"next": "latest",
 		"react-dom": "latest",
 		"react": "latest"

@@ -18,7 +18,7 @@
 	},
 	"dependencies": {
 		"@heliosgraphics/fractures": "5.2.2",
-		"@heliosgraphics/icons": "0.0.7",
+		"@heliosgraphics/icons": "0.0.8",
 		"@heliosgraphics/utils": "5.2.0",
 		"@react-spring/web": "^9.7.3",
 		"@sindresorhus/class-names": "^2.0.0",
