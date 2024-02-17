@@ -1,4 +1,3 @@
-import { HeliosScale } from "packages/components/types/scale"
 import type { FlexProps } from "./Flex.types"
 import type { ResponsiveScaleType } from "./Flex.types"
 
