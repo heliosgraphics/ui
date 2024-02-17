@@ -68,7 +68,7 @@ export default function Home() {
 					</Flex>
 					<WorkshopControls />
 				</Flex>
-				<Flex isColumn={true} gap={8} padding={8} withBackground={true} className="radius-normal">
+				<Flex isColumn={true} gap={8} padding={8} withBackground={true} withRadius="normal">
 					<Details title="Alert">
 						<ExampleAlert />
 					</Details>

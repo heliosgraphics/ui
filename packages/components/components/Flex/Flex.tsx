@@ -19,6 +19,8 @@ const Flex = forwardRef<HTMLDivElement, FlexProps>((props: FlexProps, ref: Ref<H
 		padding,
 		paddingX,
 		paddingY,
+		withBackground,
+		withRadius,
 		...safeProps
 	} = props
 

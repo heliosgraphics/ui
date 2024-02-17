@@ -1,4 +1,5 @@
 export type HeliosScale =
+	| 0
 	| 1
 	| 2
 	| 4

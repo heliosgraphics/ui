@@ -37,6 +37,15 @@ describe("getFlexUtility", () => {
 		withBackground: true,
 	}
 
-	it("Generates without duplicated classes", () =>
+	it("Generates responsive scale", () =>
 		expect(getFlexUtility(MOCK_FLEX_DUPLICATE)).toEqual(MOCK_FLEX_DUPLICATE_CLASSES))
+
+	const MOCK_FLEX_RESPONSIVE_CLASSES = `flex mobile:p-0 tablet:p-8 p-16`
+	const MOCK_FLEX_RESPONSIVE: FlexProps = {
+		children: null,
+		padding: [0, 8, 16],
+	}
+
+	it("Generates without duplicated classes", () =>
+		expect(getFlexUtility(MOCK_FLEX_RESPONSIVE)).toEqual(MOCK_FLEX_RESPONSIVE_CLASSES))
 })

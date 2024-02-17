@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 				<Setup />
 			</head>
 			<body>
-				<Main padding={24} withAlternativeBackground={true}>
+				<Main padding={[2, 12, 16]} withAlternativeBackground={true}>
 					{children}
 				</Main>
 			</body>
