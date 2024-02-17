@@ -29,7 +29,13 @@ const ColorSelector: FC<ColorSelectorProps> = () => {
 
 	return (
 		<Flex gap={4}>
-			<Select items={items} onChange={onColorChange} selectedValue={color} />
+			<Select
+				label="Color Selector"
+				isLabelHidden={true}
+				items={items}
+				onChange={onColorChange}
+				selectedValue={color}
+			/>
 			<ButtonGroup>
 				<Button intent="silent" value="Gray" onClick={onGray} />
 				<Button intent="silent" value="Random" onClick={onRandom} />

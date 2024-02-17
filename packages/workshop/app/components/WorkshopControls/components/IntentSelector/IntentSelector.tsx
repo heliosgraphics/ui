@@ -31,7 +31,13 @@ const IntentSelector: FC<IntentSelectorProps> = () => {
 
 	return (
 		<Flex gap={4}>
-			<Select items={items} onChange={onIntentChange} selectedValue={intent} />
+			<Select
+				items={items}
+				onChange={onIntentChange}
+				selectedValue={intent}
+				label="Intent Selector"
+				isLabelHidden={true}
+			/>
 			<ButtonGroup align="join">
 				<Button intent="silent" value="Random" onClick={onRandom} />
 				<Button intent="silent" value="Silent" onClick={onSilent} />

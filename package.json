@@ -24,6 +24,8 @@
 		"@babel/eslint-parser": "latest",
 		"@testing-library/react": "latest",
 		"@types/node": "latest",
+		"@types/react-dom": "latest",
+		"@types/react": "latest",
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@vitejs/plugin-react": "latest",
 		"@vitest/coverage-v8": "latest",

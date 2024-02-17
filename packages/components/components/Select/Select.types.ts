@@ -12,6 +12,6 @@ export interface SelectProps {
 	isDisabled?: boolean
 	isLabelHidden?: boolean
 	selectedValue?: string
-	items: ReadonlyArray<SelectItem>
+	items: Array<SelectItem>
 	onChange: ChangeEventHandler<HTMLSelectElement>
 }

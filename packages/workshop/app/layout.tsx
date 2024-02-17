@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 				<Setup />
 			</head>
 			<body>
-				<Main withAlternativeBackground={true} gap="px">
+				<Main withAlternativeBackground={true} gap={1}>
 					{children}
 				</Main>
 			</body>

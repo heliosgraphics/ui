@@ -40,8 +40,20 @@ const ExampleTile: FC<ExampleTileProps> = () => {
 				<Button value="Round" intent="silent" size="small" onClick={onToggleRound} />
 				<Button value="Rounded" intent="silent" size="small" onClick={onToggleRounded} />
 				<Button value="Text" intent="silent" size="small" onClick={onToggleText} />
-				<Select items={items} onChange={onColorChange} selectedValue={colorAccent} />
-				<Select items={icons} onChange={onIconAccentChange} selectedValue={iconAccent} />
+				<Select
+					label="Color Accent"
+					isLabelHidden={true}
+					items={items}
+					onChange={onColorChange}
+					selectedValue={colorAccent}
+				/>
+				<Select
+					label="Icon Accent"
+					isLabelHidden={true}
+					items={icons}
+					onChange={onIconAccentChange}
+					selectedValue={iconAccent}
+				/>
 			</ButtonGroup>
 			<Flex gap={4} isWrapping={true}>
 				<Tile color={color} icon={icon} iconAccent={iconAccent} size={40} isRound={isRound} isRounded={isRounded} />

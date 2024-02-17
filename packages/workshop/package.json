@@ -10,11 +10,15 @@
 		"start": "next start"
 	},
 	"dependencies": {
-		"@heliosgraphics/fractures": "5.2.3",
+		"@heliosgraphics/fractures": "latest",
 		"@heliosgraphics/ui": "workspace:*",
 		"next": "latest",
 		"react-dom": "latest",
 		"react": "latest"
 	},
-	"devDependencies": {}
+	"devDependencies": {
+		"@types/node": "latest",
+		"@types/react-dom": "latest",
+		"@types/react": "latest"
+	}
 }

@@ -1,11 +1,13 @@
 import type { SetStateAction, Dispatch } from "react"
-import type { HeliosColors, HeliosIntentionType } from "@heliosgraphics/ui"
+import type { HeliosColors, HeliosIconType, HeliosIntentionType } from "@heliosgraphics/ui"
 
 export interface WorkshopProviderProps {
-	intent: HeliosIntentionType
-	setIntent: Dispatch<SetStateAction<HeliosIntentionType>>
 	color: HeliosColors
-	setColor: Dispatch<SetStateAction<HeliosColors>>
 	hasHeader: boolean
+	icon: HeliosIconType
+	intent: HeliosIntentionType
+	setColor: Dispatch<SetStateAction<HeliosColors>>
 	setHeader: Dispatch<SetStateAction<boolean>>
+	setIcon: Dispatch<SetStateAction<HeliosIconType>>
+	setIntent: Dispatch<SetStateAction<HeliosIntentionType>>
 }

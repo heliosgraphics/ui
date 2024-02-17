@@ -17,6 +17,12 @@ importers:
       '@types/node':
         specifier: latest
         version: 20.11.17
+      '@types/react':
+        specifier: latest
+        version: 18.2.56
+      '@types/react-dom':
+        specifier: latest
+        version: 18.2.19
       '@typescript-eslint/eslint-plugin':
         specifier: latest
         version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.56.0)(typescript@5.3.3)
@@ -72,13 +78,13 @@ importers:
   packages/components:
     dependencies:
       '@heliosgraphics/fractures':
-        specifier: 5.2.3
+        specifier: latest
         version: 5.2.3
       '@heliosgraphics/icons':
-        specifier: 0.0.8
+        specifier: latest
         version: 0.0.8
       '@heliosgraphics/utils':
-        specifier: 5.2.0
+        specifier: latest
         version: 5.2.0
       '@react-spring/web':
         specifier: ^9.7.3
@@ -114,6 +120,12 @@ importers:
       '@types/node':
         specifier: latest
         version: 20.11.17
+      '@types/react':
+        specifier: latest
+        version: 18.2.56
+      '@types/react-dom':
+        specifier: latest
+        version: 18.2.19
       '@typescript-eslint/eslint-plugin':
         specifier: latest
         version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.56.0)(typescript@5.3.3)
@@ -151,7 +163,7 @@ importers:
   packages/workshop:
     dependencies:
       '@heliosgraphics/fractures':
-        specifier: 5.2.3
+        specifier: latest
         version: 5.2.3
       '@heliosgraphics/ui':
         specifier: workspace:*
@@ -165,6 +177,16 @@ importers:
       react-dom:
         specifier: latest
         version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@types/node':
+        specifier: latest
+        version: 20.11.19
+      '@types/react':
+        specifier: latest
+        version: 18.2.56
+      '@types/react-dom':
+        specifier: latest
+        version: 18.2.19
 
 packages:
 
@@ -1114,16 +1136,22 @@ packages:
       undici-types: 5.26.5
     dev: true
 
+  /@types/node@20.11.19:
+    resolution: {integrity: sha512-7xMnVEcZFu0DikYjWOlRq7NTPETrm7teqUT2WkQjrTIkEgUyyGdWsj/Zg8bEJt5TNklzbPD1X3fqfsHw3SpapQ==}
+    dependencies:
+      undici-types: 5.26.5
+    dev: true
+
   /@types/prop-types@15.7.11:
     resolution: {integrity: sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==}
 
   /@types/react-dom@18.2.19:
     resolution: {integrity: sha512-aZvQL6uUbIJpjZk4U8JZGbau9KDeAwMfmhyWorxgBkqDIEf6ROjRozcmPIicqsUwPUjbkDfHKgGee1Lq65APcA==}
     dependencies:
-      '@types/react': 18.2.55
+      '@types/react': 18.2.56
 
-  /@types/react@18.2.55:
-    resolution: {integrity: sha512-Y2Tz5P4yz23brwm2d7jNon39qoAtMMmalOQv6+fEFt1mT+FcM3D841wDpoUvFXhaYenuROCy3FZYqdTjM7qVyA==}
+  /@types/react@18.2.56:
+    resolution: {integrity: sha512-NpwHDMkS/EFZF2dONFQHgkPRwhvgq/OAvIaGQzxGSBmaeR++kTg6njr15Vatz0/2VcCEwJQFi6Jf4Q0qBu0rLA==}
     dependencies:
       '@types/prop-types': 15.7.11
       '@types/scheduler': 0.16.8

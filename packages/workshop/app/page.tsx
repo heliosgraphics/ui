@@ -51,7 +51,7 @@ export default function Home() {
 		<WorkshopProvider>
 			<>
 				<WorkshopHeader />
-				<Column width={960} isColumnCentered={true} gap="px" padding={[0, 12, 16]}>
+				<Column width={960} isColumnCentered={true} gap={1} padding={[0, 12, 16]}>
 					<Flex
 						isColumn={true}
 						gap={8}

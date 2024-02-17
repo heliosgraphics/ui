@@ -17,7 +17,7 @@
 		"baseUrl": "./",
 		"paths": {},
 		"incremental": true,
-		"types": ["node"],
+		"types": ["node", "react", "react-dom"],
 		"strictNullChecks": true,
 		"plugins": [
 			{

@@ -11,7 +11,7 @@ const IconSelector: FC<IconSelectorProps> = () => {
 
 	return (
 		<Flex gap={4}>
-			<Select items={icons} onChange={onIconChange} selectedValue={icon} />
+			<Select label="Icon Selector" isLabelHidden={true} items={icons} onChange={onIconChange} selectedValue={icon} />
 		</Flex>
 	)
 }
