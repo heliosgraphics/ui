@@ -1,28 +1,10 @@
 import { forwardRef, type Ref } from "react"
-import { getFlexUtility } from "./Flex.utils"
+import { getFlexUtility, getSafeFlexProps } from "../Flex/Flex.utils"
 import type { FlexProps } from "./Flex.types"
 
 const Flex = forwardRef<HTMLDivElement, FlexProps>((props: FlexProps, ref: Ref<HTMLDivElement>) => {
 	const flexClasses: string = getFlexUtility(props)
-
-	const {
-		gap,
-		isBetween,
-		isCentered,
-		isColumn,
-		isInline,
-		isWrapping,
-		isXCentered,
-		isYCentered,
-		isStretch,
-		yAlign,
-		padding,
-		paddingX,
-		paddingY,
-		withBackground,
-		withRadius,
-		...safeProps
-	} = props
+	const safeProps = getSafeFlexProps(props)
 
 	return (
 		<div {...safeProps} className={flexClasses} onClick={props.onClick} ref={ref}>

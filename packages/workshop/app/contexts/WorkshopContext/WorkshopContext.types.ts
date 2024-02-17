@@ -6,4 +6,6 @@ export interface WorkshopProviderProps {
 	setIntent: Dispatch<SetStateAction<HeliosIntentionType>>
 	color: HeliosColors
 	setColor: Dispatch<SetStateAction<HeliosColors>>
+	hasHeader: boolean
+	setHeader: Dispatch<SetStateAction<boolean>>
 }

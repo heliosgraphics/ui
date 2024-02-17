@@ -1,6 +1,6 @@
 "use client"
 
-import { Column, Details, Flex, Heading, Icon, Text, ThemeSwitcherLoading } from "@heliosgraphics/ui"
+import { Column, Icon, Details, Flex, Heading, Text, ThemeSwitcherLoading } from "@heliosgraphics/ui"
 import { WorkshopProvider } from "./contexts/WorkshopContext"
 import DebugSelector from "./components/DebugSelector"
 import dynamic from "next/dynamic"
@@ -39,6 +39,7 @@ import ExampleTile from "./components/ExampleTile"
 import ExampleTimestamp from "./components/ExampleTimestamp"
 import ExampleToggle from "./components/ExampleToggle"
 import WorkshopControls from "./components/WorkshopControls"
+import WorkshopHeader from "./components/WorkshopHeader"
 
 const ThemeSwitcher = dynamic(() => import("@heliosgraphics/ui/components/ThemeSwitcher"), {
 	ssr: false,
@@ -48,164 +49,167 @@ const ThemeSwitcher = dynamic(() => import("@heliosgraphics/ui/components/ThemeS
 export default function Home() {
 	return (
 		<WorkshopProvider>
-			<Column width={960} isColumnCentered={true}>
-				<Flex isColumn={true} gap={8} padding={8} className="">
-					<Flex isColumn={true}>
-						<Heading level={1} className="flex flex-y-center gap-4">
-							<a href="https://ui.helios.graphics">
-								<Icon size={36} name="eye" />
-							</a>
-							<span>Interface</span>
-						</Heading>
-						<Text type="tiny" fontFamily="mono">
-							from{` `}
-							<a href="https://helios.graphics">Helios</a>
-						</Text>
+			<>
+				<WorkshopHeader />
+				<Column width={960} isColumnCentered={true} gap="px" padding={[0, 12, 16]}>
+					<Flex isColumn={true} gap={8} padding={8} withBackground={true} withRadius="normal">
+						<Flex isColumn={true}>
+							<Heading level={1} className="flex flex-y-center gap-4">
+								<a href="https://ui.helios.graphics">
+									<Icon size={36} name="eye" />
+								</a>
+								<span>Interface</span>
+							</Heading>
+							<Text type="tiny" fontFamily="mono">
+								from{` `}
+								<a href="https://helios.graphics">Helios</a>
+							</Text>
+						</Flex>
+						<Flex gap={8}>
+							<ThemeSwitcher />
+							<DebugSelector />
+						</Flex>
+						<WorkshopControls />
 					</Flex>
-					<Flex gap={8}>
-						<ThemeSwitcher />
-						<DebugSelector />
+					<Flex isColumn={true} gap={8} padding={8} withBackground={true} withRadius="normal">
+						<Details title="Alert">
+							<ExampleAlert />
+						</Details>
+
+						<Details title="Breadcrumb">
+							<ExampleBreadcrumb />
+						</Details>
+
+						<Details title="Button">
+							<ExampleButton />
+						</Details>
+
+						<Details title="ButtonGroup">
+							<ExampleButtonGroup />
+						</Details>
+
+						<Details title="Colors">
+							<ExampleColors />
+						</Details>
+
+						<Details title="Checkbox">
+							<ExampleCheckbox />
+						</Details>
+
+						<Details title="Column">
+							<ExampleColumn />
+						</Details>
+
+						<Details title="Confirm">
+							<ExampleConfirm />
+						</Details>
+
+						<Details title="Dialog">
+							<ExampleDialog />
+						</Details>
+
+						<Details title="Donut">
+							<ExampleDonut />
+						</Details>
+
+						<Details title="Dot">
+							<ExampleDot />
+						</Details>
+
+						<Details title="Dropdown">
+							<ExampleDropdown />
+						</Details>
+
+						<Details title="Flex">
+							<ExampleFlex />
+						</Details>
+
+						<Details title="Grid">
+							<ExampleGrid />
+						</Details>
+
+						<Details title="Heading">
+							<ExampleHeading />
+						</Details>
+
+						<Details title="Icon">
+							<ExampleIcon />
+						</Details>
+
+						<Details title="Input">
+							<ExampleInput />
+						</Details>
+
+						<Details title="Loading">
+							<ExampleLoading />
+						</Details>
+
+						<Details title="Markdown">
+							<ExampleMarkdown />
+						</Details>
+
+						<Details title="Masonry">
+							<ExampleMasonry />
+						</Details>
+
+						<Details title="Pie">
+							<ExamplePie />
+						</Details>
+
+						<Details title="Pill">
+							<ExamplePill />
+						</Details>
+
+						<Details title="Progress">
+							<ExampleProgress />
+						</Details>
+
+						<Details title="Radio">
+							<ExampleRadio />
+						</Details>
+
+						<Details title="Select">
+							<ExampleSelect />
+						</Details>
+
+						<Details title="Shimmer">
+							<ExampleShimmer />
+						</Details>
+
+						<Details title="Slider">
+							<ExampleSlider />
+						</Details>
+
+						<Details title="Spacer">
+							<ExampleSpacer />
+						</Details>
+
+						<Details title="Tabs">
+							<ExampleTabs />
+						</Details>
+
+						<Details title="Text">
+							<ExampleText />
+						</Details>
+
+						<Details title="Textarea">
+							<ExampleTextarea />
+						</Details>
+
+						<Details title="Tile">
+							<ExampleTile />
+						</Details>
+
+						<Details title="Timestamp">
+							<ExampleTimestamp />
+						</Details>
+
+						<Details title="Toggle">
+							<ExampleToggle />
+						</Details>
 					</Flex>
-					<WorkshopControls />
-				</Flex>
-				<Flex isColumn={true} gap={8} padding={8} withBackground={true} withRadius="normal">
-					<Details title="Alert">
-						<ExampleAlert />
-					</Details>
-
-					<Details title="Breadcrumb">
-						<ExampleBreadcrumb />
-					</Details>
-
-					<Details title="Button">
-						<ExampleButton />
-					</Details>
-
-					<Details title="ButtonGroup">
-						<ExampleButtonGroup />
-					</Details>
-
-					<Details title="Colors">
-						<ExampleColors />
-					</Details>
-
-					<Details title="Checkbox">
-						<ExampleCheckbox />
-					</Details>
-
-					<Details title="Column">
-						<ExampleColumn />
-					</Details>
-
-					<Details title="Confirm">
-						<ExampleConfirm />
-					</Details>
-
-					<Details title="Dialog">
-						<ExampleDialog />
-					</Details>
-
-					<Details title="Donut">
-						<ExampleDonut />
-					</Details>
-
-					<Details title="Dot">
-						<ExampleDot />
-					</Details>
-
-					<Details title="Dropdown">
-						<ExampleDropdown />
-					</Details>
-
-					<Details title="Flex">
-						<ExampleFlex />
-					</Details>
-
-					<Details title="Grid">
-						<ExampleGrid />
-					</Details>
-
-					<Details title="Heading">
-						<ExampleHeading />
-					</Details>
-
-					<Details title="Icon">
-						<ExampleIcon />
-					</Details>
-
-					<Details title="Input">
-						<ExampleInput />
-					</Details>
-
-					<Details title="Loading">
-						<ExampleLoading />
-					</Details>
-
-					<Details title="Markdown">
-						<ExampleMarkdown />
-					</Details>
-
-					<Details title="Masonry">
-						<ExampleMasonry />
-					</Details>
-
-					<Details title="Pie">
-						<ExamplePie />
-					</Details>
-
-					<Details title="Pill">
-						<ExamplePill />
-					</Details>
-
-					<Details title="Progress">
-						<ExampleProgress />
-					</Details>
-
-					<Details title="Radio">
-						<ExampleRadio />
-					</Details>
-
-					<Details title="Select">
-						<ExampleSelect />
-					</Details>
-
-					<Details title="Shimmer">
-						<ExampleShimmer />
-					</Details>
-
-					<Details title="Slider">
-						<ExampleSlider />
-					</Details>
-
-					<Details title="Spacer">
-						<ExampleSpacer />
-					</Details>
-
-					<Details title="Tabs">
-						<ExampleTabs />
-					</Details>
-
-					<Details title="Text">
-						<ExampleText />
-					</Details>
-
-					<Details title="Textarea">
-						<ExampleTextarea />
-					</Details>
-
-					<Details title="Tile">
-						<ExampleTile />
-					</Details>
-
-					<Details title="Timestamp">
-						<ExampleTimestamp />
-					</Details>
-
-					<Details title="Toggle">
-						<ExampleToggle />
-					</Details>
-				</Flex>
-			</Column>
+				</Column>
+			</>
 		</WorkshopProvider>
 	)
 }

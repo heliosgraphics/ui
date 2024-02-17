@@ -1,4 +1,7 @@
 import type { FlexProps } from "./Flex.types"
+import type { MainProps } from "../Main/Main.types"
+import type { ColumnProps } from "../Column/Column.types"
+import type { NavigationProps } from "../Navigation/Navigation.types"
 import type { ResponsiveScaleType } from "./Flex.types"
 
 export const getFlexUtility = (props?: FlexProps): string => {
@@ -57,4 +60,32 @@ export const getPadding = (paddingValue?: ResponsiveScaleType): string => {
 	}
 
 	return Array.from(paddingClasses).join(" ")
+}
+
+export const getSafeFlexProps = (props: any = { children: null }): Partial<FlexProps> => {
+	const {
+		gap,
+		isBetween,
+		isCentered,
+		isColumn,
+		isInline,
+		isWrapping,
+		isXCentered,
+		isYCentered,
+		isStretch,
+		yAlign,
+		padding,
+		paddingX,
+		paddingY,
+
+		// random
+		withBackground,
+		withAlternativeBackground,
+		withRadius,
+		isColumnCentered,
+		offsetTop,
+		...safeProps
+	} = props
+
+	return safeProps
 }
