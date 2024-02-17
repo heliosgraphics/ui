@@ -12,3 +12,7 @@
 	border: 0;
 	border-bottom: 1px solid var(--ui-border);
 }
+
+.horizontalSeparatorTransparent {
+	border-bottom: 1px solid var(--ui-bg-glass-border);
+}

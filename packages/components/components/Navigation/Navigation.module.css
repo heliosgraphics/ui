@@ -1,7 +1,3 @@
 .navigation {
 	background-color: var(--ui-bg);
 }
-
-.navigationGlass {
-	background-color: var(--ui-bg-action-hover);
-}

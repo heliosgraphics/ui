@@ -105,6 +105,7 @@ export const getSafeFlexProps = (props: any = { children: null }): Partial<FlexP
 		withBackground,
 		withAlternativeBackground,
 		withRadius,
+		withGlass,
 		isColumnCentered,
 		offsetTop,
 		...safeProps

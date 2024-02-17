@@ -52,18 +52,15 @@ export default function Home() {
 			<>
 				<WorkshopHeader />
 				<Column width={960} isColumnCentered={true} gap="px" padding={[0, 12, 16]}>
-					<Flex isColumn={true} gap={8} padding={8} withBackground={true} withRadius={["none", "small", "normal"]}>
+					<Flex
+						isColumn={true}
+						gap={8}
+						padding={[12, 16, 16]}
+						withBackground={true}
+						withRadius={["none", "small", "normal"]}
+					>
 						<Flex isColumn={true}>
-							<Heading level={1} className="flex flex-y-center gap-4">
-								<a href="https://ui.helios.graphics">
-									<Icon size={36} name="eye" />
-								</a>
-								<span>Interface</span>
-							</Heading>
-							<Text type="tiny" fontFamily="mono">
-								from{` `}
-								<a href="https://helios.graphics">Helios</a>
-							</Text>
+							<Heading level={0}>Hmm Interface</Heading>
 						</Flex>
 						<Flex gap={8}>
 							<ThemeSwitcher />
@@ -71,7 +68,13 @@ export default function Home() {
 						</Flex>
 						<WorkshopControls />
 					</Flex>
-					<Flex isColumn={true} gap={8} padding={8} withBackground={true} withRadius={["none", "small", "normal"]}>
+					<Flex
+						isColumn={true}
+						gap={8}
+						padding={[12, 16, 16]}
+						withBackground={true}
+						withRadius={["none", "small", "normal"]}
+					>
 						<Details title="Alert">
 							<ExampleAlert />
 						</Details>
