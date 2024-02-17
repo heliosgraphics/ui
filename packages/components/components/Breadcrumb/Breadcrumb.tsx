@@ -8,7 +8,7 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ items }) => {
 	if (!items?.length) return null
 
 	return (
-		<Flex isYCentered={true} gap={3} isWrapping={true}>
+		<Flex isYCentered={true} gap={2} isWrapping={true}>
 			{items?.map((item, key) => {
 				const isLast: boolean = Boolean(key + 1 === items?.length)
 

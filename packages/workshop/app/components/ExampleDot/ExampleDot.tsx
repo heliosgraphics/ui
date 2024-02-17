@@ -17,7 +17,7 @@ const ExampleDot: FC<ExampleDotProps> = () => {
 
 	return (
 		<Flex gap={16} isWrapping={true}>
-			<Select items={items} onChange={onColorChange} selectedValue={colorAccent} />
+			<Select label="Color" isLabelHidden={true} items={items} onChange={onColorChange} selectedValue={colorAccent} />
 			<Flex gap={4} isWrapping={true}>
 				{SCALE.map((scale, key) => {
 					return (

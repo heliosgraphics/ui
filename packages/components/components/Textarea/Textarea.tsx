@@ -35,7 +35,9 @@ const Textarea: FC<TextareaProps> = (props) => {
 
 	return (
 		<div className={textareaClasses}>
-			<InputLabel id={htmlFor} label={props.label} isDisabled={isDisabled} isHidden={isLabelHidden} />
+			{!props.isLabelHidden && (
+				<InputLabel id={htmlFor} label={props.label} isDisabled={isDisabled} isHidden={isLabelHidden} />
+			)}
 			<textarea
 				{...goodProps}
 				ref={textareaRef}

@@ -1,30 +1,23 @@
 "use client"
 
 import { useState, type FC } from "react"
-import { Flex, Select, Heading, Separator, type TextProps } from "@heliosgraphics/ui"
+import { Flex, Select, Heading, Separator, type TextProps, type SelectItem } from "@heliosgraphics/ui"
 import type { ExampleHeadingProps } from "./ExampleHeading.types"
 
-const EMPHASIS_LIST: Array<{
-	name: string
-	value: TextProps["emphasis"]
-	isDisabled?: boolean
-}> = [
+const EMPHASIS_LIST: Array<SelectItem> = [
 	{ name: "Primary", value: "primary" },
 	{ name: "Secondary", value: "secondary" },
 	{ name: "Tertiary", value: "tertiary", isDisabled: true },
 ]
 
-const FONT_FAMILIES: Array<{ name: string; value: TextProps["fontFamily"] }> = [
+const FONT_FAMILIES: Array<SelectItem> = [
 	{ name: "Sans", value: "sans" },
 	{ name: "Mono", value: "mono" },
 	{ name: "Serif", value: "serif" },
 ]
 
-const FONT_WEIGHTS: Array<{
-	name: string
-	value: TextProps["fontWeight"] | undefined
-}> = [
-	{ name: "Unset", value: undefined },
+const FONT_WEIGHTS: Array<SelectItem> = [
+	{ name: "Unset", value: "" },
 	{ name: "Thin", value: "thin" },
 	{ name: "Extra-Light", value: "extra-light" },
 	{ name: "Light", value: "light" },

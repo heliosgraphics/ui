@@ -11,5 +11,5 @@ export interface ResultItem {
 }
 
 export interface ResultListProps {
-	items: ReadonlyArray<ResultItem>
+	items?: Array<ResultItem>
 }

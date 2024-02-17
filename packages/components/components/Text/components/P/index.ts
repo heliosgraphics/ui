@@ -1,3 +1,3 @@
-import Tiny from "./Tiny"
+import P from "./P"
 
-export default Tiny
+export default P

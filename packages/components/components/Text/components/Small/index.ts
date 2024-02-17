@@ -1,3 +1,3 @@
-import Tiny from "./Tiny"
+import Small from "./Small"
 
-export default Tiny
+export default Small

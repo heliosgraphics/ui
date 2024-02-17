@@ -37,10 +37,10 @@ const Dropdown: FC<DropdownProps> = ({ isHidden, children, items, isDisabled, po
 	}
 
 	// Make any icon respond to visible state
-	const renderChildren = Children.map(children, (child) => {
+	const renderChildren = Children.map(children, (child: React.ReactElement) => {
 		const caretProps = {
-			...(child.props.icon === "caret-down" && isVisible && { icon: "caret-up" }),
-			...(child.props.icon === "chevron-down" && isVisible && { icon: "chevron-up" }),
+			...(child?.props?.icon === "caret-down" && isVisible && { icon: "caret-up" }),
+			...(child?.props?.icon === "chevron-down" && isVisible && { icon: "chevron-up" }),
 		}
 
 		return cloneElement(child, { ...child.props, ...caretProps })

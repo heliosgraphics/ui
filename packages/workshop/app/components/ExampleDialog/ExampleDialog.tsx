@@ -23,7 +23,7 @@ const ExampleDialog: FC<ExampleDialogProps> = () => {
 			</ButtonGroup>
 			<Dialog onClose={onDialogToggle} title="Dialog" isOpen={isDialogOpen} isCentered={isCentered}>
 				<Flex isColumn={true} gap={8}>
-					<ButtonGroup align="joined">
+					<ButtonGroup align="join">
 						<Button intent="silent" size="small" value="More" icon="arrow-down" onClick={onLongToggle} />
 						<Button intent="silent" size="small" value="Center" icon="bullseye" onClick={onCenterToggle} />
 						<Button intent="silent" size="small" value="Actions" icon="arrow-up" onClick={onActionsToggle} />

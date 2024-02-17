@@ -15,7 +15,7 @@ const ColorGrid: FC<ColorGridProps> = ({ color }) => {
 			<Text type="small">{color.charAt(0).toUpperCase() + color.slice(1)}</Text>
 			<Flex>
 				{OPACITY_SCALE.map((scale, key) => {
-					return <Square key={key} color={color} lightness={scale} />
+					return <Square key={key} lightness={scale} />
 				})}
 			</Flex>
 		</Flex>

@@ -1,17 +1,17 @@
 "use client"
 
 import { useState, type FC } from "react"
-import { Flex, Select, Separator, Text, type TextProps } from "@heliosgraphics/ui"
+import { Flex, Select, Separator, Text, type TextProps, type SelectItem } from "@heliosgraphics/ui"
 import type { ExampleTextProps } from "./ExampleText.types"
 
-const TEXT_TYPES: Array<{ name: string; value: TextProps["type"] }> = [
+const TEXT_TYPES: Array<SelectItem> = [
 	{ name: "Tiny", value: "tiny" },
 	{ name: "Small", value: "small" },
 	{ name: "Paragraph", value: "paragraph" },
 	{ name: "Div", value: "div" },
 ]
 
-const FONT_FAMILIES: Array<{ name: string; value: TextProps["fontFamily"] }> = [
+const FONT_FAMILIES: Array<SelectItem> = [
 	{ name: "Sans", value: "sans" },
 	{ name: "Mono", value: "mono" },
 	{ name: "Serif", value: "serif" },

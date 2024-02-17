@@ -6,7 +6,7 @@ export interface TextareaProps {
 	id?: string
 	isDisabled?: boolean
 	isLabelHidden?: boolean
-	label?: string
+	label: string
 	autoFocus?: boolean
 	name?: string
 	maxLength?: number
