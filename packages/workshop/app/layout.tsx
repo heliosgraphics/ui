@@ -1,7 +1,7 @@
 import "@heliosgraphics/fractures"
 import "@heliosgraphics/fractures/dist/fractures.easings.css"
 import "@heliosgraphics/ui/components.css"
-import { Setup } from "@heliosgraphics/ui"
+import { Main, Setup } from "@heliosgraphics/ui"
 import type { ReactNode } from "react"
 import type { Metadata } from "next"
 
@@ -15,7 +15,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 			<head>
 				<Setup />
 			</head>
-			<body>{children}</body>
+			<body>
+				<Main padding={24} withAlternativeBackground={true}>
+					{children}
+				</Main>
+			</body>
 		</html>
 	)
 }

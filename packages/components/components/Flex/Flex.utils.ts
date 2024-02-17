@@ -29,8 +29,9 @@ export const getFlexUtility = (props?: FlexProps): string => {
 	if (props.radius) flexClasses.add(`radius-${props.radius}`)
 
 	if (props.onClick) flexClasses.add("cursor-pointer")
-
 	if (props.className) flexClasses.add(props.className)
+
+	if (props.withBackground) flexClasses.add("helios-ui-bg")
 
 	return Array.from(flexClasses).join(" ")
 }

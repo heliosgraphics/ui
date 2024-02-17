@@ -93,7 +93,7 @@ const Dialog: FC<DialogProps> = ({ title, children, onClick, isOpen, isCentered,
 				isYCentered={true}
 				padding={8}
 				tabIndex={0}
-				className={`${styles.dialog__header} sticky top-0 z-10 glass-1`}
+				className={`${styles.dialog__header} sticky top-0 z-10 helios-ui-glass-1`}
 			>
 				{!!title ? (
 					<Heading level={4} fontWeight="normal">

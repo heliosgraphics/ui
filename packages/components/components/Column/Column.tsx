@@ -1,10 +1,11 @@
+import { getFlexUtility } from "../Flex/Flex.utils"
 import classNames from "@sindresorhus/class-names"
-import Flex from "../Flex"
 import type { ColumnProps } from "./Column.types"
 import type { FC } from "react"
 
 const Column: FC<ColumnProps> = (props) => {
-	const columnClasses: string = classNames(props.className, {
+	const mainFlexClasses = getFlexUtility({ ...props, isColumn: true })
+	const columnClasses: string = classNames(mainFlexClasses, {
 		["mx-auto"]: props.isColumnCentered,
 	})
 
@@ -14,7 +15,7 @@ const Column: FC<ColumnProps> = (props) => {
 		width: `${props.width ?? 960}px`,
 	}
 
-	return <Flex style={columnStyle} className={columnClasses} {...safeProps} />
+	return <div style={columnStyle} className={columnClasses} {...safeProps} />
 }
 
 export default Column

@@ -264,6 +264,10 @@ a {
 	background-color: var(--ui-text-selected);
 }
 
+html {
+	overscroll-behavior: none;
+}
+
 body {
 	width: 100%;
 
@@ -276,8 +280,13 @@ mark,
 	background-color: var(--ui-text-highlighted);
 }
 
-/* helpers: glass */
-.glass-1 {
+/* helpers: background */
+.helios-ui-bg {
+	background-color: var(--ui-bg);
+}
+
+/* helpers: background / glass */
+.helios-ui-glass-1 {
 	background-color: var(--ui-bg-glass-1);
 	backdrop-filter: blur(3px);
 }

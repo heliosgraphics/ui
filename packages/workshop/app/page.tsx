@@ -1,6 +1,6 @@
 "use client"
 
-import { Details, Flex, Heading, Icon, Text, ThemeSwitcherLoading } from "@heliosgraphics/ui"
+import { Column, Details, Flex, Heading, Icon, Text, ThemeSwitcherLoading } from "@heliosgraphics/ui"
 import { WorkshopProvider } from "./contexts/WorkshopContext"
 import DebugSelector from "./components/DebugSelector"
 import dynamic from "next/dynamic"
@@ -48,8 +48,8 @@ const ThemeSwitcher = dynamic(() => import("@heliosgraphics/ui/components/ThemeS
 export default function Home() {
 	return (
 		<WorkshopProvider>
-			<main>
-				<Flex isColumn={true} gap={8} padding={8} className="sticky top-0 glass-1 z-10">
+			<Column width={960} isColumnCentered={true}>
+				<Flex isColumn={true} gap={8} padding={8} className="">
 					<Flex isColumn={true}>
 						<Heading level={1} className="flex flex-y-center gap-4">
 							<a href="https://ui.helios.graphics">
@@ -68,8 +68,7 @@ export default function Home() {
 					</Flex>
 					<WorkshopControls />
 				</Flex>
-
-				<Flex isColumn={true} gap={8} padding={8}>
+				<Flex isColumn={true} gap={8} padding={8} withBackground={true} className="radius-normal">
 					<Details title="Alert">
 						<ExampleAlert />
 					</Details>
@@ -206,7 +205,7 @@ export default function Home() {
 						<ExampleToggle />
 					</Details>
 				</Flex>
-			</main>
+			</Column>
 		</WorkshopProvider>
 	)
 }

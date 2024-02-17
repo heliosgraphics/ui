@@ -24,4 +24,5 @@ export interface FlexProps extends HTMLAttributes<{}> {
 	radius?: 1 | 2 | 3
 	ref?: RefObject<HTMLDivElement>
 	yAlign?: "top" | "bottom" | "baseline"
+	withBackground?: boolean
 }
