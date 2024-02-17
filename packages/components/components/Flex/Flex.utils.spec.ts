@@ -37,8 +37,7 @@ describe("getFlexUtility", () => {
 		withBackground: true,
 	}
 
-	it("Generates responsive scale", () =>
-		expect(getFlexUtility(MOCK_FLEX_DUPLICATE)).toEqual(MOCK_FLEX_DUPLICATE_CLASSES))
+	it("Generates without duplicated classes", () => expect(getFlexUtility(MOCK_FLEX_DUPLICATE)).toEqual(MOCK_FLEX_DUPLICATE_CLASSES))
 
 	const MOCK_FLEX_RESPONSIVE_CLASSES = `flex mobile:p-0 tablet:p-8 p-16`
 	const MOCK_FLEX_RESPONSIVE: FlexProps = {
@@ -46,6 +45,15 @@ describe("getFlexUtility", () => {
 		padding: [0, 8, 16],
 	}
 
-	it("Generates without duplicated classes", () =>
+	it("Generates responsive padding scale", () =>
 		expect(getFlexUtility(MOCK_FLEX_RESPONSIVE)).toEqual(MOCK_FLEX_RESPONSIVE_CLASSES))
+
+	const MOCK_FLEX_RADIUS_CLASSES = `flex mobile:radius-none tablet:radius-small radius-normal`
+	const MOCK_FLEX_RADIUS: FlexProps = {
+		children: null,
+		withRadius: ["none", "small", "normal"],
+	}
+
+	it("Generates responsive radius scale", () =>
+		expect(getFlexUtility(MOCK_FLEX_RADIUS)).toEqual(MOCK_FLEX_RADIUS_CLASSES))
 })

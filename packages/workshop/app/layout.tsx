@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 			<head>
 				<Setup />
 			</head>
-			<body className="helios-scrollbar">
+			<body>
 				<Main withAlternativeBackground={true} gap="px">
 					{children}
 				</Main>

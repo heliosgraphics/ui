@@ -22,6 +22,7 @@
 	--box-40: 80px;
 	--box-48: 96px;
 
+	--radius-none: 0;
 	--radius-small: 4px;
 	--radius-normal: 8px;
 	--radius-large: 12px;
@@ -388,6 +389,11 @@ mark,
 	.tablet\:p-64 {padding: var(--box-32) !important;}
 	.tablet\:p-80 {padding: var(--box-40) !important;}
 	.tablet\:p-96 {padding: var(--box-48) !important;}
+
+	.tablet\:radius-none {border-radius: var(--radius-none) !important;}
+	.tablet\:radius-small {border-radius: var(--radius-small) !important;}
+	.tablet\:radius-normal {border-radius: var(--radius-normal) !important;}
+	.tablet\:radius-large {border-radius: var(--radius-large) !important;}
 }
 
 @media (min-width: 0) and (max-width: 640px) {
@@ -413,6 +419,11 @@ mark,
 	.mobile\:p-64 {padding: var(--box-32) !important;}
 	.mobile\:p-80 {padding: var(--box-40) !important;}
 	.mobile\:p-96 {padding: var(--box-48) !important;}
+
+	.mobile\:radius-none {border-radius: var(--radius-none) !important;}
+	.mobile\:radius-small {border-radius: var(--radius-small) !important;}
+	.mobile\:radius-normal {border-radius: var(--radius-normal) !important;}
+	.mobile\:radius-large {border-radius: var(--radius-large) !important;}
 }
 
 /* Code highlights */

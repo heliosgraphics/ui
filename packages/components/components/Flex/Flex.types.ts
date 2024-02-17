@@ -1,8 +1,9 @@
 import type { HTMLAttributes, ReactNode } from "react"
-import type { HeliosScale } from "../../types/scale"
+import type { HeliosScale, HeliosRadius } from "../.."
 import type { RefObject } from "react"
 
 export type ResponsiveScaleType = HeliosScale | [HeliosScale, HeliosScale, HeliosScale]
+export type ResponsiveRadiusType = HeliosRadius | [HeliosRadius, HeliosRadius, HeliosRadius]
 
 export interface FlexProps extends HTMLAttributes<{}> {
 	children: ReactNode
@@ -23,7 +24,7 @@ export interface FlexProps extends HTMLAttributes<{}> {
 	padding?: ResponsiveScaleType
 	paddingX?: HeliosScale
 	paddingY?: HeliosScale
-	withRadius?: "" | "normal" | ""
+	withRadius?: ResponsiveRadiusType
 	ref?: RefObject<HTMLDivElement>
 	yAlign?: "top" | "bottom" | "baseline"
 	withBackground?: boolean

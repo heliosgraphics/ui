@@ -52,7 +52,7 @@ export default function Home() {
 			<>
 				<WorkshopHeader />
 				<Column width={960} isColumnCentered={true} gap="px" padding={[0, 12, 16]}>
-					<Flex isColumn={true} gap={8} padding={8} withBackground={true} withRadius="normal">
+					<Flex isColumn={true} gap={8} padding={8} withBackground={true} withRadius={["none", "small", "normal"]}>
 						<Flex isColumn={true}>
 							<Heading level={1} className="flex flex-y-center gap-4">
 								<a href="https://ui.helios.graphics">
@@ -71,7 +71,7 @@ export default function Home() {
 						</Flex>
 						<WorkshopControls />
 					</Flex>
-					<Flex isColumn={true} gap={8} padding={8} withBackground={true} withRadius="normal">
+					<Flex isColumn={true} gap={8} padding={8} withBackground={true} withRadius={["none", "small", "normal"]}>
 						<Details title="Alert">
 							<ExampleAlert />
 						</Details>
