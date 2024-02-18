@@ -10,6 +10,7 @@
 	},
 	"scripts": {
 		"pub:ui": "pnpm publish --access public --filter @heliosgraphics/ui",
+		"pub:icons": "pnpm publish --access public --filter @heliosgraphics/icons",
 		"test": "NODE_ENV=test vitest run",
 		"test:update": "NODE_ENV=test vitest run --update",
 		"test:watch": "NODE_ENV=test vitest",
@@ -17,6 +18,8 @@
 		"ts:watch": "tsc --noEmit --incremental --watch",
 		"dev:workshop": "pnpm run --filter workshop dev",
 		"build:workshop": "pnpm run --filter workshop build",
+		"build:icons": "pnpm run --filter @heliosgraphics/icons build",
+		"export:icons": "pnpm run --filter @heliosgraphics/icons export",
 		"start:workshop": "concurrently --names \"⬜workshop,🔴types\" \"pnpm run dev:workshop\" \"pnpm run ts:watch\"",
 		"prettier:write": "prettier --no-semi --use-tabs --write ./packages/**"
 	},

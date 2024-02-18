@@ -1,0 +1,30 @@
+{
+	"name": "@heliosgraphics/icons",
+	"version": "0.0.10",
+	"license": "MIT",
+	"private": false,
+	"author": "03b8 <03b8@helios.graphics>",
+	"files": [
+		"./out/*.*",
+		"./react/*.*",
+		"meta.ts"
+	],
+	"scripts": {
+		"build": "pnpm run export && pnpm run build:icons && pnpm run build:tsx && pnpm run build:meta",
+		"build:icons": "svgo -f ./src/icons -o ./out --config=./svgo.config.js",
+		"build:tsx": "npx @svgr/cli out --out-dir ./react",
+		"build:meta": "ts-node -O '{\"module\": \"commonjs\"}' ./build.meta.ts",
+		"export": "FIGMA_TOKEN=$(grep FIGMA_TOKEN .env | cut -d '=' -f2) figma-export components $(grep FIGMA_FILE .env | cut -d '=' -f2) -O @figma-export/output-components-as-svg --output ./src"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@figma-export/cli": "latest",
+		"@figma-export/output-components-as-svg": "latest",
+		"@svgr/cli": "latest",
+		"@types/node": "latest",
+		"prettier": "latest",
+		"svgo": "latest",
+		"ts-node": "latest",
+		"typescript": "latest"
+	}
+}

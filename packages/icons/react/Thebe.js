@@ -1,0 +1,11 @@
+import * as React from "react"
+const SvgThebe = (props) => (
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+		<path
+			fillRule="evenodd"
+			d="M5 2h14a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3m0 2a1 1 0 0 0-1 1v.373a24 24 0 0 1 6.022 3.15 4 4 0 0 1 5.455 5.455A24 24 0 0 1 18.628 20H19a1 1 0 0 0 1-1v-7.969A28 28 0 0 0 12.969 4zm11.261 0A30 30 0 0 1 20 7.739V5a1 1 0 0 0-1-1zM8.23 20H5a1 1 0 0 1-1-1v-3.229A16 16 0 0 1 8.229 20m2.36 0A18 18 0 0 0 4 13.412V7.506a22 22 0 0 1 4.568 2.438 4 4 0 0 0 5.488 5.488A22 22 0 0 1 16.495 20zM12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+			clipRule="evenodd"
+		/>
+	</svg>
+)
+export default SvgThebe
