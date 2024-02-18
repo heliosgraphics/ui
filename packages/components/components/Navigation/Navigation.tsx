@@ -1,6 +1,5 @@
 import { getFlexUtility, getSafeFlexProps } from "../Flex/Flex.utils"
 import { getClasses } from "@heliosgraphics/utils/classnames"
-import styles from "./Navigation.module.css"
 import type { FC } from "react"
 import type { NavigationProps } from "./Navigation.types"
 
@@ -13,7 +12,12 @@ const Navigation: FC<NavigationProps> = (props) => {
 	const safeProps = getSafeFlexProps(props)
 
 	return (
-		<nav {...safeProps} style={{ height: `${props.height ?? 0}px` }} className={navigationClasses}>
+		<nav
+			{...safeProps}
+			style={{ height: `${props.height ?? 0}px` }}
+			className={navigationClasses}
+			data-component="Navigation"
+		>
 			{props.children}
 		</nav>
 	)

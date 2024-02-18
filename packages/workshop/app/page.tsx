@@ -1,6 +1,6 @@
 "use client"
 
-import { Column, Details, Flex, Heading, ThemeSwitcherLoading } from "@heliosgraphics/ui"
+import { Column, Details, Flex, Text, Heading, ThemeSwitcherLoading, Separator } from "@heliosgraphics/ui"
 import { WorkshopProvider } from "./contexts/WorkshopContext"
 import DebugSelector from "./components/DebugSelector"
 import dynamic from "next/dynamic"
@@ -40,6 +40,7 @@ import ExampleTimestamp from "./components/ExampleTimestamp"
 import ExampleToggle from "./components/ExampleToggle"
 import WorkshopControls from "./components/WorkshopControls"
 import WorkshopHeader from "./components/WorkshopHeader"
+import uiPackage from "@heliosgraphics/ui/package.json"
 
 const ThemeSwitcher = dynamic(() => import("@heliosgraphics/ui/components/ThemeSwitcher"), {
 	ssr: false,
@@ -60,8 +61,18 @@ export default function Home() {
 						withRadius={["none", "small", "normal"]}
 					>
 						<Flex isColumn={true}>
-							<Heading level={0}>Hmm Interface</Heading>
+							<Heading level={0}>UI</Heading>
+							<Text type="paragraph">this is obviously a work in progress&mdash;compile your own:</Text>
+							<Flex>
+								<Text type="tiny">
+									<code>@heliosgraphics/ui</code>
+								</Text>
+								<Text type="tiny" isNonSelectable={true}>
+									<code>@{uiPackage.version}</code>
+								</Text>
+							</Flex>
 						</Flex>
+						<Separator isLight={true} />
 						<Flex gap={8}>
 							<ThemeSwitcher />
 							<DebugSelector />
