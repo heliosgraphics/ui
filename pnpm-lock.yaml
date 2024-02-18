@@ -81,8 +81,8 @@ importers:
         specifier: ^5.2.4
         version: 5.2.4
       '@heliosgraphics/icons':
-        specifier: ^0.0.8
-        version: 0.0.8
+        specifier: ^0.0.9
+        version: 0.0.9
       '@heliosgraphics/utils':
         specifier: ^5.3.1
         version: 5.3.1
@@ -671,8 +671,8 @@ packages:
     engines: {node: '>=20.11.1', npm: '>=10.2.4'}
     dev: false
 
-  /@heliosgraphics/icons@0.0.8:
-    resolution: {integrity: sha512-mRCLkkUaRKK878OIrRYtfZnp1xpKyB72FVrbVMPBy7dlY+Xvynvv3t5GetQArkXpMqrpqNRwEvMQCWBcsjPNAw==}
+  /@heliosgraphics/icons@0.0.9:
+    resolution: {integrity: sha512-UfYKa9ILumxIhM2yrZOOpoIeDAGw3cUTSB9kTEYydWtQz26wi0WXqVkFYHLRcakRPCU4WCTt9R7QattFW9ExRQ==}
     dev: false
 
   /@heliosgraphics/library@4.0.0-alpha-5:

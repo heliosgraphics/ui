@@ -1,7 +1,7 @@
 import type { FlexProps } from "./Flex.types"
-import type { MainProps } from "../Main/Main.types"
-import type { ColumnProps } from "../Column/Column.types"
-import type { NavigationProps } from "../Navigation/Navigation.types"
+// import type { MainProps } from "../Main/Main.types"
+// import type { ColumnProps } from "../Column/Column.types"
+// import type { NavigationProps } from "../Navigation/Navigation.types"
 import type { ResponsiveScaleType, ResponsiveRadiusType } from "./Flex.types"
 
 export const getFlexUtility = (props?: FlexProps): string => {

@@ -61,7 +61,10 @@ export default function Home() {
 						withRadius={["none", "small", "normal"]}
 					>
 						<Flex isColumn={true}>
-							<Heading level={0}>UI</Heading>
+							<Flex isBetween={true} yAlign="top">
+								<Heading level={0}>UI</Heading>
+								<ThemeSwitcher />
+							</Flex>
 							<Text type="paragraph">this is obviously a work in progress&mdash;compile your own:</Text>
 							<Flex>
 								<Text type="tiny">
@@ -74,7 +77,6 @@ export default function Home() {
 						</Flex>
 						<Separator isLight={true} />
 						<Flex gap={4} isColumn={true}>
-							<ThemeSwitcher />
 							<DebugSelector />
 						</Flex>
 						<WorkshopControls />

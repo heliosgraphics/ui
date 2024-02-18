@@ -7,14 +7,14 @@
 			{
 				"argsIgnorePattern": "^_",
 				"varsIgnorePattern": "^_",
-				"caughtErrorsIgnorePattern": "^_"
-			}
-		]
+				"caughtErrorsIgnorePattern": "^_",
+			},
+		],
 	},
 	"parser": "@babel/eslint-parser",
 	"parserOptions": {
 		"requireConfigFile": false,
 		"sourceType": "module",
-		"ecmaVersion": 2017
-	}
+		"ecmaVersion": 2017,
+	},
 }

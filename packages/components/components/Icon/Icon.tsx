@@ -60,6 +60,7 @@ import Icon_Mail from "@heliosgraphics/icons/react/Mail"
 import Icon_Middot from "@heliosgraphics/icons/react/Middot"
 import Icon_Minus from "@heliosgraphics/icons/react/Minus"
 import Icon_Money from "@heliosgraphics/icons/react/Money"
+import Icon_Moon from "@heliosgraphics/icons/react/Moon"
 import Icon_Paper from "@heliosgraphics/icons/react/Paper"
 import Icon_PaperEmpty from "@heliosgraphics/icons/react/PaperEmpty"
 import Icon_Paste from "@heliosgraphics/icons/react/Paste"
@@ -82,6 +83,7 @@ import Icon_SoraFlash from "@heliosgraphics/icons/react/SoraFlash"
 import Icon_Speaker from "@heliosgraphics/icons/react/Speaker"
 import Icon_Square from "@heliosgraphics/icons/react/Square"
 import Icon_Star from "@heliosgraphics/icons/react/Star"
+import Icon_Sun from "@heliosgraphics/icons/react/Sun"
 import Icon_Tag from "@heliosgraphics/icons/react/Tag"
 import Icon_Thebe from "@heliosgraphics/icons/react/Thebe"
 import Icon_Trash from "@heliosgraphics/icons/react/Trash"
@@ -187,6 +189,7 @@ const ICONS: Record<HeliosIconType, ReactElement> = {
 	middot: <Icon_Middot />,
 	minus: <Icon_Minus />,
 	money: <Icon_Money />,
+	moon: <Icon_Moon />,
 	paper: <Icon_Paper />,
 	paste: <Icon_Paste />,
 	pause: <Icon_Pause />,
@@ -206,6 +209,7 @@ const ICONS: Record<HeliosIconType, ReactElement> = {
 	speaker: <Icon_Speaker />,
 	square: <Icon_Square />,
 	star: <Icon_Star />,
+	sun: <Icon_Sun />,
 	tag: <Icon_Tag />,
 	thebe: <Icon_Thebe />,
 	trash: <Icon_Trash />,
