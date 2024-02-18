@@ -73,7 +73,7 @@ export default function Home() {
 							</Flex>
 						</Flex>
 						<Separator isLight={true} />
-						<Flex gap={8}>
+						<Flex gap={4} isColumn={true}>
 							<ThemeSwitcher />
 							<DebugSelector />
 						</Flex>
