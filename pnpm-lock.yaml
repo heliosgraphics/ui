@@ -78,20 +78,17 @@ importers:
   packages/components:
     dependencies:
       '@heliosgraphics/fractures':
-        specifier: latest
-        version: 5.2.3
+        specifier: ^5.2.4
+        version: 5.2.4
       '@heliosgraphics/icons':
-        specifier: latest
+        specifier: ^0.0.8
         version: 0.0.8
       '@heliosgraphics/utils':
-        specifier: latest
-        version: 5.2.0
+        specifier: ^5.3.1
+        version: 5.3.1
       '@react-spring/web':
         specifier: ^9.7.3
         version: 9.7.3(react-dom@18.2.0)(react@18.2.0)
-      '@sindresorhus/class-names':
-        specifier: ^2.0.0
-        version: 2.0.0
       '@testing-library/react':
         specifier: ^14.2.1
         version: 14.2.1(react-dom@18.2.0)(react@18.2.0)
@@ -114,8 +111,8 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
       react-plock:
-        specifier: ^3.0.2
-        version: 3.0.2(react@18.2.0)
+        specifier: ^3.1.0
+        version: 3.1.0(react@18.2.0)
     devDependencies:
       '@types/node':
         specifier: latest
@@ -163,7 +160,7 @@ importers:
   packages/workshop:
     dependencies:
       '@heliosgraphics/fractures':
-        specifier: latest
+        specifier: ^5
         version: 5.2.3
       '@heliosgraphics/ui':
         specifier: workspace:*
@@ -669,6 +666,11 @@ packages:
     resolution: {integrity: sha512-XZJ8FuPus1XZcwxmcfyvhrB8BCBBgWJ69YOmIG6NFMbaC9VHfZWQx/7aLzenIf9Q8/whEpdQ66JBA6glBHw0vw==}
     dev: false
 
+  /@heliosgraphics/fractures@5.2.4:
+    resolution: {integrity: sha512-e4/OabWEXP3UPlTedyWdYtaj0otv97+2rjYn1yFKg7Gn3KwZ6WnE64UgIqyEsTF6SFnTNQZBiEC9OThoi9YfiA==}
+    engines: {node: '>=20.11.1', npm: '>=10.2.4'}
+    dev: false
+
   /@heliosgraphics/icons@0.0.8:
     resolution: {integrity: sha512-mRCLkkUaRKK878OIrRYtfZnp1xpKyB72FVrbVMPBy7dlY+Xvynvv3t5GetQArkXpMqrpqNRwEvMQCWBcsjPNAw==}
     dev: false
@@ -677,9 +679,9 @@ packages:
     resolution: {integrity: sha512-pIINtAgu/PpePTSMVFaKUVRfHttkJhnsNDOKKZhTuowNOzvn2E/7CklsWlSVVq0vPkP53rn8E+jLCBqRXIfCUQ==}
     dev: false
 
-  /@heliosgraphics/utils@5.2.0:
-    resolution: {integrity: sha512-WBV458d+WwtqyTabMc7gK247+c7+8uSR4ogcmxYjNEi/HeBw4troJQWWS6D/yVsmnVZlj3Se1NSEXjh5sB0OKA==}
-    engines: {node: '>=20.10.0', npm: '>=10.2.3'}
+  /@heliosgraphics/utils@5.3.1:
+    resolution: {integrity: sha512-qX/dZM1K2wxYnz4DUGu5n7Wp8SlhAtYx1za00gwmGeVjTcgAs6ukirem1FP59U9Po37Inm009nPQxhXPfPpysw==}
+    engines: {node: '>=20.11.1', npm: '>=10.2.4'}
     dependencies:
       '@heliosgraphics/library': 4.0.0-alpha-5
       uuid: 9.0.1
@@ -1044,11 +1046,6 @@ packages:
   /@sinclair/typebox@0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     dev: true
-
-  /@sindresorhus/class-names@2.0.0:
-    resolution: {integrity: sha512-TB+lfchVEdXDVZ0huItEbKT7EMnMrGT9gfCI5B9Mg5CjUgyeqwQBcRA66Kwcu4FU3jtOUpUyMYWI1/nDq+VS0Q==}
-    engines: {node: '>=12'}
-    dev: false
 
   /@swc/helpers@0.5.2:
     resolution: {integrity: sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw==}
@@ -3690,8 +3687,8 @@ packages:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: true
 
-  /react-plock@3.0.2(react@18.2.0):
-    resolution: {integrity: sha512-0QfiLna1KfzrB9zN/a5mEKHqSc6twhOndYp2D9tdYv5gpwLBwu563p47mUarBRJv4KVnzCdJz8mW2Lllma0qIA==}
+  /react-plock@3.1.0(react@18.2.0):
+    resolution: {integrity: sha512-Vk30iADOuQ85Pv3OAxTHzHmL0kYAA6SvBbv78ys3y5ObXh9nmUXmfR/E82MCgoTDildnl5TZrS+e3aCcee1xKQ==}
     peerDependencies:
       react: ^18.2.0
     dependencies:

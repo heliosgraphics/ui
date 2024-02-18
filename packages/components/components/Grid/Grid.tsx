@@ -1,9 +1,9 @@
 import { GridProps } from "./Grid.types"
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import type { FC } from "react"
 
 const Grid: FC<GridProps> = ({ columns, children }) => {
-	const gridClasses = classNames("grid", {
+	const gridClasses = getClasses("grid", {
 		[`grid-cols-${columns}`]: columns,
 	})
 

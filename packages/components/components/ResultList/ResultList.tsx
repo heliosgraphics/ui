@@ -1,4 +1,4 @@
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import Flex from "../Flex"
 import Icon from "../Icon"
 import styles from "./ResultList.module.css"
@@ -14,7 +14,7 @@ const ResultList: FC<ResultListProps> = ({ items }) => {
 			{items?.map((item, key) => {
 				if (item.type === "separator") return <li key={key} className={styles.resultList__separator} />
 
-				const itemClasses: string = classNames("flex flex-y-center gap-5", styles.item, {
+				const itemClasses: string = getClasses("flex flex-y-center gap-5", styles.item, {
 					[styles.itemActive]: item.isActive,
 					[styles.itemDisabled]: item.isDisabled,
 				})

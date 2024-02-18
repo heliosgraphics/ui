@@ -1,4 +1,4 @@
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import { Icon, Text, Flex } from "../.."
 import styles from "./Tile.module.css"
 import { useId, type FC } from "react"
@@ -12,7 +12,7 @@ const Tile: FC<TileProps> = ({ size, text, icon, onClick, iconAccent, color, col
 	const tileColor: string = `var(--ui-bg-soft-${color})`
 	const tileColorAccent: string = `hsla(var(--${colorAccent || color}-hue), var(--${colorAccent || color}-saturation), 50%, 0.15)`
 
-	const tileClasses = classNames(styles.tile, {
+	const tileClasses = getClasses(styles.tile, {
 		[styles.tileLarge]: isLarge,
 		["radius-normal"]: isRounded,
 		["radius-max"]: isRound,

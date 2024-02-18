@@ -1,12 +1,12 @@
 import { getFlexUtility, getSafeFlexProps } from "../Flex/Flex.utils"
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import styles from "./Main.module.css"
 import type { FC } from "react"
 import type { MainProps } from "./Main.types"
 
 const Main: FC<MainProps> = (props) => {
 	const mainFlexClasses: string = getFlexUtility({ ...props, isColumn: true })
-	const mainClasses: string = classNames(mainFlexClasses, styles.main, {
+	const mainClasses: string = getClasses(mainFlexClasses, styles.main, {
 		[styles.mainAlternativeBackground]: props.withAlternativeBackground,
 	})
 	const safeProps = getSafeFlexProps(props)

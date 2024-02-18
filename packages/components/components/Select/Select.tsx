@@ -2,14 +2,14 @@ import { useId, type FC } from "react"
 import Flex from "../Flex"
 import Icon from "../Icon"
 import styles from "./Select.module.css"
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import InputLabel from "../InputLabel"
 import type { SelectProps } from "./Select.types"
 
 const Select: FC<SelectProps> = ({ selectedValue, onChange, isLabelHidden, isDisabled, items, id, label }) => {
 	const htmlFor: string = id || useId()
 
-	const selectClasses: string = classNames(styles.select, {
+	const selectClasses: string = getClasses(styles.select, {
 		[styles.selectDisabled]: isDisabled,
 		[styles.selectHiddenLabel]: !label || isLabelHidden,
 	})

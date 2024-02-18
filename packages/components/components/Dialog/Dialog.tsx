@@ -5,7 +5,7 @@ import styles from "./Dialog.module.css"
 import Flex from "../Flex"
 import Button from "../Button"
 import ButtonGroup from "../ButtonGroup"
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import Heading from "../Heading"
 import { animated } from "@react-spring/web"
 import type { DialogProps } from "./Dialog.types"
@@ -82,7 +82,7 @@ const Dialog: FC<DialogProps> = ({ title, children, onClick, isOpen, isCentered,
 		return isDialog && onClose()
 	}
 
-	const dialogClasses: string = classNames(styles.dialog, "helios-scrollbar", {
+	const dialogClasses: string = getClasses(styles.dialog, "helios-scrollbar", {
 		[styles.dialogCentered]: isCentered,
 	})
 

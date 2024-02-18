@@ -1,4 +1,4 @@
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import styles from "./Radio.module.css"
 import Text from "../Text"
 import { type FC, useId } from "react"
@@ -6,7 +6,7 @@ import type { RadioProps } from "./Radio.types"
 
 const Radio: FC<RadioProps> = ({ id, isSmall, isDisabled, intent, onChange, value, state, label }) => {
 	const radioId: string = id || useId()
-	const radioClasses = classNames(styles.radio, {
+	const radioClasses = getClasses(styles.radio, {
 		[styles.radioAdvise]: intent === "advise",
 		[styles.radioAutomation]: intent === "automation",
 		[styles.radioConfirmation]: intent === "confirmation",
@@ -20,7 +20,7 @@ const Radio: FC<RadioProps> = ({ id, isSmall, isDisabled, intent, onChange, valu
 		[styles.radioSmall]: isSmall,
 	})
 
-	const radioLabelClasses = classNames(styles.radio__radioLabel, "flex flex-y-center flex-wrap gap-4")
+	const radioLabelClasses = getClasses(styles.radio__radioLabel, "flex flex-y-center flex-wrap gap-4")
 
 	return (
 		<div className={radioClasses}>

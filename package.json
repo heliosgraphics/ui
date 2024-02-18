@@ -4,6 +4,10 @@
 	"author": "03b8 <03b8@helios.graphics>",
 	"private": false,
 	"type": "module",
+	"engines": {
+		"npm": ">=10.2.4",
+		"node": ">=20.11.1"
+	},
 	"scripts": {
 		"pub:ui": "pnpm publish --access public --filter @heliosgraphics/ui",
 		"test": "NODE_ENV=test vitest run",

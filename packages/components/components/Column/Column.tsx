@@ -1,11 +1,11 @@
 import { getFlexUtility, getSafeFlexProps } from "../Flex/Flex.utils"
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import type { ColumnProps } from "./Column.types"
 import type { FC } from "react"
 
 const Column: FC<ColumnProps> = (props) => {
 	const mainFlexClasses = getFlexUtility({ ...props, isColumn: true })
-	const columnClasses: string = classNames(mainFlexClasses, {
+	const columnClasses: string = getClasses(mainFlexClasses, {
 		["mx-auto"]: props.isColumnCentered,
 	})
 

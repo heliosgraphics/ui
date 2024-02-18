@@ -1,5 +1,5 @@
 import { useId } from "react"
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import Text from "../Text"
 import styles from "./Toggle.module.css"
 import type { FC } from "react"
@@ -7,7 +7,7 @@ import type { ToggleProps } from "./Toggle.types"
 
 const Toggle: FC<ToggleProps> = ({ id, isChecked, isSmall, isRequired, isDisabled, intent, onChange, label }) => {
 	const toggleId: string = id || useId()
-	const toggleClasses = classNames(styles.toggle, {
+	const toggleClasses = getClasses(styles.toggle, {
 		[styles.toggleAdvise]: intent === "advise",
 		[styles.toggleAutomation]: intent === "automation",
 		[styles.toggleConfirmation]: intent === "confirmation",
@@ -21,7 +21,7 @@ const Toggle: FC<ToggleProps> = ({ id, isChecked, isSmall, isRequired, isDisable
 		[styles.toggleSmall]: isSmall,
 	})
 
-	const toggleLabelClasses = classNames(styles.toggle__toggleLabel, "flex flex-y-center gap-2 flex-wrap")
+	const toggleLabelClasses = getClasses(styles.toggle__toggleLabel, "flex flex-y-center gap-2 flex-wrap")
 
 	return (
 		<div className={toggleClasses}>

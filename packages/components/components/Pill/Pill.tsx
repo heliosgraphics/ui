@@ -1,4 +1,4 @@
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import { Flex, Icon } from "../.."
 import styles from "./Pill.module.css"
 import Text from "../Text/Text"
@@ -10,7 +10,7 @@ const Pill: FC<PillProps> = ({ color = "gray", isMono, label, isSmall, icon, isR
 	const pillColor: string = `hsla(var(--${color}-hue), var(--${color}-saturation), 50%, 0.25)`
 	const pillColorDark: string = `hsl(var(--${color}-hue), var(--${color}-saturation), 40%)`
 
-	const pillClass = classNames("non-selectable break-word", styles.pill, {
+	const pillClass = getClasses("non-selectable break-word", styles.pill, {
 		[styles.pillRounded]: isRounded,
 		[`radius-small`]: !isRounded,
 		[styles.pillNormal]: !isSmall,

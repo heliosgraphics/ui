@@ -4,7 +4,7 @@
 	"author": "03b8 <03b8@helios.graphics>",
 	"private": false,
 	"type": "module",
-	"description": "Thebe Components",
+	"description": "Helios UI",
 	"scripts": {
 		"pub:components": "pnpm publish --access public",
 		"test": "NODE_ENV=test vitest run",
@@ -26,18 +26,17 @@
 		"index.ts"
 	],
 	"dependencies": {
-		"@heliosgraphics/fractures": "latest",
-		"@heliosgraphics/icons": "latest",
-		"@heliosgraphics/utils": "latest",
+		"@heliosgraphics/fractures": "^5.2.4",
+		"@heliosgraphics/icons": "^0.0.8",
+		"@heliosgraphics/utils": "^5.3.1",
 		"@react-spring/web": "^9.7.3",
-		"@sindresorhus/class-names": "^2.0.0",
 		"@testing-library/react": "^14.2.1",
 		"@use-gesture/react": "^10.3.0",
 		"dayjs": "^1.11.10",
 		"highlight.js": "^11.9.0",
 		"markdown-it": "^14.0.0",
 		"react-dom": "^18.2.0",
-		"react-plock": "^3.0.2",
+		"react-plock": "^3.1.0",
 		"react": "^18.2.0"
 	},
 	"devDependencies": {

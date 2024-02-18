@@ -3,7 +3,7 @@
 import { useId, useRef, useEffect } from "react"
 import Text from "../Text"
 import styles from "./Textarea.module.css"
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import InputLabel from "../InputLabel"
 import type { FC } from "react"
 import type { TextareaProps } from "./Textarea.types"
@@ -13,7 +13,7 @@ const Textarea: FC<TextareaProps> = (props) => {
 	const { autoComplete, helperText, isDisabled, isLabelHidden, ...goodProps } = props
 
 	const htmlFor: string = props.id || useId()
-	const textareaClasses: string = classNames(styles.textarea, "flex flex-column", {
+	const textareaClasses: string = getClasses(styles.textarea, "flex flex-column", {
 		[styles.textareaDisabled]: props.isDisabled,
 	})
 

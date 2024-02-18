@@ -1,4 +1,4 @@
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import Icon_ArrowDown from "@heliosgraphics/icons/react/ArrowDown"
 import Icon_ArrowLeft from "@heliosgraphics/icons/react/ArrowLeft"
 import Icon_ArrowRight from "@heliosgraphics/icons/react/ArrowRight"
@@ -224,7 +224,7 @@ const Icon: FC<IconProps> = ({ name, className, emphasis, size }) => {
 		width: size + "px",
 	}
 
-	const iconClasses: string = classNames(styles.icon, className, "flex flex-center", {
+	const iconClasses: string = getClasses(styles.icon, className, "flex flex-center", {
 		[styles.iconInherit]: !emphasis,
 		[styles.iconPrimary]: emphasis === "primary",
 		[styles.iconSecondary]: emphasis === "secondary",

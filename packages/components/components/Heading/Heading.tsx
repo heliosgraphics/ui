@@ -1,5 +1,5 @@
 import { getTypographyUtility } from "../Text/Text.utils"
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import H0 from "./components/H0/H0"
 import H1 from "./components/H1/H1"
 import H2 from "./components/H2/H2"
@@ -12,7 +12,7 @@ import type { BaseHeadingProps, HeadingProps } from "./Heading.types"
 import type { FC } from "react"
 
 const Heading: FC<HeadingProps> = (props) => {
-	const headingClasses: string = classNames(props.className, styles.heading, {
+	const headingClasses: string = getClasses(props.className, styles.heading, {
 		[styles.headingPrimary]: props.emphasis === "primary",
 		[styles.headingSecondary]: props.emphasis === "secondary",
 		[styles.headingTertiary]: props.emphasis === "tertiary",

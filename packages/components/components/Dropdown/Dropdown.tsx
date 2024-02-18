@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef, Children, cloneElement, type FC } from "react"
 import { ANIMATION_FAST } from "../../constants/animations"
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import ResultList from "../ResultList"
 import styles from "./Dropdown.module.css"
 import type { MouseEvent } from "react"
@@ -24,7 +24,7 @@ const Dropdown: FC<DropdownProps> = ({ isHidden, children, items, isDisabled, po
 
 	stateRef.current = isHovering
 
-	const dropdownClasses: string = classNames(styles.dropdown, {
+	const dropdownClasses: string = getClasses(styles.dropdown, {
 		[styles.dropdownLeft]: position === "left",
 		[styles.dropdownRight]: position === "right" || !position,
 	})
@@ -48,7 +48,7 @@ const Dropdown: FC<DropdownProps> = ({ isHidden, children, items, isDisabled, po
 
 	const onSetVisible = () => setVisible(!isVisible)
 
-	const navClasses: string = classNames(styles.dropdown__nav, {
+	const navClasses: string = getClasses(styles.dropdown__nav, {
 		[styles.dropdown__navActive]: isVisible,
 	})
 

@@ -1,4 +1,4 @@
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import styles from "./Loading.module.css"
 import type { FC } from "react"
 import type { LoadingProps } from "./Loading.types"
@@ -8,7 +8,7 @@ const Loading: FC<LoadingProps> = ({ className, size }) => {
 	const cSize = rSize + 2
 	const dashSize = size + cSize
 
-	const loadingClasses: string = classNames(className, styles.loading, {
+	const loadingClasses: string = getClasses(className, styles.loading, {
 		[styles.loading32]: size === 10,
 		[styles.loading64]: size === 20,
 		[styles.loading128]: size === 40,

@@ -1,4 +1,4 @@
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import { Dot, Flex, Icon, Loading, Text } from "../.."
 import styles from "./Button.module.css"
 import type { ButtonProps } from "./Button.types"
@@ -28,7 +28,7 @@ const Button: FC<ButtonProps> = ({
 }) => {
 	const isIconOnlyLoading: boolean = !!isIconOnly && !!isLoading
 
-	const buttonClasses = classNames(styles.button, "relative cursor-pointer", {
+	const buttonClasses = getClasses(styles.button, "relative cursor-pointer", {
 		[styles.buttonAdvise]: intent === "advise",
 		[styles.buttonAutomation]: intent === "automation",
 		[styles.buttonConfirmation]: intent === "confirmation",
@@ -55,7 +55,7 @@ const Button: FC<ButtonProps> = ({
 		[styles.buttonIconOnlyLoading]: isIconOnlyLoading,
 	})
 
-	const buttonInputClasses = classNames("sans fw-medium", {
+	const buttonInputClasses = getClasses("sans fw-medium", {
 		tiny: size === "tiny" || size === "small",
 		"small ": !size || size === "normal",
 		"radius-max": isRounded,
@@ -63,7 +63,7 @@ const Button: FC<ButtonProps> = ({
 		"px-4": size !== "normal" && !isIconOnly,
 	})
 
-	const buttonIconClasses = classNames(styles.button__icon, "relative")
+	const buttonIconClasses = getClasses(styles.button__icon, "relative")
 	const buttonLoadingSize: 10 | 20 = size && size !== "normal" ? 10 : 20
 
 	const isButton: boolean = type !== "file"

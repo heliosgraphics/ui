@@ -1,10 +1,10 @@
 import { ShimmerProps } from "./Shimmer.types"
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import styles from "./Shimmer.module.css"
 import type { FC } from "react"
 
 const Shimmer: FC<ShimmerProps> = ({ isRounded, paddingTop, paddingBottom, height, width }) => {
-	const shimmerDivClasses: string = classNames({
+	const shimmerDivClasses: string = getClasses({
 		["radius-max"]: isRounded,
 		["radius-3"]: !isRounded,
 	})

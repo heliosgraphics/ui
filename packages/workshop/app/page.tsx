@@ -1,6 +1,6 @@
 "use client"
 
-import { Column, Icon, Details, Flex, Heading, Text, ThemeSwitcherLoading } from "@heliosgraphics/ui"
+import { Column, Details, Flex, Heading, ThemeSwitcherLoading } from "@heliosgraphics/ui"
 import { WorkshopProvider } from "./contexts/WorkshopContext"
 import DebugSelector from "./components/DebugSelector"
 import dynamic from "next/dynamic"

@@ -1,7 +1,7 @@
 "use client"
 
 import { useId, type FC } from "react"
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import Flex from "../Flex"
 import InputLabel from "../InputLabel"
 import Loading from "../Loading"
@@ -29,7 +29,7 @@ const Input: FC<InputProps> = ({
 	const htmlFor: string = useId()
 	const showingResults: boolean = Boolean(!!results?.length && showResults)
 
-	const inputClasses: string = classNames(styles.input, "relative flex flex-column", {
+	const inputClasses: string = getClasses(styles.input, "relative flex flex-column", {
 		[styles.inputDisabled]: isDisabled,
 		[styles.inputShowingResults]: showingResults,
 	})

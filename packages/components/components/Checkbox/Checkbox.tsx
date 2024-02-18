@@ -1,5 +1,5 @@
 import { useId } from "react"
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import { Icon, Text } from "../.."
 import styles from "./Checkbox.module.css"
 import type { FC } from "react"
@@ -7,7 +7,7 @@ import type { CheckboxProps } from "./Checkbox.types"
 
 const Checkbox: FC<CheckboxProps> = ({ id, isChecked, isSmall, isDisabled, intent, onChange, label }) => {
 	const checkboxId: string = id || useId()
-	const checkboxClasses = classNames(styles.checkbox, {
+	const checkboxClasses = getClasses(styles.checkbox, {
 		[styles.checkboxAdvise]: intent === "advise",
 		[styles.checkboxAutomation]: intent === "automation",
 		[styles.checkboxConfirmation]: intent === "confirmation",
@@ -21,7 +21,7 @@ const Checkbox: FC<CheckboxProps> = ({ id, isChecked, isSmall, isDisabled, inten
 		[styles.checkboxSmall]: isSmall,
 	})
 
-	const checkboxLabelClasses = classNames(styles.checkbox__checkboxLabel, "flex flex-y-center flex-wrap gap-4")
+	const checkboxLabelClasses = getClasses(styles.checkbox__checkboxLabel, "flex flex-y-center flex-wrap gap-4")
 
 	return (
 		<div className={checkboxClasses}>

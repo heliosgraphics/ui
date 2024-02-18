@@ -1,11 +1,11 @@
 import { ButtonGroupProps } from "./ButtonGroup.types"
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import Flex from "../Flex"
 import styles from "./ButtonGroup.module.css"
 import type { FC } from "react"
 
 const ButtonGroup: FC<ButtonGroupProps> = ({ className, children, isVertical, align = "left" }) => {
-	const buttonGroupClasses: string = classNames(className, {
+	const buttonGroupClasses: string = getClasses(className, {
 		[styles.buttonGroupLeft]: align === "left",
 		[styles.buttonGroupCenter]: align === "center",
 		[styles.buttonGroupRight]: align === "right",

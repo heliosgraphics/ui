@@ -1,11 +1,11 @@
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import HRMarkup from "../HRMarkup"
 import styles from "./HorizontalSeparator.module.css"
 import type { FC } from "react"
 import type { SeparatorProps } from "../../../Separator/Separator.types"
 
 const HorizontalSeparator: FC<SeparatorProps> = ({ isLight, isTransparent, className }) => {
-	const hrClassNames: string = classNames(styles.horizontalSeparator, className, {
+	const hrClassNames: string = getClasses(styles.horizontalSeparator, className, {
 		[styles.horizontalSeparatorRegular]: !isLight,
 		[styles.horizontalSeparatorLight]: isLight,
 		[styles.horizontalSeparatorTransparent]: isTransparent,

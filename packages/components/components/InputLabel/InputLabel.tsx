@@ -1,6 +1,6 @@
 import { useId, type FC } from "react"
 import styles from "./InputLabel.module.css"
-import classNames from "@sindresorhus/class-names"
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import type { InputLabelProps } from "./InputLabel.types"
 
 const InputLabel: FC<InputLabelProps> = ({ id, label, isDisabled, isHidden }) => {
@@ -8,7 +8,7 @@ const InputLabel: FC<InputLabelProps> = ({ id, label, isDisabled, isHidden }) =>
 
 	if (isHidden || !label) return null
 
-	const inputLabelClasses: string = classNames(styles.inputLabel, {
+	const inputLabelClasses: string = getClasses(styles.inputLabel, {
 		[styles.inputLabelDisabled]: isDisabled,
 	})
 
