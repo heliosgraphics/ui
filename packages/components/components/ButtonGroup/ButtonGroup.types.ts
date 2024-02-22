@@ -1,8 +1,8 @@
-import type { ReactNode } from "react"
+import type { HeliosChildrenType } from "../.."
 
 export interface ButtonGroupProps {
 	align?: "left" | "center" | "right" | "join"
 	className?: string
-	children: ReactNode
+	children: HeliosChildrenType
 	isVertical?: boolean
 }

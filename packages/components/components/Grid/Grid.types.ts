@@ -1,7 +1,7 @@
-import type { ReactNode } from "react"
+import type { HeliosChildrenType } from "../.."
 
 export interface GridProps {
 	columns: number
-	children: ReactNode
+	children: HeliosChildrenType
 	isResponsive?: boolean
 }

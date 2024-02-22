@@ -1,5 +1,5 @@
-import type { ReactNode } from "react"
+import type { HeliosChildrenType } from "../.."
 
 export interface MasonryProps {
-	children: ReactNode
+	children: HeliosChildrenType
 }

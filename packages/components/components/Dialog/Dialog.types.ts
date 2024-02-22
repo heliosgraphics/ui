@@ -1,8 +1,7 @@
-import type { HeliosOnClickType } from "../.."
-import type { ReactNode } from "react"
+import type { HeliosOnClickType, HeliosChildrenType } from "../.."
 
 export interface DialogProps {
-	children: ReactNode
+	children: HeliosChildrenType
 	isOpen?: boolean
 	isCentered?: boolean
 	onClose: (_?: unknown) => Promise<void> | void

@@ -1,9 +1,9 @@
-import type { ReactNode } from "react"
+import type { HeliosChildrenType } from "../.."
 import type { HeliosIconType } from "../.."
 import type { HeliosIntentionType } from "../../types/intentions"
 
 export interface AlertProps {
-	children: ReactNode
+	children: HeliosChildrenType
 	icon?: HeliosIconType
 	onClose?: (event?: unknown) => void
 	title?: string

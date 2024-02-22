@@ -54,7 +54,7 @@ export { useIntersector } from "./hooks/useIntersector"
 
 // types
 export type { HeliosColors } from "./types/colors"
-export type { HeliosOnClickType } from "./types/components"
+export type { HeliosOnClickType, HeliosChildrenType } from "./types/components"
 export type { HeliosScale, HeliosRadius } from "./types/scale"
 export type { HeliosIntentionType, HeliosEmphasisType } from "./types/intentions"
 export type { HeliosIconType } from "./types/icons"

@@ -1,9 +1,10 @@
-import type { HTMLAttributes, ReactNode } from "react"
-import type { HeliosEmphasisType, HeliosOnClickType } from "../.."
+import type { HTMLAttributes } from "react"
+import type { HeliosEmphasisType, HeliosChildrenType, HeliosOnClickType } from "../.."
+
 
 export interface BaseTextProps extends HTMLAttributes<HTMLDivElement | HTMLParagraphElement | HTMLHeadingElement> {
 	style?: object
-	children: ReactNode
+	children: HeliosChildrenType
 	className?: string
 	onClick?: HeliosOnClickType
 }
