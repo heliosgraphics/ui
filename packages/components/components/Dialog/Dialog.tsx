@@ -76,8 +76,9 @@ const Dialog: FC<DialogProps> = ({ title, children, onClick, isOpen, isCentered,
 
 	if (!isOpen) return null
 
-	const onDialogClose = (event) => {
-		const isDialog = event?.target?.tagName === "DIALOG"
+	// TODO 03b8 SyntheticBaseEvent<HTMLDialogElement>
+	const onDialogClose = (event: any): boolean | void | Promise<void> => {
+		const isDialog: boolean = event?.target?.tagName === "DIALOG"
 
 		return isDialog && onClose()
 	}
