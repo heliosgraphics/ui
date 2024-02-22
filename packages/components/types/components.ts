@@ -1,1 +1,1 @@
-export type HeliosOnClickType = (_?: unknown) => Promise<void> | void
+export type HeliosOnClickType = (_?: unknown) => Promise<unknown> | void
