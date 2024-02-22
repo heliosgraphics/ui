@@ -1,3 +1,4 @@
+import { HeliosScale } from "packages/components/types/scale"
 import type { FlexProps } from "./Flex.types"
 // import type { MainProps } from "../Main/Main.types"
 // import type { ColumnProps } from "../Column/Column.types"
@@ -55,7 +56,7 @@ export const getPadding = (paddingValue?: ResponsiveScaleType): string => {
 	if (!isArray) return `p-${paddingValue}`
 
 	for (let index = 0; index < 3; index++) {
-		const element = paddingValue[index]
+		const element = <Array<HeliosScale>>paddingValue[index]
 
 		if (index === 0) paddingClasses.add(`mobile:p-${element ?? 0}`)
 		if (index === 1) paddingClasses.add(`tablet:p-${element ?? 0}`)
