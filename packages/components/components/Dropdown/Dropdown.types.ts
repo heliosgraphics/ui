@@ -1,7 +1,8 @@
-import type { HeliosChildrenType, ResultItem } from "../.."
+import type { ResultItem } from "../.."
+import type { ReactElement } from "react"
 
 export interface DropdownProps {
-	children: HeliosChildrenType
+	children: ReactElement<unknown>
 	items: Array<ResultItem>
 	isHidden?: boolean
 	isDisabled?: boolean
