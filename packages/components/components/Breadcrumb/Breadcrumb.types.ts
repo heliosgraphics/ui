@@ -1,8 +1,10 @@
+import type { HeliosOnClickType } from '../..'
+
 export interface BreadCrumbItem {
 	isActive?: boolean
 	name: string
 	href: string
-	onClick?: (_?: unknown) => void
+	onClick?: HeliosOnClickType
 }
 
 export interface BreadcrumbProps {

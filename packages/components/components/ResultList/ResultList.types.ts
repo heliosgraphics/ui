@@ -1,4 +1,4 @@
-import type { HeliosIconType } from "../.."
+import type { HeliosIconType, HeliosOnClickType } from "../.."
 
 export interface ResultItem {
 	description?: string
@@ -7,7 +7,7 @@ export interface ResultItem {
 	isActive?: boolean
 	isDisabled?: boolean
 	name: string
-	onClick?: (event?: unknown) => Promise<void> | void
+	onClick?: HeliosOnClickType
 }
 
 export interface ResultListProps {

@@ -1,5 +1,4 @@
-import type { HeliosIconType } from "../.."
-import type { HeliosColors } from "../../types/colors"
+import type { HeliosIconType, HeliosColors, HeliosOnClickType } from "../.."
 
 export interface TileProps {
 	color: HeliosColors
@@ -8,7 +7,7 @@ export interface TileProps {
 	iconAccent?: HeliosIconType
 	isRound?: boolean
 	isRounded?: boolean
-	onClick?: (event?: unknown) => Promise<void> | void
+	onClick?: HeliosOnClickType
 	size: number
 	text?: string
 }

@@ -1,11 +1,11 @@
 import type { HTMLAttributes, ReactNode } from "react"
-import type { HeliosEmphasisType } from "../../types/intentions"
+import type { HeliosEmphasisType, HeliosOnClickType } from "../.."
 
 export interface BaseTextProps extends HTMLAttributes<HTMLDivElement | HTMLParagraphElement | HTMLHeadingElement> {
 	style?: object
 	children: ReactNode
 	className?: string
-	onClick?: (event?: unknown) => Promise<void> | void
+	onClick?: HeliosOnClickType
 }
 
 export interface TextProps extends BaseTextProps {

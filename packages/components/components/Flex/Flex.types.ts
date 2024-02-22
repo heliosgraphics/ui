@@ -1,5 +1,5 @@
 import type { HTMLAttributes, ReactNode } from "react"
-import type { HeliosScale, HeliosRadius } from "../.."
+import type { HeliosScale, HeliosRadius, HeliosOnClickType } from "../.."
 import type { RefObject } from "react"
 
 export type ResponsiveScaleType = HeliosScale | [HeliosScale, HeliosScale, HeliosScale]
@@ -20,7 +20,7 @@ export interface FlexProps extends HTMLAttributes<{}> {
 	isWrapping?: boolean
 	isXCentered?: boolean
 	isYCentered?: boolean
-	onClick?: (event: unknown) => Promise<void> | void
+	onClick?: HeliosOnClickType
 	padding?: ResponsiveScaleType
 	paddingX?: HeliosScale
 	paddingY?: HeliosScale
