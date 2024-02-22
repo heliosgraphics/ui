@@ -5,13 +5,13 @@ import { type FC } from "react"
 import type { ExampleBreadcrumbProps } from "./ExampleBreadcrumb.types"
 
 const breadCrumbItems: Array<BreadCrumbItem> = [
-	{ name: "Index", href: "/", onClick: () => null },
-	{ name: "Books", href: "/consequat", onClick: () => null },
+	{ name: "Index", href: "/", onClick: () => void 0 },
+	{ name: "Books", href: "/consequat", onClick: () => void 0 },
 	{
 		name: "Maecenas pellentesque",
 		href: "/consequat/maecenas-pellentesque",
 		isActive: true,
-		onClick: () => null,
+		onClick: () => void 0,
 	},
 ]
 

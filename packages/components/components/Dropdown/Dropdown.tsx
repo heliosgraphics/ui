@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState, useRef, Children, cloneElement, type FC } from "react"
+import { useEffect, useState, useRef, Children as ReactChildren, cloneElement, type FC } from "react"
 import { ANIMATION_FAST } from "../../constants/animations"
 import { getClasses } from "@heliosgraphics/utils/classnames"
 import ResultList from "../ResultList"
@@ -37,7 +37,7 @@ const Dropdown: FC<DropdownProps> = ({ isHidden, children, items, isDisabled, po
 	}
 
 	// Make any icon respond to visible state
-	const renderChildren = Children.map(children, (child: React.ReactElement) => {
+	const renderChildren = ReactChildren.map(children, (child: React.ReactElement) => {
 		const caretProps = {
 			...(child?.props?.icon === "caret-down" && isVisible && { icon: "caret-up" }),
 			...(child?.props?.icon === "chevron-down" && isVisible && { icon: "chevron-up" }),

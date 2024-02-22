@@ -14,11 +14,11 @@ export interface InputProps {
 	label: string
 	maxLength?: number
 	name?: string
-	onBlur?: (event?: FocusEvent<HTMLInputElement>) => Promise<void> | void
-	onChange?: (event?: ChangeEvent<HTMLInputElement>) => Promise<void> | void
-	onFocus?: (event?: FocusEvent<HTMLInputElement>) => Promise<void> | void
-	onKeyDown?: (event?: KeyboardEvent) => Promise<void> | void
-	onKeyUp?: (event?: KeyboardEvent) => Promise<void> | void
+	onBlur?: (event?: FocusEvent<HTMLInputElement>) => unknown
+	onChange?: (event?: ChangeEvent<HTMLInputElement>) => unknown
+	onFocus?: (event?: FocusEvent<HTMLInputElement>) => unknown
+	onKeyDown?: (event?: KeyboardEvent) => unknown
+	onKeyUp?: (event?: KeyboardEvent) => unknown
 	placeholder?: string
 	results?: Array<ResultItem>
 	showResults?: boolean
