@@ -7,7 +7,7 @@ export interface RadioProps {
 	isDisabled?: boolean
 	isSmall?: boolean
 	label: string
-	onChange?: (event?: ChangeEvent) => void
+	onChange?: (event?: ChangeEvent) => Promise<void> | void
 	state: string
 	value: string
 }

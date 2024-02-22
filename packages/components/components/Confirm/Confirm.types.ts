@@ -8,7 +8,7 @@ export interface ConfirmProps {
 	icon?: HeliosIconType
 	intent: HeliosIntentionType
 	isOpen: boolean
-	onCancel: (_event: any) => Promise<void> | void
-	onConfirm: (_event: any) => Promise<void> | void
+	onCancel: (_?: unknown) => Promise<void> | void
+	onConfirm: (_?: unknown) => Promise<void> | void
 	title: string
 }

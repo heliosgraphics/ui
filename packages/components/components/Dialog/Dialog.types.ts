@@ -4,7 +4,7 @@ export interface DialogProps {
 	children: ReactNode
 	isOpen?: boolean
 	isCentered?: boolean
-	onClose: (_event?: any) => Promise<void> | void
-	onClick?: () => void
+	onClose: (_?: unknown) => Promise<void> | void
+	onClick?: (_?: unknown) => Promise<void> | void
 	title?: string
 }

@@ -5,7 +5,7 @@ export interface BaseTextProps extends HTMLAttributes<HTMLDivElement | HTMLParag
 	style?: object
 	children: ReactNode
 	className?: string
-	onClick?: () => void
+	onClick?: (event?: unknown) => Promise<void> | void
 }
 
 export interface TextProps extends BaseTextProps {

@@ -10,7 +10,7 @@ export interface TextareaProps {
 	autoFocus?: boolean
 	name?: string
 	maxLength?: number
-	onChange: (_event?: ChangeEvent<HTMLTextAreaElement>) => void
+	onChange: (_event?: ChangeEvent<HTMLTextAreaElement>) => Promise<void> | void
 	placeholder?: string
 	rows?: number
 	value?: string

@@ -2,7 +2,7 @@ export interface BreadCrumbItem {
 	isActive?: boolean
 	name: string
 	href: string
-	onClick: () => void
+	onClick?: (_?: unknown) => void
 }
 
 export interface BreadcrumbProps {

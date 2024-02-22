@@ -7,7 +7,7 @@ export interface ResultItem {
 	isActive?: boolean
 	isDisabled?: boolean
 	name: string
-	onClick?: (value) => void
+	onClick?: (event?: unknown) => Promise<void> | void
 }
 
 export interface ResultListProps {

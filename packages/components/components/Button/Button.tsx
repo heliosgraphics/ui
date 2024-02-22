@@ -66,7 +66,7 @@ const Button: FC<ButtonProps> = ({
 	const buttonIconClasses = getClasses(styles.button__icon, "relative")
 	const buttonLoadingSize: 10 | 20 = size && size !== "normal" ? 10 : 20
 
-	const isButton: boolean = type !== "file"
+	const isFileType: boolean = type === "file"
 
 	return (
 		<Flex className={buttonClasses} isInline={true} isCentered={true} onClick={onClick} data-component="Button">
@@ -88,7 +88,7 @@ const Button: FC<ButtonProps> = ({
 				className={buttonInputClasses}
 				accept={accept}
 				tabIndex={tabIndex ?? 0}
-				role={isButton ? "button" : undefined}
+				role={isFileType ? undefined : "button"}
 				onChange={onChange}
 				defaultValue={isIconOnly ? "" : value}
 			/>

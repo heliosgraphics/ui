@@ -11,8 +11,8 @@ export interface ButtonProps {
 	isIconOnly?: boolean
 	isLoading?: boolean
 	isRounded?: boolean
-	onClick?: (event?: MouseEvent | SyntheticEvent) => void
-	onChange?: (event?: MouseEvent | SyntheticEvent) => void
+	onClick?: (event?: MouseEvent | SyntheticEvent) => Promise<void> | void
+	onChange?: (event?: MouseEvent | SyntheticEvent) => Promise<void> | void
 	size?: "normal" | "small" | "tiny"
 	tabIndex?: number
 	type?: "button" | "submit" | "file"

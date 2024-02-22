@@ -20,7 +20,7 @@ export interface FlexProps extends HTMLAttributes<{}> {
 	isWrapping?: boolean
 	isXCentered?: boolean
 	isYCentered?: boolean
-	onClick?: (event: any) => void
+	onClick?: (event: unknown) => Promise<void> | void
 	padding?: ResponsiveScaleType
 	paddingX?: HeliosScale
 	paddingY?: HeliosScale

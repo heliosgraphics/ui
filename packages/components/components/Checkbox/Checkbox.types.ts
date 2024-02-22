@@ -12,4 +12,4 @@ export interface BaseCheckboxProps {
 	onChange?: (event?: ChangeEvent) => void
 }
 
-export interface CheckboxProps extends BaseCheckboxProps {}
+export interface CheckboxProps extends BaseCheckboxProps { }
