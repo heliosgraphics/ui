@@ -1,4 +1,4 @@
-import type { HeliosScale } from "../.."
+import type { HeliosScale, HeliosRadius } from "../.."
 import type { FlexProps } from "./Flex.types"
 // import type { MainProps } from "../Main/Main.types"
 // import type { ColumnProps } from "../Column/Column.types"
@@ -8,8 +8,8 @@ import type { ResponsiveScaleType, ResponsiveRadiusType } from "./Flex.types"
 export const getFlexUtility = (props?: FlexProps): string => {
 	if (!props) return "flex"
 
-	const flexClasses = new Set<string>()
-	const flexBase = props?.isInline ? "inline-flex" : "flex"
+	const flexClasses: Set<string> = new Set<string>()
+	const flexBase: "flex" | "inline-flex" = props?.isInline ? "inline-flex" : "flex"
 
 	flexClasses.add(flexBase)
 
@@ -29,14 +29,17 @@ export const getFlexUtility = (props?: FlexProps): string => {
 	if (props.onClick) flexClasses.add("cursor-pointer")
 
 	// Responsive Radius
-	const responsiveRadius = getRadius(props.withRadius)
-
-	if (props.withRadius) flexClasses.add(responsiveRadius)
+	if (props.withRadius) {
+		const responsiveRadius = getRadius(props.withRadius)
+		flexClasses.add(responsiveRadius)
+	}
 
 	// Responsive Scales
-	const responsivePadding: string = getPadding(props.padding)
+	if (props.padding) {
+		const responsivePadding: string = getPadding(props.padding)
+		flexClasses.add(responsivePadding)
+	}
 
-	if (props.padding) flexClasses.add(responsivePadding)
 	if (props.gap) flexClasses.add(`gap-${props.gap}`)
 	if (props.paddingY) flexClasses.add(`py-${props.paddingY}`)
 	if (props.paddingX) flexClasses.add(`px-${props.paddingX}`)
@@ -55,8 +58,8 @@ export const getPadding = (paddingValue?: ResponsiveScaleType): string => {
 
 	if (!isArray) return `p-${paddingValue}`
 
-	for (let index = 0; index < 3; index++) {
-		const element = <Array<HeliosScale>>paddingValue[index]
+	for (let index: number = 0; index < 3; index++) {
+		const element = (paddingValue as [HeliosScale, HeliosScale, HeliosScale])[index]
 
 		if (index === 0) paddingClasses.add(`mobile:p-${element ?? 0}`)
 		if (index === 1) paddingClasses.add(`tablet:p-${element ?? 0}`)
@@ -66,7 +69,6 @@ export const getPadding = (paddingValue?: ResponsiveScaleType): string => {
 	return Array.from(paddingClasses).join(" ")
 }
 
-// WIP duplicated above for now
 export const getRadius = (radiusValue?: ResponsiveRadiusType): string => {
 	if (!radiusValue) return ""
 
@@ -75,8 +77,8 @@ export const getRadius = (radiusValue?: ResponsiveRadiusType): string => {
 
 	if (!isArray) return `radius-${radiusValue}`
 
-	for (let index = 0; index < 3; index++) {
-		const element = radiusValue[index]
+	for (let index: number = 0; index < 3; index++) {
+		const element: HeliosRadius = (radiusValue as [HeliosRadius, HeliosRadius, HeliosRadius])[index]
 
 		if (index === 0 && !!element) radiusClasses.add(`mobile:radius-${element}`)
 		if (index === 1 && !!element) radiusClasses.add(`tablet:radius-${element}`)
@@ -86,7 +88,7 @@ export const getRadius = (radiusValue?: ResponsiveRadiusType): string => {
 	return Array.from(radiusClasses).join(" ")
 }
 
-export const getSafeFlexProps = (props: any = { children: null }): Partial<FlexProps> => {
+export const getSafeFlexProps = (props: any): Partial<FlexProps> => {
 	const {
 		gap,
 		isBetween,
@@ -102,7 +104,7 @@ export const getSafeFlexProps = (props: any = { children: null }): Partial<FlexP
 		paddingX,
 		paddingY,
 
-		// random
+		// TODO 03b8 consolidate these
 		withBackground,
 		withAlternativeBackground,
 		withRadius,
