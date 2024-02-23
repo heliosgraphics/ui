@@ -1,4 +1,4 @@
-import { HeliosScale } from "packages/components/types/scale"
+import type { HeliosScale } from "../.."
 import type { FlexProps } from "./Flex.types"
 // import type { MainProps } from "../Main/Main.types"
 // import type { ColumnProps } from "../Column/Column.types"
