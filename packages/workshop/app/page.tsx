@@ -44,7 +44,7 @@ import uiPackage from "@heliosgraphics/ui/package.json"
 
 const ThemeSwitcher = dynamic(() => import("@heliosgraphics/ui/components/ThemeSwitcher"), {
 	ssr: false,
-	loading: () => <ThemeSwitcherLoading />,
+	loading: () => <ThemeSwitcherLoading isIconOnly={true} />,
 })
 
 export default function Home() {
@@ -63,7 +63,7 @@ export default function Home() {
 						<Flex isColumn={true}>
 							<Flex isBetween={true} yAlign="top">
 								<Heading level={0}>UI</Heading>
-								<ThemeSwitcher />
+								<ThemeSwitcher isIconOnly={true} />
 							</Flex>
 							<Text type="paragraph">this is obviously a work in progress&mdash;compile your own:</Text>
 							<Flex>

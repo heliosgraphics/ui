@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 import type { FC } from "react"
 import type { ThemeSwitcherProps } from "./ThemeSwitcher.types"
 
-const ThemeSwitcher: FC<ThemeSwitcherProps> = (props) => {
+const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ isIconOnly = false, size = "small" }) => {
 	const [theme, setTheme] = useState<HeliosThemes>(global.window?.__theme || "light")
 	const isDark: boolean = theme === "dark"
 
@@ -21,12 +21,12 @@ const ThemeSwitcher: FC<ThemeSwitcherProps> = (props) => {
 		<ButtonGroup>
 			<Button
 				value={isDark ? "Light Mode" : "Dark Mode"}
-				size="small"
+				size={size}
 				isRounded={true}
 				icon={isDark ? "sun" : "moon"}
 				intent="silent"
 				onClick={toggleTheme}
-				{...(props as Partial<ThemeSwitcherProps>)}
+				isIconOnly={isIconOnly}
 			/>
 		</ButtonGroup>
 	)

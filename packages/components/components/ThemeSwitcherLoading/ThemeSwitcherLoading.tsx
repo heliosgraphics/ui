@@ -2,17 +2,17 @@ import { Button, ButtonGroup } from "../.."
 import type { FC } from "react"
 import type { ThemeSwitcherLoadingProps } from "./ThemeSwitcherLoading.types"
 
-const ThemeSwitcherLoading: FC<ThemeSwitcherLoadingProps> = (props) => {
+const ThemeSwitcherLoading: FC<ThemeSwitcherLoadingProps> = ({ isIconOnly = false, size = "small" }) => {
 	return (
 		<ButtonGroup>
 			<Button
 				value="Loading"
-				size="small"
+				size={size}
 				isRounded={true}
 				icon="dot"
 				intent="silent"
 				isDisabled={true}
-				{...(props as Partial<ThemeSwitcherLoadingProps>)}
+				isIconOnly={isIconOnly}
 			/>
 		</ButtonGroup>
 	)
