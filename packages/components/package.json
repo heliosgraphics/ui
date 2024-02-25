@@ -1,9 +1,9 @@
 {
 	"name": "@heliosgraphics/ui",
 	"version": "1.2.15",
+	"type": "module",
 	"author": "03b8 <03b8@helios.graphics>",
 	"private": false,
-	"type": "module",
 	"description": "Helios UI",
 	"scripts": {
 		"pub:components": "pnpm publish --access public",
@@ -26,20 +26,20 @@
 		"index.ts"
 	],
 	"dependencies": {
-		"@heliosgraphics/fractures": "^5.2.4",
+		"@heliosgraphics/fractures": "^6",
 		"@heliosgraphics/icons": "^0.0.9",
-		"@heliosgraphics/utils": "^5.3.1",
+		"@heliosgraphics/utils": "^5",
 		"@react-spring/web": "^9.7.3",
-		"@testing-library/react": "^14.2.1",
 		"@use-gesture/react": "^10.3.0",
 		"dayjs": "^1.11.10",
 		"highlight.js": "^11.9.0",
 		"markdown-it": "^14.0.0",
-		"react-dom": "^18.2.0",
+		"react-dom": "^18",
 		"react-plock": "^3.1.0",
-		"react": "^18.2.0"
+		"react": "^18"
 	},
 	"devDependencies": {
+		"@testing-library/react": "latest",
 		"@types/node": "latest",
 		"@types/react-dom": "latest",
 		"@types/react": "latest",
