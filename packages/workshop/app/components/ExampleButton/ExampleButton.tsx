@@ -50,6 +50,7 @@ const ExampleButton: FC<ExampleButtonProps> = () => {
 					isIconOnly={true}
 				/>
 				<Button intent={intent} value="Rounded" isRounded={true} />
+				<Button intent={intent} value="Rounded" isRounded={true} isIconOnly={true} icon="dot" />
 				<Button intent={intent} value="Rounded Icon" icon="bullseye" isRounded={true} />
 				<Button intent={intent} value="Round Tiny" isRounded={true} size="tiny" />
 				<Button intent={intent} value="Round Tiny Icon" isRounded={true} size="tiny" icon="bullseye" />

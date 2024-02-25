@@ -243,8 +243,8 @@
 }
 
 .buttonSizeNormal .button__icon {
-	padding-left: 9px;
-	padding-right: 9px;
+	padding-left: 8px;
+	padding-right: 8px;
 }
 
 .buttonSizeSmall:not(.buttonIconOnly) .button__icon {
@@ -268,8 +268,8 @@
 
 /* Icon:focus */
 .buttonSizeNormal.buttonIconOnly:not(.buttonIconOnlyLoading) input {
-	margin-left: -42px;
-	width: 42px;
+	margin-left: -40px;
+	width: 40px;
 }
 
 .buttonSizeSmall.buttonIconOnly:not(.buttonIconOnlyLoading) input {
