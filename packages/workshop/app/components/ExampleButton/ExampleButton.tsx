@@ -17,6 +17,9 @@ const ExampleButton: FC<ExampleButtonProps> = () => {
 		<Flex isColumn={true} gap={16}>
 			<ButtonGroup>
 				<Button intent="silent" value="Flair" onClick={onFlairToggle} />
+				<a href="https://google.com" tabIndex={-1}>
+					<Button intent="silent" value="Link" />
+				</a>
 			</ButtonGroup>
 			<Separator isLight={true} />
 			<ButtonGroup>
