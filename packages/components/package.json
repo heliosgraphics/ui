@@ -27,7 +27,7 @@
 	],
 	"dependencies": {
 		"@heliosgraphics/fractures": "^6",
-		"@heliosgraphics/icons": "^0.0.9",
+		"@heliosgraphics/icons": "workspace:*",
 		"@heliosgraphics/utils": "^5",
 		"@react-spring/web": "^9.7.3",
 		"@use-gesture/react": "^10.3.0",
