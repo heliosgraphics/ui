@@ -6,8 +6,9 @@ import type { FC } from "react"
 import type { PillProps } from "./Pill.types"
 
 const Pill: FC<PillProps> = ({ color = "gray", isMono, label, isSmall, icon, isRounded, isDark = false }) => {
-	const textColor: string = `hsl(var(--${color}-hue), var(--${color}-saturation), 20%)`
-	const pillColor: string = `hsla(var(--${color}-hue), var(--${color}-saturation), 50%, 0.25)`
+	const textColor: string = `var(--ui-text-${color})`
+	const pillColor: string = `var(--ui-bg-soft-${color})`
+	const textColorDark: string = `hsl(var(--${color}-hue), var(--${color}-saturation), 90%)`
 	const pillColorDark: string = `hsl(var(--${color}-hue), var(--${color}-saturation), 40%)`
 
 	const pillClass = getClasses("non-selectable break-word", styles.pill, {
@@ -24,7 +25,10 @@ const Pill: FC<PillProps> = ({ color = "gray", isMono, label, isSmall, icon, isR
 		<Flex
 			className={pillClass}
 			isCentered={true}
-			style={{ backgroundColor: isDark ? pillColorDark : pillColor, color: isDark ? undefined : textColor }}
+			style={{
+				backgroundColor: isDark ? pillColorDark : pillColor,
+				color: isDark ? textColorDark : textColor,
+			}}
 			gap={2}
 		>
 			{icon && <Icon size={isSmall ? 16 : 24} name={icon} />}
