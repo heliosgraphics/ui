@@ -45,6 +45,8 @@
 		"eslint": "latest",
 		"jsdom": "latest",
 		"prettier": "latest",
+		"react-dom": "latest",
+		"react": "latest",
 		"typescript": "latest",
 		"vite": "latest",
 		"vitest": "latest"

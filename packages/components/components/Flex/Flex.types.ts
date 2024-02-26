@@ -7,7 +7,7 @@ export type ResponsiveRadiusType = HeliosRadius | [HeliosRadius, HeliosRadius, H
 
 export interface FlexProps extends HTMLAttributes<{}> {
 	children: HeliosChildrenType
-	align?: "center" | "left" | "right"
+	xAlign?: "start" | "end" | "center"
 	className?: string
 	draggable?: boolean
 	gap?: HeliosScale
@@ -26,6 +26,6 @@ export interface FlexProps extends HTMLAttributes<{}> {
 	paddingY?: HeliosScale
 	withRadius?: ResponsiveRadiusType
 	ref?: RefObject<HTMLDivElement>
-	yAlign?: "top" | "bottom" | "baseline"
+	yAlign?: "start" | "end" | "baseline"
 	withBackground?: boolean
 }

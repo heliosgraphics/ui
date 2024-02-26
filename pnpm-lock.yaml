@@ -59,6 +59,12 @@ importers:
       prettier:
         specifier: latest
         version: 3.2.5
+      react:
+        specifier: latest
+        version: 18.2.0
+      react-dom:
+        specifier: latest
+        version: 18.2.0(react@18.2.0)
       typescript:
         specifier: latest
         version: 5.3.3
@@ -72,8 +78,8 @@ importers:
   packages/components:
     dependencies:
       '@heliosgraphics/fractures':
-        specifier: ^6.1.0
-        version: 6.1.0
+        specifier: ^6.2.1
+        version: 6.2.1
       '@heliosgraphics/icons':
         specifier: ^0.0.10
         version: link:../icons
@@ -181,8 +187,8 @@ importers:
   packages/workshop:
     dependencies:
       '@heliosgraphics/fractures':
-        specifier: ^6.1.0
-        version: 6.1.0
+        specifier: ^6.2.1
+        version: 6.2.1
       '@heliosgraphics/ui':
         specifier: workspace:*
         version: link:../components
@@ -738,8 +744,8 @@ packages:
       - debug
     dev: true
 
-  /@heliosgraphics/fractures@6.1.0:
-    resolution: {integrity: sha512-QyjVATR2kE+pGv3e6KJWxL+pZNUuz9c7xTuwYbaXtkWTi4ONOPA3SxmMtnXhQgAmL1sjLeu5tMCY0eSWAa5t5Q==}
+  /@heliosgraphics/fractures@6.2.1:
+    resolution: {integrity: sha512-6EP52d/68BZYVcTPROKkEjkhOTp3m4s/aLXUAM6y/luwxImuDQYykUt8/dE7NMSqYQglbft5GNvW6GxY1kM+yw==}
     engines: {node: '>=20.11.1', npm: '>=10.2.4'}
     dev: false
 

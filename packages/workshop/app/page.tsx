@@ -54,7 +54,7 @@ export default function Home() {
 					withRadius={["none", "small", "normal"]}
 				>
 					<Flex isColumn={true}>
-						<Flex isBetween={true} yAlign="top">
+						<Flex isBetween={true}>
 							<Heading level={0}>UI</Heading>
 						</Flex>
 						<Text type="paragraph">this is obviously a work in progress&mdash;compile your own:</Text>
