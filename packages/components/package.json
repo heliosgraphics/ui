@@ -26,9 +26,9 @@
 		"index.ts"
 	],
 	"dependencies": {
-		"@heliosgraphics/fractures": "^6",
-		"@heliosgraphics/icons": "workspace:*",
-		"@heliosgraphics/utils": "^5",
+		"@heliosgraphics/fractures": "^6.1.0",
+		"@heliosgraphics/icons": "^0.0.10",
+		"@heliosgraphics/utils": "^5.3.4",
 		"@react-spring/web": "^9.7.3",
 		"@use-gesture/react": "^10.3.0",
 		"dayjs": "^1.11.10",

@@ -72,14 +72,14 @@ importers:
   packages/components:
     dependencies:
       '@heliosgraphics/fractures':
-        specifier: ^6
-        version: 6.0.0
+        specifier: ^6.1.0
+        version: 6.1.0
       '@heliosgraphics/icons':
-        specifier: workspace:*
+        specifier: ^0.0.10
         version: link:../icons
       '@heliosgraphics/utils':
-        specifier: ^5
-        version: 5.3.3
+        specifier: ^5.3.4
+        version: 5.3.4
       '@react-spring/web':
         specifier: ^9.7.3
         version: 9.7.3(react-dom@18.2.0)(react@18.2.0)
@@ -181,8 +181,8 @@ importers:
   packages/workshop:
     dependencies:
       '@heliosgraphics/fractures':
-        specifier: ^6
-        version: 6.0.0
+        specifier: ^6.1.0
+        version: 6.1.0
       '@heliosgraphics/ui':
         specifier: workspace:*
         version: link:../components
@@ -738,16 +738,15 @@ packages:
       - debug
     dev: true
 
-  /@heliosgraphics/fractures@6.0.0:
-    resolution: {integrity: sha512-m69Vuio0K+mNTauWmarCfCKG3aU6oPrxNiYzmhR1fuSPKOmIg/V5HuIzqj4zAZdAYz3IZgtv01L9IEdtYDG4yA==}
+  /@heliosgraphics/fractures@6.1.0:
+    resolution: {integrity: sha512-QyjVATR2kE+pGv3e6KJWxL+pZNUuz9c7xTuwYbaXtkWTi4ONOPA3SxmMtnXhQgAmL1sjLeu5tMCY0eSWAa5t5Q==}
     engines: {node: '>=20.11.1', npm: '>=10.2.4'}
     dev: false
 
-  /@heliosgraphics/utils@5.3.3:
-    resolution: {integrity: sha512-8fATxrduZL4KA4y6rIVisAYNHWrVQkwXMaMQQlOehC3iTTKhjySD9AfqK/Hzckm7OMFBtWYSdMBMwVEHgWYu/w==}
+  /@heliosgraphics/utils@5.3.4:
+    resolution: {integrity: sha512-U/dQFmODXmvZ6IqVDKJpwNjbqiHzNa/dFYkteFGYTmxVxvtXt38jOkaf/4oSsPSN/Bt+NqSPgEZyTsQU1ffwEg==}
     engines: {node: '>=20.11.1', npm: '>=10.2.4'}
     dependencies:
-      uuid: 9.0.1
       xss: 1.0.14
     dev: false
 
@@ -5084,11 +5083,6 @@ packages:
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
-
-  /uuid@9.0.1:
-    resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
-    hasBin: true
-    dev: false
 
   /v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
