@@ -1,9 +1,5 @@
 .main {
-	background-color: var(--ui-bg);
+	height: 100dvh;
 
-	overscroll-behavior: auto;
-}
-
-.mainAlternativeBackground {
-	background-color: var(--ui-bg-action-hover);
+	background-color: var(--ui-bg-action-active);
 }

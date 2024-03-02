@@ -78,8 +78,8 @@ importers:
   packages/components:
     dependencies:
       '@heliosgraphics/fractures':
-        specifier: ^6.2.1
-        version: 6.2.1
+        specifier: ^6.3.0
+        version: 6.3.0
       '@heliosgraphics/icons':
         specifier: ^0.0.10
         version: link:../icons
@@ -187,8 +187,8 @@ importers:
   packages/workshop:
     dependencies:
       '@heliosgraphics/fractures':
-        specifier: ^6.2.1
-        version: 6.2.1
+        specifier: ^6.3.0
+        version: 6.3.0
       '@heliosgraphics/ui':
         specifier: workspace:*
         version: link:../components
@@ -744,8 +744,8 @@ packages:
       - debug
     dev: true
 
-  /@heliosgraphics/fractures@6.2.1:
-    resolution: {integrity: sha512-6EP52d/68BZYVcTPROKkEjkhOTp3m4s/aLXUAM6y/luwxImuDQYykUt8/dE7NMSqYQglbft5GNvW6GxY1kM+yw==}
+  /@heliosgraphics/fractures@6.3.0:
+    resolution: {integrity: sha512-Khvt1ryjrQUrykq5czA3/cgPT3kzbTEYhwV5bYZ7XrYz9O9269Mr2p35zYpBSghFNpdSWf94d9wNHw50VVYySA==}
     engines: {node: '>=20.11.1', npm: '>=10.2.4'}
     dev: false
 

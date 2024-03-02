@@ -1,6 +1,6 @@
 "use client"
 
-import { Column, Details, Flex, Text, Heading, Separator } from "@heliosgraphics/ui"
+import { Content, Details, Flex, Text, Heading, Separator } from "@heliosgraphics/ui"
 import { WorkshopProvider } from "./contexts/WorkshopContext"
 import DebugSelector from "./components/DebugSelector"
 import ExampleAlert from "./components/ExampleAlert"
@@ -38,20 +38,22 @@ import ExampleTile from "./components/ExampleTile"
 import ExampleTimestamp from "./components/ExampleTimestamp"
 import ExampleToggle from "./components/ExampleToggle"
 import WorkshopControls from "./components/WorkshopControls"
-import WorkshopHeader from "./components/WorkshopHeader"
+import WorkshopNavigation from "./components/WorkshopNavigation"
+import WorkshopMenu from "./components/WorkshopMenu"
+import WorkshopContent from "./components/WorkshopContent"
 import uiPackage from "@heliosgraphics/ui/package.json"
 
 export default function Home() {
 	return (
 		<WorkshopProvider>
-			<WorkshopHeader />
-			<Column width={960} isColumnCentered={true} gap={1} padding={[0, 12, 16]}>
+			<WorkshopNavigation />
+			<WorkshopContent>
 				<Flex
 					isColumn={true}
 					gap={8}
-					padding={[12, 16, 16]}
+					padding={[8, 16, 24]}
 					withBackground={true}
-					withRadius={["none", "small", "normal"]}
+					// withRadius={["none", "small", "normal"]}
 				>
 					<Flex isColumn={true}>
 						<Flex isBetween={true}>
@@ -68,17 +70,15 @@ export default function Home() {
 						</Flex>
 					</Flex>
 					<Separator isLight={true} />
-					<Flex gap={4} isColumn={true}>
-						<DebugSelector />
-					</Flex>
+					<DebugSelector />
 					<WorkshopControls />
 				</Flex>
 				<Flex
 					isColumn={true}
 					gap={8}
-					padding={[12, 16, 16]}
+					padding={[8, 16, 24]}
 					withBackground={true}
-					withRadius={["none", "small", "normal"]}
+					// withRadius={["none", "small", "normal"]}
 				>
 					<Details title="Alert">
 						<ExampleAlert />
@@ -216,7 +216,8 @@ export default function Home() {
 						<ExampleToggle />
 					</Details>
 				</Flex>
-			</Column>
+			</WorkshopContent>
+			<WorkshopMenu />
 		</WorkshopProvider>
 	)
 }

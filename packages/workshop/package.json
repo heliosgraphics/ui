@@ -10,7 +10,7 @@
 		"start": "next start"
 	},
 	"dependencies": {
-		"@heliosgraphics/fractures": "^6.2.1",
+		"@heliosgraphics/fractures": "^6.3.0",
 		"@heliosgraphics/ui": "workspace:*",
 		"next": "latest",
 		"react-dom": "latest",

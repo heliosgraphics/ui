@@ -10,10 +10,11 @@ declare global {
 	}
 }
 
+// will be dangerously inlined, keep it simple as possible
 function code() {
 	globalThis.__onThemeChange = function () {}
 
-	function setTheme(newTheme: HeliosThemes) {
+	function setTheme(newTheme) {
 		globalThis.__theme = newTheme
 		preferredTheme = newTheme
 		document.documentElement.dataset.theme = newTheme
@@ -21,22 +22,33 @@ function code() {
 	}
 
 	var preferredTheme
+	var darkQuery = globalThis.matchMedia("(prefers-color-scheme: dark)")
 
 	try {
 		preferredTheme = localStorage.getItem("theme") as HeliosThemes
-	} catch (err) {}
-
-	globalThis.__setPreferredTheme = function (newTheme: HeliosThemes) {
-		setTheme(newTheme)
-		try {
-			localStorage.setItem("theme", newTheme)
-		} catch (err) {}
+	} catch (error) {
+		console.error(error)
 	}
 
-	var darkQuery = globalThis.matchMedia("(prefers-color-scheme: dark)")
+	globalThis.__setPreferredTheme = function (newTheme) {
+		try {
+			setTheme(newTheme)
+			localStorage.setItem("theme", newTheme)
+		} catch (error) {
+			console.error(error)
+		}
+	}
 
-	darkQuery.addEventListener("change", function (e) {
-		globalThis.__setPreferredTheme(e.matches ? "dark" : "light")
+	darkQuery.addEventListener("change", function (event) {
+		globalThis.__setPreferredTheme(event.matches ? "dark" : "light")
+	})
+
+	document.addEventListener("click", ({ x }) => {
+		console.debug(x, globalThis.location.hash)
+
+		if (x > 256 && globalThis.location.hash === "#ui-navigation") {
+			globalThis.location.hash = "#ui"
+		}
 	})
 
 	setTheme(preferredTheme || (darkQuery.matches ? "dark" : "light"))

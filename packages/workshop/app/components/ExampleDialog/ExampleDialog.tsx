@@ -16,6 +16,8 @@ const ExampleDialog: FC<ExampleDialogProps> = () => {
 	const onCenterToggle = () => setCentered(!isCentered)
 	const onActionsToggle = () => setActions(!hasActions)
 
+	return null
+
 	return (
 		<Flex>
 			<ButtonGroup>

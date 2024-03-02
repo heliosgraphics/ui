@@ -4,18 +4,10 @@ import styles from "./Main.module.css"
 import type { FC } from "react"
 import type { MainProps } from "./Main.types"
 
-const Main: FC<MainProps> = (props) => {
-	const mainFlexClasses: string = getFlexUtility({ ...props, isColumn: true })
-	const mainClasses: string = getClasses(mainFlexClasses, styles.main, {
-		[styles.mainAlternativeBackground]: props.withAlternativeBackground,
-	})
-	const safeProps = getSafeFlexProps(props)
+const Main: FC<MainProps> = ({ children }) => {
+	const mainClasses: string = getClasses(styles.main, "flex flex-column gap-px")
 
-	return (
-		<main {...safeProps} className={mainClasses}>
-			{props.children}
-		</main>
-	)
+	return <main className={mainClasses}>{children}</main>
 }
 
 export default Main

@@ -1,0 +1,11 @@
+.content {
+	flex-grow: 1;
+	overflow: auto;
+	width: 100%;
+}
+
+@media (min-width: 960px) {
+	.content:has(+ nav[data-component="NavigationPanel"]) {
+		padding-left: 256px;
+	}
+}

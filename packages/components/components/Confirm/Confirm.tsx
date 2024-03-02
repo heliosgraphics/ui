@@ -17,6 +17,8 @@ const Confirm: FC<ConfirmProps> = ({
 	cancelText,
 	confirmText,
 }) => {
+	return null
+
 	return (
 		<Dialog title={title} onClose={onCancel} isOpen={isOpen} isCentered={true}>
 			<Flex gap={12} isColumn={true}>
