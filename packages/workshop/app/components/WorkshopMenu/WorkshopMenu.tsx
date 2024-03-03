@@ -11,15 +11,18 @@ const WorkshopMenu: FC = () => {
 	return (
 		hasMenu && (
 			<Menu>
-				<MenuItem title="Index" />
+				<Link href="/">
+					<MenuItem title="Index" />
+				</Link>
 				<MenuItem title="About" />
+				<MenuItem title="Examples" />
 				<MenuItem title="Pricing" />
 				<Separator isLight={true} />
 				<MenuItem title="CSS" />
 				<MenuItem title="Colors" />
 				<MenuItem title="Typography" />
 				<Separator isLight={true} />
-				<Link href="/component/Button">
+				<Link href="/components/Button">
 					<MenuItem title="Button" />
 				</Link>
 				{/* {COMPONENTS?.map((component, key) => {
