@@ -6,7 +6,7 @@ import type { NavigationPanelButtonProps } from "./NavigationPanelButton.types"
 const NavigationPanelButton: FC<NavigationPanelButtonProps> = () => {
 	return (
 		<ButtonGroup className={styles.navigationPanelButton}>
-			<a href="#ui-navigation">
+			<a href="#ui-menu">
 				<Button value="Open Menu" intent="silent" icon="bars" isIconOnly={true} />
 			</a>
 		</ButtonGroup>

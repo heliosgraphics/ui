@@ -3,3 +3,15 @@
 
 	background-color: var(--ui-bg-action-active);
 }
+
+.main:has(nav[data-component="Navigation"]) nav[data-component="Menu"] {
+	top: 65px;
+
+	height: calc(100dvh - 65px);
+}
+
+@media (min-width: 960px) {
+	.main:has(nav[data-component="Menu"]) section[data-component="Content"] {
+		padding-left: 256px;
+	}
+}

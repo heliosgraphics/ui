@@ -1,7 +1,7 @@
 "use client"
 
 import { FC } from "react"
-import styles from "./NavigationPanel.module.css"
+import styles from "./Menu.module.css"
 import { getClasses } from "@heliosgraphics/utils"
 import type { MenuProps } from "./Menu.types"
 

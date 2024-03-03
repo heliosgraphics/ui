@@ -1,36 +1,37 @@
 .menu {
 	position: fixed;
 	left: 0;
-	top: 65px;
+	top: 0;
 	z-index: var(--z-index-6);
 
-	height: calc(100vh - 64px);
+	height: 100dvh;
 	overflow: auto;
 	width: 260px;
 
 	background-color: var(--ui-bg);
-	box-shadow: inset -1px 0 0 0 var(--ui-border-light);
+	box-shadow: inset -1px 0 0 0 var(--ui-bg-action-active);
 	transition: all 120ms ease-in-out;
 }
 
 .menu:not(:target) {
-	/* display: none; */
-  visibility: hidden;
 	opacity: 0;
+  visibility: hidden;
+
 	transform: translateX(-24px);
 }
 
 .menu:target {
-  /* display: flex; */
-	visibility: visible;
 	opacity: 1;
+  visibility: visible;
+
 	transform: translateX(0);
 }
 
 @media (min-width: 960px) {
 	.menu:not(:target) {
-		visibility: visible;
 		opacity: 1;
+		visibility: visible;
+
 		transform: translateX(0);
 	}
 }

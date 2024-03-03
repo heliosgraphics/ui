@@ -1,0 +1,10 @@
+.menuItem {
+
+	margin: 8px;
+	padding: 6px 16px;
+
+	border-radius: 4px;
+	/* lol */
+
+	transition: all 120ms ease-in-out;
+}

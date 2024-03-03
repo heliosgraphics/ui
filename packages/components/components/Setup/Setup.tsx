@@ -46,7 +46,7 @@ function code() {
 	document.addEventListener("click", ({ x }) => {
 		console.debug(x, globalThis.location.hash)
 
-		if (x > 256 && globalThis.location.hash === "#ui-navigation") {
+		if (x > 256 && globalThis.location.hash === "#ui-menu") {
 			globalThis.location.hash = "#ui"
 		}
 	})

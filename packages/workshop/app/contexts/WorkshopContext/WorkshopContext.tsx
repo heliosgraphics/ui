@@ -7,8 +7,8 @@ import type { WorkshopProviderProps } from "./WorkshopContext.types"
 const DEFAULT_COLOR = "gray" as const
 const DEFAULT_INTENT = "advise" as const
 const DEFAULT_ICON = "robot" as HeliosIconType
-const DEFAULT_HEADER = false as const
-const DEFAULT_MENU = false as const
+const DEFAULT_HEADER = true as const
+const DEFAULT_MENU = true as const
 const DEFAULT_PADDING = false as const
 
 const WorkshopContext = createContext<WorkshopProviderProps>({

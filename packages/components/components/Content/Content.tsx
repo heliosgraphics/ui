@@ -9,11 +9,11 @@ const Content: FC<ContentProps> = (props) => {
 	const { width = 960, ...flexProps } = props
 
 	return (
-		<div className={contentClasses}>
+		<section className={contentClasses} data-component="Content">
 			<Column width={width} {...flexProps}>
 				{props.children}
 			</Column>
-		</div>
+		</section>
 	)
 }
 

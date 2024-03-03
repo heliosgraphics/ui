@@ -22,7 +22,7 @@ const DebugSelector: FC<DebugSelectorProps> = () => {
 	return (
 		<Flex isColumn={true} gap={4}>
 			<Toggle isSmall={true} intent="advise" onChange={onDebugToggle} label="Debug Mode" isChecked={undefined} />
-			<Toggle isSmall={true} intent="advise" onChange={onDebugHeader} label="Header" isChecked={hasHeader} />
+			<Toggle isSmall={true} intent="advise" onChange={onDebugHeader} label="Navigation" isChecked={hasHeader} />
 			<Toggle isSmall={true} intent="advise" onChange={onDebugMenu} label="Menu" isChecked={hasMenu} />
 			<Toggle isSmall={true} intent="advise" onChange={onDebugPadding} label="Padding" isChecked={hasPadding} />
 		</Flex>
