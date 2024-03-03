@@ -47,6 +47,7 @@ export default function Home() {
 	return (
 		<WorkshopProvider>
 			<WorkshopNavigation />
+			<WorkshopMenu />
 			<WorkshopContent>
 				<Flex
 					isColumn={true}
@@ -217,7 +218,6 @@ export default function Home() {
 					</Details>
 				</Flex>
 			</WorkshopContent>
-			<WorkshopMenu />
 		</WorkshopProvider>
 	)
 }

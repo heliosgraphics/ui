@@ -1,10 +1,11 @@
-.navigationPanel {
+.menu {
 	position: fixed;
 	left: 0;
 	top: 65px;
 	z-index: var(--z-index-6);
 
 	height: calc(100vh - 64px);
+	overflow: auto;
 	width: 260px;
 
 	background-color: var(--ui-bg);
@@ -12,14 +13,14 @@
 	transition: all 120ms ease-in-out;
 }
 
-.navigationPanel:not(:target) {
+.menu:not(:target) {
 	/* display: none; */
   visibility: hidden;
 	opacity: 0;
 	transform: translateX(-24px);
 }
 
-.navigationPanel:target {
+.menu:target {
   /* display: flex; */
 	visibility: visible;
 	opacity: 1;
@@ -27,7 +28,7 @@
 }
 
 @media (min-width: 960px) {
-	.navigationPanel:not(:target) {
+	.menu:not(:target) {
 		visibility: visible;
 		opacity: 1;
 		transform: translateX(0);

@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
 
-export interface NavigationPanelProps {
+export interface MenuProps {
 	children: ReactNode
 }

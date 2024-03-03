@@ -18,7 +18,6 @@ const WorkshopNavigation: FC = () => {
 			<Navigation withGlass={true} isYCentered={true} gap={8} isBetween={true}>
 				<Flex isYCentered={true} gap={8}>
 					{hasMenu && <NavigationPanelButton />}
-
 					<Flex gap={4} isYCentered={true}>
 						<a href="https://ui.helios.graphics">
 							<img src="/emblem.svg" className="flex w-16 h-16" />
