@@ -2,7 +2,7 @@
 
 import { Flex, Text, Donut, Separator, ButtonGroup, Button } from "@heliosgraphics/ui"
 import { useContext, useState, type FC } from "react"
-import { WorkshopContext } from "../../contexts/WorkshopContext"
+import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import type { ExampleDonutProps } from "./ExampleDonut.types"
 
 const ExampleDonut: FC<ExampleDonutProps> = () => {

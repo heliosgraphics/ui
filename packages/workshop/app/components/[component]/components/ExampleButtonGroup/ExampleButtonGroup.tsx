@@ -2,7 +2,7 @@
 
 import { useState, useContext, type FC } from "react"
 import { Button, ButtonGroup, Separator, Toggle, Flex, Text, type ButtonGroupProps } from "@heliosgraphics/ui"
-import { WorkshopContext } from "../../contexts/WorkshopContext"
+import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import type { ExampleButtonGroupProps } from "./ExampleButtonGroup.types"
 
 const BUTTON_ALIGNS = ["left", "center", "right", "join"]

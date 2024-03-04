@@ -11,7 +11,7 @@ import {
 	type HeliosColors,
 	type HeliosIconType,
 } from "@heliosgraphics/ui"
-import { WorkshopContext } from "../../contexts/WorkshopContext"
+import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import { useContext, useState, type FC } from "react"
 import type { ExampleTileProps } from "./ExampleTile.types"
 

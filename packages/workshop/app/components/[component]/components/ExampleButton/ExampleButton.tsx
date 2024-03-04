@@ -2,7 +2,7 @@
 
 import { useContext, useState } from "react"
 import { Button, ButtonGroup, Flex, Separator } from "@heliosgraphics/ui"
-import { WorkshopContext } from "../../contexts/WorkshopContext"
+import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import type { ExampleButtonProps } from "./ExampleButton.types"
 import type { FC } from "react"
 

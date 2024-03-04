@@ -2,7 +2,7 @@
 
 import { useContext, useState, type FC } from "react"
 import { Flex, Separator, Checkbox } from "@heliosgraphics/ui"
-import { WorkshopContext } from "../../contexts/WorkshopContext"
+import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import type { ExampleCheckboxProps } from "./ExampleCheckbox.types"
 
 const ExampleCheckbox: FC<ExampleCheckboxProps> = () => {

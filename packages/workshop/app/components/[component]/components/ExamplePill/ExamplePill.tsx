@@ -1,7 +1,7 @@
 "use client"
 
 import { Button, ButtonGroup, Flex, HeliosIconType, Pill, Separator } from "@heliosgraphics/ui"
-import { WorkshopContext } from "../../contexts/WorkshopContext"
+import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import { useState, useContext, type FC } from "react"
 import type { ExamplePillProps } from "./ExamplePill.types"
 

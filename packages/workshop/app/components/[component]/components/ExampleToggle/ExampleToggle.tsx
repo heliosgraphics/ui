@@ -2,7 +2,7 @@
 
 import { useContext, useState, type FC } from "react"
 import { Flex, Separator, Toggle } from "@heliosgraphics/ui"
-import { WorkshopContext } from "../../contexts/WorkshopContext"
+import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import type { ExampleToggleProps } from "./ExampleToggle.types"
 
 const ExampleToggle: FC<ExampleToggleProps> = () => {

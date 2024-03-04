@@ -2,7 +2,7 @@
 
 import { useState, useContext, type FC } from "react"
 import { Separator, Flex, Text, Radio } from "@heliosgraphics/ui"
-import { WorkshopContext } from "../../contexts/WorkshopContext"
+import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import type { ExampleRadioProps } from "./ExampleRadio.types"
 
 const ExampleRadio: FC<ExampleRadioProps> = () => {

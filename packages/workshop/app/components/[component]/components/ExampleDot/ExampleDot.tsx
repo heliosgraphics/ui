@@ -2,7 +2,7 @@
 
 import { Flex, Dot, Select, Text, SCALE, COLORS, HeliosColors } from "@heliosgraphics/ui"
 import { useState, useContext, type FC } from "react"
-import { WorkshopContext } from "../../contexts/WorkshopContext"
+import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import type { ExampleDotProps } from "./ExampleDot.types"
 
 const ExampleDot: FC<ExampleDotProps> = () => {

@@ -14,7 +14,8 @@
 		"@heliosgraphics/ui": "workspace:*",
 		"next": "latest",
 		"react-dom": "latest",
-		"react": "latest"
+		"react": "latest",
+		"workshop": "workspace:*"
 	},
 	"devDependencies": {
 		"@types/node": "latest",

@@ -3,7 +3,7 @@
 import { Flex, Pie, type PieItem } from "@heliosgraphics/ui"
 import { type FC } from "react"
 import type { ExamplePieProps } from "./ExamplePie.types"
-// import { WorkshopContext } from "../../contexts/WorkshopContext"
+// import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 
 const pieItems: Array<PieItem> = [
 	{ name: "X", value: 24 },

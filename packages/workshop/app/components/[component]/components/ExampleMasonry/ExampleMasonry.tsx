@@ -1,7 +1,7 @@
 "use client"
 
 import { Alert, Flex, Masonry, Text } from "@heliosgraphics/ui"
-import Box from "../Box"
+import Box from "workshop/app/components/Box"
 import type { FC } from "react"
 import type { ExampleMasonryProps } from "./ExampleMasonry.types"
 

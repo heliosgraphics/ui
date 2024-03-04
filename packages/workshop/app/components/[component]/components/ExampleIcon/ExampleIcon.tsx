@@ -14,7 +14,7 @@ import {
 	type HeliosIconType,
 } from "@heliosgraphics/ui"
 import { useState, useContext, type FC, type ChangeEvent } from "react"
-import { WorkshopContext } from "../../contexts/WorkshopContext"
+import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import type { ExampleIconProps } from "./ExampleIcon.types"
 
 const ExampleIcon: FC<ExampleIconProps> = () => {

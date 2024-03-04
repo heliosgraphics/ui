@@ -2,7 +2,7 @@
 
 import { useContext } from "react"
 import { Flex, Alert, HeliosIntentionType } from "@heliosgraphics/ui"
-import { WorkshopContext } from "../../contexts/WorkshopContext"
+import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import type { FC } from "react"
 import type { ExampleAlertProps } from "./ExampleAlert.types"
 

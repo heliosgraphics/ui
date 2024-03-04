@@ -25,9 +25,13 @@ const WorkshopMenu: FC = () => {
 				<Link href="/components/Button">
 					<MenuItem title="Button" />
 				</Link>
-				{/* {COMPONENTS?.map((component, key) => {
-					return <MenuItem key={key} title={component} />
-				})} */}
+				{COMPONENTS?.map((component, key) => {
+					return (
+						<Link href={`/components/${component}`} key={key}>
+							<MenuItem title={component} />
+						</Link>
+					)
+				})}
 			</Menu>
 		)
 	)

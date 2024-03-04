@@ -108,7 +108,6 @@ export const COMPONENTS = [
 	"Breadcrumb",
 	"Button",
 	"ButtonGroup",
-	"Category",
 	"Checkbox",
 	"Column",
 	"Confirm",
