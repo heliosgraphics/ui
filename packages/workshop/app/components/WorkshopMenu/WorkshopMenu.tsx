@@ -1,16 +1,20 @@
 "use client"
 
-import { useContext, type FC } from "react"
+import { useContext, useState, type FC, type ChangeEvent } from "react"
 import Link from "next/link"
 import { WorkshopContext } from "../../contexts/WorkshopContext"
-import { Menu, MenuItem, Separator, COMPONENTS } from "@heliosgraphics/ui"
+import { Menu, MenuItem, MenuFilter, Separator, COMPONENTS } from "@heliosgraphics/ui"
 
 const WorkshopMenu: FC = () => {
 	const { hasMenu } = useContext(WorkshopContext)
+	const [value, setValue] = useState<string>("")
+
+	const onValueChange = (event: ChangeEvent<HTMLInputElement>) => setValue(event.target.value)
 
 	return (
 		hasMenu && (
 			<Menu>
+				<MenuFilter value={value} onChange={onValueChange} />
 				<Link href="/">
 					<MenuItem title="Index" />
 				</Link>
@@ -22,9 +26,6 @@ const WorkshopMenu: FC = () => {
 				<MenuItem title="Colors" />
 				<MenuItem title="Typography" />
 				<Separator isLight={true} />
-				<Link href="/components/Button">
-					<MenuItem title="Button" />
-				</Link>
 				{COMPONENTS?.map((component, key) => {
 					return (
 						<Link href={`/components/${component}`} key={key}>
