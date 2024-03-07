@@ -1,3 +1,5 @@
+"use client"
+
 import { useContext, type FC } from "react"
 import { Flex, Select, COLORS, ButtonGroup, Button, HeliosColors } from "@heliosgraphics/ui"
 import { WorkshopContext } from "../../../../contexts/WorkshopContext"

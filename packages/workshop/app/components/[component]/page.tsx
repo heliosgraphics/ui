@@ -9,7 +9,7 @@ export default function Home({ params }) {
 	if (!DemoComponent) return null
 
 	return (
-		<Flex isColumn={true}>
+		<Flex isColumn={true} gap={12}>
 			<Heading level={1}>{component}</Heading>
 			<DemoComponent />
 		</Flex>

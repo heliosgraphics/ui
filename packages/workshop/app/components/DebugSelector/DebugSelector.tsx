@@ -1,3 +1,5 @@
+"use client"
+
 import { Flex, Toggle } from "@heliosgraphics/ui"
 import { useContext, type FC } from "react"
 import { WorkshopContext } from "../../contexts/WorkshopContext"

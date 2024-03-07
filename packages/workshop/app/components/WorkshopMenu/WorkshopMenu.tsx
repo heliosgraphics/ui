@@ -18,13 +18,22 @@ const WorkshopMenu: FC = () => {
 				<Link href="/">
 					<MenuItem title="Index" />
 				</Link>
-				<MenuItem title="About" />
-				<MenuItem title="Examples" />
-				<MenuItem title="Pricing" />
+				<Link href="/about">
+					<MenuItem title="About" />
+				</Link>
+				<Link href="/branding">
+					<MenuItem title="Branding" />
+				</Link>
+				<Link href="/pricing">
+					<MenuItem title="Pricing" />
+				</Link>
 				<Separator isLight={true} />
-				<MenuItem title="CSS" />
-				<MenuItem title="Colors" />
-				<MenuItem title="Typography" />
+				<Link href="/colors">
+					<MenuItem title="Colors" />
+				</Link>
+				<Link href="/typography">
+					<MenuItem title="Typography" />
+				</Link>
 				<Separator isLight={true} />
 				{COMPONENTS?.map((component, key) => {
 					return (
