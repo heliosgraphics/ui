@@ -1,9 +1,10 @@
 "use client"
 
 import { useContext, type FC } from "react"
-import dynamic from "next/dynamic"
 import { WorkshopContext } from "../../contexts/WorkshopContext"
 import { Flex, NavigationPanelButton, ThemeSwitcherLoading, Text, Navigation } from "@heliosgraphics/ui"
+import Link from "next/link"
+import dynamic from "next/dynamic"
 
 const ThemeSwitcher = dynamic(() => import("@heliosgraphics/ui/components/ThemeSwitcher"), {
 	ssr: false,
@@ -19,9 +20,9 @@ const WorkshopNavigation: FC = () => {
 				<Flex isYCentered={true} gap={8}>
 					{hasMenu && <NavigationPanelButton />}
 					<Flex gap={4} isYCentered={true}>
-						<a href="https://ui.helios.graphics">
+						<Link href="/">
 							<img src="/emblem.svg" className="flex w-16 h-16" />
-						</a>
+						</Link>
 						<Flex isColumn={true}>
 							<Text type="small" fontWeight="semibold">
 								Helios UI

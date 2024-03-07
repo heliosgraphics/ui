@@ -1,10 +1,23 @@
 .menuItem {
 
-	margin: 8px;
-	padding: 6px 16px;
+	margin: 0 8px;
+	padding: 8px 16px;
 
-	border-radius: 4px;
-	/* lol */
+	border-radius: var(--radius-small);
+	background-color: var(--ui-bg);
 
 	transition: all 120ms ease-in-out;
 }
+
+.menuItem:hover {
+	background-color: var(--ui-bg-action-hover);
+}
+
+.menuItemActive {
+	background-color: var(--ui-bg-action-active);
+}
+
+.menuItemActive:hover {
+	background-color: var(--ui-bg-action-hover);
+}
+

@@ -258,7 +258,6 @@
 a {
 	color: currentcolor;
 	cursor: pointer;
-	text-decoration: underline;
 }
 
 *::selection {

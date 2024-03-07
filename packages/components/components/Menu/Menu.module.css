@@ -5,6 +5,9 @@
 	z-index: var(--z-index-6);
 
 	height: 100dvh;
+	gap: 2px;
+	display: flex;
+	flex-direction: column;
 	overflow: auto;
 	width: 260px;
 
