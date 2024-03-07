@@ -1,17 +1,12 @@
 import { Flex, Text, Heading, Separator } from "@heliosgraphics/ui"
 import DebugSelector from "./components/DebugSelector"
 import WorkshopControls from "./components/WorkshopControls"
+import Page from "workshop/app/components/Page"
 import uiPackage from "@heliosgraphics/ui/package.json"
 
 export default function Home({}) {
 	return (
-		<Flex
-			isColumn={true}
-			gap={8}
-			padding={[8, 16, 24]}
-			withBackground={true}
-			// withRadius={["none", "small", "normal"]}
-		>
+		<Page>
 			<Flex isColumn={true}>
 				<Flex isBetween={true}>
 					<Heading level={0}>UI</Heading>
@@ -29,6 +24,6 @@ export default function Home({}) {
 			<Separator isLight={true} />
 			<DebugSelector />
 			<WorkshopControls />
-		</Flex>
+		</Page>
 	)
 }

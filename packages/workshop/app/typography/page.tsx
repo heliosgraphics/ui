@@ -1,11 +1,12 @@
 import React from "react"
 import Alphabet from "./components/Alphabet"
+import Page from "workshop/app/components/Page"
 import { Flex, Heading, Separator, Text } from "@heliosgraphics/ui"
 import HeadingInfo from "./components/HeadingInfo"
 
 const TypographyPage = () => {
 	return (
-		<div>
+		<Page>
 			<Text type="paragraph">
 				We&apos;re using <b>Inter</b> and <b>Jetbrains Mono</b> for sans and mono fonts respectively&mdash;both are
 				free, open source and designed for user interfaces.
@@ -45,7 +46,7 @@ const TypographyPage = () => {
 				<HeadingInfo level="monoSmall">Nullam efficitur sapien.</HeadingInfo>
 				<HeadingInfo level="monoTiny">suspendisse potenti</HeadingInfo>
 			</Flex>
-		</div>
+		</Page>
 	)
 }
 
