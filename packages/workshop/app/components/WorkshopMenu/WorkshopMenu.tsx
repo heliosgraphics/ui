@@ -21,11 +21,8 @@ const WorkshopMenu: FC = () => {
 				<Link href="/about">
 					<MenuItem title="About" />
 				</Link>
-				<Link href="/branding">
-					<MenuItem title="Branding" />
-				</Link>
-				<Link href="/pricing">
-					<MenuItem title="Pricing" />
+				<Link href="/license">
+					<MenuItem title="License" />
 				</Link>
 				<Separator isLight={true} />
 				<Link href="/colors">

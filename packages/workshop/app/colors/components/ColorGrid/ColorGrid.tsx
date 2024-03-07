@@ -5,14 +5,16 @@ import type { ColorGridProps } from "./ColorGrid.types"
 
 const OPACITY_SCALE: Array<number> = [97.5, 95, 90, 80, 70, 60, 50, 40, 30, 20, 10, 5]
 
-const ColorGrid: FC<ColorGridProps> = ({ color }) => {
+const ColorGrid: FC<ColorGridProps> = ({ color, intention }) => {
 	const style = {
 		"--color": `var(--${color}-hue) var(--${color}-saturation)`,
 	} as CSSProperties
 
 	return (
 		<Flex style={style} isColumn={true} gap={4}>
-			<Text type="small">{color.charAt(0).toUpperCase() + color.slice(1)}</Text>
+			<Text type="small" className="capitalize">
+				{intention} &middot; {color}
+			</Text>
 			<Flex>
 				{OPACITY_SCALE.map((scale, key) => {
 					return <Square key={key} lightness={scale} />
