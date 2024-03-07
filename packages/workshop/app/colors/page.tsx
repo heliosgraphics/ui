@@ -9,15 +9,15 @@ export default function Home() {
 				Colors in Helios UI indicate <em>intentions</em>.
 			</Text>
 			<Separator isLight={true} />
-			<ColorGrid color="aqua" intention="question" />
-			<ColorGrid color="blue" intention="advise" />
-			<ColorGrid color="gray" intention="silent" />
-			<ColorGrid color="green" intention="success" />
-			<ColorGrid color="orange" intention="highlight" />
-			<ColorGrid color="pink" intention="automation" />
-			<ColorGrid color="purple" intention="confirmation" />
-			<ColorGrid color="red" intention="error" />
-			<ColorGrid color="yellow" intention="warning" />
+			<ColorGrid intention="question" />
+			<ColorGrid intention="advise" />
+			<ColorGrid intention="silent" />
+			<ColorGrid intention="success" />
+			<ColorGrid intention="highlight" />
+			<ColorGrid intention="automation" />
+			<ColorGrid intention="confirmation" />
+			<ColorGrid intention="danger" />
+			<ColorGrid intention="warning" />
 		</Page>
 	)
 }

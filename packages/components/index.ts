@@ -67,18 +67,20 @@ export type { HeliosThemes } from "./types/themes"
 export type { HeliosIntentionType, HeliosEmphasisType } from "./types/intentions"
 export type { HeliosIconType } from "./types/icons"
 
+// constants
+export { INTENTION_COLOR_MAP, INTENT_DESCRIPTIONS } from './constants/intentions'
+
 // meta
 import type { HeliosScale } from "./types/scale"
 import type { HeliosColors } from "./types/colors"
 import type { HeliosIntentionType, HeliosEmphasisType } from "./types/intentions"
 
 export const EMPHASES: Array<HeliosEmphasisType> = ["primary", "secondary", "tertiary"]
-
 export const INTENTIONS: Array<HeliosIntentionType> = [
 	"advise",
 	"automation",
 	"confirmation",
-	"error",
+	"danger",
 	"highlight",
 	"question",
 	"silent",

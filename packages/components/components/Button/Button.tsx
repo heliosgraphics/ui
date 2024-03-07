@@ -32,7 +32,7 @@ const Button: FC<ButtonProps> = ({
 		[styles.buttonAdvise]: intent === "advise",
 		[styles.buttonAutomation]: intent === "automation",
 		[styles.buttonConfirmation]: intent === "confirmation",
-		[styles.buttonError]: intent === "error",
+		[styles.buttonDanger]: intent === "danger",
 		[styles.buttonHighlight]: intent === "highlight",
 		[styles.buttonQuestion]: intent === "question",
 		[styles.buttonSilent]: intent === "silent",

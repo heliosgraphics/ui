@@ -59,8 +59,8 @@
 	--radio-bg-checked: hsl(var(--color-intent-confirmation), 50%);
 }
 
-.radioError {
-	--radio-bg-checked: hsl(var(--color-intent-error), 50%);
+.radioDanger {
+	--radio-bg-checked: hsl(var(--color-intent-danger), 50%);
 }
 
 .radioHighlight {

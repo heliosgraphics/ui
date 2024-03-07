@@ -10,7 +10,7 @@ const Square: FC<SquareProps> = ({ lightness }) => {
 	} as CSSProperties
 
 	return (
-		<Flex style={style} className={styles.square}>
+		<Flex style={style} className={styles.square} isCentered={true}>
 			<Text type="tiny" fontWeight="medium" className={styles.squareNote}>
 				L{lightness}
 			</Text>

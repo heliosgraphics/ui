@@ -13,7 +13,7 @@ const Alert: FC<AlertProps> = ({ children, onClose, title, icon, intent }) => {
 		[styles.alertAdvise]: intent === "advise",
 		[styles.alertAutomation]: intent === "automation",
 		[styles.alertConfirmation]: intent === "confirmation",
-		[styles.alertError]: intent === "error",
+		[styles.alertDanger]: intent === "danger",
 		[styles.alertHighlight]: intent === "highlight",
 		[styles.alertQuestion]: intent === "question",
 		[styles.alertSilent]: intent === "silent",

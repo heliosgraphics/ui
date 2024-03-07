@@ -24,7 +24,7 @@
 	--alert-text: var(--ui-text-purple);
 }
 
-.alertError {
+.alertDanger {
 	--alert-bg: var(--ui-bg-soft-red);
 	--alert-text: var(--ui-text-red);
 }

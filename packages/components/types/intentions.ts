@@ -2,7 +2,7 @@ export type HeliosIntentionType =
 	| "advise"
 	| "automation"
 	| "confirmation"
-	| "error"
+	| "danger"
 	| "highlight"
 	| "question"
 	| "silent"

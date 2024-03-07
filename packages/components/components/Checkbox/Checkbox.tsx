@@ -11,7 +11,7 @@ const Checkbox: FC<CheckboxProps> = ({ id, isChecked, isSmall, isDisabled, inten
 		[styles.checkboxAdvise]: intent === "advise",
 		[styles.checkboxAutomation]: intent === "automation",
 		[styles.checkboxConfirmation]: intent === "confirmation",
-		[styles.checkboxError]: intent === "error",
+		[styles.checkboxDanger]: intent === "danger",
 		[styles.checkboxHighlight]: intent === "highlight",
 		[styles.checkboxQuestion]: intent === "question",
 		[styles.checkboxSilent]: intent === "silent",

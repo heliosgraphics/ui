@@ -60,13 +60,13 @@
 	--button-disabled-bg: var(--ui-bg-soft-purple);
 }
 
-/* intent: error */
-.buttonError {
-	--button-bg: hsl(var(--color-intent-error), 50%);
-	--button-text: var(--ui-button-text-error);
-	--button-hover: hsl(var(--color-intent-error), 40%);
-	--button-active: hsl(var(--color-intent-error), 30%);
-	--button-disabled: hsl(var(--color-intent-error), 70%);
+/* intent: danger */
+.buttonDanger {
+	--button-bg: hsl(var(--color-intent-danger), 50%);
+	--button-text: var(--ui-button-text-danger);
+	--button-hover: hsl(var(--color-intent-danger), 40%);
+	--button-active: hsl(var(--color-intent-danger), 30%);
+	--button-disabled: hsl(var(--color-intent-danger), 70%);
 	--button-disabled-bg: var(--ui-bg-soft-red);
 }
 
@@ -217,9 +217,9 @@
 	min-width: var(--ui-button-flair-size);
 	width: var(--ui-button-flair-size);
 
-	background-color: hsl(var(--color-intent-error), 50%);
+	background-color: hsl(var(--color-intent-danger), 50%);
 	border-radius: 100%;
-	color: var(--ui-button-text-error);
+	color: var(--ui-button-text-danger);
 }
 
 .buttonSizeNormal .button__flair {

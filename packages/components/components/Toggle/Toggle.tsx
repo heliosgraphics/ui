@@ -11,7 +11,7 @@ const Toggle: FC<ToggleProps> = ({ id, isChecked, isSmall, isRequired, isDisable
 		[styles.toggleAdvise]: intent === "advise",
 		[styles.toggleAutomation]: intent === "automation",
 		[styles.toggleConfirmation]: intent === "confirmation",
-		[styles.toggleError]: intent === "error",
+		[styles.toggleDanger]: intent === "danger",
 		[styles.toggleHighlight]: intent === "highlight",
 		[styles.toggleQuestion]: intent === "question",
 		[styles.toggleSilent]: intent === "silent",

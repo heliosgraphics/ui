@@ -89,7 +89,7 @@
 	--color-intent-advise: var(--blue-hue), var(--blue-saturation);
 	--color-intent-automation: var(--pink-hue), var(--pink-saturation);
 	--color-intent-confirmation: var(--purple-hue), var(--purple-saturation);
-	--color-intent-error: var(--red-hue), var(--red-saturation);
+	--color-intent-danger: var(--red-hue), var(--red-saturation);
 	--color-intent-highlight: var(--orange-hue), var(--orange-saturation);
 	--color-intent-question: var(--aqua-hue), var(--aqua-saturation);
 	--color-intent-silent: var(--gray-hue), var(--gray-saturation);
@@ -189,7 +189,7 @@
 	--ui-button-text-advise: hsl(var(--blue-hue), var(--blue-saturation), 95%);
 	--ui-button-text-automation: hsl(var(--pink-hue), var(--pink-saturation), 95%);
 	--ui-button-text-confirmation: hsl(var(--purple-hue), var(--purple-saturation), 95%);
-	--ui-button-text-error: hsl(var(--red-hue), var(--red-saturation), 95%);
+	--ui-button-text-danger: hsl(var(--red-hue), var(--red-saturation), 95%);
 	--ui-button-text-highlight: hsl(var(--orange-hue), var(--orange-saturation), 95%);
 	--ui-button-text-question: hsl(var(--aqua-hue), var(--aqua-saturation), 95%);
 	--ui-button-text-silent: hsl(var(--gray-hue), var(--gray-saturation), 40%);
@@ -242,7 +242,7 @@
 	--ui-button-text-advise: hsl(var(--blue-hue), var(--blue-saturation), 90%);
 	--ui-button-text-automation: hsl(var(--pink-hue), var(--pink-saturation), 90%);
 	--ui-button-text-confirmation: hsl(var(--purple-hue), var(--purple-saturation), 90%);
-	--ui-button-text-error: hsl(var(--red-hue), var(--red-saturation), 90%);
+	--ui-button-text-danger: hsl(var(--red-hue), var(--red-saturation), 90%);
 	--ui-button-text-highlight: hsl(var(--orange-hue), var(--orange-saturation), 15%);
 	--ui-button-text-question: hsl(var(--aqua-hue), var(--aqua-saturation), 10%);
 	--ui-button-text-silent: hsl(var(--gray-hue), var(--gray-saturation), 90%);
@@ -452,7 +452,7 @@ mark,
 
 .hljs-literal,
 .hljs-keyword {
-	color: var(--ui-text-intent-error);
+	color: var(--ui-text-intent-danger);
 }
 
 .hljs-number {

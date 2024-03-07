@@ -10,7 +10,7 @@ const Radio: FC<RadioProps> = ({ id, isSmall, isDisabled, intent, onChange, valu
 		[styles.radioAdvise]: intent === "advise",
 		[styles.radioAutomation]: intent === "automation",
 		[styles.radioConfirmation]: intent === "confirmation",
-		[styles.radioError]: intent === "error",
+		[styles.radioDanger]: intent === "danger",
 		[styles.radioHighlight]: intent === "highlight",
 		[styles.radioQuestion]: intent === "question",
 		[styles.radioSilent]: intent === "silent",

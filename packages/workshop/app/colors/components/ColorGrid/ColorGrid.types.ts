@@ -1,6 +1,5 @@
-import type { HeliosColors, type HeliosIntentionType } from "@heliosgraphics/ui"
+import type { HeliosIntentionType } from "@heliosgraphics/ui"
 
 export interface ColorGridProps {
-	color: HeliosColors
 	intention: HeliosIntentionType
 }

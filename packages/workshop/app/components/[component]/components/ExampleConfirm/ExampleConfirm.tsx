@@ -18,7 +18,7 @@ const ExampleConfirm: FC<ExampleConfirmProps> = () => {
 				confirmText="Delete"
 				description="Are you sure you want to delete this?"
 				icon="trash"
-				intent="error"
+				intent="danger"
 				isOpen={isConfirming}
 				onCancel={onConfirmToggle}
 				onConfirm={onConfirmToggle}
