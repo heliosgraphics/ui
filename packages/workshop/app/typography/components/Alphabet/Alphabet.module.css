@@ -1,0 +1,8 @@
+.alphabet {
+	min-width: 160px;
+}
+
+.alphabet__letter {
+	font-size: 60px;
+	line-height: 72px;
+}
