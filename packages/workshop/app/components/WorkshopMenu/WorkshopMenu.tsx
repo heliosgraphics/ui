@@ -24,8 +24,8 @@ const WorkshopMenu: FC = () => {
 			<Link href="/about">
 				<MenuItem title="About" isActive={pathname === "/about"} />
 			</Link>
-			<Link href="/license">
-				<MenuItem title="License" isActive={pathname === "/license"} />
+			<Link href="/get-started">
+				<MenuItem title="Get Started" isActive={pathname === "/get-started"} />
 			</Link>
 			<Separator isLight={true} />
 			<Link href="/colors">

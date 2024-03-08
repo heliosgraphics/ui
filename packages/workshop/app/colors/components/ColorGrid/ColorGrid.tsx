@@ -17,10 +17,10 @@ const ColorGrid: FC<ColorGridProps> = ({ intention }) => {
 		<Flex style={style} isColumn={true} gap={4}>
 			<Flex isColumn={true}>
 				<Text type="small" className="capitalize" fontWeight="medium">
-					{intention}
+					{intention} &middot; {color}
 				</Text>
-				<Text type="small" className="capitalize" emphasis="secondary">
-					{description} &middot; {color}
+				<Text type="small" emphasis="secondary">
+					{description}
 				</Text>
 			</Flex>
 			<Flex isWrapping={true}>

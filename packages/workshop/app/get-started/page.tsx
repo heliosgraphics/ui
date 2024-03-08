@@ -1,14 +1,15 @@
 import { Markdown } from "@heliosgraphics/ui"
 import Page from "workshop/app/components/Page"
 
-const PAGE = `# License
+const PAGE = `### Installation
 
-TBD
+- 1.
+- 2.
 `
 
 export default function Home() {
 	return (
-		<Page title="License">
+		<Page title="Get Started">
 			<Markdown text={PAGE} />
 		</Page>
 	)

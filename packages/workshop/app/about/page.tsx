@@ -1,7 +1,15 @@
 import Page from "workshop/app/components/Page"
 import { Markdown } from "@heliosgraphics/ui"
 
-const PAGE = `# About
+const PAGE = `### Architecture
+
+TBD
+
+### Dependencies
+
+TBD
+
+### Concepts
 
 TBD
 `
