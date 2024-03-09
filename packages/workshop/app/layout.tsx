@@ -4,11 +4,11 @@ import "@heliosgraphics/ui/components.css"
 import { Main, Setup } from "@heliosgraphics/ui"
 import type { ReactNode } from "react"
 import type { Metadata } from "next"
-import { Content, Details, Flex, Text, Heading, Separator } from "@heliosgraphics/ui"
 import { WorkshopProvider } from "./contexts/WorkshopContext"
 import WorkshopNavigation from "./components/WorkshopNavigation"
 import WorkshopMenu from "./components/WorkshopMenu"
 import WorkshopContent from "./components/WorkshopContent"
+import Cover from "./components/Cover"
 
 export const metadata: Metadata = {
 	title: "Helios UI",
@@ -33,7 +33,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 					<Main>
 						<WorkshopNavigation />
 						<WorkshopMenu />
-						<WorkshopContent>{children}</WorkshopContent>
+						<WorkshopContent>
+							<Cover />
+							{children}
+						</WorkshopContent>
 					</Main>
 				</WorkshopProvider>
 			</body>

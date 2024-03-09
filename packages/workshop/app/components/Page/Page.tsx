@@ -11,7 +11,14 @@ const Page: FC<PageProps> = ({ children, title }) => {
 	const pageRadius: ResponsiveRadiusType | undefined = hasPadding ? ["none", "small", "normal"] : undefined
 
 	return (
-		<Flex isColumn={true} gap={12} padding={[8, 16, 24]} withBackground={true} withRadius={pageRadius}>
+		<Flex
+			isColumn={true}
+			gap={12}
+			padding={[8, 16, 24]}
+			withBackground={true}
+			withRadius={pageRadius}
+			className="relative z-10"
+		>
 			<Heading level={0}>{title}</Heading>
 			{children}
 		</Flex>

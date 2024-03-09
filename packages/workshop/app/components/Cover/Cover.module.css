@@ -1,0 +1,20 @@
+.cover {
+	position: sticky;
+	top: 0;
+
+	margin-bottom: -1px;
+	display: flex;
+	flex-wrap: wrap;
+	height: 144px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.coverTile {
+	height: 48px;
+	min-width: 48px;
+	width: 48px;
+
+	border-bottom: 1px dashed hsla(var(--gray-hue), var(--gray-saturation), 30%, 0.1);
+	border-right: 1px dashed hsla(var(--gray-hue), var(--gray-saturation), 30%, 0.1);
+}
