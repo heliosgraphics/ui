@@ -6,10 +6,12 @@ import { WorkshopContext } from "../../contexts/WorkshopContext"
 import type { DebugSelectorProps } from "./DebugSelector.types"
 
 const DebugSelector: FC<DebugSelectorProps> = () => {
-	const { hasPadding, setPadding, hasHeader, hasMenu, setMenu, setHeader } = useContext(WorkshopContext)
+	const { hasCover, hasPadding, setPadding, hasHeader, hasMenu, setCover, setMenu, setHeader } =
+		useContext(WorkshopContext)
 
 	const onDebugToggle = () => {
 		const hasDebug: boolean = document?.body?.classList?.contains?.("debug")
+
 		if (hasDebug) {
 			document.body.classList.remove("debug")
 		} else {
@@ -20,13 +22,15 @@ const DebugSelector: FC<DebugSelectorProps> = () => {
 	const onDebugHeader = () => setHeader(!hasHeader)
 	const onDebugMenu = () => setMenu(!hasMenu)
 	const onDebugPadding = () => setPadding(!hasPadding)
+	const onDebugCover = () => setCover(!hasCover)
 
 	return (
 		<Flex isColumn={true} gap={4}>
-			<Toggle isSmall={true} intent="advise" onChange={onDebugToggle} label="Debug Mode" isChecked={undefined} />
-			<Toggle isSmall={true} intent="advise" onChange={onDebugHeader} label="Navigation" isChecked={hasHeader} />
-			<Toggle isSmall={true} intent="advise" onChange={onDebugMenu} label="Menu" isChecked={hasMenu} />
-			<Toggle isSmall={true} intent="advise" onChange={onDebugPadding} label="Padding" isChecked={hasPadding} />
+			<Toggle isSmall={true} intent="silent" onChange={onDebugCover} label="Cover" isChecked={hasCover} />
+			<Toggle isSmall={true} intent="silent" onChange={onDebugHeader} label="Navigation" isChecked={hasHeader} />
+			<Toggle isSmall={true} intent="silent" onChange={onDebugMenu} label="Menu" isChecked={hasMenu} />
+			<Toggle isSmall={true} intent="silent" onChange={onDebugPadding} label="Padding" isChecked={hasPadding} />
+			<Toggle isSmall={true} intent="danger" onChange={onDebugToggle} label="Debug Mode" isChecked={undefined} />
 		</Flex>
 	)
 }
