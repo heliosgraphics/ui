@@ -1,9 +1,4 @@
-import type {
-	HeliosChildrenType,
-	HeliosIconType,
-	HeliosIntentionType,
-	HeliosComponentMeta
-} from "../.."
+import type { HeliosChildrenType, HeliosIconType, HeliosIntentionType, HeliosComponentMeta } from "../.."
 
 export interface AlertProps {
 	children: HeliosChildrenType
@@ -15,20 +10,20 @@ export interface AlertProps {
 
 export const meta: HeliosComponentMeta<AlertProps> = {
 	children: {
-		type: 'HeliosChildrenType'
+		type: "HeliosChildrenType",
 	},
 	icon: {
-		type: 'HeliosIconType',
-		isOptional: true
+		type: "HeliosIconType",
+		isOptional: true,
 	},
 	intent: {
-		type: 'HeliosIntentionType'
+		type: "HeliosIntentionType",
 	},
 	onClose: {
-		type: '(event?: unknown) => void',
+		type: "(event?: unknown) => void",
 		isOptional: true,
 	},
 	title: {
-		type: 'string'
+		type: "string",
 	},
 }
