@@ -1,14 +1,6 @@
-import { Flex, Heading } from "@heliosgraphics/ui"
-import LiveComponent from "./components/LiveComponent"
-import WorkshopControls from "../../components/WorkshopControls"
 import { lazy } from "react"
+import WorkshopControls from "../../components/WorkshopControls"
 import Page from "../Page"
-
-const CODE_SAMPLES: Record<any, string> = {
-	Alert: `<Alert title="Vitae, assumenda aliquid" intent={intent} icon="info" onClose={onClose}>
-  {INTENT_DESCRIPTIONS[intent]}
-</Alert>`,
-}
 
 export default function Home({ params }) {
 	const { component } = params
@@ -19,16 +11,10 @@ export default function Home({ params }) {
 
 	return (
 		<>
-			<Page>
-				<Flex isColumn={true} gap={12}>
-					<Heading level={1}>{component}</Heading>
-					<WorkshopControls />
-					<DemoComponent />
-				</Flex>
+			<Page title={component}>
+				<WorkshopControls />
 			</Page>
-			<Page noPadding={true}>
-				<LiveComponent code={CODE_SAMPLES[component] || ""} />
-			</Page>
+			<DemoComponent />
 		</>
 	)
 }

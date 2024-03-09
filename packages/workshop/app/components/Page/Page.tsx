@@ -6,7 +6,7 @@ import { useContext, type FC } from "react"
 import { WorkshopContext } from "../../contexts/WorkshopContext"
 import type { PageProps } from "./Page.types"
 
-const Page: FC<PageProps> = ({ children, eyebrow, title, noPadding }) => {
+const Page: FC<PageProps> = ({ children, eyebrow, title }) => {
 	const { hasPadding } = useContext(WorkshopContext)
 	const pageRadius: ResponsiveRadiusType | undefined = hasPadding ? ["none", "small", "normal"] : undefined
 
@@ -14,7 +14,7 @@ const Page: FC<PageProps> = ({ children, eyebrow, title, noPadding }) => {
 		<Flex
 			isColumn={true}
 			gap={12}
-			padding={!noPadding ? [8, 16, 24] : 0}
+			padding={[8, 16, 24]}
 			withBackground={true}
 			withRadius={pageRadius}
 			className="relative z-10"

@@ -1,16 +1,25 @@
 .liveComponent {
-	margin-top: -1px;
+	margin-top: -49px;
 
 	background-color: var(--bg-ui);
 	border-bottom: 1px solid var(--ui-border-light);
-}
-
-.liveComponentBackground {
 	background-image: linear-gradient(90deg, var(--ui-border-light) 1px, transparent 1px),
 		linear-gradient(180deg, var(--ui-border-light) 1px, transparent 1px);
 	background-size: 16px 16px;
 }
 
 .liveEditor {
-	border-bottom: 128px solid var(--ui-bg);
+	position: relative;
+}
+
+.liveEditor:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 24px;
+
+	/* background-color: red; */
+	content: " ";
 }
