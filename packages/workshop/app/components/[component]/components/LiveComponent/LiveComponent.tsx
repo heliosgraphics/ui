@@ -5,31 +5,19 @@ import type { LiveComponentProps } from "./LiveComponent.types"
 import styles from "./LiveComponent.module.css"
 import { Flex } from "@heliosgraphics/ui"
 import type { FC } from "react"
-import { Highlight } from "prism-react-renderer"
+import type { PrismTheme } from "prism-react-renderer"
 
 import * as components from "@heliosgraphics/ui"
 
-const PRISM_THEME = {
+const PRISM_THEME: PrismTheme = {
 	plain: {
 		backgroundColor: "var(--ui-bg)",
-		color: "var(--ui-text-primary)",
+		color: "var(--ui-text-secondary)",
 	},
 	styles: [
 		{
 			types: ["comment", "prolog", "doctype", "cdata", "punctuation"],
-			style: { color: "var(--ui-text-tertiary)" },
-		},
-		{
-			types: ["tag", "operator", "number"],
 			style: { color: "var(--ui-text-secondary)" },
-		},
-		{
-			types: ["property", "function"],
-			style: { color: "hsl(var(--green-hue), var(--green-saturation), 50%)" },
-		},
-		{
-			types: ["attr-name", "selector"],
-			style: { color: "var(--ui-text-tertiary)" },
 		},
 		{
 			types: [
@@ -57,11 +45,11 @@ const LiveComponent: FC<LiveComponentProps> = ({ code }) => {
 	return (
 		<Flex isColumn={true}>
 			<LiveProvider code={code} scope={{ ...components }} theme={PRISM_THEME}>
+				<LiveEditor className="mono small p-16" />
 				<Flex isColumn={true} padding={16} className={styles.liveComponent}>
 					<LiveError />
 					<LivePreview />
 				</Flex>
-				<LiveEditor />
 			</LiveProvider>
 		</Flex>
 	)

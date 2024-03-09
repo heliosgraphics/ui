@@ -13,7 +13,6 @@
 		"@heliosgraphics/fractures": "^6.3.0",
 		"@heliosgraphics/ui": "workspace:*",
 		"next": "latest",
-		"prism-react-renderer": "latest",
 		"react-dom": "latest",
 		"react-live": "latest",
 		"react": "latest",
@@ -23,6 +22,7 @@
 		"@types/node": "latest",
 		"@types/react-dom": "latest",
 		"@types/react": "latest",
+		"prism-react-renderer": "latest",
 		"typescript": "latest"
 	}
 }
