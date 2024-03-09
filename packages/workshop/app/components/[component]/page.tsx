@@ -1,4 +1,6 @@
 import { Flex, Heading } from "@heliosgraphics/ui"
+import WorkshopControls from "../../components/WorkshopControls"
+
 import { lazy } from "react"
 
 export default function Home({ params }) {
@@ -11,6 +13,7 @@ export default function Home({ params }) {
 	return (
 		<Flex isColumn={true} gap={12}>
 			<Heading level={1}>{component}</Heading>
+			<WorkshopControls />
 			<DemoComponent />
 		</Flex>
 	)
