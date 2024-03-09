@@ -192,12 +192,12 @@ importers:
       '@heliosgraphics/ui':
         specifier: workspace:*
         version: link:../components
+      '@heliosgraphics/utils':
+        specifier: ^5.3.4
+        version: 5.3.4
       next:
         specifier: latest
         version: 14.1.0(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)
-      prism-react-renderer:
-        specifier: latest
-        version: 2.3.1(react@18.2.0)
       react:
         specifier: latest
         version: 18.2.0
@@ -220,6 +220,9 @@ importers:
       '@types/react-dom':
         specifier: latest
         version: 18.2.19
+      prism-react-renderer:
+        specifier: latest
+        version: 2.3.1(react@18.2.0)
       typescript:
         specifier: latest
         version: 5.3.3
@@ -1418,7 +1421,6 @@ packages:
 
   /@types/prismjs@1.26.3:
     resolution: {integrity: sha512-A0D0aTXvjlqJ5ZILMz3rNfDBOx9hHxLZYv2by47Sm/pqW35zzjusrZTryatjN/Rf8Us2gZrJD+KeHbUSTux1Cw==}
-    dev: false
 
   /@types/prop-types@15.7.11:
     resolution: {integrity: sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==}
@@ -2083,7 +2085,6 @@ packages:
   /clsx@2.1.0:
     resolution: {integrity: sha512-m3iNNWpd9rl3jvvcBnu70ylMdrXt8Vlq4HYadnU5fwcOtvkSQWPmj7amUcDT2qYI7risszBjI5AUIUox9D16pg==}
     engines: {node: '>=6'}
-    dev: false
 
   /color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
@@ -4342,7 +4343,6 @@ packages:
       '@types/prismjs': 1.26.3
       clsx: 2.1.0
       react: 18.2.0
-    dev: false
 
   /prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}

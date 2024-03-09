@@ -11,6 +11,7 @@
 	},
 	"dependencies": {
 		"@heliosgraphics/fractures": "^6.3.0",
+		"@heliosgraphics/utils": "^5.3.4",
 		"@heliosgraphics/ui": "workspace:*",
 		"next": "latest",
 		"react-dom": "latest",

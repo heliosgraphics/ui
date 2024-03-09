@@ -1,13 +1,15 @@
 "use client"
 
+import { Flex, Button, ButtonGroup } from "@heliosgraphics/ui"
+import { getClasses } from "@heliosgraphics/utils"
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
-import type { LiveComponentProps } from "./LiveComponent.types"
-import styles from "./LiveComponent.module.css"
-import { Flex } from "@heliosgraphics/ui"
-import type { FC } from "react"
-import type { PrismTheme } from "prism-react-renderer"
-
+import { useContext, useState, type FC } from "react"
+import { WorkshopContext } from "../../../../contexts/WorkshopContext/WorkshopContext"
 import * as components from "@heliosgraphics/ui"
+import styles from "./LiveComponent.module.css"
+import type { LiveComponentProps } from "./LiveComponent.types"
+import type { PrismTheme } from "prism-react-renderer"
+import Page from "../../../Page"
 
 const PRISM_THEME: PrismTheme = {
 	plain: {
@@ -42,14 +44,28 @@ const PRISM_THEME: PrismTheme = {
 }
 
 const LiveComponent: FC<LiveComponentProps> = ({ code }) => {
+	const { intent } = useContext(WorkshopContext)
+	const [showBackground, setBackground] = useState<boolean>(true)
+
+	const onBackgroundToggle = () => setBackground(!showBackground)
+
+	const liveComponentClasses: string = getClasses(styles.liveComponent, {
+		[styles.liveComponentBackground]: showBackground,
+	})
+
+	const liveEditorClasses: string = getClasses(styles.liveEditor, "mono tiny p-16")
+
 	return (
 		<Flex isColumn={true}>
-			<LiveProvider code={code} scope={{ ...components }} theme={PRISM_THEME}>
-				<LiveEditor className="mono small p-16" />
-				<Flex isColumn={true} padding={16} className={styles.liveComponent}>
+			<LiveProvider code={code} scope={{ ...components, intent, onClose: () => null }} theme={PRISM_THEME}>
+				<Flex isColumn={true} gap={12} padding={16} className={liveComponentClasses}>
 					<LiveError />
 					<LivePreview />
+					<ButtonGroup align="right">
+						<Button intent="silent" size="tiny" icon="bolt" value="Background" onClick={onBackgroundToggle} />
+					</ButtonGroup>
 				</Flex>
+				<LiveEditor className={liveEditorClasses} />
 			</LiveProvider>
 		</Flex>
 	)

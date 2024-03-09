@@ -4,6 +4,12 @@ import WorkshopControls from "../../components/WorkshopControls"
 import { lazy } from "react"
 import Page from "../Page"
 
+const CODE_SAMPLES: Record<any, string> = {
+	Alert: `<Alert title="Vitae, assumenda aliquid" intent={intent} icon="info" onClose={onClose}>
+  {INTENT_DESCRIPTIONS[intent]}
+</Alert>`,
+}
+
 export default function Home({ params }) {
 	const { component } = params
 	if (!component) return null
@@ -21,7 +27,7 @@ export default function Home({ params }) {
 				</Flex>
 			</Page>
 			<Page noPadding={true}>
-				<LiveComponent code='<Button intent="advise" value="Hello" icon="x-github"/>' />
+				<LiveComponent code={CODE_SAMPLES[component] || ""} />
 			</Page>
 		</>
 	)
