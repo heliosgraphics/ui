@@ -2,6 +2,7 @@
 	position: sticky;
 	top: 0;
 
+	margin-right: 1px;
 	padding: 16px;
 
 	border-bottom: 1px solid var(--ui-border-light);

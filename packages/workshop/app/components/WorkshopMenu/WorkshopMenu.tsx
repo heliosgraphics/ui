@@ -8,10 +8,17 @@ import { usePathname } from "next/navigation"
 
 const WorkshopMenu: FC = () => {
 	const pathname = usePathname()
+	const [filteredComponents, setFilteredComponents] = useState<Array<string>>([...COMPONENTS])
 	const { hasMenu } = useContext(WorkshopContext)
 	const [value, setValue] = useState<string>("")
 
-	const onValueChange = (event: ChangeEvent<HTMLInputElement>) => setValue(event.target.value)
+	const onValueChange = (event: ChangeEvent<HTMLInputElement>) => {
+		const newValue: string = event.target.value
+		const newFiltered = COMPONENTS.filter((c) => c.toLowerCase().includes(newValue.toLowerCase()))
+
+		setValue(newValue)
+		setFilteredComponents(newFiltered)
+	}
 
 	if (!hasMenu) return null
 
@@ -35,7 +42,7 @@ const WorkshopMenu: FC = () => {
 				<MenuItem title="Typography" isActive={pathname === "/typography"} />
 			</Link>
 			<Separator isLight={true} />
-			{COMPONENTS?.map((component, key) => {
+			{filteredComponents?.map((component, key) => {
 				return (
 					<Link href={`/components/${component}`} key={key}>
 						<MenuItem title={component} isActive={pathname === `/components/${component}`} />
