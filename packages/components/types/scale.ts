@@ -1,5 +1,5 @@
 export type HeliosScale =
-	| 'px'
+	| "px"
 	| 0
 	| 1
 	| 2

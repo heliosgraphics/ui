@@ -68,7 +68,7 @@ export type { HeliosIntentionType, HeliosEmphasisType } from "./types/intentions
 export type { HeliosIconType } from "./types/icons"
 
 // constants
-export { INTENTION_COLOR_MAP, INTENT_DESCRIPTIONS } from './constants/intentions'
+export { INTENTION_COLOR_MAP, INTENT_DESCRIPTIONS } from "./constants/intentions"
 
 // meta
 import type { HeliosScale } from "./types/scale"

@@ -18,14 +18,14 @@
 
 .menu:not(:target) {
 	opacity: 0;
-  visibility: hidden;
+	visibility: hidden;
 
 	transform: translateX(-24px);
 }
 
 .menu:target {
 	opacity: 1;
-  visibility: visible;
+	visibility: visible;
 
 	transform: translateX(0);
 }

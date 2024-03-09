@@ -1,3 +1,3 @@
-import LiveComponent from './LiveComponent'
+import LiveComponent from "./LiveComponent"
 
 export default LiveComponent

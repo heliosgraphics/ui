@@ -1,3 +1,3 @@
-import NavigationPanelButton from './NavigationPanelButton'
+import NavigationPanelButton from "./NavigationPanelButton"
 
 export default NavigationPanelButton

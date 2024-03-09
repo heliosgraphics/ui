@@ -1,3 +1,3 @@
-import MenuFilter from './MenuFilter'
+import MenuFilter from "./MenuFilter"
 
 export default MenuFilter

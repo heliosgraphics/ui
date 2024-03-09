@@ -1,7 +1,6 @@
 import type { HTMLAttributes } from "react"
 import type { HeliosEmphasisType, HeliosChildrenType, HeliosOnClickType } from "../.."
 
-
 export interface BaseTextProps extends HTMLAttributes<HTMLDivElement | HTMLParagraphElement | HTMLHeadingElement> {
 	style?: object
 	children: HeliosChildrenType

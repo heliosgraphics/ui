@@ -1,4 +1,4 @@
-import type { ChangeEvent } from 'react'
+import type { ChangeEvent } from "react"
 
 export interface MenuFilterProps {
 	onChange: (event: ChangeEvent<HTMLInputElement>) => void

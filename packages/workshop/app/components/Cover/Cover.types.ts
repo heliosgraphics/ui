@@ -1,3 +1,1 @@
-export interface CoverProps {
-
-}
+export interface CoverProps {}

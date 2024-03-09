@@ -1,4 +1,4 @@
-import type { HeliosOnClickType } from '../..'
+import type { HeliosOnClickType } from "../.."
 
 export interface BreadCrumbItem {
 	isActive?: boolean

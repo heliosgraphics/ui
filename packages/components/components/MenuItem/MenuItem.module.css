@@ -1,5 +1,4 @@
 .menuItem {
-
 	margin: 0 8px;
 	padding: 8px 16px;
 
@@ -20,4 +19,3 @@
 .menuItemActive:hover {
 	background-color: var(--ui-bg-action-hover);
 }
-

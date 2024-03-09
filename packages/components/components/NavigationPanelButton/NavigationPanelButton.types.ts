@@ -1,1 +1,1 @@
-export interface NavigationPanelButtonProps { }
+export interface NavigationPanelButtonProps {}
