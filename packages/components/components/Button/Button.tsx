@@ -90,7 +90,8 @@ const Button: FC<ButtonProps> = ({
 				tabIndex={tabIndex ?? 0}
 				role={isFileType ? undefined : "button"}
 				onChange={onChange}
-				defaultValue={isIconOnly ? "" : value}
+				defaultValue={isIconOnly || isFileType ? undefined : value}
+				value={isFileType ? "" : undefined}
 			/>
 			{isLoading && <Loading size={buttonLoadingSize} className={styles.button__loading} />}
 		</Flex>
