@@ -14,11 +14,11 @@ export default function Home({}) {
 			</Flex>
 			<Flex isColumn={true} gap={8}>
 				<ButtonGroup>
-					<a href="https://github.com/heliosgraphics/ui">
-						<Button intent="advise" value="GitHub" icon="x-github" />
+					<a href="/get-started">
+						<Button intent="advise" value="Get Started" icon="eye" />
 					</a>
-					<a href="https://github.com/heliosgraphics/ui/issues">
-						<Button intent="silent" value="Issues" icon="x-github" />
+					<a href="https://github.com/heliosgraphics/ui">
+						<Button intent="silent" value="Repository" icon="x-github" />
 					</a>
 				</ButtonGroup>
 				<Text type="small" fontFamily="mono" emphasis="tertiary">

@@ -1,9 +1,9 @@
-import { meta } from "@heliosgraphics/ui/components/Alert/Alert.types"
 import { Flex } from "@heliosgraphics/ui"
+import { meta } from "@heliosgraphics/ui/components/Alert/Alert.types"
 import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
 import PropsTable from "workshop/app/components/PropsTable"
-import type { FC } from "react"
 import type { ExampleAlertProps } from "./ExampleAlert.types"
+import type { FC } from "react"
 
 const CODE_SAMPLE = `<Alert title="Vitae, assumenda aliquid" intent={intent} icon="info">
   {INTENT_DESCRIPTIONS[intent]}

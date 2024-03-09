@@ -11,7 +11,7 @@
 }
 
 .coverAlt {
-	height: 96px;
+	height: 48px;
 }
 
 .coverTile {
@@ -19,6 +19,7 @@
 	min-width: 48px;
 	width: 48px;
 
+	background-color: var(--ui-bg-action);
 	border-bottom: 1px dashed hsla(var(--gray-hue), var(--gray-saturation), 30%, 0.1);
 	border-right: 1px dashed hsla(var(--gray-hue), var(--gray-saturation), 30%, 0.1);
 }

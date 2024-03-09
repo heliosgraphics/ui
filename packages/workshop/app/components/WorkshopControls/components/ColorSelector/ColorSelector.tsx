@@ -38,9 +38,9 @@ const ColorSelector: FC<ColorSelectorProps> = () => {
 				onChange={onColorChange}
 				selectedValue={color}
 			/>
-			<ButtonGroup>
-				<Button intent="silent" value="Gray" onClick={onGray} />
+			<ButtonGroup align="join">
 				<Button intent="silent" value="Random" onClick={onRandom} />
+				<Button intent="silent" value="Gray" onClick={onGray} />
 			</ButtonGroup>
 		</Flex>
 	)

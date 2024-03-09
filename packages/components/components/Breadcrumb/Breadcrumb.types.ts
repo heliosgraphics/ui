@@ -1,4 +1,4 @@
-import type { HeliosOnClickType } from "../.."
+import type { HeliosOnClickType, HeliosComponentMeta } from "../.."
 
 export interface BreadCrumbItem {
 	isActive?: boolean
@@ -9,4 +9,10 @@ export interface BreadCrumbItem {
 
 export interface BreadcrumbProps {
 	items: Array<BreadCrumbItem>
+}
+
+export const meta: HeliosComponentMeta<BreadcrumbProps> = {
+	items: {
+		type: 'Array<{name: string, href: string}>'
+	},
 }

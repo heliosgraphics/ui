@@ -42,13 +42,13 @@ const PRISM_THEME: PrismTheme = {
 	],
 }
 
-const LiveComponent: FC<LiveComponentProps> = ({ code }) => {
+const LiveComponent: FC<LiveComponentProps> = ({ code, scope }) => {
 	const { intent } = useContext(WorkshopContext)
 	const liveEditorClasses: string = getClasses(styles.liveEditor, "mono tiny p-16")
 
 	return (
 		<Flex isColumn={true}>
-			<LiveProvider code={code} scope={{ ...components, intent }} theme={PRISM_THEME}>
+			<LiveProvider code={code} scope={{ ...components, ...scope, intent }} theme={PRISM_THEME}>
 				<Flex isColumn={true} gap={12} padding={16} className={styles.liveComponent}>
 					<LiveError />
 					<LivePreview />

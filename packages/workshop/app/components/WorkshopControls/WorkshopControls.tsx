@@ -6,11 +6,13 @@ import type { FC } from "react"
 import type { WorkshopControlsProps } from "./WorkshopControls.types"
 
 const WorkshopControls: FC<WorkshopControlsProps> = () => {
+	return null
+
 	return (
 		<Flex gap={4} isWrapping={true}>
 			<IntentSelector />
-			<IconSelector />
 			<ColorSelector />
+			<IconSelector />
 		</Flex>
 	)
 }

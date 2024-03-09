@@ -29,7 +29,6 @@ const IntentSelector: FC<IntentSelectorProps> = () => {
 	}
 
 	const onSilent = () => setIntent("silent")
-	const onAdvise = () => setIntent("advise")
 
 	return (
 		<Flex gap={4}>
@@ -43,7 +42,6 @@ const IntentSelector: FC<IntentSelectorProps> = () => {
 			<ButtonGroup align="join">
 				<Button intent="silent" value="Random" onClick={onRandom} />
 				<Button intent="silent" value="Silent" onClick={onSilent} />
-				<Button intent="silent" value="Advise" onClick={onAdvise} />
 			</ButtonGroup>
 		</Flex>
 	)
