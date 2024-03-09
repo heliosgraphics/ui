@@ -35,10 +35,10 @@ const Alphabet: React.FC<AlphabetProps> = ({ family }) => {
 			<div className={letterClasses}>
 				<b>Aa</b>
 			</div>
-			<Text type="small" className={className}>
+			<Text type="small" className={className} emphasis="secondary">
 				{name}
 			</Text>
-			<Text type="tiny">
+			<Text type="tiny" emphasis="secondary">
 				<Flex gap={2}>
 					<a href={url}>Website</a>
 					<span>&middot;</span>

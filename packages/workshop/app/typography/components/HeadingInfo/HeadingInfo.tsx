@@ -2,8 +2,7 @@ import React from "react"
 import { Flex, Text } from "@heliosgraphics/ui"
 import type { Headinglist, HeadingInfoType, HeadingInfoProps } from "./HeadingInfo.types"
 
-// TODO tiny is not 18px in fractures
-const HEADING_IFNO: Record<Headinglist, HeadingInfoType> = {
+const HEADING_INFO: Record<Headinglist, HeadingInfoType> = {
 	0: {
 		fontSize: 56,
 		lineHeight: 64,
@@ -85,13 +84,10 @@ const HEADING_IFNO: Record<Headinglist, HeadingInfoType> = {
 }
 
 const HeadingInfo: React.FC<HeadingInfoProps> = ({ children, level }) => {
-	const { fontSize, fontFamily, fontWeight, lineHeight } = HEADING_IFNO[level]
+	const { fontSize, fontFamily, fontWeight, lineHeight } = HEADING_INFO[level]
 
 	return (
 		<Flex isColumn={true}>
-			<Text type="tiny" fontFamily="mono">
-				{fontSize} &middot; {lineHeight}
-			</Text>
 			<div
 				className={`${fontFamily}`}
 				style={{
@@ -102,6 +98,9 @@ const HeadingInfo: React.FC<HeadingInfoProps> = ({ children, level }) => {
 			>
 				{children}
 			</div>
+			<Text type="tiny" fontFamily="mono" emphasis="tertiary">
+				{fontSize} &middot; {lineHeight}
+			</Text>
 		</Flex>
 	)
 }

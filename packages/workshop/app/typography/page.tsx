@@ -8,8 +8,8 @@ const TypographyPage = () => {
 	return (
 		<Page title="Typography">
 			<Text type="paragraph">
-				We&apos;re using <b>Inter</b> and <b>Jetbrains Mono</b> for sans and mono fonts respectively&mdash;both are
-				free, open source and designed for user interfaces.
+				Helios UI is using <b>Inter</b> and <b>Jetbrains Mono</b> for sans and mono fonts respectively. Both are free,
+				open source and designed for user interfaces. 🤍
 			</Text>
 			<Flex gap={12} isWrapping={true}>
 				<Alphabet family="sans" />
