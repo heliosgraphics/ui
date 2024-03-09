@@ -49,6 +49,18 @@
 	margin-bottom: 16px;
 }
 
+.markdown hr:has(+ hr):not(:last-child) {
+	margin-bottom: 32px;
+}
+
+.markdown hr:has(+ hr):not(:first-child) {
+	margin-top: 32px;
+}
+
+.markdown hr + hr {
+	display: none;
+}
+
 /* Element: Blockquote */
 .markdown blockquote {
 	position: relative;

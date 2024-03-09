@@ -10,17 +10,16 @@ At this time we only support \`Typescript\` enabled \`NextJS\` projects using \`
 - Add [fractures](https://fractures.dev) \`pnpm add @heliosgraphics/fractures\`
 - Add UI package \`pnpm add @heliosgraphics/ui\`
 - Load \`<Setup/>\` in your root \`layout.tsx\` for dark mode support, [like this](https://github.com/heliosgraphics/ui/blob/main/packages/workshop/app/layout.tsx) very page
-- Load \`@heliosgraphics/fractures\` then \`components.css\` on top of \`layout.tsx\` to get global CSS
+- Load \`@heliosgraphics/fractures\` then \`components.css\` on top of \`layout.tsx\`
 
-Feel free to open an [issue](https://github.com/heliosgraphics/ui/issues) if anything goes wrong. 🤍
+Open an [issue](https://github.com/heliosgraphics/ui/issues) if you have feedback, suggestion or to share your HUI project. 💌
 
 ---
 ---
 
 ### Scale
 
-Drop us an [email](mailto:hello@helios.graphics).
-
+Send us an [email](mailto:hello@helios.graphics).
 `
 
 export default function Home() {
