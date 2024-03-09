@@ -2,12 +2,16 @@
 	position: sticky;
 	top: 0;
 
-	margin-bottom: -1px;
 	display: flex;
 	flex-wrap: wrap;
 	height: 144px;
+	margin-bottom: -1px;
 	overflow: hidden;
 	width: 100%;
+}
+
+.coverAlt {
+	height: 96px;
 }
 
 .coverTile {
