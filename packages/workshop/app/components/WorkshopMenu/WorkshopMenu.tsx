@@ -10,38 +10,47 @@ const WorkshopMenu: FC = () => {
 	const pathname = usePathname()
 	const [filteredComponents, setFilteredComponents] = useState<Array<string>>([...COMPONENTS])
 	const { hasMenu } = useContext(WorkshopContext)
-	const [value, setValue] = useState<string>("")
+	const [filter, setFilter] = useState<string>("")
 
 	const onValueChange = (event: ChangeEvent<HTMLInputElement>) => {
 		const newValue: string = event.target.value
 		const newFiltered = COMPONENTS.filter((c) => c.toLowerCase().includes(newValue.toLowerCase()))
 
-		setValue(newValue)
+		setFilter(newValue)
 		setFilteredComponents(newFiltered)
+	}
+
+	const onClear = () => {
+		setFilter("")
+		setFilteredComponents([...COMPONENTS])
 	}
 
 	if (!hasMenu) return null
 
 	return (
 		<Menu>
-			<MenuFilter value={value} onChange={onValueChange} />
-			<Link href="/">
-				<MenuItem title="Index" isActive={pathname === "/"} />
-			</Link>
-			<Link href="/about">
-				<MenuItem title="About" isActive={pathname === "/about"} />
-			</Link>
-			<Link href="/get-started">
-				<MenuItem title="Get Started" isActive={pathname === "/get-started"} />
-			</Link>
-			<MenuSeparator />
-			<MenuCategory category="Pages" />
-			<Link href="/colors">
-				<MenuItem title="Colors" isActive={pathname === "/colors"} />
-			</Link>
-			<Link href="/typography">
-				<MenuItem title="Typography" isActive={pathname === "/typography"} />
-			</Link>
+			<MenuFilter value={filter} onChange={onValueChange} onClear={filter && onClear} />
+			{!filter && (
+				<>
+					<Link href="/">
+						<MenuItem title="Index" isActive={pathname === "/"} />
+					</Link>
+					<Link href="/about">
+						<MenuItem title="About" isActive={pathname === "/about"} />
+					</Link>
+					<Link href="/get-started">
+						<MenuItem title="Get Started" isActive={pathname === "/get-started"} />
+					</Link>
+					<MenuSeparator />
+					<MenuCategory category="Pages" />
+					<Link href="/colors">
+						<MenuItem title="Colors" isActive={pathname === "/colors"} />
+					</Link>
+					<Link href="/typography">
+						<MenuItem title="Typography" isActive={pathname === "/typography"} />
+					</Link>
+				</>
+			)}
 			<MenuCategory category="Components" />
 			{filteredComponents?.map((component, key) => {
 				return (

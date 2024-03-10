@@ -2,12 +2,10 @@
 
 import { useId, type FC } from "react"
 import { getClasses } from "@heliosgraphics/utils/classnames"
-import Flex from "../Flex"
+import { Button, ButtonGroup, Loading, Text, Flex } from "../.."
 import InputLabel from "../InputLabel"
-import Loading from "../Loading"
 import ResultList from "../ResultList"
 import styles from "./Input.module.css"
-import Text from "../Text"
 import type { InputProps } from "./Input.types"
 
 const Input: FC<InputProps> = ({
@@ -19,6 +17,7 @@ const Input: FC<InputProps> = ({
 	label,
 	onBlur,
 	onChange,
+	onClear,
 	onFocus,
 	placeholder,
 	results,
@@ -38,6 +37,19 @@ const Input: FC<InputProps> = ({
 		<div className={inputClasses}>
 			<InputLabel id={htmlFor} label={label} isDisabled={isDisabled} isHidden={isLabelHidden} />
 			<Flex className="grow-1">
+				{onClear && (
+					<ButtonGroup className={styles.input__clear}>
+						<Button
+							value="Clear"
+							size="tiny"
+							intent="silent"
+							icon="x"
+							onClick={onClear}
+							isIconOnly={true}
+							isRounded={true}
+						/>
+					</ButtonGroup>
+				)}
 				<input
 					className={styles.input__input}
 					disabled={isDisabled}
@@ -48,7 +60,7 @@ const Input: FC<InputProps> = ({
 					onFocus={onFocus}
 					placeholder={placeholder}
 					required={isRequired}
-					defaultValue={value}
+					value={value}
 				/>
 				{isLoading && (
 					<div className={styles.input__loading}>

@@ -1,4 +1,5 @@
 import type { ResultItem } from "../ResultList"
+import type { HeliosOnClickType } from "../.."
 import type { FocusEvent, KeyboardEvent, ChangeEvent } from "react"
 
 export interface InputProps {
@@ -16,6 +17,7 @@ export interface InputProps {
 	name?: string
 	onBlur?: (event?: FocusEvent<HTMLInputElement>) => unknown
 	onChange?: (event?: ChangeEvent<HTMLInputElement>) => unknown
+	onClear?: HeliosOnClickType
 	onFocus?: (event?: FocusEvent<HTMLInputElement>) => unknown
 	onKeyDown?: (event?: KeyboardEvent) => unknown
 	onKeyUp?: (event?: KeyboardEvent) => unknown

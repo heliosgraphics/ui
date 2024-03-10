@@ -9,6 +9,7 @@
 	display: flex;
 	flex-direction: column;
 	overflow: auto;
+	padding-bottom: 32px;
 	width: 260px;
 
 	background-color: var(--ui-bg);

@@ -74,3 +74,9 @@
 .inputDisabled input.input__input::placeholder {
 	color: var(--ui-text-tertiary);
 }
+
+.input__clear {
+	position: absolute;
+	right: 9px;
+	top: 9px;
+}
