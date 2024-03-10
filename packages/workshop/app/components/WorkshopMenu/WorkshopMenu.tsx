@@ -3,7 +3,7 @@
 import { useContext, useState, type FC, type ChangeEvent } from "react"
 import Link from "next/link"
 import { WorkshopContext } from "../../contexts/WorkshopContext"
-import { Menu, MenuItem, MenuFilter, Separator, COMPONENTS } from "@heliosgraphics/ui"
+import { Menu, MenuItem, MenuCategory, MenuSeparator, MenuFilter, COMPONENTS } from "@heliosgraphics/ui"
 import { usePathname } from "next/navigation"
 
 const WorkshopMenu: FC = () => {
@@ -34,14 +34,15 @@ const WorkshopMenu: FC = () => {
 			<Link href="/get-started">
 				<MenuItem title="Get Started" isActive={pathname === "/get-started"} />
 			</Link>
-			<Separator isLight={true} />
+			<MenuSeparator />
+			<MenuCategory category="Pages" />
 			<Link href="/colors">
 				<MenuItem title="Colors" isActive={pathname === "/colors"} />
 			</Link>
 			<Link href="/typography">
 				<MenuItem title="Typography" isActive={pathname === "/typography"} />
 			</Link>
-			<Separator isLight={true} />
+			<MenuCategory category="Components" />
 			{filteredComponents?.map((component, key) => {
 				return (
 					<Link href={`/components/${component}`} key={key}>
