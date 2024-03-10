@@ -25,5 +25,6 @@ export const meta: HeliosComponentMeta<AlertProps> = {
 	},
 	title: {
 		type: "string",
+		isOptional: true,
 	},
 }

@@ -13,6 +13,6 @@ export interface BreadcrumbProps {
 
 export const meta: HeliosComponentMeta<BreadcrumbProps> = {
 	items: {
-		type: "Array<{name: string, href: string}>",
+		type: "Array<BreadCrumbItem>",
 	},
 }

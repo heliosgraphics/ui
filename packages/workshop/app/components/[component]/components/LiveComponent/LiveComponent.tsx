@@ -20,7 +20,7 @@ const PRISM_THEME: PrismTheme = {
 			types: ["comment", "prolog", "doctype", "cdata", "punctuation"],
 			style: {
 				color: "var(--ui-text-secondary)",
-				fontStyle: "italic",
+				// fontStyle: "italic",
 			},
 		},
 		{
@@ -39,6 +39,7 @@ const PRISM_THEME: PrismTheme = {
 				"at-rule",
 				"placeholder",
 				"variable",
+				"script",
 			],
 			style: {
 				color: "hsl(var(--orange-hue), var(--orange-saturation), 50%)",
@@ -64,11 +65,11 @@ const LiveComponent: FC<LiveComponentProps> = ({ code, scope }) => {
 		<Flex isColumn={true}>
 			<LiveProvider code={code} scope={{ ...components, ...scope, intent }} theme={PRISM_THEME}>
 				<Flex isColumn={true} gap={12} padding={16} className={liveComponentClasses}>
-					<ButtonGroup align="right">
-						<Button value="Background" icon="square" intent="silent" size="tiny" onClick={onBackgroundToggle} />
-					</ButtonGroup>
 					<LiveError />
 					<LivePreview />
+					{/* <ButtonGroup align="right">
+						<Button value="Background" icon="square" intent="silent" size="tiny" onClick={onBackgroundToggle} />
+					</ButtonGroup> */}
 				</Flex>
 				<LiveEditor className={liveEditorClasses} />
 			</LiveProvider>

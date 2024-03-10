@@ -15,7 +15,11 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ items }) => {
 				return (
 					<Fragment key={key}>
 						<a href={item.href} onClick={item.onClick}>
-							<Text type="div" fontStyle={item?.isActive ? "italic" : "normal"}>
+							<Text
+								type="div"
+								fontStyle={item?.isActive ? "italic" : "normal"}
+								emphasis={item.isActive ? "secondary" : "primary"}
+							>
 								{item.name}
 							</Text>
 						</a>
