@@ -1,13 +1,13 @@
 "use client"
 
-import { useContext, useState } from "react"
 import { Button, ButtonGroup, Flex, Separator } from "@heliosgraphics/ui"
 import { meta } from "@heliosgraphics/ui/components/Button/Button.types"
+import { useContext, useState } from "react"
 import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
-import type { ExampleButtonProps } from "./ExampleButton.types"
-import type { FC } from "react"
 import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
 import PropsTable from "workshop/app/components/PropsTable"
+import type { ExampleButtonProps } from "./ExampleButton.types"
+import type { FC } from "react"
 
 const CODE_SAMPLE = `<Button intent={intent} value="Advise" icon="bullseye"/>`
 

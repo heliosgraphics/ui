@@ -3,9 +3,18 @@
 import { useState, useContext, type FC } from "react"
 import { Button, ButtonGroup, Separator, Toggle, Flex, Text, type ButtonGroupProps } from "@heliosgraphics/ui"
 import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
+import { meta } from "@heliosgraphics/ui/components/ButtonGroup/ButtonGroup.types"
+import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
+import PropsTable from "workshop/app/components/PropsTable"
+
 import type { ExampleButtonGroupProps } from "./ExampleButtonGroup.types"
 
 const BUTTON_ALIGNS = ["left", "center", "right", "join"]
+
+const CODE_SAMPLE = `<ButtonGroup>
+  <Button intent={intent} value="Advise" icon="bullseye"/>
+	<Button intent="silent" value="Cancel"/>
+</ButtonGroup>`
 
 const ExampleButtonGroup: FC<ExampleButtonGroupProps> = () => {
 	const { intent } = useContext(WorkshopContext)
@@ -21,29 +30,33 @@ const ExampleButtonGroup: FC<ExampleButtonGroupProps> = () => {
 	const onVerticalToggle = () => setVertical(!isVertical)
 
 	return (
-		<Flex isColumn={true} gap={8}>
-			<ButtonGroup>
-				<Button size="small" value="Align" intent="silent" onClick={onJoinedToggle} />
-				<Text type="tiny" fontFamily="mono">
-					{BUTTON_ALIGNS[alignIndex]}
-				</Text>
-				<Toggle label="Vertical" intent="silent" onChange={onVerticalToggle} isDisabled={alignIndex !== 3} />
-			</ButtonGroup>
-			<Separator />
-			<ButtonGroup isVertical={isVertical} align={BUTTON_ALIGNS[alignIndex] as ButtonGroupProps["align"]}>
-				<Button intent="silent" value="Cancel" isIconOnly={isVertical} icon="bullseye" />
-				<Button intent={intent} value="Start" isIconOnly={isVertical} icon="x" />
-			</ButtonGroup>
-			<ButtonGroup isVertical={isVertical} align={BUTTON_ALIGNS[alignIndex] as ButtonGroupProps["align"]}>
-				<Button intent="silent" value="Cancel" size="small" isIconOnly={isVertical} icon="bullseye" />
-				<Button intent="silent" value="Cancel" size="small" isIconOnly={isVertical} icon="bullseye" />
-				<Button intent={intent} value="Start" size="small" isIconOnly={isVertical} icon="arrow-up" />
-			</ButtonGroup>
-			<ButtonGroup isVertical={isVertical} align={BUTTON_ALIGNS[alignIndex] as ButtonGroupProps["align"]}>
-				<Button intent="silent" value="Cancel" size="tiny" isIconOnly={isVertical} icon="bullseye" />
-				<Button intent={intent} value="Start" size="tiny" isIconOnly={isVertical} icon="x" />
-			</ButtonGroup>
-		</Flex>
+		<>
+			<LiveComponent code={CODE_SAMPLE} />
+			<PropsTable meta={meta} />
+			<Flex isColumn={true} gap={12} padding={16}>
+				<ButtonGroup>
+					<Button size="small" value="Align" intent="silent" onClick={onJoinedToggle} />
+					<Text type="tiny" fontFamily="mono">
+						{BUTTON_ALIGNS[alignIndex]}
+					</Text>
+					<Toggle label="Vertical" intent="silent" onChange={onVerticalToggle} isDisabled={alignIndex !== 3} />
+				</ButtonGroup>
+				<Separator />
+				<ButtonGroup isVertical={isVertical} align={BUTTON_ALIGNS[alignIndex] as ButtonGroupProps["align"]}>
+					<Button intent="silent" value="Cancel" isIconOnly={isVertical} icon="bullseye" />
+					<Button intent={intent} value="Start" isIconOnly={isVertical} icon="x" />
+				</ButtonGroup>
+				<ButtonGroup isVertical={isVertical} align={BUTTON_ALIGNS[alignIndex] as ButtonGroupProps["align"]}>
+					<Button intent="silent" value="Cancel" size="small" isIconOnly={isVertical} icon="bullseye" />
+					<Button intent="silent" value="Cancel" size="small" isIconOnly={isVertical} icon="bullseye" />
+					<Button intent={intent} value="Start" size="small" isIconOnly={isVertical} icon="arrow-up" />
+				</ButtonGroup>
+				<ButtonGroup isVertical={isVertical} align={BUTTON_ALIGNS[alignIndex] as ButtonGroupProps["align"]}>
+					<Button intent="silent" value="Cancel" size="tiny" isIconOnly={isVertical} icon="bullseye" />
+					<Button intent={intent} value="Start" size="tiny" isIconOnly={isVertical} icon="x" />
+				</ButtonGroup>
+			</Flex>
+		</>
 	)
 }
 

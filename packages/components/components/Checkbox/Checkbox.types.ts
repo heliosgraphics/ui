@@ -1,5 +1,5 @@
 import type { ChangeEvent } from "react"
-import { HeliosIntentionType } from "../../types/intentions"
+import { HeliosIntentionType, HeliosComponentMeta } from "../.."
 
 export interface BaseCheckboxProps {
 	id?: string
@@ -12,4 +12,37 @@ export interface BaseCheckboxProps {
 	onChange?: (event?: ChangeEvent) => void
 }
 
-export interface CheckboxProps extends BaseCheckboxProps {}
+export interface CheckboxProps extends BaseCheckboxProps { }
+
+export const meta: HeliosComponentMeta<CheckboxProps> = {
+	id: {
+		type: "string",
+		isOptional: true,
+	},
+	intent: {
+		type: "HeliosIntentionType",
+	},
+	isChecked: {
+		type: "boolean",
+		isOptional: true,
+	},
+	isDisabled: {
+		type: "boolean",
+		isOptional: true,
+	},
+	isRequired: {
+		type: "boolean",
+		isOptional: true,
+	},
+	isSmall: {
+		type: "boolean",
+		isOptional: true,
+	},
+	label: {
+		type: "string",
+	},
+	onChange: {
+		type: "(event?: ChangeEvent) => void",
+		isOptional: true,
+	},
+}
