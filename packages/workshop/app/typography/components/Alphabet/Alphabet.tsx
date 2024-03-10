@@ -2,10 +2,10 @@ import React from "react"
 import { getClasses } from "@heliosgraphics/utils/classnames"
 import { Flex, Text } from "@heliosgraphics/ui"
 import styles from "./Alphabet.module.css"
-import type { FontFamilyTypes } from "gamen/libs/types/fonts"
+import type { HeliosFontFamilyTypes } from "@heliosgraphics/ui"
 import type { AlphabetProps, FontTypeInfo } from "./Alphabet.types"
 
-const FONT_SETS: Record<FontFamilyTypes, FontTypeInfo> = {
+const FONT_SETS: Record<HeliosFontFamilyTypes, FontTypeInfo> = {
 	mono: {
 		name: "JetBrains Mono",
 		url: "https://www.jetbrains.com/lp/mono/",

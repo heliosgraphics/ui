@@ -70,6 +70,7 @@ export type { HeliosThemes } from "./types/themes"
 export type { HeliosIntentionType, HeliosEmphasisType } from "./types/intentions"
 export type { HeliosIconType } from "./types/icons"
 export type { HeliosComponentMeta } from "./types/meta"
+export type { HeliosFontFamilyTypes } from "./types/typography"
 
 // constants
 export { INTENTION_COLOR_MAP, INTENT_DESCRIPTIONS } from "./constants/intentions"

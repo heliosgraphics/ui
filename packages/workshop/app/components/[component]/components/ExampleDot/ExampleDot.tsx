@@ -19,7 +19,7 @@ const ExampleDot: FC<ExampleDotProps> = () => {
 		<Flex gap={16} isWrapping={true}>
 			<Select label="Color" isLabelHidden={true} items={items} onChange={onColorChange} selectedValue={colorAccent} />
 			<Flex gap={4} isWrapping={true}>
-				{SCALE.map((scale, key) => {
+				{(SCALE as Array<number>).map((scale: number, key: number) => {
 					return (
 						<Flex key={key} gap={4}>
 							<Text type="tiny" fontFamily="mono">

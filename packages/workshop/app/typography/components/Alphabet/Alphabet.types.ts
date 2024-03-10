@@ -1,4 +1,4 @@
-import type { FontFamilyTypes } from "gamen/libs/types/fonts"
+import type { HeliosFontFamilyTypes } from "@heliosgraphics/ui"
 
 export interface FontTypeInfo {
 	name: string
@@ -8,5 +8,5 @@ export interface FontTypeInfo {
 }
 
 export interface AlphabetProps {
-	family: FontFamilyTypes
+	family: HeliosFontFamilyTypes
 }

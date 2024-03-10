@@ -1,4 +1,4 @@
-import type { FontFamilyTypes } from "gamen/libs/types/fonts"
+import type { HeliosFontFamilyTypes } from "@heliosgraphics/ui"
 
 export type Headinglist =
 	| 0
@@ -17,7 +17,7 @@ export type Headinglist =
 
 export interface HeadingInfoType {
 	fontSize: number
-	fontFamily: FontFamilyTypes
+	fontFamily: HeliosFontFamilyTypes
 	fontWeight: string
 	lineHeight: number
 }
