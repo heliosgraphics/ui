@@ -17,7 +17,12 @@ const Cover: FC<CoverProps> = () => {
 	if (!hasCover) return null
 
 	const isComponentPage: boolean = pathname.includes("components")
-	const coverClasses: string = getClasses(styles.cover, { [styles.coverAlt]: isComponentPage })
+	const isHome: boolean = pathname === "/"
+
+	const coverClasses: string = getClasses(styles.cover, {
+		[styles.coverHome]: isHome,
+		[styles.coverAlt]: isComponentPage,
+	})
 
 	return <Flex className={coverClasses} withRadius={pageRadius}>{` `}</Flex>
 }

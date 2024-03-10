@@ -5,7 +5,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	height: 143px;
-	/* margin-bottom: -1px; */
 	overflow: hidden;
 	width: 100%;
 
@@ -13,6 +12,14 @@
 	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACSSURBVHgB7dohEsJAEAXRhTOs4v5nQ+0hKASSiko6lbxnxo1p+8cAAAAAAAAAALiixyAx53x973OQEiAmQEyAmAAxAWICAAAAAABwAKuIiFXESQgQEyAmQEyAmAAxAQAAAAAAOIBVRMQq4iQEiAkQEyAmQEyAmAAAAAAAAAAAsJPdtqG/7eM/a633uMHfLVYRsQ8M0w0zUqVZmQAAAABJRU5ErkJggg==");
 	background-size: 48px 48px;
 	background-position: 1px 0;
+}
+
+.coverHome {
+	height: 240px;
+
+	background-image: url("/cover.png");
+	background-size: cover;
+	background-position: center;
 }
 
 .coverAlt {

@@ -6,12 +6,10 @@ import uiPackage from "@heliosgraphics/ui/package.json"
 export default function Home({}) {
 	return (
 		<Page title="User Interface" eyebrow="Helios">
-			<Flex isColumn={true}>
-				<Text type="paragraph">
-					Helios UI is a dynamic guide that documents the visual and experience standards for our applications&mdash;and
-					as such, strongly opinionated.
-				</Text>
-			</Flex>
+			<Text type="paragraph">
+				Helios UI is a dynamic guide that documents the visual and experience standards for our applications. This is an
+				ever growing and moving system&mdash;and as such, strongly opinionated.
+			</Text>
 			<Flex isColumn={true} gap={8}>
 				<ButtonGroup>
 					<a href="/get-started">
@@ -26,7 +24,12 @@ export default function Home({}) {
 				</Text>
 			</Flex>
 			<Separator isLight={true} />
-			<DebugSelector />
+			<Flex isColumn={true} gap={16}>
+				<DebugSelector />
+				<Text type="small" emphasis="tertiary">
+					This is a WIP release for friends.
+				</Text>
+			</Flex>
 		</Page>
 	)
 }
