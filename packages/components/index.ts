@@ -55,7 +55,7 @@ export type { ColumnProps } from "./components/Column"
 export type { FlexProps } from "./components/Flex"
 export type { HeadingProps } from "./components/Heading"
 export type { PieItem } from "./components/Pie"
-export type { ResultItem } from "./components/ResultList"
+export type { ResultItem } from "./components/shared/ResultList"
 export type { SelectItem } from "./components/Select"
 export type { TextProps } from "./components/Text"
 
@@ -111,6 +111,55 @@ export const COLORS: Array<HeliosColors> = [
 	"yellow",
 ]
 
-export const COMPONENTS = ["Alert", "Breadcrumb", "Button", "ButtonGroup", "Checkbox", "Column", "Flex"] as const
+export const COMPONENTS = [
+	"Alert",
+	"Breadcrumb",
+	"Button",
+	"ButtonGroup",
+	"Checkbox",
+	"Column",
+	"Confirm",
+	"Content",
+	"Details",
+	"Dialog",
+	"Donut",
+	"Dot",
+	"Dropdown",
+	"Flex",
+	"Grid",
+	"Heading",
+	"Icon",
+	"Input",
+	"Loading",
+	"Main",
+	"Markdown",
+	"Masonry",
+	"Menu",
+	"MenuCategory",
+	"MenuFilter",
+	"MenuItem",
+	"MenuSeparator",
+	"Navigation",
+	"NavigationPanelButton",
+	"Overlay",
+	"Pie",
+	"Pill",
+	"Progress",
+	"Radio",
+	"Select",
+	"Separator",
+	"Setup",
+	"Shimmer",
+	"Slider",
+	"Spacer",
+	"Table",
+	"Text",
+	"Textarea",
+	"ThemeSwitcher",
+	"ThemeSwitcherLoading",
+	"Tile",
+	"Timestamp",
+	"Toggle",
+] as const
 
 export const HOOKS = ["useIntersector"] as const

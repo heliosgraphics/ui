@@ -1,8 +1,6 @@
 import { getClasses } from "@heliosgraphics/utils/classnames"
-import Flex from "../Flex"
-import Icon from "../Icon"
+import { Flex, Icon, Text } from "../../.."
 import styles from "./ResultList.module.css"
-import Text from "../Text"
 import type { FC } from "react"
 import type { ResultListProps } from "./ResultList.types"
 

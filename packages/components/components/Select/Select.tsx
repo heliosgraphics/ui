@@ -3,7 +3,7 @@ import Flex from "../Flex"
 import Icon from "../Icon"
 import styles from "./Select.module.css"
 import { getClasses } from "@heliosgraphics/utils/classnames"
-import InputLabel from "../InputLabel"
+import InputLabel from "../shared/InputLabel"
 import type { SelectProps } from "./Select.types"
 
 const Select: FC<SelectProps> = ({ selectedValue, onChange, isLabelHidden, isDisabled, items, id, label }) => {

@@ -4,7 +4,7 @@ import { useId, useRef, useEffect } from "react"
 import Text from "../Text"
 import styles from "./Textarea.module.css"
 import { getClasses } from "@heliosgraphics/utils/classnames"
-import InputLabel from "../InputLabel"
+import InputLabel from "../shared/InputLabel"
 import type { FC } from "react"
 import type { TextareaProps } from "./Textarea.types"
 

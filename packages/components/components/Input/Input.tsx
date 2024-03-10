@@ -3,8 +3,8 @@
 import { useId, type FC } from "react"
 import { getClasses } from "@heliosgraphics/utils/classnames"
 import { Button, ButtonGroup, Loading, Text, Flex } from "../.."
-import InputLabel from "../InputLabel"
-import ResultList from "../ResultList"
+import InputLabel from "../shared/InputLabel"
+import ResultList from "../shared/ResultList"
 import styles from "./Input.module.css"
 import type { InputProps } from "./Input.types"
 

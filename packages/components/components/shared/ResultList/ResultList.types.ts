@@ -1,4 +1,4 @@
-import type { HeliosIconType, HeliosOnClickType } from "../.."
+import type { HeliosIconType, HeliosOnClickType } from "../../.."
 
 export interface ResultItem {
 	description?: string
