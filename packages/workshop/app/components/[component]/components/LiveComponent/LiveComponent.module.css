@@ -3,6 +3,9 @@
 
 	background-color: var(--bg-ui);
 	border-bottom: 1px solid var(--ui-border-light);
+}
+
+.liveComponentAlt {
 	background-image: linear-gradient(90deg, var(--ui-border-light) 1px, transparent 1px),
 		linear-gradient(180deg, var(--ui-border-light) 1px, transparent 1px);
 	background-size: 16px 16px;
@@ -31,7 +34,7 @@
 }
 
 .liveEditor pre > span::before {
-	justify-content: end;
+	justify-content: flex-end;
 	display: inline-flex;
 	margin-right: 16px;
 	min-width: 40px;

@@ -1,9 +1,9 @@
 "use client"
 
-import { Flex } from "@heliosgraphics/ui"
+import { Button, ButtonGroup, Flex } from "@heliosgraphics/ui"
 import { getClasses } from "@heliosgraphics/utils"
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
-import { useContext, type FC } from "react"
+import { useContext, useState, type FC } from "react"
 import { WorkshopContext } from "../../../../contexts/WorkshopContext/WorkshopContext"
 import * as components from "@heliosgraphics/ui"
 import styles from "./LiveComponent.module.css"
@@ -50,12 +50,23 @@ const PRISM_THEME: PrismTheme = {
 
 const LiveComponent: FC<LiveComponentProps> = ({ code, scope }) => {
 	const { intent } = useContext(WorkshopContext)
-	const liveEditorClasses: string = getClasses(styles.liveEditor, "mono tiny")
+	const [hasBackground, setBackground] = useState<boolean>(true)
+
+	const liveComponentClasses: string = getClasses(styles.liveComponent, {
+		[styles.liveComponentAlt]: hasBackground,
+	})
+
+	const liveEditorClasses: string = getClasses(styles.liveEditor, "mono tiny", {})
+
+	const onBackgroundToggle = () => setBackground(!hasBackground)
 
 	return (
 		<Flex isColumn={true}>
 			<LiveProvider code={code} scope={{ ...components, ...scope, intent }} theme={PRISM_THEME}>
-				<Flex isColumn={true} gap={12} padding={16} className={styles.liveComponent}>
+				<Flex isColumn={true} gap={12} padding={16} className={liveComponentClasses}>
+					<ButtonGroup align="right">
+						<Button value="Background" icon="square" intent="silent" size="tiny" onClick={onBackgroundToggle} />
+					</ButtonGroup>
 					<LiveError />
 					<LivePreview />
 				</Flex>

@@ -1,5 +1,6 @@
 import { lazy } from "react"
 import WorkshopControls from "../../components/WorkshopControls"
+import { Flex } from "@heliosgraphics/ui"
 import Page from "../Page"
 
 export default function Home({ params }) {
@@ -14,7 +15,9 @@ export default function Home({ params }) {
 			<Page title={component}>
 				<WorkshopControls />
 			</Page>
-			<DemoComponent />
+			<Flex isColumn={true} gap={0} paddingY={24} withBackground={true} className="relative">
+				<DemoComponent />
+			</Flex>
 		</>
 	)
 }

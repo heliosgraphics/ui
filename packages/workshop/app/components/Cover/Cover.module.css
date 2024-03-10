@@ -4,22 +4,17 @@
 
 	display: flex;
 	flex-wrap: wrap;
-	height: 144px;
-	margin-bottom: -1px;
+	height: 143px;
+	/* margin-bottom: -1px; */
 	overflow: hidden;
 	width: 100%;
+
+	background-color: var(--ui-bg-action-hover);
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACSSURBVHgB7dohEsJAEAXRhTOs4v5nQ+0hKASSiko6lbxnxo1p+8cAAAAAAAAAALiixyAx53x973OQEiAmQEyAmAAxAWICAAAAAABwAKuIiFXESQgQEyAmQEyAmAAxAQAAAAAAOIBVRMQq4iQEiAkQEyAmQEyAmAAAAAAAAAAAsJPdtqG/7eM/a633uMHfLVYRsQ8M0w0zUqVZmQAAAABJRU5ErkJggg==");
+	background-size: 48px 48px;
+	background-position: 1px 0;
 }
 
 .coverAlt {
 	height: 96px;
-}
-
-.coverTile {
-	height: 48px;
-	min-width: 48px;
-	width: 48px;
-
-	background-color: var(--ui-bg-action);
-	border-bottom: 1px dashed hsla(var(--gray-hue), var(--gray-saturation), 30%, 0.1);
-	border-right: 1px dashed hsla(var(--gray-hue), var(--gray-saturation), 30%, 0.1);
 }
