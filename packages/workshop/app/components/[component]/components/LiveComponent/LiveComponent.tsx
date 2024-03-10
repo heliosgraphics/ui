@@ -12,13 +12,13 @@ import type { PrismTheme } from "prism-react-renderer"
 
 const PRISM_THEME: PrismTheme = {
 	plain: {
-		backgroundColor: "var(--ui-bg)",
-		color: "var(--ui-text-secondary)",
+		backgroundColor: "hsl(var(--gray-hue), var(--gray-saturation), 6%)",
+		color: "var(--ui-text-tertiary)",
 	},
 	styles: [
 		{
 			types: ["comment", "prolog", "doctype", "cdata", "punctuation"],
-			style: { color: "var(--ui-text-secondary)" },
+			style: { color: "var(--ui-text-tertiary)" },
 		},
 		{
 			types: [
@@ -44,7 +44,7 @@ const PRISM_THEME: PrismTheme = {
 
 const LiveComponent: FC<LiveComponentProps> = ({ code, scope }) => {
 	const { intent } = useContext(WorkshopContext)
-	const liveEditorClasses: string = getClasses(styles.liveEditor, "mono tiny p-16")
+	const liveEditorClasses: string = getClasses(styles.liveEditor, "mono tiny")
 
 	return (
 		<Flex isColumn={true}>

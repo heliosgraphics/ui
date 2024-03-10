@@ -6,7 +6,11 @@ export default function Home() {
 	return (
 		<Page title="Colors">
 			<Text type="paragraph">
-				Colors in Helios UI indicate <em>intentions</em>.
+				Helios UI colors are embracing inherently human hues to convey intentions clearly, ensuring a consistently warm
+				and inviting atmosphere.
+			</Text>
+			<Text type="small" emphasis="secondary">
+				Defined in HSL.
 			</Text>
 			<Separator isLight={true} />
 			<ColorGrid intention="question" />

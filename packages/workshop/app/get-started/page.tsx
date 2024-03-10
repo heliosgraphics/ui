@@ -1,11 +1,9 @@
 import { Markdown } from "@heliosgraphics/ui"
 import Page from "workshop/app/components/Page"
 
-const PAGE = `### Personal
+const PAGE = `Helios UI is safe for small and personal projects. We're following [semver](https://semver.org/) releases as underlying concepts may change—make sure to pin the package version.
 
-Helios UI is safe for small and personal projects. We're following [semver](https://semver.org/) releases as underlying concepts may change—make sure to pin the package version.
-
-At this time we only support \`Typescript\` enabled \`NextJS\` projects using \`app\` folders.
+At this time we support \`Typescript\` enabled \`NextJS\` projects using \`app\` folders.
 
 - Add [fractures](https://fractures.dev) \`pnpm add @heliosgraphics/fractures\`
 - Add UI package \`pnpm add @heliosgraphics/ui\`

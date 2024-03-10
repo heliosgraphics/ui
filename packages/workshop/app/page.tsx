@@ -8,8 +8,8 @@ export default function Home({}) {
 		<Page title="User Interface" eyebrow="Helios">
 			<Flex isColumn={true}>
 				<Text type="paragraph">
-					Helios UI is a dynamic guide that documents the visual, branding, and experience standards for our
-					applications&mdash;and as such, strongly opinionated.
+					Helios UI is a dynamic guide that documents the visual and experience standards for our applications&mdash;and
+					as such, strongly opinionated.
 				</Text>
 			</Flex>
 			<Flex isColumn={true} gap={8}>
