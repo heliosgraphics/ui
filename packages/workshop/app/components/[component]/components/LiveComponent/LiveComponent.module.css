@@ -11,6 +11,8 @@
 .liveEditor pre {
 	position: relative;
 
+	padding: 24px 24px 24px 0 !important;
+
 	counter-reset: token-line;
 }
 
@@ -21,25 +23,23 @@
 	z-index: 0;
 
 	height: 100%;
-	width: 32px;
-	background-color: hsl(var(--gray-hue), var(--gray-saturation), 24%);
+	padding-block: 16px;
+	width: 40px;
 
+	border-right: 1px solid var(--ui-border-light);
 	content: " ";
 }
 
 .liveEditor pre > span::before {
-	position: relative;
-	z-index: 1;
-
-	justify-content: center;
-	align-items: center;
+	justify-content: end;
 	display: inline-flex;
-  padding-right: 32px;
-	width: 32px;
+	margin-right: 16px;
+	min-width: 40px;
+	padding: 0 8px;
+	width: 40px;
 
-	background-color: hsl(var(--gray-hue), var(--gray-saturation), 14%);
+	color: var(--ui-text-tertiary);
 
-  counter-increment: token-line;
-  content: counter(token-line);
-	text-align: center;
+	counter-increment: token-line;
+	content: counter(token-line);
 }

@@ -173,7 +173,7 @@
 	--ui-text-tertiary: hsl(var(--gray-hue), var(--gray-saturation), 69%);
 	--ui-text-white: hsl(var(--gray-hue), var(--gray-saturation), 100%);
 
-	--ui-border-light: hsl(var(--gray-hue), var(--gray-saturation), 95%);
+	--ui-border-light: hsl(var(--gray-hue), var(--gray-saturation), 94%);
 	--ui-border: hsl(var(--gray-hue), var(--gray-saturation), 85%);
 	--ui-border-active: hsl(var(--gray-hue), var(--gray-saturation), 80%);
 

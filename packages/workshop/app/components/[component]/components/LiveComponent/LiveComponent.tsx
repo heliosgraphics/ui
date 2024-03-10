@@ -12,13 +12,16 @@ import type { PrismTheme } from "prism-react-renderer"
 
 const PRISM_THEME: PrismTheme = {
 	plain: {
-		backgroundColor: "hsl(var(--gray-hue), var(--gray-saturation), 6%)",
-		color: "var(--ui-text-tertiary)",
+		backgroundColor: "var(--ui-bg)",
+		color: "var(--ui-text-secondary)",
 	},
 	styles: [
 		{
 			types: ["comment", "prolog", "doctype", "cdata", "punctuation"],
-			style: { color: "var(--ui-text-tertiary)" },
+			style: {
+				color: "var(--ui-text-secondary)",
+				fontStyle: "italic",
+			},
 		},
 		{
 			types: [
@@ -37,7 +40,10 @@ const PRISM_THEME: PrismTheme = {
 				"placeholder",
 				"variable",
 			],
-			style: { color: "hsl(var(--orange-hue), var(--orange-saturation), 50%)" },
+			style: {
+				color: "hsl(var(--orange-hue), var(--orange-saturation), 50%)",
+				fontWeight: "700",
+			},
 		},
 	],
 }
