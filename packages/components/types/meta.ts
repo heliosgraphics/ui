@@ -4,4 +4,4 @@ interface HeliosComponentItem {
 	type: string
 }
 
-export type HeliosComponentMeta<T> = Record<keyof T, HeliosComponentItem>
+export type HeliosComponentMeta<T> = Record<keyof T, HeliosComponentItem> & { _extends?: string }

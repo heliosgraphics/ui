@@ -24,11 +24,11 @@ const ExampleCheckbox: FC<ExampleCheckboxProps> = () => {
 		<>
 			<LiveComponent code={CODE_SAMPLE} scope={{ isChecked, onToggle }} />
 			<PropsTable meta={meta} />
-			<Flex isColumn={true} gap={12} padding={16}>
+			<Flex isColumn={true} gap={4} padding={16}>
 				<Checkbox isChecked={isChecked} intent={intent} label="Fully Autonomous" onChange={onToggle} />
 				<Checkbox isChecked={isChecked2} intent={intent} label="Geospatial View" onChange={onToggle2} />
 				<Checkbox isChecked={false} isDisabled={true} intent={intent} label="Suicide Burn" />
-				<Separator />
+				<Separator isLight={true} />
 				<Checkbox isChecked={isChecked3} intent={intent} isSmall={true} label="Life Support" onChange={onToggle3} />
 			</Flex>
 		</>
