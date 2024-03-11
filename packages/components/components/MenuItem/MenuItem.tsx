@@ -11,8 +11,14 @@ const MenuItem: FC<MenuItemProps> = ({ isActive, title }) => {
 		[styles.menuItemActive]: isActive,
 	})
 
+	const onMenuClick = () => {
+		const isMenuActive: boolean = globalThis.location.hash === "#ui-menu"
+
+		if (isMenuActive) globalThis.location.hash = "#ui"
+	}
+
 	return (
-		<div className={menuItemClasses} data-component="MenuItem">
+		<div className={menuItemClasses} data-component="MenuItem" onClick={onMenuClick}>
 			<Text type="small" fontWeight="medium">
 				{title}
 			</Text>

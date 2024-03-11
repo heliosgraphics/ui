@@ -1,6 +1,6 @@
 "use client"
 
-import { useContext, useState, type FC, type ChangeEvent } from "react"
+import { useContext, useEffect, useState, type FC, type ChangeEvent } from "react"
 import Link from "next/link"
 import { WorkshopContext } from "../../contexts/WorkshopContext"
 import { Menu, MenuItem, MenuCategory, MenuSeparator, MenuFilter, COMPONENTS } from "@heliosgraphics/ui"

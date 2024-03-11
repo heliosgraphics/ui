@@ -22,7 +22,7 @@ const Page: FC<PageProps> = ({ children, eyebrow, breadcrumb, title }) => {
 			{title && (
 				<Flex isColumn={true}>
 					{eyebrow && (
-						<Text type="tiny" fontFamily="mono" emphasis="tertiary">
+						<Text type="tiny" fontFamily="mono" emphasis="secondary">
 							{eyebrow}
 						</Text>
 					)}

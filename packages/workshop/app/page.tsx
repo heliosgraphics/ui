@@ -27,7 +27,7 @@ export default function Home({}) {
 			<Flex isColumn={true} gap={16}>
 				<DebugSelector />
 				<Text type="small" emphasis="tertiary">
-					This is a WIP release for friends.
+					This is a WIP release.
 				</Text>
 			</Flex>
 		</Page>
