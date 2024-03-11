@@ -13,6 +13,7 @@
 		"@heliosgraphics/fractures": "^6.3.0",
 		"@heliosgraphics/utils": "^5.3.4",
 		"@heliosgraphics/ui": "workspace:*",
+		"@vercel/analytics": "^1.2.2",
 		"next": "latest",
 		"react-dom": "latest",
 		"react-live": "latest",

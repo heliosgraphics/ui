@@ -9,6 +9,7 @@ import WorkshopNavigation from "./components/WorkshopNavigation"
 import WorkshopMenu from "./components/WorkshopMenu"
 import WorkshopContent from "./components/WorkshopContent"
 import Cover from "./components/Cover"
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
 	title: "Helios UI",
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 							{children}
 						</WorkshopContent>
 					</Main>
+					<Analytics />
 				</WorkshopProvider>
 			</body>
 		</html>
