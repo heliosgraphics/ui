@@ -76,90 +76,10 @@ export type { HeliosFontFamilyTypes } from "./types/typography"
 export { INTENTION_COLOR_MAP, INTENT_DESCRIPTIONS } from "./constants/intentions"
 
 // meta
-import type { HeliosScale } from "./types/scale"
-import type { HeliosColors } from "./types/colors"
-import type { HeliosIntentionType, HeliosEmphasisType } from "./types/intentions"
-
-export const EMPHASES: Array<HeliosEmphasisType> = ["primary", "secondary", "tertiary"]
-export const INTENTIONS: Array<HeliosIntentionType> = [
-	"advise",
-	"automation",
-	"confirmation",
-	"danger",
-	"highlight",
-	"question",
-	"silent",
-	"success",
-	"warning",
-]
-
-export { ICONS } from "./types/icons"
-
-export const SCALE: Array<HeliosScale> = [
-	1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 48, 64, 80, 96,
-] as const
-
-export const COLORS: Array<HeliosColors> = [
-	"aqua",
-	"blue",
-	"gray",
-	"green",
-	"orange",
-	"pink",
-	"purple",
-	"red",
-	"yellow",
-]
-
-export const COMPONENTS = [
-	"Alert",
-	"Breadcrumb",
-	"Button",
-	"ButtonGroup",
-	"Checkbox",
-	"Column",
-	"Confirm",
-	"Content",
-	"Details",
-	"Dialog",
-	"Donut",
-	"Dot",
-	"Dropdown",
-	"Flex",
-	"Grid",
-	"Heading",
-	"Icon",
-	"Input",
-	"Loading",
-	"Main",
-	"Markdown",
-	"Masonry",
-	"Menu",
-	"MenuCategory",
-	"MenuFilter",
-	"MenuItem",
-	"MenuSeparator",
-	"Navigation",
-	"NavigationPanelButton",
-	"Overlay",
-	"Pie",
-	"Pill",
-	"Progress",
-	"Radio",
-	"Select",
-	"Separator",
-	"Setup",
-	"Shimmer",
-	"Slider",
-	"Spacer",
-	"Table",
-	"Text",
-	"Textarea",
-	"ThemeSwitcher",
-	"ThemeSwitcherLoading",
-	"Tile",
-	"Timestamp",
-	"Toggle",
-] as const
-
-export const HOOKS = ["useIntersector"] as const
+export { COLORS } from "./constants/colors"
+export { INTENTIONS } from "./constants/intentions"
+export { COMPONENTS } from "./constants/components"
+export { EMPHASES } from "./constants/emphasis"
+export { HOOKS } from "./constants/hooks"
+export { ICONS } from "./constants/icons"
+export { SCALE } from "./constants/scale"
