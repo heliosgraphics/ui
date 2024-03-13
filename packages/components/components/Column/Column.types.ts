@@ -1,4 +1,4 @@
-import type { HeliosComponentMeta, FlexProps } from "../.."
+import type { HeliosAttributeMeta, FlexProps } from "../.."
 
 export interface BaseColumnProps {
 	isColumnCentered?: boolean
@@ -7,7 +7,7 @@ export interface BaseColumnProps {
 
 export type ColumnProps = BaseColumnProps & FlexProps
 
-export const meta: HeliosComponentMeta<BaseColumnProps> = {
+export const meta: HeliosAttributeMeta<BaseColumnProps> = {
 	_extends: "FlexProps",
 	isColumnCentered: {
 		type: "boolean",

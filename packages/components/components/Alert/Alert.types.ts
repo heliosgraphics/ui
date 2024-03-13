@@ -1,4 +1,4 @@
-import type { HeliosChildrenType, HeliosIconType, HeliosIntentionType, HeliosComponentMeta } from "../.."
+import type { HeliosChildrenType, HeliosIconType, HeliosIntentionType, HeliosAttributeMeta } from "../.."
 
 export interface AlertProps {
 	children: HeliosChildrenType
@@ -8,7 +8,7 @@ export interface AlertProps {
 	title?: string
 }
 
-export const meta: HeliosComponentMeta<AlertProps> = {
+export const meta: HeliosAttributeMeta<AlertProps> = {
 	children: {
 		type: "HeliosChildrenType",
 	},

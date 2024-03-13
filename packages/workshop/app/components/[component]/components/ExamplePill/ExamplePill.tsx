@@ -1,47 +1,79 @@
 "use client"
 
-import { Button, ButtonGroup, Flex, HeliosIconType, Pill, Separator } from "@heliosgraphics/ui"
-import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
+import { Button, ButtonGroup, Flex, Pill, type HeliosSizeType } from "@heliosgraphics/ui"
+import { meta } from "@heliosgraphics/ui/components/Pill/Pill.types"
 import { useState, useContext, type FC } from "react"
+import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
+import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
+import PropsTable from "workshop/app/components/PropsTable"
 import type { ExamplePillProps } from "./ExamplePill.types"
+
+const SAMPLE_CODE = `<Pill label="Hello World" color="Purple"/>`
 
 const ExamplePill: FC<ExamplePillProps> = () => {
 	const [isRounded, setRounded] = useState<boolean>(false)
-	const [icon, setIcon] = useState<HeliosIconType | undefined>(undefined)
+	const [hasIcon, setIcon] = useState<boolean>(false)
+	const [label, setLabel] = useState<boolean>(false)
+	const [size, setSize] = useState<HeliosSizeType>("normal")
 
-	const { color } = useContext(WorkshopContext)
+	const { color, icon } = useContext(WorkshopContext)
 
 	const onToggleRounded = () => setRounded(!isRounded)
-	const onToggleIcon = () => setIcon(!icon ? "tag" : undefined)
+	const onToggleIcon = () => setIcon(!hasIcon)
+	const onToggleLabel = () => setLabel(!label)
+	const onToggleSize = () => setSize(size === "normal" ? "small" : size === "small" ? "tiny" : "normal")
 
 	return (
-		<Flex gap={12} isColumn={true}>
-			<ButtonGroup>
-				<Button intent="silent" value="Rounded" onClick={onToggleRounded} size="small" />
-				<Button intent="silent" value="Icons" onClick={onToggleIcon} size="small" />
-			</ButtonGroup>
-			<Flex gap={4} isWrapping={true}>
-				<Pill color={color} label="Pill" isRounded={isRounded} icon={icon} />
-				<Pill color={color} label="Small" isSmall={true} isRounded={isRounded} icon={icon} />
-				<Pill color={color} label="Mono" isMono={true} isRounded={isRounded} icon={icon} />
-				<Pill color={color} label="Mono Small" isSmall={true} isMono={true} isRounded={isRounded} icon={icon} />
+		<>
+			<LiveComponent code={SAMPLE_CODE} />
+			<PropsTable meta={meta} />
+			<Flex gap={12} isColumn={true} padding={16}>
+				<Flex gap={4} isWrapping={true}>
+					<Pill
+						color={color}
+						label="Pill"
+						isLabelHidden={label}
+						isRounded={isRounded}
+						icon={hasIcon ? icon : undefined}
+						size={size}
+					/>
+					<Pill
+						color={color}
+						label="Mono"
+						isLabelHidden={label}
+						isMono={true}
+						isRounded={isRounded}
+						icon={hasIcon ? icon : undefined}
+						size={size}
+					/>
+					<Pill
+						color={color}
+						label="Pill"
+						isLabelHidden={label}
+						isDark={true}
+						isRounded={isRounded}
+						icon={hasIcon ? icon : undefined}
+						size={size}
+					/>
+					<Pill
+						color={color}
+						label="Mono"
+						isLabelHidden={label}
+						isMono={true}
+						isDark={true}
+						isRounded={isRounded}
+						icon={hasIcon ? icon : undefined}
+						size={size}
+					/>
+				</Flex>
+				<ButtonGroup>
+					<Button intent="silent" value="Rounded" onClick={onToggleRounded} size="small" />
+					<Button intent="silent" value="Icons" onClick={onToggleIcon} size="small" />
+					<Button intent="silent" value="Size" onClick={onToggleSize} size="small" />
+					<Button intent="silent" value="Label" onClick={onToggleLabel} size="small" />
+				</ButtonGroup>
 			</Flex>
-			<Separator isLight={true} />
-			<Flex gap={4} isWrapping={true}>
-				<Pill color={color} label="Pill" isDark={true} isRounded={isRounded} icon={icon} />
-				<Pill color={color} label="Small" isSmall={true} isDark={true} isRounded={isRounded} icon={icon} />
-				<Pill color={color} label="Mono" isMono={true} isDark={true} isRounded={isRounded} icon={icon} />
-				<Pill
-					color={color}
-					label="Mono Small"
-					isSmall={true}
-					isMono={true}
-					isDark={true}
-					isRounded={isRounded}
-					icon={icon}
-				/>
-			</Flex>
-		</Flex>
+		</>
 	)
 }
 

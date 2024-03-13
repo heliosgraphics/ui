@@ -8,6 +8,14 @@
 	transition: all 60ms ease-in-out;
 }
 
+.menuItem small[data-component="Text.Small"] {
+	max-width: 36ch;
+	overflow: hidden;
+  white-space: nowrap;
+
+	text-overflow: ellipsis;
+}
+
 .menuItem:hover {
 	background-color: var(--ui-bg-action-hover);
 }

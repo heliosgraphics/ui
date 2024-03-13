@@ -1,11 +1,26 @@
 import { getClasses } from "@heliosgraphics/utils/classnames"
-import { Flex, Icon } from "../.."
+import { Flex, HeliosScale, HeliosSizeType, Icon } from "../.."
 import styles from "./Pill.module.css"
 import Text from "../Text/Text"
 import type { FC } from "react"
 import type { PillProps } from "./Pill.types"
 
-const Pill: FC<PillProps> = ({ color = "gray", isMono, label, isSmall, icon, isRounded, isDark = false }) => {
+const PILL_ICON_SIZES: Record<HeliosSizeType, number> = {
+	normal: 24,
+	small: 16,
+	tiny: 12,
+}
+
+const Pill: FC<PillProps> = ({
+	color = "gray",
+	icon,
+	isDark = false,
+	isLabelHidden = false,
+	isMono,
+	isRounded = false,
+	size = "normal",
+	label,
+}) => {
 	const textColor: string = `var(--ui-text-${color})`
 	const pillColor: string = `var(--ui-bg-soft-${color})`
 	const textColorDark: string = `hsl(var(--${color}-hue), var(--${color}-saturation), 90%)`
@@ -14,11 +29,13 @@ const Pill: FC<PillProps> = ({ color = "gray", isMono, label, isSmall, icon, isR
 	const pillClass = getClasses("non-selectable break-word", styles.pill, {
 		[styles.pillRounded]: isRounded,
 		[`radius-small`]: !isRounded,
-		[styles.pillNormal]: !isSmall,
-		[styles.pillSmall]: isSmall,
+		[styles.pillNormal]: size === "normal",
+		[styles.pillSmall]: size === "small",
+		[styles.pillTiny]: size === "tiny",
 		[styles.pillDark]: isDark,
-		[styles.pillIcon]: !!icon,
+		[styles.pillIconOnly]: !!icon && isLabelHidden,
 	})
+	const isSmall: boolean = size !== "normal"
 	const pillTextSize = isSmall ? "tiny" : "small"
 
 	return (
@@ -31,16 +48,18 @@ const Pill: FC<PillProps> = ({ color = "gray", isMono, label, isSmall, icon, isR
 			}}
 			gap={2}
 		>
-			{icon && <Icon size={isSmall ? 16 : 24} name={icon} />}
-			<Text
-				color="currentcolor"
-				type={pillTextSize}
-				whiteSpace="nowrap"
-				fontFamily={isMono ? "mono" : undefined}
-				fontWeight="medium"
-			>
-				{label}
-			</Text>
+			{icon && <Icon size={PILL_ICON_SIZES[size]} name={icon} />}
+			{!isLabelHidden && (
+				<Text
+					color="currentcolor"
+					type={pillTextSize}
+					whiteSpace="nowrap"
+					fontFamily={isMono ? "mono" : undefined}
+					fontWeight="medium"
+				>
+					{label}
+				</Text>
+			)}
 		</Flex>
 	)
 }

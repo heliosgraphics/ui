@@ -11,8 +11,8 @@
 	padding: 0 8px;
 }
 
-.pillNormal.pillIcon {
-	padding: 0 8px 0 4px;
+.pillNormal.pillIconOnly {
+	padding: 0 3px;
 }
 
 .pillSmall {
@@ -20,11 +20,24 @@
 	padding: 0 6px;
 }
 
-.pillSmall.pillIcon {
-	padding: 0 8px 0 4px;
+.pillSmall.pillIconOnly {
+	padding: 0 4px;
 }
 
-.pillSmall.pillRounded:not(.pillIcon) {
+.pillSmall.pillRounded:not(.pillIconOnly) {
+	padding: 0 8px;
+}
+
+.pillTiny {
+	height: 20px;
+	padding: 0 4px;
+}
+
+.pillTiny.pillIconOnly {
+	padding: 0 4px;
+}
+
+.pillTiny.pillRounded:not(.pillIconOnly) {
 	padding: 0 8px;
 }
 

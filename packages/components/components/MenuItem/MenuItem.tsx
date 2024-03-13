@@ -3,10 +3,10 @@
 import { FC } from "react"
 import styles from "./MenuItem.module.css"
 import { getClasses } from "@heliosgraphics/utils"
-import { Text } from "../.."
+import { Flex, Pill, Text } from "../.."
 import type { MenuItemProps } from "./MenuItem.types"
 
-const MenuItem: FC<MenuItemProps> = ({ isActive, title }) => {
+const MenuItem: FC<MenuItemProps> = ({ isActive, title, label, labelIcon, labelHidden, labelColor = "aqua" }) => {
 	const menuItemClasses: string = getClasses(styles.menuItem, {
 		[styles.menuItemActive]: isActive,
 	})
@@ -18,11 +18,12 @@ const MenuItem: FC<MenuItemProps> = ({ isActive, title }) => {
 	}
 
 	return (
-		<div className={menuItemClasses} data-component="MenuItem" onClick={onMenuClick}>
+		<Flex className={menuItemClasses} data-component="MenuItem" onClick={onMenuClick} isBetween={true} gap={4}>
 			<Text type="small" fontWeight="medium">
 				{title}
 			</Text>
-		</div>
+			{label && <Pill label={label} color={labelColor} isLabelHidden={labelHidden} size="tiny" icon={labelIcon} />}
+		</Flex>
 	)
 }
 

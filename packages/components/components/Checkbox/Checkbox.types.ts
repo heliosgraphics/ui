@@ -1,5 +1,5 @@
 import type { ChangeEvent } from "react"
-import { HeliosIntentionType, HeliosComponentMeta } from "../.."
+import { HeliosIntentionType, HeliosAttributeMeta } from "../.."
 
 export interface BaseCheckboxProps {
 	id?: string
@@ -14,7 +14,7 @@ export interface BaseCheckboxProps {
 
 export interface CheckboxProps extends BaseCheckboxProps {}
 
-export const meta: HeliosComponentMeta<CheckboxProps> = {
+export const meta: HeliosAttributeMeta<CheckboxProps> = {
 	id: {
 		type: "string",
 		isOptional: true,

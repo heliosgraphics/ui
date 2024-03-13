@@ -1,20 +1,50 @@
 "use client"
 
-import { useContext, useEffect, useState, type FC, type ChangeEvent } from "react"
+import { useContext, useState, type FC, type ChangeEvent } from "react"
 import Link from "next/link"
 import { WorkshopContext } from "../../contexts/WorkshopContext"
-import { Menu, MenuItem, MenuCategory, MenuSeparator, MenuFilter, COMPONENTS } from "@heliosgraphics/ui"
+import {
+	Menu,
+	MenuItem,
+	MenuCategory,
+	MenuSeparator,
+	MenuFilter,
+	COMPONENTS,
+	type HeliosComponentStatusType,
+	type HeliosComponentCategoryType,
+	HeliosColors,
+	HeliosIconType,
+} from "@heliosgraphics/ui"
 import { usePathname } from "next/navigation"
+
+const STATUS_COLORS: Record<HeliosComponentStatusType, HeliosColors> = {
+	experimental: "purple",
+	nominal: "pink",
+	stable: "blue",
+}
+
+const STATUS_ICONS: Record<HeliosComponentStatusType, HeliosIconType> = {
+	experimental: "bolt",
+	nominal: "bullseye",
+	stable: "tag",
+}
+
+const TYPE_NAMES: Record<HeliosComponentCategoryType, string> = {
+	content: "Content",
+	pattern: "Pattern",
+	core: "Core",
+	layout: "Layout",
+}
 
 const WorkshopMenu: FC = () => {
 	const pathname = usePathname()
-	const [filteredComponents, setFilteredComponents] = useState<Array<string>>([...COMPONENTS])
+	const [filteredComponents, setFilteredComponents] = useState<Array<string>>([...Object.keys(COMPONENTS)])
 	const { hasMenu } = useContext(WorkshopContext)
 	const [filter, setFilter] = useState<string>("")
 
 	const onValueChange = (event: ChangeEvent<HTMLInputElement>) => {
 		const newValue: string = event.target.value
-		const newFiltered = COMPONENTS.filter((c) => c.toLowerCase().includes(newValue.toLowerCase()))
+		const newFiltered = Object.keys(COMPONENTS).filter((c) => c.toLowerCase().includes(newValue.toLowerCase()))
 
 		setFilter(newValue)
 		setFilteredComponents(newFiltered)
@@ -22,7 +52,7 @@ const WorkshopMenu: FC = () => {
 
 	const onClear = () => {
 		setFilter("")
-		setFilteredComponents([...COMPONENTS])
+		setFilteredComponents([...Object.keys(COMPONENTS)])
 	}
 
 	if (!hasMenu) return null
@@ -53,9 +83,21 @@ const WorkshopMenu: FC = () => {
 			)}
 			<MenuCategory category="Components" />
 			{filteredComponents?.map((component, key) => {
+				const { status, type } = COMPONENTS[component]
+				const pillType = TYPE_NAMES[type]
+				const statusType = STATUS_COLORS[status]
+				const statusIcon = STATUS_ICONS[status]
+
 				return (
 					<Link href={`/components/${component}`} key={key}>
-						<MenuItem title={component} isActive={pathname === `/components/${component}`} />
+						<MenuItem
+							title={component}
+							isActive={pathname === `/components/${component}`}
+							label={pillType}
+							labelColor={status === "stable" ? "green" : "gray"}
+							labelHidden={false}
+							labelIcon={statusIcon}
+						/>
 					</Link>
 				)
 			})}

@@ -65,11 +65,10 @@ export { useIntersector } from "./hooks/useIntersector"
 // types
 export type { HeliosColors } from "./types/colors"
 export type { HeliosOnClickType, HeliosChildrenType } from "./types/components"
-export type { HeliosScale, HeliosRadius } from "./types/scale"
+export type { HeliosScale, HeliosRadius, HeliosSizeType } from "./types/scale"
 export type { HeliosThemes } from "./types/themes"
 export type { HeliosIntentionType, HeliosEmphasisType } from "./types/intentions"
 export type { HeliosIconType } from "./types/icons"
-export type { HeliosComponentMeta } from "./types/meta"
 export type { HeliosFontFamilyTypes } from "./types/typography"
 
 // constants
@@ -83,3 +82,9 @@ export { EMPHASES } from "./constants/emphasis"
 export { HOOKS } from "./constants/hooks"
 export { ICONS } from "./constants/icons"
 export { SCALE } from "./constants/scale"
+export type {
+	HeliosAttributeMeta,
+	HeliosComponentItem,
+	HeliosComponentStatusType,
+	HeliosComponentCategoryType,
+} from "./types/meta"

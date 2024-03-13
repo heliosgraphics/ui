@@ -24,3 +24,5 @@ export type HeliosScale =
 	| 96
 
 export type HeliosRadius = "none" | "small" | "normal" | "large"
+
+export type HeliosSizeType = "normal" | "small" | "tiny"

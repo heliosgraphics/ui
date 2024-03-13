@@ -1,4 +1,4 @@
-import type { HeliosChildrenType, HeliosComponentMeta } from "../.."
+import type { HeliosChildrenType, HeliosAttributeMeta } from "../.."
 
 export interface ButtonGroupProps {
 	align?: "left" | "center" | "right" | "join"
@@ -7,7 +7,7 @@ export interface ButtonGroupProps {
 	isVertical?: boolean
 }
 
-export const meta: HeliosComponentMeta<ButtonGroupProps> = {
+export const meta: HeliosAttributeMeta<ButtonGroupProps> = {
 	align: {
 		type: '"left" | "center" | "right" | "join"',
 		isOptional: true,

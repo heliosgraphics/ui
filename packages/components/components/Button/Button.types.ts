@@ -1,7 +1,6 @@
 import type { MouseEvent, SyntheticEvent } from "react"
 
-import type { HeliosIntentionType } from "../../types/intentions"
-import type { HeliosIconType, HeliosComponentMeta, HeliosOnClickType } from "../.."
+import type { HeliosIntentionType, HeliosIconType, HeliosAttributeMeta, HeliosOnClickType, HeliosSizeType } from "../.."
 
 export interface ButtonProps {
 	accept?: string
@@ -14,13 +13,13 @@ export interface ButtonProps {
 	isRounded?: boolean
 	onChange?: (event?: MouseEvent | SyntheticEvent) => Promise<void> | void
 	onClick?: HeliosOnClickType
-	size?: "normal" | "small" | "tiny"
+	size?: HeliosSizeType
 	tabIndex?: number
 	type?: "button" | "submit" | "file"
 	value: string
 }
 
-export const meta: HeliosComponentMeta<ButtonProps> = {
+export const meta: HeliosAttributeMeta<ButtonProps> = {
 	accept: {
 		type: "string",
 		isOptional: true,

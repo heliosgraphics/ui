@@ -1,5 +1,5 @@
 import type { HTMLAttributes } from "react"
-import type { HeliosScale, HeliosComponentMeta, HeliosRadius, HeliosOnClickType, HeliosChildrenType } from "../.."
+import type { HeliosScale, HeliosAttributeMeta, HeliosRadius, HeliosOnClickType, HeliosChildrenType } from "../.."
 import type { RefObject } from "react"
 
 export type ResponsiveScaleType = HeliosScale | [HeliosScale, HeliosScale, HeliosScale]
@@ -33,7 +33,7 @@ interface FlexBaseProps {
 export type FlexProps = FlexBaseProps & HTMLAttributes<{}>
 
 // prettier-ignore
-export const meta: HeliosComponentMeta<FlexBaseProps> = {
+export const meta: HeliosAttributeMeta<FlexBaseProps> = {
 	children: { type: "HeliosChildrenType" },
 	className: { type: "string", isOptional: true, },
 	draggable: { type: "boolean", isOptional: true, },
