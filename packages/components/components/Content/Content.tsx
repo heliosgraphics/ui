@@ -5,7 +5,7 @@ import type { ContentProps } from "./Content.types"
 import Column from "../Column"
 
 const Content: FC<ContentProps> = (props) => {
-	const contentClasses: string = getClasses(styles.content, "helios-scrollbarx", props.className)
+	const contentClasses: string = getClasses(styles.content, "helios-scrollbar", props.className)
 	const { width = 960, ...flexProps } = props
 
 	return (

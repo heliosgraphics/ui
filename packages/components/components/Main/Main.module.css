@@ -5,9 +5,9 @@
 }
 
 .main:has(nav[data-component="Navigation"]) nav[data-component="Menu"] {
-	top: 65px;
+	top: 64px;
 
-	height: calc(100dvh - 65px);
+	height: calc(100dvh - 64px);
 }
 
 @media (min-width: 960px) {

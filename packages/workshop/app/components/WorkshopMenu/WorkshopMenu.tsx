@@ -94,7 +94,7 @@ const WorkshopMenu: FC = () => {
 							title={component}
 							isActive={pathname === `/components/${component}`}
 							label={pillType}
-							labelColor={status === "stable" ? "green" : "gray"}
+							labelColor={status === "stable" ? "green" : status === "experimental" ? "red" : "gray"}
 							labelHidden={false}
 							labelIcon={statusIcon}
 						/>

@@ -1,8 +1,6 @@
-import Button from "../Button"
-import ButtonGroup from "../ButtonGroup"
-import Dialog from "../Dialog"
-import Flex from "../Flex"
-import Text from "../Text"
+"use client"
+
+import { Button, ButtonGroup, Dialog, Flex, Text } from "../.."
 import type { ConfirmProps } from "./Confirm.types"
 import type { FC } from "react"
 
@@ -17,8 +15,6 @@ const Confirm: FC<ConfirmProps> = ({
 	cancelText,
 	confirmText,
 }) => {
-	return null
-
 	return (
 		<Dialog title={title} onClose={onCancel} isOpen={isOpen} isCentered={true}>
 			<Flex gap={12} isColumn={true}>
