@@ -1,9 +1,16 @@
 "use client"
 
 import { useState } from "react"
+import { meta } from "@heliosgraphics/ui/components/Dialog/Dialog.types"
 import { Flex, Button, ButtonGroup, Text, Dialog } from "@heliosgraphics/ui"
+import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
+import PropsTable from "workshop/app/components/PropsTable"
 import type { ExampleDialogProps } from "./ExampleDialog.types"
 import type { FC } from "react"
+
+const CODE_SAMPLE = `<>
+
+</>`
 
 const ExampleDialog: FC<ExampleDialogProps> = () => {
 	const [isDialogOpen, setDialogOpen] = useState<boolean>(false)
@@ -17,7 +24,9 @@ const ExampleDialog: FC<ExampleDialogProps> = () => {
 	const onActionsToggle = () => setActions(!hasActions)
 
 	return (
-		<Flex>
+		<>
+			<LiveComponent code={CODE_SAMPLE} />
+			<PropsTable meta={meta} />
 			<ButtonGroup>
 				<Button value="Open Dialog" intent="silent" onClick={onDialogToggle} />
 			</ButtonGroup>
@@ -75,7 +84,7 @@ const ExampleDialog: FC<ExampleDialogProps> = () => {
 					)}
 				</Flex>
 			</Dialog>
-		</Flex>
+		</>
 	)
 }
 

@@ -1,7 +1,20 @@
-import type { ReactNode } from "react"
+import type { HeliosAttributeMeta, HeliosChildrenType } from '../..'
 
 export interface DetailsProps {
-	children: ReactNode
+	children: HeliosChildrenType
 	isOpen?: boolean
 	title: string
+}
+
+export const meta: HeliosAttributeMeta<DetailsProps> = {
+	children: {
+		type: "HeliosChildrenType",
+	},
+	isOpen: {
+		type: "boolean",
+		isOptional: true,
+	},
+	title: {
+		type: "string",
+	},
 }

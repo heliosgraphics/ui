@@ -1,3 +1,5 @@
+"use client"
+
 import { FC } from "react"
 import { Button, ButtonGroup } from "../.."
 import styles from "./NavigationPanelButton.module.css"
