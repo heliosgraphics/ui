@@ -61,6 +61,7 @@ export type { TextProps } from "./components/Text/Text.types"
 
 // hooks
 export { useIntersector } from "./hooks/useIntersector"
+export { usePrevious } from "./hooks/usePrevious"
 
 // types
 export type { HeliosColors } from "./types/colors"

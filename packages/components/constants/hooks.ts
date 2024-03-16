@@ -1,1 +1,1 @@
-export const HOOKS = ["useIntersector"] as const
+export const HOOKS = ["useIntersector", "usePrevious"] as const
