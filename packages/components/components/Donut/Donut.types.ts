@@ -1,4 +1,4 @@
-import type { HeliosColors, HeliosChildrenType } from "../.."
+import type { HeliosColors, HeliosAttributeMeta, HeliosChildrenType } from "../.."
 
 export type DonutSizeType = 32 | 48 | 64 | 96 | 128
 
@@ -7,4 +7,20 @@ export interface DonutProps {
 	color: HeliosColors
 	percentage: number
 	size: DonutSizeType
+}
+
+export const meta: HeliosAttributeMeta<DonutProps> = {
+	children: {
+		type: "HeliosChildrenType",
+		isOptional: true,
+	},
+	color: {
+		type: "HeliosColors",
+	},
+	percentage: {
+		type: "number",
+	},
+	size: {
+		type: "DonutSizeType",
+	},
 }

@@ -57,7 +57,7 @@ export type { HeadingProps } from "./components/Heading/Heading.types"
 export type { PieItem } from "./components/Pie/Pie.types"
 export type { ResultItem } from "./components/shared/ResultList"
 export type { SelectItem } from "./components/Select/Select.types"
-export type { TextProps } from "./components/Text/Text.types"
+export type { TextBaseProps, TextProps } from "./components/Text/Text.types"
 
 // hooks
 export { useIntersector } from "./hooks/useIntersector"

@@ -1,12 +1,12 @@
+import { getClasses } from "@heliosgraphics/utils/classnames"
 import { getTypographyUtility } from "./Text.utils"
 import { type FC } from "react"
-import { getClasses } from "@heliosgraphics/utils/classnames"
 import Div from "./components/Div/Div"
 import P from "./components/P/P"
 import Small from "./components/Small/Small"
 import styles from "./Text.module.css"
 import Tiny from "./components/Tiny/Tiny"
-import type { TextProps, BaseTextProps } from "./Text.types"
+import type { TextProps } from "./Text.types"
 
 const Text: FC<TextProps> = (props) => {
 	const textClasses: string = getClasses(props.className, styles.text, {
@@ -28,7 +28,7 @@ const Text: FC<TextProps> = (props) => {
 			}
 		: undefined
 
-	const baseTextProps: BaseTextProps = {
+	const baseTextProps: Omit<TextProps, "type"> = {
 		onClick: props.onClick,
 		children: props.children,
 		style: lineClampStyle,

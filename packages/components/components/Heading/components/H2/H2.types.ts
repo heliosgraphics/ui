@@ -1,3 +1,3 @@
-import type { BaseHeadingProps } from "../../Heading.types"
+import type { HeadingProps } from "../../Heading.types"
 
-export interface H2Props extends BaseHeadingProps {}
+export interface H2Props extends Omit<HeadingProps, "level"> { }

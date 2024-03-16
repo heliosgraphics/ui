@@ -30,10 +30,11 @@ interface FlexBaseProps {
 	yAlign?: "start" | "end" | "baseline"
 }
 
-export type FlexProps = FlexBaseProps & HTMLAttributes<{}>
+export type FlexProps = FlexBaseProps & HTMLAttributes<unknown>
 
 // prettier-ignore
 export const meta: HeliosAttributeMeta<FlexBaseProps> = {
+	_extends: ["HTMLAttributes<unknown>"],
 	children: { type: "HeliosChildrenType" },
 	className: { type: "string", isOptional: true, },
 	draggable: { type: "boolean", isOptional: true, },

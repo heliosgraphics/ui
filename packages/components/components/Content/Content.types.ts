@@ -4,5 +4,5 @@ export interface BaseContentProps { }
 export type ContentProps = BaseContentProps & ColumnProps
 
 export const meta: HeliosAttributeMeta<BaseContentProps> = {
-	_extends: "ColumnProps",
+	_extends: ["ColumnProps"],
 }

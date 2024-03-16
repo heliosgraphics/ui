@@ -1,4 +1,4 @@
-import type { ResultItem } from "../.."
+import type { ResultItem, HeliosAttributeMeta } from "../.."
 import type { ReactElement } from "react"
 
 export interface DropdownProps {
@@ -7,4 +7,25 @@ export interface DropdownProps {
 	isHidden?: boolean
 	isDisabled?: boolean
 	position?: "left" | "right"
+}
+
+export const meta: HeliosAttributeMeta<DropdownProps> = {
+	children: {
+		type: "ReactElement<unknown>",
+	},
+	items: {
+		type: "Array<ResultItem>",
+	},
+	isHidden: {
+		type: "boolean",
+		isOptional: true
+	},
+	isDisabled: {
+		type: "boolean",
+		isOptional: true
+	},
+	position: {
+		type: '"left" | "right"',
+		isOptional: true
+	},
 }

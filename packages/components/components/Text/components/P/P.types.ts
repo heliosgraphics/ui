@@ -1,3 +1,3 @@
-import type { BaseTextProps } from "../../Text.types"
+import type { TextProps } from "../../Text.types"
 
-export interface PProps extends BaseTextProps {}
+export interface PProps extends Omit<TextProps, "type"> { }

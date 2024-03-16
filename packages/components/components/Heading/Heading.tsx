@@ -8,7 +8,7 @@ import H4 from "./components/H4/H4"
 import H5 from "./components/H5/H5"
 import H6 from "./components/H6/H6"
 import styles from "./Heading.module.css"
-import type { BaseHeadingProps, HeadingProps } from "./Heading.types"
+import type { HeadingProps } from "./Heading.types"
 import type { FC } from "react"
 
 const Heading: FC<HeadingProps> = (props) => {
@@ -30,7 +30,7 @@ const Heading: FC<HeadingProps> = (props) => {
 			}
 		: undefined
 
-	const allProps: BaseHeadingProps = {
+	const allProps: Omit<HeadingProps, "level"> = {
 		onClick: props.onClick,
 		children: props.children,
 		style: lineClampStyle,
