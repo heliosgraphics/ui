@@ -3,7 +3,7 @@
 import { useState, type FC } from "react"
 import { TabsProps } from "./Tabs.types"
 import styles from "./Tabs.module.css"
-import Text from "../Text"
+import { Text } from "../.."
 
 const Tabs: FC<TabsProps> = ({ active: activeNumber, items, sections }) => {
 	const [active, setActive] = useState(activeNumber || 0)
@@ -30,4 +30,4 @@ const Tabs: FC<TabsProps> = ({ active: activeNumber, items, sections }) => {
 	)
 }
 
-export default Tabs
+export { Tabs }

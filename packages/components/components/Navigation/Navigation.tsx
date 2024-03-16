@@ -18,4 +18,4 @@ const Navigation: FC<NavigationProps> = (props) => {
 	)
 }
 
-export default Navigation
+export { Navigation }

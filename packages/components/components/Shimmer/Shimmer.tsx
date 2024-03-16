@@ -24,4 +24,4 @@ const Shimmer: FC<ShimmerProps> = ({ isRounded, paddingTop, paddingBottom, heigh
 	)
 }
 
-export default Shimmer
+export { Shimmer }

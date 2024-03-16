@@ -62,4 +62,4 @@ const Dropdown: FC<DropdownProps> = ({ isHidden, children, items, isDisabled, po
 	)
 }
 
-export default Dropdown
+export { Dropdown }

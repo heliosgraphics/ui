@@ -1,6 +1,5 @@
-import Icon from "../Icon"
 import styles from "./Details.module.css"
-import Text from "../Text"
+import { Icon, Text } from "../.."
 import type { DetailsProps } from "./Details.types"
 import type { FC } from "react"
 
@@ -18,4 +17,4 @@ const Details: FC<DetailsProps> = ({ children, title, isOpen = false }) => {
 	)
 }
 
-export default Details
+export { Details }

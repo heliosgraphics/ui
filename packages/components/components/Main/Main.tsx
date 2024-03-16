@@ -10,4 +10,4 @@ const Main: FC<MainProps> = ({ children }) => {
 	return <main className={mainClasses}>{children}</main>
 }
 
-export default Main
+export { Main }

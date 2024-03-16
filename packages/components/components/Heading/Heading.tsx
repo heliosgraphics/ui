@@ -57,4 +57,4 @@ const Heading: FC<HeadingProps> = (props) => {
 	}
 }
 
-export default Heading
+export { Heading }

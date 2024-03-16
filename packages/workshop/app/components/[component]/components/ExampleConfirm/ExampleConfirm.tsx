@@ -14,7 +14,7 @@ const ExampleConfirm: FC<ExampleConfirmProps> = () => {
 	const onConfirmToggle = () => setConfirming(!isConfirming)
 
 	return (
-		<>
+		<div>
 			<LiveComponent code={CODE_SAMPLE} />
 			<PropsTable meta={meta} />
 			<Flex>
@@ -33,7 +33,7 @@ const ExampleConfirm: FC<ExampleConfirmProps> = () => {
 					title="Confirm Delete"
 				/>
 			</Flex>
-		</>
+		</div>
 	)
 }
 

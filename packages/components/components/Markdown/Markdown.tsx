@@ -15,4 +15,4 @@ const Markdown: FC<MarkdownProps> = ({ text, isNonSelectable }) => {
 	return <div className={markdownClasses} dangerouslySetInnerHTML={innerHTML}></div>
 }
 
-export default Markdown
+export { Markdown }

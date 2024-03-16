@@ -1,8 +1,8 @@
-import { Masonry } from "react-plock"
+import { Masonry as MasonryPlock } from "react-plock"
 import { Children, type FC } from "react"
 import type { MasonryProps } from "./Masonry.types"
 
-const MasonryLayout: FC<MasonryProps> = ({ children }) => {
+const Masonry: FC<MasonryProps> = ({ children }) => {
 	if (!children) return null
 
 	const mappedChildren: Array<JSX.Element> | null | undefined = Children.map(children, (child) => (
@@ -10,7 +10,7 @@ const MasonryLayout: FC<MasonryProps> = ({ children }) => {
 	))
 
 	return (
-		<Masonry
+		<MasonryPlock
 			items={mappedChildren as Array<JSX.Element>}
 			render={(item: any) => item}
 			config={{
@@ -22,4 +22,4 @@ const MasonryLayout: FC<MasonryProps> = ({ children }) => {
 	)
 }
 
-export default MasonryLayout
+export { Masonry }

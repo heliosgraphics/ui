@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest"
 import { render } from "@testing-library/react"
-import Dot from "./Dot"
+import { Dot } from "./Dot"
 
 describe("Dot", () => {
 	it("Should match snapshot", () => {

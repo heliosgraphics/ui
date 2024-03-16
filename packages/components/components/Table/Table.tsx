@@ -11,4 +11,4 @@ const Table: FC<TableProps> = ({ children, hasBorder }) => {
 	return <table className={tableClasses}>{children}</table>
 }
 
-export default Table
+export { Table }

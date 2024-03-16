@@ -1,7 +1,7 @@
 "use client"
 
 import { useId, useRef, useEffect } from "react"
-import Text from "../Text"
+import { Text } from "../.."
 import styles from "./Textarea.module.css"
 import { getClasses } from "@heliosgraphics/utils/classnames"
 import InputLabel from "../shared/InputLabel"
@@ -56,4 +56,4 @@ const Textarea: FC<TextareaProps> = (props) => {
 	)
 }
 
-export default Textarea
+export { Textarea }

@@ -37,4 +37,4 @@ const Checkbox: FC<CheckboxProps> = ({ id, isChecked, isSmall, isDisabled, inten
 	)
 }
 
-export default Checkbox
+export { Checkbox }

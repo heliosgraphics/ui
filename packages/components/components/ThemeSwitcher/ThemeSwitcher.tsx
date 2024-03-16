@@ -32,4 +32,4 @@ const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ isIconOnly = false, size = "sma
 	)
 }
 
-export default ThemeSwitcher
+export { ThemeSwitcher }

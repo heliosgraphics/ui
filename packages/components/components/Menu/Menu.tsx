@@ -15,4 +15,4 @@ const Menu: FC<MenuProps> = ({ children }) => {
 	)
 }
 
-export default Menu
+export { Menu }

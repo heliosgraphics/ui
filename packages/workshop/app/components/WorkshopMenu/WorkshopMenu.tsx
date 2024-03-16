@@ -50,7 +50,7 @@ const WorkshopMenu: FC = () => {
 		setFilteredComponents(newFiltered)
 	}
 
-	const onClear = () => {
+	const onClear = (): void => {
 		setFilter("")
 		setFilteredComponents([...Object.keys(COMPONENTS)])
 	}
@@ -59,7 +59,7 @@ const WorkshopMenu: FC = () => {
 
 	return (
 		<Menu>
-			<MenuFilter value={filter} onChange={onValueChange} onClear={filter && onClear} />
+			<MenuFilter value={filter} onChange={onValueChange} onClear={filter ? onClear : undefined} />
 			{!filter && (
 				<>
 					<Link href="/">

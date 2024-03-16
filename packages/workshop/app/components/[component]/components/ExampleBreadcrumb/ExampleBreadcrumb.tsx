@@ -8,13 +8,13 @@ import type { ExampleBreadcrumbProps } from "./ExampleBreadcrumb.types"
 import type { FC } from "react"
 
 const BREADCRUMB_ITEMS: Array<BreadCrumbItem> = [
-	{ name: "Index", href: "/", onClick: () => null },
-	{ name: "Books", href: "/", onClick: () => null },
+	{ name: "Index", href: "/", onClick: () => null as any },
+	{ name: "Books", href: "/", onClick: () => null as any },
 	{
 		name: "Lorem Ipsum",
 		href: "/",
 		isActive: true,
-		onClick: () => null,
+		onClick: () => null as any,
 	},
 ]
 

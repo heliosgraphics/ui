@@ -40,4 +40,4 @@ const Pie: FC<PieProps> = ({ color, size, data }) => {
 	)
 }
 
-export default Pie
+export { Pie }

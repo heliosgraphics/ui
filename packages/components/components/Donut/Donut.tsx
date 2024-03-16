@@ -1,5 +1,5 @@
 import { getDonutBorderSize } from "./Donut.utils"
-import Flex from "../Flex"
+import { Flex } from "../.."
 import styles from "./Donut.module.css"
 import type { DonutProps } from "./Donut.types"
 import type { FC } from "react"
@@ -49,4 +49,4 @@ const Donut: FC<DonutProps> = ({ children, size, percentage = 0, color }) => {
 	)
 }
 
-export default Donut
+export { Donut }

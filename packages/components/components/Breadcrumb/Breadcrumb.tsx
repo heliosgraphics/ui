@@ -1,7 +1,5 @@
 import { Fragment, type FC } from "react"
-import Flex from "../Flex"
-import Icon from "../Icon"
-import Text from "../Text"
+import { Text, Flex, Icon } from "../.."
 import type { BreadcrumbProps } from "./Breadcrumb.types"
 
 const Breadcrumb: FC<BreadcrumbProps> = ({ items }) => {
@@ -31,4 +29,4 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ items }) => {
 	)
 }
 
-export default Breadcrumb
+export { Breadcrumb }

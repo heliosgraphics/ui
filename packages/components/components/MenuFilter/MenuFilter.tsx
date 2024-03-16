@@ -23,4 +23,4 @@ const MenuFilter: FC<MenuFilterProps> = ({ value, onClear, onChange }) => {
 	)
 }
 
-export default MenuFilter
+export { MenuFilter }

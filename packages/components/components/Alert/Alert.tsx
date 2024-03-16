@@ -1,10 +1,6 @@
-import Button from "../Button/Button"
-import ButtonGroup from "../ButtonGroup"
+import { Button, ButtonGroup, Flex, Text, Icon } from "../.."
 import { getClasses } from "@heliosgraphics/utils/classnames"
-import Flex from "../Flex/Flex"
-import Icon from "../Icon/Icon"
 import styles from "./Alert.module.css"
-import Text from "../Text/Text"
 import type { AlertProps } from "./Alert.types"
 import type { FC } from "react"
 
@@ -46,4 +42,4 @@ const Alert: FC<AlertProps> = ({ children, onClose, title, icon, intent }) => {
 	)
 }
 
-export default Alert
+export { Alert }

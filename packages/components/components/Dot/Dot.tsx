@@ -29,4 +29,4 @@ const Dot: FC<DotProps> = ({ colorAccent, size = 8, color = "blue" }) => {
 	)
 }
 
-export default Dot
+export { Dot }

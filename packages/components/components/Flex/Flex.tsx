@@ -15,4 +15,4 @@ const Flex = forwardRef<HTMLDivElement, FlexProps>((props: FlexProps, ref: Ref<H
 
 Flex.displayName = "Flex"
 
-export default Flex
+export { Flex }

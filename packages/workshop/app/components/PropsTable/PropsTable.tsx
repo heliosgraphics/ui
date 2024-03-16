@@ -49,7 +49,7 @@ const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 								</td>
 								<td>
 									<Flex>
-										<Pill label={type} color="orange" isSmall={true} isMono={true} />
+										<Pill label={type} color="orange" size="small" isMono={true} />
 									</Flex>
 								</td>
 								<td>
@@ -60,7 +60,7 @@ const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 								<td>
 									{!value["isOptional"] && (
 										<Flex>
-											<Pill color="gray" label="Yes" isSmall={true} isMono={true} />
+											<Pill color="gray" label="Yes" size="small" isMono={true} />
 										</Flex>
 									)}
 								</td>

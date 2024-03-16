@@ -13,4 +13,4 @@ const MenuCategory: FC<MenuCategoryProps> = ({ category }) => {
 	)
 }
 
-export default MenuCategory
+export { MenuCategory }

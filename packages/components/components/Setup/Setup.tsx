@@ -68,4 +68,4 @@ const Setup: FC<SetupProps> = () => {
 	)
 }
 
-export default Setup
+export { Setup }

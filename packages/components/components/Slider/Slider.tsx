@@ -9,4 +9,4 @@ const Slider: FC<SliderProps> = ({ items }) => {
 	return <ul className={sliderClasses}>{items?.map((item, key) => <li key={key}>{item}</li>)}</ul>
 }
 
-export default Slider
+export { Slider }

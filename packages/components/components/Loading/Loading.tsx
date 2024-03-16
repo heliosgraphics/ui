@@ -39,4 +39,4 @@ const Loading: FC<LoadingProps> = ({ className, size }) => {
 	)
 }
 
-export default Loading
+export { Loading }

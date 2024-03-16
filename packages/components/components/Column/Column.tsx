@@ -18,4 +18,4 @@ const Column: FC<ColumnProps> = (props) => {
 	return <div {...safeProps} style={columnStyle} className={columnClasses} />
 }
 
-export default Column
+export { Column }

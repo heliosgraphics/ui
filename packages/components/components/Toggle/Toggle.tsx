@@ -1,6 +1,6 @@
 import { useId } from "react"
 import { getClasses } from "@heliosgraphics/utils/classnames"
-import Text from "../Text"
+import { Text } from "../.."
 import styles from "./Toggle.module.css"
 import type { FC } from "react"
 import type { ToggleProps } from "./Toggle.types"
@@ -43,4 +43,4 @@ const Toggle: FC<ToggleProps> = ({ id, isChecked, isSmall, isRequired, isDisable
 	)
 }
 
-export default Toggle
+export { Toggle }

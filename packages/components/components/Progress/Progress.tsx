@@ -6,4 +6,4 @@ const Progress: FC<ProgressProps> = ({ max = 100, value = 0 }) => (
 	<progress className={styles.progress} max={max} value={value} />
 )
 
-export default Progress
+export { Progress }

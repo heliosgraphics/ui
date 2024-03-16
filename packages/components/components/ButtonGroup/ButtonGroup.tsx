@@ -1,6 +1,6 @@
 import { ButtonGroupProps } from "./ButtonGroup.types"
 import { getClasses } from "@heliosgraphics/utils/classnames"
-import Flex from "../Flex"
+import { Flex } from "../.."
 import styles from "./ButtonGroup.module.css"
 import type { FC } from "react"
 
@@ -21,4 +21,4 @@ const ButtonGroup: FC<ButtonGroupProps> = ({ className, children, isVertical, al
 	)
 }
 
-export default ButtonGroup
+export { ButtonGroup }

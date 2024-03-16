@@ -18,4 +18,4 @@ const Timestamp: FC<TimestampProps> = ({ date, fromNow, text, format = "MMMM D, 
 	)
 }
 
-export default Timestamp
+export { Timestamp }

@@ -242,4 +242,4 @@ const Icon: FC<IconProps> = ({ name, className, emphasis, size }) => {
 	)
 }
 
-export default Icon
+export { Icon }

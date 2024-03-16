@@ -27,4 +27,4 @@ const MenuItem: FC<MenuItemProps> = ({ isActive, title, label, labelIcon, labelH
 	)
 }
 
-export default MenuItem
+export { MenuItem }

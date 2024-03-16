@@ -1,5 +1,3 @@
-"use client"
-
 import { Button, ButtonGroup, Dialog, Flex, Text } from "../.."
 import type { ConfirmProps } from "./Confirm.types"
 import type { FC } from "react"
@@ -28,4 +26,4 @@ const Confirm: FC<ConfirmProps> = ({
 	)
 }
 
-export default Confirm
+export { Confirm }

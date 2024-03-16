@@ -18,4 +18,4 @@ const ThemeSwitcherLoading: FC<ThemeSwitcherLoadingProps> = ({ isIconOnly = fals
 	)
 }
 
-export default ThemeSwitcherLoading
+export { ThemeSwitcherLoading }

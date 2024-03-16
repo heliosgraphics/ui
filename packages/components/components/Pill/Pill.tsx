@@ -1,7 +1,6 @@
 import { getClasses } from "@heliosgraphics/utils/classnames"
-import { Flex, HeliosScale, HeliosSizeType, Icon } from "../.."
+import { Flex, type HeliosScale, Text, HeliosSizeType, Icon } from "../.."
 import styles from "./Pill.module.css"
-import Text from "../Text/Text"
 import type { FC } from "react"
 import type { PillProps } from "./Pill.types"
 
@@ -64,4 +63,4 @@ const Pill: FC<PillProps> = ({
 	)
 }
 
-export default Pill
+export { Pill }

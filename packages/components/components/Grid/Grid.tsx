@@ -10,4 +10,4 @@ const Grid: FC<GridProps> = ({ columns, children }) => {
 	return <div className={gridClasses}>{children}</div>
 }
 
-export default Grid
+export { Grid }

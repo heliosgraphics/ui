@@ -1,6 +1,5 @@
 import { useId, type FC } from "react"
-import Flex from "../Flex"
-import Icon from "../Icon"
+import { Flex, Icon } from "../.."
 import styles from "./Select.module.css"
 import { getClasses } from "@heliosgraphics/utils/classnames"
 import InputLabel from "../shared/InputLabel"
@@ -35,4 +34,4 @@ const Select: FC<SelectProps> = ({ selectedValue, onChange, isLabelHidden, isDis
 	)
 }
 
-export default Select
+export { Select }

@@ -49,4 +49,4 @@ const Text: FC<TextProps> = (props) => {
 	}
 }
 
-export default Text
+export { Text }

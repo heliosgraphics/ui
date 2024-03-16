@@ -13,4 +13,4 @@ const NavigationPanelButton: FC<NavigationPanelButtonProps> = () => {
 	)
 }
 
-export default NavigationPanelButton
+export { NavigationPanelButton }

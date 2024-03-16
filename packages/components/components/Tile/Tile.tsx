@@ -53,4 +53,4 @@ const Tile: FC<TileProps> = ({ size, text, icon, onClick, iconAccent, color, col
 	)
 }
 
-export default Tile
+export { Tile }

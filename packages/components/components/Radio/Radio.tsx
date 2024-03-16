@@ -1,6 +1,6 @@
 import { getClasses } from "@heliosgraphics/utils/classnames"
 import styles from "./Radio.module.css"
-import Text from "../Text"
+import { Text } from "../.."
 import { type FC, useId } from "react"
 import type { RadioProps } from "./Radio.types"
 
@@ -44,4 +44,4 @@ const Radio: FC<RadioProps> = ({ id, isSmall, isDisabled, intent, onChange, valu
 	)
 }
 
-export default Radio
+export { Radio }

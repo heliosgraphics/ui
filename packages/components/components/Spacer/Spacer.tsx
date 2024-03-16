@@ -5,4 +5,4 @@ const Spacer: FC<SpacerProps> = ({ gap }) => {
 	return <div style={{ height: `${gap ?? 0}px` }} />
 }
 
-export default Spacer
+export { Spacer }

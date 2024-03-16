@@ -11,4 +11,4 @@ const Separator: FC<SeparatorProps> = (props) => {
 	}
 }
 
-export default Separator
+export { Separator }

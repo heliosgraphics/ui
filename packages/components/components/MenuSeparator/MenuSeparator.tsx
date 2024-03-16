@@ -23,4 +23,4 @@ const MenuSeparator: FC<MenuSeparatorProps> = ({ category }) => {
 	)
 }
 
-export default MenuSeparator
+export { MenuSeparator }

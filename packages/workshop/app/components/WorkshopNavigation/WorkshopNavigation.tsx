@@ -6,10 +6,13 @@ import { Flex, NavigationPanelButton, ThemeSwitcherLoading, Text, Navigation } f
 import Link from "next/link"
 import dynamic from "next/dynamic"
 
-const ThemeSwitcher = dynamic(() => import("@heliosgraphics/ui/components/ThemeSwitcher"), {
-	ssr: false,
-	loading: () => <ThemeSwitcherLoading />,
-})
+const ThemeSwitcher = dynamic(
+	() => import("@heliosgraphics/ui/components/ThemeSwitcher/ThemeSwitcher").then((mod) => mod.ThemeSwitcher),
+	{
+		ssr: false,
+		loading: () => <ThemeSwitcherLoading isIconOnly={false} size="small" />,
+	},
+)
 
 const WorkshopNavigation: FC = () => {
 	const { hasHeader, hasMenu } = useContext(WorkshopContext)
