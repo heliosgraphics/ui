@@ -9,7 +9,7 @@ export interface TimestampProps {
 
 export const meta: HeliosAttributeMeta<TimestampProps> = {
 	date: { type: "string", isOptional: true },
-	format: { type: "string", isOptional: true },
+	format: { type: "string", isOptional: true, default: "MMMM D, YYYY" },
 	fromNow: { type: "boolean", isOptional: true },
 	text: { type: "string", isOptional: true },
 }

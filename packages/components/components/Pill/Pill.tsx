@@ -13,10 +13,10 @@ const PILL_ICON_SIZES: Record<HeliosSizeType, number> = {
 const Pill: FC<PillProps> = ({
 	color = "gray",
 	icon,
-	isDark = false,
-	isLabelHidden = false,
+	isDark,
+	isLabelHidden,
 	isMono,
-	isRounded = false,
+	isRounded,
 	size = "normal",
 	label,
 }) => {

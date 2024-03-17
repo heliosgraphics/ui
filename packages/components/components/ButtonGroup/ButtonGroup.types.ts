@@ -11,6 +11,7 @@ export const meta: HeliosAttributeMeta<ButtonGroupProps> = {
 	align: {
 		type: '"left" | "center" | "right" | "join"',
 		isOptional: true,
+		default: "left"
 	},
 	className: {
 		type: "string",

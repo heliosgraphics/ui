@@ -14,6 +14,7 @@ export interface PillProps {
 export const meta: HeliosAttributeMeta<PillProps> = {
 	color: {
 		type: "HeliosColors",
+		default: "gray"
 	},
 	icon: {
 		type: "HeliosIconType",
@@ -36,8 +37,9 @@ export const meta: HeliosAttributeMeta<PillProps> = {
 		isOptional: true,
 	},
 	size: {
-		type: "string",
+		type: "HeliosSizeType",
 		isOptional: true,
+		default: "normal"
 	},
 	label: {
 		type: "string",

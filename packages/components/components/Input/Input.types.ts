@@ -49,6 +49,6 @@ export const meta: HeliosAttributeMeta<InputProps> = {
 	placeholder: { type: "string", isOptional: true },
 	results: { type: "Array<ResultItem>", isOptional: true },
 	showResults: { type: "boolean", isOptional: true },
-	type: { type: '"text" | "email" | "date" | "time" | "password"', isOptional: true },
+	type: { type: '"text" | "email" | "date" | "time" | "password"', isOptional: true, default: "text" },
 	value: { type: "string" },
 }

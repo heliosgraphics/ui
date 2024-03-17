@@ -19,6 +19,7 @@ export const meta: HeliosAttributeMeta<DonutProps> = {
 	},
 	percentage: {
 		type: "number",
+		default: 0
 	},
 	size: {
 		type: "DonutSizeType",
