@@ -1,18 +1,6 @@
 "use client"
 
-import {
-	Alert,
-	Flex,
-	Input,
-	Tile,
-	ICONS,
-	// Select,
-	// Icon,
-	// Text,
-	// HeliosEmphasisType,
-	// EMPHASES,
-	type HeliosIconType,
-} from "@heliosgraphics/ui"
+import { Alert, Flex, Input, Tile, ICONS, type HeliosIconType } from "@heliosgraphics/ui"
 import { useState, useContext, type FC, type ChangeEvent } from "react"
 import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import type { ExampleIconProps } from "./ExampleIcon.types"
@@ -32,32 +20,7 @@ const ExampleIcon: FC<ExampleIconProps> = () => {
 
 	return (
 		<Flex isColumn={true} gap={16}>
-			<Alert intent="silent" icon="info">
-				In progress.
-			</Alert>
-			<Flex gap={8}>
-				<Input label="Find an Icon" onChange={onFilter} value={filter} placeholder="Eg.: arrow" />
-				{/* <Select label="Select Emphasis" items={items} onChange={onEmphasisChange} selectedValue={emphasis} /> */}
-			</Flex>
-			<Flex isWrapping={true} gap={2}>
-				{filteredIcons.map((ic, key) => {
-					const onIconSet = () => setIcon(ic)
-					const isActive: boolean = ic === icon
-
-					return (
-						<Tile
-							key={key}
-							onClick={onIconSet}
-							color="gray"
-							text={ic}
-							icon={ic}
-							size={64}
-							isRounded={true}
-							colorAccent={isActive ? "orange" : undefined}
-						/>
-					)
-				})}
-			</Flex>
+			x
 		</Flex>
 	)
 }

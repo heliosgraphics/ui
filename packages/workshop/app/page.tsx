@@ -1,35 +1,42 @@
-import { Button, ButtonGroup, Flex, Text, Separator } from "@heliosgraphics/ui"
+import { Button, ButtonGroup, Flex, Text, Separator, Heading } from "@heliosgraphics/ui"
 import DebugSelector from "./components/DebugSelector"
 import Page from "workshop/app/components/Page"
 import uiPackage from "@heliosgraphics/ui/package.json"
 
 export default function Home({}) {
 	return (
-		<Page title="User Interface" eyebrow="Helios">
-			<Text type="paragraph">
-				Helios UI is a dynamic guide that documents the visual and experience standards for our applications. This is an
-				ever growing and moving system&mdash;and as such, strongly opinionated.
-			</Text>
+		<Page>
+			<Flex isColumn={true} gap={4}>
+				<Flex isColumn={true}>
+					<Text type="small" fontFamily="mono" emphasis="secondary">
+						@heliosgraphics/ui<span className="non-selectable">@{uiPackage.version}</span>
+					</Text>
+					<Heading level={0}>Helios UI</Heading>
+				</Flex>
+				<Text type="paragraph">
+					Baseline design system documenting our visual and experience standards.
+					<br />
+					Always evolving, intentional and opinionated.
+				</Text>
+				<Text type="small" emphasis="secondary">
+					Typescript components in React as a Module, almost no{" "}
+					<a href="https://github.com/heliosgraphics/ui/blob/main/packages/components/package.json">3rd parties</a>.
+				</Text>
+			</Flex>
 			<Flex isColumn={true} gap={8}>
 				<ButtonGroup>
 					<a href="/get-started" tabIndex={-1}>
-						<Button intent="advise" value="Get Started" icon="eye" />
+						<Button intent="advise" value="Start Building" icon="eye" />
 					</a>
 					<a href="https://github.com/heliosgraphics/ui" tabIndex={-1}>
-						<Button intent="silent" value="Repository" icon="x-github" />
+						<Button intent="silent" value="Give us a Star" icon="x-github" />
 					</a>
 				</ButtonGroup>
-				<Text type="small" fontFamily="mono" emphasis="tertiary">
-					pnpm add @heliosgraphics/ui<span className="non-selectable">@{uiPackage.version}</span>
-				</Text>
 			</Flex>
+			{/* <Separator isLight={true} /> */}
+			{/* <Markdown text={PAGE} /> */}
 			<Separator isLight={true} />
-			<Flex isColumn={true} gap={16}>
-				<DebugSelector />
-				<Text type="small" emphasis="tertiary">
-					This is a WIP release.
-				</Text>
-			</Flex>
+			<DebugSelector />
 		</Page>
 	)
 }

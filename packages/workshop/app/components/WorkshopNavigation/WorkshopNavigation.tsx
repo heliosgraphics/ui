@@ -23,8 +23,8 @@ const WorkshopNavigation: FC = () => {
 				<Flex isYCentered={true} gap={8}>
 					{hasMenu && <NavigationPanelButton />}
 					<Flex gap={4} isYCentered={true}>
-						<Link href="/">
-							<img src="/emblem.svg" className="flex w-16 h-16" />
+						<Link href="/" className="flex">
+							<img src="/emblem.svg" style={{ minWidth: "38px", width: "38px", height: "38px" }} />
 						</Link>
 						<Flex isColumn={true}>
 							<Text type="small" fontWeight="semibold">

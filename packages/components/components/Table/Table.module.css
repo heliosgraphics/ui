@@ -4,10 +4,6 @@
 	border-collapse: collapse;
 }
 
-.table tr td:first-child {
-	padding-left: 24px;
-}
-
 .table thead tr td {
 	background-color: var(--ui-bg-action);
 }
@@ -20,4 +16,8 @@
 
 .tableBorder {
 	border: 1px solid var(--ui-border);
+}
+
+.tableBorder tr td:first-child {
+	padding-left: 24px;
 }
