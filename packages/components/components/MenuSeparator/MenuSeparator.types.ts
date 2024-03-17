@@ -1,4 +1,4 @@
-import type { HeliosAttributeMeta } from '../..'
+import type { HeliosAttributeMeta } from "../.."
 
 export interface MenuSeparatorProps {
 	category?: string

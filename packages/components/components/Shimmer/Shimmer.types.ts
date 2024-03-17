@@ -1,4 +1,4 @@
-import type { HeliosAttributeMeta } from '../..'
+import type { HeliosAttributeMeta } from "../.."
 
 export interface ShimmerProps {
 	height: number
@@ -10,21 +10,21 @@ export interface ShimmerProps {
 
 export const meta: HeliosAttributeMeta<ShimmerProps> = {
 	height: {
-		type: 'number'
+		type: "number",
 	},
 	isRounded: {
 		type: "boolean",
-		isOptional: true
+		isOptional: true,
 	},
 	paddingTop: {
-		type: 'number',
-		isOptional: true
+		type: "number",
+		isOptional: true,
 	},
 	paddingBottom: {
-		type: 'number',
-		isOptional: true
+		type: "number",
+		isOptional: true,
 	},
 	width: {
-		type: 'number',
+		type: "number",
 	},
 }

@@ -1,17 +1,17 @@
 import type { ButtonProps, HeliosAttributeMeta } from "../.."
 
 export interface ThemeSwitcherLoadingProps {
-	isIconOnly?: ButtonProps['isIconOnly']
-	size?: ButtonProps['size']
+	isIconOnly?: ButtonProps["isIconOnly"]
+	size?: ButtonProps["size"]
 }
 
 export const meta: HeliosAttributeMeta<ThemeSwitcherLoadingProps> = {
 	isIconOnly: {
-		type: 'boolean',
-		isOptional: true
+		type: "boolean",
+		isOptional: true,
 	},
 	size: {
-		type: 'HeliosSizeType',
-		isOptional: true
-	}
+		type: "HeliosSizeType",
+		isOptional: true,
+	},
 }

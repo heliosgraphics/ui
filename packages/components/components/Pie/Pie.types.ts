@@ -13,12 +13,12 @@ export interface PieProps {
 
 export const meta: HeliosAttributeMeta<PieProps> = {
 	color: {
-		type: "HeliosColors"
+		type: "HeliosColors",
 	},
 	data: {
-		type: "Array<PieItem>"
+		type: "Array<PieItem>",
 	},
 	size: {
-		type: "number"
+		type: "number",
 	},
 }

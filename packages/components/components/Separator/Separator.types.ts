@@ -28,5 +28,5 @@ export const meta: HeliosAttributeMeta<SeparatorProps> = {
 	isVertical: {
 		type: "boolean",
 		isOptional: true,
-	}
+	},
 }

@@ -8,6 +8,6 @@ export interface SliderProps {
 export const meta: HeliosAttributeMeta<SliderProps> = {
 	items: {
 		type: "Array<ReactNode>",
-		isOptional: true
-	}
+		isOptional: true,
+	},
 }

@@ -15,25 +15,25 @@ export interface RadioProps {
 export const meta: HeliosAttributeMeta<RadioProps> = {
 	id: {
 		type: "string",
-		isOptional: true
+		isOptional: true,
 	},
 	intent: {
 		type: "HeliosIntentionType",
 	},
 	isDisabled: {
 		type: "boolean",
-		isOptional: true
+		isOptional: true,
 	},
 	isSmall: {
 		type: "boolean",
-		isOptional: true
+		isOptional: true,
 	},
 	label: {
 		type: "string",
 	},
 	onChange: {
 		type: "(event?: ChangeEvent) => Promise<void> | void",
-		isOptional: true
+		isOptional: true,
 	},
 	state: {
 		type: "string",

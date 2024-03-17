@@ -1,9 +1,9 @@
 import type { HeliosChildrenType, HeliosAttributeMeta } from "../.."
 
 export interface OverlayProps {
-	children: HeliosChildrenType,
+	children: HeliosChildrenType
 	isVisible: boolean
-	onClose: () => void,
+	onClose: () => void
 }
 
 export const meta: HeliosAttributeMeta<OverlayProps> = {
@@ -14,6 +14,6 @@ export const meta: HeliosAttributeMeta<OverlayProps> = {
 		type: "boolean",
 	},
 	onClose: {
-		type: "() => void"
+		type: "() => void",
 	},
 }

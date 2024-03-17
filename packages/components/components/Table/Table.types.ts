@@ -7,10 +7,10 @@ export interface TableProps {
 
 export const meta: HeliosAttributeMeta<TableProps> = {
 	children: {
-		type: "HeliosChildrenType"
+		type: "HeliosChildrenType",
 	},
 	hasBorder: {
 		type: "boolean",
-		isOptional: true
-	}
+		isOptional: true,
+	},
 }

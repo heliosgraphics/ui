@@ -20,15 +20,15 @@ export interface SelectProps {
 export const meta: HeliosAttributeMeta<SelectProps> = {
 	id: {
 		type: "string",
-		isOptional: true
+		isOptional: true,
 	},
 	isDisabled: {
 		type: "boolean",
-		isOptional: true
+		isOptional: true,
 	},
 	isLabelHidden: {
 		type: "boolean",
-		isOptional: true
+		isOptional: true,
 	},
 	items: {
 		type: "string",
@@ -37,10 +37,10 @@ export const meta: HeliosAttributeMeta<SelectProps> = {
 		type: "string",
 	},
 	onChange: {
-		type: "ChangeEventHandler<HTMLSelectElement>"
+		type: "ChangeEventHandler<HTMLSelectElement>",
 	},
 	selectedValue: {
 		type: "string",
-		isOptional: true
+		isOptional: true,
 	},
 }

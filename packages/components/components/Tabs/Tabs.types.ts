@@ -17,5 +17,5 @@ export const meta: HeliosAttributeMeta<TabsProps> = {
 	},
 	sections: {
 		type: "Array<ReactNode>",
-	}
+	},
 }
