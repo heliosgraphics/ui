@@ -1,7 +1,7 @@
 .button {
 	background-color: var(--button-bg);
 	color: var(--button-text);
-	transition: all 80ms ease-in-out;
+	transition: all var(--animation-fastest) var(--ease-in-out);
 
 	-webkit-tap-highlight-color: transparent;
 }

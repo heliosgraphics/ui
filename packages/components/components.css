@@ -125,6 +125,8 @@
 	--animation-slow: 160ms;
 	--animation-slowest: 192ms;
 
+	--ease-in-out: var(--easeInOut);
+
 	font-family: var(--font-family-sans);
 	/* "cv11" 1, single story a */
 	font-feature-settings:
@@ -309,7 +311,7 @@ mark,
 	border-left: 1px solid var(--ui-border);
 	border-right: 1px solid var(--ui-border);
 	box-shadow: 1px 0 0 1px var(--ui-border);
-	transition: all 80ms ease-in-out;
+	transition: all var(--animation-fastest) var(--ease-in-out);
 }
 
 .helios-scrollbar::-webkit-scrollbar-track {

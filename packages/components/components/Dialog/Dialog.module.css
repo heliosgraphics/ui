@@ -14,14 +14,14 @@
 }
 
 .dialog:not(.dialogCentered) {
-	animation: dialogFadeIn 160ms ease-in-out;
+	animation: dialogFadeIn var(--animation-slow) ease-in-out;
 }
 
 .dialogCentered {
 	top: 50%;
 	left: 50%;
 
-	animation: dialogCenterFadeIn 160ms ease-in-out;
+	animation: dialogCenterFadeIn var(--animation-slow) ease-in-out;
 	transform: translateX(-50%) translateY(-50%);
 }
 
@@ -45,7 +45,7 @@
 .dialog::backdrop {
 	--ui-bg-backdrop: rgba(80, 80, 80, 0.75);
 
-	animation: backdropFadeIn 80ms ease-in-out;
+	animation: backdropFadeIn var(--animation-fast) ease-in-out;
 	background-color: var(--ui-bg-backdrop);
 	backdrop-filter: blur(2px);
 }

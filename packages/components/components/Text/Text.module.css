@@ -1,7 +1,7 @@
 .text {
 	color: currentcolor;
 
-	transition: all 80ms ease-in-out;
+	transition: all var(--animation-fastest) var(--ease-in-out);
 }
 
 .textPrimary {

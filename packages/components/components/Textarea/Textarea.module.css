@@ -16,7 +16,7 @@
 	border-radius: 4px;
 	resize: none;
 	outline: none;
-	transition: all 120ms ease-in-out;
+	transition: all var(--animation-normal) var(--ease-in-out);
 
 	font-family: var(--font-family-mono);
 	font-size: var(--font-size-small);

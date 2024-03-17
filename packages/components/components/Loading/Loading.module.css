@@ -1,7 +1,7 @@
 .loading {
 	z-index: 1;
 
-	animation: showIconLoading 100ms ease-in-out;
+	animation: showIconLoading var(--animation-fast) ease-in-out;
 }
 
 .loading128 circle {

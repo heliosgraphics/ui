@@ -116,7 +116,7 @@
 	background-color: var(--ui-bg);
 	border-radius: 100%;
 	opacity: 0;
-	transition: all 100ms ease-in-out;
+	transition: all var(--animation-fast) var(--ease-in-out);
 	content: " ";
 
 	pointer-events: none;

@@ -3,7 +3,7 @@
 
 	overflow: hidden;
 
-	transition: all 120ms ease-in-out;
+	transition: all var(--animation-slow) var(--ease-in-out);
 }
 
 .dot svg {

@@ -26,7 +26,7 @@
 
 	background-color: var(--gray-300);
 	border-radius: 4px;
-	transition: all 120ms ease-in-out;
+	transition: all var(--animation-normal) var(--ease-in-out);
 }
 
 .slider::-webkit-scrollbar-track {

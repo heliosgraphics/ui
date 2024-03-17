@@ -26,7 +26,7 @@
 	border: 1px solid var(--ui-border);
 	border-radius: var(--radius-normal);
 	outline: none;
-	transition: all 96ms ease-in-out;
+	transition: all var(--animation-fast) var(--ease-in-out);
 
 	font-family: var(--font-family-mono);
 	font-size: var(--font-size-small);

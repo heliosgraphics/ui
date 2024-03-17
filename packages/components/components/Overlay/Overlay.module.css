@@ -13,7 +13,7 @@
 .overlay__content {
 	opacity: 0;
 
-	animation: animOverlayContent 80ms ease-in-out forwards 120ms;
+	animation: animOverlayContent var(--animation-fast) ease-in-out forwards 120ms;
 	transform: translateY(-24px);
 
 	pointer-events: none;
@@ -32,7 +32,7 @@
 	height: 100%;
 	width: 100%;
 
-	animation: animOverlayBackground 120ms ease-in-out forwards;
+	animation: animOverlayBackground var(--animation-normal) ease-in-out forwards;
 	background-color: rgba(0, 0, 0, 0.85);
 }
 
