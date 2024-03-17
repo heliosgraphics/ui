@@ -11,7 +11,7 @@ export interface TextareaProps {
 	label: string
 	maxLength?: number
 	name?: string
-	onChange: (_event?: ChangeEvent<HTMLTextAreaElement>) => Promise<void> | void
+	onChange: (_event?: ChangeEvent<HTMLTextAreaElement>) => unknown
 	placeholder?: string
 	rows?: number
 	value?: string
@@ -27,7 +27,7 @@ export const meta: HeliosAttributeMeta<TextareaProps> = {
 	label: { type: "string" },
 	maxLength: { type: "number", isOptional: true },
 	name: { type: "string", isOptional: true },
-	onChange: { type: "(_event?: ChangeEvent<HTMLTextAreaElement>) => Promise<void> | void" },
+	onChange: { type: "(_event?: ChangeEvent<HTMLTextAreaElement>) => unknown" },
 	placeholder: { type: "string", isOptional: true },
 	rows: { type: "number", isOptional: true },
 	value: { type: "string", isOptional: true },
