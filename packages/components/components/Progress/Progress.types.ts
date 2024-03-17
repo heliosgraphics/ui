@@ -8,10 +8,10 @@ export interface ProgressProps {
 export const meta: HeliosAttributeMeta<ProgressProps> = {
 	max: {
 		type: "number",
-		default: 100
+		default: 100,
 	},
 	value: {
 		type: "number",
-		default: 0
+		default: 0,
 	},
 }

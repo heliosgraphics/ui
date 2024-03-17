@@ -12,7 +12,7 @@ export const meta: HeliosAttributeMeta<DetailsProps> = {
 	},
 	isOpen: {
 		type: "boolean",
-		isOptional: true
+		isOptional: true,
 	},
 	title: {
 		type: "string",

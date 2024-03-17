@@ -9,7 +9,7 @@ export interface DotProps {
 export const meta: HeliosAttributeMeta<DotProps> = {
 	color: {
 		type: "HeliosColors",
-		default: "blue"
+		default: "blue",
 	},
 	colorAccent: {
 		type: "HeliosColors",
@@ -17,6 +17,6 @@ export const meta: HeliosAttributeMeta<DotProps> = {
 	},
 	size: {
 		type: "number",
-		default: 8
+		default: 8,
 	},
 }

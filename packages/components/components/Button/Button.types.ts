@@ -62,7 +62,7 @@ export const meta: HeliosAttributeMeta<ButtonProps> = {
 	size: {
 		type: '"normal" | "small" | "tiny"',
 		isOptional: true,
-		default: "normal"
+		default: "normal",
 	},
 	tabIndex: {
 		type: "number",
@@ -71,7 +71,7 @@ export const meta: HeliosAttributeMeta<ButtonProps> = {
 	type: {
 		type: '"button" | "submit" | "file',
 		isOptional: true,
-		default: "button"
+		default: "button",
 	},
 	value: {
 		type: "string",

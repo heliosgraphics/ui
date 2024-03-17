@@ -21,7 +21,7 @@ export const meta: HeliosAttributeMeta<MenuItemProps> = {
 	labelColor: {
 		type: "HeliosColors",
 		isOptional: true,
-		default: "aqua"
+		default: "aqua",
 	},
 	labelHidden: {
 		type: "boolean",

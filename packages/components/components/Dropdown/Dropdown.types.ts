@@ -27,6 +27,6 @@ export const meta: HeliosAttributeMeta<DropdownProps> = {
 	position: {
 		type: '"left" | "right"',
 		isOptional: true,
-		default: "right"
+		default: "right",
 	},
 }
