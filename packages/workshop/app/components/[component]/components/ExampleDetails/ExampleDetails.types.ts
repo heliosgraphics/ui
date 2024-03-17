@@ -1,1 +1,1 @@
-export interface ExampleDetailsProps { }
+export interface ExampleDetailsProps {}

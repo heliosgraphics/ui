@@ -1,6 +1,15 @@
+import type { HeliosAttributeMeta } from '../..'
+
 export interface TimestampProps {
-	fromNow?: boolean
+	date?: string
 	format?: string
-	date?: string | null
+	fromNow?: boolean
 	text?: string
+}
+
+export const meta: HeliosAttributeMeta<TimestampProps> = {
+	date: { type: "string", isOptional: true },
+	format: { type: "string", isOptional: true },
+	fromNow: { type: "boolean", isOptional: true },
+	text: { type: "string", isOptional: true },
 }

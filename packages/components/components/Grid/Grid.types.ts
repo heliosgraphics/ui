@@ -15,6 +15,6 @@ export const meta: HeliosAttributeMeta<GridProps> = {
 	},
 	isResponsive: {
 		type: "boolean",
-		isOptional: true
+		isOptional: true,
 	},
 }

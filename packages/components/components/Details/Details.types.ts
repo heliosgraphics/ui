@@ -1,4 +1,4 @@
-import type { HeliosAttributeMeta, HeliosChildrenType } from '../..'
+import type { HeliosAttributeMeta, HeliosChildrenType } from "../.."
 
 export interface DetailsProps {
 	children: HeliosChildrenType

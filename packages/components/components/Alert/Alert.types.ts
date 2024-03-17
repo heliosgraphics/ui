@@ -8,7 +8,7 @@ export interface AlertProps {
 	title?: string
 }
 
-export const meta: HeliosAttributeMeta<AlertProps> = {
+export const props: HeliosAttributeMeta<AlertProps> = {
 	children: {
 		type: "HeliosChildrenType",
 	},

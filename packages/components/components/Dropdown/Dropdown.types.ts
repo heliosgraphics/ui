@@ -18,14 +18,14 @@ export const meta: HeliosAttributeMeta<DropdownProps> = {
 	},
 	isHidden: {
 		type: "boolean",
-		isOptional: true
+		isOptional: true,
 	},
 	isDisabled: {
 		type: "boolean",
-		isOptional: true
+		isOptional: true,
 	},
 	position: {
 		type: '"left" | "right"',
-		isOptional: true
+		isOptional: true,
 	},
 }

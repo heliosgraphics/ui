@@ -1,5 +1,9 @@
-import type { ReactNode } from "react"
+import type { HeliosAttributeMeta, HeliosChildrenType } from "../.."
 
 export interface MainProps {
-	children: ReactNode
+	children: HeliosChildrenType
+}
+
+export const meta: HeliosAttributeMeta<MainProps> = {
+	children: { type: "HeliosChildrenType" },
 }

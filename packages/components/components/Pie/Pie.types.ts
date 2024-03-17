@@ -1,4 +1,4 @@
-import type { HeliosColors } from "../.."
+import type { HeliosColors, HeliosAttributeMeta } from "../.."
 
 export interface PieItem {
 	name?: string
@@ -7,6 +7,18 @@ export interface PieItem {
 
 export interface PieProps {
 	color: HeliosColors
-	size: number
 	data: Array<PieItem>
+	size: number
+}
+
+export const meta: HeliosAttributeMeta<PieProps> = {
+	color: {
+		type: "HeliosColors"
+	},
+	data: {
+		type: "Array<PieItem>"
+	},
+	size: {
+		type: "number"
+	},
 }

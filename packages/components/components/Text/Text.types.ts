@@ -22,49 +22,49 @@ export const meta: HeliosAttributeMeta<TextBaseProps> = {
 	_extends: ["HTMLAttributes<HTMLDivElement | HTMLParagraphElement>"],
 	emphasis: {
 		type: "HeliosEmphasisType",
-		isOptional: true
+		isOptional: true,
 	},
 	fontFamily: {
 		type: '"sans" | "serif" | "mono"',
-		isOptional: true
+		isOptional: true,
 	},
 	fontStyle: {
 		type: '"italic" | "normal" | "oblique"',
-		isOptional: true
+		isOptional: true,
 	},
 	fontWeight: {
 		type: '"thin" | "extra-light" | "light" | "normal" | "medium" | "semibold" | "bold" | "extra-bold" | "black"',
-		isOptional: true
+		isOptional: true,
 	},
 	isEllipsis: {
 		type: "boolean",
-		isOptional: true
+		isOptional: true,
 	},
 	isNonSelectable: {
 		type: "boolean",
-		isOptional: true
+		isOptional: true,
 	},
 	lineClamp: {
 		type: "1 | 2 | 3",
-		isOptional: true
+		isOptional: true,
 	},
 	textAlign: {
 		type: '"left" | "right" | "center" | "justify"',
-		isOptional: true
+		isOptional: true,
 	},
 	textDecoration: {
 		type: '"delete" | "overline" | "underline" | "capitalize" | "lowercase" | "uppercase"',
-		isOptional: true
+		isOptional: true,
 	},
 	type: {
-		type: '"tiny" | "small" | "paragraph" | "div"'
+		type: '"tiny" | "small" | "paragraph" | "div"',
 	},
 	whiteSpace: {
 		type: '"pre" | "pre-line" | "pre-wrap" | "nowrap"',
-		isOptional: true
+		isOptional: true,
 	},
 	wordWrap: {
 		type: '"break-word"',
-		isOptional: true
+		isOptional: true,
 	},
 }

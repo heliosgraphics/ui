@@ -11,7 +11,7 @@ export interface BreadcrumbProps {
 	items: Array<BreadCrumbItem>
 }
 
-export const meta: HeliosAttributeMeta<BreadcrumbProps> = {
+export const props: HeliosAttributeMeta<BreadcrumbProps> = {
 	items: {
 		type: "Array<BreadCrumbItem>",
 	},

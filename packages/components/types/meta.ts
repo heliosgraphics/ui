@@ -1,4 +1,5 @@
 interface HeliosAttributeItem {
+	default?: string
 	description?: string
 	isOptional?: boolean
 	type: string

@@ -8,10 +8,7 @@ interface HeadingBaseProps {
 export type HeadingProps = HeadingBaseProps & Omit<TextBaseProps, "type"> & HTMLAttributes<HTMLHeadingElement>
 
 export const meta: HeliosAttributeMeta<HeadingBaseProps> = {
-	_extends: [
-		'Omit<BaseTextProps, "type">',
-		'HTMLAttributes<HTMLHeadingElement>'
-	],
+	_extends: ['Omit<BaseTextProps, "type">', "HTMLAttributes<HTMLHeadingElement>"],
 	level: {
 		type: "0 | 1 | 2 | 3 | 4 | 5 | 6",
 	},
