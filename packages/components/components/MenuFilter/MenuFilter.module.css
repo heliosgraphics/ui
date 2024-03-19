@@ -1,10 +1,10 @@
 .menuFilter {
 	position: sticky;
 	top: 0;
+	z-index: 1;
 
 	/* NOTE @03b8 leaks intentionally */
 	margin-right: 1px;
-	margin-bottom: 8px;
 	padding: 16px;
 
 	border-bottom: 1px solid var(--ui-border-light);

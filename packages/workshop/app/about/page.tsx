@@ -7,7 +7,14 @@ const PAGE = `TBD. Read the code on [GitHub](https://github.com/heliosgraphics/u
 
 ##### Architecture
 ###### Dependencies
-###### Concepts
+
+|--|--|
+|--|--|
+|--|--|
+
+##### Concepts
+###### Responsive
+###### Markdown
 `
 
 export default function Home() {

@@ -7,7 +7,7 @@ import {
 	Menu,
 	MenuItem,
 	MenuCategory,
-	MenuSeparator,
+	Separator,
 	MenuFilter,
 	COMPONENTS,
 	type HeliosComponentStatusType,
@@ -62,51 +62,54 @@ const WorkshopMenu: FC = () => {
 			<MenuFilter value={filter} onChange={onValueChange} onClear={filter ? onClear : undefined} />
 			{!filter && (
 				<>
-					<Link href="/">
-						<MenuItem title="Index" isActive={pathname === "/"} />
-					</Link>
-					<Link href="/get-started">
-						<MenuItem title="Get Started" isActive={pathname === "/get-started"} />
-					</Link>
-					{/* <Link href="/products">
+					<MenuCategory>
+						<Link href="/">
+							<MenuItem title="Index" isActive={pathname === "/"} />
+						</Link>
+						<Link href="/get-started">
+							<MenuItem title="Get Started" isActive={pathname === "/get-started"} />
+						</Link>
+						{/* <Link href="/products">
 						<MenuItem title="Products" isActive={pathname === "/products"} />
 					</Link> */}
-					<Link href="/about">
-						<MenuItem title="About" isActive={pathname === "/about"} />
-					</Link>
-					<MenuSeparator />
-					<MenuCategory category="Pages" />
-					<Link href="/colors">
-						<MenuItem title="Colors" isActive={pathname === "/colors"} />
-					</Link>
-					<Link href="/typography">
-						<MenuItem title="Typography" isActive={pathname === "/typography"} />
-					</Link>
-					<Link href="/icons">
-						<MenuItem title="Icons" isActive={pathname === "/icons"} />
-					</Link>
+						<Link href="/about">
+							<MenuItem title="About" isActive={pathname === "/about"} />
+						</Link>
+					</MenuCategory>
+					<MenuCategory category="Pages">
+						<Link href="/colors">
+							<MenuItem title="Colors" isActive={pathname === "/colors"} />
+						</Link>
+						<Link href="/typography">
+							<MenuItem title="Typography" isActive={pathname === "/typography"} />
+						</Link>
+						<Link href="/icons">
+							<MenuItem title="Icons" isActive={pathname === "/icons"} />
+						</Link>
+					</MenuCategory>
 				</>
 			)}
-			<MenuCategory category="Components" />
-			{filteredComponents?.map((component, key) => {
-				const { status, type } = COMPONENTS[component]
-				const pillType = TYPE_NAMES[type]
-				const statusType = STATUS_COLORS[status]
-				const statusIcon = STATUS_ICONS[status]
+			<MenuCategory category="Components" isFolder={true}>
+				{filteredComponents?.map((component, key) => {
+					const { status, type } = COMPONENTS[component]
+					const pillType = TYPE_NAMES[type]
+					const statusType = STATUS_COLORS[status]
+					const statusIcon = STATUS_ICONS[status]
 
-				return (
-					<Link href={`/components/${component}`} key={key}>
-						<MenuItem
-							title={component}
-							isActive={pathname === `/components/${component}`}
-							label={pillType}
-							labelColor={status === "stable" ? "green" : status === "experimental" ? "red" : "gray"}
-							labelHidden={false}
-							labelIcon={statusIcon}
-						/>
-					</Link>
-				)
-			})}
+					return (
+						<Link href={`/components/${component}`} key={key}>
+							<MenuItem
+								title={component}
+								isActive={pathname === `/components/${component}`}
+								label={pillType}
+								labelColor={status === "stable" ? "green" : status === "experimental" ? "red" : "gray"}
+								labelHidden={false}
+								labelIcon={statusIcon}
+							/>
+						</Link>
+					)
+				})}
+			</MenuCategory>
 		</Menu>
 	)
 }

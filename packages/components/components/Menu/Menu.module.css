@@ -5,10 +5,7 @@
 	z-index: var(--z-index-6);
 
 	height: 100dvh;
-	gap: 2px;
-	display: flex;
-	flex-direction: column;
-	overflow: auto;
+	overflow: scroll;
 	padding-bottom: 32px;
 	width: 260px;
 

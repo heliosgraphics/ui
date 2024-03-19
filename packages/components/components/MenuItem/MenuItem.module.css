@@ -1,5 +1,5 @@
 .menuItem {
-	margin: 0 8px;
+	margin-inline: 8px;
 	padding: 8px 16px;
 
 	border-radius: var(--radius-small);
@@ -8,22 +8,14 @@
 	transition: all var(--animation-fastest) var(--ease-in-out);
 }
 
-.menuItem small[data-component="Text.Small"] {
+.menuItem small {
 	max-width: 36ch;
-	overflow: hidden;
-	white-space: nowrap;
-
-	text-overflow: ellipsis;
 }
 
-.menuItem:hover {
+.menuItem:not(.menuItemActive):hover {
 	background-color: var(--ui-bg-action-hover);
 }
 
 .menuItemActive {
 	background-color: var(--ui-bg-action-active);
-}
-
-.menuItemActive:hover {
-	background-color: var(--ui-bg-action-hover);
 }

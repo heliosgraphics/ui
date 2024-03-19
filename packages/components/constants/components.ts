@@ -28,7 +28,6 @@ export const COMPONENTS: Record<string, HeliosComponentItem> = {
 	MenuCategory: { status: "experimental", type: "layout" },
 	MenuFilter: { status: "experimental", type: "layout" },
 	MenuItem: { status: "experimental", type: "layout" },
-	MenuSeparator: { status: "experimental", type: "layout" },
 	Navigation: { status: "experimental", type: "layout" },
 	NavigationPanelButton: { status: "experimental", type: "layout" },
 	Overlay: { status: "stable", type: "core" },

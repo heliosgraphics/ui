@@ -1,7 +1,20 @@
-.menuSeparatorCategory {
+.menuCategory {
+	padding-block: 8px;
+	/* box-shadow: inset 0 0 0 1px red; */
+}
+
+.menuCategoryTitle {
+	height: 40px;
 	padding-inline: 8px;
 }
 
-.menuSeparatorCategory {
-	padding-top: 8px;
+.menuCategoryFolder .menuCategoryTitle{
+	border-bottom: 1px dashed var(--ui-border);
+}
+
+.menuCategoryFolder .menuCategoryItems {
+	padding-block: 8px;
+	margin-left: 12px;
+
+	border-left: 2px solid var(--ui-border-light);
 }
