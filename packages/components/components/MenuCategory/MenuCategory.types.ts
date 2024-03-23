@@ -9,13 +9,13 @@ export interface MenuCategoryProps {
 export const meta: HeliosAttributeMeta<MenuCategoryProps> = {
 	category: {
 		type: "string",
-		isOptional: true
+		isOptional: true,
 	},
 	children: {
 		type: "HeliosChildrenType",
 	},
 	isFolder: {
 		type: "boolean",
-		isOptional: true
+		isOptional: true,
 	},
 }

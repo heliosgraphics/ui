@@ -1,14 +1,13 @@
 "use client"
 
-import styles from "./Cover.module.css"
-import { getClasses } from "@heliosgraphics/utils"
 import { Flex } from "@heliosgraphics/ui"
-import { useContext, type FC } from "react"
+import { getClasses } from "@heliosgraphics/utils"
 import { ResponsiveRadiusType } from "@heliosgraphics/ui/components/Flex/Flex.types"
-import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
+import { useContext, useCallback, useRef, useEffect, type FC } from "react"
 import { usePathname } from "next/navigation"
+import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
+import styles from "./Cover.module.css"
 import type { CoverProps } from "./Cover.types"
-import React, { useRef, useEffect } from "react"
 
 const Cover: FC<CoverProps> = () => {
 	const canvasRef = useRef(null)
@@ -22,44 +21,61 @@ const Cover: FC<CoverProps> = () => {
 		[styles.coverAlt]: isComponentPage,
 	})
 
-	useEffect(() => {
-		const canvas = canvasRef?.current
-		const context = canvas?.getContext("2d")
+	const drawGlitchSquare = (ctx, x, y, size, opacity) => {
+		const bgColor = getComputedStyle(document.documentElement).getPropertyValue("--ui-bg-disabled").trim()
 
-		const drawGlitchSquare = (ctx, x, y, size) => {
-			const bgColor = getComputedStyle(document.documentElement).getPropertyValue("--ui-bg").trim()
+		ctx.globalAlpha = opacity
+		ctx.fillStyle = bgColor
+		ctx.fillRect(x, y, size, size)
+		ctx.globalAlpha = 1.0
+	}
 
-			ctx.fillStyle = bgColor
-			ctx.fillRect(x, y, size, size)
-		}
+	const generateGlitchArt = useCallback((ctx, width, height) => {
+		ctx.clearRect(0, 0, width, height)
+		const squareSize = 48
+		const squares = []
 
-		if (!canvas) return
-
-		const generateGlitchArt = (ctx, width, height) => {
-			ctx.clearRect(0, 0, width, height)
-			const squareSize = 48
-			const spacing = 0
-
-			for (let y = 0; y < height; y += squareSize + spacing) {
-				for (let x = 0; x < width; x += squareSize + spacing) {
-					if (Math.random() > 0.9) {
-						drawGlitchSquare(ctx, x, y, squareSize)
-					}
-				}
+		for (let y = 0; y < height; y += squareSize) {
+			for (let x = 0; x < width; x += squareSize) {
+				if (Math.random() > 0.9) squares.push({ x, y, opacity: 0 })
 			}
 		}
+
+		const animate = () => {
+			ctx.clearRect(0, 0, width, height)
+			squares.forEach((square) => {
+				if (square.opacity < 0.75) {
+					square.opacity += 0.05
+				}
+
+				drawGlitchSquare(ctx, square.x, square.y, squareSize, square.opacity)
+			})
+
+			requestAnimationFrame(animate)
+		}
+
+		animate()
+	}, [])
+
+	const onGenerate = useCallback(() => {
+		const canvas = canvasRef.current
+		const context = canvas?.getContext("2d")
+
+		if (!canvas) return
 
 		canvas.width = globalThis.innerWidth
 		canvas.height = globalThis.innerHeight
 
 		return generateGlitchArt(context, canvas.width, canvas.height)
-	}, [canvasRef, hasCover])
+	}, [generateGlitchArt])
+
+	useEffect(() => onGenerate(), [onGenerate])
 
 	if (!hasCover) return null
 
 	return (
 		<Flex className={coverClasses} withRadius={pageRadius}>
-			<canvas ref={canvasRef} style={{ display: "block" }} />
+			<canvas ref={canvasRef} />
 		</Flex>
 	)
 }
