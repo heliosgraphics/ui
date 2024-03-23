@@ -10,7 +10,7 @@ import styles from "./Cover.module.css"
 import type { CoverProps } from "./Cover.types"
 
 const Cover: FC<CoverProps> = () => {
-	const canvasRef = useRef(null)
+	const canvasRef = useRef<HTMLCanvasElement | null>(null)
 	const pathname = usePathname()
 	const { hasCover, hasPadding } = useContext(WorkshopContext)
 
@@ -30,10 +30,10 @@ const Cover: FC<CoverProps> = () => {
 		ctx.globalAlpha = 1.0
 	}
 
-	const generateGlitchArt = useCallback((ctx, width, height) => {
+	const generateGlitchArt = useCallback((ctx, width: number = 0, height: number = 0) => {
 		ctx.clearRect(0, 0, width, height)
 		const squareSize = 48
-		const squares = []
+		const squares: Array<any> = []
 
 		for (let y = 0; y < height; y += squareSize) {
 			for (let x = 0; x < width; x += squareSize) {
@@ -58,8 +58,8 @@ const Cover: FC<CoverProps> = () => {
 	}, [])
 
 	const onGenerate = useCallback(() => {
-		const canvas = canvasRef.current
-		const context = canvas?.getContext("2d")
+		const canvas: HTMLCanvasElement | null = canvasRef?.current
+		const context = canvas?.getContext?.("2d")
 
 		if (!canvas) return
 
