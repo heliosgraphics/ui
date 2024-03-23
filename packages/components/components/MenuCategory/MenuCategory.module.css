@@ -1,6 +1,5 @@
-.menuCategory {
-	padding-block: 8px;
-	/* box-shadow: inset 0 0 0 1px red; */
+.menuCategoryPlain {
+	padding-top: 8px;
 }
 
 .menuCategoryTitle {
@@ -9,12 +8,12 @@
 }
 
 .menuCategoryFolder .menuCategoryTitle{
-	border-bottom: 1px dashed var(--ui-border);
+	border-bottom: 1px solid var(--ui-border-light);
 }
 
 .menuCategoryFolder .menuCategoryItems {
 	padding-block: 8px;
 	margin-left: 12px;
 
-	border-left: 2px solid var(--ui-border-light);
+	border-left: 1px solid var(--ui-border-light);
 }

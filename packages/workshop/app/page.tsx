@@ -9,7 +9,8 @@ export default function Home({}) {
 			<Flex isColumn={true} gap={4}>
 				<Flex isColumn={true}>
 					<Text type="small" fontFamily="mono" emphasis="secondary">
-						@heliosgraphics/ui<span className="non-selectable">@{uiPackage.version}</span>
+						@heliosgraphics/ui<span className="non-selectable">@{uiPackage.version}</span> &middot;{" "}
+						<span className="non-selectable">Pre-Release</span>
 					</Text>
 					<Heading level={0}>Helios UI</Heading>
 				</Flex>
@@ -29,7 +30,7 @@ export default function Home({}) {
 						<Button intent="advise" value="Start Building" icon="eye" />
 					</a>
 					<a href="https://github.com/heliosgraphics/ui" tabIndex={-1}>
-						<Button intent="silent" value="Give us a Star" icon="x-github" />
+						<Button intent="silent" value="Contribute" icon="x-github" />
 					</a>
 				</ButtonGroup>
 			</Flex>

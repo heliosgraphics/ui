@@ -12,6 +12,7 @@ const MenuCategory: FC<MenuCategoryProps> = ({ category, children, isFolder }) =
 
 	const menuCategoryClasses = getClasses(styles.menuCategory, {
 		[styles.menuCategoryFolder]: isFolder,
+		[styles.menuCategoryPlain]: !category,
 	})
 
 	const showHeader: boolean = Boolean(category || isFolder)
@@ -19,14 +20,14 @@ const MenuCategory: FC<MenuCategoryProps> = ({ category, children, isFolder }) =
 	return (
 		<Flex isColumn={true} isXCentered={true} data-component="MenuCategory" className={menuCategoryClasses}>
 			{showHeader && (
-				<Flex
-					isBetween={true}
-					isYCentered={true}
-					gap={4}
-					className={styles.menuCategoryTitle}
-					onClick={isFolder ? onToggle : undefined}
-				>
-					<Text type="tiny" emphasis="secondary" fontWeight="medium">
+				<Flex isBetween={true} isYCentered={true} gap={4} className={styles.menuCategoryTitle}>
+					<Text
+						type="tiny"
+						emphasis="secondary"
+						fontWeight="medium"
+						isNonSelectable={true}
+						onClick={isFolder ? onToggle : undefined}
+					>
 						{category}
 					</Text>
 					{isFolder && (
@@ -36,7 +37,8 @@ const MenuCategory: FC<MenuCategoryProps> = ({ category, children, isFolder }) =
 								value="Toggle Category"
 								size="tiny"
 								isIconOnly={true}
-								icon={isOpen ? "caret-up" : "caret-down"}
+								onClick={isFolder ? onToggle : undefined}
+								icon={isOpen ? "minus" : "plus"}
 							/>
 						</ButtonGroup>
 					)}
