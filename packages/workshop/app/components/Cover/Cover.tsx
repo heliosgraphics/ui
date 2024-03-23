@@ -69,7 +69,7 @@ const Cover: FC<CoverProps> = () => {
 		return generateGlitchArt(context, canvas.width, canvas.height)
 	}, [generateGlitchArt])
 
-	useEffect(() => onGenerate(), [onGenerate])
+	useEffect(() => onGenerate(), [hasCover, onGenerate])
 
 	if (!hasCover) return null
 
