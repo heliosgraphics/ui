@@ -1,5 +1,5 @@
 import type { SetStateAction, Dispatch } from "react"
-import type { HeliosColors, HeliosIconType, HeliosIntentionType } from "@heliosgraphics/ui"
+import type { HeliosColors, HeliosThemes, HeliosIconType, HeliosIntentionType } from "@heliosgraphics/ui"
 
 export interface WorkshopProviderProps {
 	color: HeliosColors
@@ -16,4 +16,5 @@ export interface WorkshopProviderProps {
 	setIntent: Dispatch<SetStateAction<HeliosIntentionType>>
 	setMenu: Dispatch<SetStateAction<boolean>>
 	setPadding: Dispatch<SetStateAction<boolean>>
+	theme: HeliosThemes
 }
