@@ -4,6 +4,7 @@ export interface MenuCategoryProps {
 	category?: string
 	children: HeliosChildrenType
 	isFolder?: boolean
+	isFolderClosed?: boolean
 }
 
 export const meta: HeliosAttributeMeta<MenuCategoryProps> = {
@@ -17,5 +18,10 @@ export const meta: HeliosAttributeMeta<MenuCategoryProps> = {
 	isFolder: {
 		type: "boolean",
 		isOptional: true,
+	},
+	isFolderClosed: {
+		type: "boolean",
+		isOptional: true,
+		default: "false"
 	},
 }

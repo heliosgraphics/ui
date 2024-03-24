@@ -16,4 +16,6 @@
 	margin-left: 12px;
 
 	border-left: 1px solid var(--ui-border-light);
+	border-bottom: 1px solid var(--ui-border-light);
+	border-bottom-left-radius: var(--radius-normal);
 }

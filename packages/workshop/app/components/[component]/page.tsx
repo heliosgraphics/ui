@@ -1,5 +1,6 @@
 import { lazy } from "react"
 import { Flex, type ResponsiveRadiusType } from "@heliosgraphics/ui"
+import WorkshopControls from "../WorkshopControls"
 import Page from "../Page"
 
 export default function Home({ params }) {

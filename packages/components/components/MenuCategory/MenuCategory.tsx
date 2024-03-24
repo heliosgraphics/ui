@@ -6,8 +6,8 @@ import { getClasses } from "@heliosgraphics/utils"
 import styles from "./MenuCategory.module.css"
 import type { MenuCategoryProps } from "./MenuCategory.types"
 
-const MenuCategory: FC<MenuCategoryProps> = ({ category, children, isFolder }) => {
-	const [isOpen, setOpen] = useState<boolean>(true)
+const MenuCategory: FC<MenuCategoryProps> = ({ category, children, isFolder, isFolderClosed }) => {
+	const [isOpen, setOpen] = useState<boolean>(!isFolderClosed)
 	const onToggle = () => setOpen(!isOpen)
 
 	const menuCategoryClasses = getClasses(styles.menuCategory, {
@@ -20,14 +20,14 @@ const MenuCategory: FC<MenuCategoryProps> = ({ category, children, isFolder }) =
 	return (
 		<Flex isColumn={true} isXCentered={true} data-component="MenuCategory" className={menuCategoryClasses}>
 			{showHeader && (
-				<Flex isBetween={true} isYCentered={true} gap={4} className={styles.menuCategoryTitle}>
-					<Text
-						type="tiny"
-						emphasis="secondary"
-						fontWeight="medium"
-						isNonSelectable={true}
-						onClick={isFolder ? onToggle : undefined}
-					>
+				<Flex
+					isBetween={true}
+					isYCentered={true}
+					gap={4}
+					className={styles.menuCategoryTitle}
+					onClick={isFolder ? onToggle : undefined}
+				>
+					<Text type="tiny" emphasis="secondary" fontWeight="medium" isNonSelectable={true}>
 						{category}
 					</Text>
 					{isFolder && (
@@ -37,7 +37,6 @@ const MenuCategory: FC<MenuCategoryProps> = ({ category, children, isFolder }) =
 								value="Toggle Category"
 								size="tiny"
 								isIconOnly={true}
-								onClick={isFolder ? onToggle : undefined}
 								icon={isOpen ? "minus" : "plus"}
 							/>
 						</ButtonGroup>

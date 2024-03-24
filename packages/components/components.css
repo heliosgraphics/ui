@@ -175,7 +175,7 @@
 	--ui-text-tertiary: hsl(var(--gray-hue), var(--gray-saturation), 69%);
 	--ui-text-white: hsl(var(--gray-hue), var(--gray-saturation), 100%);
 
-	--ui-border-light: hsl(var(--gray-hue), var(--gray-saturation), 94%);
+	--ui-border-light: hsl(var(--gray-hue), var(--gray-saturation), 92%);
 	--ui-border: hsl(var(--gray-hue), var(--gray-saturation), 85%);
 	--ui-border-active: hsl(var(--gray-hue), var(--gray-saturation), 80%);
 
@@ -228,7 +228,7 @@
 	--ui-text-tertiary: hsl(var(--gray-hue), var(--gray-saturation), 33%);
 	--ui-text-white: hsl(var(--gray-hue), var(--gray-saturation), 100%);
 
-	--ui-border-light: hsl(var(--gray-hue), var(--gray-saturation), 10%);
+	--ui-border-light: hsl(var(--gray-hue), var(--gray-saturation), 12%);
 	--ui-border: hsl(var(--gray-hue), var(--gray-saturation), 20%);
 	--ui-border-active: hsl(var(--gray-hue), var(--gray-saturation), 35%);
 
