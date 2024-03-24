@@ -1,1 +1,1 @@
-export interface WorkshopColorSelectorProps { }
+export interface WorkshopColorSelectorProps {}

@@ -49,8 +49,6 @@
 	margin-bottom: 16px;
 }
 
-
-
 .markdown hr:has(+ hr):not(:last-child) {
 	margin-bottom: 32px;
 }
@@ -129,13 +127,12 @@
 }
 
 .markdown ul:not(:first-child) ul {
-	margin-top: 0 ;
+	margin-top: 0;
 }
 
 .markdown ul:not(:first-child) ul li {
 	list-style-type: circle;
 }
-
 
 /* Element: Separator */
 .markdown hr {

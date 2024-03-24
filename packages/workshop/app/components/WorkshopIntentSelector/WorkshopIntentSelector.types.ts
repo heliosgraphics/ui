@@ -1,1 +1,1 @@
-export interface WorkshopIntentSelectorProps { }
+export interface WorkshopIntentSelectorProps {}

@@ -22,6 +22,6 @@ export const meta: HeliosAttributeMeta<MenuCategoryProps> = {
 	isFolderClosed: {
 		type: "boolean",
 		isOptional: true,
-		default: "false"
+		default: "false",
 	},
 }
