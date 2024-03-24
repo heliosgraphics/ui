@@ -1,6 +1,6 @@
 "use client"
 
-import { Button, ButtonGroup, type HeliosThemes } from "../.."
+import { Button, type HeliosThemes } from "../.."
 import { useState, useEffect } from "react"
 import type { FC } from "react"
 import type { ThemeSwitcherProps } from "./ThemeSwitcher.types"
@@ -18,17 +18,14 @@ const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ isIconOnly = false, size = "sma
 	}, [])
 
 	return (
-		<ButtonGroup>
-			<Button
-				value={isDark ? "Light Mode" : "Dark Mode"}
-				size={size}
-				isRounded={true}
-				icon={isDark ? "sun" : "moon"}
-				intent="silent"
-				onClick={toggleTheme}
-				isIconOnly={isIconOnly}
-			/>
-		</ButtonGroup>
+		<Button
+			value={isDark ? "Light Mode" : "Dark Mode"}
+			size={size}
+			icon={isDark ? "sun" : "moon"}
+			intent="silent"
+			onClick={toggleTheme}
+			isIconOnly={isIconOnly}
+		/>
 	)
 }
 

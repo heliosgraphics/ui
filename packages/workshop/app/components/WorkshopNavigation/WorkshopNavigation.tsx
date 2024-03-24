@@ -2,7 +2,15 @@
 
 import { useContext, type FC } from "react"
 import { WorkshopContext } from "../../contexts/WorkshopContext"
-import { Flex, NavigationPanelButton, ThemeSwitcherLoading, Text, Navigation } from "@heliosgraphics/ui"
+import {
+	Flex,
+	NavigationPanelButton,
+	ThemeSwitcherLoading,
+	Text,
+	Navigation,
+	ButtonGroup,
+	Button,
+} from "@heliosgraphics/ui"
 import Link from "next/link"
 import dynamic from "next/dynamic"
 
@@ -10,7 +18,7 @@ const ThemeSwitcher = dynamic(
 	() => import("@heliosgraphics/ui/components/ThemeSwitcher/ThemeSwitcher").then((mod) => mod.ThemeSwitcher),
 	{
 		ssr: false,
-		loading: () => <ThemeSwitcherLoading isIconOnly={false} size="small" />,
+		loading: () => <ThemeSwitcherLoading isIconOnly={true} size="small" />,
 	},
 )
 
@@ -33,7 +41,12 @@ const WorkshopNavigation: FC = () => {
 						</Flex>
 					</Flex>
 				</Flex>
-				<ThemeSwitcher />
+				<ButtonGroup>
+					<ThemeSwitcher />
+					<a href="https://github.com/heliosgraphics/ui">
+						<Button intent="silent" value="GitHub" icon="x-github" size="small" />
+					</a>
+				</ButtonGroup>
 			</Navigation>
 		)
 	)
