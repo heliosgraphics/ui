@@ -13,9 +13,9 @@ const Page: FC<PageProps> = ({ children, eyebrow, breadcrumb, disabledPadding, t
 	return (
 		<Flex
 			isColumn={true}
-			gap={16}
+			gap={disabledPadding ? 0 : 16}
 			padding={disabledPadding ? 0 : [8, 16, 24]}
-			paddingY={disabledPadding ? 16 : 0}
+			// paddingY={disabledPadding ? 16 : 0}
 			withBackground={true}
 			withRadius={pageRadius}
 			className="relative z-10"

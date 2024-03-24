@@ -8,7 +8,7 @@ const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 	if (!meta) return null
 
 	return (
-		<Table>
+		<Table hasBorder={false}>
 			<>
 				<thead>
 					<tr>

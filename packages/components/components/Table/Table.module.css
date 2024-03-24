@@ -1,17 +1,32 @@
 .table {
 	width: 100%;
 
+	border: 0;
 	border-collapse: collapse;
+}
+
+.table td {
+	padding: 8px;
 }
 
 .table thead tr td {
 	background-color: var(--ui-bg-action);
 }
 
-.table td {
-	padding: 8px;
+.table thead tr:first-of-type td {
+	border-top: 1px solid var(--ui-border);
+}
 
-	border: 1px solid var(--ui-border-light);
+.table tbody tr td {
+	border-top: 1px solid var(--ui-border-light);
+}
+
+.table tbody tr:last-of-type td {
+	border-bottom: 1px solid var(--ui-border);
+}
+
+.table td:not(:last-child) {
+	border-right: 1px solid var(--ui-border-light);
 }
 
 .tableBorder {
