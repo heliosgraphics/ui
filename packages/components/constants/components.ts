@@ -39,7 +39,7 @@ export const COMPONENTS: Record<string, HeliosComponentItem> = {
 	Separator: { status: "stable", type: "core" },
 	Setup: { status: "stable", type: "layout" },
 	Shimmer: { status: "nominal", type: "pattern" },
-	Slider: { status: "nominal", type: "pattern" },
+	Slider: { status: "experimental", type: "pattern" },
 	Spacer: { status: "stable", type: "core" },
 	Table: { status: "nominal", type: "content" },
 	Text: { status: "stable", type: "content" },

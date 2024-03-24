@@ -1,9 +1,7 @@
-"use client"
-
-import { type FC } from "react"
 import { Flex, Table, Pill, Text } from "@heliosgraphics/ui"
 import WorkshopIntentSelector from "../WorkshopIntentSelector"
 import WorkshopIconSelector from "../WorkshopIconSelector"
+import type { FC } from "react"
 import type { PropsTableProps } from "./PropsTable.types"
 
 const PropsTable: FC<PropsTableProps> = ({ meta }) => {

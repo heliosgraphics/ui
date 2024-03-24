@@ -1,17 +1,16 @@
 "use client"
 
-import { Alert, Flex, Slider } from "@heliosgraphics/ui"
-import type { FC } from "react"
+import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
 import type { ExampleSliderProps } from "./ExampleSlider.types"
+import type { FC } from "react"
+
+const CODE_SAMPLE = `<Slider />`
 
 const ExampleSlider: FC<ExampleSliderProps> = () => {
 	return (
-		<Flex isColumn={true}>
-			<Alert intent="silent" icon="info">
-				WIP
-			</Alert>
-			<Slider />
-		</Flex>
+		<>
+			<LiveComponent code={CODE_SAMPLE} />
+		</>
 	)
 }
 

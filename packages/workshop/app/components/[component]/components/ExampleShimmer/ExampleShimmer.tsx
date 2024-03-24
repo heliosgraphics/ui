@@ -1,15 +1,14 @@
-"use client"
-
-import { Flex, Shimmer } from "@heliosgraphics/ui"
 import type { FC } from "react"
 import type { ExampleShimmerProps } from "./ExampleShimmer.types"
+import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
+
+const CODE_SAMPLE = `<Shimmer height={20} width={120} />`
 
 const ExampleShimmer: FC<ExampleShimmerProps> = () => {
 	return (
-		<Flex isColumn={true} gap={8}>
-			<Shimmer height={20} width={120} />
-			<Shimmer height={20} width={120} />
-		</Flex>
+		<>
+			<LiveComponent code={CODE_SAMPLE} />
+		</>
 	)
 }
 

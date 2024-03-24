@@ -15,13 +15,12 @@ const Page: FC<PageProps> = ({ children, eyebrow, breadcrumb, disabledPadding, t
 			isColumn={true}
 			gap={disabledPadding ? 0 : 16}
 			padding={disabledPadding ? 0 : [8, 16, 24]}
-			// paddingY={disabledPadding ? 16 : 0}
 			withBackground={true}
 			withRadius={pageRadius}
 			className="relative z-10"
 		>
 			{title && (
-				<Flex isColumn={true}>
+				<Flex isColumn={true} padding={disabledPadding ? 16 : 0}>
 					{eyebrow && (
 						<Text type="tiny" fontFamily="mono" emphasis="secondary">
 							{eyebrow}

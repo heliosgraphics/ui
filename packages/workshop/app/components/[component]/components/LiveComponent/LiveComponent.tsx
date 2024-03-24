@@ -1,6 +1,6 @@
 "use client"
 
-import { Button, ButtonGroup, Flex } from "@heliosgraphics/ui"
+import { Button, ButtonGroup, Checkbox, Flex, Toggle } from "@heliosgraphics/ui"
 import { getClasses } from "@heliosgraphics/utils"
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
 import { useContext, useState, type FC } from "react"
@@ -50,7 +50,7 @@ const PRISM_THEME: PrismTheme = {
 }
 
 const LiveComponent: FC<LiveComponentProps> = ({ code, scope }) => {
-	const { intent, icon } = useContext(WorkshopContext)
+	const { intent, color, icon } = useContext(WorkshopContext)
 	const [hasBackground, setBackground] = useState<boolean>(true)
 
 	const liveComponentClasses: string = getClasses(styles.liveComponent, {
@@ -60,16 +60,21 @@ const LiveComponent: FC<LiveComponentProps> = ({ code, scope }) => {
 	const liveEditorClasses: string = getClasses(styles.liveEditor, "mono tiny", {})
 
 	const onBackgroundToggle = () => setBackground(!hasBackground)
+	const mockFn = () => console.log("mock")
 
 	return (
 		<Flex isColumn={true}>
-			<LiveProvider code={code} scope={{ ...components, ...scope, intent, icon }} theme={PRISM_THEME}>
+			<LiveProvider code={code} scope={{ ...components, ...scope, intent, color, icon, mockFn }} theme={PRISM_THEME}>
 				<Flex isColumn={true} gap={12} padding={16} className={liveComponentClasses}>
 					<LiveError />
 					<LivePreview />
-					{/* <ButtonGroup align="right">
-						<Button value="Background" icon="square" intent="silent" size="tiny" onClick={onBackgroundToggle} />
-					</ButtonGroup> */}
+					{/* <Checkbox
+						label="Show Grid"
+						isChecked={hasBackground}
+						intent="silent"
+						isSmall={true}
+						onChange={onBackgroundToggle}
+					/> */}
 				</Flex>
 				<LiveEditor className={liveEditorClasses} />
 			</LiveProvider>

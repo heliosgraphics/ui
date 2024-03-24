@@ -10,8 +10,10 @@ import {
 	ICONS,
 	type HeliosColors,
 	type HeliosIconType,
+	Separator,
 } from "@heliosgraphics/ui"
 import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
+import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
 import { useContext, useState, type FC } from "react"
 import type { ExampleTileProps } from "./ExampleTile.types"
 
@@ -34,78 +36,91 @@ const ExampleTile: FC<ExampleTileProps> = () => {
 	const onToggleRounded = () => setRounded(!isRounded)
 	const onToggleText = () => setText(text ? undefined : "Morning Glory")
 
+	const CODE_SAMPLE = `<Tile
+	color={color}
+	icon={icon}
+	iconAccent={iconAccent}
+	size={64}
+	isRound={isRound}
+	isRounded={isRounded}
+	colorAccent={colorAccent}/>`
+
 	return (
-		<Flex gap={12} isColumn={true}>
-			<ButtonGroup>
-				<Button value="Round" intent="silent" size="small" onClick={onToggleRound} />
-				<Button value="Rounded" intent="silent" size="small" onClick={onToggleRounded} />
-				<Button value="Text" intent="silent" size="small" onClick={onToggleText} />
-				<Select
-					label="Color Accent"
-					isLabelHidden={true}
-					items={items}
-					onChange={onColorChange}
-					selectedValue={colorAccent}
-				/>
-				<Select
-					label="Icon Accent"
-					isLabelHidden={true}
-					items={icons}
-					onChange={onIconAccentChange}
-					selectedValue={iconAccent}
-				/>
-			</ButtonGroup>
-			<Flex gap={4} isWrapping={true}>
-				<Tile color={color} icon={icon} iconAccent={iconAccent} size={40} isRound={isRound} isRounded={isRounded} />
-				<Tile
-					color={color}
-					icon={icon}
-					iconAccent={iconAccent}
-					size={40}
-					isRound={isRound}
-					isRounded={isRounded}
-					colorAccent={colorAccent}
-				/>
-				<Tile
-					color={color}
-					icon={icon}
-					iconAccent={iconAccent}
-					size={64}
-					isRound={isRound}
-					isRounded={isRounded}
-					text={text ? "Morning" : ""}
-				/>
-				<Tile
-					color={color}
-					icon={icon}
-					iconAccent={iconAccent}
-					size={64}
-					isRound={isRound}
-					isRounded={isRounded}
-					text={text ? "Morning" : ""}
-					colorAccent={colorAccent}
-				/>
-				<Tile
-					color={color}
-					icon={icon}
-					iconAccent={iconAccent}
-					size={132}
-					isRound={isRound}
-					isRounded={isRounded}
-					text={text}
-				/>
-				<Tile
-					color={color}
-					icon={icon}
-					iconAccent={iconAccent}
-					size={128}
-					isRound={isRound}
-					isRounded={isRounded}
-					text={text}
-					colorAccent={colorAccent}
-				/>
+		<>
+			<LiveComponent code={CODE_SAMPLE} scope={{ iconAccent, isRound, isRounded, colorAccent }} />
+			<Separator isLight={true} />
+			<Flex gap={12} isColumn={true} padding={16}>
+				<ButtonGroup>
+					<Button value="Round" intent="silent" size="small" onClick={onToggleRound} />
+					<Button value="Rounded" intent="silent" size="small" onClick={onToggleRounded} />
+					<Button value="Text" intent="silent" size="small" onClick={onToggleText} />
+					<Select
+						label="Color Accent"
+						isLabelHidden={true}
+						items={items}
+						onChange={onColorChange}
+						selectedValue={colorAccent}
+					/>
+					<Select
+						label="Icon Accent"
+						isLabelHidden={true}
+						items={icons}
+						onChange={onIconAccentChange}
+						selectedValue={iconAccent}
+					/>
+				</ButtonGroup>
+				<Flex gap={4} isWrapping={true}>
+					<Tile color={color} icon={icon} iconAccent={iconAccent} size={40} isRound={isRound} isRounded={isRounded} />
+					<Tile
+						color={color}
+						icon={icon}
+						iconAccent={iconAccent}
+						size={40}
+						isRound={isRound}
+						isRounded={isRounded}
+						colorAccent={colorAccent}
+					/>
+					<Tile
+						color={color}
+						icon={icon}
+						iconAccent={iconAccent}
+						size={64}
+						isRound={isRound}
+						isRounded={isRounded}
+						text={text ? "Morning" : ""}
+					/>
+					<Tile
+						color={color}
+						icon={icon}
+						iconAccent={iconAccent}
+						size={64}
+						isRound={isRound}
+						isRounded={isRounded}
+						text={text ? "Morning" : ""}
+						colorAccent={colorAccent}
+					/>
+					<Tile
+						color={color}
+						icon={icon}
+						iconAccent={iconAccent}
+						size={132}
+						isRound={isRound}
+						isRounded={isRounded}
+						text={text}
+					/>
+					<Tile
+						color={color}
+						icon={icon}
+						iconAccent={iconAccent}
+						size={128}
+						isRound={isRound}
+						isRounded={isRounded}
+						text={text}
+						colorAccent={colorAccent}
+					/>
+				</Flex>
 			</Flex>
-		</Flex>
+		</>
 	)
 }
 

@@ -2,6 +2,7 @@ details.details {
 	padding: 0;
 
 	border: 1px solid var(--ui-border);
+	background-color: var(--ui-bg);
 	border-radius: var(--radius-normal);
 }
 
