@@ -2,10 +2,10 @@
 
 import { useContext, type FC } from "react"
 import { Flex, Select, ICONS } from "@heliosgraphics/ui"
-import { WorkshopContext } from "../../../../contexts/WorkshopContext"
-import type { IconSelectorProps } from "./IconSelector.types"
+import { WorkshopContext } from "../../contexts/WorkshopContext"
+import type { WorkshopIconSelectorProps } from "./WorkshopIconSelector.types"
 
-const IconSelector: FC<IconSelectorProps> = () => {
+const WorkshopIconSelector: FC<WorkshopIconSelectorProps> = () => {
 	const { icon, setIcon } = useContext(WorkshopContext)
 
 	const icons = ICONS.map((icon) => ({ name: icon, value: icon }))
@@ -18,4 +18,4 @@ const IconSelector: FC<IconSelectorProps> = () => {
 	)
 }
 
-export default IconSelector
+export default WorkshopIconSelector

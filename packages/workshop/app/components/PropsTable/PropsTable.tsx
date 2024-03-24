@@ -2,6 +2,8 @@
 
 import { type FC } from "react"
 import { Flex, Table, Pill, Text } from "@heliosgraphics/ui"
+import WorkshopIntentSelector from "../WorkshopIntentSelector"
+import WorkshopIconSelector from "../WorkshopIconSelector"
 import type { PropsTableProps } from "./PropsTable.types"
 
 const PropsTable: FC<PropsTableProps> = ({ meta }) => {
@@ -47,10 +49,12 @@ const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 										{name}
 									</Text>
 								</td>
-								<td>
+								<td className="flex flex-column gap-4">
 									<Flex>
 										<Pill label={type} color="orange" size="small" isMono={true} />
 									</Flex>
+									{type === "HeliosIntentionType" && name === "intent" && <WorkshopIntentSelector />}
+									{type === "HeliosIconType" && name === "icon" && <WorkshopIconSelector />}
 								</td>
 								<td>
 									<Text type="small" emphasis="secondary">

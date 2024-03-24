@@ -11,7 +11,7 @@ const MenuCategory: FC<MenuCategoryProps> = ({ category, children, isFolder, isF
 	const onToggle = () => setOpen(!isOpen)
 
 	const menuCategoryClasses = getClasses(styles.menuCategory, {
-		[styles.menuCategoryFolder]: isFolder,
+		[styles.menuCategoryFolder]: category,
 		[styles.menuCategoryPlain]: !category,
 	})
 

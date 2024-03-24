@@ -2,12 +2,12 @@
 
 import { useContext, type FC } from "react"
 import { Flex, Select, INTENTIONS, ButtonGroup, Button } from "@heliosgraphics/ui"
-import { WorkshopContext } from "../../../../contexts/WorkshopContext"
-import type { IntentSelectorProps } from "./IntentSelector.types"
+import { WorkshopContext } from "../../contexts/WorkshopContext"
+import type { WorkshopIntentSelectorProps } from "./WorkshopIntentSelector.types"
 
 let lastIntention
 
-const IntentSelector: FC<IntentSelectorProps> = () => {
+const WorkshopIntentSelector: FC<WorkshopIntentSelectorProps> = () => {
 	const { intent, setIntent } = useContext(WorkshopContext)
 
 	const items = INTENTIONS.map((intention) => {
@@ -47,4 +47,4 @@ const IntentSelector: FC<IntentSelectorProps> = () => {
 	)
 }
 
-export default IntentSelector
+export default WorkshopIntentSelector

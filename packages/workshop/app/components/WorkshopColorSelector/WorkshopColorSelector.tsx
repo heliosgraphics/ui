@@ -2,12 +2,12 @@
 
 import { useContext, type FC } from "react"
 import { Flex, Select, COLORS, ButtonGroup, Button, HeliosColors } from "@heliosgraphics/ui"
-import { WorkshopContext } from "../../../../contexts/WorkshopContext"
-import type { ColorSelectorProps } from "./ColorSelector.types"
+import { WorkshopContext } from "../../contexts/WorkshopContext"
+import type { WorkshopColorSelectorProps } from "./WorkshopColorSelector.types"
 
 let lastColor: HeliosColors = "gray"
 
-const ColorSelector: FC<ColorSelectorProps> = () => {
+const WorkshopColorSelector: FC<WorkshopColorSelectorProps> = () => {
 	const { color, setColor } = useContext(WorkshopContext)
 
 	const items = COLORS.map((color) => {
@@ -46,4 +46,4 @@ const ColorSelector: FC<ColorSelectorProps> = () => {
 	)
 }
 
-export default ColorSelector
+export default WorkshopColorSelector

@@ -50,7 +50,7 @@ const PRISM_THEME: PrismTheme = {
 }
 
 const LiveComponent: FC<LiveComponentProps> = ({ code, scope }) => {
-	const { intent } = useContext(WorkshopContext)
+	const { intent, icon } = useContext(WorkshopContext)
 	const [hasBackground, setBackground] = useState<boolean>(true)
 
 	const liveComponentClasses: string = getClasses(styles.liveComponent, {
@@ -63,7 +63,7 @@ const LiveComponent: FC<LiveComponentProps> = ({ code, scope }) => {
 
 	return (
 		<Flex isColumn={true}>
-			<LiveProvider code={code} scope={{ ...components, ...scope, intent }} theme={PRISM_THEME}>
+			<LiveProvider code={code} scope={{ ...components, ...scope, intent, icon }} theme={PRISM_THEME}>
 				<Flex isColumn={true} gap={12} padding={16} className={liveComponentClasses}>
 					<LiveError />
 					<LivePreview />

@@ -9,7 +9,7 @@ import PropsTable from "workshop/app/components/PropsTable"
 import type { ExampleButtonProps } from "./ExampleButton.types"
 import type { FC } from "react"
 
-const CODE_SAMPLE = `<Button intent={intent} value="Advise" icon="bullseye"/>`
+const CODE_SAMPLE = `<Button intent={intent} value="Button" icon={icon}/>`
 
 const ExampleButton: FC<ExampleButtonProps> = () => {
 	const { intent } = useContext(WorkshopContext)

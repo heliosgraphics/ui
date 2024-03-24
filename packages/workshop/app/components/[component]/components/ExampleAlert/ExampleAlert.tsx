@@ -5,7 +5,7 @@ import PropsTable from "workshop/app/components/PropsTable"
 import type { ExampleAlertProps } from "./ExampleAlert.types"
 import type { FC } from "react"
 
-const CODE_SAMPLE = `<Alert intent={intent} icon="info">
+const CODE_SAMPLE = `<Alert intent={intent} icon={icon}>
   {INTENT_DESCRIPTIONS[intent]}
 </Alert>`
 

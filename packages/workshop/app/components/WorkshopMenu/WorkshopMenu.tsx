@@ -86,7 +86,7 @@ const WorkshopMenu: FC = () => {
 							<MenuItem title="Get Started" isActive={pathname === "/get-started"} />
 						</Link>
 					</MenuCategory>
-					<MenuCategory category="Pages" isFolder={false}>
+					<MenuCategory category="Concepts" isFolder={false}>
 						<Link href="/colors">
 							<MenuItem title="Colors" isActive={pathname === "/colors"} />
 						</Link>
@@ -102,7 +102,7 @@ const WorkshopMenu: FC = () => {
 
 			{Object.entries(groupedComponents).map(([type, components]) => {
 				return (
-					<MenuCategory key={type} category={TYPE_NAMES[type]} isFolder={true}>
+					<MenuCategory key={type} category={TYPE_NAMES[type]} isFolder={false}>
 						{components.map((component, key) => {
 							const { status } = COMPONENTS[component]
 							const statusColor = STATUS_COLORS[status]
@@ -115,7 +115,7 @@ const WorkshopMenu: FC = () => {
 										isActive={pathname === `/components/${component}`}
 										labelColor={statusColor}
 										labelHidden={true}
-										label={status !== "stable" && STATUS_NAMES[status]}
+										label={status !== "stable" ? STATUS_NAMES[status] : undefined}
 										labelIcon={statusIcon}
 									/>
 								</Link>
