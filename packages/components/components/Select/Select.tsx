@@ -5,11 +5,12 @@ import { InputLabel } from "../shared/InputLabel"
 import styles from "./Select.module.css"
 import type { SelectProps } from "./Select.types"
 
-const Select: FC<SelectProps> = ({ selectedValue, onChange, isLabelHidden, isDisabled, items, id, label }) => {
+const Select: FC<SelectProps> = ({ selectedValue, onChange, isLabelHidden, isSmall, isDisabled, items, id, label }) => {
 	const htmlFor: string = id || useId()
 
 	const selectClasses: string = getClasses(styles.select, {
 		[styles.selectDisabled]: isDisabled,
+		[styles.selectSmall]: isSmall,
 		[styles.selectHiddenLabel]: !label || isLabelHidden,
 	})
 

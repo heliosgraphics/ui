@@ -47,7 +47,7 @@ const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 										{name}
 									</Text>
 								</td>
-								<td className="flex flex-column gap-4">
+								<td className="flex flex-wrap space-between gap-4">
 									<Flex>
 										<Pill label={type} color="orange" size="small" isMono={true} />
 									</Flex>

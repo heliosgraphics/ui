@@ -62,3 +62,15 @@
 .selectHiddenLabel .select__icon {
 	top: 1px;
 }
+
+.selectSmall .select__select {
+	height: 30px;
+
+	line-height: 30px;
+}
+
+.selectSmall .select__icon {
+	/* padding-top: 2px; */
+	height: 28px;
+	width: 32px;
+}

@@ -11,6 +11,7 @@ export interface SelectProps {
 	id?: string
 	isDisabled?: boolean
 	isLabelHidden?: boolean
+	isSmall?: boolean
 	items: Array<SelectItem>
 	label: string
 	onChange: ChangeEventHandler<HTMLSelectElement>
@@ -27,6 +28,10 @@ export const meta: HeliosAttributeMeta<SelectProps> = {
 		isOptional: true,
 	},
 	isLabelHidden: {
+		type: "boolean",
+		isOptional: true,
+	},
+	isSmall: {
 		type: "boolean",
 		isOptional: true,
 	},

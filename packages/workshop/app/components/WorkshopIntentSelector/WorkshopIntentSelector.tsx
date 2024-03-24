@@ -28,8 +28,6 @@ const WorkshopIntentSelector: FC<WorkshopIntentSelectorProps> = () => {
 		return setIntent(randomIntention)
 	}
 
-	const onSilent = () => setIntent("silent")
-
 	return (
 		<Flex gap={4}>
 			<Select
@@ -38,10 +36,10 @@ const WorkshopIntentSelector: FC<WorkshopIntentSelectorProps> = () => {
 				selectedValue={intent}
 				label="Intent Selector"
 				isLabelHidden={true}
+				isSmall={true}
 			/>
-			<ButtonGroup align="join">
-				<Button intent="silent" value="Random" onClick={onRandom} />
-				<Button intent="silent" value="Silent" onClick={onSilent} />
+			<ButtonGroup>
+				<Button intent="silent" value="Random" size="small" onClick={onRandom} />
 			</ButtonGroup>
 		</Flex>
 	)
