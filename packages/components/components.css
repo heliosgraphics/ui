@@ -125,7 +125,7 @@
 	--animation-slow: 160ms;
 	--animation-slowest: 192ms;
 
-	--ease-in-out: var(--easeInOut);
+	--ease-in-out: var(--easeInOutSine);
 
 	font-family: var(--font-family-sans);
 	/* "cv11" 1, single story a */
