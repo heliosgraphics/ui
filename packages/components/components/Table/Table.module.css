@@ -13,17 +13,10 @@
 	background-color: var(--ui-bg-action);
 }
 
-.table thead tr:first-of-type td {
-	border-top: 1px solid var(--ui-border);
-}
-
 .table tbody tr td {
 	border-top: 1px solid var(--ui-border-light);
 }
 
-.table tbody tr:last-of-type td {
-	border-bottom: 1px solid var(--ui-border);
-}
 
 .table td:not(:last-child) {
 	border-right: 1px solid var(--ui-border-light);

@@ -1,6 +1,6 @@
-import { Breadcrumb, HeliosAttributeMeta, type BreadCrumbItem } from "@heliosgraphics/ui"
-import Page from "../Page"
+import { Breadcrumb, HeliosAttributeMeta, type BreadCrumbItem, Separator } from "@heliosgraphics/ui"
 import { lazy } from "react"
+import Page from "../Page"
 import PropsTable from "../../components/PropsTable"
 
 const loadMeta = async (component: string = ""): Promise<HeliosAttributeMeta<unknown>> => {
@@ -27,8 +27,8 @@ export default async function Home({ children, params }) {
 	return (
 		<Page title={component} breadcrumb={<Breadcrumb items={BREADCRUMB_ITEMS} />} disabledPadding={true}>
 			<DemoComponent />
-
 			{children}
+			<Separator isLight={true} />
 			<PropsTable meta={demoMeta} />
 		</Page>
 	)

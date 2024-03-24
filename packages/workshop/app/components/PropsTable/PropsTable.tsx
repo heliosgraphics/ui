@@ -38,7 +38,7 @@ const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 					{Object.values(meta).map((value, key) => {
 						const name: string = Object.keys(meta)[key]
 						const type: string = value["type"] || "Unknown"
-						const description: string = value["description"] || "--"
+						const description: string = value["description"] || "-"
 
 						return (
 							<tr key={key}>
@@ -47,12 +47,14 @@ const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 										{name}
 									</Text>
 								</td>
-								<td className="flex flex-wrap space-between gap-4">
-									<Flex>
-										<Pill label={type} color="orange" size="small" isMono={true} />
+								<td>
+									<Flex gap={4} isWrapping={true} isBetween={true}>
+										<Flex>
+											<Pill label={type} color="orange" size="small" isMono={true} />
+										</Flex>
+										{type === "HeliosIntentionType" && name === "intent" && <WorkshopIntentSelector />}
+										{type === "HeliosIconType" && name === "icon" && <WorkshopIconSelector />}
 									</Flex>
-									{type === "HeliosIntentionType" && name === "intent" && <WorkshopIntentSelector />}
-									{type === "HeliosIconType" && name === "icon" && <WorkshopIconSelector />}
 								</td>
 								<td>
 									<Text type="small" emphasis="secondary">
