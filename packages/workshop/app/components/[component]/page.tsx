@@ -3,15 +3,15 @@ import { lazy } from "react"
 import Page from "../Page"
 import PropsTable from "../../components/PropsTable"
 
-const loadMeta = async (component: string = ""): Promise<HeliosAttributeMeta<unknown>> => {
-	if (!component) return Promise.reject()
+const Home: any = async ({ children, params }) => {
+	const loadMeta = async (component: string = ""): Promise<HeliosAttributeMeta<unknown>> => {
+		if (!component) return Promise.reject()
 
-	const { meta } = await import(`@heliosgraphics/ui/components/${component}/${component}.types`)
+		const { meta } = await import(`@heliosgraphics/ui/components/${component}/${component}.types`)
 
-	return meta
-}
+		return meta
+	}
 
-export default async function Home({ children, params }) {
 	const { component } = params
 	const DemoComponent = lazy(() => import(`./components/Example${component}`))
 	const demoMeta = await loadMeta(component).then((meta) => meta)
@@ -33,3 +33,5 @@ export default async function Home({ children, params }) {
 		</Page>
 	)
 }
+
+export default Home
