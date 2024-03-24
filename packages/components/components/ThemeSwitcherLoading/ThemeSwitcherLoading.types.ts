@@ -9,9 +9,11 @@ export const meta: HeliosAttributeMeta<ThemeSwitcherLoadingProps> = {
 	isIconOnly: {
 		type: "boolean",
 		isOptional: true,
+		default: "false"
 	},
 	size: {
 		type: "HeliosSizeType",
 		isOptional: true,
+		default: "small"
 	},
 }

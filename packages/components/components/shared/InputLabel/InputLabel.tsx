@@ -19,4 +19,4 @@ const InputLabel: FC<InputLabelProps> = ({ id, label, isDisabled, isHidden }) =>
 	)
 }
 
-export default InputLabel
+export { InputLabel }

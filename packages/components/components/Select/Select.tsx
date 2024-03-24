@@ -1,8 +1,8 @@
-import { useId, type FC } from "react"
 import { Flex, Icon } from "../.."
-import styles from "./Select.module.css"
 import { getClasses } from "@heliosgraphics/utils/classnames"
-import InputLabel from "../shared/InputLabel"
+import { useId, type FC } from "react"
+import { InputLabel } from "../shared/InputLabel"
+import styles from "./Select.module.css"
 import type { SelectProps } from "./Select.types"
 
 const Select: FC<SelectProps> = ({ selectedValue, onChange, isLabelHidden, isDisabled, items, id, label }) => {

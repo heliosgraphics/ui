@@ -7,4 +7,4 @@ const HRMarkup: FC<HRMarkupProps> = (props) => {
 	return <hr {...goodProps} data-component="Separator" />
 }
 
-export default HRMarkup
+export { HRMarkup }

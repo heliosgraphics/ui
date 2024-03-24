@@ -1,10 +1,10 @@
 "use client"
 
-import { useId, useRef, useEffect } from "react"
-import { Text } from "../.."
-import styles from "./Textarea.module.css"
 import { getClasses } from "@heliosgraphics/utils/classnames"
-import InputLabel from "../shared/InputLabel"
+import { Text } from "../.."
+import { useId, useRef, useEffect } from "react"
+import { InputLabel } from "../shared/InputLabel"
+import styles from "./Textarea.module.css"
 import type { FC } from "react"
 import type { TextareaProps } from "./Textarea.types"
 

@@ -1,4 +1,2 @@
-import ResultList from "./ResultList"
-
-export default ResultList
+export { ResultList } from "./ResultList"
 export type { ResultItem } from "./ResultList.types"

@@ -5,4 +5,4 @@ const H6: FC<H6Props> = (props) => {
 	return <h6 {...props} className={`h6 ${props.className}`} data-component="Heading.H6" />
 }
 
-export default H6
+export { H6 }

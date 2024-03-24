@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef, Children as ReactChildren, cloneElement, type FC } from "react"
 import { ANIMATION_FAST } from "../../constants/animations"
 import { getClasses } from "@heliosgraphics/utils/classnames"
-import ResultList from "../shared/ResultList"
+import { ResultList } from "../shared/ResultList"
 import styles from "./Dropdown.module.css"
 import type { MouseEvent } from "react"
 import type { DropdownProps } from "./Dropdown.types"

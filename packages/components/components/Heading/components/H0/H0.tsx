@@ -9,4 +9,4 @@ const H0: FC<H0Props> = (props) => {
 	return <h1 {...props} className={h0Classes} data-component="Heading.H0" />
 }
 
-export default H0
+export { H0 }

@@ -1,11 +1,11 @@
+import { Div } from "./components/Div/Div"
 import { getClasses } from "@heliosgraphics/utils/classnames"
 import { getTypographyUtility } from "./Text.utils"
+import { P } from "./components/P/P"
+import { Small } from "./components/Small/Small"
+import { Tiny } from "./components/Tiny/Tiny"
 import { type FC } from "react"
-import Div from "./components/Div/Div"
-import P from "./components/P/P"
-import Small from "./components/Small/Small"
 import styles from "./Text.module.css"
-import Tiny from "./components/Tiny/Tiny"
 import type { TextProps } from "./Text.types"
 
 const Text: FC<TextProps> = (props) => {

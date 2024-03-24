@@ -41,4 +41,4 @@ const ResultList: FC<ResultListProps> = ({ items }) => {
 	)
 }
 
-export default ResultList
+export { ResultList }

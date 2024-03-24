@@ -1,5 +1,5 @@
 import { getClasses } from "@heliosgraphics/utils/classnames"
-import HRMarkup from "../HRMarkup"
+import { HRMarkup } from "../HRMarkup/HRMarkup"
 import styles from "./HorizontalSeparator.module.css"
 import type { FC } from "react"
 import type { SeparatorProps } from "../../../Separator/Separator.types"
@@ -14,4 +14,4 @@ const HorizontalSeparator: FC<SeparatorProps> = ({ isLight, isTransparent, class
 	return <HRMarkup className={hrClassNames} />
 }
 
-export default HorizontalSeparator
+export { HorizontalSeparator }
