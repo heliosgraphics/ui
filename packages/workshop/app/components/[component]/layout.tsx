@@ -1,8 +1,9 @@
-import { Flex, Breadcrumb, type BreadCrumbItem } from "@heliosgraphics/ui"
+import { Breadcrumb, type BreadCrumbItem } from "@heliosgraphics/ui"
 import Page from "../Page"
 
 export default function Home({ children, params }) {
 	const { component } = params
+
 	if (!component) return null
 
 	const BREADCRUMB_ITEMS: Array<BreadCrumbItem> = [

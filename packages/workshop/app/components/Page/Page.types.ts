@@ -1,8 +1,9 @@
 import type { ReactNode } from "react"
 
 export interface PageProps {
-	children?: ReactNode
-	title?: string
-	eyebrow?: string
 	breadcrumb?: ReactNode
+	children?: ReactNode
+	disabledPadding?: boolean
+	eyebrow?: string
+	title?: string
 }

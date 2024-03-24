@@ -66,14 +66,11 @@ const WorkshopMenu: FC = () => {
 						<Link href="/">
 							<MenuItem title="Index" isActive={pathname === "/"} />
 						</Link>
-						<Link href="/get-started">
-							<MenuItem title="Get Started" isActive={pathname === "/get-started"} />
-						</Link>
-						{/* <Link href="/products">
-						<MenuItem title="Products" isActive={pathname === "/products"} />
-					</Link> */}
 						<Link href="/about">
 							<MenuItem title="About" isActive={pathname === "/about"} />
+						</Link>
+						<Link href="/get-started">
+							<MenuItem title="Get Started" isActive={pathname === "/get-started"} />
 						</Link>
 					</MenuCategory>
 					<MenuCategory category="Pages">

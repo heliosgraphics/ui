@@ -9,8 +9,6 @@ Works best in \`Typescript\` enabled \`NextJS\` projects using \`app\` folder.
 - Add UI package \`pnpm add @heliosgraphics/ui\`
 - Load \`<Setup/>\` in your root \`layout.tsx\` for dark mode support, [like this](https://github.com/heliosgraphics/ui/blob/main/packages/workshop/app/layout.tsx) very page
 - Load \`@heliosgraphics/fractures\` then \`components.css\` on top of \`layout.tsx\`
-
-Send us an [email](mailto:hello@helios.graphics) 💌 for anything else.
 `
 
 export default function Home() {

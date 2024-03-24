@@ -14,12 +14,10 @@ export default function Home() {
 
 	return (
 		<Page title="Icons">
+			<Text type="paragraph">Helios UI is publishing it&apos;s own icons. WIP</Text>
 			<Flex gap={8}>
 				<Input label="Find an Icon" onChange={onFilter} value={filter} placeholder="Eg.: arrow" />
 			</Flex>
-			<Text type="small" emphasis="secondary">
-				A work in progress 🥲
-			</Text>
 			<Flex isWrapping={true} gap={2}>
 				{filteredIcons.map((ic, key) => {
 					const onIconSet = () => setIcon(ic)

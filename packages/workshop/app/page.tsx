@@ -20,8 +20,7 @@ export default function Home({}) {
 					Always evolving, intentional and opinionated.
 				</Text>
 				<Text type="small" emphasis="secondary">
-					Typescript components in React as a Module, almost no{" "}
-					<a href="https://github.com/heliosgraphics/ui/blob/main/packages/components/package.json">3rd parties</a>.
+					Typescript components in React as a Module.
 				</Text>
 			</Flex>
 			<Flex isColumn={true} gap={8}>
@@ -34,8 +33,6 @@ export default function Home({}) {
 					</a>
 				</ButtonGroup>
 			</Flex>
-			{/* <Separator isLight={true} /> */}
-			{/* <Markdown text={PAGE} /> */}
 			<Separator isLight={true} />
 			<DebugSelector />
 		</Page>

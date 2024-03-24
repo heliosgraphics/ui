@@ -42,8 +42,8 @@ export default function Home() {
 	return (
 		<Page title="About">
 			<Text type="paragraph">
-				<em>Helios UI</em> is the living guide for <a href="https://helios.graphics">Helios</a>&apos; visual and
-				experience standards. It helps us ship nice products people love.
+				Helios UI is the living guide for <a href="https://helios.graphics">Helios</a>&apos; visual and experience
+				standards. It helps us ship nice products people love.
 			</Text>
 			<Markdown text={PAGE} />
 		</Page>

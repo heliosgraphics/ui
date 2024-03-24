@@ -306,6 +306,10 @@ mark,
 	width: 6px;
 }
 
+.helios-scrollbar::-webkit-scrollbar-corner {
+	background-color: var(--ui-bg-disabled);
+}
+
 .helios-scrollbar::-webkit-scrollbar-thumb {
 	background-color: var(--ui-bg);
 	border-left: 1px solid var(--ui-border);
