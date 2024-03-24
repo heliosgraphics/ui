@@ -2,7 +2,7 @@ import type { FC } from "react"
 import type { ExampleShimmerProps } from "./ExampleShimmer.types"
 import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
 
-const CODE_SAMPLE = `<Shimmer height={20} width={120} />`
+const CODE_SAMPLE = `<Shimmer height={16} width={128} />`
 
 const ExampleShimmer: FC<ExampleShimmerProps> = () => {
 	return (

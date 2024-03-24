@@ -4,7 +4,9 @@ import LiveComponent from "workshop/app/components/[component]/components/LiveCo
 import type { FC } from "react"
 import type { ExampleDetailsProps } from "./ExampleDetails.types"
 
-const CODE_SAMPLE = `<Details title="Details">Hello</Details>`
+const CODE_SAMPLE = `<Details title="Details">
+	<Flex>Block</Flex>
+</Details>`
 
 const ExampleDetails: FC<ExampleDetailsProps> = () => {
 	return (

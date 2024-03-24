@@ -2,13 +2,13 @@ import type { HeliosComponentItem } from ".."
 
 // prettier-ignore i want these in a single line tabulated
 export const COMPONENTS: Record<string, HeliosComponentItem> = {
-	Alert: { status: "nominal", type: "pattern" },
+	Alert: { status: "stable", type: "pattern" },
 	Breadcrumb: { status: "nominal", type: "content" },
 	Button: { status: "stable", type: "core" },
 	ButtonGroup: { status: "stable", type: "core" },
 	Checkbox: { status: "stable", type: "core" },
 	Column: { status: "stable", type: "layout" },
-	Confirm: { status: "nominal", type: "pattern" },
+	Confirm: { status: "stable", type: "pattern" },
 	Content: { status: "nominal", type: "layout" },
 	Details: { status: "nominal", type: "pattern" },
 	Dialog: { status: "nominal", type: "pattern" },
