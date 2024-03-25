@@ -43,8 +43,8 @@ const WorkshopNavigation: FC = () => {
 				</Flex>
 				<ButtonGroup>
 					<ThemeSwitcher />
-					<a href="https://github.com/heliosgraphics/ui">
-						<Button intent="silent" value="GitHub" icon="x-github" size="small" />
+					<a href="https://github.com/heliosgraphics/ui" tabIndex={-1}>
+						<Button intent="silent" value="GitHub" icon="x-github" size="small" isIconOnly={true} />
 					</a>
 				</ButtonGroup>
 			</Navigation>
