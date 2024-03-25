@@ -1,8 +1,13 @@
 "use client"
 
 import { useState, type FC } from "react"
+import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
 import { Flex, Select, Heading, Separator, type TextProps, type SelectItem } from "@heliosgraphics/ui"
 import type { ExampleHeadingProps } from "./ExampleHeading.types"
+
+const CODE_SAMPLE = `<Heading emphasis={emphasis} fontFamily={fontFamily} level={1} fontWeight={fontWeight}>
+Village of Quixley
+</Heading>`
 
 const EMPHASIS_LIST: Array<SelectItem> = [
 	{ name: "Primary", value: "primary" },
@@ -39,53 +44,57 @@ const ExampleHeading: FC<ExampleHeadingProps> = () => {
 	const onFontWeightChange = (event) => setFontWeight(event.target.value)
 
 	return (
-		<Flex isColumn={true} gap={8}>
-			<Flex gap={4}>
+		<>
+			<LiveComponent code={CODE_SAMPLE} scope={{ emphasis, fontFamily, fontWeight }} />
+			<Separator isLight={true} />
+			<Flex isColumn={true} gap={8} padding={16}>
+				<Heading emphasis={emphasis} fontFamily={fontFamily} level={0} fontWeight={fontWeight}>
+					Qi 1234567890
+				</Heading>
+				<Heading emphasis={emphasis} fontFamily={fontFamily} level={1} fontWeight={fontWeight}>
+					In the &ldquot;quaint&rdquot; village of <a rel="author">Quixley</a>.
+				</Heading>
+				<Heading emphasis={emphasis} fontFamily={fontFamily} level={2} fontWeight={fontWeight}>
+					In the &ldquot;quaint&rdquot; village of <a rel="author">Quixley</a>.
+				</Heading>
+				<Heading emphasis={emphasis} fontFamily={fontFamily} level={3} fontWeight={fontWeight}>
+					In the &ldquot;quaint&rdquot; village of <a rel="author">Quixley</a>.
+				</Heading>
+				<Heading emphasis={emphasis} fontFamily={fontFamily} level={4} fontWeight={fontWeight}>
+					In the &ldquot;quaint&rdquot; village of <a rel="author">Quixley</a>.
+				</Heading>
+				<Heading emphasis={emphasis} fontFamily={fontFamily} level={5} fontWeight={fontWeight}>
+					In the &ldquot;quaint&rdquot; village of <a rel="author">Quixley</a>.
+				</Heading>
+				<Heading emphasis={emphasis} fontFamily={fontFamily} level={6} fontWeight={fontWeight}>
+					In the &ldquot;quaint&rdquot; village of <a rel="author">Quixley</a>.
+				</Heading>
+			</Flex>
+			<Separator isLight={true} />
+			<Flex gap={4} padding={16}>
 				<Select
-					label="Type"
+					label="Emphasis"
 					items={EMPHASIS_LIST}
 					selectedValue={emphasis}
 					onChange={onEmphasisChange}
 					isLabelHidden={true}
 				/>
 				<Select
-					label="Type"
+					label="Font Family"
 					items={FONT_FAMILIES}
 					selectedValue={fontFamily}
 					onChange={onFontFamilyChange}
 					isLabelHidden={true}
 				/>
 				<Select
-					label="Weight"
+					label="Font Weight"
 					items={FONT_WEIGHTS}
 					selectedValue={fontWeight}
 					onChange={onFontWeightChange}
 					isLabelHidden={true}
 				/>
 			</Flex>
-			<Separator />
-			<Heading emphasis={emphasis} fontFamily={fontFamily} level={0} fontWeight={fontWeight}>
-				Qi 1234567890
-			</Heading>
-			<Heading emphasis={emphasis} fontFamily={fontFamily} level={1} fontWeight={fontWeight}>
-				In the &ldquot;quaint&rdquot; village of <a rel="author">Quixley</a>.
-			</Heading>
-			<Heading emphasis={emphasis} fontFamily={fontFamily} level={2} fontWeight={fontWeight}>
-				In the &ldquot;quaint&rdquot; village of <a rel="author">Quixley</a>.
-			</Heading>
-			<Heading emphasis={emphasis} fontFamily={fontFamily} level={3} fontWeight={fontWeight}>
-				In the &ldquot;quaint&rdquot; village of <a rel="author">Quixley</a>.
-			</Heading>
-			<Heading emphasis={emphasis} fontFamily={fontFamily} level={4} fontWeight={fontWeight}>
-				In the &ldquot;quaint&rdquot; village of <a rel="author">Quixley</a>.
-			</Heading>
-			<Heading emphasis={emphasis} fontFamily={fontFamily} level={5} fontWeight={fontWeight}>
-				In the &ldquot;quaint&rdquot; village of <a rel="author">Quixley</a>.
-			</Heading>
-			<Heading emphasis={emphasis} fontFamily={fontFamily} level={6} fontWeight={fontWeight}>
-				In the &ldquot;quaint&rdquot; village of <a rel="author">Quixley</a>.
-			</Heading>
-		</Flex>
+		</>
 	)
 }
 
