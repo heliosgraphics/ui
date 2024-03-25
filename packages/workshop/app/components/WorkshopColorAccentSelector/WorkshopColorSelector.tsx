@@ -8,14 +8,13 @@ import type { WorkshopColorSelectorProps } from "./WorkshopColorSelector.types"
 let lastColor: HeliosColors = "gray"
 
 const WorkshopColorSelector: FC<WorkshopColorSelectorProps> = () => {
-	const { color, setColor } = useContext(WorkshopContext)
+	const { colorAccent, setColorAccent } = useContext(WorkshopContext)
 
 	const items = COLORS.map((color) => {
 		return { name: color, value: color }
 	})
 
-	const onColorChange = (event) => setColor(event.target.value)
-	const onGray = () => setColor("gray")
+	const onColorChange = (event) => setColorAccent(event.target.value)
 
 	const onRandom = () => {
 		let randomIntention
@@ -26,7 +25,7 @@ const WorkshopColorSelector: FC<WorkshopColorSelectorProps> = () => {
 
 		lastColor = randomIntention
 
-		return setColor(randomIntention)
+		return setColorAccent(randomIntention)
 	}
 
 	return (
@@ -37,7 +36,7 @@ const WorkshopColorSelector: FC<WorkshopColorSelectorProps> = () => {
 				isSmall={true}
 				items={items}
 				onChange={onColorChange}
-				selectedValue={color}
+				selectedValue={colorAccent}
 			/>
 			<ButtonGroup>
 				<Button intent="silent" value="Random" onClick={onRandom} size="small" />

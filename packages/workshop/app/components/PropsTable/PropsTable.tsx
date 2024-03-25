@@ -1,6 +1,9 @@
 import { Flex, Table, Pill, Text } from "@heliosgraphics/ui"
 import WorkshopIntentSelector from "../WorkshopIntentSelector"
 import WorkshopIconSelector from "../WorkshopIconSelector"
+import WorkshopIconAccentSelector from "../WorkshopIconAccentSelector"
+import WorkshopColorSelector from "../WorkshopColorSelector"
+import WorkshopColorAccentSelector from "../WorkshopColorAccentSelector"
 import type { FC } from "react"
 import type { PropsTableProps } from "./PropsTable.types"
 
@@ -54,6 +57,9 @@ const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 										</Flex>
 										{type === "HeliosIntentionType" && name === "intent" && <WorkshopIntentSelector />}
 										{type === "HeliosIconType" && name === "icon" && <WorkshopIconSelector />}
+										{type === "HeliosIconType" && name === "iconAccent" && <WorkshopIconAccentSelector />}
+										{type === "HeliosColors" && name === "color" && <WorkshopColorSelector />}
+										{type === "HeliosColors" && name === "colorAccent" && <WorkshopColorAccentSelector />}
 									</Flex>
 								</td>
 								<td>

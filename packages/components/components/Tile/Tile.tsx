@@ -45,7 +45,7 @@ const Tile: FC<TileProps> = ({ size, text, icon, onClick, iconAccent, color, col
 				</Flex>
 			)}
 			{text && (
-				<Text type={isLarge ? "small" : "tiny"} fontFamily="mono" lineClamp={1}>
+				<Text type={isLarge ? "small" : "tiny"} fontFamily="mono" lineClamp={1} textAlign="center">
 					{text}
 				</Text>
 			)}

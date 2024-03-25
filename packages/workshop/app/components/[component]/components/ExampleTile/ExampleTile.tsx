@@ -1,40 +1,21 @@
 "use client"
 
-import {
-	Button,
-	ButtonGroup,
-	Select,
-	Flex,
-	Tile,
-	COLORS,
-	ICONS,
-	type HeliosColors,
-	type HeliosIconType,
-	Separator,
-} from "@heliosgraphics/ui"
+import { Flex, Tile, Separator, Checkbox } from "@heliosgraphics/ui"
 import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
 import { useContext, useState, type FC } from "react"
 import type { ExampleTileProps } from "./ExampleTile.types"
 
 const ExampleTile: FC<ExampleTileProps> = () => {
-	const [isRounded, setRounded] = useState<boolean>(false)
-	const [isRound, setRound] = useState<boolean>(true)
+	const [isRounded, setRounded] = useState<boolean>(true)
+	const [isRound, setRound] = useState<boolean>(false)
 	const [text, setText] = useState<string | undefined>(undefined)
-	const [colorAccent, setColorAccent] = useState<HeliosColors>("orange")
-	const [iconAccent, setIconAccent] = useState<HeliosIconType>("flame")
 
-	const { color, icon } = useContext(WorkshopContext)
-
-	const items = COLORS.map((color) => ({ name: color, value: color }))
-	const icons = ICONS.map((icon) => ({ name: icon, value: icon }))
-
-	const onColorChange = (event) => setColorAccent(event.target.value)
-	const onIconAccentChange = (event) => setIconAccent(event.target.value)
+	const { color, colorAccent, icon, iconAccent } = useContext(WorkshopContext)
 
 	const onToggleRound = () => setRound(!isRound)
 	const onToggleRounded = () => setRounded(!isRounded)
-	const onToggleText = () => setText(text ? undefined : "Morning Glory")
+	const onToggleText = () => setText(text ? undefined : "Lorem Ipsum")
 
 	const CODE_SAMPLE = `<Tile
 	color={color}
@@ -50,25 +31,6 @@ const ExampleTile: FC<ExampleTileProps> = () => {
 			<LiveComponent code={CODE_SAMPLE} scope={{ iconAccent, isRound, isRounded, colorAccent }} />
 			<Separator isLight={true} />
 			<Flex gap={12} isColumn={true} padding={16}>
-				<ButtonGroup>
-					<Button value="Round" intent="silent" size="small" onClick={onToggleRound} />
-					<Button value="Rounded" intent="silent" size="small" onClick={onToggleRounded} />
-					<Button value="Text" intent="silent" size="small" onClick={onToggleText} />
-					<Select
-						label="Color Accent"
-						isLabelHidden={true}
-						items={items}
-						onChange={onColorChange}
-						selectedValue={colorAccent}
-					/>
-					<Select
-						label="Icon Accent"
-						isLabelHidden={true}
-						items={icons}
-						onChange={onIconAccentChange}
-						selectedValue={iconAccent}
-					/>
-				</ButtonGroup>
 				<Flex gap={4} isWrapping={true}>
 					<Tile color={color} icon={icon} iconAccent={iconAccent} size={40} isRound={isRound} isRounded={isRounded} />
 					<Tile
@@ -87,7 +49,7 @@ const ExampleTile: FC<ExampleTileProps> = () => {
 						size={64}
 						isRound={isRound}
 						isRounded={isRounded}
-						text={text ? "Morning" : ""}
+						text={text}
 					/>
 					<Tile
 						color={color}
@@ -96,7 +58,7 @@ const ExampleTile: FC<ExampleTileProps> = () => {
 						size={64}
 						isRound={isRound}
 						isRounded={isRounded}
-						text={text ? "Morning" : ""}
+						text={text}
 						colorAccent={colorAccent}
 					/>
 					<Tile
@@ -118,6 +80,12 @@ const ExampleTile: FC<ExampleTileProps> = () => {
 						text={text}
 						colorAccent={colorAccent}
 					/>
+				</Flex>
+
+				<Flex isColumn={true} gap={4}>
+					<Checkbox label="Round" isSmall={true} intent="silent" onChange={onToggleRound} isChecked={isRound} />
+					<Checkbox label="Rounded" isSmall={true} intent="silent" onChange={onToggleRounded} isChecked={isRounded} />
+					<Checkbox label="Text" isSmall={true} intent="silent" onChange={onToggleText} isChecked={!!text} />
 				</Flex>
 			</Flex>
 		</>
