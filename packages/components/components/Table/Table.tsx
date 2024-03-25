@@ -4,11 +4,15 @@ import type { FC } from "react"
 import type { TableProps } from "./Table.types"
 
 const Table: FC<TableProps> = ({ children, hasBorder }) => {
-	const tableClasses: string = getClasses(styles.table, {
-		[styles.tableBorder]: hasBorder,
+	const tableElementClasses: string = getClasses(styles.tableElement, {
+		[styles.tableElementBorder]: hasBorder,
 	})
 
-	return <table className={tableClasses}>{children}</table>
+	return (
+		<div className={styles.table}>
+			<table className={tableElementClasses}>{children}</table>
+		</div>
+	)
 }
 
 export { Table }

@@ -1,30 +1,34 @@
 .table {
+	overflow: auto;
+}
+
+.tableElement {
 	width: 100%;
 
 	border: 0;
 	border-collapse: collapse;
 }
 
-.table td {
+.tableElement td {
 	padding: 8px;
 }
 
-.table thead tr td {
+.tableElement thead tr td {
 	background-color: var(--ui-bg-action);
 }
 
-.table tbody tr td {
+.tableElement tbody tr td {
 	border-top: 1px solid var(--ui-border-light);
 }
 
-.table td:not(:last-child) {
+.tableElement td:not(:last-child) {
 	border-right: 1px solid var(--ui-border-light);
 }
 
-.tableBorder {
+.tableElementBorder {
 	border: 1px solid var(--ui-border);
 }
 
-.table:not(.tableBorder) tr td:first-child {
+.tableElement:not(.tableElementBorder) tr td:first-child {
 	padding-left: 24px;
 }
