@@ -1,4 +1,4 @@
-import type { HeliosIconType, HeliosSizeType, HeliosColors, HeliosAttributeMeta } from "../.."
+import type { HeliosOnClickType, HeliosIconType, HeliosSizeType, HeliosColors, HeliosAttributeMeta } from "../.."
 
 export interface PillProps {
 	color: HeliosColors
@@ -7,8 +7,9 @@ export interface PillProps {
 	isLabelHidden?: boolean
 	isMono?: boolean
 	isRounded?: boolean
-	size?: HeliosSizeType
 	label: string
+	onClick?: HeliosOnClickType
+	size?: HeliosSizeType
 }
 
 export const meta: HeliosAttributeMeta<PillProps> = {
@@ -36,13 +37,17 @@ export const meta: HeliosAttributeMeta<PillProps> = {
 		type: "string",
 		isOptional: true,
 	},
-	size: {
-		type: "HeliosSizeType",
+	onClick: {
+		type: "HeliosOnClickType",
 		isOptional: true,
-		default: "normal",
 	},
 	label: {
 		type: "string",
 		isOptional: true,
+	},
+	size: {
+		type: "HeliosSizeType",
+		isOptional: true,
+		default: "normal",
 	},
 }

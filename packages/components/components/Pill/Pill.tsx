@@ -13,6 +13,7 @@ const PILL_ICON_SIZES: Record<HeliosSizeType, number> = {
 const Pill: FC<PillProps> = ({
 	color = "gray",
 	icon,
+	onClick,
 	isDark,
 	isLabelHidden,
 	isMono,
@@ -41,6 +42,7 @@ const Pill: FC<PillProps> = ({
 		<Flex
 			className={pillClass}
 			isCentered={true}
+			onClick={onClick}
 			style={{
 				backgroundColor: isDark ? pillColorDark : pillColor,
 				color: isDark ? textColorDark : textColor,
