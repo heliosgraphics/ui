@@ -79,13 +79,12 @@ import Icon_Robot from "@heliosgraphics/icons/react/Robot"
 import Icon_RSS from "@heliosgraphics/icons/react/Rss"
 import Icon_Search from "@heliosgraphics/icons/react/Search"
 import Icon_Send from "@heliosgraphics/icons/react/Send"
-import Icon_Sora from "@heliosgraphics/icons/react/Sora"
+import Icon_XSora from "@heliosgraphics/icons/react/XSora"
 import Icon_Speaker from "@heliosgraphics/icons/react/Speaker"
 import Icon_Square from "@heliosgraphics/icons/react/Square"
 import Icon_Star from "@heliosgraphics/icons/react/Star"
 import Icon_Sun from "@heliosgraphics/icons/react/Sun"
 import Icon_Tag from "@heliosgraphics/icons/react/Tag"
-import Icon_Thebe from "@heliosgraphics/icons/react/Thebe"
 import Icon_Trash from "@heliosgraphics/icons/react/Trash"
 import Icon_Triangle from "@heliosgraphics/icons/react/Triangle"
 import Icon_Unlock from "@heliosgraphics/icons/react/Unlock"
@@ -101,6 +100,7 @@ import Icon_XMastodon from "@heliosgraphics/icons/react/XMastodon"
 import Icon_XPinterest from "@heliosgraphics/icons/react/XPinterest"
 import Icon_XSnapchat from "@heliosgraphics/icons/react/XSnapchat"
 import Icon_XTelegram from "@heliosgraphics/icons/react/XTelegram"
+import Icon_XThebe from "@heliosgraphics/icons/react/XThebe"
 import Icon_XTiktok from "@heliosgraphics/icons/react/XTiktok"
 import Icon_XTwitch from "@heliosgraphics/icons/react/XTwitch"
 import Icon_XTwitter from "@heliosgraphics/icons/react/XTwitter"
@@ -136,24 +136,25 @@ const ICONS: Record<HeliosIconType, ReactElement> = {
 	"x-apple": <Icon_XApple />,
 	"x-discord": <Icon_XDiscord />,
 	"x-github": <Icon_XGithub />,
+	"x-helios": <Icon_XHelios />,
 	"x-instagram": <Icon_XInstagram />,
 	"x-linkedin": <Icon_XLinkedin />,
 	"x-mastodon": <Icon_XMastodon />,
 	"x-pinterest": <Icon_XPinterest />,
 	"x-snapchat": <Icon_XSnapchat />,
+	"x-sora": <Icon_XSora />,
 	"x-telegram": <Icon_XTelegram />,
+	"x-thebe": <Icon_XThebe />,
 	"x-tiktok": <Icon_XTiktok />,
 	"x-twitch": <Icon_XTwitch />,
 	"x-twitter": <Icon_XTwitter />,
 	"x-x": <Icon_XX />,
 	"x-youtube": <Icon_XYoutube />,
-	"x-helios": <Icon_XHelios />,
 	asterisk: <Icon_Asterisk />,
 	bars: <Icon_Bars />,
 	bell: <Icon_Bell />,
 	bolt: <Icon_Bolt />,
 	book: <Icon_Book />,
-	nazar: <Icon_Nazar />,
 	bookmark: <Icon_Bookmark />,
 	bullseye: <Icon_Bullseye />,
 	calendar: <Icon_Calendar />,
@@ -192,6 +193,7 @@ const ICONS: Record<HeliosIconType, ReactElement> = {
 	minus: <Icon_Minus />,
 	money: <Icon_Money />,
 	moon: <Icon_Moon />,
+	nazar: <Icon_Nazar />,
 	paper: <Icon_Paper />,
 	paste: <Icon_Paste />,
 	pause: <Icon_Pause />,
@@ -207,13 +209,11 @@ const ICONS: Record<HeliosIconType, ReactElement> = {
 	rss: <Icon_RSS />,
 	search: <Icon_Search />,
 	send: <Icon_Send />,
-	sora: <Icon_Sora />,
 	speaker: <Icon_Speaker />,
 	square: <Icon_Square />,
 	star: <Icon_Star />,
 	sun: <Icon_Sun />,
 	tag: <Icon_Tag />,
-	thebe: <Icon_Thebe />,
 	trash: <Icon_Trash />,
 	triangle: <Icon_Triangle />,
 	unlock: <Icon_Unlock />,
