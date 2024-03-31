@@ -193,8 +193,8 @@ importers:
         specifier: workspace:*
         version: link:../components
       '@heliosgraphics/utils':
-        specifier: ^5.3.6
-        version: 5.3.6
+        specifier: ^5.3.7
+        version: 5.3.7
       '@vercel/analytics':
         specifier: ^1.2.2
         version: 1.2.2(next@14.1.0)(react@18.2.0)
@@ -762,13 +762,6 @@ packages:
   /@heliosgraphics/fractures@6.3.0:
     resolution: {integrity: sha512-Khvt1ryjrQUrykq5czA3/cgPT3kzbTEYhwV5bYZ7XrYz9O9269Mr2p35zYpBSghFNpdSWf94d9wNHw50VVYySA==}
     engines: {node: '>=20.11.1', npm: '>=10.2.4'}
-    dev: false
-
-  /@heliosgraphics/utils@5.3.6:
-    resolution: {integrity: sha512-l4hGeVQlP3kwBCKi7GGV4q875iy4B7Tk1mItYTP/YByDVLWTZicoXHVkQ29wsbwogk6kzpJBJqVSS4NJQAcGsg==}
-    engines: {node: '>=20.11.1', npm: '>=10.2.4'}
-    dependencies:
-      xss: 1.0.15
     dev: false
 
   /@heliosgraphics/utils@5.3.7:
