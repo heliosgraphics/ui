@@ -61,6 +61,7 @@ import Icon_Middot from "@heliosgraphics/icons/react/Middot"
 import Icon_Minus from "@heliosgraphics/icons/react/Minus"
 import Icon_Money from "@heliosgraphics/icons/react/Money"
 import Icon_Moon from "@heliosgraphics/icons/react/Moon"
+import Icon_Nazar from "@heliosgraphics/icons/react/Nazar"
 import Icon_Paper from "@heliosgraphics/icons/react/Paper"
 import Icon_PaperEmpty from "@heliosgraphics/icons/react/PaperEmpty"
 import Icon_Paste from "@heliosgraphics/icons/react/Paste"
@@ -79,7 +80,6 @@ import Icon_RSS from "@heliosgraphics/icons/react/Rss"
 import Icon_Search from "@heliosgraphics/icons/react/Search"
 import Icon_Send from "@heliosgraphics/icons/react/Send"
 import Icon_Sora from "@heliosgraphics/icons/react/Sora"
-import Icon_SoraFlash from "@heliosgraphics/icons/react/SoraFlash"
 import Icon_Speaker from "@heliosgraphics/icons/react/Speaker"
 import Icon_Square from "@heliosgraphics/icons/react/Square"
 import Icon_Star from "@heliosgraphics/icons/react/Star"
@@ -94,6 +94,7 @@ import Icon_X from "@heliosgraphics/icons/react/X"
 import Icon_XApple from "@heliosgraphics/icons/react/XApple"
 import Icon_XDiscord from "@heliosgraphics/icons/react/XDiscord"
 import Icon_XGithub from "@heliosgraphics/icons/react/XGithub"
+import Icon_XHelios from "@heliosgraphics/icons/react/XHelios"
 import Icon_XInstagram from "@heliosgraphics/icons/react/XInstagram"
 import Icon_XLinkedin from "@heliosgraphics/icons/react/XLinkedin"
 import Icon_XMastodon from "@heliosgraphics/icons/react/XMastodon"
@@ -132,7 +133,6 @@ const ICONS: Record<HeliosIconType, ReactElement> = {
 	"layout-right": <Icon_LayoutRight />,
 	"paper-empty": <Icon_PaperEmpty />,
 	"profile-picture": <Icon_ProfilePicture />,
-	"sora-flash": <Icon_SoraFlash />,
 	"x-apple": <Icon_XApple />,
 	"x-discord": <Icon_XDiscord />,
 	"x-github": <Icon_XGithub />,
@@ -147,11 +147,13 @@ const ICONS: Record<HeliosIconType, ReactElement> = {
 	"x-twitter": <Icon_XTwitter />,
 	"x-x": <Icon_XX />,
 	"x-youtube": <Icon_XYoutube />,
+	"x-helios": <Icon_XHelios />,
 	asterisk: <Icon_Asterisk />,
 	bars: <Icon_Bars />,
 	bell: <Icon_Bell />,
 	bolt: <Icon_Bolt />,
 	book: <Icon_Book />,
+	nazar: <Icon_Nazar />,
 	bookmark: <Icon_Bookmark />,
 	bullseye: <Icon_Bullseye />,
 	calendar: <Icon_Calendar />,
