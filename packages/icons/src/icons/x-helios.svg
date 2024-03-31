@@ -1,6 +1,5 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="x-helios">
-<rect width="24" height="24" fill="white"/>
 <path id="Union" fill-rule="evenodd" clip-rule="evenodd" d="M2.00001 4.94628L4.94629 2L9.91667 6.97039V2.00001H14.0833V6.76461L18.8479 2.00001L21.7942 4.94628L16.8238 9.91667H22V14.0833H17.0296L21.7942 18.8479L18.8479 21.7942L14.0833 17.0296V22H9.91667V16.8238L4.94628 21.7942L2 18.8479L6.7646 14.0833H2.00001L2.00001 9.91667H6.9704L2.00001 4.94628Z" fill="black"/>
 </g>
 </svg>
