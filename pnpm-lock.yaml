@@ -81,11 +81,11 @@ importers:
         specifier: ^6.3.0
         version: 6.3.0
       '@heliosgraphics/icons':
-        specifier: ^0.0.10
+        specifier: ^0.0.11
         version: link:../icons
       '@heliosgraphics/utils':
-        specifier: ^5.3.4
-        version: 5.3.4
+        specifier: ^5.3.5
+        version: 5.3.5
       '@react-spring/web':
         specifier: ^9.7.3
         version: 9.7.3(react-dom@18.2.0)(react@18.2.0)
@@ -193,8 +193,8 @@ importers:
         specifier: workspace:*
         version: link:../components
       '@heliosgraphics/utils':
-        specifier: ^5.3.4
-        version: 5.3.4
+        specifier: ^5.3.5
+        version: 5.3.5
       '@vercel/analytics':
         specifier: ^1.2.2
         version: 1.2.2(next@14.1.0)(react@18.2.0)
@@ -764,8 +764,8 @@ packages:
     engines: {node: '>=20.11.1', npm: '>=10.2.4'}
     dev: false
 
-  /@heliosgraphics/utils@5.3.4:
-    resolution: {integrity: sha512-U/dQFmODXmvZ6IqVDKJpwNjbqiHzNa/dFYkteFGYTmxVxvtXt38jOkaf/4oSsPSN/Bt+NqSPgEZyTsQU1ffwEg==}
+  /@heliosgraphics/utils@5.3.5:
+    resolution: {integrity: sha512-1E2Jd29Qes6EI5v30wl3U/KG9mqRzwXaBgPTWGa6MZNqm2nvzyGK83e62JQUInyCLJOvrglhdfSm9vsMBcFvOA==}
     engines: {node: '>=20.11.1', npm: '>=10.2.4'}
     dependencies:
       xss: 1.0.15
