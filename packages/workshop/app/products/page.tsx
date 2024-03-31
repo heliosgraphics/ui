@@ -22,7 +22,7 @@ export default function Home() {
 			<Separator isLight={true} />
 			<Flex isColumn={true} gap={8}>
 				<Flex gap={8} isYCentered={true}>
-					<Tile size={48} icon="sora" color="blue" isRounded={true} />
+					<Tile size={48} icon="x-sora" color="blue" isRounded={true} />
 					<Flex isColumn={true}>
 						<Flex isYCentered={true} gap={2}>
 							<a href="https://sora.city">
