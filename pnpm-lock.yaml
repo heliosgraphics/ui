@@ -84,8 +84,8 @@ importers:
         specifier: ^0.0.13
         version: link:../icons
       '@heliosgraphics/utils':
-        specifier: ^5.3.6
-        version: 5.3.6
+        specifier: ^5.3.7
+        version: 5.3.7
       '@react-spring/web':
         specifier: ^9.7.3
         version: 9.7.3(react-dom@18.2.0)(react@18.2.0)
@@ -766,6 +766,13 @@ packages:
 
   /@heliosgraphics/utils@5.3.6:
     resolution: {integrity: sha512-l4hGeVQlP3kwBCKi7GGV4q875iy4B7Tk1mItYTP/YByDVLWTZicoXHVkQ29wsbwogk6kzpJBJqVSS4NJQAcGsg==}
+    engines: {node: '>=20.11.1', npm: '>=10.2.4'}
+    dependencies:
+      xss: 1.0.15
+    dev: false
+
+  /@heliosgraphics/utils@5.3.7:
+    resolution: {integrity: sha512-9KrNqY8uKishmVOVxUsVoMTBx/aE+tmb9X5opARoRf6IcjNzqLP+0Gh67kt6Y1SDegu/6iE/piq75RG57eUtgg==}
     engines: {node: '>=20.11.1', npm: '>=10.2.4'}
     dependencies:
       xss: 1.0.15
