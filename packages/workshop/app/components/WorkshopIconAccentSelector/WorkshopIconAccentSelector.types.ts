@@ -1,1 +1,1 @@
-export interface WorkshopIconAccentSelectorProps { }
+export interface WorkshopIconAccentSelectorProps {}
