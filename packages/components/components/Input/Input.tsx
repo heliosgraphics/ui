@@ -37,7 +37,7 @@ const Input: FC<InputProps> = ({
 		<div className={inputClasses}>
 			<InputLabel id={htmlFor} label={label} isDisabled={isDisabled} isHidden={isLabelHidden} />
 			<Flex className="grow-1">
-				{onClear && (
+				{onClear && !!value && (
 					<ButtonGroup className={styles.input__clear}>
 						<Button
 							value="Clear"
