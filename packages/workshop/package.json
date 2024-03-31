@@ -11,7 +11,7 @@
 	},
 	"dependencies": {
 		"@heliosgraphics/fractures": "^6.3.0",
-		"@heliosgraphics/utils": "^5.3.5",
+		"@heliosgraphics/utils": "^5.3.6",
 		"@heliosgraphics/ui": "workspace:*",
 		"@vercel/analytics": "^1.2.2",
 		"next": "latest",
