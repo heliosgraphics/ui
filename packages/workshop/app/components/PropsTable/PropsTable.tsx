@@ -1,4 +1,4 @@
-import { Flex, Table, Pill, Text } from "@heliosgraphics/ui"
+import { Flex, Table, Pill } from "@heliosgraphics/ui"
 import WorkshopIntentSelector from "../WorkshopIntentSelector"
 import WorkshopIconSelector from "../WorkshopIconSelector"
 import WorkshopIconAccentSelector from "../WorkshopIconAccentSelector"
@@ -11,30 +11,14 @@ const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 	if (!meta) return null
 
 	return (
-		<Table hasBorder={false}>
+		<Table hasBorder={false} isMonoHeader={true}>
 			<>
 				<thead>
 					<tr>
-						<td>
-							<Text type="small" fontFamily="mono" emphasis="secondary">
-								Name
-							</Text>
-						</td>
-						<td>
-							<Text type="small" fontFamily="mono" emphasis="secondary">
-								Type
-							</Text>
-						</td>
-						<td>
-							<Text type="small" fontFamily="mono" emphasis="secondary">
-								Description
-							</Text>
-						</td>
-						<td>
-							<Text type="small" fontFamily="mono" emphasis="secondary">
-								Required
-							</Text>
-						</td>
+						<td>Name</td>
+						<td>Type</td>
+						<td>Description</td>
+						<td>Required</td>
 					</tr>
 				</thead>
 				<tbody>
@@ -45,11 +29,7 @@ const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 
 						return (
 							<tr key={key}>
-								<td>
-									<Text type="small" fontFamily="mono">
-										{name}
-									</Text>
-								</td>
+								<td>{name}</td>
 								<td>
 									<Flex gap={4} isWrapping={true} isBetween={true}>
 										<Flex>
@@ -62,11 +42,7 @@ const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 										{type === "HeliosColors" && name === "colorAccent" && <WorkshopColorAccentSelector />}
 									</Flex>
 								</td>
-								<td>
-									<Text type="small" emphasis="secondary">
-										{description}
-									</Text>
-								</td>
+								<td>{description}</td>
 								<td>
 									{!value["isOptional"] && (
 										<Flex>

@@ -3,13 +3,16 @@ import { getClasses } from "@heliosgraphics/utils"
 import type { FC } from "react"
 import type { TableProps } from "./Table.types"
 
-const Table: FC<TableProps> = ({ children, hasBorder }) => {
+const Table: FC<TableProps> = ({ children, hasBorder, isMonoHeader }) => {
+	const tableClasses: string = getClasses(styles.table, "small")
+
 	const tableElementClasses: string = getClasses(styles.tableElement, {
 		[styles.tableElementBorder]: hasBorder,
+		[styles.tableElementMonoHeader]: isMonoHeader,
 	})
 
 	return (
-		<div className={styles.table}>
+		<div className={tableClasses}>
 			<table className={tableElementClasses}>{children}</table>
 		</div>
 	)

@@ -3,6 +3,7 @@ import type { HeliosChildrenType, HeliosAttributeMeta } from "../.."
 export interface TableProps {
 	children: HeliosChildrenType
 	hasBorder?: boolean
+	isMonoHeader?: boolean
 }
 
 export const meta: HeliosAttributeMeta<TableProps> = {
@@ -10,6 +11,10 @@ export const meta: HeliosAttributeMeta<TableProps> = {
 		type: "HeliosChildrenType",
 	},
 	hasBorder: {
+		type: "boolean",
+		isOptional: true,
+	},
+	isMonoHeader: {
 		type: "boolean",
 		isOptional: true,
 	},
