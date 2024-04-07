@@ -49,9 +49,9 @@ const PRISM_THEME: PrismTheme = {
 	],
 }
 
-const LiveComponent: FC<LiveComponentProps> = ({ code, scope }) => {
+const LiveComponent: FC<LiveComponentProps> = ({ code, scope, disabledBackground = false }) => {
 	const { intent, color, icon, iconAccent } = useContext(WorkshopContext)
-	const [hasBackground, setBackground] = useState<boolean>(true)
+	const [hasBackground, setBackground] = useState<boolean>(!disabledBackground)
 
 	const liveComponentClasses: string = getClasses(styles.liveComponent, {
 		[styles.liveComponentAlt]: hasBackground,

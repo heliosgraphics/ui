@@ -1,8 +1,11 @@
 "use client"
 
 import { type FC } from "react"
-import { Flex, Markdown } from "@heliosgraphics/ui"
+import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
+import { Flex, Markdown, Separator } from "@heliosgraphics/ui"
 import type { ExampleMarkdownProps } from "./ExampleMarkdown.types"
+
+const CODE_SAMPLE = `<Markdown text={INTRO_MD}/>`
 
 const INTRO_MD: string = `# Donec vestibulum
 ## Nam porta, orci porta commodo
@@ -48,9 +51,10 @@ Phasellus tristique tortor sed malesuada aliquam. Quisque cursus sodales velit, 
 
 const ExampleMarkdown: FC<ExampleMarkdownProps> = () => {
 	return (
-		<Flex isColumn={true} gap={12}>
-			<Markdown text={INTRO_MD} />
-		</Flex>
+		<>
+			<Separator isLight={true} />
+			<LiveComponent code={CODE_SAMPLE} scope={{ INTRO_MD }} disabledBackground={true} />
+		</>
 	)
 }
 
