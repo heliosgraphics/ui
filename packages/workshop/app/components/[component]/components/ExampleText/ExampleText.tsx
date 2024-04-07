@@ -1,8 +1,9 @@
 "use client"
 
 import { useState, type FC } from "react"
-import { Flex, Select, Separator, Text, type TextProps, type SelectItem } from "@heliosgraphics/ui"
+import { Flex, Select, Separator, type TextProps, type SelectItem } from "@heliosgraphics/ui"
 import type { ExampleTextProps } from "./ExampleText.types"
+import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
 
 const TEXT_TYPES: Array<SelectItem> = [
 	{ name: "Tiny", value: "tiny" },
@@ -17,6 +18,14 @@ const FONT_FAMILIES: Array<SelectItem> = [
 	{ name: "Serif", value: "serif" },
 ]
 
+const TEXT = `In the hushed twilight, a single firefly dances amidst the whispering reeds, its glow a fleeting spark against the encroaching shadows.`
+
+const CODE_SAMPLE = `<Flex isColumn={true} gap={8} padding={16}>
+	<Text type={type} emphasis="primary" fontFamily={fontFamily}>{TEXT}</Text>
+	<Text type={type} emphasis="secondary" fontFamily={fontFamily}>{TEXT}</Text>
+	<Text type={type} emphasis="tertiary" fontFamily={fontFamily}>{TEXT}</Text>
+</Flex>`
+
 const ExampleText: FC<ExampleTextProps> = () => {
 	const [type, setType] = useState<TextProps["type"]>("div")
 	const [fontFamily, setFontFamily] = useState<TextProps["fontFamily"]>("sans")
@@ -25,8 +34,10 @@ const ExampleText: FC<ExampleTextProps> = () => {
 	const onFontFamilyChange = (event) => setFontFamily(event.target.value)
 
 	return (
-		<Flex isColumn={true} gap={8}>
-			<Flex gap={4}>
+		<>
+			<LiveComponent code={CODE_SAMPLE} scope={{ TEXT, type, fontFamily }} />
+			<Separator isLight={true} />
+			<Flex gap={8} padding={16}>
 				<Select label="Type" items={TEXT_TYPES} selectedValue={type} onChange={onTextSizeChange} isLabelHidden={true} />
 				<Select
 					label="Type"
@@ -36,21 +47,7 @@ const ExampleText: FC<ExampleTextProps> = () => {
 					isLabelHidden={true}
 				/>
 			</Flex>
-			<Separator />
-			<Text type={type} emphasis="primary" fontFamily={fontFamily}>
-				In the quaint village of <a rel="author">Quixley</a>, quintessential quirks abounded among the{" "}
-				<a>quivering quince</a> trees. Quintuplets quaffed quirky quiches quietly, their quizzical expressions quivering
-				in the quixotic light of a quasar
-			</Text>
-			<Text type={type} emphasis="secondary" fontFamily={fontFamily}>
-				In the <a>hushed twilight</a>, a single firefly dances amidst the whispering reeds, its glow a fleeting spark
-				against the encroaching shadows.
-			</Text>
-			<Text type={type} emphasis="tertiary" fontFamily={fontFamily}>
-				This ephemeral ballet, set against the backdrop of a dusky sky, speaks of the <a>delicate balance</a> between
-				light and darkness, a testament to the transient beauty that flickers briefly in the fabric of time.
-			</Text>
-		</Flex>
+		</>
 	)
 }
 
