@@ -1,7 +1,4 @@
 .alert {
-	--alert-bg-l: 92%;
-	--alert-text-l: 48%;
-
 	display: flex;
 	flex-direction: row;
 
