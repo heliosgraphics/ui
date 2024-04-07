@@ -81,6 +81,7 @@ describe("getSafeFlexProps", () => {
 		paddingY: 16,
 		withBackground: true,
 		withRadius: 'normal',
+		withGlass: true,
 		xAlign: "start",
 		yAlign: "start",
 	}

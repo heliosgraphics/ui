@@ -105,6 +105,7 @@ export const getSafeFlexProps = (props: any): Partial<FlexProps> => {
 		paddingX,
 		paddingY,
 		withBackground,
+		withGlass,
 		withRadius,
 		xAlign,
 		yAlign,
