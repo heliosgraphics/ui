@@ -10,6 +10,8 @@ export interface MenuItemProps {
 }
 
 export const meta: HeliosAttributeMeta<MenuItemProps> = {
+	_status: "experimental",
+	_type: "layout",
 	isActive: {
 		type: "boolean",
 		isOptional: true,

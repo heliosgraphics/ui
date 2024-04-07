@@ -5,5 +5,7 @@ export interface BaseToggleProps {}
 export type ToggleProps = BaseToggleProps & BaseCheckboxProps
 
 export const meta: HeliosAttributeMeta<BaseToggleProps> = {
+	_status: "stable",
+	_type: "core",
 	_extends: ["BaseCheckboxProps"],
 }

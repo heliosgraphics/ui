@@ -8,6 +8,8 @@ export interface IconProps {
 }
 
 export const meta: HeliosAttributeMeta<IconProps> = {
+	_status: "experimental",
+	_type: "core",
 	className: {
 		type: "string",
 		isOptional: true,

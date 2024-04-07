@@ -7,6 +7,8 @@ export interface OverlayProps {
 }
 
 export const meta: HeliosAttributeMeta<OverlayProps> = {
+	_status: "stable",
+	_type: "core",
 	children: {
 		type: "HeliosChildrenType",
 	},

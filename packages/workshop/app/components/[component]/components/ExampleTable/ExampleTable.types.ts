@@ -1,1 +1,1 @@
-export interface ExampleTableProps { }
+export interface ExampleTableProps {}

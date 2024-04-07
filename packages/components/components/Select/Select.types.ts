@@ -19,6 +19,8 @@ export interface SelectProps {
 }
 
 export const meta: HeliosAttributeMeta<SelectProps> = {
+	_status: "stable",
+	_type: "core",
 	id: {
 		type: "string",
 		isOptional: true,

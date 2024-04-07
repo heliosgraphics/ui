@@ -6,6 +6,8 @@ export interface MarkdownProps {
 }
 
 export const meta: HeliosAttributeMeta<MarkdownProps> = {
+	_status: "stable",
+	_type: "content",
 	isNonSelectable: {
 		type: "boolean",
 		isOptional: true,

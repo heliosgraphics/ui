@@ -60,10 +60,9 @@ describe("getFlexUtility", () => {
 })
 
 describe("getSafeFlexProps", () => {
-
 	const MOCK_FLEX_ATTRIBUTES: any = {
 		children: null,
-		className: 'xo',
+		className: "xo",
 		draggable: true,
 		gap: 24,
 		isAround: true,
@@ -80,7 +79,7 @@ describe("getSafeFlexProps", () => {
 		paddingX: 16,
 		paddingY: 16,
 		withBackground: true,
-		withRadius: 'normal',
+		withRadius: "normal",
 		withGlass: true,
 		xAlign: "start",
 		yAlign: "start",
@@ -88,7 +87,7 @@ describe("getSafeFlexProps", () => {
 	const MOCK_FLEX_ATTRIBUTES_SAFE: FlexProps = {
 		children: null,
 		className: "xo",
-		draggable: true
+		draggable: true,
 	}
 
 	it("Generates without invalid attributes", () =>

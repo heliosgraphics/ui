@@ -9,6 +9,8 @@ export interface ShimmerProps {
 }
 
 export const meta: HeliosAttributeMeta<ShimmerProps> = {
+	_status: "nominal",
+	_type: "pattern",
 	height: {
 		type: "number",
 	},

@@ -7,6 +7,8 @@ export interface DotProps {
 }
 
 export const meta: HeliosAttributeMeta<DotProps> = {
+	_status: "stable",
+	_type: "core",
 	color: {
 		type: "HeliosColors",
 		default: "blue",

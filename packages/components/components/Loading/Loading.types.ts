@@ -6,6 +6,8 @@ export interface LoadingProps {
 }
 
 export const meta: HeliosAttributeMeta<LoadingProps> = {
+	_status: "stable",
+	_type: "core",
 	className: { type: "string", isOptional: true },
 	size: { type: "10 | 20 | 40" },
 }

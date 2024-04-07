@@ -19,6 +19,8 @@ export interface TextBaseProps {
 export type TextProps = TextBaseProps & HTMLAttributes<HTMLDivElement | HTMLParagraphElement>
 
 export const meta: HeliosAttributeMeta<TextBaseProps> = {
+	_status: "stable",
+	_type: "content",
 	_extends: ["HTMLAttributes<HTMLDivElement | HTMLParagraphElement>"],
 	emphasis: {
 		type: "HeliosEmphasisType",

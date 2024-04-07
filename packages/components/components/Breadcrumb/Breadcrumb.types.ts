@@ -12,6 +12,8 @@ export interface BreadcrumbProps {
 }
 
 export const meta: HeliosAttributeMeta<BreadcrumbProps> = {
+	_status: "nominal",
+	_type: "content",
 	items: {
 		type: "Array<BreadCrumbItem>",
 	},

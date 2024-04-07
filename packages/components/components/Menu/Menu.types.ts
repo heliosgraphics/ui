@@ -5,6 +5,8 @@ export interface MenuProps {
 }
 
 export const meta: HeliosAttributeMeta<MenuProps> = {
+	_status: "experimental",
+	_type: "layout",
 	children: {
 		type: "HeliosChildrenType",
 	},

@@ -5,5 +5,7 @@ export interface MainProps {
 }
 
 export const meta: HeliosAttributeMeta<MainProps> = {
+	_status: "nominal",
+	_type: "layout",
 	children: { type: "HeliosChildrenType" },
 }

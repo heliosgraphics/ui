@@ -6,6 +6,8 @@ export interface ThemeSwitcherLoadingProps {
 }
 
 export const meta: HeliosAttributeMeta<ThemeSwitcherLoadingProps> = {
+	_status: "nominal",
+	_type: "layout",
 	isIconOnly: {
 		type: "boolean",
 		isOptional: true,

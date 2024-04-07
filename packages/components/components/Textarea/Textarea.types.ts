@@ -18,6 +18,8 @@ export interface TextareaProps {
 }
 
 export const meta: HeliosAttributeMeta<TextareaProps> = {
+	_status: "stable",
+	_type: "core",
 	autoComplete: { type: "boolean", isOptional: true },
 	autoFocus: { type: "boolean", isOptional: true },
 	helperText: { type: "string", isOptional: true },

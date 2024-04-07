@@ -12,6 +12,8 @@ export interface PieProps {
 }
 
 export const meta: HeliosAttributeMeta<PieProps> = {
+	_status: "stable",
+	_type: "core",
 	color: {
 		type: "HeliosColors",
 	},

@@ -8,6 +8,8 @@ export interface ButtonGroupProps {
 }
 
 export const meta: HeliosAttributeMeta<ButtonGroupProps> = {
+	_status: "stable",
+	_type: "core",
 	align: {
 		type: '"left" | "center" | "right" | "join"',
 		isOptional: true,

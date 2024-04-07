@@ -7,6 +7,8 @@ export interface TableProps {
 }
 
 export const meta: HeliosAttributeMeta<TableProps> = {
+	_status: "nominal",
+	_type: "content",
 	children: {
 		type: "HeliosChildrenType",
 	},

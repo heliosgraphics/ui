@@ -28,6 +28,8 @@ export interface InputProps {
 }
 
 export const meta: HeliosAttributeMeta<InputProps> = {
+	_status: "stable",
+	_type: "core",
 	autoComplete: { type: '"new-password" | "username" | "current-password"', isOptional: true },
 	autoFocus: { type: "boolean", isOptional: true },
 	className: { type: "string", isOptional: true },

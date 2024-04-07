@@ -13,6 +13,8 @@ export interface ConfirmProps {
 }
 
 export const meta: HeliosAttributeMeta<ConfirmProps> = {
+	_status: "stable",
+	_type: "pattern",
 	cancelText: {
 		type: "string",
 	},

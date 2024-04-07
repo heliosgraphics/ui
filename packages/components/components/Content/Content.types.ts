@@ -5,4 +5,6 @@ export type ContentProps = BaseContentProps & ColumnProps
 
 export const meta: HeliosAttributeMeta<BaseContentProps> = {
 	_extends: ["ColumnProps"],
+	_status: "nominal",
+	_type: "layout",
 }

@@ -1,20 +1,14 @@
-import { Breadcrumb, HeliosAttributeMeta, type BreadCrumbItem, Separator } from "@heliosgraphics/ui"
+import { Breadcrumb, type BreadCrumbItem, Separator, COMPONENTS } from "@heliosgraphics/ui"
 import { lazy } from "react"
 import Page from "../Page"
 import PropsTable from "../../components/PropsTable"
+import { getStatus } from "workshop/constants/components"
 
 const Home: any = async ({ children, params }) => {
-	const loadMeta = async (component: string = ""): Promise<HeliosAttributeMeta<unknown>> => {
-		if (!component) return Promise.reject()
-
-		const { meta } = await import(`@heliosgraphics/ui/components/${component}/${component}.types`)
-
-		return meta
-	}
-
 	const { component } = params
 	const DemoComponent = lazy(() => import(`./components/Example${component}`))
-	const demoMeta = await loadMeta(component).then((meta) => meta)
+	const demoMeta = COMPONENTS[component]
+	const { name, icon, color } = getStatus(component)
 
 	if (!component) return null
 	if (!DemoComponent || !demoMeta) return null
@@ -25,7 +19,14 @@ const Home: any = async ({ children, params }) => {
 	]
 
 	return (
-		<Page title={component} breadcrumb={<Breadcrumb items={BREADCRUMB_ITEMS} />} disabledPadding={true}>
+		<Page
+			title={component}
+			breadcrumb={<Breadcrumb items={BREADCRUMB_ITEMS} />}
+			disabledPadding={true}
+			labelColor={color}
+			labelIcon={icon}
+			labelText={name}
+		>
 			<DemoComponent />
 			{children}
 			<Separator isLight={true} />

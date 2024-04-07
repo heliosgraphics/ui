@@ -10,6 +10,8 @@ export interface DonutProps {
 }
 
 export const meta: HeliosAttributeMeta<DonutProps> = {
+	_status: "stable",
+	_type: "core",
 	children: {
 		type: "HeliosChildrenType",
 		isOptional: true,

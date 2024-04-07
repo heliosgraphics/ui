@@ -10,6 +10,8 @@ export interface DropdownProps {
 }
 
 export const meta: HeliosAttributeMeta<DropdownProps> = {
+	_status: "nominal",
+	_type: "core",
 	children: {
 		type: "ReactElement<unknown>",
 	},

@@ -8,6 +8,8 @@ export interface BaseColumnProps {
 export type ColumnProps = BaseColumnProps & FlexProps
 
 export const meta: HeliosAttributeMeta<BaseColumnProps> = {
+	_status: "stable",
+	_type: "layout",
 	_extends: ["FlexProps"],
 	isColumnCentered: {
 		type: "boolean",

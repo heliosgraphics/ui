@@ -13,6 +13,8 @@ export interface PillProps {
 }
 
 export const meta: HeliosAttributeMeta<PillProps> = {
+	_status: "stable",
+	_type: "core",
 	color: {
 		type: "HeliosColors",
 		default: "gray",

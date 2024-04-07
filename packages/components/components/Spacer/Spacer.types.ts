@@ -5,6 +5,8 @@ export interface SpacerProps {
 }
 
 export const meta: HeliosAttributeMeta<SpacerProps> = {
+	_status: "stable",
+	_type: "layout",
 	gap: {
 		type: "number",
 	},

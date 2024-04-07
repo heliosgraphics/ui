@@ -5,6 +5,8 @@ export interface MasonryProps {
 }
 
 export const meta: HeliosAttributeMeta<MasonryProps> = {
+	_status: "experimental",
+	_type: "layout",
 	children: {
 		type: "HeliosChildrenType",
 	},

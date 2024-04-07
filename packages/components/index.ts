@@ -82,9 +82,4 @@ export { EMPHASES } from "./constants/emphasis"
 export { HOOKS } from "./constants/hooks"
 export { ICONS } from "./constants/icons"
 export { SCALE } from "./constants/scale"
-export type {
-	HeliosAttributeMeta,
-	HeliosComponentItem,
-	HeliosComponentStatusType,
-	HeliosComponentCategoryType,
-} from "./types/meta"
+export type { HeliosAttributeMeta, HeliosComponentStatusType, HeliosComponentCategoryType } from "./types/meta"

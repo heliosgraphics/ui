@@ -6,6 +6,8 @@ export interface ProgressProps {
 }
 
 export const meta: HeliosAttributeMeta<ProgressProps> = {
+	_status: "stable",
+	_type: "core",
 	max: {
 		type: "number",
 		default: 100,

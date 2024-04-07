@@ -34,6 +34,8 @@ export type FlexProps = FlexBaseProps & HTMLAttributes<unknown>
 
 // prettier-ignore
 export const meta: HeliosAttributeMeta<FlexBaseProps> = {
+	_status: 'stable',
+	_type: 'core',
 	_extends: ["HTMLAttributes<unknown>"],
 	children: { type: "HeliosChildrenType" },
 	className: { type: "string", isOptional: true, },

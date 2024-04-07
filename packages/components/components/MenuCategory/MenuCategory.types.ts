@@ -8,6 +8,8 @@ export interface MenuCategoryProps {
 }
 
 export const meta: HeliosAttributeMeta<MenuCategoryProps> = {
+	_status: "experimental",
+	_type: "layout",
 	category: {
 		type: "string",
 		isOptional: true,

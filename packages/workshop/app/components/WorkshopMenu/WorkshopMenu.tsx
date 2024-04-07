@@ -2,44 +2,10 @@
 
 import { useContext, useState, type FC, type ChangeEvent } from "react"
 import Link from "next/link"
+import { getStatus, TYPE_NAMES } from "workshop/constants/components"
 import { WorkshopContext } from "../../contexts/WorkshopContext"
-import {
-	Menu,
-	MenuItem,
-	MenuCategory,
-	MenuFilter,
-	COMPONENTS,
-	type HeliosComponentStatusType,
-	type HeliosComponentCategoryType,
-	HeliosColors,
-	HeliosIconType,
-} from "@heliosgraphics/ui"
+import { Menu, MenuItem, MenuCategory, MenuFilter, COMPONENTS } from "@heliosgraphics/ui"
 import { usePathname } from "next/navigation"
-
-const STATUS_COLORS: Record<HeliosComponentStatusType, HeliosColors> = {
-	experimental: "pink",
-	nominal: "gray",
-	stable: "green",
-}
-
-const STATUS_ICONS: Record<HeliosComponentStatusType, HeliosIconType> = {
-	experimental: "bolt",
-	nominal: "bolt",
-	stable: "check",
-}
-
-const STATUS_NAMES: Record<HeliosComponentStatusType, string> = {
-	experimental: "WIP",
-	nominal: "Ok",
-	stable: "Stable",
-}
-
-const TYPE_NAMES: Record<HeliosComponentCategoryType, string> = {
-	content: "Content",
-	pattern: "Pattern",
-	core: "Core",
-	layout: "Layout",
-}
 
 const WorkshopMenu: FC = () => {
 	const pathname = usePathname()
@@ -60,10 +26,10 @@ const WorkshopMenu: FC = () => {
 		setFilteredComponents([...Object.keys(COMPONENTS)])
 	}
 	const groupedComponents: Record<string, Array<string>> = filteredComponents.reduce((acc, component) => {
-		const { type } = COMPONENTS[component]
+		const { _type } = COMPONENTS[component]
 
-		acc[type] = acc[type] || []
-		acc[type].push(component)
+		acc[_type] = acc[_type] || []
+		acc[_type].push(component)
 
 		return acc
 	}, {})
@@ -104,19 +70,17 @@ const WorkshopMenu: FC = () => {
 				return (
 					<MenuCategory key={type} category={TYPE_NAMES[type]} isFolder={false}>
 						{components.map((component, key) => {
-							const { status } = COMPONENTS[component]
-							const statusColor = STATUS_COLORS[status]
-							const statusIcon = STATUS_ICONS[status]
+							const { status, color, icon, name } = getStatus(component)
 
 							return (
 								<Link href={`/components/${component}`} key={key}>
 									<MenuItem
 										title={component}
 										isActive={pathname === `/components/${component}`}
-										labelColor={statusColor}
+										labelColor={color}
 										labelHidden={true}
-										label={status !== "stable" ? STATUS_NAMES[status] : undefined}
-										labelIcon={statusIcon}
+										label={status !== "stable" ? name : undefined}
+										labelIcon={icon}
 									/>
 								</Link>
 							)

@@ -8,6 +8,8 @@ export interface TabsProps {
 }
 
 export const meta: HeliosAttributeMeta<TabsProps> = {
+	_status: "experimental",
+	_type: "layout",
 	active: {
 		type: "number",
 		isOptional: true,

@@ -7,6 +7,8 @@ export interface GridProps {
 }
 
 export const meta: HeliosAttributeMeta<GridProps> = {
+	_status: "experimental",
+	_type: "core",
 	columns: {
 		type: "number",
 	},

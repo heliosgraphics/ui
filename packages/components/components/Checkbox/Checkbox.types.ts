@@ -15,6 +15,8 @@ export interface BaseCheckboxProps {
 export interface CheckboxProps extends BaseCheckboxProps {}
 
 export const meta: HeliosAttributeMeta<CheckboxProps> = {
+	_status: "stable",
+	_type: "core",
 	id: {
 		type: "string",
 		isOptional: true,

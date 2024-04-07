@@ -13,6 +13,8 @@ export interface RadioProps {
 }
 
 export const meta: HeliosAttributeMeta<RadioProps> = {
+	_status: "stable",
+	_type: "core",
 	id: {
 		type: "string",
 		isOptional: true,

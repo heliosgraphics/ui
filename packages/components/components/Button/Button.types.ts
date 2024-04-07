@@ -20,6 +20,8 @@ export interface ButtonProps {
 }
 
 export const meta: HeliosAttributeMeta<ButtonProps> = {
+	_status: "stable",
+	_type: "core",
 	accept: {
 		type: "string",
 		isOptional: true,

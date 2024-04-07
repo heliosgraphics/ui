@@ -9,6 +9,8 @@ export interface AlertProps {
 }
 
 export const meta: HeliosAttributeMeta<AlertProps> = {
+	_status: "stable",
+	_type: "pattern",
 	children: {
 		type: "HeliosChildrenType",
 	},

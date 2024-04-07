@@ -13,6 +13,8 @@ export interface TileProps {
 }
 
 export const meta: HeliosAttributeMeta<TileProps> = {
+	_status: "nominal",
+	_type: "pattern",
 	color: { type: "HeliosColors" },
 	colorAccent: { type: "HeliosColors", isOptional: true },
 	icon: { type: "HeliosIconType" },
