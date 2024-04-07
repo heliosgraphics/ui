@@ -91,26 +91,23 @@ export const getRadius = (radiusValue?: ResponsiveRadiusType): string => {
 export const getSafeFlexProps = (props: any): Partial<FlexProps> => {
 	const {
 		gap,
+		isAround,
 		isBetween,
 		isCentered,
 		isColumn,
+		isColumnCentered,
 		isInline,
+		isStretch,
 		isWrapping,
 		isXCentered,
 		isYCentered,
-		isStretch,
-		yAlign,
 		padding,
 		paddingX,
 		paddingY,
-
-		// TODO 03b8 consolidate these
 		withBackground,
-		withAlternativeBackground,
 		withRadius,
-		withGlass,
-		isColumnCentered,
-		offsetTop,
+		xAlign,
+		yAlign,
 		...safeProps
 	} = props
 

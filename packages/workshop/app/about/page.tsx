@@ -20,7 +20,7 @@ TBD
 
 - [W3C](https://w3.org)
 - [ECMA International](https://ecma-international.org/)
-- [React (software)](https://en.wikipedia.org/wiki/React_(software))
+- [React](https://en.wikipedia.org/wiki/React_(software))
 - [\`@heliosgraphics/fractures\`](https://fractures.dev)
 	- [\`xss\`](http://jsxss.com/)
 - [\`@heliosgraphics/utils\`](https://fractures.dev)

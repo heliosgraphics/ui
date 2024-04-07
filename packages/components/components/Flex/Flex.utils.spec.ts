@@ -1,5 +1,5 @@
 import { it, describe, expect } from "vitest"
-import { getFlexUtility } from "./Flex.utils"
+import { getFlexUtility, getSafeFlexProps } from "./Flex.utils"
 import type { FlexProps } from "./Flex.types"
 
 describe("getFlexUtility", () => {
@@ -57,4 +57,39 @@ describe("getFlexUtility", () => {
 
 	it("Generates responsive radius scale", () =>
 		expect(getFlexUtility(MOCK_FLEX_RADIUS)).toEqual(MOCK_FLEX_RADIUS_CLASSES))
+})
+
+describe("getSafeFlexProps", () => {
+
+	const MOCK_FLEX_ATTRIBUTES: any = {
+		children: null,
+		className: 'xo',
+		draggable: true,
+		gap: 24,
+		isAround: true,
+		isBetween: true,
+		isCentered: true,
+		isColumn: true,
+		isColumnCentered: true,
+		isInline: true,
+		isStretch: true,
+		isWrapping: true,
+		isXCentered: true,
+		isYCentered: true,
+		padding: 16,
+		paddingX: 16,
+		paddingY: 16,
+		withBackground: true,
+		withRadius: 'normal',
+		xAlign: "start",
+		yAlign: "start",
+	}
+	const MOCK_FLEX_ATTRIBUTES_SAFE: FlexProps = {
+		children: null,
+		className: "xo",
+		draggable: true
+	}
+
+	it("Generates without invalid attributes", () =>
+		expect(getSafeFlexProps(MOCK_FLEX_ATTRIBUTES)).toEqual(MOCK_FLEX_ATTRIBUTES_SAFE))
 })
