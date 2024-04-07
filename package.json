@@ -16,7 +16,7 @@
 		"prettier:write": "prettier --no-semi --use-tabs --write ./packages/**",
 		"pub:icons": "pnpm publish --access public --filter @heliosgraphics/icons",
 		"pub:ui": "pnpm publish --access public --filter @heliosgraphics/ui",
-		"start:workshop": "concurrently --names \"⬜workshop,🔴types\" \"pnpm run dev:workshop\" \"pnpm run ts:watch\"",
+		"start:workshop": "concurrently \"pnpm run dev:workshop\" \"pnpm run ts:watch\" --names \"⬜works,🔴types\" -c \"black.bgYellow.bold,black.bgRed.bold\"",
 		"test:coverage": "NODE_ENV=test vitest run --coverage",
 		"test:update": "NODE_ENV=test vitest run --update",
 		"test:watch": "NODE_ENV=test vitest",
