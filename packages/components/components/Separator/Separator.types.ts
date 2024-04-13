@@ -10,7 +10,7 @@ export interface SeparatorProps {
 
 export const meta: HeliosAttributeMeta<SeparatorProps> = {
 	_status: "stable",
-	_type: "layout",
+	_type: "core",
 	className: {
 		type: "string",
 		isOptional: true,

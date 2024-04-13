@@ -20,7 +20,7 @@ const FONT_FAMILIES: Array<SelectItem> = [
 
 const TEXT = `In the hushed twilight, a single firefly dances amidst the whispering reeds, its glow a fleeting spark against the encroaching shadows.`
 
-const CODE_SAMPLE = `<Flex isColumn={true} gap={8} padding={16}>
+const CODE_SAMPLE = `<Flex isColumn={true} gap={8}>
 	<Text type={type} emphasis="primary" fontFamily={fontFamily}>{TEXT}</Text>
 	<Text type={type} emphasis="secondary" fontFamily={fontFamily}>{TEXT}</Text>
 	<Text type={type} emphasis="tertiary" fontFamily={fontFamily}>{TEXT}</Text>
