@@ -1,6 +1,6 @@
 {
 	"name": "@heliosgraphics/ui",
-	"version": "1.6.0",
+	"version": "1.6.1",
 	"type": "module",
 	"author": "03b8 <03b8@helios.graphics>",
 	"private": false,
@@ -27,6 +27,7 @@
 		"index.ts"
 	],
 	"dependencies": {
+		"@types/markdown-it": "^14.0.1",
 		"@heliosgraphics/fractures": "^6.3.0",
 		"@heliosgraphics/icons": "^0.0.20",
 		"@heliosgraphics/utils": "^5.3.9",
@@ -41,7 +42,6 @@
 	},
 	"devDependencies": {
 		"@testing-library/react": "latest",
-		"@types/markdown-it": "^14.0.1",
 		"@types/node": "latest",
 		"@types/react-dom": "latest",
 		"@types/react": "latest",
