@@ -3,3 +3,13 @@ declare module "*.module.css" {
 
 	export default classes
 }
+
+declare module "@heliosgraphics/icons/react/*" {
+	import { FunctionComponent, SVGProps } from "react"
+
+	const Icon: FunctionComponent<SVGProps<SVGSVGElement>>
+
+	export default Icon
+}
+
+declare module "@heliosgraphics/icons/react/ArrowDown"

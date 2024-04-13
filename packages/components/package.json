@@ -22,13 +22,14 @@
 		"./hooks/*.*",
 		"./types/*.*",
 		"./utils/*.*",
+		"globals.d.ts",
 		"components.css",
 		"index.ts"
 	],
 	"dependencies": {
 		"@heliosgraphics/fractures": "^6.3.0",
 		"@heliosgraphics/icons": "^0.0.14",
-		"@heliosgraphics/utils": "^5.3.7",
+		"@heliosgraphics/utils": "^5.3.9",
 		"@react-spring/web": "^9.7.3",
 		"@use-gesture/react": "^10.3.1",
 		"dayjs": "^1.11.10",
@@ -40,6 +41,7 @@
 	},
 	"devDependencies": {
 		"@testing-library/react": "latest",
+		"@types/markdown-it": "^14.0.1",
 		"@types/node": "latest",
 		"@types/react-dom": "latest",
 		"@types/react": "latest",

@@ -1,6 +1,6 @@
 {
 	"name": "@heliosgraphics/icons",
-	"version": "0.0.14",
+	"version": "0.0.2",
 	"author": "03b8 <03b8@helios.graphics>",
 	"license": "MIT",
 	"private": false,
@@ -12,7 +12,7 @@
 	"scripts": {
 		"build": "pnpm run export && pnpm run build:meta && pnpm run build:icons && pnpm run build:tsx",
 		"build:icons": "svgo -f ./src/icons -o ./out --config=./svgo.config.js",
-		"build:tsx": "npx @svgr/cli out --out-dir ./react",
+		"build:tsx": "npx @svgr/cli --typescript --ext tsx out --out-dir ./react",
 		"build:meta": "ts-node -O '{\"module\": \"commonjs\"}' ./build.meta.ts",
 		"export": "FIGMA_TOKEN=$(grep FIGMA_TOKEN .env | cut -d '=' -f2) figma-export components $(grep FIGMA_FILE .env | cut -d '=' -f2) -O @figma-export/output-components-as-svg --output ./src"
 	},

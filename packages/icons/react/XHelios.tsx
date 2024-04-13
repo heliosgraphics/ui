@@ -1,0 +1,12 @@
+import * as React from "react"
+import type { SVGProps } from "react"
+const SvgXHelios = (props: SVGProps<SVGSVGElement>) => (
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+		<path
+			fillRule="evenodd"
+			d="M2 4.946 4.946 2l4.97 4.97V2h4.167v4.765L18.848 2l2.946 2.946-4.97 4.97H22v4.167h-4.97l4.764 4.765-2.946 2.946-4.765-4.764V22H9.917v-5.176l-4.97 4.97L2 18.848l4.765-4.765H2V9.917h4.97z"
+			clipRule="evenodd"
+		/>
+	</svg>
+)
+export default SvgXHelios

@@ -79,10 +79,10 @@ importers:
         version: 6.3.0
       '@heliosgraphics/icons':
         specifier: ^0.0.14
-        version: link:../icons
+        version: 0.0.14
       '@heliosgraphics/utils':
-        specifier: ^5.3.7
-        version: 5.3.7
+        specifier: ^5.3.9
+        version: 5.3.9
       '@react-spring/web':
         specifier: ^9.7.3
         version: 9.7.3(react-dom@18.2.0)(react@18.2.0)
@@ -111,6 +111,9 @@ importers:
       '@testing-library/react':
         specifier: latest
         version: 14.2.1(react-dom@18.2.0)(react@18.2.0)
+      '@types/markdown-it':
+        specifier: ^14.0.1
+        version: 14.0.1
       '@types/node':
         specifier: latest
         version: 20.11.17
@@ -193,8 +196,8 @@ importers:
         specifier: workspace:*
         version: link:../components
       '@heliosgraphics/utils':
-        specifier: ^5.3.7
-        version: 5.3.7
+        specifier: ^5.3.9
+        version: 5.3.9
       '@vercel/analytics':
         specifier: ^1.2.2
         version: 1.2.2(next@14.2.1)(react@18.2.0)
@@ -764,8 +767,12 @@ packages:
     engines: {node: '>=20.11.1', npm: '>=10.2.4'}
     dev: false
 
-  /@heliosgraphics/utils@5.3.7:
-    resolution: {integrity: sha512-9KrNqY8uKishmVOVxUsVoMTBx/aE+tmb9X5opARoRf6IcjNzqLP+0Gh67kt6Y1SDegu/6iE/piq75RG57eUtgg==}
+  /@heliosgraphics/icons@0.0.14:
+    resolution: {integrity: sha512-squ66EnkPicdsL1cRjUeMCPQtAmraPhDgiIrN/ukl6cAlPkTz38VN9tN7B0v/hjEwUoREor4T6dyMuQ2jbevCA==}
+    dev: false
+
+  /@heliosgraphics/utils@5.3.9:
+    resolution: {integrity: sha512-rP0bE71bTn0dSyfr8YjZ6ngIxXWcX6U8fofEc2285sJm3RDqprrtrUJocLDOfNZa2k7I1hkm/tKACn5ftntslQ==}
     engines: {node: '>=20.11.1', npm: '>=10.2.4'}
     dependencies:
       xss: 1.0.15
@@ -1401,6 +1408,21 @@ packages:
 
   /@types/json5@0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/linkify-it@3.0.5:
+    resolution: {integrity: sha512-yg6E+u0/+Zjva+buc3EIb+29XEg4wltq7cSmd4Uc2EE/1nUVmxyzpX6gUXD0V8jIrG0r7YeOGVIbYRkxeooCtw==}
+    dev: true
+
+  /@types/markdown-it@14.0.1:
+    resolution: {integrity: sha512-6WfOG3jXR78DW8L5cTYCVVGAsIFZskRHCDo5tbqa+qtKVt4oDRVH7hyIWu1SpDQJlmIoEivNQZ5h+AGAOrgOtQ==}
+    dependencies:
+      '@types/linkify-it': 3.0.5
+      '@types/mdurl': 1.0.5
+    dev: true
+
+  /@types/mdurl@1.0.5:
+    resolution: {integrity: sha512-6L6VymKTzYSrEf4Nev4Xa1LCHKrlTlYCBMTlQKFuddo1CvQcE52I0mwfOJayueUC7MJuXOeHTcIU683lzd0cUA==}
     dev: true
 
   /@types/node@20.11.17:
