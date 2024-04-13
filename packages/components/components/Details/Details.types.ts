@@ -8,7 +8,7 @@ export interface DetailsProps {
 
 export const meta: HeliosAttributeMeta<DetailsProps> = {
 	_status: "nominal",
-	_type: "pattern",
+	_type: "core",
 	children: {
 		type: "HeliosChildrenType",
 	},

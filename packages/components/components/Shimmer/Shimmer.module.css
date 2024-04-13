@@ -6,7 +6,6 @@
 	background-color: var(--ui-bg-disabled);
 	background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
 	background-position: -256px 0;
-	border-radius: var(--radius-normal);
 	background-repeat: no-repeat;
 	background-size: 256px 100%;
 }

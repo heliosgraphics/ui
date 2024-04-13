@@ -6,7 +6,7 @@ import type { FC } from "react"
 const Shimmer: FC<ShimmerProps> = ({ isRounded, paddingTop, paddingBottom, height, width }) => {
 	const shimmerDivClasses: string = getClasses({
 		["radius-max"]: isRounded,
-		["radius-3"]: !isRounded,
+		["radius-small"]: !isRounded,
 	})
 
 	return (

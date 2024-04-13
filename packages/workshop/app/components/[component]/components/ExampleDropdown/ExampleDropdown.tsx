@@ -1,13 +1,22 @@
 "use client"
 
-import { Button, ButtonGroup, Dropdown, Flex, type ResultItem } from "@heliosgraphics/ui"
+import { Checkbox, Flex, type ResultItem } from "@heliosgraphics/ui"
 import { useState, type FC } from "react"
+import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
 import type { ExampleDropdownProps } from "./ExampleDropdown.types"
+
+const CODE_SAMPLE = `<ButtonGroup align={position}>
+	<Dropdown items={resultListItems} position={position}>
+		<Button value={position} intent="silent" icon="chevron-down" size="small" />
+	</Dropdown>
+</ButtonGroup>`
 
 const ExampleDropdown: FC<ExampleDropdownProps> = () => {
 	const [hasSpecials, setSpecials] = useState<boolean>(false)
+	const [position, setPosition] = useState<"left" | "right">("left")
 
 	const onToggleSpecials = () => setSpecials(!hasSpecials)
+	const onTogglePosition = () => setPosition(position === "left" ? "right" : "left")
 
 	const resultListItems: Array<ResultItem> = [
 		{ name: "First Item", icon: "bullseye" },
@@ -24,19 +33,25 @@ const ExampleDropdown: FC<ExampleDropdownProps> = () => {
 	]
 
 	return (
-		<Flex gap={16} isBetween={true}>
-			<ButtonGroup>
-				<Dropdown items={resultListItems} position="left">
-					<Button value="Left" intent="silent" icon="chevron-down" />
-				</Dropdown>
-				<Button value="Specials" intent="silent" icon="bullseye" onClick={onToggleSpecials} />
-			</ButtonGroup>
-			<Dropdown items={resultListItems} position="right">
-				<ButtonGroup>
-					<Button value="Right" intent="silent" icon="chevron-down" />
-				</ButtonGroup>
-			</Dropdown>
-		</Flex>
+		<>
+			<LiveComponent code={CODE_SAMPLE} scope={{ resultListItems, position }} />
+			<Flex gap={4} isColumn={true} padding={16}>
+				<Checkbox
+					label="Has Special Items"
+					isSmall={true}
+					intent="silent"
+					onChange={onToggleSpecials}
+					isChecked={hasSpecials}
+				/>
+				<Checkbox
+					label="Left Aligned"
+					isSmall={true}
+					intent="silent"
+					onChange={onTogglePosition}
+					isChecked={position === "left"}
+				/>
+			</Flex>
+		</>
 	)
 }
 
