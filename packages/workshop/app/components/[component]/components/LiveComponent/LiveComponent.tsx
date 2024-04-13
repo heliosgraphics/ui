@@ -1,6 +1,6 @@
 "use client"
 
-import { Button, ButtonGroup, Checkbox, Flex, Toggle } from "@heliosgraphics/ui"
+import { Flex } from "@heliosgraphics/ui"
 import { getClasses } from "@heliosgraphics/utils"
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
 import { useContext, useState, type FC } from "react"
@@ -51,7 +51,7 @@ const PRISM_THEME: PrismTheme = {
 
 const LiveComponent: FC<LiveComponentProps> = ({ code, scope, disabledBackground = false }) => {
 	const { intent, color, icon, iconAccent } = useContext(WorkshopContext)
-	const [hasBackground, setBackground] = useState<boolean>(!disabledBackground)
+	const [hasBackground, _] = useState<boolean>(!disabledBackground)
 
 	const liveComponentClasses: string = getClasses(styles.liveComponent, {
 		[styles.liveComponentAlt]: hasBackground,
@@ -59,7 +59,7 @@ const LiveComponent: FC<LiveComponentProps> = ({ code, scope, disabledBackground
 
 	const liveEditorClasses: string = getClasses(styles.liveEditor, "mono tiny", {})
 
-	const onBackgroundToggle = () => setBackground(!hasBackground)
+	// const onBackgroundToggle = () => setBackground(!hasBackground)
 	const mockFn = () => console.log("mock")
 
 	return (

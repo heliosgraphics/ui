@@ -50,6 +50,7 @@
 		"eslint-plugin-prettier": "latest",
 		"eslint": "latest",
 		"jsdom": "latest",
+		"next": "latest",
 		"prettier": "latest",
 		"react-dom": "latest",
 		"react": "latest",

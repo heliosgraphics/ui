@@ -2,7 +2,7 @@
 
 import { type FC } from "react"
 import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
-import { Flex, Markdown, Separator } from "@heliosgraphics/ui"
+import { Separator } from "@heliosgraphics/ui"
 import type { ExampleMarkdownProps } from "./ExampleMarkdown.types"
 
 const CODE_SAMPLE = `<Markdown text={INTRO_MD}/>`

@@ -1,17 +1,7 @@
-"use client"
-
-import { Text, Flex, Input, Table, Tile, ICONS, type HeliosIconType, Separator, Pill } from "@heliosgraphics/ui"
-import { useState, useContext, type ChangeEvent } from "react"
-import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
+import { Text, Flex, Tile, Separator, Pill } from "@heliosgraphics/ui"
 import Page from "workshop/app/components/Page"
 
 export default function Home() {
-	const { icon, setIcon } = useContext(WorkshopContext)
-	// const [emphasis, setEmphasis] = useState<HeliosEmphasisType>("primary")
-	const [filter, setFilter] = useState<string>("")
-	const onFilter = (event: ChangeEvent<HTMLInputElement>) => setFilter(event.target.value)
-	const filteredIcons: Array<HeliosIconType> = ICONS?.filter((icon) => icon.includes(filter))
-
 	return (
 		<Page title="Products">
 			<Flex isColumn={true}>
