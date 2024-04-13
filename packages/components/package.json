@@ -1,6 +1,6 @@
 {
 	"name": "@heliosgraphics/ui",
-	"version": "1.5.0",
+	"version": "1.6.0",
 	"type": "module",
 	"author": "03b8 <03b8@helios.graphics>",
 	"private": false,
@@ -28,7 +28,7 @@
 	],
 	"dependencies": {
 		"@heliosgraphics/fractures": "^6.3.0",
-		"@heliosgraphics/icons": "^0.0.14",
+		"@heliosgraphics/icons": "^0.0.20",
 		"@heliosgraphics/utils": "^5.3.9",
 		"@react-spring/web": "^9.7.3",
 		"@use-gesture/react": "^10.3.1",

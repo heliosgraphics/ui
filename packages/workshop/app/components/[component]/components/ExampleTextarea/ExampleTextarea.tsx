@@ -6,7 +6,7 @@ import type { ExampleTextareaProps } from "./ExampleTextarea.types"
 
 const ExampleTextarea: FC<ExampleTextareaProps> = () => {
 	const [textarea, setTextarea] = useState<string>("")
-	const onTextareaChange = (e) => setTextarea(e.target.value)
+	const onTextareaChange = (e: any) => setTextarea(e.target.value)
 
 	return (
 		<Textarea

@@ -19,7 +19,7 @@ const ExampleIcon: FC<ExampleIconProps> = () => {
 		return { name: emphasis, value: emphasis }
 	})
 
-	const onEmphasisChange = (event) => setEmphasis(event.target.value)
+	const onEmphasisChange = (event: any) => setEmphasis(event.target.value)
 
 	return (
 		<>

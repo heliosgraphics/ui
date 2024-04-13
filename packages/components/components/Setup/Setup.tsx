@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import type { FC } from "react"
 import type { HeliosThemes } from "../../types/themes"
 import type { SetupProps } from "./Setup.types"

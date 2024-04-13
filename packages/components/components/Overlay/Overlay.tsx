@@ -5,7 +5,7 @@ import type { OverlayProps } from "./Overlay.types"
 const Overlay: FC<OverlayProps> = ({ onClose, children, isVisible }) => {
 	if (!isVisible) return null
 
-	const hideFunction = (event) => {
+	const hideFunction = (event: any) => {
 		event.preventDefault()
 		event.stopPropagation()
 

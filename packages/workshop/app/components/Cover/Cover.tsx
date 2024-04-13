@@ -21,7 +21,7 @@ const Cover: FC<CoverProps> = () => {
 		[styles.coverAlt]: isComponentPage,
 	})
 
-	const drawGlitchSquare = (ctx, x, y, size, opacity) => {
+	const drawGlitchSquare = (ctx: any, x: any, y: any, size: any, opacity: any) => {
 		const bgColor = getComputedStyle(document.documentElement).getPropertyValue("--ui-bg-disabled").trim()
 
 		ctx.globalAlpha = opacity
@@ -30,7 +30,7 @@ const Cover: FC<CoverProps> = () => {
 		ctx.globalAlpha = 1.0
 	}
 
-	const generateGlitchArt = useCallback((ctx, width: number = 0, height: number = 0) => {
+	const generateGlitchArt = useCallback((ctx: any, width: number = 0, height: number = 0) => {
 		ctx.clearRect(0, 0, width, height)
 		const squareSize = 48
 		const squares: Array<any> = []

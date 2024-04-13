@@ -1,10 +1,10 @@
 import { Breadcrumb, type BreadCrumbItem, COMPONENTS } from "@heliosgraphics/ui"
-import { lazy } from "react"
+import { lazy, type FC } from "react"
 import Page from "../Page"
 import PropsTable from "../../components/PropsTable"
 import { getStatus } from "workshop/constants/components"
 
-const Home: any = async ({ children, params }) => {
+const Home: FC<any> = async ({ children, params }) => {
 	const { component } = params
 	const DemoComponent = lazy(() => import(`./components/Example${component}`))
 	const demoMeta = COMPONENTS[component]

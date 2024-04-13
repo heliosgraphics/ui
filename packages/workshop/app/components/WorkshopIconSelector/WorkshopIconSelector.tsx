@@ -1,17 +1,17 @@
 "use client"
 
 import { useContext, type FC } from "react"
-import { Button, ButtonGroup, Flex, Select, ICONS } from "@heliosgraphics/ui"
+import { Button, ButtonGroup, Flex, Select, ICONS, type HeliosIconType } from "@heliosgraphics/ui"
 import { WorkshopContext } from "../../contexts/WorkshopContext"
 import type { WorkshopIconSelectorProps } from "./WorkshopIconSelector.types"
 
-let lastIcon
+let lastIcon: HeliosIconType
 
 const WorkshopIconSelector: FC<WorkshopIconSelectorProps> = () => {
 	const { icon, setIcon } = useContext(WorkshopContext)
 
 	const icons = ICONS.map((icon) => ({ name: icon, value: icon }))
-	const onIconChange = (event) => setIcon(event.target.value)
+	const onIconChange = (event: any) => setIcon(event.target.value)
 
 	const onRandom = () => {
 		let randomIcon

@@ -4,7 +4,14 @@ import { useContext, useState, type FC, type ChangeEvent } from "react"
 import Link from "next/link"
 import { getStatus, TYPE_NAMES } from "workshop/constants/components"
 import { WorkshopContext } from "../../contexts/WorkshopContext"
-import { Menu, MenuItem, MenuCategory, MenuFilter, COMPONENTS } from "@heliosgraphics/ui"
+import {
+	Menu,
+	MenuItem,
+	MenuCategory,
+	MenuFilter,
+	COMPONENTS,
+	type HeliosComponentCategoryType,
+} from "@heliosgraphics/ui"
 import { usePathname } from "next/navigation"
 
 const WorkshopMenu: FC = () => {
@@ -13,8 +20,8 @@ const WorkshopMenu: FC = () => {
 	const { hasMenu } = useContext(WorkshopContext)
 	const [filter, setFilter] = useState<string>("")
 
-	const onValueChange = (event: ChangeEvent<HTMLInputElement>) => {
-		const newValue: string = event.target.value
+	const onValueChange = (event?: ChangeEvent<HTMLInputElement>) => {
+		const newValue: string = event?.target?.value || ""
 		const newFiltered = Object.keys(COMPONENTS).filter((c) => c.toLowerCase().includes(newValue.toLowerCase()))
 
 		setFilter(newValue)
@@ -25,7 +32,7 @@ const WorkshopMenu: FC = () => {
 		setFilter("")
 		setFilteredComponents([...Object.keys(COMPONENTS)])
 	}
-	const groupedComponents: Record<string, Array<string>> = filteredComponents.reduce((acc, component) => {
+	const groupedComponents: Record<string, Array<string>> = filteredComponents.reduce((acc: any, component) => {
 		const { _type } = COMPONENTS[component]
 
 		acc[_type] = acc[_type] || []
@@ -68,7 +75,7 @@ const WorkshopMenu: FC = () => {
 
 			{Object.entries(groupedComponents).map(([type, components]) => {
 				return (
-					<MenuCategory key={type} category={TYPE_NAMES[type]} isFolder={false}>
+					<MenuCategory key={type} category={TYPE_NAMES[type as HeliosComponentCategoryType]} isFolder={false}>
 						{components.map((component, key) => {
 							const { status, color, icon, name } = getStatus(component)
 

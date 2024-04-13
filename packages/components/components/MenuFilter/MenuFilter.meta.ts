@@ -5,7 +5,7 @@ export const meta: HeliosAttributeMeta<MenuFilterProps> = {
 	_status: "experimental",
 	_type: "layout",
 	onChange: {
-		type: "(event: ChangeEvent<HTMLInputElement>) => void",
+		type: "(event?: ChangeEvent<HTMLInputElement>) => void",
 	},
 	onClear: {
 		type: "HeliosOnClickType",

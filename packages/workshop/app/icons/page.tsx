@@ -9,7 +9,7 @@ export default function Home() {
 	const { icon, setIcon } = useContext(WorkshopContext)
 	// const [emphasis, setEmphasis] = useState<HeliosEmphasisType>("primary")
 	const [filter, setFilter] = useState<string>("")
-	const onFilter = (event: ChangeEvent<HTMLInputElement>) => setFilter(event.target.value)
+	const onFilter = (event?: ChangeEvent<HTMLInputElement>) => setFilter(event?.target?.value || "")
 	const filteredIcons: Array<HeliosIconType> = ICONS?.filter((icon) => icon.includes(filter))
 
 	return (

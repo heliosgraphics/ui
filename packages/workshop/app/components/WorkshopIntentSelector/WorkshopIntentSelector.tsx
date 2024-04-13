@@ -1,11 +1,11 @@
 "use client"
 
 import { useContext, type FC } from "react"
-import { Flex, Select, INTENTIONS, ButtonGroup, Button } from "@heliosgraphics/ui"
+import { Flex, Select, INTENTIONS, ButtonGroup, Button, type HeliosIntentionType } from "@heliosgraphics/ui"
 import { WorkshopContext } from "../../contexts/WorkshopContext"
 import type { WorkshopIntentSelectorProps } from "./WorkshopIntentSelector.types"
 
-let lastIntention
+let lastIntention: HeliosIntentionType
 
 const WorkshopIntentSelector: FC<WorkshopIntentSelectorProps> = () => {
 	const { intent, setIntent } = useContext(WorkshopContext)
@@ -14,7 +14,7 @@ const WorkshopIntentSelector: FC<WorkshopIntentSelectorProps> = () => {
 		return { name: intention, value: intention }
 	})
 
-	const onIntentChange = (event) => setIntent(event.target.value)
+	const onIntentChange = (event: any) => setIntent(event.target.value)
 
 	const onRandom = () => {
 		let randomIntention

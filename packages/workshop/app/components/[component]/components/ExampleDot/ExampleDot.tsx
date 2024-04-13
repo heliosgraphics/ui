@@ -13,7 +13,7 @@ const ExampleDot: FC<ExampleDotProps> = () => {
 		return { name: color, value: color }
 	})
 
-	const onColorChange = (event) => setColorAccent(event.target.value)
+	const onColorChange = (event: any) => setColorAccent(event.target.value)
 
 	return (
 		<Flex gap={16} isWrapping={true}>

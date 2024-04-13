@@ -9,8 +9,8 @@ const ExampleInput: FC<ExampleInputProps> = () => {
 	const [input2, setInput2] = useState<string>("")
 	const [isActive, setActive] = useState<boolean>(false)
 
-	const onInputChange = (event) => setInput(event.target.value)
-	const onInputChange2 = (event) => {
+	const onInputChange = (event: any) => setInput(event.target.value)
+	const onInputChange2 = (event: any) => {
 		const newValue: string = event.target.value
 		const isEmpty = !newValue
 

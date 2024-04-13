@@ -20,7 +20,7 @@ export const md = markdownIt({
 })
 
 // https://github.com/stiang/remove-markdown/blob/main/index.js
-export const cleanMarkdown = (md: string, options?) => {
+export const cleanMarkdown = (md: string, options?: any) => {
 	options = options || {}
 	options.listUnicodeChar = options.hasOwnProperty("listUnicodeChar") ? options.listUnicodeChar : false
 	options.stripListLeaders = options.hasOwnProperty("stripListLeaders") ? options.stripListLeaders : true

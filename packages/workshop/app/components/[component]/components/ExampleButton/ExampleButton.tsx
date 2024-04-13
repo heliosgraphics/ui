@@ -14,7 +14,7 @@ const ExampleButton: FC<ExampleButtonProps> = () => {
 	const [flair, setFlair] = useState<number>(0)
 
 	const onFlairToggle = () => setFlair(flair === 0 ? 4 : 0)
-	const onFileSelect = (event) => console.log({ event })
+	const onFileSelect = (event: any) => console.log({ event })
 
 	return (
 		<>

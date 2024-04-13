@@ -12,7 +12,7 @@ const CODE = `<Select
 
 const ExampleSelect: FC<ExampleSelectProps> = () => {
 	const [selectedItem, setSelectedItem] = useState<string>("")
-	const onSelectItem = (e) => setSelectedItem(e.target.value)
+	const onSelectItem = (event: any) => setSelectedItem(event.target.value)
 
 	const selectItems: Array<SelectItem> = [
 		{ name: "First", value: "first" },

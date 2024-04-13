@@ -30,8 +30,8 @@ const ExampleText: FC<ExampleTextProps> = () => {
 	const [type, setType] = useState<TextProps["type"]>("div")
 	const [fontFamily, setFontFamily] = useState<TextProps["fontFamily"]>("sans")
 
-	const onTextSizeChange = (event) => setType(event.target.value)
-	const onFontFamilyChange = (event) => setFontFamily(event.target.value)
+	const onTextSizeChange = (event: any) => setType(event.target.value)
+	const onFontFamilyChange = (event: any) => setFontFamily(event.target.value)
 
 	return (
 		<>

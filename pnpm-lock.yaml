@@ -78,8 +78,8 @@ importers:
         specifier: ^6.3.0
         version: 6.3.0
       '@heliosgraphics/icons':
-        specifier: ^0.0.14
-        version: 0.0.14
+        specifier: ^0.0.20
+        version: link:../icons
       '@heliosgraphics/utils':
         specifier: ^5.3.9
         version: 5.3.9
@@ -765,10 +765,6 @@ packages:
   /@heliosgraphics/fractures@6.3.0:
     resolution: {integrity: sha512-Khvt1ryjrQUrykq5czA3/cgPT3kzbTEYhwV5bYZ7XrYz9O9269Mr2p35zYpBSghFNpdSWf94d9wNHw50VVYySA==}
     engines: {node: '>=20.11.1', npm: '>=10.2.4'}
-    dev: false
-
-  /@heliosgraphics/icons@0.0.14:
-    resolution: {integrity: sha512-squ66EnkPicdsL1cRjUeMCPQtAmraPhDgiIrN/ukl6cAlPkTz38VN9tN7B0v/hjEwUoREor4T6dyMuQ2jbevCA==}
     dev: false
 
   /@heliosgraphics/utils@5.3.9:

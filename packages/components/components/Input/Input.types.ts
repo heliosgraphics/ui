@@ -15,7 +15,7 @@ export interface InputProps {
 	maxLength?: number
 	name?: string
 	onBlur?: (event?: FocusEvent<HTMLInputElement>) => unknown
-	onChange?: (event?: ChangeEvent<HTMLInputElement>) => unknown
+	onChange?: (event?: ChangeEvent<HTMLInputElement>) => void
 	onClear?: HeliosOnClickType
 	onFocus?: (event?: FocusEvent<HTMLInputElement>) => unknown
 	onKeyDown?: (event?: KeyboardEvent) => unknown

@@ -11,7 +11,7 @@ const ExampleLoading: FC<ExampleLoadingProps> = () => {
 		return { name: emphasis, value: emphasis, isDisabled: emphasis === "primary" }
 	})
 
-	const onEmphasisChange = (event) => setEmphasis(event.target.value)
+	const onEmphasisChange = (event: any) => setEmphasis(event.target.value)
 
 	return (
 		<Flex gap={8} isColumn={true}>

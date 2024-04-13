@@ -43,9 +43,9 @@ const ExampleHeading: FC<ExampleHeadingProps> = () => {
 	const [fontFamily, setFontFamily] = useState<TextProps["fontFamily"]>("sans")
 	const [fontWeight, setFontWeight] = useState<TextProps["fontWeight"] | undefined>(undefined)
 
-	const onEmphasisChange = (event) => setEmphasis(event.target.value)
-	const onFontFamilyChange = (event) => setFontFamily(event.target.value)
-	const onFontWeightChange = (event) => setFontWeight(event.target.value)
+	const onEmphasisChange = (event: any) => setEmphasis(event.target.value)
+	const onFontFamilyChange = (event: any) => setFontFamily(event.target.value)
+	const onFontWeightChange = (event: any) => setFontWeight(event.target.value)
 
 	return (
 		<>

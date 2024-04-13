@@ -44,7 +44,7 @@ const WorkshopContext = createContext<WorkshopProviderProps>({
 	theme: "system",
 })
 
-const WorkshopProvider = (props) => {
+const WorkshopProvider = (props: any) => {
 	const [color, setColor] = useState<HeliosColors>(DEFAULT_COLOR)
 	const [colorAccent, setColorAccent] = useState<HeliosColors>(DEFAULT_COLOR_ACCENT)
 	const [emphasis, setEmphasis] = useState<HeliosEmphasisType>("primary")
