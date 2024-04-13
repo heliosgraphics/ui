@@ -5,7 +5,7 @@ import { Checkbox, Flex, Separator } from "@heliosgraphics/ui"
 import type { ExampleTableProps } from "./ExampleTable.types"
 import LiveComponent from "../LiveComponent"
 
-const CODE_SAMPLE = `<Table hasBorder={hasBorder} isMonoHeader={isMonoHeader} isSmall={isSmall}>
+const CODE_SAMPLE = `<Table hasBorder={hasBorder} isMonoHeader={isMonoHeader}>
 	<tr>
 		<th>Color Mode</th>
 		<th>Description</th>
@@ -23,20 +23,17 @@ const CODE_SAMPLE = `<Table hasBorder={hasBorder} isMonoHeader={isMonoHeader} is
 const ExampleTable: FC<ExampleTableProps> = () => {
 	const [hasBorder, setHasBorder] = useState<boolean>(true)
 	const [isMonoHeader, setMonoHeader] = useState<boolean>(true)
-	const [isSmall, setSmall] = useState<boolean>(true)
 
 	const onToggleBorder = () => setHasBorder(!hasBorder)
 	const onToggleMono = () => setMonoHeader(!isMonoHeader)
-	const onToggleSmall = () => setSmall(!isSmall)
 
 	return (
 		<>
 			<Separator isLight={true} />
-			<LiveComponent code={CODE_SAMPLE} disabledBackground={true} scope={{ hasBorder, isMonoHeader, isSmall }} />
+			<LiveComponent code={CODE_SAMPLE} disabledBackground={true} scope={{ hasBorder, isMonoHeader }} />
 			<Separator isLight={true} />
 			<Flex gap={4} isColumn={true} padding={16}>
 				<Checkbox label="Has Border" isSmall={true} intent="silent" onChange={onToggleBorder} isChecked={hasBorder} />
-				<Checkbox label="As Small" isSmall={true} intent="silent" onChange={onToggleSmall} isChecked={isSmall} />
 				<Checkbox
 					label="With Mono Header"
 					isSmall={true}

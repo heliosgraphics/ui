@@ -27,6 +27,8 @@ const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 						const type: string = value["type"] || "Unknown"
 						const description: string = value["description"] || "-"
 
+						if (name.startsWith("_")) return null
+
 						return (
 							<tr key={key}>
 								<td>{name}</td>

@@ -10,7 +10,7 @@ export interface DialogProps {
 }
 
 export const meta: HeliosAttributeMeta<DialogProps> = {
-	_status: "nominal",
+	_status: "stable",
 	_type: "pattern",
 	children: {
 		type: "HeliosChildrenType",

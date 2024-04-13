@@ -1,4 +1,4 @@
-import { Breadcrumb, type BreadCrumbItem, Separator, COMPONENTS } from "@heliosgraphics/ui"
+import { Breadcrumb, type BreadCrumbItem, COMPONENTS } from "@heliosgraphics/ui"
 import { lazy } from "react"
 import Page from "../Page"
 import PropsTable from "../../components/PropsTable"
@@ -29,7 +29,6 @@ const Home: any = async ({ children, params }) => {
 		>
 			<DemoComponent />
 			{children}
-			<Separator isLight={true} />
 			<PropsTable meta={demoMeta} />
 		</Page>
 	)
