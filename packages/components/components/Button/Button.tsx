@@ -72,7 +72,7 @@ const Button: FC<ButtonProps> = ({
 		<Flex className={buttonClasses} isInline={true} isCentered={true} onClick={onClick} data-component="Button">
 			{!!icon && !isIconOnlyLoading && (
 				<Flex className={buttonIconClasses}>
-					<Icon name={icon} size={BUTTON_ICON_SIZE[size || "normal"]} />
+					<Icon icon={icon} size={BUTTON_ICON_SIZE[size || "normal"]} />
 				</Flex>
 			)}
 			{!!flair && (

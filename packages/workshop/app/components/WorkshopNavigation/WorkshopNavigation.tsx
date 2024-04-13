@@ -32,7 +32,7 @@ const WorkshopNavigation: FC = () => {
 					{hasMenu && <NavigationPanelButton />}
 					<Flex gap={4} isYCentered={true}>
 						<Link href="/" className="flex">
-							<img src="/emblem.svg" style={{ minWidth: "38px", width: "38px", height: "38px" }} />
+							<img src="/emblem.svg" style={{ minWidth: "38px", width: "38px", height: "38px" }} alt="Helios UI Logo" />
 						</Link>
 						<Flex isColumn={true}>
 							<Text type="small" fontWeight="semibold">

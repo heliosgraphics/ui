@@ -15,7 +15,6 @@ const WorkshopColorSelector: FC<WorkshopColorSelectorProps> = () => {
 	})
 
 	const onColorChange = (event) => setColor(event.target.value)
-	const onGray = () => setColor("gray")
 
 	const onRandom = () => {
 		let randomIntention

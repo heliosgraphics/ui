@@ -1,9 +1,16 @@
 import type { SetStateAction, Dispatch } from "react"
-import type { HeliosColors, HeliosThemes, HeliosIconType, HeliosIntentionType } from "@heliosgraphics/ui"
+import type {
+	HeliosColors,
+	HeliosThemes,
+	HeliosIconType,
+	HeliosIntentionType,
+	HeliosEmphasisType,
+} from "@heliosgraphics/ui"
 
 export interface WorkshopProviderProps {
 	color: HeliosColors
 	colorAccent: HeliosColors
+	emphasis: HeliosEmphasisType
 	hasCover: boolean
 	hasHeader: boolean
 	hasMenu: boolean
@@ -14,6 +21,7 @@ export interface WorkshopProviderProps {
 	setColor: Dispatch<SetStateAction<HeliosColors>>
 	setColorAccent: Dispatch<SetStateAction<HeliosColors>>
 	setCover: Dispatch<SetStateAction<boolean>>
+	setEmphasis: Dispatch<SetStateAction<HeliosEmphasisType>>
 	setHeader: Dispatch<SetStateAction<boolean>>
 	setIcon: Dispatch<SetStateAction<HeliosIconType>>
 	setIconAccent: Dispatch<SetStateAction<HeliosIconType>>

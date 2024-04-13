@@ -1,7 +1,13 @@
 "use client"
 
 import { useState, useEffect, createContext } from "react"
-import type { HeliosIntentionType, HeliosIconType, HeliosColors, HeliosThemes } from "@heliosgraphics/ui"
+import type {
+	HeliosIntentionType,
+	HeliosIconType,
+	HeliosEmphasisType,
+	HeliosColors,
+	HeliosThemes,
+} from "@heliosgraphics/ui"
 import type { WorkshopProviderProps } from "./WorkshopContext.types"
 
 const DEFAULT_COLOR = "gray" as const
@@ -17,6 +23,7 @@ const DEFAULT_PADDING = true as const
 const WorkshopContext = createContext<WorkshopProviderProps>({
 	color: DEFAULT_COLOR,
 	colorAccent: DEFAULT_COLOR_ACCENT,
+	emphasis: "primary",
 	hasCover: DEFAULT_COVER,
 	hasHeader: DEFAULT_HEADER,
 	hasMenu: DEFAULT_MENU,
@@ -24,28 +31,30 @@ const WorkshopContext = createContext<WorkshopProviderProps>({
 	icon: DEFAULT_ICON as HeliosIconType,
 	iconAccent: DEFAULT_ICON_ACCENT as HeliosIconType,
 	intent: DEFAULT_INTENT,
-	theme: "system",
 	setColor: () => null,
 	setColorAccent: () => null,
 	setCover: () => null,
+	setEmphasis: () => null,
 	setHeader: () => null,
 	setIcon: () => null,
 	setIconAccent: () => null,
 	setIntent: () => null,
 	setMenu: () => null,
 	setPadding: () => null,
+	theme: "system",
 })
 
 const WorkshopProvider = (props) => {
 	const [color, setColor] = useState<HeliosColors>(DEFAULT_COLOR)
 	const [colorAccent, setColorAccent] = useState<HeliosColors>(DEFAULT_COLOR_ACCENT)
-	const [intent, setIntent] = useState<HeliosIntentionType>(DEFAULT_INTENT)
-	const [icon, setIcon] = useState<HeliosIconType>(DEFAULT_ICON)
-	const [iconAccent, setIconAccent] = useState<HeliosIconType>(DEFAULT_ICON_ACCENT)
+	const [emphasis, setEmphasis] = useState<HeliosEmphasisType>("primary")
 	const [hasCover, setCover] = useState<boolean>(DEFAULT_COVER)
 	const [hasHeader, setHeader] = useState<boolean>(DEFAULT_HEADER)
 	const [hasMenu, setMenu] = useState<boolean>(DEFAULT_MENU)
 	const [hasPadding, setPadding] = useState<boolean>(DEFAULT_PADDING)
+	const [icon, setIcon] = useState<HeliosIconType>(DEFAULT_ICON)
+	const [iconAccent, setIconAccent] = useState<HeliosIconType>(DEFAULT_ICON_ACCENT)
+	const [intent, setIntent] = useState<HeliosIntentionType>(DEFAULT_INTENT)
 	const [theme, setTheme] = useState<HeliosThemes>("system")
 
 	const handleThemeChange = () => {
@@ -61,6 +70,7 @@ const WorkshopProvider = (props) => {
 			value={{
 				color,
 				colorAccent,
+				emphasis,
 				hasCover,
 				hasHeader,
 				hasMenu,
@@ -71,6 +81,7 @@ const WorkshopProvider = (props) => {
 				setColor,
 				setColorAccent,
 				setCover,
+				setEmphasis,
 				setHeader,
 				setIcon,
 				setIconAccent,

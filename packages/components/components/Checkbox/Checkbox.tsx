@@ -28,7 +28,7 @@ const Checkbox: FC<CheckboxProps> = ({ id, isChecked, isSmall, isDisabled, inten
 			<label className={checkboxLabelClasses} htmlFor={checkboxId}>
 				<input type="checkbox" checked={isChecked} onChange={onChange} disabled={isDisabled} id={checkboxId} />
 				<span className={styles.checkbox__checkboxMark} />
-				<Icon name="check" size={isSmall ? 14 : 18} className={styles.checkbox__checkboxIcon} />
+				<Icon icon="check" size={isSmall ? 14 : 18} className={styles.checkbox__checkboxIcon} />
 				<Text type={isSmall ? "tiny" : "small"} fontWeight="medium" emphasis={isDisabled ? "tertiary" : "primary"}>
 					{label}
 				</Text>

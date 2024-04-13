@@ -2,7 +2,7 @@ import type { HeliosIconType, HeliosEmphasisType } from "../.."
 
 export interface IconProps {
 	className?: string
-	name: HeliosIconType
+	icon: HeliosIconType
 	emphasis?: HeliosEmphasisType
 	size: number
 }

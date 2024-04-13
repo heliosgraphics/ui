@@ -38,10 +38,10 @@ const Tile: FC<TileProps> = ({ size, text, icon, onClick, iconAccent, color, col
 				</linearGradient>
 				<rect fill={`url(#${tileId})`} x={0} y={0} width={size} height={size} rx={isRound ? size : isRounded ? 8 : 0} />
 			</svg>
-			<Icon name={icon} size={size * 0.5} />
+			<Icon icon={icon} size={size * 0.5} />
 			{iconAccent && (
 				<Flex style={accentIconStyle} isCentered={true}>
-					<Icon name={iconAccent} size={size * 1} className={styles.tile__iconAccent} />
+					<Icon icon={iconAccent} size={size * 1} className={styles.tile__iconAccent} />
 				</Flex>
 			)}
 			{text && (

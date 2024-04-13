@@ -1,5 +1,5 @@
 import Page from "workshop/app/components/Page"
-import { Markdown, Flex, Separator, Tile, Text } from "@heliosgraphics/ui"
+import { Markdown, Text } from "@heliosgraphics/ui"
 
 const PAGE = `---
 ---

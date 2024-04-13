@@ -28,7 +28,7 @@ const Select: FC<SelectProps> = ({ selectedValue, onChange, isLabelHidden, isSma
 					})}
 				</select>
 				<Flex className={styles.select__icon} isCentered={true}>
-					<Icon name="chevron-down" size={20} />
+					<Icon icon="chevron-down" size={20} />
 				</Flex>
 			</Flex>
 		</Flex>

@@ -21,7 +21,7 @@ const ResultList: FC<ResultListProps> = ({ items }) => {
 					<li key={key} onClick={item.onClick} className={itemClasses}>
 						{item.icon && (
 							<Flex isCentered={true} className={styles.resultList__icon}>
-								<Icon size={18} name={item.icon} />
+								<Icon icon={item.icon} size={18} />
 							</Flex>
 						)}
 						<Flex isColumn={true} gap={1}>

@@ -221,8 +221,8 @@ const ICONS: Record<HeliosIconType, ReactElement> = {
 	x: <Icon_X />,
 }
 
-const Icon: FC<IconProps> = ({ name, className, emphasis, size }) => {
-	const IconShape = (): ReactElement => ICONS[name] || null
+const Icon: FC<IconProps> = ({ icon, className, emphasis, size }) => {
+	const IconShape = (): ReactElement => ICONS[icon] || null
 	const iconSizeStyle = {
 		height: size + "px",
 		minHeight: size + "px",

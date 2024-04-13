@@ -1,27 +1,34 @@
 "use client"
 
-import { Alert, Flex, Input, Tile, ICONS, type HeliosIconType } from "@heliosgraphics/ui"
-import { useState, useContext, type FC, type ChangeEvent } from "react"
+import { Flex, Select, EMPHASES, Separator } from "@heliosgraphics/ui"
+import { useContext, type FC } from "react"
 import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import type { ExampleIconProps } from "./ExampleIcon.types"
+import LiveComponent from "../LiveComponent"
+
+const MOCK_CODE = `<Flex gap={4}>
+	<Icon icon={icon} size={64} emphasis={emphasis}/>
+	<Icon icon={icon} size={32} emphasis={emphasis}/>
+	<Icon icon={icon} size={24} emphasis={emphasis}/>
+	<Icon icon={icon} size={16} emphasis={emphasis}/>
+</Flex>`
 
 const ExampleIcon: FC<ExampleIconProps> = () => {
-	const { icon, setIcon } = useContext(WorkshopContext)
-	// const [emphasis, setEmphasis] = useState<HeliosEmphasisType>("primary")
-	const [filter, setFilter] = useState<string>("")
-	const onFilter = (event: ChangeEvent<HTMLInputElement>) => setFilter(event.target.value)
-	const filteredIcons: Array<HeliosIconType> = ICONS?.filter((icon) => icon.includes(filter))
+	const { emphasis, setEmphasis } = useContext(WorkshopContext)
+	const items = EMPHASES.map((emphasis) => {
+		return { name: emphasis, value: emphasis }
+	})
 
-	// const items = EMPHASES.map((emphasis) => {
-	// 	return { name: emphasis, value: emphasis }
-	// })
-
-	// const onEmphasisChange = (event) => setEmphasis(event.target.value)
+	const onEmphasisChange = (event) => setEmphasis(event.target.value)
 
 	return (
-		<Flex isColumn={true} gap={16}>
-			x
-		</Flex>
+		<>
+			<LiveComponent code={MOCK_CODE} scope={{ emphasis }} />
+			<Separator isLight={true} />
+			<Flex isColumn={true} gap={4} padding={16}>
+				<Select items={items} onChange={onEmphasisChange} label={emphasis} />
+			</Flex>
+		</>
 	)
 }
 

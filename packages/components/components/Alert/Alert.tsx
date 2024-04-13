@@ -28,7 +28,7 @@ const Alert: FC<AlertProps> = ({ children, onClose, title, icon, intent }) => {
 				</ButtonGroup>
 			)}
 			<Flex className={alertClasses} padding={6} gap={6}>
-				{!!icon && <Icon name={icon} size={20} />}
+				{!!icon && <Icon icon={icon} size={20} />}
 				<Flex isColumn={true} isXCentered={true}>
 					{!!title && (
 						<Text type="div" fontWeight="semibold">

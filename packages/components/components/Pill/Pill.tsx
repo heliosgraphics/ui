@@ -49,7 +49,7 @@ const Pill: FC<PillProps> = ({
 			}}
 			gap={2}
 		>
-			{icon && <Icon size={PILL_ICON_SIZES[size]} name={icon} />}
+			{icon && <Icon size={PILL_ICON_SIZES[size]} icon={icon} />}
 			{!isLabelHidden && (
 				<Text
 					color="currentcolor"

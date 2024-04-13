@@ -8,7 +8,7 @@ export const meta: HeliosAttributeMeta<IconProps> = {
 		type: "string",
 		isOptional: true,
 	},
-	name: {
+	icon: {
 		type: "HeliosIconType",
 	},
 	emphasis: {
