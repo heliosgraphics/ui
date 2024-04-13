@@ -1,6 +1,6 @@
 {
 	"name": "@heliosgraphics/ui",
-	"version": "1.4.5",
+	"version": "1.5.0",
 	"type": "module",
 	"author": "03b8 <03b8@helios.graphics>",
 	"private": false,
@@ -50,7 +50,7 @@
 		"eslint-plugin-prettier": "latest",
 		"eslint": "latest",
 		"jsdom": "latest",
-		"next": "latest",
+		"next": "^14.2",
 		"prettier": "latest",
 		"react-dom": "latest",
 		"react": "latest",

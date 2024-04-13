@@ -36,7 +36,6 @@
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@vitejs/plugin-react": "latest",
 		"@vitest/coverage-v8": "latest",
-		"babel-eslint": "latest",
 		"concurrently": "latest",
 		"eslint-config-next": "latest",
 		"eslint-config-prettier": "latest",

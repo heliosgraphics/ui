@@ -14,7 +14,7 @@
 		"@heliosgraphics/utils": "^5.3.7",
 		"@heliosgraphics/ui": "workspace:*",
 		"@vercel/analytics": "^1.2.2",
-		"next": "latest",
+		"next": "^14.2",
 		"react-dom": "latest",
 		"react-live": "latest",
 		"react": "latest",
