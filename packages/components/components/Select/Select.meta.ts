@@ -1,0 +1,36 @@
+import type { HeliosAttributeMeta } from "../.."
+import type { SelectProps } from "./Select.types"
+
+export const meta: HeliosAttributeMeta<SelectProps> = {
+	_status: "stable",
+	_type: "core",
+	id: {
+		type: "string",
+		isOptional: true,
+	},
+	isDisabled: {
+		type: "boolean",
+		isOptional: true,
+	},
+	isLabelHidden: {
+		type: "boolean",
+		isOptional: true,
+	},
+	isSmall: {
+		type: "boolean",
+		isOptional: true,
+	},
+	items: {
+		type: "string",
+	},
+	label: {
+		type: "string",
+	},
+	onChange: {
+		type: "ChangeEventHandler<HTMLSelectElement>",
+	},
+	selectedValue: {
+		type: "string",
+		isOptional: true,
+	},
+}

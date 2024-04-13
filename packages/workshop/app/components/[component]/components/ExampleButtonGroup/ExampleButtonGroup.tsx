@@ -3,9 +3,7 @@
 import { useState, useContext, type FC } from "react"
 import { Button, ButtonGroup, Separator, Toggle, Flex, Text, type ButtonGroupProps } from "@heliosgraphics/ui"
 import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
-import { meta } from "@heliosgraphics/ui/components/ButtonGroup/ButtonGroup.types"
 import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
-import PropsTable from "workshop/app/components/PropsTable"
 
 import type { ExampleButtonGroupProps } from "./ExampleButtonGroup.types"
 
@@ -32,7 +30,6 @@ const ExampleButtonGroup: FC<ExampleButtonGroupProps> = () => {
 	return (
 		<>
 			<LiveComponent code={CODE_SAMPLE} />
-			<PropsTable meta={meta} />
 			<Flex isColumn={true} gap={12} padding={16}>
 				<ButtonGroup>
 					<Button size="small" value="Align" intent="silent" onClick={onJoinedToggle} />

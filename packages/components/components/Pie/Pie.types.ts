@@ -10,17 +10,3 @@ export interface PieProps {
 	data: Array<PieItem>
 	size: number
 }
-
-export const meta: HeliosAttributeMeta<PieProps> = {
-	_status: "stable",
-	_type: "core",
-	color: {
-		type: "HeliosColors",
-	},
-	data: {
-		type: "Array<PieItem>",
-	},
-	size: {
-		type: "number",
-	},
-}

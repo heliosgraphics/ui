@@ -5,7 +5,7 @@ interface HeliosAttributeItem {
 	type: string
 }
 
-export type HeliosComponentStatusType = "experimental" | "nominal" | "stable"
+export type HeliosComponentStatusType = "experimental" | "nominal" | "stable" | "internal"
 export type HeliosComponentCategoryType = "core" | "layout" | "content" | "pattern"
 
 export type HeliosAttributeMeta<T> = Record<keyof T, HeliosAttributeItem> & {

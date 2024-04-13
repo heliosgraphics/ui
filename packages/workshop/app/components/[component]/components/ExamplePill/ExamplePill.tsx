@@ -1,11 +1,9 @@
 "use client"
 
 import { Button, ButtonGroup, Flex, Pill, type HeliosSizeType } from "@heliosgraphics/ui"
-import { meta } from "@heliosgraphics/ui/components/Pill/Pill.types"
 import { useState, useContext, type FC } from "react"
 import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
-import PropsTable from "workshop/app/components/PropsTable"
 import type { ExamplePillProps } from "./ExamplePill.types"
 
 const SAMPLE_CODE = `<Pill label="Hello World" color="Purple"/>`
@@ -26,7 +24,6 @@ const ExamplePill: FC<ExamplePillProps> = () => {
 	return (
 		<>
 			<LiveComponent code={SAMPLE_CODE} />
-			<PropsTable meta={meta} />
 			<Flex gap={12} isColumn={true} padding={16}>
 				<Flex gap={4} isWrapping={true}>
 					<Pill

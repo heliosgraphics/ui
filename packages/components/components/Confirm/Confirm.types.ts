@@ -1,4 +1,4 @@
-import type { HeliosIconType, HeliosIntentionType, HeliosAttributeMeta } from "../.."
+import type { HeliosIconType, HeliosIntentionType } from "../.."
 
 export interface ConfirmProps {
 	cancelText: string
@@ -10,38 +10,4 @@ export interface ConfirmProps {
 	onCancel: (_?: unknown) => Promise<void> | void
 	onConfirm: (_?: unknown) => Promise<void> | void
 	title: string
-}
-
-export const meta: HeliosAttributeMeta<ConfirmProps> = {
-	_status: "stable",
-	_type: "pattern",
-	cancelText: {
-		type: "string",
-	},
-	confirmText: {
-		type: "string",
-	},
-	description: {
-		type: "string",
-		isOptional: true,
-	},
-	icon: {
-		type: "HeliosIconType",
-		isOptional: true,
-	},
-	intent: {
-		type: "HeliosIntentionType",
-	},
-	isOpen: {
-		type: "boolean",
-	},
-	onCancel: {
-		type: "(_?: unknown) => Promise<void> | void",
-	},
-	onConfirm: {
-		type: "(_?: unknown) => Promise<void> | void",
-	},
-	title: {
-		type: "string",
-	},
 }

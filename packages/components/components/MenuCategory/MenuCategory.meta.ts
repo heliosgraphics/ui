@@ -1,0 +1,23 @@
+import type { HeliosAttributeMeta } from "../.."
+import type { MenuCategoryProps } from "./MenuCategory.types"
+
+export const meta: HeliosAttributeMeta<MenuCategoryProps> = {
+	_status: "experimental",
+	_type: "layout",
+	category: {
+		type: "string",
+		isOptional: true,
+	},
+	children: {
+		type: "HeliosChildrenType",
+	},
+	isFolder: {
+		type: "boolean",
+		isOptional: true,
+	},
+	isFolderClosed: {
+		type: "boolean",
+		isOptional: true,
+		default: "false",
+	},
+}

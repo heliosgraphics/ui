@@ -1,10 +1,4 @@
-import type { ColumnProps, HeliosAttributeMeta } from "../.."
+import type { ColumnProps } from "../.."
 
-export interface BaseContentProps {}
-export type ContentProps = BaseContentProps & ColumnProps
-
-export const meta: HeliosAttributeMeta<BaseContentProps> = {
-	_extends: ["ColumnProps"],
-	_status: "nominal",
-	_type: "layout",
-}
+export interface ContentBaseProps {}
+export type ContentProps = ContentBaseProps & ColumnProps

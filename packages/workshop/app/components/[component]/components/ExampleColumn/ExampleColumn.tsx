@@ -1,8 +1,6 @@
 "use client"
 
-import { meta } from "@heliosgraphics/ui/components/Column/Column.types"
 import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
-import PropsTable from "workshop/app/components/PropsTable"
 import type { ExampleColumnProps } from "./ExampleColumn.types"
 import type { FC } from "react"
 
@@ -14,7 +12,6 @@ const ExampleColumn: FC<ExampleColumnProps> = () => {
 	return (
 		<>
 			<LiveComponent code={CODE_SAMPLE} />
-			<PropsTable meta={meta} />
 		</>
 	)
 }

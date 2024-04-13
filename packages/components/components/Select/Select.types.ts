@@ -1,5 +1,4 @@
 import type { ChangeEventHandler } from "react"
-import type { HeliosAttributeMeta } from "../.."
 
 export type SelectItem = {
 	name: string
@@ -16,38 +15,4 @@ export interface SelectProps {
 	label: string
 	onChange: ChangeEventHandler<HTMLSelectElement>
 	selectedValue?: string
-}
-
-export const meta: HeliosAttributeMeta<SelectProps> = {
-	_status: "stable",
-	_type: "core",
-	id: {
-		type: "string",
-		isOptional: true,
-	},
-	isDisabled: {
-		type: "boolean",
-		isOptional: true,
-	},
-	isLabelHidden: {
-		type: "boolean",
-		isOptional: true,
-	},
-	isSmall: {
-		type: "boolean",
-		isOptional: true,
-	},
-	items: {
-		type: "string",
-	},
-	label: {
-		type: "string",
-	},
-	onChange: {
-		type: "ChangeEventHandler<HTMLSelectElement>",
-	},
-	selectedValue: {
-		type: "string",
-		isOptional: true,
-	},
 }

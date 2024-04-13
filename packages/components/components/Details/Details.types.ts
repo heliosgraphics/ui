@@ -1,22 +1,7 @@
-import type { HeliosAttributeMeta, HeliosChildrenType } from "../.."
+import type { HeliosChildrenType } from "../.."
 
 export interface DetailsProps {
 	children: HeliosChildrenType
 	isOpen?: boolean
 	title: string
-}
-
-export const meta: HeliosAttributeMeta<DetailsProps> = {
-	_status: "nominal",
-	_type: "core",
-	children: {
-		type: "HeliosChildrenType",
-	},
-	isOpen: {
-		type: "boolean",
-		isOptional: true,
-	},
-	title: {
-		type: "string",
-	},
 }

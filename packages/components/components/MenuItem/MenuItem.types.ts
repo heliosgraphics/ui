@@ -1,4 +1,4 @@
-import type { HeliosColors, HeliosAttributeMeta, HeliosIconType } from "../.."
+import type { HeliosColors, HeliosIconType } from "../.."
 
 export interface MenuItemProps {
 	isActive?: boolean
@@ -7,33 +7,4 @@ export interface MenuItemProps {
 	labelHidden?: boolean
 	labelIcon?: HeliosIconType
 	title: string
-}
-
-export const meta: HeliosAttributeMeta<MenuItemProps> = {
-	_status: "experimental",
-	_type: "layout",
-	isActive: {
-		type: "boolean",
-		isOptional: true,
-	},
-	label: {
-		type: "string",
-		isOptional: true,
-	},
-	labelColor: {
-		type: "HeliosColors",
-		isOptional: true,
-		default: "aqua",
-	},
-	labelHidden: {
-		type: "boolean",
-		isOptional: true,
-	},
-	labelIcon: {
-		type: "HeliosIconType",
-		isOptional: true,
-	},
-	title: {
-		type: "string",
-	},
 }

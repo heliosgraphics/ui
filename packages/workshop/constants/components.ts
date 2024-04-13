@@ -10,18 +10,21 @@ export const STATUS_COLORS: Record<HeliosComponentStatusType, HeliosColors> = {
 	experimental: "pink",
 	nominal: "gray",
 	stable: "green",
+	internal: "gray",
 }
 
 export const STATUS_ICONS: Record<HeliosComponentStatusType, HeliosIconType> = {
 	experimental: "bolt",
 	nominal: "bolt",
 	stable: "check",
+	internal: "bullseye",
 }
 
 export const STATUS_NAMES: Record<HeliosComponentStatusType, string> = {
 	experimental: "Experimental",
 	nominal: "Nominal",
 	stable: "Stable",
+	internal: "Internal",
 }
 
 export const TYPE_NAMES: Record<HeliosComponentCategoryType, string> = {

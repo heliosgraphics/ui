@@ -1,11 +1,9 @@
 "use client"
 
 import { Button, ButtonGroup, Flex, Separator } from "@heliosgraphics/ui"
-import { meta } from "@heliosgraphics/ui/components/Button/Button.types"
 import { useContext, useState } from "react"
 import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
-import PropsTable from "workshop/app/components/PropsTable"
 import type { ExampleButtonProps } from "./ExampleButton.types"
 import type { FC } from "react"
 
@@ -21,7 +19,7 @@ const ExampleButton: FC<ExampleButtonProps> = () => {
 	return (
 		<>
 			<LiveComponent code={CODE_SAMPLE} />
-			<PropsTable meta={meta} />
+			<Separator isLight={true} />
 			<Flex isColumn={true} gap={12} padding={16}>
 				<ButtonGroup>
 					<Button intent={intent} value="Normal" flair={flair} />

@@ -1,5 +1,4 @@
 import type { ChangeEvent } from "react"
-import type { HeliosAttributeMeta } from "../.."
 
 export interface TextareaProps {
 	autoComplete?: boolean
@@ -15,22 +14,4 @@ export interface TextareaProps {
 	placeholder?: string
 	rows?: number
 	value?: string
-}
-
-export const meta: HeliosAttributeMeta<TextareaProps> = {
-	_status: "stable",
-	_type: "core",
-	autoComplete: { type: "boolean", isOptional: true },
-	autoFocus: { type: "boolean", isOptional: true },
-	helperText: { type: "string", isOptional: true },
-	id: { type: "string", isOptional: true },
-	isDisabled: { type: "boolean", isOptional: true },
-	isLabelHidden: { type: "boolean", isOptional: true },
-	label: { type: "string" },
-	maxLength: { type: "number", isOptional: true },
-	name: { type: "string", isOptional: true },
-	onChange: { type: "(_event?: ChangeEvent<HTMLTextAreaElement>) => unknown" },
-	placeholder: { type: "string", isOptional: true },
-	rows: { type: "number", isOptional: true },
-	value: { type: "string", isOptional: true },
 }
