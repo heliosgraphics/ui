@@ -12,7 +12,7 @@ const Box: FC<BoxProps> = ({ children, height }) => {
 				height: height ? `${height}px` : "inherit",
 			}}
 		>
-			<Text type="div" fontFamily="mono">
+			<Text type="small" fontFamily="mono">
 				{children}
 			</Text>
 		</Flex>

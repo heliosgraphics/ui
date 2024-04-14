@@ -2,6 +2,7 @@
 
 import { Flex } from "@heliosgraphics/ui"
 import { getClasses } from "@heliosgraphics/utils"
+import Box from "workshop/app/components/Box"
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
 import { useContext, useState, type FC } from "react"
 import { WorkshopContext } from "../../../../contexts/WorkshopContext/WorkshopContext"
@@ -66,7 +67,19 @@ const LiveComponent: FC<LiveComponentProps> = ({ code, scope, disabledBackground
 		<Flex isColumn={true}>
 			<LiveProvider
 				code={code}
-				scope={{ ...components, ...scope, intent, color, icon, iconAccent, isDisabled, isLoading, emphasis, mockFn }}
+				scope={{
+					...components,
+					...scope,
+					Box,
+					intent,
+					color,
+					icon,
+					iconAccent,
+					isDisabled,
+					isLoading,
+					emphasis,
+					mockFn,
+				}}
 				theme={PRISM_THEME}
 			>
 				<Flex isColumn={true} gap={12} padding={16} className={liveComponentClasses}>
