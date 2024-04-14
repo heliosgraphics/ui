@@ -6,7 +6,11 @@ import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import type { ExampleCheckboxProps } from "./ExampleCheckbox.types"
 import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
 
-const CODE_SAMPLE = `<Checkbox isChecked={isChecked} intent={intent} label="Fully Autonomous" onChange={onToggle} />`
+const CODE_SAMPLE = `<Checkbox
+	isChecked={isChecked}
+	intent={intent}
+	label="Fully Autonomous"
+	onChange={onToggle} />`
 
 const ExampleCheckbox: FC<ExampleCheckboxProps> = () => {
 	const { intent } = useContext(WorkshopContext)

@@ -18,7 +18,7 @@ const WorkshopDisabledSelector: FC<WorkshopDisabledSelectorProps> = () => {
 				label="Is Disabled"
 				isSmall={true}
 				onChange={onDisabledToggle}
-				isLabelHidden={false}
+				isLabelHidden={true}
 			/>
 		</Flex>
 	)

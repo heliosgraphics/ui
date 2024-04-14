@@ -3,7 +3,7 @@ import styles from "./Loading.module.css"
 import type { FC } from "react"
 import type { LoadingProps } from "./Loading.types"
 
-const Loading: FC<LoadingProps> = ({ className, size }) => {
+const Loading: FC<LoadingProps> = ({ className, size, emphasis }) => {
 	const rSize = size / 2
 	const cSize = rSize + 2
 	const dashSize = size + cSize
@@ -12,6 +12,9 @@ const Loading: FC<LoadingProps> = ({ className, size }) => {
 		[styles.loading32]: size === 10,
 		[styles.loading64]: size === 20,
 		[styles.loading128]: size === 40,
+		[styles.loadingPrimary]: emphasis === "primary",
+		[styles.loadingSecondary]: emphasis === "secondary",
+		[styles.loadingTertiary]: emphasis === "tertiary",
 	})
 
 	return (

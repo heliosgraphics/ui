@@ -19,6 +19,7 @@ export interface WorkshopProviderProps {
 	iconAccent: HeliosIconType
 	intent: HeliosIntentionType
 	isDisabled: boolean
+	isLoading: boolean
 	setColor: Dispatch<SetStateAction<HeliosColors>>
 	setColorAccent: Dispatch<SetStateAction<HeliosColors>>
 	setCover: Dispatch<SetStateAction<boolean>>
@@ -28,6 +29,7 @@ export interface WorkshopProviderProps {
 	setIcon: Dispatch<SetStateAction<HeliosIconType>>
 	setIconAccent: Dispatch<SetStateAction<HeliosIconType>>
 	setIntent: Dispatch<SetStateAction<HeliosIntentionType>>
+	setLoading: Dispatch<SetStateAction<boolean>>
 	setMenu: Dispatch<SetStateAction<boolean>>
 	setPadding: Dispatch<SetStateAction<boolean>>
 	theme: HeliosThemes

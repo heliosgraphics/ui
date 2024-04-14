@@ -5,7 +5,13 @@ import { useState, type FC } from "react"
 import LiveComponent from "../LiveComponent"
 import type { ExampleInputProps } from "./ExampleInput.types"
 
-const CODE_SAMPLE = `<Input value={input} isDisabled={isDisabled} label="Your Name" onChange={onInputChange} placeholder="Jane Doe" />`
+const CODE_SAMPLE = `<Input
+	value={input}
+	isDisabled={isDisabled}
+	isLoading={isLoading}
+	label="Your Name"
+	onChange={onInputChange}
+	placeholder="Jane Doe" />`
 
 const ExampleInput: FC<ExampleInputProps> = () => {
 	const [input, setInput] = useState<string>("")

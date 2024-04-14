@@ -16,6 +16,18 @@
 	animation: rotateIconLoading32 600ms linear forwards infinite;
 }
 
+.loadingPrimary {
+	color: var(--ui-text-primary);
+}
+
+.loadingSecondary {
+	color: var(--ui-text-secondary);
+}
+
+.loadingTertiary {
+	color: var(--ui-text-tertiary);
+}
+
 @keyframes showIconLoading {
 	from {
 		opacity: 0;

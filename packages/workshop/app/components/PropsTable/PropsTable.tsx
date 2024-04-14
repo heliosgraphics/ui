@@ -1,13 +1,14 @@
 import { Flex, Table, Pill } from "@heliosgraphics/ui"
-import WorkshopIntentSelector from "../WorkshopIntentSelector"
-import WorkshopIconSelector from "../WorkshopIconSelector"
-import WorkshopIconAccentSelector from "../WorkshopIconAccentSelector"
-import WorkshopColorSelector from "../WorkshopColorSelector"
-import WorkshopColorAccentSelector from "../WorkshopColorAccentSelector"
-import WorkshopEmphasisSelector from "../WorkshopEmphasisSelector"
-import WorkshopDisabledSelector from "../WorkshopDisabledSelector"
 import type { FC } from "react"
 import type { PropsTableProps } from "./PropsTable.types"
+import WorkshopColorAccentSelector from "../WorkshopColorAccentSelector"
+import WorkshopColorSelector from "../WorkshopColorSelector"
+import WorkshopDisabledSelector from "../WorkshopDisabledSelector"
+import WorkshopEmphasisSelector from "../WorkshopEmphasisSelector"
+import WorkshopIconAccentSelector from "../WorkshopIconAccentSelector"
+import WorkshopIconSelector from "../WorkshopIconSelector"
+import WorkshopIntentSelector from "../WorkshopIntentSelector"
+import WorkshopLoadingSelector from "../WorkshopLoadingSelector"
 
 const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 	if (!meta) return null
@@ -46,6 +47,7 @@ const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 										{type === "HeliosColors" && name === "colorAccent" && <WorkshopColorAccentSelector />}
 										{type === "HeliosEmphasisType" && name === "emphasis" && <WorkshopEmphasisSelector />}
 										{type === "boolean" && name === "isDisabled" && <WorkshopDisabledSelector />}
+										{type === "boolean" && name === "isLoading" && <WorkshopLoadingSelector />}
 									</Flex>
 								</td>
 								<td>{description}</td>

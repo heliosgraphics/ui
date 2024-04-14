@@ -20,6 +20,7 @@ const DEFAULT_INTENT = "advise" as const
 const DEFAULT_MENU = true as const
 const DEFAULT_PADDING = true as const
 const DEFAULT_DISABLED = false as const
+const DEFAULT_LOADING = false as const
 
 const WorkshopContext = createContext<WorkshopProviderProps>({
 	color: DEFAULT_COLOR,
@@ -33,6 +34,7 @@ const WorkshopContext = createContext<WorkshopProviderProps>({
 	iconAccent: DEFAULT_ICON_ACCENT as HeliosIconType,
 	intent: DEFAULT_INTENT,
 	isDisabled: DEFAULT_DISABLED,
+	isLoading: DEFAULT_LOADING,
 	setColor: () => null,
 	setColorAccent: () => null,
 	setCover: () => null,
@@ -42,6 +44,7 @@ const WorkshopContext = createContext<WorkshopProviderProps>({
 	setIcon: () => null,
 	setIconAccent: () => null,
 	setIntent: () => null,
+	setLoading: () => null,
 	setMenu: () => null,
 	setPadding: () => null,
 	theme: "system",
@@ -59,6 +62,7 @@ const WorkshopProvider = (props: any) => {
 	const [iconAccent, setIconAccent] = useState<HeliosIconType>(DEFAULT_ICON_ACCENT)
 	const [intent, setIntent] = useState<HeliosIntentionType>(DEFAULT_INTENT)
 	const [isDisabled, setDisabled] = useState<boolean>(DEFAULT_DISABLED)
+	const [isLoading, setLoading] = useState<boolean>(DEFAULT_LOADING)
 	const [theme, setTheme] = useState<HeliosThemes>("system")
 
 	const handleThemeChange = () => {
@@ -83,6 +87,7 @@ const WorkshopProvider = (props: any) => {
 				iconAccent,
 				intent,
 				isDisabled,
+				isLoading,
 				setColor,
 				setColorAccent,
 				setCover,
@@ -92,6 +97,7 @@ const WorkshopProvider = (props: any) => {
 				setIcon,
 				setIconAccent,
 				setIntent,
+				setLoading,
 				setMenu,
 				setPadding,
 				theme,
