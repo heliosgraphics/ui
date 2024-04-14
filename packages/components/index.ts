@@ -49,6 +49,7 @@ export { ThemeSwitcherLoading } from "./components/ThemeSwitcherLoading/ThemeSwi
 export { Tile } from "./components/Tile/Tile"
 export { Timestamp } from "./components/Timestamp/Timestamp"
 export { Toggle } from "./components/Toggle/Toggle"
+export { Tooltip } from "./components/Tooltip/Tooltip"
 export type { BreadCrumbItem } from "./components/Breadcrumb/Breadcrumb.types"
 export type { ButtonGroupProps } from "./components/ButtonGroup/ButtonGroup.types"
 export type { ButtonProps } from "./components/Button/Button.types"

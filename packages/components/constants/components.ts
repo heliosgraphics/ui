@@ -48,6 +48,7 @@ import { meta as metaThemeSwitcherLoading } from "../components/ThemeSwitcherLoa
 import { meta as metaTile } from "../components/Tile/Tile.meta"
 import { meta as metaTimestamp } from "../components/Timestamp/Timestamp.meta"
 import { meta as metaToggle } from "../components/Toggle/Toggle.meta"
+import { meta as metaTooltip } from "../components/Tooltip/Tooltip.meta"
 import type { HeliosAttributeMeta } from ".."
 
 export const COMPONENTS: Record<string, HeliosAttributeMeta<unknown>> = {
@@ -101,4 +102,5 @@ export const COMPONENTS: Record<string, HeliosAttributeMeta<unknown>> = {
 	Tile: metaTile,
 	Timestamp: metaTimestamp,
 	Toggle: metaToggle,
+	Tooltip: metaTooltip,
 }
