@@ -15,16 +15,16 @@
 		"@heliosgraphics/ui": "workspace:*",
 		"@vercel/analytics": "^1.2.2",
 		"next": "^14.2",
-		"react-dom": "latest",
-		"react-live": "latest",
-		"react": "latest",
+		"react-dom": "^18.2.0",
+		"react-live": "^4.1.6",
+		"react": "^18.2.0",
 		"workshop": "workspace:*"
 	},
 	"devDependencies": {
-		"@types/node": "latest",
-		"@types/react-dom": "latest",
-		"@types/react": "latest",
-		"prism-react-renderer": "latest",
-		"typescript": "latest"
+		"@types/node": "^20.12.7",
+		"@types/react-dom": "^18.2.25",
+		"@types/react": "^18.2.78",
+		"prism-react-renderer": "^2.3.1",
+		"typescript": "^5.4.5"
 	}
 }
