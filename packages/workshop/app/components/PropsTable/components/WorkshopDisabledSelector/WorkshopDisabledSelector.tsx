@@ -2,7 +2,7 @@
 
 import { useContext, type FC } from "react"
 import { Flex, Toggle } from "@heliosgraphics/ui"
-import { WorkshopContext } from "../../contexts/WorkshopContext"
+import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import type { WorkshopDisabledSelectorProps } from "./WorkshopDisabledSelector.types"
 
 const WorkshopDisabledSelector: FC<WorkshopDisabledSelectorProps> = () => {

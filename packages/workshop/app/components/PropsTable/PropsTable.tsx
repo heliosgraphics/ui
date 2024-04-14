@@ -1,14 +1,14 @@
 import { Flex, Table, Pill } from "@heliosgraphics/ui"
 import type { FC } from "react"
 import type { PropsTableProps } from "./PropsTable.types"
-import WorkshopColorAccentSelector from "../WorkshopColorAccentSelector"
-import WorkshopColorSelector from "../WorkshopColorSelector"
-import WorkshopDisabledSelector from "../WorkshopDisabledSelector"
-import WorkshopEmphasisSelector from "../WorkshopEmphasisSelector"
-import WorkshopIconAccentSelector from "../WorkshopIconAccentSelector"
-import WorkshopIconSelector from "../WorkshopIconSelector"
-import WorkshopIntentSelector from "../WorkshopIntentSelector"
-import WorkshopLoadingSelector from "../WorkshopLoadingSelector"
+import WorkshopColorAccentSelector from "./components/WorkshopColorAccentSelector"
+import WorkshopColorSelector from "./components/WorkshopColorSelector"
+import WorkshopDisabledSelector from "./components/WorkshopDisabledSelector"
+import WorkshopEmphasisSelector from "./components/WorkshopEmphasisSelector"
+import WorkshopIconAccentSelector from "./components/WorkshopIconAccentSelector"
+import WorkshopIconSelector from "./components/WorkshopIconSelector"
+import WorkshopIntentSelector from "./components/WorkshopIntentSelector"
+import WorkshopLoadingSelector from "./components/WorkshopLoadingSelector"
 
 const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 	if (!meta) return null
@@ -27,14 +27,17 @@ const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 				<tbody>
 					{Object.values(meta).map((value: any, key) => {
 						const name: string = Object.keys(meta)[key]
-						const type: string = value["type"] || "Unknown"
+						const type: string = value["type"] || meta[name].toString() || "Unknown"
 						const description: string = value["description"] || "-"
+						const isExtends: boolean = name === "_extends"
+						const isRequired: boolean = !isExtends && !value["isOptional"]
 
-						if (name.startsWith("_")) return null
+						// TODO better interface
+						if (name.startsWith("_") && !isExtends) return null
 
 						return (
 							<tr key={key}>
-								<td>{name}</td>
+								<td>{!isExtends ? name : <em>extends</em>}</td>
 								<td>
 									<Flex gap={4} isWrapping={true} isBetween={true}>
 										<Flex>
@@ -52,7 +55,7 @@ const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 								</td>
 								<td>{description}</td>
 								<td>
-									{!value["isOptional"] && (
+									{isRequired && (
 										<Flex>
 											<Pill color="gray" label="Yes" size="small" isMono={true} />
 										</Flex>

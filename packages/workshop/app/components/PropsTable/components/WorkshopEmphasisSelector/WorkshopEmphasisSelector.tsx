@@ -2,7 +2,7 @@
 
 import { useContext, type FC } from "react"
 import { Flex, Select, EMPHASES } from "@heliosgraphics/ui"
-import { WorkshopContext } from "../../contexts/WorkshopContext"
+import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import type { WorkshopEmphasisSelectorProps } from "./WorkshopEmphasisSelector.types"
 
 const WorkshopEmphasisSelector: FC<WorkshopEmphasisSelectorProps> = () => {

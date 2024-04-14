@@ -2,7 +2,7 @@
 
 import { useContext, type FC } from "react"
 import { Button, ButtonGroup, Flex, Select, ICONS, type HeliosIconType } from "@heliosgraphics/ui"
-import { WorkshopContext } from "../../contexts/WorkshopContext"
+import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import type { WorkshopIconAccentSelectorProps } from "./WorkshopIconAccentSelector.types"
 
 let lastIcon: HeliosIconType

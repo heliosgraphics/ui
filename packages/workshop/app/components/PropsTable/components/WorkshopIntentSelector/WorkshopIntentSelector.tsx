@@ -2,7 +2,7 @@
 
 import { useContext, type FC } from "react"
 import { Flex, Select, INTENTIONS, ButtonGroup, Button, type HeliosIntentionType } from "@heliosgraphics/ui"
-import { WorkshopContext } from "../../contexts/WorkshopContext"
+import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import type { WorkshopIntentSelectorProps } from "./WorkshopIntentSelector.types"
 
 let lastIntention: HeliosIntentionType
