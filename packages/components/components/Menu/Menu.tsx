@@ -6,7 +6,7 @@ import { getClasses } from "@heliosgraphics/utils"
 import type { MenuProps } from "./Menu.types"
 
 const Menu: FC<MenuProps> = ({ children }) => {
-	const menuClasses: string = getClasses(styles.menu, "flex flex-column helios-scrollbar helios-scrollbar--narrow")
+	const menuClasses: string = getClasses(styles.menu, "flex flex-column")
 
 	return (
 		<nav id="ui-menu" className={menuClasses} data-component="Menu">
