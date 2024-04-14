@@ -1,4 +1,4 @@
-import type { ReactElement, ReactNode } from "react"
+import type { ReactNode } from "react"
 
 export type HeliosOnClickType = (_?: unknown) => Promise<unknown> | void | null
-export type HeliosChildrenType = ReactNode | ReactElement | any
+export type HeliosChildrenType = ReactNode
