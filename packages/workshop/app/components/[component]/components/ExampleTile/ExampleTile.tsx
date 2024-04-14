@@ -84,7 +84,14 @@ const ExampleTile: FC<ExampleTileProps> = () => {
 
 				<Flex isColumn={true} gap={4}>
 					<Checkbox label="Round" isSmall={true} intent="silent" onChange={onToggleRound} isChecked={isRound} />
-					<Checkbox label="Rounded" isSmall={true} intent="silent" onChange={onToggleRounded} isChecked={isRounded} />
+					<Checkbox
+						label="Rounded"
+						isSmall={true}
+						intent="silent"
+						onChange={onToggleRounded}
+						isChecked={isRounded}
+						isDisabled={isRound}
+					/>
 					<Checkbox label="Text" isSmall={true} intent="silent" onChange={onToggleText} isChecked={!!text} />
 				</Flex>
 			</Flex>

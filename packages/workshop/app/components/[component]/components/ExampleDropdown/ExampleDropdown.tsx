@@ -1,6 +1,6 @@
 "use client"
 
-import { Checkbox, Flex, type ResultItem } from "@heliosgraphics/ui"
+import { Checkbox, Flex, Separator, type ResultItem } from "@heliosgraphics/ui"
 import { useState, type FC } from "react"
 import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
 import type { ExampleDropdownProps } from "./ExampleDropdown.types"
@@ -35,6 +35,7 @@ const ExampleDropdown: FC<ExampleDropdownProps> = () => {
 	return (
 		<>
 			<LiveComponent code={CODE_SAMPLE} scope={{ resultListItems, position }} />
+			<Separator isLight={true} />
 			<Flex gap={4} isColumn={true} padding={16}>
 				<Checkbox
 					label="Has Special Items"

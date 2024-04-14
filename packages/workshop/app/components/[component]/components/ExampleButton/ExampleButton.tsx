@@ -62,9 +62,6 @@ const ExampleButton: FC<ExampleButtonProps> = () => {
 				<Separator isLight={true} />
 				<ButtonGroup>
 					<Button intent="silent" value="Flair" onClick={onFlairToggle} />
-					<a href="https://google.com" tabIndex={-1}>
-						<Button intent="silent" value="Link" />
-					</a>
 				</ButtonGroup>
 				<Separator isLight={true} />
 				<ButtonGroup>

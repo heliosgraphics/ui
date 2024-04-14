@@ -21,12 +21,17 @@ const ExampleCheckbox: FC<ExampleCheckboxProps> = () => {
 	return (
 		<>
 			<LiveComponent code={CODE_SAMPLE} scope={{ isChecked, onToggle }} />
-			<Flex isColumn={true} gap={4} padding={16}>
-				<Checkbox isChecked={isChecked} intent={intent} label="Fully Autonomous" onChange={onToggle} />
-				<Checkbox isChecked={isChecked2} intent={intent} label="Geospatial View" onChange={onToggle2} />
-				<Checkbox isChecked={false} isDisabled={true} intent={intent} label="Suicide Burn" />
+			<Separator isLight={true} />
+			<Flex isColumn={true} gap={8} padding={16}>
+				<Flex isColumn={true} gap={4}>
+					<Checkbox isChecked={isChecked} intent={intent} label="Fully Autonomous" onChange={onToggle} />
+					<Checkbox isChecked={isChecked2} intent={intent} label="Geospatial View" onChange={onToggle2} />
+					<Checkbox isChecked={false} isDisabled={true} intent={intent} label="Suicide Burn" />
+				</Flex>
 				<Separator isLight={true} />
-				<Checkbox isChecked={isChecked3} intent={intent} isSmall={true} label="Life Support" onChange={onToggle3} />
+				<Flex isColumn={true} gap={4}>
+					<Checkbox isChecked={isChecked3} intent={intent} isSmall={true} label="Life Support" onChange={onToggle3} />
+				</Flex>
 			</Flex>
 		</>
 	)

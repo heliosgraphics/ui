@@ -30,15 +30,8 @@ const ExampleButtonGroup: FC<ExampleButtonGroupProps> = () => {
 	return (
 		<>
 			<LiveComponent code={CODE_SAMPLE} />
+			<Separator isLight={true} />
 			<Flex isColumn={true} gap={12} padding={16}>
-				<ButtonGroup>
-					<Button size="small" value="Align" intent="silent" onClick={onJoinedToggle} />
-					<Text type="tiny" fontFamily="mono">
-						{BUTTON_ALIGNS[alignIndex]}
-					</Text>
-					<Toggle label="Vertical" intent="silent" onChange={onVerticalToggle} isDisabled={alignIndex !== 3} />
-				</ButtonGroup>
-				<Separator />
 				<ButtonGroup isVertical={isVertical} align={BUTTON_ALIGNS[alignIndex] as ButtonGroupProps["align"]}>
 					<Button intent="silent" value="Cancel" isIconOnly={isVertical} icon="bullseye" />
 					<Button intent={intent} value="Start" isIconOnly={isVertical} icon="x" />
@@ -51,6 +44,14 @@ const ExampleButtonGroup: FC<ExampleButtonGroupProps> = () => {
 				<ButtonGroup isVertical={isVertical} align={BUTTON_ALIGNS[alignIndex] as ButtonGroupProps["align"]}>
 					<Button intent="silent" value="Cancel" size="tiny" isIconOnly={isVertical} icon="bullseye" />
 					<Button intent={intent} value="Start" size="tiny" isIconOnly={isVertical} icon="x" />
+				</ButtonGroup>
+				<Separator isLight={true} />
+				<ButtonGroup>
+					<Button size="small" value="Align" intent="silent" onClick={onJoinedToggle} />
+					<Text type="tiny" fontFamily="mono">
+						{BUTTON_ALIGNS[alignIndex]}
+					</Text>
+					<Toggle label="Vertical" intent="silent" onChange={onVerticalToggle} isDisabled={alignIndex !== 3} />
 				</ButtonGroup>
 			</Flex>
 		</>
