@@ -20,7 +20,7 @@
 
 .dropdown__nav {
 	position: absolute;
-	z-index: 20;
+	z-index: var(--z-index-8);
 
 	min-width: 240px;
 	opacity: 0;

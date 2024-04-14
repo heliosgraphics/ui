@@ -2,7 +2,7 @@
 	position: fixed;
 	left: 0;
 	top: 0;
-	z-index: var(--z-index-6);
+	z-index: var(--z-index-1);
 
 	height: 100dvh;
 	overflow: auto;

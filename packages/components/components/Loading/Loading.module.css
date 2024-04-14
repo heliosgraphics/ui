@@ -1,5 +1,5 @@
 .loading {
-	z-index: 1;
+	z-index: var(--z-index-1);
 
 	animation: showIconLoading var(--animation-fast) ease-in-out;
 }
