@@ -12,7 +12,7 @@
 }
 
 .progress::-webkit-progress-value {
-	background-color: var(--ui-text-intent-advise);
+	background-color: hsl(var(--blue-hue), var(--blue-saturation), 50%);
 	border-radius: 16px;
 	transition: all var(--animation-fast) var(--ease-in-out);
 }

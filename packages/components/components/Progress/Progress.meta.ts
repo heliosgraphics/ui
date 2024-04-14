@@ -2,7 +2,7 @@ import type { HeliosAttributeMeta } from "../.."
 import type { ProgressProps } from "./Progress.types"
 
 export const meta: HeliosAttributeMeta<ProgressProps> = {
-	_status: "stable",
+	_status: "nominal",
 	_type: "core",
 	max: {
 		type: "number",

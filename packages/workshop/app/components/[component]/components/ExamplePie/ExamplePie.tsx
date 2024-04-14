@@ -1,11 +1,17 @@
 "use client"
 
-import { Flex, Pie, type PieItem } from "@heliosgraphics/ui"
+import { type PieItem } from "@heliosgraphics/ui"
 import { type FC } from "react"
 import type { ExamplePieProps } from "./ExamplePie.types"
-// import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
+import LiveComponent from "../LiveComponent"
 
-const pieItems: Array<PieItem> = [
+const SAMPLE_CODE = `<Flex gap={8} isWrapping={true}>
+	<Pie size={64} data={PIE_ITEMS} color="yellow" />
+	<Pie size={64} data={PIE_ITEMS} color="green" />
+	<Pie size={64} data={PIE_ITEMS} color="aqua" />
+</Flex>`
+
+const PIE_ITEMS: Array<PieItem> = [
 	{ name: "X", value: 24 },
 	{ name: "First", value: 24 },
 	{ name: "Second", value: 34 },
@@ -13,16 +19,7 @@ const pieItems: Array<PieItem> = [
 ]
 
 const ExamplePie: FC<ExamplePieProps> = () => {
-	// const { color } = useContext(WorkshopContext)
-
-	return (
-		<Flex gap={8} isWrapping={true}>
-			<Pie size={64} data={pieItems} color="yellow" />
-			<Pie size={64} data={pieItems} color="green" />
-			<Pie size={64} data={pieItems} color="aqua" />
-			{/* <Pie size={128} data={pieItems} color={color} /> */}
-		</Flex>
-	)
+	return <LiveComponent code={SAMPLE_CODE} scope={{ PIE_ITEMS }} />
 }
 
 export default ExamplePie
