@@ -67,7 +67,13 @@ const WorkshopMenu: FC = () => {
 							<MenuItem title="Typography" isActive={pathname === "/typography"} />
 						</Link>
 						<Link href="/icons">
-							<MenuItem title="Icons" isActive={pathname === "/icons"} />
+							<MenuItem
+								title="Icons"
+								isActive={pathname === "/icons"}
+								label="Experimental"
+								labelColor="pink"
+								labelIcon="bolt"
+							/>
 						</Link>
 					</MenuCategory>
 				</>

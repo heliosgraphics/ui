@@ -12,6 +12,6 @@
 
 @media (min-width: 960px) {
 	.main:has(nav[data-component="Menu"]) section[data-component="Content"] {
-		padding-left: 256px;
+		padding-left: 260px;
 	}
 }
