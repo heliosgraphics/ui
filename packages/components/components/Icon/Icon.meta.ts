@@ -2,7 +2,7 @@ import type { HeliosAttributeMeta } from "../.."
 import type { IconProps } from "./Icon.types"
 
 export const meta: HeliosAttributeMeta<IconProps> = {
-	_status: "experimental",
+	_status: "nominal",
 	_type: "core",
 	className: {
 		type: "string",

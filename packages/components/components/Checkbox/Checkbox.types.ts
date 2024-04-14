@@ -6,6 +6,7 @@ export interface BaseCheckboxProps {
 	intent: HeliosIntentionType
 	isChecked?: boolean
 	isDisabled?: boolean
+	isLabelHidden?: boolean
 	isRequired?: boolean
 	isSmall?: boolean
 	label: string

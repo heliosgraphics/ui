@@ -1,8 +1,11 @@
 "use client"
 
-import { Flex, Input, type ResultItem } from "@heliosgraphics/ui"
+import { Flex, Input, Separator, type ResultItem } from "@heliosgraphics/ui"
 import { useState, type FC } from "react"
+import LiveComponent from "../LiveComponent"
 import type { ExampleInputProps } from "./ExampleInput.types"
+
+const CODE_SAMPLE = `<Input value={input} isDisabled={isDisabled} label="Your Name" onChange={onInputChange} placeholder="Jane Doe" />`
 
 const ExampleInput: FC<ExampleInputProps> = () => {
 	const [input, setInput] = useState<string>("")
@@ -44,27 +47,24 @@ const ExampleInput: FC<ExampleInputProps> = () => {
 	const onFocus = () => !!input2 && setActive(true)
 
 	return (
-		<Flex isColumn={true} gap={8}>
-			<Input value={input} label="Your Name" onChange={onInputChange} placeholder="Jane Doe" />
-			<Input
-				value={!!input ? "Disabled Content" : ""}
-				isDisabled={true}
-				label="Disabled Input"
-				placeholder="Disabled Placeholder"
-			/>
-			<Input
-				value={input2}
-				isLoading={true}
-				onFocus={onFocus}
-				onBlur={onBlur}
-				onChange={onInputChange2}
-				showResults={isActive}
-				placeholder="Placeholder"
-				label="Not Ready"
-				results={resultListItems}
-				helperText="Lorem ipsum dolor sit amet."
-			/>
-		</Flex>
+		<>
+			<LiveComponent code={CODE_SAMPLE} scope={{ input, onInputChange }} />
+			<Separator isLight={true} />
+			<Flex isColumn={true} gap={8} padding={16}>
+				<Input
+					value={input2}
+					isLoading={true}
+					onFocus={onFocus}
+					onBlur={onBlur}
+					onChange={onInputChange2}
+					showResults={isActive}
+					placeholder="Placeholder"
+					label="Favorite Places"
+					results={resultListItems}
+					helperText="Start typing to see how results work"
+				/>
+			</Flex>
+		</>
 	)
 }
 

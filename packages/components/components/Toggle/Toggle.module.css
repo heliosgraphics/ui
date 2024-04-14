@@ -97,7 +97,6 @@
 .toggle__toggleMark {
 	box-sizing: border-box;
 	height: var(--toggle-height);
-	margin-right: 8px;
 	overflow: hidden;
 	width: var(--toggle-width);
 

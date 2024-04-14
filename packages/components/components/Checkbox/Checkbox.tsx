@@ -5,7 +5,16 @@ import styles from "./Checkbox.module.css"
 import type { FC } from "react"
 import type { CheckboxProps } from "./Checkbox.types"
 
-const Checkbox: FC<CheckboxProps> = ({ id, isChecked, isSmall, isDisabled, intent, onChange, label }) => {
+const Checkbox: FC<CheckboxProps> = ({
+	id,
+	isChecked,
+	isLabelHidden = false,
+	isSmall,
+	isDisabled,
+	intent,
+	onChange,
+	label,
+}) => {
 	const checkboxId: string = id || useId()
 	const checkboxClasses = getClasses(styles.checkbox, {
 		[styles.checkboxAdvise]: intent === "advise",
@@ -29,9 +38,11 @@ const Checkbox: FC<CheckboxProps> = ({ id, isChecked, isSmall, isDisabled, inten
 				<input type="checkbox" checked={isChecked} onChange={onChange} disabled={isDisabled} id={checkboxId} />
 				<span className={styles.checkbox__checkboxMark} />
 				<Icon icon="check" size={isSmall ? 14 : 18} className={styles.checkbox__checkboxIcon} />
-				<Text type={isSmall ? "tiny" : "small"} fontWeight="medium" emphasis={isDisabled ? "tertiary" : "primary"}>
-					{label}
-				</Text>
+				{!isLabelHidden && (
+					<Text type={isSmall ? "tiny" : "small"} fontWeight="medium" emphasis={isDisabled ? "tertiary" : "primary"}>
+						{label}
+					</Text>
+				)}
 			</label>
 		</div>
 	)

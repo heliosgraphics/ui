@@ -18,9 +18,11 @@ export interface WorkshopProviderProps {
 	icon: HeliosIconType
 	iconAccent: HeliosIconType
 	intent: HeliosIntentionType
+	isDisabled: boolean
 	setColor: Dispatch<SetStateAction<HeliosColors>>
 	setColorAccent: Dispatch<SetStateAction<HeliosColors>>
 	setCover: Dispatch<SetStateAction<boolean>>
+	setDisabled: Dispatch<SetStateAction<boolean>>
 	setEmphasis: Dispatch<SetStateAction<HeliosEmphasisType>>
 	setHeader: Dispatch<SetStateAction<boolean>>
 	setIcon: Dispatch<SetStateAction<HeliosIconType>>

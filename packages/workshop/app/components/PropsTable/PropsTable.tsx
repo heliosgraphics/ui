@@ -5,6 +5,7 @@ import WorkshopIconAccentSelector from "../WorkshopIconAccentSelector"
 import WorkshopColorSelector from "../WorkshopColorSelector"
 import WorkshopColorAccentSelector from "../WorkshopColorAccentSelector"
 import WorkshopEmphasisSelector from "../WorkshopEmphasisSelector"
+import WorkshopDisabledSelector from "../WorkshopDisabledSelector"
 import type { FC } from "react"
 import type { PropsTableProps } from "./PropsTable.types"
 
@@ -44,6 +45,7 @@ const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 										{type === "HeliosColors" && name === "color" && <WorkshopColorSelector />}
 										{type === "HeliosColors" && name === "colorAccent" && <WorkshopColorAccentSelector />}
 										{type === "HeliosEmphasisType" && name === "emphasis" && <WorkshopEmphasisSelector />}
+										{type === "boolean" && name === "isDisabled" && <WorkshopDisabledSelector />}
 									</Flex>
 								</td>
 								<td>{description}</td>

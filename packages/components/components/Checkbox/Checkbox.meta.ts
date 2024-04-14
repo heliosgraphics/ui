@@ -19,6 +19,10 @@ export const meta: HeliosAttributeMeta<CheckboxProps> = {
 		type: "boolean",
 		isOptional: true,
 	},
+	isLabelHidden: {
+		type: "boolean",
+		isOptional: true,
+	},
 	isRequired: {
 		type: "boolean",
 		isOptional: true,

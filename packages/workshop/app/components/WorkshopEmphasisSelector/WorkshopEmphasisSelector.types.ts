@@ -1,1 +1,1 @@
-export interface WorkshopEmphasisSelectorProps { }
+export interface WorkshopEmphasisSelectorProps {}

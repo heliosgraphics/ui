@@ -5,7 +5,17 @@ import styles from "./Toggle.module.css"
 import type { FC } from "react"
 import type { ToggleProps } from "./Toggle.types"
 
-const Toggle: FC<ToggleProps> = ({ id, isChecked, isSmall, isRequired, isDisabled, intent, onChange, label }) => {
+const Toggle: FC<ToggleProps> = ({
+	id,
+	isChecked,
+	isSmall,
+	isRequired,
+	isDisabled,
+	isLabelHidden = false,
+	intent,
+	onChange,
+	label,
+}) => {
 	const toggleId: string = id || useId()
 	const toggleClasses = getClasses(styles.toggle, {
 		[styles.toggleAdvise]: intent === "advise",
@@ -21,7 +31,7 @@ const Toggle: FC<ToggleProps> = ({ id, isChecked, isSmall, isRequired, isDisable
 		[styles.toggleSmall]: isSmall,
 	})
 
-	const toggleLabelClasses = getClasses(styles.toggle__toggleLabel, "flex flex-y-center gap-2 flex-wrap")
+	const toggleLabelClasses = getClasses(styles.toggle__toggleLabel, "flex flex-y-center gap-4 flex-wrap")
 
 	return (
 		<div className={toggleClasses}>
@@ -35,9 +45,11 @@ const Toggle: FC<ToggleProps> = ({ id, isChecked, isSmall, isRequired, isDisable
 					id={toggleId}
 				/>
 				<span className={styles.toggle__toggleMark} />
-				<Text type={isSmall ? "tiny" : "small"} fontWeight="medium" emphasis={isDisabled ? "tertiary" : "primary"}>
-					{label}
-				</Text>
+				{!isLabelHidden && (
+					<Text type={isSmall ? "tiny" : "small"} fontWeight="medium" emphasis={isDisabled ? "tertiary" : "primary"}>
+						{label}
+					</Text>
+				)}
 			</label>
 		</div>
 	)
