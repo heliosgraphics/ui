@@ -1,6 +1,5 @@
 "use client"
 
-import { Flex, Select, EMPHASES, Separator } from "@heliosgraphics/ui"
 import { useContext, type FC } from "react"
 import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import type { ExampleIconProps } from "./ExampleIcon.types"
@@ -14,20 +13,11 @@ const MOCK_CODE = `<Flex gap={4}>
 </Flex>`
 
 const ExampleIcon: FC<ExampleIconProps> = () => {
-	const { emphasis, setEmphasis } = useContext(WorkshopContext)
-	const items = EMPHASES.map((emphasis) => {
-		return { name: emphasis, value: emphasis }
-	})
-
-	const onEmphasisChange = (event: any) => setEmphasis(event.target.value)
+	const { emphasis } = useContext(WorkshopContext)
 
 	return (
 		<>
 			<LiveComponent code={MOCK_CODE} scope={{ emphasis }} />
-			<Separator isLight={true} />
-			<Flex isColumn={true} gap={4} padding={16}>
-				<Select items={items} onChange={onEmphasisChange} label={emphasis} />
-			</Flex>
 		</>
 	)
 }
