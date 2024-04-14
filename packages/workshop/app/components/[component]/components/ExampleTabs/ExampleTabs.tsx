@@ -1,8 +1,9 @@
 "use client"
 
 import type { FC } from "react"
-import { Flex, Tabs } from "@heliosgraphics/ui"
+import { Flex, Separator, Tabs } from "@heliosgraphics/ui"
 import type { ExampleTabsProps } from "./ExampleTabs.types"
+import LiveComponent from "../LiveComponent"
 
 const ExampleTabs: FC<ExampleTabsProps> = () => {
 	const tabItems = ["First", "Second", "Third"]
@@ -19,7 +20,11 @@ const ExampleTabs: FC<ExampleTabsProps> = () => {
 		</Flex>,
 	]
 
-	return <Tabs items={tabItems} sections={tabSections} />
+	return (
+		<Flex padding={16}>
+			<Tabs items={tabItems} sections={tabSections} />
+		</Flex>
+	)
 }
 
 export default ExampleTabs
