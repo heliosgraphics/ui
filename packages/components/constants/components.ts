@@ -6,11 +6,13 @@ import { meta as metaCheckbox } from "../components/Checkbox/Checkbox.meta"
 import { meta as metaColumn } from "../components/Column/Column.meta"
 import { meta as metaConfirm } from "../components/Confirm/Confirm.meta"
 import { meta as metaContent } from "../components/Content/Content.meta"
+import { meta as metaDatePicker } from "../components/DatePicker/DatePicker.meta"
 import { meta as metaDetails } from "../components/Details/Details.meta"
 import { meta as metaDialog } from "../components/Dialog/Dialog.meta"
 import { meta as metaDonut } from "../components/Donut/Donut.meta"
 import { meta as metaDot } from "../components/Dot/Dot.meta"
 import { meta as metaDropdown } from "../components/Dropdown/Dropdown.meta"
+import { meta as metaFieldset } from "../components/Fieldset/Fieldset.meta"
 import { meta as metaFlex } from "../components/Flex/Flex.meta"
 import { meta as metaGrid } from "../components/Grid/Grid.meta"
 import { meta as metaHeading } from "../components/Heading/Heading.meta"
@@ -57,11 +59,13 @@ export const COMPONENTS: Record<string, HeliosAttributeMeta<unknown>> = {
 	Column: metaColumn,
 	Confirm: metaConfirm,
 	Content: metaContent,
+	DatePicker: metaDatePicker,
 	Details: metaDetails,
 	Dialog: metaDialog,
 	Donut: metaDonut,
 	Dot: metaDot,
 	Dropdown: metaDropdown,
+	Fieldset: metaFieldset,
 	Flex: metaFlex,
 	Grid: metaGrid,
 	Heading: metaHeading,
