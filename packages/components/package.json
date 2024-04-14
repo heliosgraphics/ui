@@ -57,7 +57,7 @@
 		"react-dom": "latest",
 		"react": "latest",
 		"typescript": "latest",
-		"vite": "latest",
-		"vitest": "latest"
+		"vite": "^5.2.8",
+		"vitest": "^1.5.0"
 	}
 }
