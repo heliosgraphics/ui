@@ -1,6 +1,7 @@
 // components
 export { Alert } from "./components/Alert/Alert"
 export { Breadcrumb } from "./components/Breadcrumb/Breadcrumb"
+export { Browser } from "./components/Browser/Browser"
 export { Button } from "./components/Button/Button"
 export { ButtonGroup } from "./components/ButtonGroup/ButtonGroup"
 export { Checkbox } from "./components/Checkbox/Checkbox"

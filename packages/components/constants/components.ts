@@ -1,5 +1,6 @@
 import { meta as metaAlert } from "../components/Alert/Alert.meta"
 import { meta as metaBreadcrumb } from "../components/Breadcrumb/Breadcrumb.meta"
+import { meta as metaBrowser } from "../components/Browser/Browser.meta"
 import { meta as metaButton } from "../components/Button/Button.meta"
 import { meta as metaButtonGroup } from "../components/ButtonGroup/ButtonGroup.meta"
 import { meta as metaCheckbox } from "../components/Checkbox/Checkbox.meta"
@@ -54,6 +55,7 @@ import type { HeliosAttributeMeta } from ".."
 export const COMPONENTS: Record<string, HeliosAttributeMeta<unknown>> = {
 	Alert: metaAlert,
 	Breadcrumb: metaBreadcrumb,
+	Browser: metaBrowser,
 	Button: metaButton,
 	ButtonGroup: metaButtonGroup,
 	Checkbox: metaCheckbox,
