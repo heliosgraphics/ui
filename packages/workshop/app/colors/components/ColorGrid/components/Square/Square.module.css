@@ -1,0 +1,20 @@
+.square {
+	min-width: 132px;
+	padding: 4px;
+
+	background-color: currentcolor;
+	border-radius: var(--radius-small);
+}
+
+.square small {
+	padding: 8px;
+
+	color: var(--text-color);
+}
+
+.squareLine {
+	height: 4px;
+	width: 100%;
+
+	border-radius: var(--radius-small);
+}

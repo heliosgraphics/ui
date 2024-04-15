@@ -1,5 +1,5 @@
 import { Flex, Text, INTENTION_COLOR_MAP, INTENT_DESCRIPTIONS } from "@heliosgraphics/ui"
-import Square from "../Square"
+import Square from "./components/Square"
 import type { FC, CSSProperties } from "react"
 import type { ColorGridProps } from "./ColorGrid.types"
 
@@ -23,7 +23,7 @@ const ColorGrid: FC<ColorGridProps> = ({ intention }) => {
 					<span className="capitalize">{intention}</span> &middot; {description}
 				</Text>
 			</Flex>
-			<Flex isWrapping={true}>
+			<Flex isWrapping={true} gap={2}>
 				{OPACITY_SCALE.map((scale, key) => {
 					return <Square key={key} lightness={scale} />
 				})}
