@@ -8,19 +8,11 @@ const PAGE = `---
 
 TBD
 
-### Concepts
-
-TBD
-
-- Colors map to intentions
-- Responsive
-- Markdown
-
 ### Dependencies
 
 - [W3C](https://w3.org)
 - [ECMA International](https://ecma-international.org/)
-- [React](https://en.wikipedia.org/wiki/React_(software))
+- [React](https://react.dev/), [React_(software)](https://en.wikipedia.org/wiki/React_(software))
 - [\`@heliosgraphics/fractures\`](https://fractures.dev)
 	- [\`xss\`](http://jsxss.com/)
 - [\`@heliosgraphics/utils\`](https://fractures.dev)
@@ -31,22 +23,15 @@ TBD
 - [\`markdown-it\`](https://markdown-it.github.io/)
 - [\`react\`](https://react.dev)
 - [\`react-dom\`](https://react.dev)
-- [\`react-plock\`](https://react-plock-with-nextjs.vercel.app/)
-
-###### Implementation
-
-- [Inter](https://rsms.me/inter/) and [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
-- [NextJS](https://nextjs.org/) 🤍`
+- [\`react-plock\`](https://react-plock-with-nextjs.vercel.app/)`
 
 export default function Home() {
 	return (
 		<Page title="About">
-			<Text type="paragraph">
+			{/* <Text type="paragraph">
 				Helios UI is the living guide for <a href="https://helios.graphics">Helios</a>&apos; visual and experience
 				standards.
-				<br />
-				It helps us ship nice products people love.
-			</Text>
+			</Text> */}
 			<Markdown text={PAGE} />
 		</Page>
 	)
