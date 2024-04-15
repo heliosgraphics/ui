@@ -1,6 +1,6 @@
 import type { HeliosFontFamilyTypes } from "@heliosgraphics/ui"
 
-export type Headinglist =
+export type HeadingList =
 	| 0
 	| 1
 	| 2
@@ -24,5 +24,5 @@ export interface HeadingInfoType {
 
 export interface HeadingInfoProps {
 	children: React.ReactNode
-	level: Headinglist
+	level: HeadingList
 }

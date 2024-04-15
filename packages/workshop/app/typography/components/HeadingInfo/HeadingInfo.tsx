@@ -1,8 +1,8 @@
 import React from "react"
 import { Flex, Text } from "@heliosgraphics/ui"
-import type { Headinglist, HeadingInfoType, HeadingInfoProps } from "./HeadingInfo.types"
+import type { HeadingList, HeadingInfoType, HeadingInfoProps } from "./HeadingInfo.types"
 
-const HEADING_INFO: Record<Headinglist, HeadingInfoType> = {
+const HEADING_INFO: Record<HeadingList, HeadingInfoType> = {
 	0: {
 		fontSize: 56,
 		lineHeight: 64,
@@ -87,7 +87,7 @@ const HeadingInfo: React.FC<HeadingInfoProps> = ({ children, level }) => {
 	const { fontSize, fontFamily, fontWeight, lineHeight } = HEADING_INFO[level]
 
 	return (
-		<Flex isColumn={true}>
+		<Flex isColumn={true} gap="px">
 			<div
 				className={`${fontFamily}`}
 				style={{

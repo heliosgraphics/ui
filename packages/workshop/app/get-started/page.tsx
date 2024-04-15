@@ -1,7 +1,7 @@
 import { Markdown } from "@heliosgraphics/ui"
 import Page from "workshop/app/components/Page"
 
-const PAGE = `Helios UI is safe for small and personal projects. We're following [semver](https://semver.org/) releases as underlying concepts may change—make sure to pin the package version.
+const PAGE = `Helios UI is safe for small and personal projects. We're following [SemVer](https://semver.org/) releases as underlying concepts may change—make sure to pin the package version.
 
 ---
 ---

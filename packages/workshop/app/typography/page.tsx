@@ -7,11 +7,7 @@ import HeadingInfo from "./components/HeadingInfo"
 const TypographyPage = () => {
 	return (
 		<Page title="Typography">
-			<Text type="paragraph">
-				Helios UI is using <b>Inter</b> and <b>Jetbrains Mono</b> for sans and mono fonts respectively. Both are free,
-				open source and designed for user interfaces. 🤍
-			</Text>
-			<Flex gap={12} isWrapping={true}>
+			<Flex gap={12} isWrapping={true} isColumn={true}>
 				<Alphabet family="sans" />
 				<Alphabet family="mono" />
 			</Flex>
