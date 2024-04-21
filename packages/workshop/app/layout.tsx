@@ -34,10 +34,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 					<Main>
 						<WorkshopNavigation />
 						<WorkshopMenu />
-						<WorkshopContent>
-							<Cover />
-							{children}
-						</WorkshopContent>
+						{/* <WorkshopContent> */}
+						{/* <Cover /> */}
+						{children}
+						{/* </WorkshopContent> */}
 					</Main>
 					<Analytics />
 				</WorkshopProvider>

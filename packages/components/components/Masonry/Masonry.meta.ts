@@ -7,4 +7,13 @@ export const meta: HeliosAttributeMeta<MasonryProps> = {
 	children: {
 		type: "HeliosChildrenType",
 	},
+	brakepoints: {
+		type: "[number, number, number]",
+	},
+	columns: {
+		type: "[number, number, number]",
+	},
+	gap: {
+		type: "[number, number, number]",
+	},
 }
