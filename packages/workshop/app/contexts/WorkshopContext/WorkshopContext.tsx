@@ -13,7 +13,7 @@ import type { WorkshopProviderProps } from "./WorkshopContext.types"
 const DEFAULT_COLOR = "gray" as const
 const DEFAULT_COLOR_ACCENT = "orange" as const
 const DEFAULT_COVER = true as const
-const DEFAULT_HEADER = false as const
+const DEFAULT_HEADER = true as const
 const DEFAULT_ICON = "robot" as HeliosIconType
 const DEFAULT_ICON_ACCENT = "bolt" as HeliosIconType
 const DEFAULT_INTENT = "advise" as const
