@@ -7,6 +7,7 @@ import { Tiny } from "./components/Tiny/Tiny"
 import { type FC } from "react"
 import styles from "./Text.module.css"
 import type { TextProps } from "./Text.types"
+import { Micro } from "./components/Micro/Micro"
 
 const Text: FC<TextProps> = (props) => {
 	const textClasses: string = getClasses(props.className, styles.text, {
@@ -44,6 +45,8 @@ const Text: FC<TextProps> = (props) => {
 			return <Small {...baseTextProps} />
 		case "tiny":
 			return <Tiny {...baseTextProps} />
+		case "micro":
+			return <Micro {...baseTextProps} />
 		default:
 			return <Div {...baseTextProps} />
 	}

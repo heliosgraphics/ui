@@ -37,6 +37,7 @@
 	--font-size-p: 16px;
 	--font-size-small: 14px;
 	--font-size-tiny: 12px;
+	--font-size-micro: 10px;
 
 	--line-height-h1: 44px;
 	--line-height-h2: 40px;
@@ -47,6 +48,7 @@
 	--line-height-p: 24px;
 	--line-height-small: 22px;
 	--line-height-tiny: 18px;
+	--line-height-micro: 14px;
 
 	--font-family-sans: "InterVariable", "Inter", -apple-system, "Helvetica Neue", Arial, sans-serif;
 	--font-family-mono: "JetBrains Mono", courier, monospace;

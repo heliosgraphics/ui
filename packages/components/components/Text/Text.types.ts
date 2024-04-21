@@ -11,7 +11,7 @@ export interface TextBaseProps {
 	lineClamp?: 1 | 2 | 3
 	textAlign?: "left" | "right" | "center" | "justify"
 	textDecoration?: "delete" | "overline" | "underline" | "capitalize" | "lowercase" | "uppercase"
-	type: "tiny" | "small" | "paragraph" | "div"
+	type: "micro" | "tiny" | "small" | "paragraph" | "div"
 	whiteSpace?: "pre" | "pre-line" | "pre-wrap" | "nowrap"
 	wordWrap?: "break-word"
 }

@@ -1,3 +1,5 @@
+"use client"
+
 import {
 	Button,
 	Content,
@@ -15,33 +17,45 @@ import {
 } from "@heliosgraphics/ui"
 import DebugSelector from "./components/DebugSelector"
 import Cover from "./components/Cover"
+import { useContext } from "react"
 import uiPackage from "@heliosgraphics/ui/package.json"
+import { WorkshopContext } from "./contexts/WorkshopContext"
+import { DashboardCard } from "./components/DashboardCard"
 
 export default function Home({}) {
+	const { hasPadding } = useContext(WorkshopContext)
+
+	const componentCount: number = Object.keys(COMPONENTS).length
 	const stableComponentCount: number = Object.values(COMPONENTS).filter((c) => c._status === "stable").length
 	const experimentalComponentCount: number = Object.values(COMPONENTS).filter(
 		(c) => c._status === "experimental",
 	).length
 
+	const stableComponentsPercent: number = Math.floor((componentCount / 100) * stableComponentCount)
+	const experimentalComponentsPercent: number = Math.floor((componentCount / 100) * experimentalComponentCount)
+
 	return (
-		<Content width={1200} padding={8}>
-			<Masonry brakepoints={[760, 1280, 1280]} gap={[8, 8, 8]} columns={[1, 2, 3]}>
-				<Flex isColumn={true} withBackground={true} withRadius="normal" padding={8}>
+		<Content width={1200} padding={hasPadding ? 2 : 0}>
+			<Masonry brakepoints={[760, 1280, 1280]} gap={[1, 1, 1]} columns={[1, 2, 3]}>
+				<DashboardCard>
 					<Heading level={0}>Helios UI</Heading>
-				</Flex>
-				<Flex isColumn={true} withBackground={true} withRadius="normal" padding={8}>
+				</DashboardCard>
+				<DashboardCard>
 					<Text type="small" fontFamily="mono" emphasis="secondary">
 						@heliosgraphics/ui<span className="non-selectable">@{uiPackage.version}</span>
 						<br />
 						<span className="non-selectable">Pre-Release</span>
 					</Text>
-				</Flex>
-				<Cover />
-				<Flex isColumn={true} gap={8} withBackground={true} withRadius="normal" padding={8}>
+				</DashboardCard>
+
+				<DashboardCard noPadding={true}>
+					<Cover />
+				</DashboardCard>
+				<DashboardCard>
 					<Flex gap={8}>
 						<Flex isColumn={true}>
 							<Text type="div" fontWeight="semibold">
-								{Object.keys(COMPONENTS).length}
+								{componentCount}
 							</Text>
 							<Text type="small" emphasis="secondary">
 								Components
@@ -51,12 +65,15 @@ export default function Home({}) {
 					<Separator isLight={true} />
 					<Flex gap={12} isYCentered={true}>
 						<Flex gap={6} className="wp-50" isYCentered={true}>
-							<Donut color="green" percentage={21} size={48}>
-								<Icon icon="asterisk" size={16} emphasis="tertiary" />
+							<Donut color="gray" percentage={stableComponentsPercent} size={48}>
+								<Text type="tiny" emphasis="tertiary">
+									{stableComponentCount}
+								</Text>
+								{/* <Icon icon="asterisk" size={16} emphasis="tertiary" /> */}
 							</Donut>
 							<Flex isColumn={true}>
 								<Text type="div" fontWeight="semibold">
-									{stableComponentCount}
+									{stableComponentsPercent}%
 								</Text>
 								<Text type="tiny" emphasis="tertiary">
 									Stable
@@ -65,12 +82,12 @@ export default function Home({}) {
 						</Flex>
 						<Separator isVertical={true} height={32} isLight={true} />
 						<Flex gap={6} className="wp-50" isYCentered={true}>
-							<Donut color="pink" percentage={21} size={48}>
+							<Donut color="pink" percentage={experimentalComponentsPercent} size={48}>
 								<Icon icon="bolt" size={16} emphasis="tertiary" />
 							</Donut>
 							<Flex isColumn={true}>
 								<Text type="div" fontWeight="semibold">
-									{experimentalComponentCount}
+									{experimentalComponentsPercent}%
 								</Text>
 								<Text type="tiny" emphasis="tertiary">
 									Experimental
@@ -78,19 +95,19 @@ export default function Home({}) {
 							</Flex>
 						</Flex>
 					</Flex>
-				</Flex>
-				<Flex isColumn={true} gap={4} withBackground={true} withRadius="normal" padding={8}>
+				</DashboardCard>
+				<DashboardCard>
 					<Text type="paragraph">
 						Baseline design system documenting our visual and experience standards. Always evolving, intentional and
 						opinionated.
 					</Text>
-				</Flex>
-				<Flex isColumn={true} gap={4} withBackground={true} withRadius="normal" padding={8}>
+				</DashboardCard>
+				<DashboardCard>
 					<Text type="small" emphasis="secondary">
 						Typescript components in React as a Module.
 					</Text>
-				</Flex>
-				<Flex isColumn={true} gap={4} withBackground={true} withRadius="normal" padding={8}>
+				</DashboardCard>
+				<DashboardCard>
 					<ButtonGroup>
 						<a href="/get-started" tabIndex={-1}>
 							<Button intent="advise" value="Start Building" icon="eye" />
@@ -99,10 +116,10 @@ export default function Home({}) {
 							<Button intent="silent" value="Contribute" icon="x-github" />
 						</a>
 					</ButtonGroup>
-				</Flex>
-				<Flex isColumn={true} withBackground={true} withRadius="normal" padding={8}>
+				</DashboardCard>
+				<DashboardCard>
 					<DebugSelector />
-				</Flex>
+				</DashboardCard>
 			</Masonry>
 		</Content>
 	)

@@ -41,6 +41,7 @@ const TypographyPage = () => {
 				<HeadingInfo level="monoParagraph">function() &#x7B;</HeadingInfo>
 				<HeadingInfo level="monoSmall">Nullam efficitur sapien.</HeadingInfo>
 				<HeadingInfo level="monoTiny">suspendisse potenti</HeadingInfo>
+				<HeadingInfo level="monoMicro">fermentum dolor el</HeadingInfo>
 			</Flex>
 		</Page>
 	)

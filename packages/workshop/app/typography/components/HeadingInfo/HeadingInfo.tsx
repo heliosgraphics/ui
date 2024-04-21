@@ -81,6 +81,12 @@ const HEADING_INFO: Record<HeadingList, HeadingInfoType> = {
 		fontFamily: "mono",
 		fontWeight: "normal",
 	},
+	monoMicro: {
+		fontSize: 10,
+		lineHeight: 16,
+		fontFamily: "mono",
+		fontWeight: "normal",
+	},
 }
 
 const HeadingInfo: React.FC<HeadingInfoProps> = ({ children, level }) => {

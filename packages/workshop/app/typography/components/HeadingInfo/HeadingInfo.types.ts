@@ -14,6 +14,7 @@ export type HeadingList =
 	| "monoParagraph"
 	| "monoSmall"
 	| "monoTiny"
+	| "monoMicro"
 
 export interface HeadingInfoType {
 	fontSize: number
