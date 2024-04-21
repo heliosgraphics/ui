@@ -10,6 +10,7 @@ import {
 	Flex,
 	Text,
 	Separator,
+	Clock,
 	Grid,
 	Heading,
 	Pill,
@@ -108,6 +109,9 @@ export default function Home({}) {
 							</Flex>
 						</Flex>
 					</Flex>
+				</DashboardCard>
+				<DashboardCard>
+					<Clock />
 				</DashboardCard>
 				<DashboardCard>
 					<Text type="small" emphasis="secondary">
