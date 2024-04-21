@@ -18,7 +18,7 @@ const DEFAULT_ICON = "robot" as HeliosIconType
 const DEFAULT_ICON_ACCENT = "bolt" as HeliosIconType
 const DEFAULT_INTENT = "advise" as const
 const DEFAULT_MENU = true as const
-const DEFAULT_PADDING = true as const
+const DEFAULT_PADDING = false as const
 const DEFAULT_DISABLED = false as const
 const DEFAULT_LOADING = false as const
 

@@ -31,23 +31,37 @@ export default function Home({}) {
 		(c) => c._status === "experimental",
 	).length
 
-	const stableComponentsPercent: number = Math.floor((componentCount / 100) * stableComponentCount)
-	const experimentalComponentsPercent: number = Math.floor((componentCount / 100) * experimentalComponentCount)
+	const stableComponentsPercent: number =
+		componentCount > 0 ? Math.floor((stableComponentCount / componentCount) * 100) : 0
+	const experimentalComponentsPercent: number =
+		componentCount > 0 ? Math.floor((experimentalComponentCount / componentCount) * 100) : 0
 
 	return (
 		<Content width={1200} padding={hasPadding ? 2 : 0}>
 			<Masonry brakepoints={[760, 1280, 1280]} gap={[1, 1, 1]} columns={[1, 2, 3]}>
-				<DashboardCard>
-					<Heading level={0}>Helios UI</Heading>
+				<DashboardCard isColumn={false}>
+					<Heading level={1}>Helios UI</Heading>
 				</DashboardCard>
-				<DashboardCard>
-					<Text type="small" fontFamily="mono" emphasis="secondary">
-						@heliosgraphics/ui<span className="non-selectable">@{uiPackage.version}</span>
-						<br />
-						<span className="non-selectable">Pre-Release</span>
+				<DashboardCard isColumn={true}>
+					<Text type="paragraph">
+						Baseline visual system documenting our design and experience standards. Intentional and always evolving.
 					</Text>
 				</DashboardCard>
-
+				<DashboardCard isColumn={false}>
+					<Icon icon="nazar" size={48} />
+					<Icon icon="bullseye" size={48} />
+					<Icon icon="eye-disabled" size={48} emphasis="tertiary" />
+				</DashboardCard>
+				<DashboardCard>
+					<ButtonGroup>
+						<a href="https://github.com/heliosgraphics/ui" tabIndex={-1}>
+							<Button intent="silent" value="Code" icon="x-github" />
+						</a>
+					</ButtonGroup>
+					<Text type="tiny" fontFamily="mono" emphasis="tertiary">
+						pre-release &middot; <a href="https://github.com/heliosgraphics/ui/issues">new issue</a> = love
+					</Text>
+				</DashboardCard>
 				<DashboardCard noPadding={true}>
 					<Cover />
 				</DashboardCard>
@@ -69,7 +83,6 @@ export default function Home({}) {
 								<Text type="tiny" emphasis="tertiary">
 									{stableComponentCount}
 								</Text>
-								{/* <Icon icon="asterisk" size={16} emphasis="tertiary" /> */}
 							</Donut>
 							<Flex isColumn={true}>
 								<Text type="div" fontWeight="semibold">
@@ -82,7 +95,7 @@ export default function Home({}) {
 						</Flex>
 						<Separator isVertical={true} height={32} isLight={true} />
 						<Flex gap={6} className="wp-50" isYCentered={true}>
-							<Donut color="pink" percentage={experimentalComponentsPercent} size={48}>
+							<Donut color="gray" percentage={experimentalComponentsPercent} size={48}>
 								<Icon icon="bolt" size={16} emphasis="tertiary" />
 							</Donut>
 							<Flex isColumn={true}>
@@ -97,12 +110,6 @@ export default function Home({}) {
 					</Flex>
 				</DashboardCard>
 				<DashboardCard>
-					<Text type="paragraph">
-						Baseline design system documenting our visual and experience standards. Always evolving, intentional and
-						opinionated.
-					</Text>
-				</DashboardCard>
-				<DashboardCard>
 					<Text type="small" emphasis="secondary">
 						Typescript components in React as a Module.
 					</Text>
@@ -112,10 +119,11 @@ export default function Home({}) {
 						<a href="/get-started" tabIndex={-1}>
 							<Button intent="advise" value="Start Building" icon="eye" />
 						</a>
-						<a href="https://github.com/heliosgraphics/ui" tabIndex={-1}>
-							<Button intent="silent" value="Contribute" icon="x-github" />
-						</a>
 					</ButtonGroup>
+					<Text type="small" fontFamily="mono" emphasis="secondary">
+						<span className="non-selectable">pnpm i </span>@heliosgraphics/ui
+						<span className="non-selectable">@{uiPackage.version}</span>
+					</Text>
 				</DashboardCard>
 				<DashboardCard>
 					<DebugSelector />
