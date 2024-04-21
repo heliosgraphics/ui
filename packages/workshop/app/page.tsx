@@ -8,6 +8,7 @@ import {
 	Flex,
 	Text,
 	Separator,
+	Grid,
 	Heading,
 	Pill,
 	COMPONENTS,
@@ -36,47 +37,46 @@ export default function Home({}) {
 					</Text>
 				</Flex>
 				<Cover />
-				<Flex gap={8} withBackground={true} withRadius="normal" padding={8}>
-					<Flex gap={4} isColumn={true}>
+				<Flex isColumn={true} gap={8} withBackground={true} withRadius="normal" padding={8}>
+					<Flex gap={8}>
 						<Flex isColumn={true}>
 							<Text type="div" fontWeight="semibold">
 								{Object.keys(COMPONENTS).length}
 							</Text>
-							<Text type="tiny" emphasis="secondary">
+							<Text type="small" emphasis="secondary">
 								Components
 							</Text>
 						</Flex>
-						<Donut color="orange" percentage={100} size={32}>
-							<Icon icon="asterisk" size={16} emphasis="tertiary" />
-						</Donut>
 					</Flex>
-					<Separator isVertical={true} height={64} isLight={true} />
-					<Flex gap={4} isColumn={true}>
-						<Flex isColumn={true}>
-							<Text type="div" fontWeight="semibold">
-								{stableComponentCount}
-							</Text>
-							<Text type="tiny" emphasis="secondary">
-								Stable
-							</Text>
+					<Separator isLight={true} />
+					<Flex gap={12} isYCentered={true}>
+						<Flex gap={6} className="wp-50" isYCentered={true}>
+							<Donut color="green" percentage={21} size={48}>
+								<Icon icon="asterisk" size={16} emphasis="tertiary" />
+							</Donut>
+							<Flex isColumn={true}>
+								<Text type="div" fontWeight="semibold">
+									{stableComponentCount}
+								</Text>
+								<Text type="tiny" emphasis="tertiary">
+									Stable
+								</Text>
+							</Flex>
 						</Flex>
-						<Donut color="green" percentage={21} size={32}>
-							<Icon icon="asterisk" size={16} emphasis="tertiary" />
-						</Donut>
-					</Flex>
-					<Separator isVertical={true} height={64} isLight={true} />
-					<Flex gap={4} isColumn={true}>
-						<Flex isColumn={true}>
-							<Text type="div" fontWeight="semibold">
-								{experimentalComponentCount}
-							</Text>
-							<Text type="tiny" emphasis="secondary">
-								Experimental
-							</Text>
+						<Separator isVertical={true} height={32} isLight={true} />
+						<Flex gap={6} className="wp-50" isYCentered={true}>
+							<Donut color="pink" percentage={21} size={48}>
+								<Icon icon="bolt" size={16} emphasis="tertiary" />
+							</Donut>
+							<Flex isColumn={true}>
+								<Text type="div" fontWeight="semibold">
+									{experimentalComponentCount}
+								</Text>
+								<Text type="tiny" emphasis="tertiary">
+									Experimental
+								</Text>
+							</Flex>
 						</Flex>
-						<Donut color="pink" percentage={21} size={32}>
-							<Icon icon="bolt" size={16} emphasis="tertiary" />
-						</Donut>
 					</Flex>
 				</Flex>
 				<Flex isColumn={true} gap={4} withBackground={true} withRadius="normal" padding={8}>
