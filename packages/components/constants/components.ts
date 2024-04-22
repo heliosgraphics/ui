@@ -1,9 +1,11 @@
+import type { HeliosAttributeMeta } from ".."
 import { meta as metaAlert } from "../components/Alert/Alert.meta"
 import { meta as metaBreadcrumb } from "../components/Breadcrumb/Breadcrumb.meta"
 import { meta as metaBrowser } from "../components/Browser/Browser.meta"
 import { meta as metaButton } from "../components/Button/Button.meta"
 import { meta as metaButtonGroup } from "../components/ButtonGroup/ButtonGroup.meta"
 import { meta as metaCheckbox } from "../components/Checkbox/Checkbox.meta"
+import { meta as metaClock } from "../components/Clock/Clock.meta"
 import { meta as metaColumn } from "../components/Column/Column.meta"
 import { meta as metaConfirm } from "../components/Confirm/Confirm.meta"
 import { meta as metaContent } from "../components/Content/Content.meta"
@@ -50,7 +52,6 @@ import { meta as metaTile } from "../components/Tile/Tile.meta"
 import { meta as metaTimestamp } from "../components/Timestamp/Timestamp.meta"
 import { meta as metaToggle } from "../components/Toggle/Toggle.meta"
 import { meta as metaTooltip } from "../components/Tooltip/Tooltip.meta"
-import type { HeliosAttributeMeta } from ".."
 
 export const COMPONENTS: Record<string, HeliosAttributeMeta<unknown>> = {
 	Alert: metaAlert,
@@ -59,6 +60,7 @@ export const COMPONENTS: Record<string, HeliosAttributeMeta<unknown>> = {
 	Button: metaButton,
 	ButtonGroup: metaButtonGroup,
 	Checkbox: metaCheckbox,
+	Clock: metaClock,
 	Column: metaColumn,
 	Confirm: metaConfirm,
 	Content: metaContent,
