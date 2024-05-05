@@ -60,7 +60,7 @@ export default function Home({}) {
 						</a>
 					</ButtonGroup>
 					<Text type="tiny" fontFamily="mono" emphasis="tertiary">
-						Developer Preview &middot; <a href="https://github.com/heliosgraphics/ui/issues">Leave Feedback</a>
+						Development Preview &middot; <a href="https://github.com/heliosgraphics/ui/issues">Leave Feedback</a>
 					</Text>
 				</DashboardCard>
 				<DashboardCard noPadding={true}>

@@ -27,37 +27,35 @@
 		"index.ts"
 	],
 	"dependencies": {
-		"@types/markdown-it": "^14.0.1",
+		"@types/markdown-it": "^14.1.1",
 		"@heliosgraphics/fractures": "^6.3.1",
 		"@heliosgraphics/icons": "^0.0.20",
 		"@heliosgraphics/utils": "^5.3.9",
 		"@react-spring/web": "^9.7.3",
 		"@use-gesture/react": "^10.3.1",
-		"dayjs": "^1.11.10",
+		"dayjs": "^1.11.11",
 		"highlight.js": "^11.9.0",
 		"markdown-it": "^14.1.0",
 		"react-dom": "^18.2.0",
-		"react-plock": "^3.1.0",
-		"react": "^18.2.0"
+		"react-plock": "^3.2.0",
+		"react": "^18.3.1"
 	},
 	"devDependencies": {
-		"@testing-library/react": "^15.0.2",
-		"@types/node": "^20.12.7",
-		"@types/react-dom": "^18.2.25",
-		"@types/react": "^18.2.79",
-		"@typescript-eslint/eslint-plugin": "^7.7.0",
+		"@testing-library/react": "^15.0.6",
+		"@types/node": "^20.12.8",
+		"@types/react-dom": "^18.3.0",
+		"@types/react": "^18.3.1",
+		"@typescript-eslint/eslint-plugin": "^7.8.0",
 		"@vitejs/plugin-react": "^4.2.1",
-		"@vitest/coverage-v8": "^1.5.0",
+		"@vitest/coverage-v8": "^1.6.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-prettier": "^5.1.3",
-		"eslint": "^9.1.0",
+		"eslint": "^9.2.0",
 		"jsdom": "^24.0.0",
-		"next": "^14.2.2",
+		"next": "^14.2.3",
 		"prettier": "^3.2.5",
-		"react-dom": "^18.2",
-		"react": "^18.2",
 		"typescript": "^5.4.5",
-		"vite": "^5.2.10",
-		"vitest": "^1.5.0"
+		"vite": "^5.2.11",
+		"vitest": "^1.6.0"
 	}
 }
