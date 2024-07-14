@@ -2,6 +2,14 @@ import type { HeliosAttributeMeta } from "../.."
 import type { CheckboxProps } from "./Checkbox.types"
 
 export const meta: HeliosAttributeMeta<CheckboxProps> = {
+	_patterns: [
+		{
+			id: "ui-checkbox-default",
+			description: "default",
+			content:
+				"<Checkbox isChecked={IS_CHECKED} intent={INTENT} isDisabled={IS_DISABLED} label={CHECKBOX_LABEL} onChange={FUNCTION} />",
+		},
+	],
 	_status: "stable",
 	_type: "core",
 	id: {

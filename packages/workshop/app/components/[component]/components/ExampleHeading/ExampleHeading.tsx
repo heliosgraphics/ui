@@ -1,17 +1,8 @@
 "use client"
 
 import { useState, type FC } from "react"
-import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
 import { Flex, Select, Heading, Separator, type TextProps, type SelectItem } from "@heliosgraphics/ui"
 import type { ExampleHeadingProps } from "./ExampleHeading.types"
-
-const CODE_SAMPLE = `<Heading
-	level={1}
-	emphasis={emphasis}
-	fontFamily={fontFamily}
-	fontWeight={fontWeight}>
-Village of Quixley
-</Heading>`
 
 const EMPHASIS_LIST: Array<SelectItem> = [
 	{ name: "Primary", value: "primary" },
@@ -49,7 +40,6 @@ const ExampleHeading: FC<ExampleHeadingProps> = () => {
 
 	return (
 		<>
-			<LiveComponent code={CODE_SAMPLE} scope={{ emphasis, fontFamily, fontWeight }} />
 			<Separator isLight={true} />
 			<Flex isColumn={true} gap={8} padding={16}>
 				<Heading emphasis={emphasis} fontFamily={fontFamily} level={0} fontWeight={fontWeight}>

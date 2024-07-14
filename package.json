@@ -20,9 +20,11 @@
 		"test:update": "NODE_ENV=test vitest run --update",
 		"test:watch": "NODE_ENV=test vitest",
 		"test": "NODE_ENV=test vitest run",
-		"ts:watch": "tsc --noEmit --incremental --watch"
+		"ts:watch": "tsc --noEmit --incremental --watch --project ./packages/workshop/tsconfig.json"
 	},
-	"workspaces": ["packages/*"],
+	"workspaces": [
+		"packages/*"
+	],
 	"dependencies": {},
 	"devDependencies": {
 		"@babel/eslint-parser": "^7.24.7",

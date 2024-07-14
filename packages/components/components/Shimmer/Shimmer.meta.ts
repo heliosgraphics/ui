@@ -2,6 +2,13 @@ import type { HeliosAttributeMeta } from "../.."
 import type { ShimmerProps } from "./Shimmer.types"
 
 export const meta: HeliosAttributeMeta<ShimmerProps> = {
+	_patterns: [
+		{
+			id: "ui-shimmer-default",
+			description: "default",
+			content: `<Shimmer height={16} width={256}/>`,
+		},
+	],
 	_status: "stable",
 	_type: "pattern",
 	height: {

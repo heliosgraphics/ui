@@ -3,16 +3,9 @@
 import { useState, useContext, type FC } from "react"
 import { Button, ButtonGroup, Separator, Toggle, Flex, Text, type ButtonGroupProps } from "@heliosgraphics/ui"
 import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
-import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
-
 import type { ExampleButtonGroupProps } from "./ExampleButtonGroup.types"
 
 const BUTTON_ALIGNS = ["left", "center", "right", "join"]
-
-const CODE_SAMPLE = `<ButtonGroup>
-  <Button intent={intent} value="Advise" icon="bullseye"/>
-	<Button intent="silent" value="Cancel"/>
-</ButtonGroup>`
 
 const ExampleButtonGroup: FC<ExampleButtonGroupProps> = () => {
 	const { intent } = useContext(WorkshopContext)
@@ -29,7 +22,6 @@ const ExampleButtonGroup: FC<ExampleButtonGroupProps> = () => {
 
 	return (
 		<>
-			<LiveComponent code={CODE_SAMPLE} />
 			<Separator isLight={true} />
 			<Flex isColumn={true} gap={12} padding={16}>
 				<ButtonGroup isVertical={isVertical} align={BUTTON_ALIGNS[alignIndex] as ButtonGroupProps["align"]}>

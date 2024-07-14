@@ -2,6 +2,13 @@ import type { HeliosAttributeMeta } from "../.."
 import type { TimestampProps } from "./Timestamp.types"
 
 export const meta: HeliosAttributeMeta<TimestampProps> = {
+	_patterns: [
+		{
+			id: "ui-timestamp-default",
+			description: "default",
+			content: `<Timestamp date={DATE} fromNow={false} format={DATE_FORMAT}/>`,
+		},
+	],
 	_status: "nominal",
 	_type: "content",
 	date: { type: "string", isOptional: true },

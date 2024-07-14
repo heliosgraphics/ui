@@ -2,6 +2,13 @@ import type { HeliosAttributeMeta } from "../.."
 import type { LoadingProps } from "./Loading.types"
 
 export const meta: HeliosAttributeMeta<LoadingProps> = {
+	_patterns: [
+		{
+			id: "ui-loading-default",
+			description: "default",
+			content: `<Loading emphasis={EMPHASIS} size={20}/>`,
+		},
+	],
 	_status: "stable",
 	_type: "core",
 	className: { type: "string", isOptional: true },

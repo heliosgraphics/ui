@@ -2,6 +2,13 @@ import type { HeliosAttributeMeta } from "../.."
 import type { InputProps } from "./Input.types"
 
 export const meta: HeliosAttributeMeta<InputProps> = {
+	_patterns: [
+		{
+			id: "ui-input-default",
+			description: "default",
+			content: `<Input value={TEXT_VALUE} isDisabled={IS_DISABLED} isLoading={IS_LOADING} label={TEXT_LABEL} onChange={ON_TEXT_CHANGE} placeholder="hello@acme.com"/>`,
+		},
+	],
 	_status: "stable",
 	_type: "core",
 	autoComplete: { type: '"new-password" | "username" | "current-password"', isOptional: true },

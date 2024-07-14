@@ -2,6 +2,13 @@ import type { HeliosAttributeMeta } from "../.."
 import type { ButtonProps } from "./Button.types"
 
 export const meta: HeliosAttributeMeta<ButtonProps> = {
+	_patterns: [
+		{
+			id: "ui-button-default",
+			description: "default",
+			content: '<Button intent={INTENT} value="Button" icon={ICON}/>',
+		},
+	],
 	_status: "stable",
 	_type: "core",
 	accept: {

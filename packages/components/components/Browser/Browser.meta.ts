@@ -2,6 +2,13 @@ import type { HeliosAttributeMeta } from "../.."
 import type { BrowserProps } from "./Browser.types"
 
 export const meta: HeliosAttributeMeta<BrowserProps> = {
+	_patterns: [
+		{
+			id: "ui-browser-default",
+			description: "default",
+			content: "<Browser width={480}>{CHILDREN}</Browser>",
+		},
+	],
 	_status: "experimental",
 	_type: "layout",
 	children: {

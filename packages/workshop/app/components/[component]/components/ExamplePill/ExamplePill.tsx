@@ -6,10 +6,6 @@ import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
 import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
 import type { ExamplePillProps } from "./ExamplePill.types"
 
-const SAMPLE_CODE = `<Flex>
-	<Pill label="Hello World" color={color}/>
-</Flex>`
-
 const ExamplePill: FC<ExamplePillProps> = () => {
 	const [isRounded, setRounded] = useState<boolean>(false)
 	const [hasIcon, setIcon] = useState<boolean>(false)
@@ -25,7 +21,6 @@ const ExamplePill: FC<ExamplePillProps> = () => {
 
 	return (
 		<>
-			<LiveComponent code={SAMPLE_CODE} />
 			<Separator isLight={true} />
 			<Flex gap={12} isColumn={true} padding={16}>
 				<Flex gap={4} isWrapping={true}>

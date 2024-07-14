@@ -2,16 +2,8 @@
 
 import { Flex, Input, Separator, type ResultItem } from "@heliosgraphics/ui"
 import { useState, type FC } from "react"
-import LiveComponent from "../LiveComponent"
+import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
 import type { ExampleInputProps } from "./ExampleInput.types"
-
-const CODE_SAMPLE = `<Input
-	value={input}
-	isDisabled={isDisabled}
-	isLoading={isLoading}
-	label="Your Name"
-	onChange={onInputChange}
-	placeholder="Jane Doe" />`
 
 const ExampleInput: FC<ExampleInputProps> = () => {
 	const [input, setInput] = useState<string>("")
@@ -54,12 +46,12 @@ const ExampleInput: FC<ExampleInputProps> = () => {
 
 	return (
 		<>
-			<LiveComponent code={CODE_SAMPLE} scope={{ input, onInputChange }} />
 			<Separator isLight={true} />
 			<Flex isColumn={true} gap={8} padding={16}>
 				<Input
+					name="ui-input-example"
 					value={input2}
-					isLoading={true}
+					isLoading={false}
 					onFocus={onFocus}
 					onBlur={onBlur}
 					onChange={onInputChange2}

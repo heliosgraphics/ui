@@ -2,6 +2,13 @@ import type { HeliosAttributeMeta } from "../.."
 import type { MenuFilterProps } from "./MenuFilter.types"
 
 export const meta: HeliosAttributeMeta<MenuFilterProps> = {
+	_patterns: [
+		{
+			id: "ui-menu-filter-default",
+			description: "default",
+			content: `<div>{CHILDREN}</div>`,
+		},
+	],
 	_status: "experimental",
 	_type: "layout",
 	onChange: {

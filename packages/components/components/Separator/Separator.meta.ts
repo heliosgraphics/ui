@@ -2,6 +2,13 @@ import type { HeliosAttributeMeta } from "../.."
 import type { SeparatorProps } from "./Separator.types"
 
 export const meta: HeliosAttributeMeta<SeparatorProps> = {
+	_patterns: [
+		{
+			id: "ui-separator-default",
+			description: "default",
+			content: `<Separator/>`,
+		},
+	],
 	_status: "stable",
 	_type: "core",
 	className: {

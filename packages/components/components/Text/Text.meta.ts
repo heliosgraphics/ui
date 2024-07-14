@@ -2,6 +2,13 @@ import type { HeliosAttributeMeta } from "../.."
 import type { TextBaseProps } from "./Text.types"
 
 export const meta: HeliosAttributeMeta<TextBaseProps> = {
+	_patterns: [
+		{
+			id: "ui-text-default",
+			description: "default",
+			content: `<Text type='paragraph' emphasis={EMPHASIS}>{TEXT}</Text>`,
+		},
+	],
 	_status: "stable",
 	_type: "content",
 	_extends: ["HTMLAttributes<HTMLDivElement | HTMLParagraphElement>"],

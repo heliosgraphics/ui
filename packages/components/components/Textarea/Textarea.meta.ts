@@ -2,6 +2,13 @@ import type { HeliosAttributeMeta } from "../.."
 import type { TextareaProps } from "./Textarea.types"
 
 export const meta: HeliosAttributeMeta<TextareaProps> = {
+	_patterns: [
+		{
+			id: "ui-textarea-default",
+			description: "default",
+			content: `<Textarea onChange={ON_TEXTAREA_CHANGE} value={TEXTAREA} placeholder={TEXTAREA_PLACEHOLDER} isDisabled={IS_DISABLED} label={TEXTAREA_LABEL} helperText={HELPER_TEXT}/>`,
+		},
+	],
 	_status: "stable",
 	_type: "core",
 	autoComplete: { type: "boolean", isOptional: true },

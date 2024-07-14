@@ -2,6 +2,13 @@ import type { HeliosAttributeMeta } from "../.."
 import type { SelectProps } from "./Select.types"
 
 export const meta: HeliosAttributeMeta<SelectProps> = {
+	_patterns: [
+		{
+			id: "ui-select-default",
+			description: "default",
+			content: `<Select label="Select Item" items={SELECT_ITEMS} onChange={ON_SELECT_ITEM}/>`,
+		},
+	],
 	_status: "stable",
 	_type: "core",
 	id: {

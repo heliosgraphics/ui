@@ -2,6 +2,13 @@ import type { HeliosAttributeMeta } from "../.."
 import type { ConfirmProps } from "./Confirm.types"
 
 export const meta: HeliosAttributeMeta<ConfirmProps> = {
+	_patterns: [
+		{
+			id: "ui-confirm-delete",
+			description: "confirm deletion dialog",
+			content: `<Confirm cancelText="Cancel" confirmText="Delete" description="Are you sure you want to delete?" icon="trash" intent="danger" isOpen={IS_OPEN} onCancel={FUNCTION_CLOSE} onConfirm={FUNCTION_CLOSE} title="Confirm Deletion"/>`,
+		},
+	],
 	_status: "stable",
 	_type: "pattern",
 	cancelText: {

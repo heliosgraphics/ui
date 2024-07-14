@@ -2,6 +2,14 @@ import type { HeliosAttributeMeta } from "../.."
 import type { ButtonGroupProps } from "./ButtonGroup.types"
 
 export const meta: HeliosAttributeMeta<ButtonGroupProps> = {
+	_patterns: [
+		{
+			id: "ui-actions-submit",
+			description: "submit a form",
+			content:
+				'<ButtonGroup align="right"><Button intent="silent" value="Cancel"/><Button intent="advise" icon="send" value="Submit"/></ButtonGroup>',
+		},
+	],
 	_status: "stable",
 	_type: "core",
 	align: {

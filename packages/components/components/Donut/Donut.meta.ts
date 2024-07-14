@@ -2,6 +2,13 @@ import type { HeliosAttributeMeta } from "../.."
 import type { DonutProps } from "./Donut.types"
 
 export const meta: HeliosAttributeMeta<DonutProps> = {
+	_patterns: [
+		{
+			id: "ui-donut-default",
+			description: "default",
+			content: `<Donut size={DONUT_SIZE} percentage={PERCENTAGE} color={COLOR}/>`,
+		},
+	],
 	_status: "stable",
 	_type: "core",
 	children: {

@@ -2,6 +2,13 @@ import type { HeliosAttributeMeta } from "../.."
 import type { TileProps } from "./Tile.types"
 
 export const meta: HeliosAttributeMeta<TileProps> = {
+	_patterns: [
+		{
+			id: "ui-tile-default",
+			description: "default",
+			content: `<Tile color={COLOR} icon={ICON} iconAccent={ICON_ACCENT} size={64} isRound={IS_ROUND} isRounded={IS_ROUNDED} colorAccent={COLOR_ACCENT}/>`,
+		},
+	],
 	_status: "stable",
 	_type: "pattern",
 	color: { type: "HeliosColors" },

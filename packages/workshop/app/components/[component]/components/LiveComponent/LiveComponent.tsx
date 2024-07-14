@@ -1,5 +1,6 @@
 "use client"
 
+import { SCOPE } from "@heliosgraphics/ui"
 import { Flex } from "@heliosgraphics/ui"
 import { getClasses } from "@heliosgraphics/utils"
 import Box from "workshop/app/components/Box"
@@ -60,8 +61,8 @@ const LiveComponent: FC<LiveComponentProps> = ({ code, scope, disabledBackground
 
 	const liveEditorClasses: string = getClasses(styles.liveEditor, "mono tiny", {})
 
+	// console.log({ SCOPE })
 	// const onBackgroundToggle = () => setBackground(!hasBackground)
-	const mockFn = () => console.log("mock")
 
 	return (
 		<Flex isColumn={true}>
@@ -70,15 +71,7 @@ const LiveComponent: FC<LiveComponentProps> = ({ code, scope, disabledBackground
 				scope={{
 					...components,
 					...scope,
-					Box,
-					intent,
-					color,
-					icon,
-					iconAccent,
-					isDisabled,
-					isLoading,
-					emphasis,
-					mockFn,
+					...SCOPE,
 				}}
 				theme={PRISM_THEME}
 			>

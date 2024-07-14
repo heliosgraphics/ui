@@ -3,11 +3,8 @@
 import { Button, ButtonGroup, Flex, Separator } from "@heliosgraphics/ui"
 import { useContext, useState } from "react"
 import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
-import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
 import type { ExampleButtonProps } from "./ExampleButton.types"
 import type { FC } from "react"
-
-const CODE_SAMPLE = `<Button intent={intent} value="Button" icon={icon}/>`
 
 const ExampleButton: FC<ExampleButtonProps> = () => {
 	const { intent } = useContext(WorkshopContext)
@@ -18,7 +15,6 @@ const ExampleButton: FC<ExampleButtonProps> = () => {
 
 	return (
 		<>
-			<LiveComponent code={CODE_SAMPLE} />
 			<Separator isLight={true} />
 			<Flex isColumn={true} gap={12} padding={16}>
 				<ButtonGroup>

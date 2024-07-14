@@ -3,10 +3,7 @@
 import { Flex, Text, Donut, Separator, ButtonGroup, Button } from "@heliosgraphics/ui"
 import { useContext, useState, type FC } from "react"
 import { WorkshopContext } from "workshop/app/contexts/WorkshopContext"
-import LiveComponent from "workshop/app/components/[component]/components/LiveComponent"
 import type { ExampleDonutProps } from "./ExampleDonut.types"
-
-const CODE_SAMPLE = `<Donut size={48} percentage={percentage} color={color}></Donut>`
 
 const ExampleDonut: FC<ExampleDonutProps> = () => {
 	const { color, colorAccent } = useContext(WorkshopContext)
@@ -20,7 +17,6 @@ const ExampleDonut: FC<ExampleDonutProps> = () => {
 
 	return (
 		<>
-			<LiveComponent code={CODE_SAMPLE} scope={{ percentage }} />
 			<Separator isLight={true} />
 			<Flex gap={8} isWrapping={true} padding={16}>
 				<Donut size={32} percentage={percentage} color={color}></Donut>

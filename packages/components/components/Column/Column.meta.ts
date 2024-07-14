@@ -2,6 +2,13 @@ import type { HeliosAttributeMeta } from "../.."
 import type { ColumnBaseProps } from "./Column.types"
 
 export const meta: HeliosAttributeMeta<ColumnBaseProps> = {
+	_patterns: [
+		{
+			id: "ui-column-default",
+			description: "default",
+			content: "<Column width={480}>{CHILDREN}</Column>",
+		},
+	],
 	_status: "stable",
 	_type: "layout",
 	_extends: ["FlexProps"],

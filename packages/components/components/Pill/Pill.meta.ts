@@ -2,6 +2,13 @@ import type { HeliosAttributeMeta } from "../.."
 import type { PillProps } from "./Pill.types"
 
 export const meta: HeliosAttributeMeta<PillProps> = {
+	_patterns: [
+		{
+			id: "ui-pill-default",
+			description: "default",
+			content: `<Pill label={PILL_LABEL} color={COLOR}/>`,
+		},
+	],
 	_status: "stable",
 	_type: "core",
 	color: {
