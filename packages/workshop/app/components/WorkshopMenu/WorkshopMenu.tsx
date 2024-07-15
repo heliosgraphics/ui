@@ -59,7 +59,7 @@ const WorkshopMenu: FC = () => {
 							<MenuItem title="Get Started" isActive={pathname === "/get-started"} />
 						</Link>
 					</MenuCategory>
-					<MenuCategory category="Concepts" isFolder={false}>
+					<MenuCategory category="Concepts" isFolder={true}>
 						<Link href="/colors">
 							<MenuItem title="Colors" isActive={pathname === "/colors"} />
 						</Link>
@@ -81,7 +81,7 @@ const WorkshopMenu: FC = () => {
 
 			{Object.entries(groupedComponents).map(([type, components]) => {
 				return (
-					<MenuCategory key={type} category={TYPE_NAMES[type as HeliosComponentCategoryType]} isFolder={false}>
+					<MenuCategory key={type} category={TYPE_NAMES[type as HeliosComponentCategoryType]} isFolder={true}>
 						{components.map((component, key) => {
 							const { status, color, icon, name } = getStatus(component)
 
