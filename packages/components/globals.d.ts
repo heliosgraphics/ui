@@ -11,5 +11,3 @@ declare module "@heliosgraphics/icons/react/*" {
 
 	export default Icon
 }
-
-declare module "@heliosgraphics/icons/react/ArrowDown"
