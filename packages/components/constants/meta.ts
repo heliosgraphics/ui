@@ -1,10 +1,10 @@
-import { COMPONENTS } from "@heliosgraphics/ui"
 import {
+	COMPONENTS,
 	type HeliosComponentStatusType,
 	type HeliosComponentCategoryType,
 	type HeliosColors,
 	type HeliosIconType,
-} from "@heliosgraphics/ui"
+} from ".."
 
 export const STATUS_COLORS: Record<HeliosComponentStatusType, HeliosColors> = {
 	experimental: "pink",

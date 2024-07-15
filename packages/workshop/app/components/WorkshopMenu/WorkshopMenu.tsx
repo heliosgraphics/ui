@@ -2,7 +2,7 @@
 
 import { useContext, useState, type FC, type ChangeEvent } from "react"
 import Link from "next/link"
-import { getStatus, TYPE_NAMES } from "workshop/constants/components"
+import { getStatus, TYPE_NAMES } from "@heliosgraphics/ui/constants/meta"
 import { WorkshopContext } from "../../contexts/WorkshopContext"
 import {
 	Menu,
