@@ -11,6 +11,8 @@ import type { InputProps } from "./Input.types"
 const Input: FC<InputProps> = ({
 	helperText,
 	isDisabled,
+	autoComplete,
+	autoFocus,
 	isLabelHidden,
 	isLoading,
 	isRequired,
@@ -53,6 +55,8 @@ const Input: FC<InputProps> = ({
 				<input
 					className={styles.input__input}
 					disabled={isDisabled}
+					autoComplete={autoComplete}
+					autoFocus={autoFocus}
 					id={htmlFor}
 					onBlur={onBlur}
 					type={type}

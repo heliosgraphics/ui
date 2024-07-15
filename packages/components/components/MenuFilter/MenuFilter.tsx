@@ -15,6 +15,7 @@ const MenuFilter: FC<MenuFilterProps> = ({ value, onClear, onChange }) => {
 				placeholder="Search"
 				value={value}
 				onChange={onChange}
+				autoComplete="new-password"
 				onClear={onClear}
 				label="Search"
 				isLabelHidden={true}
