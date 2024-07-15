@@ -1,9 +1,9 @@
-import { Flex, Text } from "@heliosgraphics/ui"
-import styles from "./Box.module.css"
-import type { BoxProps } from "./Box.types"
+import { Flex, Text } from "../.."
+import styles from "./Placeholder.module.css"
+import type { PlaceholderProps } from "./Placeholder.types"
 import type { FC } from "react"
 
-const Box: FC<BoxProps> = ({ children, height }) => {
+export const Placeholder: FC<PlaceholderProps> = ({ children, height }) => {
 	return (
 		<Flex
 			className={styles.box}
@@ -18,5 +18,3 @@ const Box: FC<BoxProps> = ({ children, height }) => {
 		</Flex>
 	)
 }
-
-export default Box

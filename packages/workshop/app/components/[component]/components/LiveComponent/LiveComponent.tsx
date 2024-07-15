@@ -3,7 +3,6 @@
 import { SCOPE } from "@heliosgraphics/ui"
 import { Flex } from "@heliosgraphics/ui"
 import { getClasses } from "@heliosgraphics/utils"
-import Box from "workshop/app/components/Box"
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
 import { useContext, useState, type FC } from "react"
 import { WorkshopContext } from "../../../../contexts/WorkshopContext/WorkshopContext"

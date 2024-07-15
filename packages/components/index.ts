@@ -34,6 +34,7 @@ export { NavigationPanelButton } from "./components/NavigationPanelButton/Naviga
 export { Overlay } from "./components/Overlay/Overlay"
 export { Pie } from "./components/Pie/Pie"
 export { Pill } from "./components/Pill/Pill"
+export { Placeholder } from "./components/Placeholder/Placeholder"
 export { Progress } from "./components/Progress/Progress"
 export { Radio } from "./components/Radio/Radio"
 export { Select } from "./components/Select/Select"
