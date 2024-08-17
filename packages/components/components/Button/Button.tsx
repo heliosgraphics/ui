@@ -67,7 +67,14 @@ export const Button: FC<ButtonProps> = ({
 		"px-4": size !== "normal" && !isIconOnly,
 	})
 
-	const buttonIconClasses = getClasses(styles.button__icon, "relative")
+	const buttonIconLeftClasses = getClasses("relative", styles.button__icon, {
+	 [styles.button__iconLeft]: localIconLeft,
+	})
+
+	const buttonIconRightClasses = getClasses("relative",styles.button__icon, {
+	 [styles.button__iconRight]: localIconRight,
+	})
+
 	const buttonLoadingSize: 10 | 20 = size && size !== "normal" ? 10 : 20
 
 	const isFileType: boolean = type === "file"
@@ -75,7 +82,7 @@ export const Button: FC<ButtonProps> = ({
 	return (
 		<Flex className={buttonClasses} isInline={true} isCentered={true} onClick={onClick} data-component="Button">
 			{localIconLeft && !isIconOnlyLoading && (
-				<Flex className={buttonIconClasses}>
+				<Flex className={buttonIconLeftClasses}>
 					<Icon icon={localIconLeft} size={BUTTON_ICON_SIZE[size]} />
 				</Flex>
 			)}
@@ -99,7 +106,7 @@ export const Button: FC<ButtonProps> = ({
 			/>
 			{isLoading && <Loading size={buttonLoadingSize} className={styles.button__loading} />}
 			{localIconRight && !isIconOnlyLoading && (
-				<Flex className={buttonIconClasses}>
+				<Flex className={buttonIconRightClasses}>
 					<Icon icon={localIconRight} size={BUTTON_ICON_SIZE[size]} />
 				</Flex>
 			)}

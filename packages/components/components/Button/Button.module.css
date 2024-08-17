@@ -238,32 +238,49 @@
 }
 
 /* Icon */
-.buttonSizeNormal:not(.buttonIconOnly) .button__icon {
-	margin-right: -12px;
-}
-
-.buttonSizeNormal .button__icon {
+.buttonSizeNormal .button__iconLeft,
+.buttonSizeNormal .button__iconRight {
 	padding-left: 8px;
 	padding-right: 8px;
 }
 
-.buttonSizeSmall:not(.buttonIconOnly) .button__icon {
+.buttonSizeNormal:not(.buttonIconOnly) .button__iconLeft {
+	margin-right: -12px;
+}
+
+.buttonSizeSmall:not(.buttonIconOnly) .button__iconLeft {
 	margin-right: -11px;
 	margin-top: -1px;
 }
 
-.buttonSizeSmall .button__icon {
+.buttonSizeSmall .button__iconLeft,
+.buttonSizeSmall .button__iconRight{
 	padding-left: 6px;
 	padding-right: 6px;
 }
 
-.buttonSizeTiny:not(.buttonIconOnly) .button__icon {
+.buttonSizeTiny:not(.buttonIconOnly) .button__iconLeft {
 	margin-right: -6px;
 }
 
-.buttonSizeTiny .button__icon {
+.buttonSizeTiny .button__iconLeft,
+.buttonSizeTiny .button__iconRight {
 	padding-left: 5px;
 	padding-right: 5px;
+}
+
+/* IconRight */
+.buttonSizeNormal:not(.buttonIconOnly) .button__iconRight {
+	margin-left: -12px;
+}
+
+.buttonSizeSmall:not(.buttonIconOnly) .button__iconRight {
+	margin-left: -11px;
+	margin-top: -1px;
+}
+
+.buttonSizeTiny:not(.buttonIconOnly) .button__iconRight {
+	margin-left: -6px;
 }
 
 /* Icon:focus */
