@@ -12,5 +12,3 @@ export const Flex = forwardRef<HTMLDivElement, FlexProps>((props: FlexProps, ref
 		</div>
 	)
 })
-
-Flex.displayName = "Flex"

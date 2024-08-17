@@ -41,6 +41,7 @@ import { meta as metaSeparator } from "../components/Separator/Separator.meta"
 import { meta as metaSetup } from "../components/Setup/Setup.meta"
 import { meta as metaShimmer } from "../components/Shimmer/Shimmer.meta"
 import { meta as metaSlider } from "../components/Slider/Slider.meta"
+import { meta as metaSegments } from "../components/Segments/Segments.meta"
 import { meta as metaSpacer } from "../components/Spacer/Spacer.meta"
 import { meta as metaTable } from "../components/Table/Table.meta"
 import { meta as metaTabs } from "../components/Tabs/Tabs.meta"
@@ -91,6 +92,7 @@ export const COMPONENTS: Record<string, HeliosAttributeMeta<unknown>> = {
 	Pill: metaPill,
 	Progress: metaProgress,
 	Radio: metaRadio,
+	Segments: metaSegments,
 	Select: metaSelect,
 	Separator: metaSeparator,
 	Setup: metaSetup,
