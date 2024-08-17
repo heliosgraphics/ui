@@ -9,7 +9,7 @@ export const meta: HeliosAttributeMeta<SegmentsProps> = {
 			content: `<Segments><Segments.Button title="First" isActive={true}/><Segments.Button title="Second"/></Segments>`,
 		},
 	],
-	_status: "stable",
+	_status: "nominal",
 	_type: "core",
 	isFullWidth: {
 		type: "boolean",

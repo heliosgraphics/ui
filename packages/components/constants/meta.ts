@@ -22,7 +22,7 @@ export const STATUS_ICONS: Record<HeliosComponentStatusType, HeliosIconType> = {
 
 export const STATUS_NAMES: Record<HeliosComponentStatusType, string> = {
 	experimental: "Experimental",
-	nominal: "Nominal",
+	nominal: "Might Change",
 	stable: "Stable",
 	internal: "Internal",
 }

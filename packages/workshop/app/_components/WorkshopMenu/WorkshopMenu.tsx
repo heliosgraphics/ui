@@ -64,7 +64,14 @@ export const WorkshopMenu: FC = () => {
 							<MenuItem title="Typography" isActive={pathname === "/typography"} />
 						</Link>
 						<Link href="/icons">
-							<MenuItem title="Icons" isActive={pathname === "/icons"} label="WIP" labelColor="pink" labelIcon="bolt" />
+							<MenuItem
+								title="Icons"
+								isActive={pathname === "/icons"}
+								label="Experimental"
+								labelHidden={true}
+								labelColor="pink"
+								labelIcon="bolt"
+							/>
 						</Link>
 					</MenuCategory>
 				</>

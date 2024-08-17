@@ -9,10 +9,8 @@ export const SegmentButton: FC<SegmentButtonProps> = ({ isActive, title, onClick
 	})
 
 	return (
-	<button className={segmentButtonClasses} onClick={onClick} data-component="SegmentButton">
-
+		<button className={segmentButtonClasses} onClick={onClick} data-component="SegmentButton">
 			{title}
-
-	</button>
+		</button>
 	)
 }

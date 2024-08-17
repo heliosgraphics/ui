@@ -13,7 +13,7 @@ export default function IconsPage() {
 	const filteredIcons: Array<HeliosIconType> = ICONS?.filter((icon) => icon.includes(filter))
 
 	return (
-		<Page title="Icons" labelText="Work in Progress" labelIcon="bolt" labelColor="pink">
+		<Page title="Icons" labelText="Experimental" labelIcon="bolt" labelColor="pink">
 			<Flex gap={8}>
 				<Input label="Find an Icon" onChange={onFilter} value={filter} placeholder="Eg.: arrow" />
 			</Flex>
