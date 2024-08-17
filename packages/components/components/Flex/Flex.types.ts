@@ -9,12 +9,14 @@ export interface FlexBaseProps {
 	children: HeliosChildrenType
 	className?: string
 	gap?: HeliosScale
+	grow?: 1
 	isAround?: boolean
 	isBetween?: boolean
 	isCentered?: boolean
 	isColumn?: boolean
 	isFullWidth?: boolean
 	isInline?: boolean
+	isNoWrap?: boolean
 	isStretch?: boolean
 	isWrapping?: boolean
 	isXCentered?: boolean

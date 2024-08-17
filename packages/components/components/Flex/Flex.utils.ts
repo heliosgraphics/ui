@@ -28,6 +28,8 @@ export const getFlexUtility = (props?: FlexProps): string => {
 	if (props.isAround) flexClasses.add("space-around")
 	if (props.onClick) flexClasses.add("cursor-pointer")
 	if (props.isFullWidth) flexClasses.add("wp-100")
+	if (props.isNoWrap) flexClasses.add("nowrap")
+	if (props.grow === 1) flexClasses.add("grow-1")
 
 	// responsive Radius
 	if (props.withRadius) {
