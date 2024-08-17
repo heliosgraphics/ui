@@ -32,7 +32,7 @@ export const Cover: FC = () => {
 	const generateGlitchArt = useCallback((ctx: CanvasRenderingContext2D, width: number = 0, height: number = 0) => {
 		ctx.clearRect(0, 0, width, height)
 		const squareSize = 48
-		const squares: Array<number> = []
+		const squares: Array<{ opacity: number; x: number; y: number }> = []
 
 		for (let y = 0; y < height; y += squareSize) {
 			for (let x = 0; x < width; x += squareSize) {

@@ -25,7 +25,7 @@ export const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 					</tr>
 				</thead>
 				<tbody>
-					{Object.values(meta).map((value: string, key) => {
+					{Object.values(meta).map((value: unknown, key) => {
 						const name: string = Object.keys(meta)[key]
 						const type: string = value["type"] || meta[name].toString() || "Unknown"
 						const description: string = value["description"] || "-"

@@ -1,4 +1,4 @@
-import type {ReactNode} from 'react'
+import type { ReactNode } from "react"
 import type { HeliosFontFamilyTypes } from "@heliosgraphics/ui"
 
 export type HeadingList =

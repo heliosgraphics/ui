@@ -25,14 +25,18 @@ export const WorkshopMenu: FC = () => {
 		setFilter("")
 		setFilteredComponents([...Object.keys(COMPONENTS)])
 	}
-	const groupedComponents: Record<string, Array<string>> = filteredComponents.reduce((acc: string, component) => {
-		const { _type } = COMPONENTS[component]
 
-		acc[_type] = acc[_type] || []
-		acc[_type].push(component)
+	const groupedComponents: Record<string, Array<string>> = filteredComponents.reduce<Record<string, Array<string>>>(
+		(acc, component) => {
+			const { _type } = COMPONENTS[component]
 
-		return acc
-	}, {})
+			acc[_type] = acc[_type] || []
+			acc[_type].push(component)
+
+			return acc
+		},
+		{},
+	)
 
 	if (!hasMenu) return null
 

@@ -15,7 +15,7 @@ import type { NextPage } from "next"
 
 const ComponentsPage: NextPage<{ params: { component: string } }> = async ({ params }) => {
 	const { component } = params
-	const DemoComponent = lazy(() => import(`./components/Example${component}`))
+	const DemoComponent = lazy(() => import(`./_components/Example${component}`))
 	const demoMeta = COMPONENTS[component]
 	const { name, icon, color } = getStatus(component)
 
