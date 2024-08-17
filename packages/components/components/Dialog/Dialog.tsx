@@ -31,7 +31,6 @@ export const Dialog: FC<DialogProps> = ({ title, children, onClick, isOpen, isCe
 		})
 	}
 
-	// Make sure it's scrollable if closed with push
 	useEffect(() => {
 		return () => {
 			resetDocumentStyle(0)
@@ -39,23 +38,16 @@ export const Dialog: FC<DialogProps> = ({ title, children, onClick, isOpen, isCe
 		}
 	}, [title])
 
-	// Setup ope and close
 	useEffect(() => {
-		// Dialog to top
 		dialogRef?.current?.scrollTo?.(0, 0)
 
 		if (isOpen) {
-			// There might be multiple Dialogs, but only the latest one gets to write to document
 			const localPosition: number = document?.documentElement?.scrollTop ?? 0
 
-			// Disable scrolling
 			document.body.classList.add(POSITION_FIXED_CLASS)
-
-			// Keep track of scroll position
 			document.body.style.top = `-${localPosition}px`
 			document.body.setAttribute(ATTRIBUTE_SCROLL, localPosition.toString())
 
-			// Show modal
 			dialogRef?.current?.showModal?.()
 		} else if (!dialogRef?.current) {
 			const localPos: string = document?.body?.getAttribute(ATTRIBUTE_SCROLL) ?? "0"
@@ -63,10 +55,8 @@ export const Dialog: FC<DialogProps> = ({ title, children, onClick, isOpen, isCe
 
 			document.body.classList.remove(POSITION_FIXED_CLASS)
 
-			// Reset document style, and scroll back
 			resetDocumentStyle(scrollPosition)
 
-			// Close modal
 			dialogRef?.current?.close?.()
 		}
 	}, [isOpen])

@@ -32,4 +32,4 @@ export interface FlexBaseProps {
 	yAlign?: "start" | "end" | "baseline"
 }
 
-export type FlexProps = FlexBaseProps & HTMLAttributes<unknown>
+export type FlexProps = FlexBaseProps & Omit<HTMLAttributes<HTMLDivElement>, "color" | "results">
