@@ -27,14 +27,15 @@ export const getFlexUtility = (props?: FlexProps): string => {
 	if (props.isBetween) flexClasses.add("space-between")
 	if (props.isAround) flexClasses.add("space-around")
 	if (props.onClick) flexClasses.add("cursor-pointer")
+	if (props.isFullWidth) flexClasses.add("wp-100")
 
-	// Responsive Radius
+	// responsive Radius
 	if (props.withRadius) {
 		const responsiveRadius = getRadius(props.withRadius)
 		flexClasses.add(responsiveRadius)
 	}
 
-	// Responsive Scales
+	// responsive Scale
 	if (props.padding) {
 		const responsivePadding: string = getPadding(props.padding)
 		flexClasses.add(responsivePadding)
@@ -96,6 +97,7 @@ export const getSafeFlexProps = (props: any): Partial<FlexProps> => {
 		isCentered,
 		isColumn,
 		isColumnCentered,
+		isFullWidth,
 		isInline,
 		isStretch,
 		isWrapping,
