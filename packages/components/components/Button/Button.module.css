@@ -314,6 +314,21 @@
 	padding-left: 24px;
 }
 
+.buttonSizeNormal.buttonWithIconRight:not(.buttonIconOnly) input {
+	margin-right: -28px;
+	padding-right: 40px;
+}
+
+.buttonSizeSmall.buttonWithIconRight:not(.buttonIconOnly) input {
+	margin-right: -19px;
+	padding-right: 28px;
+}
+
+.buttonSizeTiny.buttonWithIconRight:not(.buttonIconOnly) input {
+	margin-right: -18px;
+	padding-right: 24px;
+}
+
 .buttonRounded {
 	border-radius: 24px;
 }

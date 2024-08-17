@@ -1,5 +1,5 @@
 import { getClasses } from "@heliosgraphics/utils/classnames"
-import { Dot, Flex, HeliosIconType, Icon, Loading, Text } from "../.."
+import { Flex, HeliosIconType, Icon, Loading, Text } from "../.."
 import styles from "./Button.module.css"
 import type { ButtonProps } from "./Button.types"
 import type { FC } from "react"
@@ -55,6 +55,7 @@ export const Button: FC<ButtonProps> = ({
 		[styles.buttonSizeTiny]: size === "tiny",
 
 		[styles.buttonWithIconLeft]: localIconLeft,
+		[styles.buttonWithIconRight]: localIconRight,
 		[styles.buttonIconOnly]: isIconOnly,
 		[styles.buttonIconOnlyLoading]: isIconOnlyLoading,
 	})
