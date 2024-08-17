@@ -5,6 +5,8 @@ export interface ButtonProps {
 	accept?: string
 	flair?: number
 	icon?: HeliosIconType
+	iconLeft?: HeliosIconType
+	iconRight?: HeliosIconType
 	intent: HeliosIntentionType
 	isDisabled?: boolean
 	isIconOnly?: boolean

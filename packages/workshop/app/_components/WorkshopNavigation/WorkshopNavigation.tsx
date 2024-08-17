@@ -4,7 +4,6 @@ import { useContext, type FC } from "react"
 import { WorkshopContext } from "workshop/app/_contexts/WorkshopContext"
 import { Flex, NavigationPanelButton, ThemeSwitcherLoading, Text, Navigation, ButtonGroup, Button } from "@heliosgraphics/ui"
 import Link from "next/link"
-import Image from "next/image"
 import dynamic from "next/dynamic"
 
 const ThemeSwitcher = dynamic(
@@ -25,7 +24,8 @@ export const WorkshopNavigation: FC = () => {
 					{hasMenu && <NavigationPanelButton />}
 					<Flex gap={4} isYCentered={true}>
 						<Link href="/" className="flex">
-							<Image src="/emblem.svg" style={{ minWidth: "38px", width: "38px", height: "38px" }} alt="Helios UI Logo" />
+						  {/* eslint-disable-next-line */}
+						  <img src="/emblem.svg" style={{ minWidth: "38px", width: "38px", height: "38px" }} alt="Helios UI Logo" />
 						</Link>
 						<Flex isColumn={true}>
 							<Text type="small" fontWeight="semibold">

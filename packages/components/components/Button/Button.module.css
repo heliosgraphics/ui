@@ -282,17 +282,17 @@
 	width: 24px;
 }
 
-.buttonSizeNormal.buttonWithIcon:not(.buttonIconOnly) input {
+.buttonSizeNormal.buttonWithIconLeft:not(.buttonIconOnly) input {
 	margin-left: -28px;
 	padding-left: 40px;
 }
 
-.buttonSizeSmall.buttonWithIcon:not(.buttonIconOnly) input {
+.buttonSizeSmall.buttonWithIconLeft:not(.buttonIconOnly) input {
 	margin-left: -19px;
 	padding-left: 28px;
 }
 
-.buttonSizeTiny.buttonWithIcon:not(.buttonIconOnly) input {
+.buttonSizeTiny.buttonWithIconLeft:not(.buttonIconOnly) input {
 	margin-left: -18px;
 	padding-left: 24px;
 }

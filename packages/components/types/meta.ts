@@ -1,4 +1,5 @@
-interface HeliosAttributeItem {
+interface HeliosAttributeItem<T> {
+	alias?: Array<keyof T>
 	default?: number | string
 	description?: string
 	isOptional?: boolean
@@ -14,7 +15,7 @@ export interface Pattern {
 	content: string
 }
 
-export type HeliosAttributeMeta<T> = Record<keyof T, HeliosAttributeItem> & {
+export type HeliosAttributeMeta<T> = Record<keyof T, HeliosAttributeItem<T>> & {
 	_extends?: Array<string>
 	_status: HeliosComponentStatusType
 	_type: HeliosComponentCategoryType

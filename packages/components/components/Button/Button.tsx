@@ -1,5 +1,5 @@
 import { getClasses } from "@heliosgraphics/utils/classnames"
-import { Dot, Flex, Icon, Loading, Text } from "../.."
+import { Dot, Flex, HeliosIconType, Icon, Loading, Text } from "../.."
 import styles from "./Button.module.css"
 import type { ButtonProps } from "./Button.types"
 import type { FC } from "react"
@@ -13,6 +13,8 @@ const BUTTON_ICON_SIZE: Record<string, number> = {
 export const Button: FC<ButtonProps> = ({
 	flair,
 	icon,
+	iconLeft,
+	iconRight,
 	accept,
 	value,
 	intent,
@@ -27,6 +29,8 @@ export const Button: FC<ButtonProps> = ({
 	type = "button",
 }) => {
 	const isIconOnlyLoading: boolean = !!isIconOnly && !!isLoading
+	const localIconLeft: HeliosIconType | undefined = icon || iconLeft
+	const localIconRight: HeliosIconType | undefined = iconRight
 
 	const buttonClasses = getClasses(styles.button, "relative cursor-pointer", {
 		[styles.buttonAdvise]: intent === "advise",
@@ -50,7 +54,7 @@ export const Button: FC<ButtonProps> = ({
 		[styles.buttonSizeSmall]: size === "small",
 		[styles.buttonSizeTiny]: size === "tiny",
 
-		[styles.buttonWithIcon]: !!icon,
+		[styles.buttonWithIconLeft]: localIconLeft,
 		[styles.buttonIconOnly]: isIconOnly,
 		[styles.buttonIconOnlyLoading]: isIconOnlyLoading,
 	})
@@ -70,9 +74,9 @@ export const Button: FC<ButtonProps> = ({
 
 	return (
 		<Flex className={buttonClasses} isInline={true} isCentered={true} onClick={onClick} data-component="Button">
-			{!!icon && !isIconOnlyLoading && (
+			{localIconLeft && !isIconOnlyLoading && (
 				<Flex className={buttonIconClasses}>
-					<Icon icon={icon} size={BUTTON_ICON_SIZE[size || "normal"]} />
+					<Icon icon={localIconLeft} size={BUTTON_ICON_SIZE[size]} />
 				</Flex>
 			)}
 			{!!flair && (
@@ -94,6 +98,11 @@ export const Button: FC<ButtonProps> = ({
 				value={isFileType ? "" : undefined}
 			/>
 			{isLoading && <Loading size={buttonLoadingSize} className={styles.button__loading} />}
+			{localIconRight && !isIconOnlyLoading && (
+				<Flex className={buttonIconClasses}>
+					<Icon icon={localIconRight} size={BUTTON_ICON_SIZE[size]} />
+				</Flex>
+			)}
 		</Flex>
 	)
 }

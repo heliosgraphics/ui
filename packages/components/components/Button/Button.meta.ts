@@ -22,6 +22,15 @@ export const meta: HeliosAttributeMeta<ButtonProps> = {
 	icon: {
 		type: "HeliosIconType",
 		isOptional: true,
+		alias: ["iconLeft"],
+	},
+	iconLeft: {
+		type: "HeliosIconType",
+		isOptional: true,
+	},
+	iconRight: {
+		type: "HeliosIconType",
+		isOptional: true,
 	},
 	intent: {
 		type: "HeliosIntentionType",
