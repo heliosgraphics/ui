@@ -1,5 +1,5 @@
 interface HeliosAttributeItem<T> {
-	alias?: Array<keyof T>
+	alias?: keyof T
 	default?: number | string
 	description?: string
 	isOptional?: boolean
