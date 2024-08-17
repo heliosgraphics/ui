@@ -6,6 +6,7 @@
 .env.test
 .eslintcache
 .git
+.github
 .next
 .node_repl_history
 .nova

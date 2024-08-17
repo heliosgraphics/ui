@@ -1,5 +1,5 @@
 import { getClasses } from "@heliosgraphics/utils/classnames"
-import { Flex, type HeliosScale, Text, HeliosSizeType, Icon } from "../.."
+import { Flex, Text, HeliosSizeType, Icon } from "../.."
 import styles from "./Pill.module.css"
 import type { FC } from "react"
 import type { PillProps } from "./Pill.types"
@@ -10,7 +10,7 @@ const PILL_ICON_SIZES: Record<HeliosSizeType, number> = {
 	tiny: 12,
 }
 
-const Pill: FC<PillProps> = ({
+export const Pill: FC<PillProps> = ({
 	color = "gray",
 	icon,
 	onClick,
@@ -64,5 +64,3 @@ const Pill: FC<PillProps> = ({
 		</Flex>
 	)
 }
-
-export { Pill }

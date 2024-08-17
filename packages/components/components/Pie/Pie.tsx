@@ -2,7 +2,7 @@ import type { FC } from "react"
 import styles from "./Pie.module.css"
 import type { PieProps, PieItem } from "./Pie.types"
 
-const Pie: FC<PieProps> = ({ color, size, data }) => {
+export const Pie: FC<PieProps> = ({ color, size, data }) => {
 	const r: number = size / 4
 	const whole = data?.reduce((a, b) => a + b.value, 0)
 	const circumferencePercentage: number = (2 * Math.PI * r) / whole
@@ -39,5 +39,3 @@ const Pie: FC<PieProps> = ({ color, size, data }) => {
 		</svg>
 	)
 }
-
-export { Pie }

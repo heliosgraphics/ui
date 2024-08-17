@@ -4,7 +4,7 @@ import { Text } from "../.."
 import { type FC, useId } from "react"
 import type { RadioProps } from "./Radio.types"
 
-const Radio: FC<RadioProps> = ({ id, isSmall, isDisabled, intent, onChange, value, state, label }) => {
+export const Radio: FC<RadioProps> = ({ id, isSmall, isDisabled, intent, onChange, value, state, label }) => {
 	const radioId: string = id || useId()
 	const radioClasses = getClasses(styles.radio, {
 		[styles.radioAdvise]: intent === "advise",
@@ -43,5 +43,3 @@ const Radio: FC<RadioProps> = ({ id, isSmall, isDisabled, intent, onChange, valu
 		</div>
 	)
 }
-
-export { Radio }

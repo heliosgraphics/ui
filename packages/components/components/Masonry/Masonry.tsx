@@ -4,7 +4,7 @@ import { Masonry as MasonryPlock } from "react-plock"
 import { Children, type FC } from "react"
 import type { MasonryProps } from "./Masonry.types"
 
-const Masonry: FC<MasonryProps> = ({ children, columns, gap, brakepoints }) => {
+export const Masonry: FC<MasonryProps> = ({ children, columns, gap, brakepoints }) => {
 	if (!children) return null
 
 	const mappedChildren: Array<JSX.Element> | null | undefined = Children.map(children, (child) => (
@@ -23,5 +23,3 @@ const Masonry: FC<MasonryProps> = ({ children, columns, gap, brakepoints }) => {
 		/>
 	)
 }
-
-export { Masonry }

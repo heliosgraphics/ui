@@ -11,6 +11,7 @@
 		"build:icons": "pnpm run --filter @heliosgraphics/icons build",
 		"build:workshop": "pnpm run --filter workshop build",
 		"dev:workshop": "pnpm run --filter workshop dev",
+		"lint": "pnpm run --filter=* lint",
 		"export:icons": "pnpm run --filter @heliosgraphics/icons export",
 		"prettier:write": "prettier --no-semi --use-tabs --write ./packages/**",
 		"pub:icons": "pnpm publish --access public --filter @heliosgraphics/icons",

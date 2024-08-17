@@ -5,7 +5,7 @@ import styles from "./Checkbox.module.css"
 import type { FC } from "react"
 import type { CheckboxProps } from "./Checkbox.types"
 
-const Checkbox: FC<CheckboxProps> = ({
+export const Checkbox: FC<CheckboxProps> = ({
 	id,
 	isChecked,
 	isLabelHidden = false,
@@ -47,5 +47,3 @@ const Checkbox: FC<CheckboxProps> = ({
 		</div>
 	)
 }
-
-export { Checkbox }

@@ -3,7 +3,7 @@ import styles from "./InputLabel.module.css"
 import { getClasses } from "@heliosgraphics/utils/classnames"
 import type { InputLabelProps } from "./InputLabel.types"
 
-const InputLabel: FC<InputLabelProps> = ({ id, label, isDisabled, isHidden }) => {
+export const InputLabel: FC<InputLabelProps> = ({ id, label, isDisabled, isHidden }) => {
 	const htmlFor: string = id || useId()
 
 	if (isHidden || !label) return null
@@ -18,5 +18,3 @@ const InputLabel: FC<InputLabelProps> = ({ id, label, isDisabled, isHidden }) =>
 		</label>
 	)
 }
-
-export { InputLabel }

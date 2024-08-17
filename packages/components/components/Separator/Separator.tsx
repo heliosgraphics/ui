@@ -3,12 +3,10 @@ import { HorizontalSeparator } from "./components/HorizontalSeparator/Horizontal
 import { VerticalSeparator } from "./components/VerticalSeparator/VerticalSeparator"
 import type { FC } from "react"
 
-const Separator: FC<SeparatorProps> = (props) => {
+export const Separator: FC<SeparatorProps> = (props) => {
 	if (props.isVertical) {
 		return <VerticalSeparator {...props} />
 	} else {
 		return <HorizontalSeparator {...props} />
 	}
 }
-
-export { Separator }

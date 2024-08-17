@@ -2,7 +2,7 @@ import styles from "./Overlay.module.css"
 import type { FC } from "react"
 import type { OverlayProps } from "./Overlay.types"
 
-const Overlay: FC<OverlayProps> = ({ onClose, children, isVisible }) => {
+export const Overlay: FC<OverlayProps> = ({ onClose, children, isVisible }) => {
 	if (!isVisible) return null
 
 	const hideFunction = (event: any) => {
@@ -19,5 +19,3 @@ const Overlay: FC<OverlayProps> = ({ onClose, children, isVisible }) => {
 		</section>
 	)
 }
-
-export { Overlay }

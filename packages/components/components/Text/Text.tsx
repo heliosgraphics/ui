@@ -9,7 +9,7 @@ import styles from "./Text.module.css"
 import type { TextProps } from "./Text.types"
 import { Micro } from "./components/Micro/Micro"
 
-const Text: FC<TextProps> = (props) => {
+export const Text: FC<TextProps> = (props) => {
 	const textClasses: string = getClasses(props.className, styles.text, {
 		[styles.textPrimary]: props.emphasis === "primary",
 		[styles.textSecondary]: props.emphasis === "secondary",
@@ -51,5 +51,3 @@ const Text: FC<TextProps> = (props) => {
 			return <Div {...baseTextProps} />
 	}
 }
-
-export { Text }

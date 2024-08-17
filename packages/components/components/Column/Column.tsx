@@ -3,7 +3,7 @@ import { getClasses } from "@heliosgraphics/utils/classnames"
 import type { ColumnProps } from "./Column.types"
 import type { FC } from "react"
 
-const Column: FC<ColumnProps> = (props) => {
+export const Column: FC<ColumnProps> = (props) => {
 	const mainFlexClasses = getFlexUtility({ ...props, isColumn: true })
 	const columnClasses: string = getClasses(mainFlexClasses, {
 		["mx-auto"]: props.isColumnCentered,
@@ -17,5 +17,3 @@ const Column: FC<ColumnProps> = (props) => {
 
 	return <div {...safeProps} style={columnStyle} className={columnClasses} />
 }
-
-export { Column }

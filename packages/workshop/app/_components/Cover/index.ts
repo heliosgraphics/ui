@@ -1,0 +1,1 @@
+export { Cover } from "./Cover"

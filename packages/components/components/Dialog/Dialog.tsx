@@ -10,7 +10,7 @@ import type { DialogProps } from "./Dialog.types"
 const ATTRIBUTE_SCROLL = "data-scroll" as const
 const POSITION_FIXED_CLASS = "fixed" as const
 
-const Dialog: FC<DialogProps> = ({ title, children, onClick, isOpen, isCentered, onClose }) => {
+export const Dialog: FC<DialogProps> = ({ title, children, onClick, isOpen, isCentered, onClose }) => {
 	const dialogRef = useRef<HTMLDialogElement | null>(null)
 
 	const resetScroll = () => {
@@ -114,5 +114,3 @@ const Dialog: FC<DialogProps> = ({ title, children, onClick, isOpen, isCentered,
 		</animated.dialog>
 	)
 }
-
-export { Dialog }

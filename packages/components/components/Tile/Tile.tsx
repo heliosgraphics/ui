@@ -4,7 +4,7 @@ import styles from "./Tile.module.css"
 import { useId, type FC } from "react"
 import type { TileProps } from "./Tile.types"
 
-const Tile: FC<TileProps> = ({ size, text, icon, onClick, iconAccent, color, colorAccent, isRounded, isRound }) => {
+export const Tile: FC<TileProps> = ({ size, text, icon, onClick, iconAccent, color, colorAccent, isRounded, isRound }) => {
 	const tileId: string = useId()
 	const isLarge: boolean = size > 64
 
@@ -52,5 +52,3 @@ const Tile: FC<TileProps> = ({ size, text, icon, onClick, iconAccent, color, col
 		</Flex>
 	)
 }
-
-export { Tile }

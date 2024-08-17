@@ -4,7 +4,7 @@ import styles from "./Markdown.module.css"
 import type { FC } from "react"
 import type { MarkdownProps } from "./Markdown.types"
 
-const Markdown: FC<MarkdownProps> = ({ text, isNonSelectable }) => {
+export const Markdown: FC<MarkdownProps> = ({ text, isNonSelectable }) => {
 	if (!text) return null
 
 	const innerHTML = { __html: md.render(text) }
@@ -14,5 +14,3 @@ const Markdown: FC<MarkdownProps> = ({ text, isNonSelectable }) => {
 
 	return <div className={markdownClasses} dangerouslySetInnerHTML={innerHTML}></div>
 }
-
-export { Markdown }

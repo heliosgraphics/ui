@@ -2,7 +2,7 @@ import styles from "./Fieldset.module.css"
 import type { FC } from "react"
 import type { FieldsetProps } from "./Fieldset.types"
 
-const Fieldset: FC<FieldsetProps> = ({ children, legend }) => {
+export const Fieldset: FC<FieldsetProps> = ({ children, legend }) => {
 	return (
 		<fieldset className={styles.fieldset}>
 			<legend>{legend}</legend>
@@ -10,5 +10,3 @@ const Fieldset: FC<FieldsetProps> = ({ children, legend }) => {
 		</fieldset>
 	)
 }
-
-export { Fieldset }

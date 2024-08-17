@@ -6,7 +6,7 @@ import { getClasses } from "@heliosgraphics/utils"
 import styles from "./MenuItem.module.css"
 import type { MenuItemProps } from "./MenuItem.types"
 
-const MenuItem: FC<MenuItemProps> = ({ isActive, title, label, labelIcon, labelHidden, labelColor = "aqua" }) => {
+export const MenuItem: FC<MenuItemProps> = ({ isActive, title, label, labelIcon, labelHidden, labelColor = "aqua" }) => {
 	const menuItemClasses: string = getClasses(styles.menuItem, {
 		[styles.menuItemActive]: isActive,
 	})
@@ -33,5 +33,3 @@ const MenuItem: FC<MenuItemProps> = ({ isActive, title, label, labelIcon, labelH
 		</Flex>
 	)
 }
-
-export { MenuItem }

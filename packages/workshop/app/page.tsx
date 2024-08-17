@@ -2,38 +2,33 @@
 
 import {
 	Button,
+	ButtonGroup,
+	Clock,
+	COMPONENTS,
 	Content,
 	Donut,
-	ButtonGroup,
-	Masonry,
-	Icon,
 	Flex,
-	Text,
-	Separator,
-	Clock,
-	Grid,
 	Heading,
-	Pill,
-	COMPONENTS,
+	Icon,
+	Masonry,
+	Separator,
+	Text,
 } from "@heliosgraphics/ui"
-import DebugSelector from "./components/DebugSelector"
-import Cover from "./components/Cover"
-import { useContext } from "react"
 import uiPackage from "@heliosgraphics/ui/package.json"
-import { WorkshopContext } from "./contexts/WorkshopContext"
-import { DashboardCard } from "./components/DashboardCard"
+import { DashboardCard } from "./_components/DashboardCard"
+import { WorkshopContext } from "./_contexts/WorkshopContext"
+import { useContext } from "react"
+import { Cover } from "./_components/Cover"
+import { DebugSelector } from "./_components/DebugSelector"
 
-export default function Home({}) {
-	const { hasPadding } = useContext(WorkshopContext)
+export default function RootPage() {
+	const { hasPadding, hasCover } = useContext(WorkshopContext)
 
 	const componentCount: number = Object.keys(COMPONENTS).length
 	const stableComponentCount: number = Object.values(COMPONENTS).filter((c) => c._status === "stable").length
-	const experimentalComponentCount: number = Object.values(COMPONENTS).filter(
-		(c) => c._status === "experimental",
-	).length
+	const experimentalComponentCount: number = Object.values(COMPONENTS).filter((c) => c._status === "experimental").length
 
-	const stableComponentsPercent: number =
-		componentCount > 0 ? Math.floor((stableComponentCount / componentCount) * 100) : 0
+	const stableComponentsPercent: number = componentCount > 0 ? Math.floor((stableComponentCount / componentCount) * 100) : 0
 	const experimentalComponentsPercent: number =
 		componentCount > 0 ? Math.floor((experimentalComponentCount / componentCount) * 100) : 0
 
@@ -63,9 +58,11 @@ export default function Home({}) {
 						Development Preview &middot; <a href="https://github.com/heliosgraphics/ui/issues">Leave Feedback</a>
 					</Text>
 				</DashboardCard>
-				<DashboardCard noPadding={true}>
-					<Cover />
-				</DashboardCard>
+				{hasCover && (
+					<DashboardCard noPadding={true}>
+						<Cover />
+					</DashboardCard>
+				)}
 				<DashboardCard>
 					<Flex gap={8}>
 						<Flex isColumn={true}>

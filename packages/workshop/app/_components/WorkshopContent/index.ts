@@ -1,0 +1,1 @@
+export { WorkshopContent } from "./WorkshopContent"

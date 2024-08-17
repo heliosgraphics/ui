@@ -3,7 +3,7 @@ import styles from "./Dot.module.css"
 import type { DotProps } from "./Dot.types"
 import type { FC } from "react"
 
-const Dot: FC<DotProps> = ({ colorAccent, size = 8, color = "blue" }) => {
+export const Dot: FC<DotProps> = ({ colorAccent, size = 8, color = "blue" }) => {
 	const dotId: string = useId()
 
 	const dotColor: string = `hsla(var(--${color}-hue), var(--${color}-saturation), 50%, 0.5)`
@@ -28,5 +28,3 @@ const Dot: FC<DotProps> = ({ colorAccent, size = 8, color = "blue" }) => {
 		</div>
 	)
 }
-
-export { Dot }

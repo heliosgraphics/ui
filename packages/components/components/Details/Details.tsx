@@ -3,7 +3,7 @@ import { Icon, Text } from "../.."
 import type { DetailsProps } from "./Details.types"
 import type { FC } from "react"
 
-const Details: FC<DetailsProps> = ({ children, title, isOpen }) => {
+export const Details: FC<DetailsProps> = ({ children, title, isOpen }) => {
 	return (
 		<details className={styles.details} open={isOpen}>
 			<summary className="flex space-between flex-y-center">
@@ -16,5 +16,3 @@ const Details: FC<DetailsProps> = ({ children, title, isOpen }) => {
 		</details>
 	)
 }
-
-export { Details }

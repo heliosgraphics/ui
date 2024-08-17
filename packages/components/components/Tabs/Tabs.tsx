@@ -5,7 +5,7 @@ import { TabsProps } from "./Tabs.types"
 import styles from "./Tabs.module.css"
 import { Text } from "../.."
 
-const Tabs: FC<TabsProps> = ({ active: activeNumber, items, sections }) => {
+export const Tabs: FC<TabsProps> = ({ active: activeNumber, items, sections }) => {
 	const [active, setActive] = useState(activeNumber || 0)
 
 	if (!items || !sections) return null
@@ -29,5 +29,3 @@ const Tabs: FC<TabsProps> = ({ active: activeNumber, items, sections }) => {
 		</div>
 	)
 }
-
-export { Tabs }

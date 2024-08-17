@@ -1,11 +1,11 @@
 import { Flex, Icon } from "../.."
 import { getClasses } from "@heliosgraphics/utils/classnames"
 import { useId, type FC } from "react"
-import { InputLabel } from "../shared/InputLabel"
+import { InputLabel } from "../shared/InputLabel/InputLabel"
 import styles from "./Select.module.css"
 import type { SelectProps } from "./Select.types"
 
-const Select: FC<SelectProps> = ({ selectedValue, onChange, isLabelHidden, isSmall, isDisabled, items, id, label }) => {
+export const Select: FC<SelectProps> = ({ selectedValue, onChange, isLabelHidden, isSmall, isDisabled, items, id, label }) => {
 	const htmlFor: string = id || useId()
 
 	const selectClasses: string = getClasses(styles.select, {
@@ -34,5 +34,3 @@ const Select: FC<SelectProps> = ({ selectedValue, onChange, isLabelHidden, isSma
 		</Flex>
 	)
 }
-
-export { Select }

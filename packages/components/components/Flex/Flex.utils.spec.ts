@@ -55,8 +55,7 @@ describe("getFlexUtility", () => {
 		withRadius: ["none", "small", "normal"],
 	}
 
-	it("Generates responsive radius scale", () =>
-		expect(getFlexUtility(MOCK_FLEX_RADIUS)).toEqual(MOCK_FLEX_RADIUS_CLASSES))
+	it("Generates responsive radius scale", () => expect(getFlexUtility(MOCK_FLEX_RADIUS)).toEqual(MOCK_FLEX_RADIUS_CLASSES))
 })
 
 describe("getSafeFlexProps", () => {

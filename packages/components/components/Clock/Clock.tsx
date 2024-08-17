@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import styles from "./Clock.module.css"
 import type { FC } from "react"
 import type { ClockProps } from "./Clock.types"

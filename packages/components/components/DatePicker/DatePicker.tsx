@@ -3,10 +3,8 @@ import styles from "./DatePicker.module.css"
 import type { DatePickerProps } from "./DatePicker.types"
 import type { FC } from "react"
 
-const DatePicker: FC<DatePickerProps> = ({ date }) => {
+export const DatePicker: FC<DatePickerProps> = ({ date }) => {
 	const datePickerClasses: string = getClasses(styles.datePicker)
 
 	return <div className={datePickerClasses}>{date}</div>
 }
-
-export { DatePicker }

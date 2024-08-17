@@ -3,7 +3,7 @@ import { getClasses } from "@heliosgraphics/utils/classnames"
 import styles from "./Shimmer.module.css"
 import type { FC } from "react"
 
-const Shimmer: FC<ShimmerProps> = ({ isRounded, paddingTop, paddingBottom, height, width }) => {
+export const Shimmer: FC<ShimmerProps> = ({ isRounded, paddingTop, paddingBottom, height, width }) => {
 	const shimmerDivClasses: string = getClasses({
 		["radius-max"]: isRounded,
 		["radius-small"]: !isRounded,
@@ -23,5 +23,3 @@ const Shimmer: FC<ShimmerProps> = ({ isRounded, paddingTop, paddingBottom, heigh
 		</div>
 	)
 }
-
-export { Shimmer }

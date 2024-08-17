@@ -4,7 +4,7 @@ import { Flex } from "../.."
 import styles from "./ButtonGroup.module.css"
 import type { FC } from "react"
 
-const ButtonGroup: FC<ButtonGroupProps> = ({ className, children, isVertical, align = "left" }) => {
+export const ButtonGroup: FC<ButtonGroupProps> = ({ className, children, isVertical, align = "left" }) => {
 	const buttonGroupClasses: string = getClasses(className, {
 		[styles.buttonGroupLeft]: align === "left",
 		[styles.buttonGroupCenter]: align === "center",
@@ -20,5 +20,3 @@ const ButtonGroup: FC<ButtonGroupProps> = ({ className, children, isVertical, al
 		</Flex>
 	)
 }
-
-export { ButtonGroup }

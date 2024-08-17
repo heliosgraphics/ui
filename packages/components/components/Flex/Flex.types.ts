@@ -1,5 +1,5 @@
 import type { HTMLAttributes } from "react"
-import type { HeliosScale, HeliosAttributeMeta, HeliosRadius, HeliosOnClickType, HeliosChildrenType } from "../.."
+import type { HeliosScale, HeliosRadius, HeliosOnClickType, HeliosChildrenType } from "../.."
 import type { RefObject } from "react"
 
 export type ResponsiveScaleType = HeliosScale | [HeliosScale, HeliosScale, HeliosScale]

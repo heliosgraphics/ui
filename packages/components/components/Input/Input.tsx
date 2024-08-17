@@ -3,12 +3,12 @@
 import { useId, type FC } from "react"
 import { getClasses } from "@heliosgraphics/utils/classnames"
 import { Button, ButtonGroup, Loading, Text, Flex } from "../.."
-import { InputLabel } from "../shared/InputLabel"
-import { ResultList } from "../shared/ResultList"
+import { InputLabel } from "../shared/InputLabel/InputLabel"
+import { ResultList } from "../shared/ResultList/ResultList"
 import styles from "./Input.module.css"
 import type { InputProps } from "./Input.types"
 
-const Input: FC<InputProps> = ({
+export const Input: FC<InputProps> = ({
 	helperText,
 	isDisabled,
 	autoComplete,
@@ -41,15 +41,7 @@ const Input: FC<InputProps> = ({
 			<Flex className="grow-1">
 				{onClear && !!value && (
 					<ButtonGroup className={styles.input__clear}>
-						<Button
-							value="Clear"
-							size="tiny"
-							intent="silent"
-							icon="x"
-							onClick={onClear}
-							isIconOnly={true}
-							isRounded={true}
-						/>
+						<Button value="Clear" size="tiny" intent="silent" icon="x" onClick={onClear} isIconOnly={true} isRounded={true} />
 					</ButtonGroup>
 				)}
 				<input
@@ -85,5 +77,3 @@ const Input: FC<InputProps> = ({
 		</div>
 	)
 }
-
-export { Input }

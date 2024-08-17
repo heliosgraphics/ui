@@ -4,7 +4,7 @@ import type { FC } from "react"
 import type { ContentProps } from "./Content.types"
 import { Column } from "../.."
 
-const Content: FC<ContentProps> = (props) => {
+export const Content: FC<ContentProps> = (props) => {
 	const contentClasses: string = getClasses(styles.content, props.className)
 	const { width = 960, ...flexProps } = props
 
@@ -16,5 +16,3 @@ const Content: FC<ContentProps> = (props) => {
 		</section>
 	)
 }
-
-export { Content }

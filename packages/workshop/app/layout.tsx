@@ -1,14 +1,13 @@
 import "@heliosgraphics/fractures"
 import "@heliosgraphics/fractures/dist/fractures.easings.css"
 import "@heliosgraphics/ui/components.css"
+
 import { Main, Setup } from "@heliosgraphics/ui"
 import type { ReactNode } from "react"
 import type { Metadata } from "next"
-import { WorkshopProvider } from "./contexts/WorkshopContext"
-import WorkshopNavigation from "./components/WorkshopNavigation"
-import WorkshopMenu from "./components/WorkshopMenu"
-import WorkshopContent from "./components/WorkshopContent"
-import Cover from "./components/Cover"
+import { WorkshopProvider } from "./_contexts/WorkshopContext"
+import { WorkshopNavigation } from "./_components/WorkshopNavigation"
+import { WorkshopMenu } from "./_components/WorkshopMenu"
 import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
@@ -34,10 +33,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 					<Main>
 						<WorkshopNavigation />
 						<WorkshopMenu />
-						{/* <WorkshopContent> */}
-						{/* <Cover /> */}
 						{children}
-						{/* </WorkshopContent> */}
 					</Main>
 					<Analytics />
 				</WorkshopProvider>

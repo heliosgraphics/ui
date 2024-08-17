@@ -63,7 +63,7 @@ export type { DropdownProps } from "./components/Dropdown/Dropdown.types"
 export type { FlexProps, ResponsiveRadiusType } from "./components/Flex/Flex.types"
 export type { HeadingProps } from "./components/Heading/Heading.types"
 export type { PieItem } from "./components/Pie/Pie.types"
-export type { ResultItem } from "./components/shared/ResultList"
+export type { ResultItem } from "./components/shared/ResultList/ResultList.types"
 export type { SelectItem } from "./components/Select/Select.types"
 export type { TextBaseProps, TextProps } from "./components/Text/Text.types"
 

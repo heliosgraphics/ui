@@ -6,7 +6,7 @@ import { getClasses } from "@heliosgraphics/utils"
 import styles from "./MenuFilter.module.css"
 import type { MenuFilterProps } from "./MenuFilter.types"
 
-const MenuFilter: FC<MenuFilterProps> = ({ value, onClear, onChange }) => {
+export const MenuFilter: FC<MenuFilterProps> = ({ value, onClear, onChange }) => {
 	const menuFilterClasses: string = getClasses(styles.menuFilter, "helios-ui-glass-1")
 
 	return (
@@ -23,5 +23,3 @@ const MenuFilter: FC<MenuFilterProps> = ({ value, onClear, onChange }) => {
 		</div>
 	)
 }
-
-export { MenuFilter }

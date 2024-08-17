@@ -2,7 +2,7 @@ import { getIsValid, formatDate, getFromNow } from "../../utils/dayjs"
 import type { FC } from "react"
 import type { TimestampProps } from "./Timestamp.types"
 
-const Timestamp: FC<TimestampProps> = ({ date, fromNow, text, format = "MMMM D, YYYY" }) => {
+export const Timestamp: FC<TimestampProps> = ({ date, fromNow, text, format = "MMMM D, YYYY" }) => {
 	const fromNowDate = getFromNow(date)
 	const isValid: boolean = getIsValid(date)
 	const parsedIsoString: string = date && isValid ? new Date(Date.parse(date))?.toISOString() : ""
@@ -17,5 +17,3 @@ const Timestamp: FC<TimestampProps> = ({ date, fromNow, text, format = "MMMM D, 
 		</time>
 	)
 }
-
-export { Timestamp }

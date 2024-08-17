@@ -1,1 +1,0 @@
-export { InputLabel } from "./InputLabel"

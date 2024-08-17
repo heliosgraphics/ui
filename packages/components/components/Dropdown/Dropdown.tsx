@@ -3,12 +3,12 @@
 import { useEffect, useState, useRef, Children as ReactChildren, cloneElement, type FC } from "react"
 import { ANIMATION_FAST } from "../../constants/animations"
 import { getClasses } from "@heliosgraphics/utils/classnames"
-import { ResultList } from "../shared/ResultList"
+import { ResultList } from "../shared/ResultList/ResultList"
 import styles from "./Dropdown.module.css"
 import type { MouseEvent } from "react"
 import type { DropdownProps } from "./Dropdown.types"
 
-const Dropdown: FC<DropdownProps> = ({ isHidden, children, items, isDisabled, position = "right" }) => {
+export const Dropdown: FC<DropdownProps> = ({ isHidden, children, items, isDisabled, position = "right" }) => {
 	const [isVisible, setVisible] = useState<boolean>(Boolean(isHidden))
 	const [isHovering, setHovering] = useState<boolean>(false)
 	const stateRef = useRef<boolean>(false)
@@ -61,5 +61,3 @@ const Dropdown: FC<DropdownProps> = ({ isHidden, children, items, isDisabled, po
 		</div>
 	)
 }
-
-export { Dropdown }

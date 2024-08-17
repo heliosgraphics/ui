@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 import type { FC } from "react"
 import type { ThemeSwitcherProps } from "./ThemeSwitcher.types"
 
-const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ isIconOnly = false, size = "small" }) => {
+export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ isIconOnly = false, size = "small" }) => {
 	const [theme, setTheme] = useState<HeliosThemes>(global.window?.__theme || "light")
 	const isDark: boolean = theme === "dark"
 
@@ -28,5 +28,3 @@ const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ isIconOnly = false, size = "sma
 		/>
 	)
 }
-
-export { ThemeSwitcher }

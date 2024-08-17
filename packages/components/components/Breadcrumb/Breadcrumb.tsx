@@ -2,7 +2,7 @@ import { Fragment, type FC } from "react"
 import { Text, Flex, Icon } from "../.."
 import type { BreadcrumbProps } from "./Breadcrumb.types"
 
-const Breadcrumb: FC<BreadcrumbProps> = ({ items }) => {
+export const Breadcrumb: FC<BreadcrumbProps> = ({ items }) => {
 	if (!items?.length) return null
 
 	return (
@@ -28,5 +28,3 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ items }) => {
 		</Flex>
 	)
 }
-
-export { Breadcrumb }

@@ -4,7 +4,7 @@ import styles from "./ResultList.module.css"
 import type { FC } from "react"
 import type { ResultListProps } from "./ResultList.types"
 
-const ResultList: FC<ResultListProps> = ({ items }) => {
+export const ResultList: FC<ResultListProps> = ({ items }) => {
 	if (!items?.length) return null
 
 	return (
@@ -40,5 +40,3 @@ const ResultList: FC<ResultListProps> = ({ items }) => {
 		</ol>
 	)
 }
-
-export { ResultList }

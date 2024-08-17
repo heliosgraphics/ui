@@ -5,7 +5,7 @@ import { Button, ButtonGroup } from "../.."
 import styles from "./NavigationPanelButton.module.css"
 import type { NavigationPanelButtonProps } from "./NavigationPanelButton.types"
 
-const NavigationPanelButton: FC<NavigationPanelButtonProps> = () => {
+export const NavigationPanelButton: FC<NavigationPanelButtonProps> = () => {
 	return (
 		<ButtonGroup className={styles.navigationPanelButton}>
 			<a href="#ui-menu">
@@ -14,5 +14,3 @@ const NavigationPanelButton: FC<NavigationPanelButtonProps> = () => {
 		</ButtonGroup>
 	)
 }
-
-export { NavigationPanelButton }

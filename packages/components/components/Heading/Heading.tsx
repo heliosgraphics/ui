@@ -11,7 +11,7 @@ import styles from "./Heading.module.css"
 import type { HeadingProps } from "./Heading.types"
 import type { FC } from "react"
 
-const Heading: FC<HeadingProps> = (props) => {
+export const Heading: FC<HeadingProps> = (props) => {
 	const headingClasses: string = getClasses(props.className, styles.heading, {
 		[styles.headingPrimary]: props.emphasis === "primary",
 		[styles.headingSecondary]: props.emphasis === "secondary",
@@ -56,5 +56,3 @@ const Heading: FC<HeadingProps> = (props) => {
 			null
 	}
 }
-
-export { Heading }

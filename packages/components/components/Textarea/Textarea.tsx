@@ -3,12 +3,12 @@
 import { getClasses } from "@heliosgraphics/utils/classnames"
 import { Text } from "../.."
 import { useId, useRef, useEffect } from "react"
-import { InputLabel } from "../shared/InputLabel"
+import { InputLabel } from "../shared/InputLabel/InputLabel"
 import styles from "./Textarea.module.css"
 import type { FC } from "react"
 import type { TextareaProps } from "./Textarea.types"
 
-const Textarea: FC<TextareaProps> = (props) => {
+export const Textarea: FC<TextareaProps> = (props) => {
 	const textareaRef = useRef<HTMLTextAreaElement | null>(null)
 	const { autoComplete, helperText, isDisabled, isLabelHidden, ...goodProps } = props
 
@@ -35,9 +35,7 @@ const Textarea: FC<TextareaProps> = (props) => {
 
 	return (
 		<div className={textareaClasses}>
-			{!props.isLabelHidden && (
-				<InputLabel id={htmlFor} label={props.label} isDisabled={isDisabled} isHidden={isLabelHidden} />
-			)}
+			{!props.isLabelHidden && <InputLabel id={htmlFor} label={props.label} isDisabled={isDisabled} isHidden={isLabelHidden} />}
 			<textarea
 				{...goodProps}
 				ref={textareaRef}
@@ -55,5 +53,3 @@ const Textarea: FC<TextareaProps> = (props) => {
 		</div>
 	)
 }
-
-export { Textarea }

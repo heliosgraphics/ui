@@ -10,7 +10,7 @@ const BUTTON_ICON_SIZE: Record<string, number> = {
 	normal: 24,
 }
 
-const Button: FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
 	flair,
 	icon,
 	accept,
@@ -97,5 +97,3 @@ const Button: FC<ButtonProps> = ({
 		</Flex>
 	)
 }
-
-export { Button }

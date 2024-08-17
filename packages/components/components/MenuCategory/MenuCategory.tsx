@@ -6,7 +6,7 @@ import { getClasses } from "@heliosgraphics/utils"
 import styles from "./MenuCategory.module.css"
 import type { MenuCategoryProps } from "./MenuCategory.types"
 
-const MenuCategory: FC<MenuCategoryProps> = ({ category, children, isFolder, isFolderClosed }) => {
+export const MenuCategory: FC<MenuCategoryProps> = ({ category, children, isFolder, isFolderClosed }) => {
 	const [isOpen, setOpen] = useState<boolean>(!isFolderClosed)
 	const onToggle = () => setOpen(!isOpen)
 
@@ -32,13 +32,7 @@ const MenuCategory: FC<MenuCategoryProps> = ({ category, children, isFolder, isF
 					</Text>
 					{isFolder && (
 						<ButtonGroup>
-							<Button
-								intent="silent"
-								value="Toggle Category"
-								size="tiny"
-								isIconOnly={true}
-								icon={isOpen ? "minus" : "plus"}
-							/>
+							<Button intent="silent" value="Toggle Category" size="tiny" isIconOnly={true} icon={isOpen ? "minus" : "plus"} />
 						</ButtonGroup>
 					)}
 				</Flex>
@@ -51,5 +45,3 @@ const MenuCategory: FC<MenuCategoryProps> = ({ category, children, isFolder, isF
 		</Flex>
 	)
 }
-
-export { MenuCategory }

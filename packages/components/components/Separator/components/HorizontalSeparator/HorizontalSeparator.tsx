@@ -4,7 +4,7 @@ import styles from "./HorizontalSeparator.module.css"
 import type { FC } from "react"
 import type { SeparatorProps } from "../../../Separator/Separator.types"
 
-const HorizontalSeparator: FC<SeparatorProps> = ({ isLight, isTransparent, className }) => {
+export const HorizontalSeparator: FC<SeparatorProps> = ({ isLight, isTransparent, className }) => {
 	const hrClassNames: string = getClasses(styles.horizontalSeparator, className, {
 		[styles.horizontalSeparatorRegular]: !isLight,
 		[styles.horizontalSeparatorLight]: isLight,
@@ -13,5 +13,3 @@ const HorizontalSeparator: FC<SeparatorProps> = ({ isLight, isTransparent, class
 
 	return <HRMarkup className={hrClassNames} />
 }
-
-export { HorizontalSeparator }

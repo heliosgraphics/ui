@@ -4,7 +4,7 @@ import styles from "./Alert.module.css"
 import type { AlertProps } from "./Alert.types"
 import type { FC } from "react"
 
-const Alert: FC<AlertProps> = ({ children, onClose, title, icon, intent }) => {
+export const Alert: FC<AlertProps> = ({ children, onClose, title, icon, intent }) => {
 	const alertClasses: string = getClasses(styles.alert, {
 		[styles.alertAdvise]: intent === "advise",
 		[styles.alertAutomation]: intent === "automation",
@@ -41,5 +41,3 @@ const Alert: FC<AlertProps> = ({ children, onClose, title, icon, intent }) => {
 		</div>
 	)
 }
-
-export { Alert }

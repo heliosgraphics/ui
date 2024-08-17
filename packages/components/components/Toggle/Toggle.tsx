@@ -5,7 +5,7 @@ import styles from "./Toggle.module.css"
 import type { FC } from "react"
 import type { ToggleProps } from "./Toggle.types"
 
-const Toggle: FC<ToggleProps> = ({
+export const Toggle: FC<ToggleProps> = ({
 	id,
 	isChecked,
 	isSmall,
@@ -54,5 +54,3 @@ const Toggle: FC<ToggleProps> = ({
 		</div>
 	)
 }
-
-export { Toggle }

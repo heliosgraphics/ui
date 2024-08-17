@@ -5,7 +5,7 @@ import styles from "./Menu.module.css"
 import { getClasses } from "@heliosgraphics/utils"
 import type { MenuProps } from "./Menu.types"
 
-const Menu: FC<MenuProps> = ({ children }) => {
+export const Menu: FC<MenuProps> = ({ children }) => {
 	const menuClasses: string = getClasses(styles.menu, "flex flex-column helios-scrollbar helios-scrollbar--narrow")
 
 	return (
@@ -14,5 +14,3 @@ const Menu: FC<MenuProps> = ({ children }) => {
 		</nav>
 	)
 }
-
-export { Menu }

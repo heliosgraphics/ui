@@ -54,7 +54,7 @@ function code() {
 	setTheme(preferredTheme || (darkQuery.matches ? "dark" : "light"))
 }
 
-const Setup: FC<SetupProps> = () => {
+export const Setup: FC<SetupProps> = () => {
 	return (
 		<>
 			<link rel="preconnect" href="https://rsms.me/" crossOrigin="anonymous" />
@@ -69,5 +69,3 @@ const Setup: FC<SetupProps> = () => {
 		</>
 	)
 }
-
-export { Setup }
