@@ -25,11 +25,11 @@ export const ExampleButton: FC = () => {
 					<Button intent={intent} value="Both" isLoading={true} isDisabled={true} />
 					<Button intent={intent} value="Icon" icon={icon} />
 					<Button intent={intent} value="Icon Right" iconRight={iconAccent} />
-					<Button intent={intent} value="Icon Right" iconRight={iconAccent} size='small'/>
-					<Button intent={intent} value="Icon Right" iconRight={iconAccent} size='tiny'/>
-					<Button intent={intent} value="Both" iconLeft={icon} iconRight={iconAccent}/>
-					<Button intent={intent} value="Both" iconLeft={icon} iconRight={iconAccent} size='small'/>
-					<Button intent={intent} value="Both" iconLeft={icon} iconRight={iconAccent} size='tiny'/>
+					<Button intent={intent} value="Icon Right" iconRight={iconAccent} size="small" />
+					<Button intent={intent} value="Icon Right" iconRight={iconAccent} size="tiny" />
+					<Button intent={intent} value="Both" iconLeft={icon} iconRight={iconAccent} />
+					<Button intent={intent} value="Both" iconLeft={icon} iconRight={iconAccent} size="small" />
+					<Button intent={intent} value="Both" iconLeft={icon} iconRight={iconAccent} size="tiny" />
 					<Button intent={intent} value="Icon Only" icon={icon} isIconOnly={true} />
 					<Button intent={intent} value="Icon Only Loading" icon={icon} isIconOnly={true} isLoading={true} />
 					<Button intent={intent} value="Icon Only Small" icon={icon} size="small" isIconOnly={true} />

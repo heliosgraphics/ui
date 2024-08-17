@@ -34,7 +34,7 @@ export const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 						const hasAlias: boolean = Boolean(value["alias"]?.length)
 
 						if (name.startsWith("_") && !isExtends) return null
-            if (hasAlias) return null;
+						if (hasAlias) return null
 
 						return (
 							<tr key={key}>
@@ -47,7 +47,9 @@ export const PropsTable: FC<PropsTableProps> = ({ meta }) => {
 										{type === "HeliosIntentionType" && name === "intent" && <WorkshopIntentSelector />}
 										{type === "HeliosIconType" && name === "icon" && <WorkshopIconSelector />}
 										{type === "HeliosIconType" && name === "iconAccent" && <WorkshopIconAccentSelector />}
-										{type === "HeliosIconType" && (name === "iconAccent" || name === 'iconRight') && <WorkshopIconAccentSelector />}
+										{type === "HeliosIconType" && (name === "iconAccent" || name === "iconRight") && (
+											<WorkshopIconAccentSelector />
+										)}
 										{type === "HeliosColors" && name === "color" && <WorkshopColorSelector />}
 										{type === "HeliosColors" && name === "colorAccent" && <WorkshopColorAccentSelector />}
 										{type === "HeliosEmphasisType" && name === "emphasis" && <WorkshopEmphasisSelector />}

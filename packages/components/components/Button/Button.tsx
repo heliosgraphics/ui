@@ -69,11 +69,11 @@ export const Button: FC<ButtonProps> = ({
 	})
 
 	const buttonIconLeftClasses = getClasses("relative", styles.button__icon, {
-	 [styles.button__iconLeft]: localIconLeft,
+		[styles.button__iconLeft]: localIconLeft,
 	})
 
-	const buttonIconRightClasses = getClasses("relative",styles.button__icon, {
-	 [styles.button__iconRight]: localIconRight,
+	const buttonIconRightClasses = getClasses("relative", styles.button__icon, {
+		[styles.button__iconRight]: localIconRight,
 	})
 
 	const buttonLoadingSize: 10 | 20 = size && size !== "normal" ? 10 : 20
