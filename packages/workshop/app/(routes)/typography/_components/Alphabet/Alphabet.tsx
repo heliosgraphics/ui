@@ -40,7 +40,6 @@ const FONT_SETS: Record<HeliosFontFamilyTypes, FontTypeInfo> = {
 			{ name: "cv09", description: "Flat-top three" },
 			{ name: "dlig", description: "Discretionary Ligatures" },
 			{ name: "ordn", description: "Ordinals" },
-			{ name: "ss02", description: "Disambiguation (with zero)" },
 			{ name: "tnum", description: "Tabular Figures" },
 			{ name: "ss03", description: "Round quotes & commas" },
 			{ name: "zero", description: "Slashed Zero" },

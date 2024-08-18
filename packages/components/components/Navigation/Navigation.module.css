@@ -2,5 +2,5 @@
 	flex-shrink: 0;
 	height: 64px;
 
-	border-bottom: 1px solid var(--ui-border);
+	border-bottom: 1px solid var(--ui-border-light);
 }

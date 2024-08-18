@@ -1,7 +1,7 @@
 .main {
 	height: 100dvh;
 
-	background-color: var(--ui-border-light);
+	background-color: var(--ui-bg-soft);
 }
 
 .main:has(nav[data-component="Navigation"]) nav[data-component="Menu"] {

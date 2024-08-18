@@ -9,7 +9,7 @@ export const DashboardCard: FC<DashboardCardProps> = ({ children, noPadding, isC
 	const { hasPadding } = useContext(WorkshopContext)
 
 	const border = hasPadding ? "normal" : undefined
-	const padding = hasPadding ? 1 : undefined
+	const padding = hasPadding ? 2 : undefined
 
 	return (
 		<Flex padding={padding} className="wp-100" isColumn={isColumn}>
@@ -17,6 +17,7 @@ export const DashboardCard: FC<DashboardCardProps> = ({ children, noPadding, isC
 				isColumn={isColumn}
 				isYCentered={!isColumn}
 				gap={8}
+				elevation={hasPadding ? "medium" : undefined}
 				withBackground={true}
 				withRadius={border}
 				padding={noPadding ? 0 : 8}

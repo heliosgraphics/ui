@@ -130,7 +130,6 @@
 	--ease-in-out: var(--easeInOutSine);
 
 	font-family: var(--font-family-sans);
-	/* "cv11" 1, single story a */
 	font-feature-settings:
 		"calt" 1,
 		"cv01" 1,
@@ -142,7 +141,6 @@
 		"cv09" 1,
 		"dlig" 1,
 		"ordn" 1,
-		"ss02" 1,
 		"tnum" 1,
 		"ss03" 1,
 		"zero" 1;
@@ -183,6 +181,7 @@
 
 	--ui-bg: hsl(var(--gray-hue), var(--gray-saturation), 100%);
 	--ui-bg-action: hsl(var(--gray-hue), var(--gray-saturation), 99%);
+	--ui-bg-soft: hsl(var(--gray-hue), var(--gray-saturation), 96%);
 	--ui-bg-action-hover: hsl(var(--gray-hue), var(--gray-saturation), 96%);
 	--ui-bg-action-active: hsl(var(--gray-hue), var(--gray-saturation), 90%);
 	--ui-bg-disabled: hsl(var(--gray-hue), var(--gray-saturation), 86%);
@@ -236,6 +235,7 @@
 
 	--ui-bg: hsl(var(--gray-hue), var(--gray-saturation), 4%);
 	--ui-bg-action: hsl(var(--gray-hue), var(--gray-saturation), 8%);
+	--ui-bg-soft: hsl(var(--gray-hue), var(--gray-saturation), 6%);
 	--ui-bg-action-hover: hsl(var(--gray-hue), var(--gray-saturation), 10%);
 	--ui-bg-action-active: hsl(var(--gray-hue), var(--gray-saturation), 16%);
 	--ui-bg-disabled: hsl(var(--gray-hue), var(--gray-saturation), 16%);
@@ -314,14 +314,14 @@ mark,
 
 .helios-scrollbar::-webkit-scrollbar-thumb {
 	background-color: var(--ui-bg);
-	border-left: 1px solid var(--ui-border);
-	border-right: 1px solid var(--ui-border);
-	box-shadow: 1px 0 0 1px var(--ui-border);
+	border-left: 1px solid var(--ui-border-light);
+	border-right: 1px solid var(--ui-border-light);
+	box-shadow: 1px 0 0 1px var(--ui-border-light);
 	transition: all var(--animation-fastest) var(--ease-in-out);
 }
 
 .helios-scrollbar::-webkit-scrollbar-track {
-	background-color: var(--ui-bg-action-active);
+	background-color: var(--ui-bg-soft);
 }
 
 .helios-scrollbar::-webkit-scrollbar-thumb:hover {
@@ -342,14 +342,23 @@ mark,
 }
 
 /* helpers: shadow */
-.shadow-1 {
+.shadow-small {
 	box-shadow:
 		0 0 0 1px rgba(0, 0, 0, 0.024),
 		0 1px 1px 0 rgba(0, 0, 0, 0.06),
 		0 2px 4px 0 rgba(0, 0, 0, 0.08);
 }
 
-.shadow-2 {
+.shadow-medium {
+	box-shadow:
+		0 0 0 1px rgba(0, 0, 0, 0.024),
+		0 1px 1px 0 rgba(0, 0, 0, 0.06),
+		0 0 4px 0 rgba(0, 0, 0, 0.08),
+		0 0 0 1px rgba(0, 0, 0, 0.04),
+		0 0 10px 0 rgba(0, 0, 0, 0.08);
+}
+
+.shadow-large {
 	box-shadow:
 		0 0 0 1px rgba(0, 0, 0, 0.024),
 		0 1px 1px 0 rgba(0, 0, 0, 0.06),

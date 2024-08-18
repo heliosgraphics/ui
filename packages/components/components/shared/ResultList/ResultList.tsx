@@ -8,7 +8,7 @@ export const ResultList: FC<ResultListProps> = ({ items }) => {
 	if (!items?.length) return null
 
 	return (
-		<ol className={styles.resultList + " shadow-2"} data-component="ResultList">
+		<ol className={styles.resultList + " shadow-medium"} data-component="ResultList">
 			{items?.map((item, key) => {
 				if (item.type === "separator") return <li key={key} className={styles.resultList__separator} />
 
@@ -25,11 +25,11 @@ export const ResultList: FC<ResultListProps> = ({ items }) => {
 							</Flex>
 						)}
 						<Flex isColumn={true} gap={1}>
-							<Text type="small" fontWeight="medium" color="dark-gray" lineClamp={1}>
+							<Text type="small" fontWeight="medium" lineClamp={1}>
 								{item.name}
 							</Text>
 							{!!item.description && (
-								<Text type="tiny" fontFamily="sans" color="gray">
+								<Text type="tiny" fontFamily="sans">
 									{item.description}
 								</Text>
 							)}

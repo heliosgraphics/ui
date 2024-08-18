@@ -51,13 +51,7 @@ export const Pill: FC<PillProps> = ({
 		>
 			{icon && <Icon size={PILL_ICON_SIZES[size]} icon={icon} />}
 			{!isLabelHidden && (
-				<Text
-					color="currentcolor"
-					type={pillTextSize}
-					whiteSpace="nowrap"
-					fontFamily={isMono ? "mono" : undefined}
-					fontWeight="medium"
-				>
+				<Text type={pillTextSize} whiteSpace="nowrap" fontFamily={isMono ? "mono" : undefined} fontWeight="medium">
 					{label}
 				</Text>
 			)}

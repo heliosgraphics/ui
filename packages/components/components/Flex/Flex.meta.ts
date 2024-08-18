@@ -21,6 +21,7 @@ export const meta: HeliosAttributeMeta<FlexBaseProps> = {
 	className: { type: "string", isOptional: true },
 	gap: { type: "HeliosScale", isOptional: true },
 	grow: { type: "number", isOptional: true },
+	elevation: { type: '"small" | "medium" | "large"', isOptional: true },
 	isAround: { type: "boolean", isOptional: true },
 	isBetween: { type: "boolean", isOptional: true },
 	isCentered: { type: "boolean", isOptional: true },

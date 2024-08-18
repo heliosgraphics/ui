@@ -16,4 +16,4 @@ export interface TextBaseProps {
 	wordWrap?: "break-word"
 }
 
-export type TextProps = TextBaseProps & HTMLAttributes<HTMLDivElement | HTMLParagraphElement>
+export type TextProps = TextBaseProps & Omit<HTMLAttributes<HTMLDivElement | HTMLParagraphElement>, "color" | "results">

@@ -8,6 +8,7 @@ export type ResponsiveRadiusType = HeliosRadius | [HeliosRadius, HeliosRadius, H
 export interface FlexBaseProps {
 	children: HeliosChildrenType
 	className?: string
+	elevation?: "small" | "medium" | "large"
 	gap?: HeliosScale
 	grow?: 1
 	isAround?: boolean
