@@ -8,6 +8,11 @@ export const meta: HeliosAttributeMeta<SeparatorProps> = {
 			description: "default",
 			content: `<Separator/>`,
 		},
+		{
+			id: "ui-separator-vertical-dashed",
+			description: "vertical dashed",
+			content: `<Separator lineStyle="dashed" />`,
+		},
 	],
 	_status: "stable",
 	_type: "core",
@@ -23,12 +28,12 @@ export const meta: HeliosAttributeMeta<SeparatorProps> = {
 		type: "boolean",
 		isOptional: true,
 	},
-	isTransparent: {
+	isVertical: {
 		type: "boolean",
 		isOptional: true,
 	},
-	isVertical: {
-		type: "boolean",
+	lineStyle: {
+		type: "dashed | dotted",
 		isOptional: true,
 	},
 }

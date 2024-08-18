@@ -1,10 +1,10 @@
 {
 	"name": "@heliosgraphics/ui",
-	"version": "1.7.0",
+	"version": "1.7.1",
 	"type": "module",
 	"author": "03b8 <03b8@helios.graphics>",
 	"private": false,
-	"description": "Helios UI",
+	"description": "Helios User Interface",
 	"scripts": {
 		"pub:components": "pnpm publish --access public",
 		"test": "NODE_ENV=test vitest run",
