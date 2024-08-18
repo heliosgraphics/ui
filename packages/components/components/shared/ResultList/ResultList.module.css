@@ -12,9 +12,9 @@
 	background-color: var(--ui-bg);
 	border-radius: var(--radius-normal);
 	transform: translateX(-8px);
-	transition: all var(--animation-fast) var(--ease-in-out);
+	transition: all var(--animation-fastest) var(--ease-in-out);
 
-	animation: resultsFadeIn var(--animation-fast) ease-in-out forwards;
+	animation: resultsFadeIn var(--animation-fastest) ease-in-out forwards;
 }
 
 .itemActive {
@@ -39,7 +39,6 @@
 .resultList .item {
 	padding: 10px 12px;
 
-	transition: all var(--animation-fastest) var(--ease-in-out);
 	cursor: pointer;
 
 	-webkit-tap-highlight-color: transparent;

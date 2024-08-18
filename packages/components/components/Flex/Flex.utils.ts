@@ -30,9 +30,9 @@ export const getFlexUtility = (props?: FlexProps): string => {
 	if (props.isFullWidth) flexClasses.add("wp-100")
 	if (props.isNoWrap) flexClasses.add("nowrap")
 	if (props.grow === 1) flexClasses.add("grow-1")
-	if (props.elevation === "small") flexClasses.add("shadow-small")
-	if (props.elevation === "medium") flexClasses.add("shadow-medium")
-	if (props.elevation === "large") flexClasses.add("shadow-large")
+	if (props.elevation === "small") flexClasses.add("elevation-small")
+	if (props.elevation === "medium") flexClasses.add("elevation-medium")
+	if (props.elevation === "large") flexClasses.add("elevation-large")
 
 	// responsive Radius
 	if (props.withRadius) {

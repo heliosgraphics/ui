@@ -198,6 +198,12 @@
 	--ui-button-text-silent: hsl(var(--gray-hue), var(--gray-saturation), 40%);
 	--ui-button-text-success: hsl(var(--green-hue), var(--green-saturation), 95%);
 	--ui-button-text-warning: hsl(var(--yellow-hue), var(--yellow-saturation), 95%);
+
+	--ui-elevation-small: 0 0 0 1px rgba(0, 0, 0, 0.024), 0 1px 1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+	--ui-elevation-medium: 0 0 0 1px rgba(0, 0, 0, 0.024), 0 0 0 1px rgba(0, 0, 0, 0.04), 0 0 4px 0 rgba(0, 0, 0, 0.04),
+		0 0 12px 0 rgba(0, 0, 0, 0.08);
+	--ui-elevation-large: 0 0 0 1px rgba(0, 0, 0, 0.024), 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 0 4px 0 rgba(0, 0, 0, 0.08),
+		0 0 0 1px rgba(0, 0, 0, 0.04), 0 0 16px 0 rgba(0, 0, 0, 0.08);
 }
 
 /* setup theme dark */
@@ -252,6 +258,10 @@
 	--ui-button-text-silent: hsl(var(--gray-hue), var(--gray-saturation), 90%);
 	--ui-button-text-success: hsl(var(--green-hue), var(--green-saturation), 10%);
 	--ui-button-text-warning: hsl(var(--yellow-hue), var(--yellow-saturation), 15%);
+
+	--ui-elevation-small: 0 0 0 1px rgba(255, 255, 255, 0.024);
+	--ui-elevation-medium: 0 0 4px 4px rgba(0, 0, 0, 0.32), 0 0 0 1px var(--ui-border);
+	--ui-elevation-large: unset;
 }
 
 *:focus-visible {
@@ -341,30 +351,17 @@ mark,
 	box-shadow: inset 0 0 0 1px hsla(var(--color-intent-highlight), 50%, 0.2);
 }
 
-/* helpers: shadow */
-.shadow-small {
-	box-shadow:
-		0 0 0 1px rgba(0, 0, 0, 0.024),
-		0 1px 1px 0 rgba(0, 0, 0, 0.06),
-		0 2px 4px 0 rgba(0, 0, 0, 0.08);
+/* helpers: elevations */
+.elevation-small {
+	box-shadow: var(--ui-elevation-small);
 }
 
-.shadow-medium {
-	box-shadow:
-		0 0 0 1px rgba(0, 0, 0, 0.024),
-		0 1px 1px 0 rgba(0, 0, 0, 0.06),
-		0 0 4px 0 rgba(0, 0, 0, 0.08),
-		0 0 0 1px rgba(0, 0, 0, 0.04),
-		0 0 10px 0 rgba(0, 0, 0, 0.08);
+.elevation-medium {
+	box-shadow: var(--ui-elevation-medium);
 }
 
-.shadow-large {
-	box-shadow:
-		0 0 0 1px rgba(0, 0, 0, 0.024),
-		0 1px 1px 0 rgba(0, 0, 0, 0.06),
-		0 0 4px 0 rgba(0, 0, 0, 0.08),
-		0 0 0 1px rgba(0, 0, 0, 0.04),
-		0 0 10px 0 rgba(0, 0, 0, 0.08);
+.elevation-large {
+	box-shadow: var(--ui-elevation-large);
 }
 
 /* Responsive tests */

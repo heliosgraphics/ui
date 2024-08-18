@@ -7,8 +7,10 @@ import type { ResultListProps } from "./ResultList.types"
 export const ResultList: FC<ResultListProps> = ({ items }) => {
 	if (!items?.length) return null
 
+	const resultListClasses: string = getClasses(styles.resultList, "elevation-medium")
+
 	return (
-		<ol className={styles.resultList + " shadow-medium"} data-component="ResultList">
+		<ol className={resultListClasses} data-component="ResultList">
 			{items?.map((item, key) => {
 				if (item.type === "separator") return <li key={key} className={styles.resultList__separator} />
 

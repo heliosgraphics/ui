@@ -70,7 +70,7 @@ export const Dialog: FC<DialogProps> = ({ title, children, onClick, isOpen, isCe
 		return isDialog && onClose()
 	}
 
-	const dialogClasses: string = getClasses(styles.dialog, "helios-scrollbar", {
+	const dialogClasses: string = getClasses(styles.dialog, "helios-scrollbar", "elevation-large", {
 		[styles.dialogCentered]: isCentered,
 	})
 

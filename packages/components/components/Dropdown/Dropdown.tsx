@@ -13,7 +13,6 @@ export const Dropdown: FC<DropdownProps> = ({ isHidden, children, items, isDisab
 	const [isHovering, setHovering] = useState<boolean>(false)
 	const stateRef = useRef<boolean>(false)
 
-	// Resets from outside
 	useEffect(() => {
 		setVisible(false)
 	}, [isHidden])
@@ -36,7 +35,6 @@ export const Dropdown: FC<DropdownProps> = ({ isHidden, children, items, isDisab
 		return setTimeout(() => !stateRef.current && setVisible(false), ANIMATION_FAST)
 	}
 
-	// Make any icon respond to visible state
 	const renderChildren = ReactChildren.map(children, (child: React.ReactElement) => {
 		const caretProps = {
 			...(child?.props?.icon === "caret-down" && isVisible && { icon: "caret-up" }),
