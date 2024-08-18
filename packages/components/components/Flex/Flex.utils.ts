@@ -10,6 +10,7 @@ export const getFlexUtility = (props?: FlexProps): string => {
 
 	const flexClasses: Set<string> = new Set<string>()
 	const flexBase: "flex" | "inline-flex" = props?.isInline ? "inline-flex" : "flex"
+	const flexGrow: number = props.grow ?? 0
 
 	flexClasses.add(flexBase)
 
@@ -29,10 +30,10 @@ export const getFlexUtility = (props?: FlexProps): string => {
 	if (props.onClick) flexClasses.add("cursor-pointer")
 	if (props.isFullWidth) flexClasses.add("wp-100")
 	if (props.isNoWrap) flexClasses.add("nowrap")
-	if (props.grow > 0 && props.grow <= 8) flexClasses.add(`grow-${props.grow}`)
 	if (props.elevation === "small") flexClasses.add("elevation-small")
 	if (props.elevation === "medium") flexClasses.add("elevation-medium")
 	if (props.elevation === "large") flexClasses.add("elevation-large")
+	if (flexGrow > 0 && flexGrow <= 8) flexClasses.add(`grow-${props.grow}`)
 
 	// responsive Radius
 	if (props.withRadius) {
