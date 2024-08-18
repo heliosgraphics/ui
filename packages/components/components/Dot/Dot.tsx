@@ -13,6 +13,7 @@ export const Dot: FC<DotProps> = ({ colorAccent, size = 8, color = "blue" }) => 
 		height: size + "px",
 		maxHeight: size + "px",
 		maxWidth: size + "px",
+		minWidth: size + "px",
 		width: size + "px",
 	}
 

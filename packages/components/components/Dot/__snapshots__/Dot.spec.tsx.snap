@@ -7,7 +7,7 @@ exports[`Dot > Should match snapshot 1`] = `
     <div>
       <div
         class="_dot_d452e9"
-        style="height: 8px; max-height: 8px; max-width: 8px; width: 8px;"
+        style="height: 8px; max-height: 8px; max-width: 8px; min-width: 8px; width: 8px;"
       >
         <svg
           height="100%"
@@ -35,7 +35,7 @@ exports[`Dot > Should match snapshot 1`] = `
   "container": <div>
     <div
       class="_dot_d452e9"
-      style="height: 8px; max-height: 8px; max-width: 8px; width: 8px;"
+      style="height: 8px; max-height: 8px; max-width: 8px; min-width: 8px; width: 8px;"
     >
       <svg
         height="100%"
