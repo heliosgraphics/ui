@@ -78,14 +78,14 @@ importers:
   packages/components:
     dependencies:
       '@heliosgraphics/fractures':
-        specifier: ^6.3.2
-        version: 6.3.2
+        specifier: ^6.3.3
+        version: 6.3.3
       '@heliosgraphics/icons':
         specifier: ^0.0.20
         version: link:../icons
       '@heliosgraphics/utils':
-        specifier: ^5.3.11
-        version: 5.3.11
+        specifier: ^5.3.12
+        version: 5.3.12
       '@react-spring/web':
         specifier: ^9.7.4
         version: 9.7.4(react-dom@18.3.1)(react@18.3.1)
@@ -193,14 +193,14 @@ importers:
   packages/workshop:
     dependencies:
       '@heliosgraphics/fractures':
-        specifier: ^6.3.2
-        version: 6.3.2
+        specifier: ^6.3.3
+        version: 6.3.3
       '@heliosgraphics/ui':
         specifier: workspace:*
         version: link:../components
       '@heliosgraphics/utils':
-        specifier: ^5.3.11
-        version: 5.3.11
+        specifier: ^5.3.12
+        version: 5.3.12
       '@vercel/analytics':
         specifier: ^1.3.1
         version: 1.3.1(next@14.2.1)(react@18.3.1)
@@ -1143,13 +1143,13 @@ packages:
       - debug
     dev: true
 
-  /@heliosgraphics/fractures@6.3.2:
-    resolution: {integrity: sha512-+FbSCk4mPjvcjdbfcNWcJCRKUKjAfhA4nbiIVWSZahAiI9VWNeemuCbH/lBOjiCdye+7ceb4kmCmFAnrnrocoQ==}
+  /@heliosgraphics/fractures@6.3.3:
+    resolution: {integrity: sha512-mbjyILmDxcuVIsx0Ddwftw3Sqv3q1RW2CiTSOXLLuP9UL4OpGVE/R2xz07ii2NdBnFvESTQ15unhKabcGCRHTQ==}
     engines: {node: '>=20.15.0'}
     dev: false
 
-  /@heliosgraphics/utils@5.3.11:
-    resolution: {integrity: sha512-mI+zJTqfyiiQs3+YAkSz+H1w3dR6xI/q96W02eEWCbH6dB+MEZo/8GvnrXndfqz46I5ZCYWpSRfa/1eMXTF7Tg==}
+  /@heliosgraphics/utils@5.3.12:
+    resolution: {integrity: sha512-l/+rBwhq7SZoLu7Tk4deF+BP9yxWgSti2lXceuM6PoGdlNu/g2pVboFC8/DUrNrkivWJVVgablPRdBEiU/bEzQ==}
     engines: {node: '>=20.15.0'}
     dependencies:
       xss: 1.0.15

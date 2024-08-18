@@ -20,7 +20,7 @@ export const meta: HeliosAttributeMeta<FlexBaseProps> = {
 	children: { type: "HeliosChildrenType" },
 	className: { type: "string", isOptional: true },
 	gap: { type: "HeliosScale", isOptional: true },
-	grow: { type: "number", isOptional: true },
+	grow: { type: "1 | 2 | 3 | 4 | 5 | 6 | 7 | 8", isOptional: true },
 	elevation: { type: '"small" | "medium" | "large"', isOptional: true },
 	isAround: { type: "boolean", isOptional: true },
 	isBetween: { type: "boolean", isOptional: true },

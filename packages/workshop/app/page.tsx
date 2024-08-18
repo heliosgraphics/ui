@@ -3,7 +3,6 @@
 import {
 	Button,
 	ButtonGroup,
-	Clock,
 	COMPONENTS,
 	Content,
 	Donut,
@@ -32,28 +31,29 @@ export default function RootPage() {
 	const experimentalComponentsPercent: number =
 		componentCount > 0 ? Math.floor((experimentalComponentCount / componentCount) * 100) : 0
 
+	const categoryCount: number = new Set(Object.values(COMPONENTS).map(({ _type }) => _type)).size
+
 	return (
 		<Content width={1200} padding={hasPadding ? 2 : 0}>
 			<Masonry brakepoints={[760, 1280, 1280]} gap={[1, 1, 1]} columns={[1, 2, 3]}>
-				<DashboardCard isColumn={false}>
-					<Heading level={1}>Helios UI</Heading>
-				</DashboardCard>
-				<DashboardCard isColumn={true}>
-					<Text type="paragraph">
-						Baseline visual system documenting our design and experience standards. Intentional and always evolving.
-					</Text>
+				<DashboardCard isColumn={true} gap={4}>
+					<Heading level={1}>Helios Interface</Heading>
+					<Text type="paragraph">Visual system for graphical integrity.</Text>
 				</DashboardCard>
 				<DashboardCard isColumn={false}>
 					<Icon icon="nazar" size={48} />
 					<Icon icon="bullseye" size={48} />
 					<Icon icon="eye-disabled" size={48} emphasis="tertiary" />
 				</DashboardCard>
-				<DashboardCard>
+				<DashboardCard gap={4}>
 					<ButtonGroup>
 						<a href="https://github.com/heliosgraphics/ui" tabIndex={-1}>
 							<Button intent="silent" value="Code" icon="x-github" />
 						</a>
 					</ButtonGroup>
+					<Text type="small" emphasis="secondary">
+						Typescript components in React as a Module.
+					</Text>
 					<Text type="tiny" fontFamily="mono" emphasis="tertiary">
 						Development Preview &middot; <a href="https://github.com/heliosgraphics/ui/issues">Leave Feedback</a>
 					</Text>
@@ -64,8 +64,8 @@ export default function RootPage() {
 					</DashboardCard>
 				)}
 				<DashboardCard>
-					<Flex gap={8}>
-						<Flex isColumn={true}>
+					<Flex gap={12} isYCentered={true}>
+						<Flex isColumn={true} className="wp-50">
 							<Text type="div" fontWeight="semibold">
 								{componentCount}
 							</Text>
@@ -73,8 +73,18 @@ export default function RootPage() {
 								Components
 							</Text>
 						</Flex>
+						<Separator isVertical={true} height={32} isLight={true} />
+						<Flex isColumn={true} className="wp-50">
+							<Text type="div" fontWeight="semibold">
+								{categoryCount}
+							</Text>
+							<Text type="small" emphasis="secondary">
+								Categories
+							</Text>
+						</Flex>
 					</Flex>
-					<Separator isLight={true} />
+				</DashboardCard>
+				<DashboardCard>
 					<Flex gap={12} isYCentered={true}>
 						<Flex gap={6} className="wp-50" isYCentered={true}>
 							<Donut color="gray" percentage={stableComponentsPercent} size={48}>
@@ -106,14 +116,6 @@ export default function RootPage() {
 							</Flex>
 						</Flex>
 					</Flex>
-				</DashboardCard>
-				<DashboardCard>
-					<Clock />
-				</DashboardCard>
-				<DashboardCard>
-					<Text type="small" emphasis="secondary">
-						Typescript components in React as a Module.
-					</Text>
 				</DashboardCard>
 				<DashboardCard>
 					<ButtonGroup>

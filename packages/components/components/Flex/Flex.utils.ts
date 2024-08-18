@@ -29,7 +29,7 @@ export const getFlexUtility = (props?: FlexProps): string => {
 	if (props.onClick) flexClasses.add("cursor-pointer")
 	if (props.isFullWidth) flexClasses.add("wp-100")
 	if (props.isNoWrap) flexClasses.add("nowrap")
-	if (props.grow === 1) flexClasses.add("grow-1")
+	if (props.grow > 0 && props.grow <= 8) flexClasses.add(`grow-${props.grow}`)
 	if (props.elevation === "small") flexClasses.add("elevation-small")
 	if (props.elevation === "medium") flexClasses.add("elevation-medium")
 	if (props.elevation === "large") flexClasses.add("elevation-large")

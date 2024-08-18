@@ -1,16 +1,16 @@
 import type {
-	HeliosIconType,
+	BreadCrumbItem,
+	ButtonGroupProps,
 	DonutSizeType,
 	DropdownProps,
-	HeliosIntentionType,
-	BreadCrumbItem,
-	HeliosEmphasisType,
-	ResultItem,
 	HeliosColors,
-	ButtonGroupProps,
+	HeliosEmphasisType,
+	HeliosIconType,
+	HeliosIntentionType,
 	HeliosScale,
 	HeliosSizeType,
 	PieItem,
+	ResultItem,
 	SelectItem,
 } from ".."
 

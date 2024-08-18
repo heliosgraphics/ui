@@ -10,7 +10,7 @@ export interface FlexBaseProps {
 	className?: string
 	elevation?: "small" | "medium" | "large"
 	gap?: HeliosScale
-	grow?: 1
+	grow?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
 	isAround?: boolean
 	isBetween?: boolean
 	isCentered?: boolean
