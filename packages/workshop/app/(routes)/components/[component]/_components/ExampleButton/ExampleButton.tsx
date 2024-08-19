@@ -1,16 +1,25 @@
 "use client"
 
-import { Button, ButtonGroup, Flex, Separator } from "@heliosgraphics/ui"
+import { Button, ButtonGroup, Pill, Flex, Separator } from "@heliosgraphics/ui"
 import { useContext, useState } from "react"
 import { WorkshopContext } from "workshop/app/_contexts/WorkshopContext"
 import type { FC, ChangeEvent } from "react"
 
 export const ExampleButton: FC = () => {
 	const { intent, icon, iconAccent } = useContext(WorkshopContext)
+
 	const [flair, setFlair] = useState<number>(0)
+	const [files, setFiles] = useState<Array<File>>([])
 
 	const onFlairToggle = () => setFlair(flair === 0 ? 4 : 0)
-	const onFileSelect = (event: ChangeEvent) => console.log({ event })
+
+	const onFileSelect = (event: ChangeEvent<HTMLInputElement>) => {
+		const newFilesArray = Array.from(event.target.files)
+
+		setFiles(newFilesArray)
+	}
+
+	const onResetFiles = () => setFiles([])
 
 	return (
 		<>
@@ -51,36 +60,77 @@ export const ExampleButton: FC = () => {
 					<Button intent="silent" value="Flair" onClick={onFlairToggle} />
 				</ButtonGroup>
 				<Separator isLight={true} />
-				<ButtonGroup>
-					<Button
-						intent={intent}
-						value="Upload"
-						icon={iconAccent}
-						accept="image/*;capture=camera"
-						type="file"
-						onChange={onFileSelect}
-					/>
-					<Button
-						intent={intent}
-						value="Upload"
-						icon={iconAccent}
-						accept="image/*;capture=camera"
-						isLoading={true}
-						type="file"
-						onChange={onFileSelect}
-					/>
-					<Button
-						intent={intent}
-						value="Upload"
-						icon={iconAccent}
-						accept="image/*;capture=camera"
-						isLoading={true}
-						flair={flair}
-						isDisabled={true}
-						type="file"
-						onChange={onFileSelect}
-					/>
-				</ButtonGroup>
+				<Flex gap={8} isWrapping={true}>
+					<ButtonGroup>
+						<Button
+							intent={intent}
+							value="Upload"
+							isIconOnly={true}
+							icon={iconAccent}
+							multiple={true}
+							accept="image/*;capture=camera"
+							type="file"
+							onChange={onFileSelect}
+						/>
+						<Button
+							intent={intent}
+							value="Upload"
+							icon={iconAccent}
+							multiple={true}
+							accept="image/*;capture=camera"
+							type="file"
+							onChange={onFileSelect}
+						/>
+
+						<Button
+							intent={intent}
+							value="Upload"
+							icon={iconAccent}
+							accept="image/*;capture=camera"
+							isLoading={true}
+							flair={flair}
+							isDisabled={true}
+							type="file"
+							onChange={onFileSelect}
+						/>
+						<Button
+							intent={intent}
+							value="Upload"
+							icon={iconAccent}
+							multiple={true}
+							accept="image/*;capture=camera"
+							size="small"
+							type="file"
+							onChange={onFileSelect}
+						/>
+						<Button
+							intent={intent}
+							value="Upload"
+							icon={iconAccent}
+							multiple={true}
+							accept="image/*;capture=camera"
+							type="file"
+							size="tiny"
+							onChange={onFileSelect}
+						/>
+					</ButtonGroup>
+					{Boolean(files?.length) && (
+						<Flex isWrapping={true} gap={4} yAlign="baseline">
+							{files?.map((file, key) => <Pill color="gray" key={key} label={file.name} size="small" />)}
+							<ButtonGroup>
+								<Button
+									intent="silent"
+									value="Remove Files"
+									icon="x"
+									onClick={onResetFiles}
+									size="tiny"
+									isRounded={true}
+									isIconOnly={true}
+								/>
+							</ButtonGroup>
+						</Flex>
+					)}
+				</Flex>
 			</Flex>
 		</>
 	)

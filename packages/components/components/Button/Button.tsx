@@ -2,7 +2,7 @@ import { getClasses } from "@heliosgraphics/utils/classnames"
 import { Flex, HeliosIconType, Icon, Loading, Text } from "../.."
 import styles from "./Button.module.css"
 import type { ButtonProps } from "./Button.types"
-import type { FC } from "react"
+import { useId, type FC } from "react"
 
 const BUTTON_ICON_SIZE: Record<string, number> = {
 	tiny: 14,
@@ -11,23 +11,25 @@ const BUTTON_ICON_SIZE: Record<string, number> = {
 }
 
 export const Button: FC<ButtonProps> = ({
+	accept,
 	flair,
 	icon,
 	iconLeft,
 	iconRight,
-	accept,
-	value,
 	intent,
 	isDisabled,
 	isIconOnly,
 	isLoading,
 	isRounded,
+	multiple,
 	onChange,
 	onClick,
 	size = "normal",
 	tabIndex,
 	type = "button",
+	value,
 }) => {
+	const buttonId = useId()
 	const isIconOnlyLoading: boolean = !!isIconOnly && !!isLoading
 	const localIconLeft: HeliosIconType | undefined = icon || iconLeft
 	const localIconRight: HeliosIconType | undefined = iconRight
@@ -60,14 +62,6 @@ export const Button: FC<ButtonProps> = ({
 		[styles.buttonIconOnlyLoading]: isIconOnlyLoading,
 	})
 
-	const buttonInputClasses = getClasses("sans fw-medium", {
-		tiny: size === "tiny" || size === "small",
-		"small ": !size || size === "normal",
-		"radius-max": isRounded,
-		"px-6": size === "normal" && !isIconOnly,
-		"px-4": size !== "normal" && !isIconOnly,
-	})
-
 	const buttonIconLeftClasses = getClasses("relative", styles.button__icon, {
 		[styles.button__iconLeft]: localIconLeft,
 	})
@@ -77,8 +71,21 @@ export const Button: FC<ButtonProps> = ({
 	})
 
 	const buttonLoadingSize: 10 | 20 = size && size !== "normal" ? 10 : 20
-
 	const isFileType: boolean = type === "file"
+	const showFileLabel: boolean = isFileType && !isIconOnly
+
+	const baseInputClasses = getClasses(styles.button__baseElement, "sans fw-medium", {
+		tiny: size === "tiny" || size === "small",
+		"small ": !size || size === "normal",
+		"radius-max": isRounded,
+		"px-6": size === "normal" && !isIconOnly,
+		"px-4": size !== "normal" && !isIconOnly,
+	})
+
+	const buttonLabelClasses: string = getClasses(baseInputClasses, styles.button__label)
+	const buttonInputClasses: string = getClasses(baseInputClasses, styles.button__input, {
+		[styles.button__inputFile]: isFileType,
+	})
 
 	return (
 		<Flex className={buttonClasses} isInline={true} isCentered={true} onClick={onClick} data-component="Button">
@@ -95,16 +102,22 @@ export const Button: FC<ButtonProps> = ({
 				</Flex>
 			)}
 			<input
+				id={buttonId}
 				aria-disabled={isDisabled}
 				type={type}
 				className={buttonInputClasses}
 				accept={accept}
+				multiple={multiple}
 				tabIndex={tabIndex ?? 0}
-				role={isFileType ? undefined : "button"}
+				role="button"
 				onChange={onChange}
-				defaultValue={isIconOnly || isFileType ? undefined : value}
-				value={isFileType ? "" : undefined}
+				defaultValue={isIconOnly || isFileType ? "" : value}
 			/>
+			{showFileLabel && (
+				<label htmlFor={buttonId} className={buttonLabelClasses}>
+					{value}
+				</label>
+			)}
 			{isLoading && <Loading size={buttonLoadingSize} className={styles.button__loading} />}
 			{localIconRight && !isIconOnlyLoading && (
 				<Flex className={buttonIconRightClasses}>

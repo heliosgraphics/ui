@@ -38,7 +38,6 @@ export default function RootPage() {
 			<Masonry brakepoints={[760, 1280, 1280]} gap={[1, 1, 1]} columns={[1, 2, 3]}>
 				<DashboardCard isColumn={true} gap={4}>
 					<Heading level={1}>Helios Interface</Heading>
-					<Text type="paragraph">Visual system for graphical integrity.</Text>
 				</DashboardCard>
 				<DashboardCard isColumn={false}>
 					<Icon icon="nazar" size={48} />
@@ -52,7 +51,7 @@ export default function RootPage() {
 						</a>
 					</ButtonGroup>
 					<Text type="small" emphasis="secondary">
-						Typescript components in React as a Module.
+						Visual system for React to maintain graphical integrity.
 					</Text>
 					<Text type="tiny" fontFamily="mono" emphasis="tertiary">
 						Development Preview &middot; <a href="https://github.com/heliosgraphics/ui/issues">Leave Feedback</a>

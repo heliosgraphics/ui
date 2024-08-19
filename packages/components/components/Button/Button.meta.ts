@@ -51,6 +51,10 @@ export const meta: HeliosAttributeMeta<ButtonProps> = {
 		type: "boolean",
 		isOptional: true,
 	},
+	multiple: {
+		type: "boolean",
+		isOptional: true,
+	},
 	onChange: {
 		type: "(event?: MouseEvent | SyntheticEvent) => Promise<void> | void",
 		isOptional: true,

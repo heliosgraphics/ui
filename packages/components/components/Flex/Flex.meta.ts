@@ -16,7 +16,7 @@ export const meta: HeliosAttributeMeta<FlexBaseProps> = {
 	],
 	_status: "stable",
 	_type: "core",
-	_extends: ["HTMLAttributes<unknown>"],
+	_extends: ['Omit<HTMLAttributes<HTMLDivElement>, "color" | "results">'],
 	children: { type: "HeliosChildrenType" },
 	className: { type: "string", isOptional: true },
 	gap: { type: "HeliosScale", isOptional: true },

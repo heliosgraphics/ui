@@ -1,27 +1,24 @@
 .button {
+	position: relative;
+
 	background-color: var(--button-bg);
 	color: var(--button-text);
 	transition: all var(--animation-fastest) var(--ease-in-out);
 
+	cursor: pointer;
+
 	-webkit-tap-highlight-color: transparent;
-}
-
-.button:has(input[type="file"]) input {
-	padding: 0;
-	width: 0;
-
-	opacity: 0.0001;
 }
 
 .button:hover {
 	background-color: var(--button-hover);
 }
 
-.button input:focus-visible {
+.button .button__baseElement:focus-visible {
 	outline: 2px solid var(--button-bg);
 }
 
-.button:not(.buttonDisabled) input:active {
+.button:not(.buttonDisabled) .button__baseElement:active {
 	background-color: var(--button-active);
 }
 
@@ -102,11 +99,11 @@
 	box-shadow: inset 0 0 0 1px var(--ui-border);
 }
 
-.button.buttonSilent input:active {
+.button.buttonSilent .button__baseElement:active {
 	box-shadow: inset 0 0 0 1px var(--ui-border-active);
 }
 
-.button.buttonSilent input:focus-visible {
+.button.buttonSilent .button__baseElement:focus-visible {
 	outline: 2px solid var(--ui-border-active);
 }
 
@@ -131,22 +128,27 @@
 }
 
 /* Reset */
-.button input {
-	border: 0;
+.button .button__baseElement {
 	display: inline-flex;
+
 	background-color: transparent;
+	border: 0;
 	color: inherit;
 
-	cursor: inherit;
+	cursor: pointer;
+	user-select: none;
 }
 
 .button .button__icon {
+	position: relative;
+	z-index: 2;
+
 	pointer-events: none;
 }
 
 /* Sizes */
 .buttonSizeNormal,
-.buttonSizeNormal input {
+.buttonSizeNormal .button__baseElement {
 	height: 40px;
 	min-width: 40px;
 
@@ -154,7 +156,7 @@
 }
 
 .buttonSizeSmall,
-.buttonSizeSmall input {
+.buttonSizeSmall .button__baseElement {
 	height: 30px;
 	min-width: 30px;
 
@@ -162,7 +164,7 @@
 }
 
 .buttonSizeTiny,
-.buttonSizeTiny input {
+.buttonSizeTiny .button__baseElement {
 	height: 24px;
 	min-width: 24px;
 
@@ -175,19 +177,19 @@
 	pointer-events: none;
 }
 
-.buttonDisabled input {
+.buttonDisabled .button__baseElement {
 	text-shadow: 0 0 0 transparent;
 }
 
-.buttonSizeNormal.buttonLoading:not(.buttonIconOnly) input {
+.buttonSizeNormal.buttonLoading:not(.buttonIconOnly) .button__baseElement {
 	padding-right: 40px;
 }
 
-.buttonSizeSmall.buttonLoading:not(.buttonIconOnly) input {
+.buttonSizeSmall.buttonLoading:not(.buttonIconOnly) .button__baseElement {
 	padding-right: 26px;
 }
 
-.buttonSizeTiny.buttonLoading:not(.buttonIconOnly) input {
+.buttonSizeTiny.buttonLoading:not(.buttonIconOnly) .button__baseElement {
 	padding-right: 24px;
 }
 
@@ -284,47 +286,47 @@
 }
 
 /* Icon:focus */
-.buttonSizeNormal.buttonIconOnly:not(.buttonIconOnlyLoading) input {
+.buttonSizeNormal.buttonIconOnly:not(.buttonIconOnlyLoading) .button__baseElement {
 	margin-left: -40px;
 	width: 40px;
 }
 
-.buttonSizeSmall.buttonIconOnly:not(.buttonIconOnlyLoading) input {
+.buttonSizeSmall.buttonIconOnly:not(.buttonIconOnlyLoading) .button__baseElement {
 	margin-left: -30px;
 	width: 30px;
 }
 
-.buttonSizeTiny.buttonIconOnly:not(.buttonIconOnlyLoading) input {
+.buttonSizeTiny.buttonIconOnly:not(.buttonIconOnlyLoading) .button__baseElement {
 	margin-left: -24px;
 	width: 24px;
 }
 
-.buttonSizeNormal.buttonWithIconLeft:not(.buttonIconOnly) input {
+.buttonSizeNormal.buttonWithIconLeft:not(.buttonIconOnly) .button__baseElement {
 	margin-left: -28px;
 	padding-left: 40px;
 }
 
-.buttonSizeSmall.buttonWithIconLeft:not(.buttonIconOnly) input {
+.buttonSizeSmall.buttonWithIconLeft:not(.buttonIconOnly) .button__baseElement {
 	margin-left: -19px;
 	padding-left: 28px;
 }
 
-.buttonSizeTiny.buttonWithIconLeft:not(.buttonIconOnly) input {
+.buttonSizeTiny.buttonWithIconLeft:not(.buttonIconOnly) .button__baseElement {
 	margin-left: -18px;
 	padding-left: 24px;
 }
 
-.buttonSizeNormal.buttonWithIconRight:not(.buttonIconOnly) input {
+.buttonSizeNormal.buttonWithIconRight:not(.buttonIconOnly) .button__baseElement {
 	margin-right: -28px;
 	padding-right: 40px;
 }
 
-.buttonSizeSmall.buttonWithIconRight:not(.buttonIconOnly) input {
+.buttonSizeSmall.buttonWithIconRight:not(.buttonIconOnly) .button__baseElement {
 	margin-right: -19px;
 	padding-right: 28px;
 }
 
-.buttonSizeTiny.buttonWithIconRight:not(.buttonIconOnly) input {
+.buttonSizeTiny.buttonWithIconRight:not(.buttonIconOnly) .button__baseElement {
 	margin-right: -18px;
 	padding-right: 24px;
 }
@@ -334,11 +336,31 @@
 }
 
 .buttonRound,
-.buttonRound input {
+.buttonRound .button__baseElement {
 	border-radius: var(--radius-normal);
 }
 
 .buttonRoundTiny,
-.buttonRoundTiny input {
+.buttonRoundTiny .button__baseElement {
 	border-radius: var(--radius-small);
+}
+
+.button__label {
+	position: relative;
+	z-index: 1;
+
+	cursor: pointer;
+	border: 1px dashed red;
+}
+
+.button__inputFile {
+	position: absolute;
+
+	opacity: 0.0001;
+	padding: 0;
+	height: 0;
+	width: 100%;
+
+	pointer-events: none;
+	cursor: pointer;
 }

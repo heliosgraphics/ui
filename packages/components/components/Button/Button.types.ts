@@ -1,5 +1,5 @@
 import type { MouseEvent, SyntheticEvent } from "react"
-import type { HeliosIntentionType, HeliosIconType, HeliosAttributeMeta, HeliosOnClickType, HeliosSizeType } from "../.."
+import type { HeliosIntentionType, HeliosIconType, HeliosOnClickType, HeliosSizeType } from "../.."
 
 export interface ButtonProps {
 	accept?: string
@@ -12,6 +12,7 @@ export interface ButtonProps {
 	isIconOnly?: boolean
 	isLoading?: boolean
 	isRounded?: boolean
+	multiple?: boolean
 	onChange?: (event?: MouseEvent | SyntheticEvent) => Promise<void> | void
 	onClick?: HeliosOnClickType
 	size?: HeliosSizeType
